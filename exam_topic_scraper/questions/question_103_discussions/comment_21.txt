@@ -1,0 +1,17 @@
+COMMENT #21 FOR QUESTION 103
+============================================================
+Author: Unknown
+Date: 2 years, 2 months ago
+Votes: 0
+----------------------------------------
+Answer is C: https://cloud.google.com/bigquery/docs/table-snapshots-intro
+"Benefits of using table snapshots include the following:
+
+Keep a record for longer than seven days. With BigQuery time travel, you can only access a table's data from seven days ago or more recently. With table snapshots, you can preserve a table's data from a specified point in time for as long as you want.
+
+Minimize storage cost. BigQuery only stores bytes that are different between a snapshot and its base table, so a table snapshot typically uses less storage than a full copy of the table." 
+But the wording is foolish... It's table snapshot, NOT point in time snapshot!
+
+https://cloud.google.com/bigquery/docs/time-travel#restore-a-table
+this is point in time using time travel window - max is 7 days...
+============================================================

@@ -1,0 +1,8 @@
+COMMENT #55 FOR QUESTION 173
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Just to provide clarity to people asking "why not C" - the source is a pub/sub. Pub/Sub has a limit of 10 MB or 1000 messages for a single batch publish request, which means that batch dataflow will not necessarily be able to retrieve all messages. If the question had said "there will always be less than 1000 messages and less than 10mb", only then would batch be acceptable.
+============================================================

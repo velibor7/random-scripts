@@ -1,0 +1,1230 @@
+================================================================================
+QUESTION:
+Your company receives both batch- and stream-based event data. You want to process the data using Google Cloud Dataflow over a predictable time period.However, you realize that in some instances data can arrive late or out of order. How should you design your Cloud Dataflow pipeline to handle data that is late or out of order?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Set a single global window to capture all the data.
+										
+
+
+													B.
+												
+											
+											Set sliding windows to capture all the lagged data.
+										
+
+
+													C.
+												
+											
+											Use watermarks and timestamps to capture the lagged data.
+										
+
+
+													D.
+												
+											
+											Ensure every datasource type (stream or batch) has a timestamp, and use the timestamps to define the logic for lagged data.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (214 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 62 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 62
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your company receives both batch- and stream-based event data. You want to process the data using Google Cloud Dataflow over a predictable time period.However, you realize that in some instances data can arrive late or out of order. How should you design your Cloud Dataflow pipeline to handle data that is late or out of order?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Set a single global window to capture all the data.
+										
+
+
+													B.
+												
+											
+											Set sliding windows to capture all the lagged data.
+										
+
+
+													C.
+												
+											
+											Use watermarks and timestamps to capture the lagged data.
+										
+
+
+													D.
+												
+											
+											Ensure every datasource type (stream or batch) has a timestamp, and use the timestamps to define the logic for lagged data.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 21, 2020, 3:16 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 62
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 21, 2020, 3:16 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+Description: A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #6 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+Description: A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #7 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+Description: A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+Description: A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #13 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+Description: A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #14 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			4 years ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: C
+Description: A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: C
+Description: A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 44 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #21 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+
+--- Comment #22 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			4 years ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: C
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: C
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 18 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+option C: Use watermarks and timestamps to capture the lagged data.
+
+--- Comment #30 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+MikkelRev
+			
+
+
+				Most Recent 
+
+
+			6 months, 2 weeks ago
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+option C: Use watermarks and timestamps to capture the lagged data.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+option C: Use watermarks and timestamps to capture the lagged data.
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #38 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+option C: Use watermarks and timestamps to capture the lagged data.
+
+--- Comment #39 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+MikkelRev
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+option C: Use watermarks and timestamps to capture the lagged data.
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+option C: Use watermarks and timestamps to capture the lagged data.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+C: Use watermarks and timestamps to capture the lagged data.
+
+Watermarks are a way to indicate that some data may still be in transit and not yet processed. By setting a watermark, you can define a time period during which Dataflow will continue to accept late or out-of-order data and incorporate it into your processing. This allows you to maintain a predictable time period for processing while still allowing for some flexibility in the arrival of data.
+
+Timestamps, on the other hand, are used to order events correctly, even if they arrive out of order. By assigning timestamps to each event, you can ensure that they are processed in the correct order, even if they don't arrive in that order.
+
+--- Comment #47 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+samdhimal
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #48 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+C: Use watermarks and timestamps to capture the lagged data.
+
+Watermarks are a way to indicate that some data may still be in transit and not yet processed. By setting a watermark, you can define a time period during which Dataflow will continue to accept late or out-of-order data and incorporate it into your processing. This allows you to maintain a predictable time period for processing while still allowing for some flexibility in the arrival of data.
+
+Timestamps, on the other hand, are used to order events correctly, even if they arrive out of order. By assigning timestamps to each event, you can ensure that they are processed in the correct order, even if they don't arrive in that order.
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+C: Use watermarks and timestamps to capture the lagged data.
+
+Watermarks are a way to indicate that some data may still be in transit and not yet processed. By setting a watermark, you can define a time period during which Dataflow will continue to accept late or out-of-order data and incorporate it into your processing. This allows you to maintain a predictable time period for processing while still allowing for some flexibility in the arrival of data.
+
+Timestamps, on the other hand, are used to order events correctly, even if they arrive out of order. By assigning timestamps to each event, you can ensure that they are processed in the correct order, even if they don't arrive in that order.
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 9 times
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option A: Set a single global window to capture all the data is not a good idea because it may not allow for late or out-of-order data to be processed.
+
+Option B: Set sliding windows to capture all the lagged data is not suitable for the case where you want to process the data over a predictable time period. Sliding windows are used when you want to process data over a period of time that is continuously moving forward, not a fixed period.
+
+Option D: Ensure every datasource type (stream or batch) has a timestamp, and use the timestamps to define the logic for lagged data is a good practice but not a complete solution, because it only ensures that data is ordered correctly, but it does not account for data that may be late.
+
+--- Comment #53 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option A: Set a single global window to capture all the data is not a good idea because it may not allow for late or out-of-order data to be processed.
+
+Option B: Set sliding windows to capture all the lagged data is not suitable for the case where you want to process the data over a predictable time period. Sliding windows are used when you want to process data over a period of time that is continuously moving forward, not a fixed period.
+
+Option D: Ensure every datasource type (stream or batch) has a timestamp, and use the timestamps to define the logic for lagged data is a good practice but not a complete solution, because it only ensures that data is ordered correctly, but it does not account for data that may be late.
+
+--- Comment #54 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+samdhimal
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+Option A: Set a single global window to capture all the data is not a good idea because it may not allow for late or out-of-order data to be processed.
+
+Option B: Set sliding windows to capture all the lagged data is not suitable for the case where you want to process the data over a predictable time period. Sliding windows are used when you want to process data over a period of time that is continuously moving forward, not a fixed period.
+
+Option D: Ensure every datasource type (stream or batch) has a timestamp, and use the timestamps to define the logic for lagged data is a good practice but not a complete solution, because it only ensures that data is ordered correctly, but it does not account for data that may be late.
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+Option A: Set a single global window to capture all the data is not a good idea because it may not allow for late or out-of-order data to be processed.
+
+Option B: Set sliding windows to capture all the lagged data is not suitable for the case where you want to process the data over a predictable time period. Sliding windows are used when you want to process data over a period of time that is continuously moving forward, not a fixed period.
+
+Option D: Ensure every datasource type (stream or batch) has a timestamp, and use the timestamps to define the logic for lagged data is a good practice but not a complete solution, because it only ensures that data is ordered correctly, but it does not account for data that may be late.
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #62 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Answer is C:
+
+There is no such thing as a sliding windows using by dataflow.
+
+--- Comment #63 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+desertlotus1211
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #64 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+Answer is C:
+
+There is no such thing as a sliding windows using by dataflow.
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is C:
+
+There is no such thing as a sliding windows using by dataflow.
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #68 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+The naming in Apache Beam is: Fixed, Sliding, Session
+In Dataflow it's: Tumbling, Hopping, Session.
+I was very confused at first too when I saw "hopping" in a question.
+
+--- Comment #69 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+The naming in Apache Beam is: Fixed, Sliding, Session
+In Dataflow it's: Tumbling, Hopping, Session.
+I was very confused at first too when I saw "hopping" in a question.
+
+--- Comment #70 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+Mathew106
+			
+
+
+			8 months, 3 weeks ago
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+The naming in Apache Beam is: Fixed, Sliding, Session
+In Dataflow it's: Tumbling, Hopping, Session.
+I was very confused at first too when I saw "hopping" in a question.
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+The naming in Apache Beam is: Fixed, Sliding, Session
+In Dataflow it's: Tumbling, Hopping, Session.
+I was very confused at first too when I saw "hopping" in a question.
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #77 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+I highly doubt, DataFlow windowing is divided into three(3) types:
+
+1. Fixed
+2. Sliding 
+3. Session
+
+--- Comment #78 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+DeeData
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+I highly doubt, DataFlow windowing is divided into three(3) types:
+
+1. Fixed
+2. Sliding 
+3. Session
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+I highly doubt, DataFlow windowing is divided into three(3) types:
+
+1. Fixed
+2. Sliding 
+3. Session
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #86 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Answer is Use watermarks and timestamps to capture the lagged data.
+
+A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #87 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+AzureDP900
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is Use watermarks and timestamps to capture the lagged data.
+
+A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is Use watermarks and timestamps to capture the lagged data.
+
+A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #94 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Watermark is use for late date,
+
+--- Comment #95 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+DGames
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+Watermark is use for late date,
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+Watermark is use for late date,
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #103 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Watermark doesn't solve the out-of-order data problem. It only solves the problem of late data. However, with D, you can use the timestamps to solve both problems (for instance, if you're storing incoming data in a table, you can easily insert any late data to its correct place a time-partionned table using the timestamp of the element)
+
+--- Comment #104 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+[Removed]
+			
+
+
+			1 year, 5 months ago
+
+--- Comment #105 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Watermark doesn't solve the out-of-order data problem. It only solves the problem of late data. However, with D, you can use the timestamps to solve both problems (for instance, if you're storing incoming data in a table, you can easily insert any late data to its correct place a time-partionned table using the timestamp of the element)
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+Watermark doesn't solve the out-of-order data problem. It only solves the problem of late data. However, with D, you can use the timestamps to solve both problems (for instance, if you're storing incoming data in a table, you can easily insert any late data to its correct place a time-partionned table using the timestamp of the element)
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #109 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+with watermarks, when the late data arrives, it goes into its rightful window and gets in order
+
+--- Comment #110 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+with watermarks, when the late data arrives, it goes into its rightful window and gets in order
+
+--- Comment #111 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+ovokpus
+			
+
+
+			1 year, 4 months ago
+
+--- Comment #112 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+with watermarks, when the late data arrives, it goes into its rightful window and gets in order
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+with watermarks, when the late data arrives, it goes into its rightful window and gets in order
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #116 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+C even says watermarks AND timestamps.
+
+--- Comment #117 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+C even says watermarks AND timestamps.
+
+--- Comment #118 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+ovokpus
+			
+
+
+			1 year, 4 months ago
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+C even says watermarks AND timestamps.
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+C even says watermarks AND timestamps.
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #127 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Preemptible workers are the default secondary worker type. They are reclaimed and removed from the cluster if they are required by Google Cloud for other tasks. Although the potential removal of preemptible workers can affect job stability, you may decide to use preemptible instances to lower per-hour compute costs for non-critical data processing or to create very large clusters at a lower total cost 
+
+https://cloud.google.com/dataproc/docs/concepts/compute/secondary-vms
+
+--- Comment #128 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+FrankT2L
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #129 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Preemptible workers are the default secondary worker type. They are reclaimed and removed from the cluster if they are required by Google Cloud for other tasks. Although the potential removal of preemptible workers can affect job stability, you may decide to use preemptible instances to lower per-hour compute costs for non-critical data processing or to create very large clusters at a lower total cost 
+
+https://cloud.google.com/dataproc/docs/concepts/compute/secondary-vms
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+Preemptible workers are the default secondary worker type. They are reclaimed and removed from the cluster if they are required by Google Cloud for other tasks. Although the potential removal of preemptible workers can affect job stability, you may decide to use preemptible instances to lower per-hour compute costs for non-critical data processing or to create very large clusters at a lower total cost 
+
+https://cloud.google.com/dataproc/docs/concepts/compute/secondary-vms
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #134 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+delete this answer. The answer belongs to another question
+
+--- Comment #135 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+delete this answer. The answer belongs to another question
+
+--- Comment #136 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+FrankT2L
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+delete this answer. The answer belongs to another question
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+delete this answer. The answer belongs to another question
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #144 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+That's why we have watermarks in apache beam.
+
+--- Comment #145 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Tanzu
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+That's why we have watermarks in apache beam.
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+That's why we have watermarks in apache beam.
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #153 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Answer is  C Use watermarks and timestamps to capture the lagged data.
+
+A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #154 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+VishalBule
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is  C Use watermarks and timestamps to capture the lagged data.
+
+A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is  C Use watermarks and timestamps to capture the lagged data.
+
+A watermark is a threshold that indicates when Dataflow expects all of the data in a window to have arrived. If new data arrives with a timestamp that's in the window but older than the watermark, the data is considered late data.
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #161 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+"Watermark in implementation is a monotonically increasing timestamp. When Beam/Dataflow see a record with an event timestamp that is earlier than the watermark, the record is treated as late data."
+
+--- Comment #162 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+medeis_jar
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+"Watermark in implementation is a monotonically increasing timestamp. When Beam/Dataflow see a record with an event timestamp that is earlier than the watermark, the record is treated as late data."
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+"Watermark in implementation is a monotonically increasing timestamp. When Beam/Dataflow see a record with an event timestamp that is earlier than the watermark, the record is treated as late data."
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #170 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+A is a direct No, if data don’t have timestamp, we’ll only have the procesing time and not the “event time”.
+B is not either, sliding windows are not for this. Hopping|sliding windowing is useful for taking running averages of data, but not to process late data.
+D looks correct but has one concept missing, the watermark to know if the process time is ok with the event time or not. I’m not 100% sure is incorrect. If, since we have a “predictable time period”, might be this will do. I mean, if our dashboard is shown after the last input data has arrived (single global window), this should be ok. We’d have a “perfect watermark”. Anyway we’d need triggering .
+
+--- Comment #171 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #172 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+A is a direct No, if data don’t have timestamp, we’ll only have the procesing time and not the “event time”.
+B is not either, sliding windows are not for this. Hopping|sliding windowing is useful for taking running averages of data, but not to process late data.
+D looks correct but has one concept missing, the watermark to know if the process time is ok with the event time or not. I’m not 100% sure is incorrect. If, since we have a “predictable time period”, might be this will do. I mean, if our dashboard is shown after the last input data has arrived (single global window), this should be ok. We’d have a “perfect watermark”. Anyway we’d need triggering .
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+A is a direct No, if data don’t have timestamp, we’ll only have the procesing time and not the “event time”.
+B is not either, sliding windows are not for this. Hopping|sliding windowing is useful for taking running averages of data, but not to process late data.
+D looks correct but has one concept missing, the watermark to know if the process time is ok with the event time or not. I’m not 100% sure is incorrect. If, since we have a “predictable time period”, might be this will do. I mean, if our dashboard is shown after the last input data has arrived (single global window), this should be ok. We’d have a “perfect watermark”. Anyway we’d need triggering .
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #177 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+C is, I think, the correct answer: Watermark is different from late data. Watermark in implementation is a monotonically increasing timestamp. When Beam/Dataflow see a record with an event timestamp that is earlier than the watermark, the record is treated as late data.
+I’ll try to explain: Late data is inherent to Beam’s model for out-of-order processing. What does it mean for data to be late? The definition and its properties are intertwined with watermarks that track the progress of each computation across the event time domain. The simple intuition behind handling lateness is this: only late input should result in late data anywhere in the pipeline.
+So, is not easy to decide between C and D. If you ask me I’d say C since for D we ought to make some suppositions.
+
+--- Comment #178 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+C is, I think, the correct answer: Watermark is different from late data. Watermark in implementation is a monotonically increasing timestamp. When Beam/Dataflow see a record with an event timestamp that is earlier than the watermark, the record is treated as late data.
+I’ll try to explain: Late data is inherent to Beam’s model for out-of-order processing. What does it mean for data to be late? The definition and its properties are intertwined with watermarks that track the progress of each computation across the event time domain. The simple intuition behind handling lateness is this: only late input should result in late data anywhere in the pipeline.
+So, is not easy to decide between C and D. If you ask me I’d say C since for D we ought to make some suppositions.
+
+--- Comment #179 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #180 ---
+Author: Unknown | Date:  | Votes: 0
+C is, I think, the correct answer: Watermark is different from late data. Watermark in implementation is a monotonically increasing timestamp. When Beam/Dataflow see a record with an event timestamp that is earlier than the watermark, the record is treated as late data.
+I’ll try to explain: Late data is inherent to Beam’s model for out-of-order processing. What does it mean for data to be late? The definition and its properties are intertwined with watermarks that track the progress of each computation across the event time domain. The simple intuition behind handling lateness is this: only late input should result in late data anywhere in the pipeline.
+So, is not easy to decide between C and D. If you ask me I’d say C since for D we ought to make some suppositions.
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+C is, I think, the correct answer: Watermark is different from late data. Watermark in implementation is a monotonically increasing timestamp. When Beam/Dataflow see a record with an event timestamp that is earlier than the watermark, the record is treated as late data.
+I’ll try to explain: Late data is inherent to Beam’s model for out-of-order processing. What does it mean for data to be late? The definition and its properties are intertwined with watermarks that track the progress of each computation across the event time domain. The simple intuition behind handling lateness is this: only late input should result in late data anywhere in the pipeline.
+So, is not easy to decide between C and D. If you ask me I’d say C since for D we ought to make some suppositions.
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #187 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+"Expert Verified" but >50% questions have random answer. "Sliding window" really? Please, this can be fixed easyly with our most voted answer. Of course, the correct answer is C.
+
+--- Comment #188 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Jlozano
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+"Expert Verified" but >50% questions have random answer. "Sliding window" really? Please, this can be fixed easyly with our most voted answer. Of course, the correct answer is C.
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+"Expert Verified" but >50% questions have random answer. "Sliding window" really? Please, this can be fixed easyly with our most voted answer. Of course, the correct answer is C.
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #193 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #194 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #196 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Why there are so many wrong answers? Examtopics.com are you enjoying paid subscription by giving random answers from people?
+Ans: C
+
+--- Comment #197 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+JG123
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+Why there are so many wrong answers? Examtopics.com are you enjoying paid subscription by giving random answers from people?
+Ans: C
+
+--- Comment #199 ---
+Author: Unknown | Date:  | Votes: 0
+Why there are so many wrong answers? Examtopics.com are you enjoying paid subscription by giving random answers from people?
+Ans: C
+
+--- Comment #200 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #201 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #202 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #203 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #204 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Ans: C
+
+--- Comment #205 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+anji007
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #206 ---
+Author: Unknown | Date:  | Votes: 0
+Ans: C
+
+--- Comment #207 ---
+Author: Unknown | Date:  | Votes: 0
+Ans: C
+
+--- Comment #208 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #209 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #210 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #211 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #212 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #213 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #214 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

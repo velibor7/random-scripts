@@ -1,0 +1,16 @@
+COMMENT #81 FOR QUESTION 142
+============================================================
+Author: Unknown
+Date: 1 year, 9 months ago
+Votes: 0
+----------------------------------------
+The correct answer is B. You should create a Cloud Monitoring dashboard based on the BigQuery metric slots/allocated_for_project.
+
+This metric represents the number of BigQuery slots allocated for a project. By creating a Cloud Monitoring dashboard based on this metric, you can monitor the slot usage within each project in your organization. This will allow each team to monitor their own slot usage and ensure that they are not exceeding their allocated quota.
+
+Option A is incorrect because the query/scanned_bytes metric represents the number of bytes scanned by BigQuery queries, not the slot usage.
+
+Option C is incorrect because it involves creating a log export for each project and using a custom metric based on the totalSlotMs field. While this may be a valid way to monitor slot usage, it is more complex than simply using the slots/allocated_for_project metric.
+
+Option D is also incorrect because it involves creating an aggregated log export at the organization level, which is not necessary for monitoring slot usage within individual projects.
+============================================================

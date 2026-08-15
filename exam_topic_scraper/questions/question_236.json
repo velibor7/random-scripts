@@ -1,0 +1,607 @@
+{
+  "question": "You are deploying a MySQL database workload onto Cloud SQL. The database must be able to scale up to support several readers from various geographic regions. The database must be highly available and meet low RTO and RPO requirements, even in the event of a regional outage. You need to ensure that interruptions to the readers are minimal during a database failover. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a highly available Cloud SQL instance in region Create a highly available read replica in region B. Scale up read workloads by creating cascading read replicas in multiple regions. Backup the Cloud SQL instances to a multi-regional Cloud Storage bucket. Restore the Cloud SQL backup to a new instance in another region when Region A is down.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a highly available Cloud SQL instance in region A. Scale up read workloads by creating read replicas in multiple regions. Promote one of the read replicas when region A is down.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a highly available Cloud SQL instance in region A. Create a highly available read replica in region B. Scale up read workloads by creating cascading read replicas in multiple regions. Promote the read replica in region B when region A is down.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a highly available Cloud SQL instance in region A. Scale up read workloads by creating read replicas in the same region. Failover to the standby Cloud SQL instance when the primary instance fails.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 236 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 236\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are deploying a MySQL database workload onto Cloud SQL. The database must be able to scale up to support several readers from various geographic regions. The database must be highly available and meet low RTO and RPO requirements, even in the event of a regional outage. You need to ensure that interruptions to the readers are minimal during a database failover. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a highly available Cloud SQL instance in region Create a highly available read replica in region B. Scale up read workloads by creating cascading read replicas in multiple regions. Backup the Cloud SQL instances to a multi-regional Cloud Storage bucket. Restore the Cloud SQL backup to a new instance in another region when Region A is down.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a highly available Cloud SQL instance in region A. Scale up read workloads by creating read replicas in multiple regions. Promote one of the read replicas when region A is down.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a highly available Cloud SQL instance in region A. Create a highly available read replica in region B. Scale up read workloads by creating cascading read replicas in multiple regions. Promote the read replica in region B when region A is down.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a highly available Cloud SQL instance in region A. Scale up read workloads by creating read replicas in the same region. Failover to the standby Cloud SQL instance when the primary instance fails.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 1:41 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 236\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 1:41 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option C: Because HA read replica in multiple regions. \nNotA: Coz restore from back up is time taking\nNotB: No HA in Multiple regions read replica\nNot  D: Only one region mentioned.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option C: Because HA read replica in multiple regions. \nNotA: Coz restore from back up is time taking\nNotB: No HA in Multiple regions read replica\nNot  D: Only one region mentioned.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option C: Because HA read replica in multiple regions. \nNotA: Coz restore from back up is time taking\nNotB: No HA in Multiple regions read replica\nNot  D: Only one region mentioned.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option C: Because HA read replica in multiple regions. \nNotA: Coz restore from back up is time taking\nNotB: No HA in Multiple regions read replica\nNot  D: Only one region mentioned.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option C: Because HA read replica in multiple regions. \nNotA: Coz restore from back up is time taking\nNotB: No HA in Multiple regions read replica\nNot  D: Only one region mentioned.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "rohan.sahi\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C: Because HA read replica in multiple regions. \nNotA: Coz restore from back up is time taking\nNotB: No HA in Multiple regions read replica\nNot  D: Only one region mentioned.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C: Because HA read replica in multiple regions. \nNotA: Coz restore from back up is time taking\nNotB: No HA in Multiple regions read replica\nNot  D: Only one region mentioned.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 10 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Combines high availability with geographic distribution of read workloads. \n- Promoting a highly available read replica can provide a quick failover solution, potentially meeting low RTO and RPO requirements.\n\n=====\nWhy not A:\nRestoring from backup to a new instance in another region during a regional outage might not meet low RTO and RPO requirements due to the time it takes to perform a restore.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "- Combines high availability with geographic distribution of read workloads. \n- Promoting a highly available read replica can provide a quick failover solution, potentially meeting low RTO and RPO requirements.\n\n=====\nWhy not A:\nRestoring from backup to a new instance in another region during a regional outage might not meet low RTO and RPO requirements due to the time it takes to perform a restore.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Combines high availability with geographic distribution of read workloads. \n- Promoting a highly available read replica can provide a quick failover solution, potentially meeting low RTO and RPO requirements.\n\n=====\nWhy not A:\nRestoring from backup to a new instance in another region during a regional outage might not meet low RTO and RPO requirements due to the time it takes to perform a restore.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not B?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not B?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "AllenChen123\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not B?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not B?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not B:\nWhile B option scales up read workloads across multiple regions, it doesn't specify high availability for the read replica in another region. In the event of a regional outage, promoting a non-highly available read replica might not provide the desired uptime and reliability.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not B:\nWhile B option scales up read workloads across multiple regions, it doesn't specify high availability for the read replica in another region. In the event of a regional outage, promoting a non-highly available read replica might not provide the desired uptime and reliability.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "datapassionate\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not B:\nWhile B option scales up read workloads across multiple regions, it doesn't specify high availability for the read replica in another region. In the event of a regional outage, promoting a non-highly available read replica might not provide the desired uptime and reliability.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not B:\nWhile B option scales up read workloads across multiple regions, it doesn't specify high availability for the read replica in another region. In the event of a regional outage, promoting a non-highly available read replica might not provide the desired uptime and reliability.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 1\u00a0week ago",
+      "content": "Why C? Is it possible to have HA enable in different regions? How the synchronization in disk will wokr for HA?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 1\u00a0week ago",
+      "content": "mi_yulai\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t5\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why C? Is it possible to have HA enable in different regions? How the synchronization in disk will wokr for HA?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why C? Is it possible to have HA enable in different regions? How the synchronization in disk will wokr for HA?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "https://cloud.google.com/sql/docs/mysql/replication\n\nThis option involves having read replicas in multiple regions, allowing you to promote one of them in the event of a failure in region A. While there may still be a brief interruption during the failover, it is likely to be less than the time required for the synchronization of cascading read replicas.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "tibuenoc\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/sql/docs/mysql/replication\n\nThis option involves having read replicas in multiple regions, allowing you to promote one of them in the event of a failure in region A. While there may still be a brief interruption during the failover, it is likely to be less than the time required for the synchronization of cascading read replicas.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/sql/docs/mysql/replication\n\nThis option involves having read replicas in multiple regions, allowing you to promote one of them in the event of a failure in region A. While there may still be a brief interruption during the failover, it is likely to be less than the time required for the synchronization of cascading read replicas.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "To me, it's B. it provides: \nHigh availability: The highly available Cloud SQL instance in region A will ensure that the database remains accessible even if one of the zones in the region becomes unavailable.\nScalability: The read replicas in multiple regions will enable you to scale up the read capacity of the database to support the demands of readers from various geographic regions.\nMinimal interruptions: When region A is down, one of the read replicas in another region will be promoted to become the new primary instance. This will ensure that there is no interruption to the readers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "To me, it's B. it provides: \nHigh availability: The highly available Cloud SQL instance in region A will ensure that the database remains accessible even if one of the zones in the region becomes unavailable.\nScalability: The read replicas in multiple regions will enable you to scale up the read capacity of the database to support the demands of readers from various geographic regions.\nMinimal interruptions: When region A is down, one of the read replicas in another region will be promoted to become the new primary instance. This will ensure that there is no interruption to the readers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To me, it's B. it provides: \nHigh availability: The highly available Cloud SQL instance in region A will ensure that the database remains accessible even if one of the zones in the region becomes unavailable.\nScalability: The read replicas in multiple regions will enable you to scale up the read capacity of the database to support the demands of readers from various geographic regions.\nMinimal interruptions: When region A is down, one of the read replicas in another region will be promoted to become the new primary instance. This will ensure that there is no interruption to the readers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not others: \nApproach A: This approach requires you to restore a backup from a different region, which could take some time. This could result in a significant RPO (Recovery Point Objective) for the database. Additionally, the restored instance may not be physically located in the same region as the readers, which could impact performance.\nApproach C: This approach requires you to promote the read replica in region B, which could result in a temporary interruption to the readers while the promotion is taking place. Additionally, the read replica in region B may not be able to handle the same level of read traffic as the primary instance in region A.\nApproach D: This approach does not provide the same level of scalability as the other approaches, as you are limited to read replicas in the same region. Additionally, failover to the standby instance could result in a temporary interruption to the readers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not others: \nApproach A: This approach requires you to restore a backup from a different region, which could take some time. This could result in a significant RPO (Recovery Point Objective) for the database. Additionally, the restored instance may not be physically located in the same region as the readers, which could impact performance.\nApproach C: This approach requires you to promote the read replica in region B, which could result in a temporary interruption to the readers while the promotion is taking place. Additionally, the read replica in region B may not be able to handle the same level of read traffic as the primary instance in region A.\nApproach D: This approach does not provide the same level of scalability as the other approaches, as you are limited to read replicas in the same region. Additionally, failover to the standby instance could result in a temporary interruption to the readers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not others: \nApproach A: This approach requires you to restore a backup from a different region, which could take some time. This could result in a significant RPO (Recovery Point Objective) for the database. Additionally, the restored instance may not be physically located in the same region as the readers, which could impact performance.\nApproach C: This approach requires you to promote the read replica in region B, which could result in a temporary interruption to the readers while the promotion is taking place. Additionally, the read replica in region B may not be able to handle the same level of read traffic as the primary instance in region A.\nApproach D: This approach does not provide the same level of scalability as the other approaches, as you are limited to read replicas in the same region. Additionally, failover to the standby instance could result in a temporary interruption to the readers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not others: \nApproach A: This approach requires you to restore a backup from a different region, which could take some time. This could result in a significant RPO (Recovery Point Objective) for the database. Additionally, the restored instance may not be physically located in the same region as the readers, which could impact performance.\nApproach C: This approach requires you to promote the read replica in region B, which could result in a temporary interruption to the readers while the promotion is taking place. Additionally, the read replica in region B may not be able to handle the same level of read traffic as the primary instance in region A.\nApproach D: This approach does not provide the same level of scalability as the other approaches, as you are limited to read replicas in the same region. Additionally, failover to the standby instance could result in a temporary interruption to the readers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Ignore my previous messages, it's C :D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Ignore my previous messages, it's C :D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Ignore my previous messages, it's C :D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Ignore my previous messages, it's C :D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "A. \nCreate a highly available Cloud SQL instance in region Create a highly available read replica in region B. Scale up read workloads by creating cascading read replicas in multiple regions. Backup the Cloud SQL instances to a multi-regional Cloud Storage bucket. Restore the Cloud SQL backup to a new instance in another region when Region A is down.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. \nCreate a highly available Cloud SQL instance in region Create a highly available read replica in region B. Scale up read workloads by creating cascading read replicas in multiple regions. Backup the Cloud SQL instances to a multi-regional Cloud Storage bucket. Restore the Cloud SQL backup to a new instance in another region when Region A is down.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. \nCreate a highly available Cloud SQL instance in region Create a highly available read replica in region B. Scale up read workloads by creating cascading read replicas in multiple regions. Backup the Cloud SQL instances to a multi-regional Cloud Storage bucket. Restore the Cloud SQL backup to a new instance in another region when Region A is down.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

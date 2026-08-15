@@ -1,0 +1,14 @@
+COMMENT #71 FOR QUESTION 5
+============================================================
+Author: Unknown
+Date: 6 months, 2 weeks ago
+Votes: 0
+----------------------------------------
+Option A is incorrect because federated data sources do not provide any data validation or cleaning capabilities and you'll have to do it on the SQL query, which could slow down the performance.
+
+Option B is incorrect because Stackdriver monitoring can only monitor the performance of the pipeline, but it can't handle corrupted or incorrectly formatted data.
+
+Option C is incorrect because using gcloud CLI and setting max_bad_records to 0 will ignore the corrupted or incorrectly formatted data and continue the load process, this will lead to incorrect analysis.
+
+Answer D. Run a Google Cloud Dataflow batch pipeline to import the data into BigQuery, and push errors to another dead-letter table for analysis.
+============================================================

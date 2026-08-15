@@ -1,0 +1,9 @@
+COMMENT #114 FOR QUESTION 60
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+The question seems pretty badly written. One important thing to remember is that partitioned tables also have a limit of 4000 partitions (https://cloud.google.com/bigquery/docs/partitioned-tables#ingestion_time), so moving everything to one table would just delay the problem. However, option A is not clear on how it will be done. One table per year with daily partitions? Best solution as no limit will be reached. One table per day? Then we have the same 1000 tables problem.
+All things considered I'll stick to B, simply because the problem will definitely be solved for the next few years, so I'd say it's a reasonable solution.
+============================================================

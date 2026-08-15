@@ -1,0 +1,80 @@
+COMMENT #2 FOR QUESTION 302
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 302
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You work for a farming company. You have one BigQuery table named sensors, which is about 500 MB and contains the list of your 5000 sensors, with columns for id, name, and location. This table is updated every hour. Each sensor generates one metric every 30 seconds along with a timestamp, which you want to store in BigQuery. You want to run an analytical query on the data once a week for monitoring purposes. You also want to minimize costs. What data model should you use?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Create a metrics column in the sensors table.2. Set RECORD type and REPEATED mode for the metrics column.3. Use an UPDATE statement every 30 seconds to add new metrics.
+										
+
+
+													B.
+												
+											
+											1. Create a metrics column in the sensors table.2. Set RECORD type and REPEATED mode for the metrics column.3. Use an INSERT statement every 30 seconds to add new metrics.
+										
+
+
+													C.
+												
+											
+											1. Create a metrics table partitioned by timestamp.2. Create a sensorId column in the metrics table, that points to the id column in the sensors table.3. Use an INSERT statement every 30 seconds to append new metrics to the metrics table.4. Join the two tables, if needed, when running the analytical query.
+										
+
+
+													D.
+												
+											
+											1. Create a metrics table partitioned by timestamp.2. Create a sensorId column in the metrics table, which points to the id column in the sensors table.3. Use an UPDATE statement every 30 seconds to append new metrics to the metrics table.4. Join the two tables, if needed, when running the analytical query.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 4, 2024, 1:54 p.m.
+============================================================

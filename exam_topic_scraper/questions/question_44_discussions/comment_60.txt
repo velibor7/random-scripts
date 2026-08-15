@@ -1,0 +1,23 @@
+COMMENT #60 FOR QUESTION 44
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+And here is the correct way to configure indices:
+https://cloud.google.com/datastore/docs/tools/indexconfig
+
+so this would be the best answer:
+indexes:
+- kind: Movie
+  properties:
+  - name: actors
+  - name: date_released
+    direction: asc. <This could be left out, it defaults to direction: asc if excluded>
+
+- kind: Movie
+  properties:
+  - name: tag
+  - name: date_released
+    direction: asc. <This could be left out, it defaults to direction: asc if excluded>
+============================================================

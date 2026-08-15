@@ -1,0 +1,12 @@
+COMMENT #58 FOR QUESTION 56
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+The TABLE_DATE_RANGE function in BigQuery is a table wildcard function that can be used to query a range of daily tables. It takes two arguments: a table prefix and a date range. The table prefix is the beginning of the table names, and the date range is the start and end dates of the tables to be queried.
+
+The TABLE_DATE_RANGE function will expand to cover all tables in the dataset that match the table prefix and are within the date range. For example, if you have a dataset that contains daily tables named my_table_20230804, my_table_20230805, and my_table_20230806, you could use the TABLE_DATE_RANGE function to query all of the tables in the dataset between August 4, 2023 and August 6, 2023 as follows:
+SELECT *
+FROM TABLE_DATE_RANGE('my_table_', '2023-08-04', '2023-08-06');
+============================================================

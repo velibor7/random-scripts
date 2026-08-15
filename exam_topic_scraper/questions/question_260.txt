@@ -1,0 +1,1027 @@
+================================================================================
+QUESTION:
+You have two projects where you run BigQuery jobs:•	One project runs production jobs that have strict completion time SLAs. These are high priority jobs that must have the required compute resources available when needed. These jobs generally never go below a 300 slot utilization, but occasionally spike up an additional 500 slots.•	The other project is for users to run ad-hoc analytical queries. This project generally never uses more than 200 slots at a time. You want these ad-hoc queries to be billed based on how much data users scan rather than by slot capacity.You need to ensure that both projects have the appropriate compute resources available. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a single Enterprise Edition reservation for both projects. Set a baseline of 300 slots. Enable autoscaling up to 700 slots.
+										
+
+
+													B.
+												
+											
+											Create two reservations, one for each of the projects. For the SLA project, use an Enterprise Edition with a baseline of 300 slots and enable autoscaling up to 500 slots. For the ad-hoc project, configure on-demand billing.
+										
+
+
+													C.
+												
+											
+											Create two Enterprise Edition reservations, one for each of the projects. For the SLA project, set a baseline of 300 slots and enable autoscaling up to 500 slots. For the ad-hoc project, set a reservation baseline of 0 slots and set the ignore idle slots flag to False.
+										
+
+
+													D.
+												
+											
+											Create two Enterprise Edition reservations, one for each of the projects. For the SLA project, set a baseline of 800 slots. For the ad-hoc project, enable autoscaling up to 200 slots.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (179 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 260 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 260
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have two projects where you run BigQuery jobs:•	One project runs production jobs that have strict completion time SLAs. These are high priority jobs that must have the required compute resources available when needed. These jobs generally never go below a 300 slot utilization, but occasionally spike up an additional 500 slots.•	The other project is for users to run ad-hoc analytical queries. This project generally never uses more than 200 slots at a time. You want these ad-hoc queries to be billed based on how much data users scan rather than by slot capacity.You need to ensure that both projects have the appropriate compute resources available. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a single Enterprise Edition reservation for both projects. Set a baseline of 300 slots. Enable autoscaling up to 700 slots.
+										
+
+
+													B.
+												
+											
+											Create two reservations, one for each of the projects. For the SLA project, use an Enterprise Edition with a baseline of 300 slots and enable autoscaling up to 500 slots. For the ad-hoc project, configure on-demand billing.
+										
+
+
+													C.
+												
+											
+											Create two Enterprise Edition reservations, one for each of the projects. For the SLA project, set a baseline of 300 slots and enable autoscaling up to 500 slots. For the ad-hoc project, set a reservation baseline of 0 slots and set the ignore idle slots flag to False.
+										
+
+
+													D.
+												
+											
+											Create two Enterprise Edition reservations, one for each of the projects. For the SLA project, set a baseline of 800 slots. For the ad-hoc project, enable autoscaling up to 200 slots.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 5:29 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 260
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 5:29 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The SLA project gets a dedicated reservation with autoscaling to handle spikes, ensuring it meets its strict completion time SLAs. 
+- The ad-hoc project uses on-demand billing, which means it will be billed based on the amount of data scanned rather than slot capacity, fitting the billing preference for ad-hoc queries.
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The SLA project gets a dedicated reservation with autoscaling to handle spikes, ensuring it meets its strict completion time SLAs. 
+- The ad-hoc project uses on-demand billing, which means it will be billed based on the amount of data scanned rather than slot capacity, fitting the billing preference for ad-hoc queries.
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The SLA project gets a dedicated reservation with autoscaling to handle spikes, ensuring it meets its strict completion time SLAs. 
+- The ad-hoc project uses on-demand billing, which means it will be billed based on the amount of data scanned rather than slot capacity, fitting the billing preference for ad-hoc queries.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The SLA project gets a dedicated reservation with autoscaling to handle spikes, ensuring it meets its strict completion time SLAs. 
+- The ad-hoc project uses on-demand billing, which means it will be billed based on the amount of data scanned rather than slot capacity, fitting the billing preference for ad-hoc queries.
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The SLA project gets a dedicated reservation with autoscaling to handle spikes, ensuring it meets its strict completion time SLAs. 
+- The ad-hoc project uses on-demand billing, which means it will be billed based on the amount of data scanned rather than slot capacity, fitting the billing preference for ad-hoc queries.
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+- The SLA project gets a dedicated reservation with autoscaling to handle spikes, ensuring it meets its strict completion time SLAs. 
+- The ad-hoc project uses on-demand billing, which means it will be billed based on the amount of data scanned rather than slot capacity, fitting the billing preference for ad-hoc queries.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+- The SLA project gets a dedicated reservation with autoscaling to handle spikes, ensuring it meets its strict completion time SLAs. 
+- The ad-hoc project uses on-demand billing, which means it will be billed based on the amount of data scanned rather than slot capacity, fitting the billing preference for ad-hoc queries.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Critical jobs can spike up to 800 slots, making option B wrong
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Critical jobs can spike up to 800 slots, making option B wrong
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+ce9e395
+			
+
+
+			1 year ago
+
+--- Comment #23 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Critical jobs can spike up to 800 slots, making option B wrong
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Critical jobs can spike up to 800 slots, making option B wrong
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+in this context, "enable autoscaling up to 500 slots" means that the system can add up to 500 slots beyond the baseline
+
+--- Comment #28 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+in this context, "enable autoscaling up to 500 slots" means that the system can add up to 500 slots beyond the baseline
+
+--- Comment #29 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+barrru
+			
+
+
+			1 year ago
+
+--- Comment #30 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+in this context, "enable autoscaling up to 500 slots" means that the system can add up to 500 slots beyond the baseline
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+in this context, "enable autoscaling up to 500 slots" means that the system can add up to 500 slots beyond the baseline
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+I dont think thats correct. "up to 500 slots" means the maximum limit is 500 slots - it doesnt specify autoscaling an additional 500 slots.
+
+--- Comment #35 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+I dont think thats correct. "up to 500 slots" means the maximum limit is 500 slots - it doesnt specify autoscaling an additional 500 slots.
+
+--- Comment #36 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+chrissamharris
+			
+
+
+			1 year ago
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+I dont think thats correct. "up to 500 slots" means the maximum limit is 500 slots - it doesnt specify autoscaling an additional 500 slots.
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+I dont think thats correct. "up to 500 slots" means the maximum limit is 500 slots - it doesnt specify autoscaling an additional 500 slots.
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Option B.
+
+Not D because "In Project-2, ad-hoc queries need to be billed based on how much data users scan rather than by slot capacity."
+
+--- Comment #47 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+JyoGCP
+			
+
+
+				Highly Voted 
+
+
+			1 year, 1 month ago
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+Option B.
+
+Not D because "In Project-2, ad-hoc queries need to be billed based on how much data users scan rather than by slot capacity."
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Option B.
+
+Not D because "In Project-2, ad-hoc queries need to be billed based on how much data users scan rather than by slot capacity."
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #55 ---
+Author: Unknown | Date: 1 week, 6 days ago | Votes: 0
+answer B, because of the pay as you go for the Adhoc projet
+
+--- Comment #56 ---
+Author: Unknown | Date: 1 week, 6 days ago | Votes: 0
+Abizi
+			
+
+
+				Most Recent 
+
+
+			1 week, 6 days ago
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+answer B, because of the pay as you go for the Adhoc projet
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+answer B, because of the pay as you go for the Adhoc projet
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #64 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+100% B 
+I work with BQ on a daily basis, did the transition from falt rate to editions last year, have been configuring this for so many customers. 
+Billing for data analysed rather than slots is on demand - so no other option other than B makes sense.
+
+--- Comment #65 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+ToiToi
+			
+
+
+			5 months, 1 week ago
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+100% B 
+I work with BQ on a daily basis, did the transition from falt rate to editions last year, have been configuring this for so many customers. 
+Billing for data analysed rather than slots is on demand - so no other option other than B makes sense.
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+100% B 
+I work with BQ on a daily basis, did the transition from falt rate to editions last year, have been configuring this for so many customers. 
+Billing for data analysed rather than slots is on demand - so no other option other than B makes sense.
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #73 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+https://cloud.google.com/bigquery/docs/slots-autoscaling-intro#using_reservations_with_baseline_and_autoscaling_slots says clearly, "Autoscaling slots are only added after all of the baseline slots (and idle slots if applicable) are consumed."
+
+--- Comment #74 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+SamuelTsch
+			
+
+
+			5 months, 1 week ago
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/bigquery/docs/slots-autoscaling-intro#using_reservations_with_baseline_and_autoscaling_slots says clearly, "Autoscaling slots are only added after all of the baseline slots (and idle slots if applicable) are consumed."
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/bigquery/docs/slots-autoscaling-intro#using_reservations_with_baseline_and_autoscaling_slots says clearly, "Autoscaling slots are only added after all of the baseline slots (and idle slots if applicable) are consumed."
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #82 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Separate Reservations: This approach provides tailored resource allocation and billing models to match the distinct needs of each project.
+SLA Project Reservation:
+Enterprise Edition: Guarantees consistent slot availability for your production jobs.
+Baseline of 300 slots: Ensures resources are always available to meet your core usage at a predictable cost.
+Autoscaling up to 500 slots: Accommodates bursts in workload while controlling costs.
+Ad-hoc Project On-demand:
+On-demand billing: Charges based on data scanned, ideal for unpredictable and variable query patterns by your ad-hoc users.
+
+--- Comment #83 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+CGS22
+			
+
+
+			1 year ago
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Separate Reservations: This approach provides tailored resource allocation and billing models to match the distinct needs of each project.
+SLA Project Reservation:
+Enterprise Edition: Guarantees consistent slot availability for your production jobs.
+Baseline of 300 slots: Ensures resources are always available to meet your core usage at a predictable cost.
+Autoscaling up to 500 slots: Accommodates bursts in workload while controlling costs.
+Ad-hoc Project On-demand:
+On-demand billing: Charges based on data scanned, ideal for unpredictable and variable query patterns by your ad-hoc users.
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+Separate Reservations: This approach provides tailored resource allocation and billing models to match the distinct needs of each project.
+SLA Project Reservation:
+Enterprise Edition: Guarantees consistent slot availability for your production jobs.
+Baseline of 300 slots: Ensures resources are always available to meet your core usage at a predictable cost.
+Autoscaling up to 500 slots: Accommodates bursts in workload while controlling costs.
+Ad-hoc Project On-demand:
+On-demand billing: Charges based on data scanned, ideal for unpredictable and variable query patterns by your ad-hoc users.
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #91 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Note, Option A states autoscale "up to" (not an additional) 500 slots, whereas the requirement is 800 slots. Making option D the only viable option.
+
+--- Comment #92 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+chrissamharris
+			
+
+
+			1 year ago
+
+--- Comment #93 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+Note, Option A states autoscale "up to" (not an additional) 500 slots, whereas the requirement is 800 slots. Making option D the only viable option.
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+Note, Option A states autoscale "up to" (not an additional) 500 slots, whereas the requirement is 800 slots. Making option D the only viable option.
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+"You want these ad-hoc queries to be billed based on how much data users scan rather than by slot capacity." this is the only thing you need to read out of the question. 
+Having spikes of 500 slots does not mean you should set a baseline of 800, it is WAY too expensive to do that for spikes.
+
+--- Comment #99 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+"You want these ad-hoc queries to be billed based on how much data users scan rather than by slot capacity." this is the only thing you need to read out of the question. 
+Having spikes of 500 slots does not mean you should set a baseline of 800, it is WAY too expensive to do that for spikes.
+
+--- Comment #100 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+ToiToi
+			
+
+
+			5 months, 1 week ago
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+"You want these ad-hoc queries to be billed based on how much data users scan rather than by slot capacity." this is the only thing you need to read out of the question. 
+Having spikes of 500 slots does not mean you should set a baseline of 800, it is WAY too expensive to do that for spikes.
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+"You want these ad-hoc queries to be billed based on how much data users scan rather than by slot capacity." this is the only thing you need to read out of the question. 
+Having spikes of 500 slots does not mean you should set a baseline of 800, it is WAY too expensive to do that for spikes.
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #107 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Scratch this - Option B: https://cloud.google.com/bigquery/docs/slots-autoscaling-intro#using_reservations_with_baseline_and_autoscaling_slots 
+Baseline Slots and AutoScaling Slots are treated as two different entities in the documentation. Therefore B is right despite the horrific wording of the answers.
+
+--- Comment #108 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+chrissamharris
+			
+
+
+			1 year ago
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+Scratch this - Option B: https://cloud.google.com/bigquery/docs/slots-autoscaling-intro#using_reservations_with_baseline_and_autoscaling_slots 
+Baseline Slots and AutoScaling Slots are treated as two different entities in the documentation. Therefore B is right despite the horrific wording of the answers.
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+Scratch this - Option B: https://cloud.google.com/bigquery/docs/slots-autoscaling-intro#using_reservations_with_baseline_and_autoscaling_slots 
+Baseline Slots and AutoScaling Slots are treated as two different entities in the documentation. Therefore B is right despite the horrific wording of the answers.
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #116 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+"You want these ad-hoc queries to be billed based on how much data users scan rather than by slot capacity." So D is out. Choose B
+
+--- Comment #117 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+potatoKiller
+			
+
+
+			1 year ago
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+"You want these ad-hoc queries to be billed based on how much data users scan rather than by slot capacity." So D is out. Choose B
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+"You want these ad-hoc queries to be billed based on how much data users scan rather than by slot capacity." So D is out. Choose B
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #124 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+B 
+"enable autoscaling up to 500 slots" means that the system can add up to 500 slots beyond the baseline as needed, effectively allowing for a total of 800 slots (300 baseline + 500 autoscaled) during peak usage.
+
+--- Comment #125 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+barrru
+			
+
+
+			1 year ago
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+B 
+"enable autoscaling up to 500 slots" means that the system can add up to 500 slots beyond the baseline as needed, effectively allowing for a total of 800 slots (300 baseline + 500 autoscaled) during peak usage.
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+B 
+"enable autoscaling up to 500 slots" means that the system can add up to 500 slots beyond the baseline as needed, effectively allowing for a total of 800 slots (300 baseline + 500 autoscaled) during peak usage.
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #132 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+500 (additional) +300 = 800, so answer is D
+
+--- Comment #133 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+hanoverquay
+			
+
+
+			1 year ago
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+500 (additional) +300 = 800, so answer is D
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+500 (additional) +300 = 800, so answer is D
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #141 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Considering the emphasis on strict completion time SLA's.I go with option D. However I think both B and D are not the best solution here.
+
+--- Comment #142 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+danisxp
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+Considering the emphasis on strict completion time SLA's.I go with option D. However I think both B and D are not the best solution here.
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+Considering the emphasis on strict completion time SLA's.I go with option D. However I think both B and D are not the best solution here.
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #150 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option B - first project works well with dedicated reservation and autoscaling. The second one requires on demand billing, as per question requires.
+
+--- Comment #151 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Matt_108
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+Option B - first project works well with dedicated reservation and autoscaling. The second one requires on demand billing, as per question requires.
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+Option B - first project works well with dedicated reservation and autoscaling. The second one requires on demand billing, as per question requires.
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #159 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+"These jobs generally never go below a 300 slot utilization, but occasionally spike up an additional 500 slots." -> if it spikes up an ADITIONAL 500 slots, on top of the regular 300, shouldn't we reserve at a minimum 800? open to explanations as to why this is not the case.
+
+--- Comment #160 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+ElenaL
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+"These jobs generally never go below a 300 slot utilization, but occasionally spike up an additional 500 slots." -> if it spikes up an ADITIONAL 500 slots, on top of the regular 300, shouldn't we reserve at a minimum 800? open to explanations as to why this is not the case.
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+"These jobs generally never go below a 300 slot utilization, but occasionally spike up an additional 500 slots." -> if it spikes up an ADITIONAL 500 slots, on top of the regular 300, shouldn't we reserve at a minimum 800? open to explanations as to why this is not the case.
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #168 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+B. Create two reservations, one for each of the projects. For the SLA project, use an Enterprise Edition with a baseline of 300 slots and enable autoscaling up to 500 slots. For the ad-hoc project, configure on-demand billing.
+
+--- Comment #169 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+scaenruy
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+B. Create two reservations, one for each of the projects. For the SLA project, use an Enterprise Edition with a baseline of 300 slots and enable autoscaling up to 500 slots. For the ad-hoc project, configure on-demand billing.
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+B. Create two reservations, one for each of the projects. For the SLA project, use an Enterprise Edition with a baseline of 300 slots and enable autoscaling up to 500 slots. For the ad-hoc project, configure on-demand billing.
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

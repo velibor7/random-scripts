@@ -1,0 +1,15 @@
+COMMENT #210 FOR QUESTION 30
+============================================================
+Author: Unknown
+Date: 1 year, 5 months ago
+Votes: 0
+----------------------------------------
+Answer is B - Use an ETL tool to load the data from MySQL into Google BigQuery.
+
+* Google BigQuery is a serverless, highly scalable data warehouse that can handle large-scale analytics workloads without impacting your MySQL cluster's performance.
+* Using an ETL (Extract, Transform, Load) tool to transfer data from MySQL to BigQuery allows you to maintain a separate analytics environment, ensuring that your operational database remains unaffected.
+
+Option C (connecting an on-premises Apache Hadoop cluster to MySQL and performing ETL) introduces complexity and may not be as scalable as a cloud-based solution.
+
+Option D (mounting backups to Google Cloud SQL and processing the data using Google Cloud Dataproc) could be an option for historical data analysis but might not be the best choice for real-time analytics while the MySQL cluster is under heavy load. Additionally, the backups need to be restored and processed, which might introduce some delay.
+============================================================

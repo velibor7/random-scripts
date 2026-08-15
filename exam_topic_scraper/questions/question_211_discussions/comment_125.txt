@@ -1,0 +1,14 @@
+COMMENT #125 FOR QUESTION 211
+============================================================
+Author: Unknown
+Date: 1 year ago
+Votes: 0
+----------------------------------------
+C. Schedule a daily BigQuery snapshot of the table.
+
+Here's why:
+
+Cost-effective: BigQuery snapshots are significantly cheaper than daily exports to Cloud Storage or copying the entire dataset to a backup region. They offer point-in-time backups with minimal storage costs.
+Fast recovery: Snapshots can be restored quickly, meeting your RPO requirement of less than 24 hours.
+Multi-regional: By default, BigQuery snapshots are automatically stored in a different region from the source data, ensuring redundancy and disaster recovery.
+============================================================

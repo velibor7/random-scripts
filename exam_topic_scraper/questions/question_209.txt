@@ -1,0 +1,567 @@
+================================================================================
+QUESTION:
+A shipping company has live package-tracking data that is sent to an Apache Kafka stream in real time. This is then loaded into BigQuery. Analysts in your company want to query the tracking data in BigQuery to analyze geospatial trends in the lifecycle of a package. The table was originally created with ingest-date partitioning. Over time, the query processing time has increased. You need to copy all the data to a new clustered table. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Re-create the table using data partitioning on the package delivery date.
+										
+
+
+													B.
+												
+											
+											Implement clustering in BigQuery on the package-tracking ID column.
+										
+
+
+													C.
+												
+											
+											Implement clustering in BigQuery on the ingest date column.
+										
+
+
+													D.
+												
+											
+											Tier older data onto Cloud Storage files and create a BigQuery table using Cloud Storage as an external data source.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (78 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 209 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 209
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								A shipping company has live package-tracking data that is sent to an Apache Kafka stream in real time. This is then loaded into BigQuery. Analysts in your company want to query the tracking data in BigQuery to analyze geospatial trends in the lifecycle of a package. The table was originally created with ingest-date partitioning. Over time, the query processing time has increased. You need to copy all the data to a new clustered table. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Re-create the table using data partitioning on the package delivery date.
+										
+
+
+													B.
+												
+											
+											Implement clustering in BigQuery on the package-tracking ID column.
+										
+
+
+													C.
+												
+											
+											Implement clustering in BigQuery on the ingest date column.
+										
+
+
+													D.
+												
+											
+											Tier older data onto Cloud Storage files and create a BigQuery table using Cloud Storage as an external data source.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:31 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 209
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:31 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 3 months, 4 weeks ago | Votes: 0
+You don't need to recreate a table to cluster it, contrary to partitioning, where you have to create a new table with the old data (migration)
+
+> If you alter an existing non-clustered table to be clustered, the existing data is not automatically clustered. Only new data that's stored using the clustered columns is subject to automatic reclustering. 
+https://cloud.google.com/bigquery/docs/clustered-tables#limitations
+
+--- Comment #6 ---
+Author: Unknown | Date: 3 months, 4 weeks ago | Votes: 0
+You don't need to recreate a table to cluster it, contrary to partitioning, where you have to create a new table with the old data (migration)
+
+> If you alter an existing non-clustered table to be clustered, the existing data is not automatically clustered. Only new data that's stored using the clustered columns is subject to automatic reclustering. 
+https://cloud.google.com/bigquery/docs/clustered-tables#limitations
+
+--- Comment #7 ---
+Author: Unknown | Date: 3 months, 4 weeks ago | Votes: 0
+You don't need to recreate a table to cluster it, contrary to partitioning, where you have to create a new table with the old data (migration)
+
+> If you alter an existing non-clustered table to be clustered, the existing data is not automatically clustered. Only new data that's stored using the clustered columns is subject to automatic reclustering. 
+https://cloud.google.com/bigquery/docs/clustered-tables#limitations
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 3 months, 4 weeks ago | Votes: 0
+You don't need to recreate a table to cluster it, contrary to partitioning, where you have to create a new table with the old data (migration)
+
+> If you alter an existing non-clustered table to be clustered, the existing data is not automatically clustered. Only new data that's stored using the clustered columns is subject to automatic reclustering. 
+https://cloud.google.com/bigquery/docs/clustered-tables#limitations
+
+--- Comment #13 ---
+Author: Unknown | Date: 3 months, 4 weeks ago | Votes: 0
+You don't need to recreate a table to cluster it, contrary to partitioning, where you have to create a new table with the old data (migration)
+
+> If you alter an existing non-clustered table to be clustered, the existing data is not automatically clustered. Only new data that's stored using the clustered columns is subject to automatic reclustering. 
+https://cloud.google.com/bigquery/docs/clustered-tables#limitations
+
+--- Comment #14 ---
+Author: Unknown | Date: 3 months, 4 weeks ago | Votes: 0
+apoio.certificacoes.closer
+			
+
+
+			3 months, 4 weeks ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+You don't need to recreate a table to cluster it, contrary to partitioning, where you have to create a new table with the old data (migration)
+
+> If you alter an existing non-clustered table to be clustered, the existing data is not automatically clustered. Only new data that's stored using the clustered columns is subject to automatic reclustering. 
+https://cloud.google.com/bigquery/docs/clustered-tables#limitations
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+You don't need to recreate a table to cluster it, contrary to partitioning, where you have to create a new table with the old data (migration)
+
+> If you alter an existing non-clustered table to be clustered, the existing data is not automatically clustered. Only new data that's stored using the clustered columns is subject to automatic reclustering. 
+https://cloud.google.com/bigquery/docs/clustered-tables#limitations
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 7 months, 4 weeks ago | Votes: 0
+B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #23 ---
+Author: Unknown | Date: 7 months, 4 weeks ago | Votes: 0
+JyoGCP
+			
+
+
+			7 months, 4 weeks ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #31 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #32 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+datapassionate
+			
+
+
+			8 months, 4 weeks ago
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #40 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Definitely B
+
+--- Comment #41 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Matt_108
+			
+
+
+			9 months ago
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Definitely B
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+Definitely B
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #49 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+This looks like Question #166
+
+Option B, implementing clustering in BigQuery on the package-tracking ID column, seems the most appropriate. It directly addresses the query slowdown issue by reorganizing the data in a way that aligns with the analysts' query patterns, leading to more efficient and faster query execution.
+
+--- Comment #50 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+This looks like Question #166
+
+Option B, implementing clustering in BigQuery on the package-tracking ID column, seems the most appropriate. It directly addresses the query slowdown issue by reorganizing the data in a way that aligns with the analysts' query patterns, leading to more efficient and faster query execution.
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+This looks like Question #166
+
+Option B, implementing clustering in BigQuery on the package-tracking ID column, seems the most appropriate. It directly addresses the query slowdown issue by reorganizing the data in a way that aligns with the analysts' query patterns, leading to more efficient and faster query execution.
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #58 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Answer is B
+
+--- Comment #59 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+raaad
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is B
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is B
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #67 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+Query Focus: Analysts are interested in geospatial trends within individual package lifecycles. Clustering by package-tracking ID physically co-locates related data, significantly improving query performance for these analyses.
+
+Addressing Slow Queries: Clustering addresses the query slowdown issue by optimizing data organization for the specific query patterns.
+
+Partitioning vs. Clustering:
+
+Partitioning: Divides data into segments based on a column's values, primarily for managing large datasets and optimizing query costs.
+Clustering: Organizes data within partitions for faster querying based on specific columns.
+
+--- Comment #68 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+e70ea9e
+			
+
+
+			9 months, 2 weeks ago
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+Query Focus: Analysts are interested in geospatial trends within individual package lifecycles. Clustering by package-tracking ID physically co-locates related data, significantly improving query performance for these analyses.
+
+Addressing Slow Queries: Clustering addresses the query slowdown issue by optimizing data organization for the specific query patterns.
+
+Partitioning vs. Clustering:
+
+Partitioning: Divides data into segments based on a column's values, primarily for managing large datasets and optimizing query costs.
+Clustering: Organizes data within partitions for faster querying based on specific columns.
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+Query Focus: Analysts are interested in geospatial trends within individual package lifecycles. Clustering by package-tracking ID physically co-locates related data, significantly improving query performance for these analyses.
+
+Addressing Slow Queries: Clustering addresses the query slowdown issue by optimizing data organization for the specific query patterns.
+
+Partitioning vs. Clustering:
+
+Partitioning: Divides data into segments based on a column's values, primarily for managing large datasets and optimizing query costs.
+Clustering: Organizes data within partitions for faster querying based on specific columns.
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

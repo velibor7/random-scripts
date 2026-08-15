@@ -1,0 +1,409 @@
+{
+  "question": "Your organization needs to migrate a critical, on-premises MySQL database to Cloud SQL for MySQL. The on-premises database is on a version of MySQL that is supported by Cloud SQL and uses the InnoDB storage engine. You need to migrate the database while preserving transactions and minimizing downtime. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Use Database Migration Service to connect to your on-premises database, and choose continuous replication.2. After the on-premises database is migrated, promote the Cloud SQL for MySQL instance, and connect applications to your Cloud SQL instance.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Build a Cloud Data Fusion pipeline for each table to migrate data from the on-premises MySQL database to Cloud SQL for MySQL.2. Schedule downtime to run each Cloud Data Fusion pipeline.3. Verify that the migration was successful.4. Re-point the applications to the Cloud SQL for MySQL instance.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Pause the on-premises applications.2. Use the mysqldump utility to dump the database content in compressed format.3. Run gsutil \u2013m to move the dump file to Cloud Storage.4. Use the Cloud SQL for MySQL import option.5. After the import operation is complete, re-point the applications to the Cloud SQL for MySQL instance.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1 Pause the on-premises applications.2. Use the mysqldump utility to dump the database content in CSV format.3. Run gsutil \u2013m to move the dump file to Cloud Storage.4. Use the Cloud SQL for MySQL import option.5. After the import operation is complete, re-point the applications to the Cloud SQL for MySQL instance.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Cloud Database Engineer topic 1 question 104 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Cloud Database Engineer\n\n\t\t\t\t\t\t\tQuestion #: 104\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Cloud Database Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYour organization needs to migrate a critical, on-premises MySQL database to Cloud SQL for MySQL. The on-premises database is on a version of MySQL that is supported by Cloud SQL and uses the InnoDB storage engine. You need to migrate the database while preserving transactions and minimizing downtime. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Use Database Migration Service to connect to your on-premises database, and choose continuous replication.2. After the on-premises database is migrated, promote the Cloud SQL for MySQL instance, and connect applications to your Cloud SQL instance.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Build a Cloud Data Fusion pipeline for each table to migrate data from the on-premises MySQL database to Cloud SQL for MySQL.2. Schedule downtime to run each Cloud Data Fusion pipeline.3. Verify that the migration was successful.4. Re-point the applications to the Cloud SQL for MySQL instance.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Pause the on-premises applications.2. Use the mysqldump utility to dump the database content in compressed format.3. Run gsutil \u2013m to move the dump file to Cloud Storage.4. Use the Cloud SQL for MySQL import option.5. After the import operation is complete, re-point the applications to the Cloud SQL for MySQL instance.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1 Pause the on-premises applications.2. Use the mysqldump utility to dump the database content in CSV format.3. Run gsutil \u2013m to move the dump file to Cloud Storage.4. Use the Cloud SQL for MySQL import option.5. After the import operation is complete, re-point the applications to the Cloud SQL for MySQL instance.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tchelbsik\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tDec. 26, 2022, 10:45 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Cloud Database Engineer\n\n\t\t\t\t\t\t\tQuestion #: 104\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Cloud Database Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tchelbsik\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tDec. 26, 2022, 10:45 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 1\u00a0week ago",
+      "content": "Database Migration Service supports one-time and continuous migrations from source databases to Cloud SQL destination databases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 1\u00a0week ago",
+      "content": "Database Migration Service supports one-time and continuous migrations from source databases to Cloud SQL destination databases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 1\u00a0week ago",
+      "content": "Database Migration Service supports one-time and continuous migrations from source databases to Cloud SQL destination databases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 1\u00a0week ago",
+      "content": "Database Migration Service supports one-time and continuous migrations from source databases to Cloud SQL destination databases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 1\u00a0week ago",
+      "content": "Database Migration Service supports one-time and continuous migrations from source databases to Cloud SQL destination databases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 1\u00a0week ago",
+      "content": "DPonly\n\t\t\t\n\n\n\t\t\t7\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Database Migration Service supports one-time and continuous migrations from source databases to Cloud SQL destination databases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Database Migration Service supports one-time and continuous migrations from source databases to Cloud SQL destination databases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "A.\nPreserve transactions and minimize downtime. That eliminates B, C and D. A is the best answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "dynamic_dba\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A.\nPreserve transactions and minimize downtime. That eliminates B, C and D. A is the best answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A.\nPreserve transactions and minimize downtime. That eliminates B, C and D. A is the best answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "A is the right one for me.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Nirca\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is the right one for me.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is the right one for me.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "To migrate the database while preserving transactions and minimizing downtime, you should use Database Migration Service. This service will allow you to migrate the database in a way that is transparent to your users and applications. It will also allow you to test the migration before you make it live, so that you can be sure that everything will work as expected.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "orbo\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To migrate the database while preserving transactions and minimizing downtime, you should use Database Migration Service. This service will allow you to migrate the database in a way that is transparent to your users and applications. It will also allow you to test the migration before you make it live, so that you can be sure that everything will work as expected.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To migrate the database while preserving transactions and minimizing downtime, you should use Database Migration Service. This service will allow you to migrate the database in a way that is transparent to your users and applications. It will also allow you to test the migration before you make it live, so that you can be sure that everything will work as expected.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "A\nhttps://cloud.google.com/database-migration/docs/mysql/configure-source-database",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "SVGoogle89\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A\nhttps://cloud.google.com/database-migration/docs/mysql/configure-source-database",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A\nhttps://cloud.google.com/database-migration/docs/mysql/configure-source-database",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "A looks like the best option to me",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "chelbsik\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A looks like the best option to me",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A looks like the best option to me",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

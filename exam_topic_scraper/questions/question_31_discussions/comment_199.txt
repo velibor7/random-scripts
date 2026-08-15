@@ -1,0 +1,11 @@
+COMMENT #199 FOR QUESTION 31
+============================================================
+Author: Unknown
+Date: 3 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+D. Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline:
+
+By creating a new subscription, the new pipeline will consume messages independently of the old pipeline. This ensures no data is lost as messages published to Pub/Sub are delivered to all subscriptions.
+Once the new pipeline is verified to be running as expected, the old pipeline can be safely canceled.
+============================================================

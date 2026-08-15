@@ -1,0 +1,13 @@
+COMMENT #48 FOR QUESTION 133
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+The other options either require changing the query for each user ID (higher latency, option A), reading directly from higher latency services like BigQuery (option B), or writing predictions somewhere without fast single row access (options A, B, C).
+Option A would not work well because the WHERE clause would need to be changed for each user ID, increasing latency.
+Option B using an Authorized View would still read from BigQuery which has higher latency than Bigtable for individual rows.
+Option C writes predictions to BigQuery which has higher read latency compared to Bigtable for individual rows.
+So option D provides the best pipeline by predicting for all users in BigQueryML, batch writing to Bigtable for low latency reads, and granting permissions for the application to retrieve predictions. This meets the requirements of sub-100ms latency for individual user predictions.
+https://cloud.google.com/dataflow/docs/concepts/access-control
+============================================================

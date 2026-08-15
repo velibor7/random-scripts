@@ -1,0 +1,1285 @@
+{
+  "question": "You want to migrate an on-premises Hadoop system to Cloud Dataproc. Hive is the primary tool in use, and the data format is Optimized Row Columnar (ORC).All ORC files have been successfully copied to a Cloud Storage bucket. You need to replicate some data to the cluster's local Hadoop Distributed File System(HDFS) to maximize performance. What are two ways to start using Hive in Cloud Dataproc? (Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tRun the gsutil utility to transfer all ORC files from the Cloud Storage bucket to HDFS. Mount the Hive tables locally.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tRun the gsutil utility to transfer all ORC files from the Cloud Storage bucket to any node of the Dataproc cluster. Mount the Hive tables locally.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tRun the gsutil utility to transfer all ORC files from the Cloud Storage bucket to the master node of the Dataproc cluster. Then run the Hadoop utility to copy them do HDFS. Mount the Hive tables from HDFS.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tLeverage Cloud Storage connector for Hadoop to mount the ORC files as external Hive tables. Replicate external Hive tables to the native ones.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tLoad the ORC files into BigQuery. Leverage BigQuery connector for Hadoop to mount the BigQuery tables as external Hive tables. Replicate external Hive tables to the native ones.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nCD\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 146 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 146\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou want to migrate an on-premises Hadoop system to Cloud Dataproc. Hive is the primary tool in use, and the data format is Optimized Row Columnar (ORC).All ORC files have been successfully copied to a Cloud Storage bucket. You need to replicate some data to the cluster's local Hadoop Distributed File System(HDFS) to maximize performance. What are two ways to start using Hive in Cloud Dataproc? (Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tRun the gsutil utility to transfer all ORC files from the Cloud Storage bucket to HDFS. Mount the Hive tables locally.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tRun the gsutil utility to transfer all ORC files from the Cloud Storage bucket to any node of the Dataproc cluster. Mount the Hive tables locally.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tRun the gsutil utility to transfer all ORC files from the Cloud Storage bucket to the master node of the Dataproc cluster. Then run the Hadoop utility to copy them do HDFS. Mount the Hive tables from HDFS.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tLeverage Cloud Storage connector for Hadoop to mount the ORC files as external Hive tables. Replicate external Hive tables to the native ones.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tLoad the ORC files into BigQuery. Leverage BigQuery connector for Hadoop to mount the BigQuery tables as external Hive tables. Replicate external Hive tables to the native ones.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nCD\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 22, 2020, 8:31 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 146\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 22, 2020, 8:31 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "Answer is C and D 100%.\nI know it says to transfer all the files but with the options provided c is the best choice.\nExplaination\nA and B cannot be true as gsutil can copy data to master node and the to hdfs from master node.\nC -> works\nD->works Recommended by google\nE-> Will work but as the question says maximize performance this is not a case. As bigquery hadoop connecter stores all the BQ data to GCS as temp and then processes it to HDFS. As data is already in GCS we donot need to load it to bq and use a connector then unloads it back to GCS and then processes it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "Answer is C and D 100%.\nI know it says to transfer all the files but with the options provided c is the best choice.\nExplaination\nA and B cannot be true as gsutil can copy data to master node and the to hdfs from master node.\nC -> works\nD->works Recommended by google\nE-> Will work but as the question says maximize performance this is not a case. As bigquery hadoop connecter stores all the BQ data to GCS as temp and then processes it to HDFS. As data is already in GCS we donot need to load it to bq and use a connector then unloads it back to GCS and then processes it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "Answer is C and D 100%.\nI know it says to transfer all the files but with the options provided c is the best choice.\nExplaination\nA and B cannot be true as gsutil can copy data to master node and the to hdfs from master node.\nC -> works\nD->works Recommended by google\nE-> Will work but as the question says maximize performance this is not a case. As bigquery hadoop connecter stores all the BQ data to GCS as temp and then processes it to HDFS. As data is already in GCS we donot need to load it to bq and use a connector then unloads it back to GCS and then processes it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "Answer is C and D 100%.\nI know it says to transfer all the files but with the options provided c is the best choice.\nExplaination\nA and B cannot be true as gsutil can copy data to master node and the to hdfs from master node.\nC -> works\nD->works Recommended by google\nE-> Will work but as the question says maximize performance this is not a case. As bigquery hadoop connecter stores all the BQ data to GCS as temp and then processes it to HDFS. As data is already in GCS we donot need to load it to bq and use a connector then unloads it back to GCS and then processes it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "Answer is C and D 100%.\nI know it says to transfer all the files but with the options provided c is the best choice.\nExplaination\nA and B cannot be true as gsutil can copy data to master node and the to hdfs from master node.\nC -> works\nD->works Recommended by google\nE-> Will work but as the question says maximize performance this is not a case. As bigquery hadoop connecter stores all the BQ data to GCS as temp and then processes it to HDFS. As data is already in GCS we donot need to load it to bq and use a connector then unloads it back to GCS and then processes it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "Sid19\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "Answer is C and D 100%.\nI know it says to transfer all the files but with the options provided c is the best choice.\nExplaination\nA and B cannot be true as gsutil can copy data to master node and the to hdfs from master node.\nC -> works\nD->works Recommended by google\nE-> Will work but as the question says maximize performance this is not a case. As bigquery hadoop connecter stores all the BQ data to GCS as temp and then processes it to HDFS. As data is already in GCS we donot need to load it to bq and use a connector then unloads it back to GCS and then processes it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is C and D 100%.\nI know it says to transfer all the files but with the options provided c is the best choice.\nExplaination\nA and B cannot be true as gsutil can copy data to master node and the to hdfs from master node.\nC -> works\nD->works Recommended by google\nE-> Will work but as the question says maximize performance this is not a case. As bigquery hadoop connecter stores all the BQ data to GCS as temp and then processes it to HDFS. As data is already in GCS we donot need to load it to bq and use a connector then unloads it back to GCS and then processes it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 26 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "How can master node store data ? C is wrong.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "How can master node store data ? C is wrong.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "Deepakd\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "How can master node store data ? C is wrong.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "How can master node store data ? C is wrong.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "must go to the master node first...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "KLei\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "must go to the master node first...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "must go to the master node first...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "option D is mentioned in the new release 2019:  https://cloud.google.com/blog/products/data-analytics/new-release-of-cloud-storage-connector-for-hadoop-improving-performance-throughput-and-more",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "[Removed]\n\t\t\t\n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "option D is mentioned in the new release 2019:  https://cloud.google.com/blog/products/data-analytics/new-release-of-cloud-storage-connector-for-hadoop-improving-performance-throughput-and-more",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "option D is mentioned in the new release 2019:  https://cloud.google.com/blog/products/data-analytics/new-release-of-cloud-storage-connector-for-hadoop-improving-performance-throughput-and-more",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "I feel indeed this question is testing if you understand, that gsutil cannot transfer to HDFS directly (eliminate A&B), and need a intermediate step, (making C doable, with a good result). D is found on official google docs. E doesn't have good end result.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "WillemHendr\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I feel indeed this question is testing if you understand, that gsutil cannot transfer to HDFS directly (eliminate A&B), and need a intermediate step, (making C doable, with a good result). D is found on official google docs. E doesn't have good end result.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I feel indeed this question is testing if you understand, that gsutil cannot transfer to HDFS directly (eliminate A&B), and need a intermediate step, (making C doable, with a good result). D is found on official google docs. E doesn't have good end result.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "Should be B C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "[Removed]\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t5\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Should be B C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Should be B C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 17 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "https://stackoverflow.com/questions/54429642/how-to-copy-a-file-from-a-gcs-bucket-in-dataproc-to-hdfs-using-google-cloud\nBased on here, you can copy a single file from Google Cloud Storage (GCS) to HDFS using the HDFS copy command. There is no need to copy to the master node first.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "shangning007\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t3\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://stackoverflow.com/questions/54429642/how-to-copy-a-file-from-a-gcs-bucket-in-dataproc-to-hdfs-using-google-cloud\nBased on here, you can copy a single file from Google Cloud Storage (GCS) to HDFS using the HDFS copy command. There is no need to copy to the master node first.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://stackoverflow.com/questions/54429642/how-to-copy-a-file-from-a-gcs-bucket-in-dataproc-to-hdfs-using-google-cloud\nBased on here, you can copy a single file from Google Cloud Storage (GCS) to HDFS using the HDFS copy command. There is no need to copy to the master node first.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 2\u00a0weeks ago",
+      "content": "Actually I think A is correct as well.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 2\u00a0weeks ago",
+      "content": "SamuelTsch\n\t\t\t\n\n\n\t\t\t5\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actually I think A is correct as well.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actually I think A is correct as well.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "I think D and E are the best and easy way to go. For sure D, but I think that E can work too, the data can be loaded in BQ as an external table, so at the end the data will be always on the GCS.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "patitonav\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I think D and E are the best and easy way to go. For sure D, but I think that E can work too, the data can be loaded in BQ as an external table, so at the end the data will be always on the GCS.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I think D and E are the best and easy way to go. For sure D, but I think that E can work too, the data can be loaded in BQ as an external table, so at the end the data will be always on the GCS.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "D. Cloud Storage Connector for Hadoop: You can use the Cloud Storage connector for Hadoop to mount the ORC files stored in Cloud Storage as external Hive tables. This allows you to query the data without copying it to HDFS. You can replicate these external Hive tables to native Hive tables in Cloud Dataproc if needed.\n\nE. Load ORC Files into BigQuery: Another approach is to load the ORC files into BigQuery, Google Cloud's data warehouse. Once the data is in BigQuery, you can use the BigQuery connector for Hadoop to mount the BigQuery tables as external Hive tables in Cloud Dataproc. This leverages the power of BigQuery for analytics and allows you to replicate external Hive tables to native ones in Cloud Dataproc.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "barnac1es\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Cloud Storage Connector for Hadoop: You can use the Cloud Storage connector for Hadoop to mount the ORC files stored in Cloud Storage as external Hive tables. This allows you to query the data without copying it to HDFS. You can replicate these external Hive tables to native Hive tables in Cloud Dataproc if needed.\n\nE. Load ORC Files into BigQuery: Another approach is to load the ORC files into BigQuery, Google Cloud's data warehouse. Once the data is in BigQuery, you can use the BigQuery connector for Hadoop to mount the BigQuery tables as external Hive tables in Cloud Dataproc. This leverages the power of BigQuery for analytics and allows you to replicate external Hive tables to native ones in Cloud Dataproc.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Cloud Storage Connector for Hadoop: You can use the Cloud Storage connector for Hadoop to mount the ORC files stored in Cloud Storage as external Hive tables. This allows you to query the data without copying it to HDFS. You can replicate these external Hive tables to native Hive tables in Cloud Dataproc if needed.\n\nE. Load ORC Files into BigQuery: Another approach is to load the ORC files into BigQuery, Google Cloud's data warehouse. Once the data is in BigQuery, you can use the BigQuery connector for Hadoop to mount the BigQuery tables as external Hive tables in Cloud Dataproc. This leverages the power of BigQuery for analytics and allows you to replicate external Hive tables to native ones in Cloud Dataproc.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "D. Cloud Storage Connector for Hadoop: You can use the Cloud Storage connector for Hadoop to mount the ORC files stored in Cloud Storage as external Hive tables. This allows you to query the data without copying it to HDFS. You can replicate these external Hive tables to native Hive tables in Cloud Dataproc if needed.\n\nE. Load ORC Files into BigQuery: Another approach is to load the ORC files into BigQuery, Google Cloud's data warehouse. Once the data is in BigQuery, you can use the BigQuery connector for Hadoop to mount the BigQuery tables as external Hive tables in Cloud Dataproc. This leverages the power of BigQuery for analytics and allows you to replicate external Hive tables to native ones in Cloud Dataproc.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "barnac1es\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Cloud Storage Connector for Hadoop: You can use the Cloud Storage connector for Hadoop to mount the ORC files stored in Cloud Storage as external Hive tables. This allows you to query the data without copying it to HDFS. You can replicate these external Hive tables to native Hive tables in Cloud Dataproc if needed.\n\nE. Load ORC Files into BigQuery: Another approach is to load the ORC files into BigQuery, Google Cloud's data warehouse. Once the data is in BigQuery, you can use the BigQuery connector for Hadoop to mount the BigQuery tables as external Hive tables in Cloud Dataproc. This leverages the power of BigQuery for analytics and allows you to replicate external Hive tables to native ones in Cloud Dataproc.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Cloud Storage Connector for Hadoop: You can use the Cloud Storage connector for Hadoop to mount the ORC files stored in Cloud Storage as external Hive tables. This allows you to query the data without copying it to HDFS. You can replicate these external Hive tables to native Hive tables in Cloud Dataproc if needed.\n\nE. Load ORC Files into BigQuery: Another approach is to load the ORC files into BigQuery, Google Cloud's data warehouse. Once the data is in BigQuery, you can use the BigQuery connector for Hadoop to mount the BigQuery tables as external Hive tables in Cloud Dataproc. This leverages the power of BigQuery for analytics and allows you to replicate external Hive tables to native ones in Cloud Dataproc.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "A is the most straightforward way to start using Hive in Cloud Dataproc. You can use the gsutil utility to transfer all ORC files from the Cloud Storage bucket to HDFS. Then, you can mount the Hive tables locally.\n\nD is another option that you can use to start using Hive in Cloud Dataproc. You can leverage the Cloud Storage connector for Hadoop to mount the ORC files as external Hive tables. Then, you can replicate the external Hive tables to the native ones.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "vamgcp\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is the most straightforward way to start using Hive in Cloud Dataproc. You can use the gsutil utility to transfer all ORC files from the Cloud Storage bucket to HDFS. Then, you can mount the Hive tables locally.\n\nD is another option that you can use to start using Hive in Cloud Dataproc. You can leverage the Cloud Storage connector for Hadoop to mount the ORC files as external Hive tables. Then, you can replicate the external Hive tables to the native ones.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is the most straightforward way to start using Hive in Cloud Dataproc. You can use the gsutil utility to transfer all ORC files from the Cloud Storage bucket to HDFS. Then, you can mount the Hive tables locally.\n\nD is another option that you can use to start using Hive in Cloud Dataproc. You can leverage the Cloud Storage connector for Hadoop to mount the ORC files as external Hive tables. Then, you can replicate the external Hive tables to the native ones.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "Answers are;\nB. Run the gsutil utility to transfer all ORC files from the Cloud Storage bucket to any node of the Dataproc cluster. Mount the Hive tables locally.\nC. Run the gsutil utility to transfer all ORC files from the Cloud Storage bucket to the master node of the Dataproc cluster. Then run the Hadoop utility to copy them do HDFS. Mount the Hive tables from HDFS.\n\nYou need to replicate some data to the cluster's local Hadoop Distributed File System (HDFS) to maximize performance. HDFS lies on datanode, data on masternode needs to be copied on datanode.\nB for managed hive table option, C for external hive table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "Qix\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answers are;\nB. Run the gsutil utility to transfer all ORC files from the Cloud Storage bucket to any node of the Dataproc cluster. Mount the Hive tables locally.\nC. Run the gsutil utility to transfer all ORC files from the Cloud Storage bucket to the master node of the Dataproc cluster. Then run the Hadoop utility to copy them do HDFS. Mount the Hive tables from HDFS.\n\nYou need to replicate some data to the cluster's local Hadoop Distributed File System (HDFS) to maximize performance. HDFS lies on datanode, data on masternode needs to be copied on datanode.\nB for managed hive table option, C for external hive table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: BC",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answers are;\nB. Run the gsutil utility to transfer all ORC files from the Cloud Storage bucket to any node of the Dataproc cluster. Mount the Hive tables locally.\nC. Run the gsutil utility to transfer all ORC files from the Cloud Storage bucket to the master node of the Dataproc cluster. Then run the Hadoop utility to copy them do HDFS. Mount the Hive tables from HDFS.\n\nYou need to replicate some data to the cluster's local Hadoop Distributed File System (HDFS) to maximize performance. HDFS lies on datanode, data on masternode needs to be copied on datanode.\nB for managed hive table option, C for external hive table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "AD is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "izekc\n\t\t\t\n\n\n\t\t\t1\u00a0year, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AD is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AD is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "i choose AD. \nSearched in other w/s, read discussions here, and guess better AD.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "Oleksandr0501\n\t\t\t\n\n\n\t\t\t1\u00a0year, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "i choose AD. \nSearched in other w/s, read discussions here, and guess better AD.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "i choose AD. \nSearched in other w/s, read discussions here, and guess better AD.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "gpt: Yes, that is correct. Option A is a valid way to transfer the ORC files to HDFS, and then mount the Hive tables locally. Option D is also valid, as it suggests using the Cloud Storage connector for Hadoop to mount the ORC files as external Hive tables and then replicating those external Hive tables to native ones.\n\nChatgpt agreed, after inserting quesion and variants, and said that AD are correct answers. And it agreed. It adds some confidence that these are good, but gpt can make mistakes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "gpt: Yes, that is correct. Option A is a valid way to transfer the ORC files to HDFS, and then mount the Hive tables locally. Option D is also valid, as it suggests using the Cloud Storage connector for Hadoop to mount the ORC files as external Hive tables and then replicating those external Hive tables to native ones.\n\nChatgpt agreed, after inserting quesion and variants, and said that AD are correct answers. And it agreed. It adds some confidence that these are good, but gpt can make mistakes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "Oleksandr0501\n\t\t\t\n\n\n\t\t\t1\u00a0year, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "gpt: Yes, that is correct. Option A is a valid way to transfer the ORC files to HDFS, and then mount the Hive tables locally. Option D is also valid, as it suggests using the Cloud Storage connector for Hadoop to mount the ORC files as external Hive tables and then replicating those external Hive tables to native ones.\n\nChatgpt agreed, after inserting quesion and variants, and said that AD are correct answers. And it agreed. It adds some confidence that these are good, but gpt can make mistakes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "gpt: Yes, that is correct. Option A is a valid way to transfer the ORC files to HDFS, and then mount the Hive tables locally. Option D is also valid, as it suggests using the Cloud Storage connector for Hadoop to mount the ORC files as external Hive tables and then replicating those external Hive tables to native ones.\n\nChatgpt agreed, after inserting quesion and variants, and said that AD are correct answers. And it agreed. It adds some confidence that these are good, but gpt can make mistakes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 12\u00a0months ago",
+      "content": "A will copy to HDFS and so will D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 12\u00a0months ago",
+      "content": "streeeber\n\t\t\t\n\n\n\t\t\t1\u00a0year, 12\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A will copy to HDFS and so will D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A will copy to HDFS and so will D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "C: master node doesn't make sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "hauhau\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "C: master node doesn't make sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C: master node doesn't make sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "B:  from the Cloud Storage bucket to any node of the Dataproc cluster\n-> still on cloud not maxize the speed",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "B:  from the Cloud Storage bucket to any node of the Dataproc cluster\n-> still on cloud not maxize the speed",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "hauhau\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B:  from the Cloud Storage bucket to any node of the Dataproc cluster\n-> still on cloud not maxize the speed",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B:  from the Cloud Storage bucket to any node of the Dataproc cluster\n-> still on cloud not maxize the speed",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "CD is the answer.\n\nhttps://cloud.google.com/dataproc/docs/concepts/connectors/cloud-storage\nThe Cloud Storage connector is an open source Java library that lets you run Apache Hadoop or Apache Spark jobs directly on data in Cloud Storage, and offers a number of benefits over choosing the Hadoop Distributed File System (HDFS).\n\nConnector Support. The Cloud Storage connector is supported by Google Cloud for use with Google Cloud products and use cases, and when used with Dataproc is supported at the same level as Dataproc.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "zellck\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "CD is the answer.\n\nhttps://cloud.google.com/dataproc/docs/concepts/connectors/cloud-storage\nThe Cloud Storage connector is an open source Java library that lets you run Apache Hadoop or Apache Spark jobs directly on data in Cloud Storage, and offers a number of benefits over choosing the Hadoop Distributed File System (HDFS).\n\nConnector Support. The Cloud Storage connector is supported by Google Cloud for use with Google Cloud products and use cases, and when used with Dataproc is supported at the same level as Dataproc.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "CD is the answer.\n\nhttps://cloud.google.com/dataproc/docs/concepts/connectors/cloud-storage\nThe Cloud Storage connector is an open source Java library that lets you run Apache Hadoop or Apache Spark jobs directly on data in Cloud Storage, and offers a number of benefits over choosing the Hadoop Distributed File System (HDFS).\n\nConnector Support. The Cloud Storage connector is supported by Google Cloud for use with Google Cloud products and use cases, and when used with Dataproc is supported at the same level as Dataproc.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 5\u00a0months ago",
+      "content": "I'll go with DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 5\u00a0months ago",
+      "content": "tikki_boy\n\t\t\t\n\n\n\t\t\t2\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I'll go with DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I'll go with DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "CD is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "ducc\n\t\t\t\n\n\n\t\t\t2\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "CD is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "CD is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "You need to replicate some data to the cluster's local Hadoop Distributed File System (HDFS) to maximize performance. HDFS lies on datanode, data on masternode needs to be copied on datanode.\nB for managed hive table option, C for external hive table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "BigDataBB\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You need to replicate some data to the cluster's local Hadoop Distributed File System (HDFS) to maximize performance. HDFS lies on datanode, data on masternode needs to be copied on datanode.\nB for managed hive table option, C for external hive table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: BC",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You need to replicate some data to the cluster's local Hadoop Distributed File System (HDFS) to maximize performance. HDFS lies on datanode, data on masternode needs to be copied on datanode.\nB for managed hive table option, C for external hive table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

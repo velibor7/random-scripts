@@ -1,0 +1,967 @@
+{
+  "question": "A shipping company has live package-tracking data that is sent to an Apache Kafka stream in real time. This is then loaded into BigQuery. Analysts in your company want to query the tracking data in BigQuery to analyze geospatial trends in the lifecycle of a package. The table was originally created with ingest-date partitioning. Over time, the query processing time has increased. You need to implement a change that would improve query performance in BigQuery. What should you do?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tImplement clustering in BigQuery on the ingest date column.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tImplement clustering in BigQuery on the package-tracking ID column.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tTier older data onto Cloud Storage files and create a BigQuery table using Cloud Storage as an external data source.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tRe-create the table using data partitioning on the package delivery date.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 166 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 166\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tA shipping company has live package-tracking data that is sent to an Apache Kafka stream in real time. This is then loaded into BigQuery. Analysts in your company want to query the tracking data in BigQuery to analyze geospatial trends in the lifecycle of a package. The table was originally created with ingest-date partitioning. Over time, the query processing time has increased. You need to implement a change that would improve query performance in BigQuery. What should you do?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tImplement clustering in BigQuery on the ingest date column.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tImplement clustering in BigQuery on the package-tracking ID column.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tTier older data onto Cloud Storage files and create a BigQuery table using Cloud Storage as an external data source.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tRe-create the table using data partitioning on the package delivery date.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAWSandeep\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 4, 2022, 10:50 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 166\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAWSandeep\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 4, 2022, 10:50 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "B is the answer.\n\nhttps://cloud.google.com/bigquery/docs/clustered-tables\nClustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.\n\nIn BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "B is the answer.\n\nhttps://cloud.google.com/bigquery/docs/clustered-tables\nClustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.\n\nIn BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "B is the answer.\n\nhttps://cloud.google.com/bigquery/docs/clustered-tables\nClustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.\n\nIn BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "B is the answer.\n\nhttps://cloud.google.com/bigquery/docs/clustered-tables\nClustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.\n\nIn BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "B is the answer.\n\nhttps://cloud.google.com/bigquery/docs/clustered-tables\nClustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.\n\nIn BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "zellck\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "B is the answer.\n\nhttps://cloud.google.com/bigquery/docs/clustered-tables\nClustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.\n\nIn BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B is the answer.\n\nhttps://cloud.google.com/bigquery/docs/clustered-tables\nClustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.\n\nIn BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 10 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "Yes it is B. Implement clustering in BigQuery on the package-tracking ID column.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "Yes it is B. Implement clustering in BigQuery on the package-tracking ID column.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "AzureDP900\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Yes it is B. Implement clustering in BigQuery on the package-tracking ID column.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Yes it is B. Implement clustering in BigQuery on the package-tracking ID column.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months ago",
+      "content": "Though I almost fell for D, but the delivery date information is only available on the event(s) that happen after the delivery, but not on the ones before where it will be NULL I guess. The only other option that can make some sense is B, though high cardinality is not recommended for clustering.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months ago",
+      "content": "AlizCert\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Though I almost fell for D, but the delivery date information is only available on the event(s) that happen after the delivery, but not on the ones before where it will be NULL I guess. The only other option that can make some sense is B, though high cardinality is not recommended for clustering.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Though I almost fell for D, but the delivery date information is only available on the event(s) that happen after the delivery, but not on the ones before where it will be NULL I guess. The only other option that can make some sense is B, though high cardinality is not recommended for clustering.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "B as Clustering the data on the package Id can greatly improve the performance.\nRefer GCP documentation - BigQuery Clustered Table:https://cloud.google.com/bigquery/docs/clustered-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t9\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "B as Clustering the data on the package Id can greatly improve the performance.\nRefer GCP documentation - BigQuery Clustered Table:https://cloud.google.com/bigquery/docs/clustered-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B as Clustering the data on the package Id can greatly improve the performance.\nRefer GCP documentation - BigQuery Clustered Table:https://cloud.google.com/bigquery/docs/clustered-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "Clustering can improve the performance of certain types of queries such as queries that use filter clauses and queries that aggregate data. When data is written to a clustered table by a query job or a load job, BigQuery sorts the data using the values in the clustering columns. These values are used to organize the data into multiple blocks in BigQuery storage. When you submit a query containing a clause that filters data based on the clustering columns, BigQuery uses the sorted blocks to eliminate scans of unnecessary data.\nCurrently, BigQuery allows clustering over a partitioned table. Use clustering over a partitioned table when:\n-\tYour data is already partitioned on a date, timestamp, or integer column.\n-\tYou commonly use filters or aggregation against particular columns in your queries.\nTable clustering is possible for tables partitioned by:\n-\tingestion time\n-\tdate/timestamp\n-\tinteger range",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "Clustering can improve the performance of certain types of queries such as queries that use filter clauses and queries that aggregate data. When data is written to a clustered table by a query job or a load job, BigQuery sorts the data using the values in the clustering columns. These values are used to organize the data into multiple blocks in BigQuery storage. When you submit a query containing a clause that filters data based on the clustering columns, BigQuery uses the sorted blocks to eliminate scans of unnecessary data.\nCurrently, BigQuery allows clustering over a partitioned table. Use clustering over a partitioned table when:\n-\tYour data is already partitioned on a date, timestamp, or integer column.\n-\tYou commonly use filters or aggregation against particular columns in your queries.\nTable clustering is possible for tables partitioned by:\n-\tingestion time\n-\tdate/timestamp\n-\tinteger range",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t9\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "Clustering can improve the performance of certain types of queries such as queries that use filter clauses and queries that aggregate data. When data is written to a clustered table by a query job or a load job, BigQuery sorts the data using the values in the clustering columns. These values are used to organize the data into multiple blocks in BigQuery storage. When you submit a query containing a clause that filters data based on the clustering columns, BigQuery uses the sorted blocks to eliminate scans of unnecessary data.\nCurrently, BigQuery allows clustering over a partitioned table. Use clustering over a partitioned table when:\n-\tYour data is already partitioned on a date, timestamp, or integer column.\n-\tYou commonly use filters or aggregation against particular columns in your queries.\nTable clustering is possible for tables partitioned by:\n-\tingestion time\n-\tdate/timestamp\n-\tinteger range",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Clustering can improve the performance of certain types of queries such as queries that use filter clauses and queries that aggregate data. When data is written to a clustered table by a query job or a load job, BigQuery sorts the data using the values in the clustering columns. These values are used to organize the data into multiple blocks in BigQuery storage. When you submit a query containing a clause that filters data based on the clustering columns, BigQuery uses the sorted blocks to eliminate scans of unnecessary data.\nCurrently, BigQuery allows clustering over a partitioned table. Use clustering over a partitioned table when:\n-\tYour data is already partitioned on a date, timestamp, or integer column.\n-\tYou commonly use filters or aggregation against particular columns in your queries.\nTable clustering is possible for tables partitioned by:\n-\tingestion time\n-\tdate/timestamp\n-\tinteger range",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "In a table partitioned by a date or timestamp column, each partition contains a single day of data. When the data is stored, BigQuery ensures that all the data in a block belongs to a single partition. A partitioned table maintains these properties across all operations that modify it: query jobs, Data Manipulation Language (DML) statements, Data Definition Language (DDL) statements, load jobs, and copy jobs. This requires BigQuery to maintain more metadata than a non-partitioned table. As the number of partitions increases, the amount of metadata overhead increases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "In a table partitioned by a date or timestamp column, each partition contains a single day of data. When the data is stored, BigQuery ensures that all the data in a block belongs to a single partition. A partitioned table maintains these properties across all operations that modify it: query jobs, Data Manipulation Language (DML) statements, Data Definition Language (DDL) statements, load jobs, and copy jobs. This requires BigQuery to maintain more metadata than a non-partitioned table. As the number of partitions increases, the amount of metadata overhead increases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t9\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "In a table partitioned by a date or timestamp column, each partition contains a single day of data. When the data is stored, BigQuery ensures that all the data in a block belongs to a single partition. A partitioned table maintains these properties across all operations that modify it: query jobs, Data Manipulation Language (DML) statements, Data Definition Language (DDL) statements, load jobs, and copy jobs. This requires BigQuery to maintain more metadata than a non-partitioned table. As the number of partitions increases, the amount of metadata overhead increases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "In a table partitioned by a date or timestamp column, each partition contains a single day of data. When the data is stored, BigQuery ensures that all the data in a block belongs to a single partition. A partitioned table maintains these properties across all operations that modify it: query jobs, Data Manipulation Language (DML) statements, Data Definition Language (DDL) statements, load jobs, and copy jobs. This requires BigQuery to maintain more metadata than a non-partitioned table. As the number of partitions increases, the amount of metadata overhead increases.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "Although more metadata must be maintained, by ensuring that data is partitioned globally, BigQuery can more accurately estimate the bytes processed by a query before you run it. This cost calculation provides an upper bound on the final cost of the query.\nIn a clustered table, BigQuery automatically sorts the data based on the values in the clustering columns and organizes them in optimally sized storage blocks. You can achieve more finely grained sorting by creating a table that is clustered and partitioned. A clustered table maintains the sort properties in the context of each operation that modifies it. As a result, BigQuery may not be able to accurately estimate the bytes processed by the query or the query costs. When blocks of data are eliminated during query execution, BigQuery provides a best effort reduction of the query costs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "Although more metadata must be maintained, by ensuring that data is partitioned globally, BigQuery can more accurately estimate the bytes processed by a query before you run it. This cost calculation provides an upper bound on the final cost of the query.\nIn a clustered table, BigQuery automatically sorts the data based on the values in the clustering columns and organizes them in optimally sized storage blocks. You can achieve more finely grained sorting by creating a table that is clustered and partitioned. A clustered table maintains the sort properties in the context of each operation that modifies it. As a result, BigQuery may not be able to accurately estimate the bytes processed by the query or the query costs. When blocks of data are eliminated during query execution, BigQuery provides a best effort reduction of the query costs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t9\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Although more metadata must be maintained, by ensuring that data is partitioned globally, BigQuery can more accurately estimate the bytes processed by a query before you run it. This cost calculation provides an upper bound on the final cost of the query.\nIn a clustered table, BigQuery automatically sorts the data based on the values in the clustering columns and organizes them in optimally sized storage blocks. You can achieve more finely grained sorting by creating a table that is clustered and partitioned. A clustered table maintains the sort properties in the context of each operation that modifies it. As a result, BigQuery may not be able to accurately estimate the bytes processed by the query or the query costs. When blocks of data are eliminated during query execution, BigQuery provides a best effort reduction of the query costs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Although more metadata must be maintained, by ensuring that data is partitioned globally, BigQuery can more accurately estimate the bytes processed by a query before you run it. This cost calculation provides an upper bound on the final cost of the query.\nIn a clustered table, BigQuery automatically sorts the data based on the values in the clustering columns and organizes them in optimally sized storage blocks. You can achieve more finely grained sorting by creating a table that is clustered and partitioned. A clustered table maintains the sort properties in the context of each operation that modifies it. As a result, BigQuery may not be able to accurately estimate the bytes processed by the query or the query costs. When blocks of data are eliminated during query execution, BigQuery provides a best effort reduction of the query costs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months ago",
+      "content": "Package Tracking mostly contains, geospatial prefixes, Like HK0011, US0022, etc, this can help in clustering.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months ago",
+      "content": "Aman47\n\t\t\t\n\n\n\t\t\t10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Package Tracking mostly contains, geospatial prefixes, Like HK0011, US0022, etc, this can help in clustering.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Package Tracking mostly contains, geospatial prefixes, Like HK0011, US0022, etc, this can help in clustering.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "D is the correct answer\n\nrequirements: analyze geospatial trends in the lifecycle of a package\n\ncuz the data of the lifecycle of the package would span across ingest-date-based partition table, it would degrade the performance.\n\nhence, re-partitoning by package delivery date, which is the package initially delivered, would improve the performance when querying such table.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "kcl10\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is the correct answer\n\nrequirements: analyze geospatial trends in the lifecycle of a package\n\ncuz the data of the lifecycle of the package would span across ingest-date-based partition table, it would degrade the performance.\n\nhence, re-partitoning by package delivery date, which is the package initially delivered, would improve the performance when querying such table.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is the correct answer\n\nrequirements: analyze geospatial trends in the lifecycle of a package\n\ncuz the data of the lifecycle of the package would span across ingest-date-based partition table, it would degrade the performance.\n\nhence, re-partitoning by package delivery date, which is the package initially delivered, would improve the performance when querying such table.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "I vote D\nQueries to analyze the package lifecycle will cross partitions when using ingest date. Changing this to delivery date will allow a query to full a package's full lifecycle in a single partition.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "sdi_studiers\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I vote D\nQueries to analyze the package lifecycle will cross partitions when using ingest date. Changing this to delivery date will allow a query to full a package's full lifecycle in a single partition.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I vote D\nQueries to analyze the package lifecycle will cross partitions when using ingest date. Changing this to delivery date will allow a query to full a package's full lifecycle in a single partition.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "B. https://cloud.google.com/bigquery/docs/clustered-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "cloudmon\n\t\t\t\n\n\n\t\t\t1\u00a0year, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. https://cloud.google.com/bigquery/docs/clustered-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. https://cloud.google.com/bigquery/docs/clustered-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "D is not correct becsuse This Is problem Is The Real Time  so  ingested date is the same as delivery date.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "John_Pongthorn\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is not correct becsuse This Is problem Is The Real Time  so  ingested date is the same as delivery date.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is not correct becsuse This Is problem Is The Real Time  so  ingested date is the same as delivery date.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "why not D ?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "kenanars\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "why not D ?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "why not D ?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "There are several rows that represent movement of life cycle  of 1  package-tracking ID \npackage delivery date = ingestion date   , i suppose",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "There are several rows that represent movement of life cycle  of 1  package-tracking ID \npackage delivery date = ingestion date   , i suppose",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "John_Pongthorn\n\t\t\t\n\n\n\t\t\t2\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "There are several rows that represent movement of life cycle  of 1  package-tracking ID \npackage delivery date = ingestion date   , i suppose",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "There are several rows that represent movement of life cycle  of 1  package-tracking ID \npackage delivery date = ingestion date   , i suppose",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "The table has already been partitioned",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "jkhong\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The table has already been partitioned",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The table has already been partitioned",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "B;\nAs the table has already created with ingest-date partitioning.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "pluiedust\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B;\nAs the table has already created with ingest-date partitioning.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B;\nAs the table has already created with ingest-date partitioning.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "B. Implement clustering in BigQuery on the package-tracking ID column.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "AWSandeep\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Implement clustering in BigQuery on the package-tracking ID column.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Implement clustering in BigQuery on the package-tracking ID column.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

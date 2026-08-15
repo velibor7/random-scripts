@@ -1,0 +1,20 @@
+COMMENT #22 FOR QUESTION 141556
+============================================================
+Author: Unknown
+Date: 3 months, 1 week ago
+Votes: 0
+----------------------------------------
+Answer is B.
+
+Ignore updates and deletes - https://docs.databricks.com/en/structured-streaming/delta-lake.html#ignore-updates-and-deletes
+
+Structured Streaming does not handle input that is not an append and throws an exception if any modifications occur on the table being used as a source. There are two main strategies for dealing with changes that cannot be automatically propagated downstream:
+
+You can delete the output and checkpoint and restart the stream from the beginning.
+
+You can set either of these two options:
+
+ignoreDeletes: ignore transactions that delete data at partition boundaries.
+
+skipChangeCommits: ignore transactions that delete or modify existing records. skipChangeCommits subsumes ignoreDeletes.
+============================================================

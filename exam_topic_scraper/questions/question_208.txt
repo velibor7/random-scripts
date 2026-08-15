@@ -1,0 +1,686 @@
+================================================================================
+QUESTION:
+A live TV show asks viewers to cast votes using their mobile phones. The event generates a large volume of data during a 3-minute period. You are in charge of the "Voting infrastructure" and must ensure that the platform can handle the load and that all votes are processed. You must display partial results while voting is open. After voting closes, you need to count the votes exactly once while optimizing cost. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a Memorystore instance with a high availability (HA) configuration.
+										
+
+
+													B.
+												
+											
+											Create a Cloud SQL for PostgreSQL database with high availability (HA) configuration and multiple read replicas.
+										
+
+
+													C.
+												
+											
+											Write votes to a Pub/Sub topic and have Cloud Functions subscribe to it and write votes to BigQuery.
+										
+
+
+													D.
+												
+											
+											Write votes to a Pub/Sub topic and load into both Bigtable and BigQuery via a Dataflow pipeline. Query Bigtable for real-time results and BigQuery for later analysis. Shut down the Bigtable instance when voting concludes.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (78 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 208 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 208
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								A live TV show asks viewers to cast votes using their mobile phones. The event generates a large volume of data during a 3-minute period. You are in charge of the "Voting infrastructure" and must ensure that the platform can handle the load and that all votes are processed. You must display partial results while voting is open. After voting closes, you need to count the votes exactly once while optimizing cost. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a Memorystore instance with a high availability (HA) configuration.
+										
+
+
+													B.
+												
+											
+											Create a Cloud SQL for PostgreSQL database with high availability (HA) configuration and multiple read replicas.
+										
+
+
+													C.
+												
+											
+											Write votes to a Pub/Sub topic and have Cloud Functions subscribe to it and write votes to BigQuery.
+										
+
+
+													D.
+												
+											
+											Write votes to a Pub/Sub topic and load into both Bigtable and BigQuery via a Dataflow pipeline. Query Bigtable for real-time results and BigQuery for later analysis. Shut down the Bigtable instance when voting concludes.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:30 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 208
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:30 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Since cost optimization and minimal latency are key requirements, option D is likely the best choice to meet all the needs:
+
+The key reasons option D works well:
+
+Using Pub/Sub to ingest votes provides scalable, reliable transport.
+
+Loading into Bigtable and BigQuery provides both:
+
+Low latency reads from Bigtable for real-time results.
+Cost effective storage in BigQuery for longer term analysis.
+Shutting down Bigtable after voting concludes reduces costs.
+
+BigQuery remains available for cost-optimized storage and analysis.
+
+So you are correct that option D combines the best of real-time performance for queries using Bigtable, with cost-optimized storage in BigQuery.
+
+The only additional consideration may be if 3 minutes of Bigtable usage still incurs higher charges than ingesting directly into BigQuery. But for minimizing latency while optimizing cost, option D is likely the right architectural choice given the requirements.
+
+--- Comment #6 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Since cost optimization and minimal latency are key requirements, option D is likely the best choice to meet all the needs:
+
+The key reasons option D works well:
+
+Using Pub/Sub to ingest votes provides scalable, reliable transport.
+
+Loading into Bigtable and BigQuery provides both:
+
+Low latency reads from Bigtable for real-time results.
+Cost effective storage in BigQuery for longer term analysis.
+Shutting down Bigtable after voting concludes reduces costs.
+
+BigQuery remains available for cost-optimized storage and analysis.
+
+So you are correct that option D combines the best of real-time performance for queries using Bigtable, with cost-optimized storage in BigQuery.
+
+The only additional consideration may be if 3 minutes of Bigtable usage still incurs higher charges than ingesting directly into BigQuery. But for minimizing latency while optimizing cost, option D is likely the right architectural choice given the requirements.
+
+--- Comment #7 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Since cost optimization and minimal latency are key requirements, option D is likely the best choice to meet all the needs:
+
+The key reasons option D works well:
+
+Using Pub/Sub to ingest votes provides scalable, reliable transport.
+
+Loading into Bigtable and BigQuery provides both:
+
+Low latency reads from Bigtable for real-time results.
+Cost effective storage in BigQuery for longer term analysis.
+Shutting down Bigtable after voting concludes reduces costs.
+
+BigQuery remains available for cost-optimized storage and analysis.
+
+So you are correct that option D combines the best of real-time performance for queries using Bigtable, with cost-optimized storage in BigQuery.
+
+The only additional consideration may be if 3 minutes of Bigtable usage still incurs higher charges than ingesting directly into BigQuery. But for minimizing latency while optimizing cost, option D is likely the right architectural choice given the requirements.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Since cost optimization and minimal latency are key requirements, option D is likely the best choice to meet all the needs:
+
+The key reasons option D works well:
+
+Using Pub/Sub to ingest votes provides scalable, reliable transport.
+
+Loading into Bigtable and BigQuery provides both:
+
+Low latency reads from Bigtable for real-time results.
+Cost effective storage in BigQuery for longer term analysis.
+Shutting down Bigtable after voting concludes reduces costs.
+
+BigQuery remains available for cost-optimized storage and analysis.
+
+So you are correct that option D combines the best of real-time performance for queries using Bigtable, with cost-optimized storage in BigQuery.
+
+The only additional consideration may be if 3 minutes of Bigtable usage still incurs higher charges than ingesting directly into BigQuery. But for minimizing latency while optimizing cost, option D is likely the right architectural choice given the requirements.
+
+--- Comment #13 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Since cost optimization and minimal latency are key requirements, option D is likely the best choice to meet all the needs:
+
+The key reasons option D works well:
+
+Using Pub/Sub to ingest votes provides scalable, reliable transport.
+
+Loading into Bigtable and BigQuery provides both:
+
+Low latency reads from Bigtable for real-time results.
+Cost effective storage in BigQuery for longer term analysis.
+Shutting down Bigtable after voting concludes reduces costs.
+
+BigQuery remains available for cost-optimized storage and analysis.
+
+So you are correct that option D combines the best of real-time performance for queries using Bigtable, with cost-optimized storage in BigQuery.
+
+The only additional consideration may be if 3 minutes of Bigtable usage still incurs higher charges than ingesting directly into BigQuery. But for minimizing latency while optimizing cost, option D is likely the right architectural choice given the requirements.
+
+--- Comment #14 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+MaxNRG
+			
+
+
+				Highly Voted 
+
+
+			9 months, 1 week ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+Since cost optimization and minimal latency are key requirements, option D is likely the best choice to meet all the needs:
+
+The key reasons option D works well:
+
+Using Pub/Sub to ingest votes provides scalable, reliable transport.
+
+Loading into Bigtable and BigQuery provides both:
+
+Low latency reads from Bigtable for real-time results.
+Cost effective storage in BigQuery for longer term analysis.
+Shutting down Bigtable after voting concludes reduces costs.
+
+BigQuery remains available for cost-optimized storage and analysis.
+
+So you are correct that option D combines the best of real-time performance for queries using Bigtable, with cost-optimized storage in BigQuery.
+
+The only additional consideration may be if 3 minutes of Bigtable usage still incurs higher charges than ingesting directly into BigQuery. But for minimizing latency while optimizing cost, option D is likely the right architectural choice given the requirements.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+Since cost optimization and minimal latency are key requirements, option D is likely the best choice to meet all the needs:
+
+The key reasons option D works well:
+
+Using Pub/Sub to ingest votes provides scalable, reliable transport.
+
+Loading into Bigtable and BigQuery provides both:
+
+Low latency reads from Bigtable for real-time results.
+Cost effective storage in BigQuery for longer term analysis.
+Shutting down Bigtable after voting concludes reduces costs.
+
+BigQuery remains available for cost-optimized storage and analysis.
+
+So you are correct that option D combines the best of real-time performance for queries using Bigtable, with cost-optimized storage in BigQuery.
+
+The only additional consideration may be if 3 minutes of Bigtable usage still incurs higher charges than ingesting directly into BigQuery. But for minimizing latency while optimizing cost, option D is likely the right architectural choice given the requirements.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+Modern Capabilities: BigQuery’s advancements make it suitable for both real-time and historical querying. 
+Cost Efficiency: No need to spin up and shut down a Bigtable instance.
+Simplified Workflow: Real-time and post-event data are stored in the same system, reducing the need to synchronize or transfer data between systems.
+
+--- Comment #23 ---
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+f74ca0c
+			
+
+
+				Most Recent 
+
+
+			3 months, 1 week ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Modern Capabilities: BigQuery’s advancements make it suitable for both real-time and historical querying. 
+Cost Efficiency: No need to spin up and shut down a Bigtable instance.
+Simplified Workflow: Real-time and post-event data are stored in the same system, reducing the need to synchronize or transfer data between systems.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+Modern Capabilities: BigQuery’s advancements make it suitable for both real-time and historical querying. 
+Cost Efficiency: No need to spin up and shut down a Bigtable instance.
+Simplified Workflow: Real-time and post-event data are stored in the same system, reducing the need to synchronize or transfer data between systems.
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #31 ---
+Author: Unknown | Date: 7 months, 4 weeks ago | Votes: 0
+D. Write votes to a Pub/Sub topic and load into both Bigtable and BigQuery via a Dataflow pipeline. Query Bigtable for real-time results and BigQuery for later analysis. Shut down the Bigtable instance when voting concludes.
+
+--- Comment #32 ---
+Author: Unknown | Date: 7 months, 4 weeks ago | Votes: 0
+JyoGCP
+			
+
+
+			7 months, 4 weeks ago
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+D. Write votes to a Pub/Sub topic and load into both Bigtable and BigQuery via a Dataflow pipeline. Query Bigtable for real-time results and BigQuery for later analysis. Shut down the Bigtable instance when voting concludes.
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+D. Write votes to a Pub/Sub topic and load into both Bigtable and BigQuery via a Dataflow pipeline. Query Bigtable for real-time results and BigQuery for later analysis. Shut down the Bigtable instance when voting concludes.
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #40 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+D, i do agree with everything MaxNRG said.
+
+--- Comment #41 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Matt_108
+			
+
+
+			9 months ago
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+D, i do agree with everything MaxNRG said.
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+D, i do agree with everything MaxNRG said.
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #49 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Pub/Sub for sure, and Cloud Functions + BigQuery Streaming seems a good solution. Won't use BigTable as need at least 100GB of data (don't thing a voting system could arrive to that amount of data) and needs to "heat" to work right for >10 minutes... and would be $$$ over C solution
+
+--- Comment #50 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Smakyel79
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Pub/Sub for sure, and Cloud Functions + BigQuery Streaming seems a good solution. Won't use BigTable as need at least 100GB of data (don't thing a voting system could arrive to that amount of data) and needs to "heat" to work right for >10 minutes... and would be $$$ over C solution
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+Pub/Sub for sure, and Cloud Functions + BigQuery Streaming seems a good solution. Won't use BigTable as need at least 100GB of data (don't thing a voting system could arrive to that amount of data) and needs to "heat" to work right for >10 minutes... and would be $$$ over C solution
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #58 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Answer is D:
+- Google Cloud Pub/Sub can manage the high-volume data ingestion. 
+- Google Cloud Dataflow can efficiently process and route data to both Bigtable and BigQuery.
+- Bigtable is excellent for handling high-throughput writes and reads, making it suitable for real-time vote tallying. 
+- BigQuery is ideal for exact vote counting and deeper analysis once voting concludes.
+
+--- Comment #59 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+raaad
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is D:
+- Google Cloud Pub/Sub can manage the high-volume data ingestion. 
+- Google Cloud Dataflow can efficiently process and route data to both Bigtable and BigQuery.
+- Bigtable is excellent for handling high-throughput writes and reads, making it suitable for real-time vote tallying. 
+- BigQuery is ideal for exact vote counting and deeper analysis once voting concludes.
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is D:
+- Google Cloud Pub/Sub can manage the high-volume data ingestion. 
+- Google Cloud Dataflow can efficiently process and route data to both Bigtable and BigQuery.
+- Bigtable is excellent for handling high-throughput writes and reads, making it suitable for real-time vote tallying. 
+- BigQuery is ideal for exact vote counting and deeper analysis once voting concludes.
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #67 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+Handling High-Volume Data Ingestion:
+
+Pub/Sub: Decouples vote collection from processing, ensuring scalability and resilience under high load.
+Dataflow: Efficiently ingests and processes large data streams, scaling as needed.
+Real-Time Results with Exactly-Once Processing:
+
+Bigtable: Optimized for low-latency, high-throughput reads and writes, ideal for real-time partial results.
+Exactly-Once Semantics: Dataflow guarantees each vote is processed only once, ensuring accurate counts.
+Cost Optimization:
+
+Temporary Bigtable Instance: Running Bigtable only during voting minimizes costs.
+BigQuery Storage: Cost-effective for long-term storage and analysis.
+
+--- Comment #68 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+e70ea9e
+			
+
+
+			9 months, 2 weeks ago
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+Handling High-Volume Data Ingestion:
+
+Pub/Sub: Decouples vote collection from processing, ensuring scalability and resilience under high load.
+Dataflow: Efficiently ingests and processes large data streams, scaling as needed.
+Real-Time Results with Exactly-Once Processing:
+
+Bigtable: Optimized for low-latency, high-throughput reads and writes, ideal for real-time partial results.
+Exactly-Once Semantics: Dataflow guarantees each vote is processed only once, ensuring accurate counts.
+Cost Optimization:
+
+Temporary Bigtable Instance: Running Bigtable only during voting minimizes costs.
+BigQuery Storage: Cost-effective for long-term storage and analysis.
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+Handling High-Volume Data Ingestion:
+
+Pub/Sub: Decouples vote collection from processing, ensuring scalability and resilience under high load.
+Dataflow: Efficiently ingests and processes large data streams, scaling as needed.
+Real-Time Results with Exactly-Once Processing:
+
+Bigtable: Optimized for low-latency, high-throughput reads and writes, ideal for real-time partial results.
+Exactly-Once Semantics: Dataflow guarantees each vote is processed only once, ensuring accurate counts.
+Cost Optimization:
+
+Temporary Bigtable Instance: Running Bigtable only during voting minimizes costs.
+BigQuery Storage: Cost-effective for long-term storage and analysis.
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

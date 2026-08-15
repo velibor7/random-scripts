@@ -1,0 +1,421 @@
+{
+  "question": "You are creating a data model in BigQuery that will hold retail transaction data. Your two largest tables, sales_transaction_header and sales_transaction_line, have a tightly coupled immutable relationship. These tables are rarely modified after load and are frequently joined when queried. You need to model the sales_transaction_header and sales_transaction_line tables to improve the performance of data analytics queries. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a sales_transaction table that holds the sales_transaction_header information as rows and the sales_transaction_line rows as nested and repeated fields.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a sales_transaction table that holds the sales_transaction_header and sales_transaction_line information as rows, duplicating the sales_transaction_header data for each line.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a sales_transaction table that stores the sales_transaction_header and sales_transaction_line data as a JSON data type.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate separate sales_transaction_header and sales_transaction_line tables and, when querying, specify the sales_transaction_line first in the WHERE clause.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 267 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 267\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are creating a data model in BigQuery that will hold retail transaction data. Your two largest tables, sales_transaction_header and sales_transaction_line, have a tightly coupled immutable relationship. These tables are rarely modified after load and are frequently joined when queried. You need to model the sales_transaction_header and sales_transaction_line tables to improve the performance of data analytics queries. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a sales_transaction table that holds the sales_transaction_header information as rows and the sales_transaction_line rows as nested and repeated fields.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a sales_transaction table that holds the sales_transaction_header and sales_transaction_line information as rows, duplicating the sales_transaction_header data for each line.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a sales_transaction table that stores the sales_transaction_header and sales_transaction_line data as a JSON data type.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate separate sales_transaction_header and sales_transaction_line tables and, when querying, specify the sales_transaction_line first in the WHERE clause.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 6:27 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 267\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 6:27 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "- In BigQuery, nested and repeated fields can significantly improve performance for certain types of queries, especially joins, because the data is co-located and can be read efficiently. - - This approach is often used in data warehousing scenarios where query performance is a priority, and the data relationships are immutable and rarely modified.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "- In BigQuery, nested and repeated fields can significantly improve performance for certain types of queries, especially joins, because the data is co-located and can be read efficiently. - - This approach is often used in data warehousing scenarios where query performance is a priority, and the data relationships are immutable and rarely modified.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "- In BigQuery, nested and repeated fields can significantly improve performance for certain types of queries, especially joins, because the data is co-located and can be read efficiently. - - This approach is often used in data warehousing scenarios where query performance is a priority, and the data relationships are immutable and rarely modified.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "- In BigQuery, nested and repeated fields can significantly improve performance for certain types of queries, especially joins, because the data is co-located and can be read efficiently. - - This approach is often used in data warehousing scenarios where query performance is a priority, and the data relationships are immutable and rarely modified.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "- In BigQuery, nested and repeated fields can significantly improve performance for certain types of queries, especially joins, because the data is co-located and can be read efficiently. - - This approach is often used in data warehousing scenarios where query performance is a priority, and the data relationships are immutable and rarely modified.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t9\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- In BigQuery, nested and repeated fields can significantly improve performance for certain types of queries, especially joins, because the data is co-located and can be read efficiently. - - This approach is often used in data warehousing scenarios where query performance is a priority, and the data relationships are immutable and rarely modified.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- In BigQuery, nested and repeated fields can significantly improve performance for certain types of queries, especially joins, because the data is co-located and can be read efficiently. - - This approach is often used in data warehousing scenarios where query performance is a priority, and the data relationships are immutable and rarely modified.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 3\u00a0weeks ago",
+      "content": "Option A https://cloud.google.com/bigquery/docs/best-practices-performance-nested",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 3\u00a0weeks ago",
+      "content": "josech\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t4\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A https://cloud.google.com/bigquery/docs/best-practices-performance-nested",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A https://cloud.google.com/bigquery/docs/best-practices-performance-nested",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "optional A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "hanoverquay\n\t\t\t\n\n\n\t\t\t6\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "optional A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "optional A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "JyoGCP\n\t\t\t\n\n\n\t\t\t7\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "A. Create a sales_transaction table that holds the sales_transaction_header information as rows and the sales_transaction_line rows as nested and repeated fields.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t9\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Create a sales_transaction table that holds the sales_transaction_header information as rows and the sales_transaction_line rows as nested and repeated fields.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Create a sales_transaction table that holds the sales_transaction_header information as rows and the sales_transaction_line rows as nested and repeated fields.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

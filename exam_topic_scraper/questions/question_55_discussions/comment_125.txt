@@ -1,0 +1,17 @@
+COMMENT #125 FOR QUESTION 55
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+INFO:
+- The majority of the data analyzed is placed in a time-partitioned table named events_partitioned. 
+- To reduce the cost of queries, your organization created a view called events, which queries only the last 14 days of data. 
+- The view is described in legacy SQL. 
+QUESTION:
+Next month, existing applications will be connecting to BigQuery to read the events data via an ODBC connection. You need to ensure the applications can connect. Which two actions should you take? (Choose two.)
+
+-> First and foremost we need to understand the information. So our actual data is stored in events_partitioned table. The organization is currently using view called events to reduce the cost. 
+-> Since the view called events only has last 14 days of data we cannot use that view.
+-> We also cannot use that view because standard SQL is not used to describe the view. In order to connectt ODBC we need a view described by standard SQL.
+============================================================

@@ -1,0 +1,865 @@
+{
+  "question": "You are designing the architecture of your application to store data in Cloud Storage. Your application consists of pipelines that read data from a Cloud Storage bucket that contains raw data, and write the data to a second bucket after processing. You want to design an architecture with Cloud Storage resources that are capable of being resilient if a Google Cloud regional failure occurs. You want to minimize the recovery point objective (RPO) if a failure occurs, with no impact on applications that use the stored data. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAdopt multi-regional Cloud Storage buckets in your architecture.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAdopt two regional Cloud Storage buckets, and update your application to write the output on both buckets.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAdopt a dual-region Cloud Storage bucket, and enable turbo replication in your architecture.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAdopt two regional Cloud Storage buckets, and create a daily task to copy from one bucket to the other.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 241 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 241\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are designing the architecture of your application to store data in Cloud Storage. Your application consists of pipelines that read data from a Cloud Storage bucket that contains raw data, and write the data to a second bucket after processing. You want to design an architecture with Cloud Storage resources that are capable of being resilient if a Google Cloud regional failure occurs. You want to minimize the recovery point objective (RPO) if a failure occurs, with no impact on applications that use the stored data. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAdopt multi-regional Cloud Storage buckets in your architecture.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAdopt two regional Cloud Storage buckets, and update your application to write the output on both buckets.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAdopt a dual-region Cloud Storage bucket, and enable turbo replication in your architecture.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAdopt two regional Cloud Storage buckets, and create a daily task to copy from one bucket to the other.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 2:06 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 241\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 2:06 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Dual-region buckets are a specific type of storage that automatically replicates data between two geographically distinct regions. \n- Turbo replication is an enhanced feature that provides faster replication between the two regions, thus minimizing RPO. \n- This option ensures that your data is resilient to regional failures and is replicated quickly, meeting the needs for low RPO and no impact on application performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Dual-region buckets are a specific type of storage that automatically replicates data between two geographically distinct regions. \n- Turbo replication is an enhanced feature that provides faster replication between the two regions, thus minimizing RPO. \n- This option ensures that your data is resilient to regional failures and is replicated quickly, meeting the needs for low RPO and no impact on application performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Dual-region buckets are a specific type of storage that automatically replicates data between two geographically distinct regions. \n- Turbo replication is an enhanced feature that provides faster replication between the two regions, thus minimizing RPO. \n- This option ensures that your data is resilient to regional failures and is replicated quickly, meeting the needs for low RPO and no impact on application performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Dual-region buckets are a specific type of storage that automatically replicates data between two geographically distinct regions. \n- Turbo replication is an enhanced feature that provides faster replication between the two regions, thus minimizing RPO. \n- This option ensures that your data is resilient to regional failures and is replicated quickly, meeting the needs for low RPO and no impact on application performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Dual-region buckets are a specific type of storage that automatically replicates data between two geographically distinct regions. \n- Turbo replication is an enhanced feature that provides faster replication between the two regions, thus minimizing RPO. \n- This option ensures that your data is resilient to regional failures and is replicated quickly, meeting the needs for low RPO and no impact on application performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Dual-region buckets are a specific type of storage that automatically replicates data between two geographically distinct regions. \n- Turbo replication is an enhanced feature that provides faster replication between the two regions, thus minimizing RPO. \n- This option ensures that your data is resilient to regional failures and is replicated quickly, meeting the needs for low RPO and no impact on application performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Dual-region buckets are a specific type of storage that automatically replicates data between two geographically distinct regions. \n- Turbo replication is an enhanced feature that provides faster replication between the two regions, thus minimizing RPO. \n- This option ensures that your data is resilient to regional failures and is replicated quickly, meeting the needs for low RPO and no impact on application performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 12 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "A. Adopt multi-regional Cloud Storage buckets in your architecture.\n\nWhy A is the best choice:\n\nAutomatic Cross-Region Replication: Multi-regional buckets automatically replicate data across multiple geographically separated regions within a selected multi-region location (e.g., us). This ensures data redundancy and availability even if one region experiences an outage.\nMinimal RPO: Data written to a multi-regional bucket is synchronously replicated to at least two regions. This means that in the event of a regional failure, the RPO is essentially zero, as the data is already available in other regions.\nNo Application Changes: Applications can continue reading and writing data to the multi-regional bucket without any modifications, as the cross-region replication is handled transparently by Cloud Storage",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "CGS22\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "A. Adopt multi-regional Cloud Storage buckets in your architecture.\n\nWhy A is the best choice:\n\nAutomatic Cross-Region Replication: Multi-regional buckets automatically replicate data across multiple geographically separated regions within a selected multi-region location (e.g., us). This ensures data redundancy and availability even if one region experiences an outage.\nMinimal RPO: Data written to a multi-regional bucket is synchronously replicated to at least two regions. This means that in the event of a regional failure, the RPO is essentially zero, as the data is already available in other regions.\nNo Application Changes: Applications can continue reading and writing data to the multi-regional bucket without any modifications, as the cross-region replication is handled transparently by Cloud Storage",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Adopt multi-regional Cloud Storage buckets in your architecture.\n\nWhy A is the best choice:\n\nAutomatic Cross-Region Replication: Multi-regional buckets automatically replicate data across multiple geographically separated regions within a selected multi-region location (e.g., us). This ensures data redundancy and availability even if one region experiences an outage.\nMinimal RPO: Data written to a multi-regional bucket is synchronously replicated to at least two regions. This means that in the event of a regional failure, the RPO is essentially zero, as the data is already available in other regions.\nNo Application Changes: Applications can continue reading and writing data to the multi-regional bucket without any modifications, as the cross-region replication is handled transparently by Cloud Storage",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "Minimal yet, but not minimized as stated in the question.  That's why C is correct.\nTurbo replication provides faster redundancy across regions for data in your dual-region buckets, which reduces the risk of data loss exposure and helps support uninterrupted service following a regional outage. When enabled, turbo replication is designed to replicate 100% of newly written objects to the two regions that constitute a dual-region within the recovery point objective of 15 minutes, regardless of object size.\n\nNote that even for default replication, most objects finish replication within minutes.\n\nhttps://cloud.google.com/storage/docs/availability-durability#turbo-replication",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "Minimal yet, but not minimized as stated in the question.  That's why C is correct.\nTurbo replication provides faster redundancy across regions for data in your dual-region buckets, which reduces the risk of data loss exposure and helps support uninterrupted service following a regional outage. When enabled, turbo replication is designed to replicate 100% of newly written objects to the two regions that constitute a dual-region within the recovery point objective of 15 minutes, regardless of object size.\n\nNote that even for default replication, most objects finish replication within minutes.\n\nhttps://cloud.google.com/storage/docs/availability-durability#turbo-replication",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "mdell\n\t\t\t\n\n\n\t\t\t3\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Minimal yet, but not minimized as stated in the question.  That's why C is correct.\nTurbo replication provides faster redundancy across regions for data in your dual-region buckets, which reduces the risk of data loss exposure and helps support uninterrupted service following a regional outage. When enabled, turbo replication is designed to replicate 100% of newly written objects to the two regions that constitute a dual-region within the recovery point objective of 15 minutes, regardless of object size.\n\nNote that even for default replication, most objects finish replication within minutes.\n\nhttps://cloud.google.com/storage/docs/availability-durability#turbo-replication",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Minimal yet, but not minimized as stated in the question.  That's why C is correct.\nTurbo replication provides faster redundancy across regions for data in your dual-region buckets, which reduces the risk of data loss exposure and helps support uninterrupted service following a regional outage. When enabled, turbo replication is designed to replicate 100% of newly written objects to the two regions that constitute a dual-region within the recovery point objective of 15 minutes, regardless of object size.\n\nNote that even for default replication, most objects finish replication within minutes.\n\nhttps://cloud.google.com/storage/docs/availability-durability#turbo-replication",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "Why not A\nhttps://cloud.google.com/storage/docs/locations\nmulti regional location has cross region redundancy",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "petulda\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t4\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "Why not A\nhttps://cloud.google.com/storage/docs/locations\nmulti regional location has cross region redundancy",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not A\nhttps://cloud.google.com/storage/docs/locations\nmulti regional location has cross region redundancy",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "Sorry, it is about minimizing RPO, where Turbo replication is a factor..",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "Sorry, it is about minimizing RPO, where Turbo replication is a factor..",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "petulda\n\t\t\t\n\n\n\t\t\t4\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Sorry, it is about minimizing RPO, where Turbo replication is a factor..",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Sorry, it is about minimizing RPO, where Turbo replication is a factor..",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "vote c",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "hanoverquay\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "vote c",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "vote c",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "https://cloud.google.com/storage/docs/availability-durability#turbo-replication\n\n\"Default replication in Cloud Storage is designed to provide redundancy across regions for 99.9% of newly written objects within a target of one hour and 100% of newly written objects within a target of 12 hours\"\n\n\"When enabled, turbo replication is designed to replicate 100% of newly written objects to both regions that constitute the dual-region within the recovery point objective of 15 minutes, regardless of object size.\"\n\nThus, since they want to minimize RPO, should use turbo replication",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "ricardovazz\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/storage/docs/availability-durability#turbo-replication\n\n\"Default replication in Cloud Storage is designed to provide redundancy across regions for 99.9% of newly written objects within a target of one hour and 100% of newly written objects within a target of 12 hours\"\n\n\"When enabled, turbo replication is designed to replicate 100% of newly written objects to both regions that constitute the dual-region within the recovery point objective of 15 minutes, regardless of object size.\"\n\nThus, since they want to minimize RPO, should use turbo replication",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/storage/docs/availability-durability#turbo-replication\n\n\"Default replication in Cloud Storage is designed to provide redundancy across regions for 99.9% of newly written objects within a target of one hour and 100% of newly written objects within a target of 12 hours\"\n\n\"When enabled, turbo replication is designed to replicate 100% of newly written objects to both regions that constitute the dual-region within the recovery point objective of 15 minutes, regardless of object size.\"\n\nThus, since they want to minimize RPO, should use turbo replication",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Option C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "JyoGCP\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option C: https://cloud.google.com/storage/docs/dual-regions + https://cloud.google.com/storage/docs/managing-turbo-replication",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C: https://cloud.google.com/storage/docs/dual-regions + https://cloud.google.com/storage/docs/managing-turbo-replication",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C: https://cloud.google.com/storage/docs/dual-regions + https://cloud.google.com/storage/docs/managing-turbo-replication",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Turbo replication provides faster redundancy across regions for data in your dual-region buckets, which reduces the risk of data loss exposure and helps support uninterrupted service following a regional outage.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "therealsohail\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Turbo replication provides faster redundancy across regions for data in your dual-region buckets, which reduces the risk of data loss exposure and helps support uninterrupted service following a regional outage.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Turbo replication provides faster redundancy across regions for data in your dual-region buckets, which reduces the risk of data loss exposure and helps support uninterrupted service following a regional outage.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "A. Adopt multi-regional Cloud Storage buckets in your architecture.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "A. Adopt multi-regional Cloud Storage buckets in your architecture.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Adopt multi-regional Cloud Storage buckets in your architecture.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "It wont be a correct answer. Correct is C. It is required \"no impact on applications that use the stored data\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "It wont be a correct answer. Correct is C. It is required \"no impact on applications that use the stored data\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "datapassionate\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "It wont be a correct answer. Correct is C. It is required \"no impact on applications that use the stored data\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It wont be a correct answer. Correct is C. It is required \"no impact on applications that use the stored data\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "But multi-region is completely transparent for the application if one fails. it would need to fail all EU or US regions. I dont undertand why multi-region would have impact on that",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "But multi-region is completely transparent for the application if one fails. it would need to fail all EU or US regions. I dont undertand why multi-region would have impact on that",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "ashdam\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "But multi-region is completely transparent for the application if one fails. it would need to fail all EU or US regions. I dont undertand why multi-region would have impact on that",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "But multi-region is completely transparent for the application if one fails. it would need to fail all EU or US regions. I dont undertand why multi-region would have impact on that",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Whereas with multi-region \" it can also introduce unpredictable latency into the response time and higher network egress charges for cloud workloads when multi-region data is read from remote regions\"\nhttps://cloud.google.com/blog/products/storage-data-transfer/choose-between-regional-dual-region-and-multi-region-cloud-storage",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "datapassionate\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Whereas with multi-region \" it can also introduce unpredictable latency into the response time and higher network egress charges for cloud workloads when multi-region data is read from remote regions\"\nhttps://cloud.google.com/blog/products/storage-data-transfer/choose-between-regional-dual-region-and-multi-region-cloud-storage",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Whereas with multi-region \" it can also introduce unpredictable latency into the response time and higher network egress charges for cloud workloads when multi-region data is read from remote regions\"\nhttps://cloud.google.com/blog/products/storage-data-transfer/choose-between-regional-dual-region-and-multi-region-cloud-storage",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "There is no requirment on latency, just RPO which it would be 0 since multi-region.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "There is no requirment on latency, just RPO which it would be 0 since multi-region.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "ashdam\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "There is no requirment on latency, just RPO which it would be 0 since multi-region.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "There is no requirment on latency, just RPO which it would be 0 since multi-region.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

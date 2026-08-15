@@ -1,0 +1,12 @@
+COMMENT #57 FOR QUESTION 181
+============================================================
+Author: Unknown
+Date: 9 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+Option D is the best approach to minimize backpressure in this scenario. By batching the jobs into 10-second increments, you can throttle the rate at which requests are made to the external GUID service. This prevents too many simultaneous requests from overloading the service.
+
+Option A would not help with backpressure since it just makes synchronous HTTP requests as messages arrive. Similarly, options B and C don't provide any inherent batching or throttling mechanism.
+
+Batching into time windows is a common strategy in stream processing to deal with high velocity data. The 10-second windows allow some buffering to happen, rather than making a call immediately for each message. This provides a natural throttling that can be tuned based on the external service's capacity.
+============================================================

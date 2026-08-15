@@ -1,0 +1,715 @@
+{
+  "question": "You have a BigQuery dataset named \u201ccustomers\u201d. All tables will be tagged by using a Data Catalog tag template named \u201cgdpr\u201d. The template contains one mandatory field, \u201chas_sensitive_data\u201d, with a boolean value. All employees must be able to do a simple search and find tables in the dataset that have either true or false in the \u201chas_sensitive_data\u2019 field. However, only the Human Resources (HR) group should be able to see the data inside the tables for which \u201chas_sensitive data\u201d is true. You give the all employees group the bigquery.metadataViewer and bigquery.connectionUser roles on the dataset. You want to minimize configuration overhead. What should you do next?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate the \u201cgdpr\u201d tag template with private visibility. Assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate the \u201cgdpr\u201d tag template with private visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate the \u201cgdpr\u201d tag template with public visibility. Assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate the \u201cgdpr\u201d tag template with public visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 272 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 272\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou have a BigQuery dataset named \u201ccustomers\u201d. All tables will be tagged by using a Data Catalog tag template named \u201cgdpr\u201d. The template contains one mandatory field, \u201chas_sensitive_data\u201d, with a boolean value. All employees must be able to do a simple search and find tables in the dataset that have either true or false in the \u201chas_sensitive_data\u2019 field. However, only the Human Resources (HR) group should be able to see the data inside the tables for which \u201chas_sensitive data\u201d is true. You give the all employees group the bigquery.metadataViewer and bigquery.connectionUser roles on the dataset. You want to minimize configuration overhead. What should you do next?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate the \u201cgdpr\u201d tag template with private visibility. Assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate the \u201cgdpr\u201d tag template with private visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate the \u201cgdpr\u201d tag template with public visibility. Assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate the \u201cgdpr\u201d tag template with public visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 6:55 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 272\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 6:55 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- The most straightforward solution with minimal configuration overhead.\n- By creating the \"gdpr\" tag template with public visibility, you ensure that all employees can search and find tables based on the \"has_sensitive_data\" field. \n- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- The most straightforward solution with minimal configuration overhead.\n- By creating the \"gdpr\" tag template with public visibility, you ensure that all employees can search and find tables based on the \"has_sensitive_data\" field. \n- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- The most straightforward solution with minimal configuration overhead.\n- By creating the \"gdpr\" tag template with public visibility, you ensure that all employees can search and find tables based on the \"has_sensitive_data\" field. \n- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- The most straightforward solution with minimal configuration overhead.\n- By creating the \"gdpr\" tag template with public visibility, you ensure that all employees can search and find tables based on the \"has_sensitive_data\" field. \n- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- The most straightforward solution with minimal configuration overhead.\n- By creating the \"gdpr\" tag template with public visibility, you ensure that all employees can search and find tables based on the \"has_sensitive_data\" field. \n- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "- The most straightforward solution with minimal configuration overhead.\n- By creating the \"gdpr\" tag template with public visibility, you ensure that all employees can search and find tables based on the \"has_sensitive_data\" field. \n- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- The most straightforward solution with minimal configuration overhead.\n- By creating the \"gdpr\" tag template with public visibility, you ensure that all employees can search and find tables based on the \"has_sensitive_data\" field. \n- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 18 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Wouldn't employees still need the roles/datacatalog.tagTemplateViewer role to view private AND public tags?\nTo get the permissions that you need to view public and private tags on Bigtable resources, ask your administrator to grant you the following IAM roles:\n- roles/datacatalog.tagTemplateViewer\n- roles/bigtable.viewer\nSource: https://cloud.google.com/bigtable/docs/manage-data-assets-using-data-catalog#permissions-view-tags",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Wouldn't employees still need the roles/datacatalog.tagTemplateViewer role to view private AND public tags?\nTo get the permissions that you need to view public and private tags on Bigtable resources, ask your administrator to grant you the following IAM roles:\n- roles/datacatalog.tagTemplateViewer\n- roles/bigtable.viewer\nSource: https://cloud.google.com/bigtable/docs/manage-data-assets-using-data-catalog#permissions-view-tags",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "ML6\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Wouldn't employees still need the roles/datacatalog.tagTemplateViewer role to view private AND public tags?\nTo get the permissions that you need to view public and private tags on Bigtable resources, ask your administrator to grant you the following IAM roles:\n- roles/datacatalog.tagTemplateViewer\n- roles/bigtable.viewer\nSource: https://cloud.google.com/bigtable/docs/manage-data-assets-using-data-catalog#permissions-view-tags",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Wouldn't employees still need the roles/datacatalog.tagTemplateViewer role to view private AND public tags?\nTo get the permissions that you need to view public and private tags on Bigtable resources, ask your administrator to grant you the following IAM roles:\n- roles/datacatalog.tagTemplateViewer\n- roles/bigtable.viewer\nSource: https://cloud.google.com/bigtable/docs/manage-data-assets-using-data-catalog#permissions-view-tags",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Ignore the last reply. The correct answer would be C.\nTags = Custom metadata fields that you can attach to a data entry to provide context.\nTag templates = Reusable structures that you can use to rapidly create new tags.\nIn short, the employees do not need a tagTemplateViewer role because it pertains to the tag templates, not the tags themselves.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "ML6\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Ignore the last reply. The correct answer would be C.\nTags = Custom metadata fields that you can attach to a data entry to provide context.\nTag templates = Reusable structures that you can use to rapidly create new tags.\nIn short, the employees do not need a tagTemplateViewer role because it pertains to the tag templates, not the tags themselves.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Ignore the last reply. The correct answer would be C.\nTags = Custom metadata fields that you can attach to a data entry to provide context.\nTag templates = Reusable structures that you can use to rapidly create new tags.\nIn short, the employees do not need a tagTemplateViewer role because it pertains to the tag templates, not the tags themselves.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Option C:\nPublic Visibility: Ensures that all employees can see the tags and their values.\nData Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.\nOption D:\nPublic Visibility: Ensures that all employees can see the tags and their values.\nTag Template Viewer Role: Explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags.\nData Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.\nWhile both options provide public visibility for the tags and restrict data access to the HR group, Option D explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags and perform searches based on the \"hs_sensitive_data\" field.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Pime13\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Option C:\nPublic Visibility: Ensures that all employees can see the tags and their values.\nData Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.\nOption D:\nPublic Visibility: Ensures that all employees can see the tags and their values.\nTag Template Viewer Role: Explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags.\nData Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.\nWhile both options provide public visibility for the tags and restrict data access to the HR group, Option D explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags and perform searches based on the \"hs_sensitive_data\" field.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C:\nPublic Visibility: Ensures that all employees can see the tags and their values.\nData Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.\nOption D:\nPublic Visibility: Ensures that all employees can see the tags and their values.\nTag Template Viewer Role: Explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags.\nData Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.\nWhile both options provide public visibility for the tags and restrict data access to the HR group, Option D explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags and perform searches based on the \"hs_sensitive_data\" field.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "You can search for public tags using simple search. You can view a data entry, including its public tags, as long as you have the required permissions to view the data entry. No additional permissions on the tag template are required. For permissions required to view the data entry, see the table in this section.\nHowever, we recommend to also grant the datacatalog.tagTemplates.get permission to users who are expected to search for these public tags. This permission allows users to also use the search predicate tag: or use the tag template search facet in the Data Catalog search page.\nFor private tags, you need view permissions on both the tag template and the data entry to search for the tag and to see the tag in the entry detail page. Users must use the tag: search predicate or the tag template search facet to find the tags; simple search for private tags isn't supported.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "You can search for public tags using simple search. You can view a data entry, including its public tags, as long as you have the required permissions to view the data entry. No additional permissions on the tag template are required. For permissions required to view the data entry, see the table in this section.\nHowever, we recommend to also grant the datacatalog.tagTemplates.get permission to users who are expected to search for these public tags. This permission allows users to also use the search predicate tag: or use the tag template search facet in the Data Catalog search page.\nFor private tags, you need view permissions on both the tag template and the data entry to search for the tag and to see the tag in the entry detail page. Users must use the tag: search predicate or the tag template search facet to find the tags; simple search for private tags isn't supported.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Pime13\n\t\t\t\n\n\n\t\t\t3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You can search for public tags using simple search. You can view a data entry, including its public tags, as long as you have the required permissions to view the data entry. No additional permissions on the tag template are required. For permissions required to view the data entry, see the table in this section.\nHowever, we recommend to also grant the datacatalog.tagTemplates.get permission to users who are expected to search for these public tags. This permission allows users to also use the search predicate tag: or use the tag template search facet in the Data Catalog search page.\nFor private tags, you need view permissions on both the tag template and the data entry to search for the tag and to see the tag in the entry detail page. Users must use the tag: search predicate or the tag template search facet to find the tags; simple search for private tags isn't supported.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You can search for public tags using simple search. You can view a data entry, including its public tags, as long as you have the required permissions to view the data entry. No additional permissions on the tag template are required. For permissions required to view the data entry, see the table in this section.\nHowever, we recommend to also grant the datacatalog.tagTemplates.get permission to users who are expected to search for these public tags. This permission allows users to also use the search predicate tag: or use the tag template search facet in the Data Catalog search page.\nFor private tags, you need view permissions on both the tag template and the data entry to search for the tag and to see the tag in the entry detail page. Users must use the tag: search predicate or the tag template search facet to find the tags; simple search for private tags isn't supported.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "This Guy Raasd is mostly correct with explanation thanks mate.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "meh_33\n\t\t\t\n\n\n\t\t\t8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This Guy Raasd is mostly correct with explanation thanks mate.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This Guy Raasd is mostly correct with explanation thanks mate.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 1\u00a0week ago",
+      "content": "A - employees cannot use the tag\nB - increases the configuration overhead\nC - exactly what we need\nD - unnecessary role assignment, the tag template is already visibile",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 1\u00a0week ago",
+      "content": "iooj\n\t\t\t\n\n\n\t\t\t8\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A - employees cannot use the tag\nB - increases the configuration overhead\nC - exactly what we need\nD - unnecessary role assignment, the tag template is already visibile",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A - employees cannot use the tag\nB - increases the configuration overhead\nC - exactly what we need\nD - unnecessary role assignment, the tag template is already visibile",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "While D works well, it is not obligated to give all employees the role of   tagTemplateViewer, as it will give them the view permission for tag templates as well as the tags created by the template.\nHowever, Tags are a type of business metadata. Adding tags to a data entry helps provide meaningful context to anyone who needs to use the asset.And public tags provide less strict access control for searching and viewing the tag as compared to private tags. Any user who has the required view permissions for a data entry can view all the public tags associated with it. View permissions for public tags are only required when you perform a search in Data Catalog using the tag: syntax or when you view an unattached tag template.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "d11379b\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "While D works well, it is not obligated to give all employees the role of   tagTemplateViewer, as it will give them the view permission for tag templates as well as the tags created by the template.\nHowever, Tags are a type of business metadata. Adding tags to a data entry helps provide meaningful context to anyone who needs to use the asset.And public tags provide less strict access control for searching and viewing the tag as compared to private tags. Any user who has the required view permissions for a data entry can view all the public tags associated with it. View permissions for public tags are only required when you perform a search in Data Catalog using the tag: syntax or when you view an unattached tag template.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "While D works well, it is not obligated to give all employees the role of   tagTemplateViewer, as it will give them the view permission for tag templates as well as the tags created by the template.\nHowever, Tags are a type of business metadata. Adding tags to a data entry helps provide meaningful context to anyone who needs to use the asset.And public tags provide less strict access control for searching and viewing the tag as compared to private tags. Any user who has the required view permissions for a data entry can view all the public tags associated with it. View permissions for public tags are only required when you perform a search in Data Catalog using the tag: syntax or when you view an unattached tag template.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "As all employees have the role \u201c bigquery.metadataViewer\u201d they are already capable to see tags on BigQuery then",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "As all employees have the role \u201c bigquery.metadataViewer\u201d they are already capable to see tags on BigQuery then",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "d11379b\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "As all employees have the role \u201c bigquery.metadataViewer\u201d they are already capable to see tags on BigQuery then",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "As all employees have the role \u201c bigquery.metadataViewer\u201d they are already capable to see tags on BigQuery then",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "I'll go with raaad's answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "JyoGCP\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I'll go with raaad's answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I'll go with raaad's answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "If you working with PII, We can't granted public access. So Private Visibility for the Tag Template its the best option.\n\nCheck it https://cloud.google.com/data-catalog/docs/tags-and-tag-templates",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "tibuenoc\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If you working with PII, We can't granted public access. So Private Visibility for the Tag Template its the best option.\n\nCheck it https://cloud.google.com/data-catalog/docs/tags-and-tag-templates",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If you working with PII, We can't granted public access. So Private Visibility for the Tag Template its the best option.\n\nCheck it https://cloud.google.com/data-catalog/docs/tags-and-tag-templates",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "D. Create the \u201cgdpr\u201d tag template with public visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Create the \u201cgdpr\u201d tag template with public visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Create the \u201cgdpr\u201d tag template with public visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

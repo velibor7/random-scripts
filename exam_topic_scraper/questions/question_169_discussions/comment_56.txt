@@ -1,0 +1,10 @@
+COMMENT #56 FOR QUESTION 169
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Partitioning the table by transaction time allows for efficient querying over specific time ranges, such as the past 30 days, which reduces costs and improves performance because it limits the amount of data scanned. 
+
+Clustering by state, then city, and then store ID aligns with the hierarchy of geographical data and the types of queries that are run against the dataset. It organizes the data within each partition so that queries filtering by state, city, or store ID—or any combination of these—are optimized, as BigQuery can limit the scan to just the relevant clusters within the partitions.
+============================================================

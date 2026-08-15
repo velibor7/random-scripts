@@ -1,0 +1,715 @@
+{
+  "question": "You want to schedule a number of sequential load and transformation jobs. Data files will be added to a Cloud Storage bucket by an upstream process. There is no fixed schedule for when the new data arrives. Next, a Dataproc job is triggered to perform some transformations and write the data to BigQuery. You then need to run additional transformation jobs in BigQuery. The transformation jobs are different for every table. These jobs might take hours to complete. You need to determine the most efficient and maintainable workflow to process hundreds of tables and provide the freshest data to your end users. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Cloud Storage, Dataproc, and BigQuery operators.2. Use a single shared DAG for all tables that need to go through the pipeline.3. Schedule the DAG to run hourly.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Cloud Storage, Dataproc, and BigQuery operators.2. Create a separate DAG for each table that needs to go through the pipeline.3. Schedule the DAGs to run hourly.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Dataproc and BigQuery operators.2. Use a single shared DAG for all tables that need to go through the pipeline.3. Use a Cloud Storage object trigger to launch a Cloud Function that triggers the DAG.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Dataproc and BigQuery operators.2. Create a separate DAG for each table that needs to go through the pipeline.3. Use a Cloud Storage object trigger to launch a Cloud Function that triggers the DAG.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nD\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 235 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 235\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou want to schedule a number of sequential load and transformation jobs. Data files will be added to a Cloud Storage bucket by an upstream process. There is no fixed schedule for when the new data arrives. Next, a Dataproc job is triggered to perform some transformations and write the data to BigQuery. You then need to run additional transformation jobs in BigQuery. The transformation jobs are different for every table. These jobs might take hours to complete. You need to determine the most efficient and maintainable workflow to process hundreds of tables and provide the freshest data to your end users. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Cloud Storage, Dataproc, and BigQuery operators.2. Use a single shared DAG for all tables that need to go through the pipeline.3. Schedule the DAG to run hourly.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Cloud Storage, Dataproc, and BigQuery operators.2. Create a separate DAG for each table that needs to go through the pipeline.3. Schedule the DAGs to run hourly.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Dataproc and BigQuery operators.2. Use a single shared DAG for all tables that need to go through the pipeline.3. Use a Cloud Storage object trigger to launch a Cloud Function that triggers the DAG.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Dataproc and BigQuery operators.2. Create a separate DAG for each table that needs to go through the pipeline.3. Use a Cloud Storage object trigger to launch a Cloud Function that triggers the DAG.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nD\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 1:24 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 235\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 1:24 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "D\n\n* Transformations are in Dataproc and BigQuery. So you don't need operators for GCS (A and B can be discard)\n* \"There is no fixed schedule for when the new data arrives.\" so you trigger the DAG when a file arrives\n* \"The transformation jobs are different for every table. \" so you need a DAG for each table.\n\nThen, D is the most suitable answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "D\n\n* Transformations are in Dataproc and BigQuery. So you don't need operators for GCS (A and B can be discard)\n* \"There is no fixed schedule for when the new data arrives.\" so you trigger the DAG when a file arrives\n* \"The transformation jobs are different for every table. \" so you need a DAG for each table.\n\nThen, D is the most suitable answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "D\n\n* Transformations are in Dataproc and BigQuery. So you don't need operators for GCS (A and B can be discard)\n* \"There is no fixed schedule for when the new data arrives.\" so you trigger the DAG when a file arrives\n* \"The transformation jobs are different for every table. \" so you need a DAG for each table.\n\nThen, D is the most suitable answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "D\n\n* Transformations are in Dataproc and BigQuery. So you don't need operators for GCS (A and B can be discard)\n* \"There is no fixed schedule for when the new data arrives.\" so you trigger the DAG when a file arrives\n* \"The transformation jobs are different for every table. \" so you need a DAG for each table.\n\nThen, D is the most suitable answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "D\n\n* Transformations are in Dataproc and BigQuery. So you don't need operators for GCS (A and B can be discard)\n* \"There is no fixed schedule for when the new data arrives.\" so you trigger the DAG when a file arrives\n* \"The transformation jobs are different for every table. \" so you need a DAG for each table.\n\nThen, D is the most suitable answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "cuadradobertolinisebastiancami\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D\n\n* Transformations are in Dataproc and BigQuery. So you don't need operators for GCS (A and B can be discard)\n* \"There is no fixed schedule for when the new data arrives.\" so you trigger the DAG when a file arrives\n* \"The transformation jobs are different for every table. \" so you need a DAG for each table.\n\nThen, D is the most suitable answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D\n\n* Transformations are in Dataproc and BigQuery. So you don't need operators for GCS (A and B can be discard)\n* \"There is no fixed schedule for when the new data arrives.\" so you trigger the DAG when a file arrives\n* \"The transformation jobs are different for every table. \" so you need a DAG for each table.\n\nThen, D is the most suitable answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 8 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months ago",
+      "content": "managing indidivuals DAGs is the best way when they're too different",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months ago",
+      "content": "choprat1\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "managing indidivuals DAGs is the best way when they're too different",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "managing indidivuals DAGs is the best way when they're too different",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "A single shared DAG is efficient to manage, and table-specific transformations can be handled using parameters (e.g., passing table names and configurations dynamically).\nTriggering the DAG using a Cloud Storage object notification and a Cloud Function ensures the workflow starts immediately upon data arrival.\nEvent-driven architecture minimizes delays and provides the freshest data to users.\nEfficient, maintainable, and event-driven.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "f74ca0c\n\t\t\t\n\n\n\t\t\t3\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A single shared DAG is efficient to manage, and table-specific transformations can be handled using parameters (e.g., passing table names and configurations dynamically).\nTriggering the DAG using a Cloud Storage object notification and a Cloud Function ensures the workflow starts immediately upon data arrival.\nEvent-driven architecture minimizes delays and provides the freshest data to users.\nEfficient, maintainable, and event-driven.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A single shared DAG is efficient to manage, and table-specific transformations can be handled using parameters (e.g., passing table names and configurations dynamically).\nTriggering the DAG using a Cloud Storage object notification and a Cloud Function ensures the workflow starts immediately upon data arrival.\nEvent-driven architecture minimizes delays and provides the freshest data to users.\nEfficient, maintainable, and event-driven.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 2\u00a0weeks ago",
+      "content": "This explains why it's not D:\nmaintainable workflow to process hundreds of tables and provide the freshest data to your end users\n\nHow is creating a DAG for each of the hundreds of tables maintainable?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 2\u00a0weeks ago",
+      "content": "8ad5266\n\t\t\t\n\n\n\t\t\t9\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0month, 4\u00a0weeks ago",
+      "content": "This explains why it's not D:\nmaintainable workflow to process hundreds of tables and provide the freshest data to your end users\n\nHow is creating a DAG for each of the hundreds of tables maintainable?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This explains why it's not D:\nmaintainable workflow to process hundreds of tables and provide the freshest data to your end users\n\nHow is creating a DAG for each of the hundreds of tables maintainable?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0month, 4\u00a0weeks ago",
+      "content": "It's possible to generate multiple DAGs programatically. That's the reason for C. https://cloud.google.com/blog/products/data-analytics/optimize-cloud-composer-via-better-airflow-dags -> look at #5",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0month, 4\u00a0weeks ago",
+      "content": "It's possible to generate multiple DAGs programatically. That's the reason for C. https://cloud.google.com/blog/products/data-analytics/optimize-cloud-composer-via-better-airflow-dags -> look at #5",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0month, 4\u00a0weeks ago",
+      "content": "plum21\n\t\t\t\n\n\n\t\t\t1\u00a0month, 4\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It's possible to generate multiple DAGs programatically. That's the reason for C. https://cloud.google.com/blog/products/data-analytics/optimize-cloud-composer-via-better-airflow-dags -> look at #5",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It's possible to generate multiple DAGs programatically. That's the reason for C. https://cloud.google.com/blog/products/data-analytics/optimize-cloud-composer-via-better-airflow-dags -> look at #5",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Option D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "JyoGCP\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option D, which gets triggered when the data comes in and accounts for the fact that each table has its own set of transformations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option D, which gets triggered when the data comes in and accounts for the fact that each table has its own set of transformations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option D, which gets triggered when the data comes in and accounts for the fact that each table has its own set of transformations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "why not C?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Jordan18\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "why not C?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "why not C?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "It says that the transformations for each table are very different",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "It says that the transformations for each table are very different",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "cuadradobertolinisebastiancami\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It says that the transformations for each table are very different",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It says that the transformations for each table are very different",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Same question, why not use single DAG to manage as there are hundreds of tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "AllenChen123\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Same question, why not use single DAG to manage as there are hundreds of tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Same question, why not use single DAG to manage as there are hundreds of tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Option D: Tailored handling and scheduling for each table; triggered by data arrival for more timely and efficient processing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Option D: Tailored handling and scheduling for each table; triggered by data arrival for more timely and efficient processing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Option D: Tailored handling and scheduling for each table; triggered by data arrival for more timely and efficient processing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "D. \n1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Dataproc and BigQuery operators.\n2. Create a separate DAG for each table that needs to go through the pipeline.\n3. Use a Cloud Storage object trigger to launch a Cloud Function that triggers the DAG.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. \n1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Dataproc and BigQuery operators.\n2. Create a separate DAG for each table that needs to go through the pipeline.\n3. Use a Cloud Storage object trigger to launch a Cloud Function that triggers the DAG.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. \n1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Dataproc and BigQuery operators.\n2. Create a separate DAG for each table that needs to go through the pipeline.\n3. Use a Cloud Storage object trigger to launch a Cloud Function that triggers the DAG.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

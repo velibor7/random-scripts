@@ -1,0 +1,955 @@
+{
+  "question": "You work for a car manufacturer and have set up a data pipeline using Google Cloud Pub/Sub to capture anomalous sensor events. You are using a push subscription in Cloud Pub/Sub that calls a custom HTTPS endpoint that you have created to take action of these anomalous events as they occur. Your customHTTPS endpoint keeps getting an inordinate amount of duplicate messages. What is the most likely cause of these duplicate messages?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe message body for the sensor event is too large.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tYour custom endpoint has an out-of-date SSL certificate.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe Cloud Pub/Sub topic has too many messages published to it.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tYour custom endpoint is not acknowledging messages within the acknowledgement deadline.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nD\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 20 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 20\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou work for a car manufacturer and have set up a data pipeline using Google Cloud Pub/Sub to capture anomalous sensor events. You are using a push subscription in Cloud Pub/Sub that calls a custom HTTPS endpoint that you have created to take action of these anomalous events as they occur. Your customHTTPS endpoint keeps getting an inordinate amount of duplicate messages. What is the most likely cause of these duplicate messages?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe message body for the sensor event is too large.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tYour custom endpoint has an out-of-date SSL certificate.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe Cloud Pub/Sub topic has too many messages published to it.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tYour custom endpoint is not acknowledging messages within the acknowledgement deadline.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nD\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tjvg637\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 11, 2020, 6:37 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 20\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tjvg637\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 11, 2020, 6:37 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "jvg637\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t5\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 88 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "D :  Doubt should be only between B & D. But B is not possible because if SSL is expired then endpoint URL will not receive any messages forget about duplicates. So It should be D for Duplicates.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "MauryaSushil\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t5\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D :  Doubt should be only between B & D. But B is not possible because if SSL is expired then endpoint URL will not receive any messages forget about duplicates. So It should be D for Duplicates.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D :  Doubt should be only between B & D. But B is not possible because if SSL is expired then endpoint URL will not receive any messages forget about duplicates. So It should be D for Duplicates.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 10 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "D\nWhy are there too many duplicate messages?\n\nPub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "atnafu2020\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D\nWhy are there too many duplicate messages?\n\nPub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D\nWhy are there too many duplicate messages?\n\nPub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "D is correct\nAs per google docs- When you do not acknowledge a message before its acknowledgement deadline has expired, Pub/Sub resends the message. As a result, Pub/Sub can send duplicate messages. Use Google Cloud's operations suite to monitor acknowledge operations with the expired response code to detect this condition",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "ganesh2121\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is correct\nAs per google docs- When you do not acknowledge a message before its acknowledgement deadline has expired, Pub/Sub resends the message. As a result, Pub/Sub can send duplicate messages. Use Google Cloud's operations suite to monitor acknowledge operations with the expired response code to detect this condition",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is correct\nAs per google docs- When you do not acknowledge a message before its acknowledgement deadline has expired, Pub/Sub resends the message. As a result, Pub/Sub can send duplicate messages. Use Google Cloud's operations suite to monitor acknowledge operations with the expired response code to detect this condition",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "The correct answer is D. Look for the link\nhttps://cloud.google.com/pubsub/docs/faq\n\nWhy are there too many duplicate messages?\nPub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.\n\nAnother possibility is that the subscriber is not acknowledging some messages because the code path processing those specific messages fails, and the Acknowledge call is never made; or the push endpoint never responds or responds with an error.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Radhika7983\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The correct answer is D. Look for the link\nhttps://cloud.google.com/pubsub/docs/faq\n\nWhy are there too many duplicate messages?\nPub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.\n\nAnother possibility is that the subscriber is not acknowledging some messages because the code path processing those specific messages fails, and the Acknowledge call is never made; or the push endpoint never responds or responds with an error.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The correct answer is D. Look for the link\nhttps://cloud.google.com/pubsub/docs/faq\n\nWhy are there too many duplicate messages?\nPub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.\n\nAnother possibility is that the subscriber is not acknowledging some messages because the code path processing those specific messages fails, and the Acknowledge call is never made; or the push endpoint never responds or responds with an error.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "D as the Cloud Pub/Sub will deliver duplicate messages only if there has been no acknowledgement from the subscriber.\nRefer GCP documentation - Cloud Pub/Sub FAQs - Duplicates:\nhttps://cloud.google.com/pubsub/docs/faq#duplicates\nWhy are there too many duplicate messages?\nCloud Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Cloud Pub/Sub is retrying the message delivery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D as the Cloud Pub/Sub will deliver duplicate messages only if there has been no acknowledgement from the subscriber.\nRefer GCP documentation - Cloud Pub/Sub FAQs - Duplicates:\nhttps://cloud.google.com/pubsub/docs/faq#duplicates\nWhy are there too many duplicate messages?\nCloud Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Cloud Pub/Sub is retrying the message delivery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D as the Cloud Pub/Sub will deliver duplicate messages only if there has been no acknowledgement from the subscriber.\nRefer GCP documentation - Cloud Pub/Sub FAQs - Duplicates:\nhttps://cloud.google.com/pubsub/docs/faq#duplicates\nWhy are there too many duplicate messages?\nCloud Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Cloud Pub/Sub is retrying the message delivery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "If the answer had been B the messages had not reached the HTTP page since the push subscription requires an SSL certificate (https://cloud.google.com/pubsub/docs/push#:~:text=Endpoint%20URL%20(required)), so the answer must be D.\n\nI think it is due to a bad response due to overcharge in the HTTPS page, which is sending a non correct status code (https://cloud.google.com/pubsub/docs/push#:~:text=VPC%20Service%20Controls.-,Receive%20messages,-When%20Pub/Sub)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "crismo04\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If the answer had been B the messages had not reached the HTTP page since the push subscription requires an SSL certificate (https://cloud.google.com/pubsub/docs/push#:~:text=Endpoint%20URL%20(required)), so the answer must be D.\n\nI think it is due to a bad response due to overcharge in the HTTPS page, which is sending a non correct status code (https://cloud.google.com/pubsub/docs/push#:~:text=VPC%20Service%20Controls.-,Receive%20messages,-When%20Pub/Sub)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If the answer had been B the messages had not reached the HTTP page since the push subscription requires an SSL certificate (https://cloud.google.com/pubsub/docs/push#:~:text=Endpoint%20URL%20(required)), so the answer must be D.\n\nI think it is due to a bad response due to overcharge in the HTTPS page, which is sending a non correct status code (https://cloud.google.com/pubsub/docs/push#:~:text=VPC%20Service%20Controls.-,Receive%20messages,-When%20Pub/Sub)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "In Google Cloud Pub/Sub, when you use a push subscription, messages are delivered to the specified endpoint (in this case, your custom HTTPS endpoint). The acknowledgment deadline is the time given to the endpoint to acknowledge that it has received and processed the message. If the acknowledgment is not received within the deadline, Pub/Sub may consider the message as unacknowledged and may attempt redelivery, which can lead to duplicate messages.\n\nYou should ensure that your custom HTTPS endpoint acknowledges messages within the acknowledgment deadline to prevent duplicate messages from being sent. Additionally, it's essential to handle messages in an idempotent way, so even if duplicates do occur, the action taken by your endpoint doesn't have unintended consequences.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "rtcpost\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "In Google Cloud Pub/Sub, when you use a push subscription, messages are delivered to the specified endpoint (in this case, your custom HTTPS endpoint). The acknowledgment deadline is the time given to the endpoint to acknowledge that it has received and processed the message. If the acknowledgment is not received within the deadline, Pub/Sub may consider the message as unacknowledged and may attempt redelivery, which can lead to duplicate messages.\n\nYou should ensure that your custom HTTPS endpoint acknowledges messages within the acknowledgment deadline to prevent duplicate messages from being sent. Additionally, it's essential to handle messages in an idempotent way, so even if duplicates do occur, the action taken by your endpoint doesn't have unintended consequences.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "In Google Cloud Pub/Sub, when you use a push subscription, messages are delivered to the specified endpoint (in this case, your custom HTTPS endpoint). The acknowledgment deadline is the time given to the endpoint to acknowledge that it has received and processed the message. If the acknowledgment is not received within the deadline, Pub/Sub may consider the message as unacknowledged and may attempt redelivery, which can lead to duplicate messages.\n\nYou should ensure that your custom HTTPS endpoint acknowledges messages within the acknowledgment deadline to prevent duplicate messages from being sent. Additionally, it's essential to handle messages in an idempotent way, so even if duplicates do occur, the action taken by your endpoint doesn't have unintended consequences.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "After re-reading the question it seem to me that it is asking for a root cause. It is possible that the most common cause of this symptom is and expired certificate. Once expired duplicates would be received for every message.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "petergjohnson\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "After re-reading the question it seem to me that it is asking for a root cause. It is possible that the most common cause of this symptom is and expired certificate. Once expired duplicates would be received for every message.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "After re-reading the question it seem to me that it is asking for a root cause. It is possible that the most common cause of this symptom is and expired certificate. Once expired duplicates would be received for every message.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 3\u00a0weeks ago",
+      "content": "Agree with previous explanations regarding validity of D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 3\u00a0weeks ago",
+      "content": "VictorBa\n\t\t\t\n\n\n\t\t\t10\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agree with previous explanations regarding validity of D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agree with previous explanations regarding validity of D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "D -  If a message has not been acknowledged within its acknowledgement deadline, Dataflow attempts to maintain the lease on the message by repeatedly extending the acknowledgement deadline to prevent redelivery from Pub/Sub. However this is best effort and there is a possibility that messages may be redelivered. This can be monitored using metrics listed here. https://cloud.google.com/blog/products/data-analytics/handling-duplicate-data-in-streaming-pipeline-using-pubsub-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "searching4alicense\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D -  If a message has not been acknowledged within its acknowledgement deadline, Dataflow attempts to maintain the lease on the message by repeatedly extending the acknowledgement deadline to prevent redelivery from Pub/Sub. However this is best effort and there is a possibility that messages may be redelivered. This can be monitored using metrics listed here. https://cloud.google.com/blog/products/data-analytics/handling-duplicate-data-in-streaming-pipeline-using-pubsub-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D -  If a message has not been acknowledged within its acknowledgement deadline, Dataflow attempts to maintain the lease on the message by repeatedly extending the acknowledgement deadline to prevent redelivery from Pub/Sub. However this is best effort and there is a possibility that messages may be redelivered. This can be monitored using metrics listed here. https://cloud.google.com/blog/products/data-analytics/handling-duplicate-data-in-streaming-pipeline-using-pubsub-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "D should be the answer. If acknowlegement is not received back to pub/sub , pub/sub may resend meassages.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "philli1011\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D should be the answer. If acknowlegement is not received back to pub/sub , pub/sub may resend meassages.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D should be the answer. If acknowlegement is not received back to pub/sub , pub/sub may resend meassages.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "The correct answer is:\nD. Your custom endpoint is not acknowledging messages within the acknowledgement deadline.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "imran79\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The correct answer is:\nD. Your custom endpoint is not acknowledging messages within the acknowledgement deadline.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The correct answer is:\nD. Your custom endpoint is not acknowledging messages within the acknowledgement deadline.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "if there were an out of date certificate then nothing would get through. D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "emmylou\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "if there were an out of date certificate then nothing would get through. D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "if there were an out of date certificate then nothing would get through. D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "It should be D\nhttps://cloud.google.com/pubsub/docs/troubleshooting#dupes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "FP77\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It should be D\nhttps://cloud.google.com/pubsub/docs/troubleshooting#dupes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It should be D\nhttps://cloud.google.com/pubsub/docs/troubleshooting#dupes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "The correct answer is D, because it's how Pub/Sub works.\nDocumentation here: https://cloud.google.com/pubsub/docs/troubleshooting#dupes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "dgteixeira\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The correct answer is D, because it's how Pub/Sub works.\nDocumentation here: https://cloud.google.com/pubsub/docs/troubleshooting#dupes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The correct answer is D, because it's how Pub/Sub works.\nDocumentation here: https://cloud.google.com/pubsub/docs/troubleshooting#dupes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "D for sure",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "boca_2022\n\t\t\t\n\n\n\t\t\t1\u00a0year, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D for sure",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D for sure",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

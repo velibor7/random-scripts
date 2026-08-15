@@ -1,0 +1,13 @@
+COMMENT #24 FOR QUESTION 15
+============================================================
+Author: Unknown
+Date: 3 years, 4 months ago
+Votes: 0
+----------------------------------------
+B. Streams data into BigQuery one record at a time without needing to run a load job: https://cloud.google.com/bigquery/docs/reference/rest/v2/tabledata/insertAll
+Instead of using a job to load data into BigQuery, you can choose to stream your data into BigQuery one record at a time by using the tabledata.insertAll method. This approach enables querying data without the delay of running a load job:
+https://cloud.google.com/bigquery/streaming-data-into-bigquery
+The BigQuery Storage Write API is a unified data-ingestion API for BigQuery. It combines the functionality of streaming ingestion and batch loading into a single high-performance API. You can use the Storage Write API to stream records into BigQuery that become available for query as they are written, or to batch process an arbitrarily large number of records and commit them in a single atomic operation.
+Committed mode. Records are available for reading immediately as you write them to the stream. Use this mode for streaming workloads that need minimal read latency.
+https://cloud.google.com/bigquery/docs/write-api
+============================================================

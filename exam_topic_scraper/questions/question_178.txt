@@ -1,0 +1,1100 @@
+================================================================================
+QUESTION:
+You are testing a Dataflow pipeline to ingest and transform text files. The files are compressed gzip, errors are written to a dead-letter queue, and you are usingSideInputs to join data. You noticed that the pipeline is taking longer to complete than expected; what should you do to expedite the Dataflow job?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Switch to compressed Avro files.
+										
+
+
+													B.
+												
+											
+											Reduce the batch size.
+										
+
+
+													C.
+												
+											
+											Retry records that throw an error.
+										
+
+
+													D.
+												
+											
+											Use CoGroupByKey instead of the SideInput.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (175 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 178 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 178
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are testing a Dataflow pipeline to ingest and transform text files. The files are compressed gzip, errors are written to a dead-letter queue, and you are usingSideInputs to join data. You noticed that the pipeline is taking longer to complete than expected; what should you do to expedite the Dataflow job?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Switch to compressed Avro files.
+										
+
+
+													B.
+												
+											
+											Reduce the batch size.
+										
+
+
+													C.
+												
+											
+											Retry records that throw an error.
+										
+
+
+													D.
+												
+											
+											Use CoGroupByKey instead of the SideInput.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 2, 2022, 9:02 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 178
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 2, 2022, 9:02 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D: it is most likely.
+There are a lot of reference doc to tell about comparison between them
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-2
+
+https://stackoverflow.com/questions/58080383/sideinput-i-o-kills-performance
+
+--- Comment #6 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D: it is most likely.
+There are a lot of reference doc to tell about comparison between them
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-2
+
+https://stackoverflow.com/questions/58080383/sideinput-i-o-kills-performance
+
+--- Comment #7 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D: it is most likely.
+There are a lot of reference doc to tell about comparison between them
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-2
+
+https://stackoverflow.com/questions/58080383/sideinput-i-o-kills-performance
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D: it is most likely.
+There are a lot of reference doc to tell about comparison between them
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-2
+
+https://stackoverflow.com/questions/58080383/sideinput-i-o-kills-performance
+
+--- Comment #13 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D: it is most likely.
+There are a lot of reference doc to tell about comparison between them
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-2
+
+https://stackoverflow.com/questions/58080383/sideinput-i-o-kills-performance
+
+--- Comment #14 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+John_Pongthorn
+			
+
+
+				Highly Voted 
+
+
+			2 years ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+D: it is most likely.
+There are a lot of reference doc to tell about comparison between them
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-2
+
+https://stackoverflow.com/questions/58080383/sideinput-i-o-kills-performance
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+D: it is most likely.
+There are a lot of reference doc to tell about comparison between them
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-2
+
+https://stackoverflow.com/questions/58080383/sideinput-i-o-kills-performance
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 16 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+D is the answer.
+
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+The CoGroupByKey transform is a core Beam transform that merges (flattens) multiple PCollection objects and groups elements that have a common key. Unlike a side input, which makes the entire side input data available to each worker, CoGroupByKey performs a shuffle (grouping) operation to distribute data across workers. CoGroupByKey is therefore ideal when the PCollection objects you want to join are very large and don't fit into worker memory.
+
+Use CoGroupByKey if you need to fetch a large proportion of a PCollection object that significantly exceeds worker memory.
+
+--- Comment #23 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+zellck
+			
+
+
+				Highly Voted 
+
+
+			1 year, 10 months ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+D is the answer.
+
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+The CoGroupByKey transform is a core Beam transform that merges (flattens) multiple PCollection objects and groups elements that have a common key. Unlike a side input, which makes the entire side input data available to each worker, CoGroupByKey performs a shuffle (grouping) operation to distribute data across workers. CoGroupByKey is therefore ideal when the PCollection objects you want to join are very large and don't fit into worker memory.
+
+Use CoGroupByKey if you need to fetch a large proportion of a PCollection object that significantly exceeds worker memory.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+D is the answer.
+
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+The CoGroupByKey transform is a core Beam transform that merges (flattens) multiple PCollection objects and groups elements that have a common key. Unlike a side input, which makes the entire side input data available to each worker, CoGroupByKey performs a shuffle (grouping) operation to distribute data across workers. CoGroupByKey is therefore ideal when the PCollection objects you want to join are very large and don't fit into worker memory.
+
+Use CoGroupByKey if you need to fetch a large proportion of a PCollection object that significantly exceeds worker memory.
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #31 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+To expedite the Dataflow job that involves ingesting and transforming text files, especially if the pipeline is taking longer than expected, the most effective strategy would be:
+
+D. Use CoGroupByKey instead of the SideInput.
+
+--- Comment #32 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+				Most Recent 
+
+
+			9 months, 3 weeks ago
+
+--- Comment #33 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+To expedite the Dataflow job that involves ingesting and transforming text files, especially if the pipeline is taking longer than expected, the most effective strategy would be:
+
+D. Use CoGroupByKey instead of the SideInput.
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+To expedite the Dataflow job that involves ingesting and transforming text files, especially if the pipeline is taking longer than expected, the most effective strategy would be:
+
+D. Use CoGroupByKey instead of the SideInput.
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Here's why this approach is beneficial:
+
+1.	Efficiency in Handling Large Datasets: SideInputs are not optimal for large datasets because they require that the entire dataset be available to each worker. This can lead to performance bottlenecks, especially if the dataset is large. CoGroupByKey, on the other hand, is more efficient for joining large datasets because it groups elements by key and allows the pipeline to process each key-group separately.
+
+2.	Scalability: CoGroupByKey is more scalable than SideInputs for large-scale data processing. It distributes the workload more evenly across the Dataflow workers, which can significantly improve the performance of your pipeline.
+
+3.	Better Resource Utilization: By using CoGroupByKey, the Dataflow job can make better use of its resources, as it doesn't need to replicate the entire dataset to each worker. This results in faster processing times and better overall efficiency.
+
+--- Comment #39 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Here's why this approach is beneficial:
+
+1.	Efficiency in Handling Large Datasets: SideInputs are not optimal for large datasets because they require that the entire dataset be available to each worker. This can lead to performance bottlenecks, especially if the dataset is large. CoGroupByKey, on the other hand, is more efficient for joining large datasets because it groups elements by key and allows the pipeline to process each key-group separately.
+
+2.	Scalability: CoGroupByKey is more scalable than SideInputs for large-scale data processing. It distributes the workload more evenly across the Dataflow workers, which can significantly improve the performance of your pipeline.
+
+3.	Better Resource Utilization: By using CoGroupByKey, the Dataflow job can make better use of its resources, as it doesn't need to replicate the entire dataset to each worker. This results in faster processing times and better overall efficiency.
+
+--- Comment #40 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #41 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Here's why this approach is beneficial:
+
+1.	Efficiency in Handling Large Datasets: SideInputs are not optimal for large datasets because they require that the entire dataset be available to each worker. This can lead to performance bottlenecks, especially if the dataset is large. CoGroupByKey, on the other hand, is more efficient for joining large datasets because it groups elements by key and allows the pipeline to process each key-group separately.
+
+2.	Scalability: CoGroupByKey is more scalable than SideInputs for large-scale data processing. It distributes the workload more evenly across the Dataflow workers, which can significantly improve the performance of your pipeline.
+
+3.	Better Resource Utilization: By using CoGroupByKey, the Dataflow job can make better use of its resources, as it doesn't need to replicate the entire dataset to each worker. This results in faster processing times and better overall efficiency.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Here's why this approach is beneficial:
+
+1.	Efficiency in Handling Large Datasets: SideInputs are not optimal for large datasets because they require that the entire dataset be available to each worker. This can lead to performance bottlenecks, especially if the dataset is large. CoGroupByKey, on the other hand, is more efficient for joining large datasets because it groups elements by key and allows the pipeline to process each key-group separately.
+
+2.	Scalability: CoGroupByKey is more scalable than SideInputs for large-scale data processing. It distributes the workload more evenly across the Dataflow workers, which can significantly improve the performance of your pipeline.
+
+3.	Better Resource Utilization: By using CoGroupByKey, the Dataflow job can make better use of its resources, as it doesn't need to replicate the entire dataset to each worker. This results in faster processing times and better overall efficiency.
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+The other options may not be as effective:
+
+•	A (Switch to compressed Avro files): While Avro is a good format for certain types of data processing, simply changing the file format from gzip to Avro may not address the underlying issue causing the delay, especially if the problem is related to the way data is being joined or processed.
+
+•	B (Reduce the batch size): Reducing the batch size could potentially increase overhead and might not significantly improve the processing time, especially if the bottleneck is due to the method of data joining.
+
+•	C (Retry records that throw an error): Retrying errors could be useful in certain contexts, but it's unlikely to speed up the pipeline if the delay is due to inefficiencies in data processing methods like the use of SideInputs.
+
+--- Comment #46 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+The other options may not be as effective:
+
+•	A (Switch to compressed Avro files): While Avro is a good format for certain types of data processing, simply changing the file format from gzip to Avro may not address the underlying issue causing the delay, especially if the problem is related to the way data is being joined or processed.
+
+•	B (Reduce the batch size): Reducing the batch size could potentially increase overhead and might not significantly improve the processing time, especially if the bottleneck is due to the method of data joining.
+
+•	C (Retry records that throw an error): Retrying errors could be useful in certain contexts, but it's unlikely to speed up the pipeline if the delay is due to inefficiencies in data processing methods like the use of SideInputs.
+
+--- Comment #47 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+The other options may not be as effective:
+
+•	A (Switch to compressed Avro files): While Avro is a good format for certain types of data processing, simply changing the file format from gzip to Avro may not address the underlying issue causing the delay, especially if the problem is related to the way data is being joined or processed.
+
+•	B (Reduce the batch size): Reducing the batch size could potentially increase overhead and might not significantly improve the processing time, especially if the bottleneck is due to the method of data joining.
+
+•	C (Retry records that throw an error): Retrying errors could be useful in certain contexts, but it's unlikely to speed up the pipeline if the delay is due to inefficiencies in data processing methods like the use of SideInputs.
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+The other options may not be as effective:
+
+•	A (Switch to compressed Avro files): While Avro is a good format for certain types of data processing, simply changing the file format from gzip to Avro may not address the underlying issue causing the delay, especially if the problem is related to the way data is being joined or processed.
+
+•	B (Reduce the batch size): Reducing the batch size could potentially increase overhead and might not significantly improve the processing time, especially if the bottleneck is due to the method of data joining.
+
+•	C (Retry records that throw an error): Retrying errors could be useful in certain contexts, but it's unlikely to speed up the pipeline if the delay is due to inefficiencies in data processing methods like the use of SideInputs.
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #56 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Answer: B, 
+reducing the batch size improve the speed performance also improve cpu utilisation. 
+Dead letter queues are generated for messages that are errorrly acknowledged and its good to use sideinputs for that to check small amount of errors in memory. 
+Cogroupbykey is not necessary for error messages. 
+I see only batch size that can be customized to improve the performance. 
+In practical use case:
+you check these tools Stackdriver Monitoring and Logging, Cloud Trace, and Cloud Profiler. and try to find the cause, if its file type issue in compression, or batch size.
+
+--- Comment #57 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+musumusu
+			
+
+
+			1 year, 7 months ago
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: B, 
+reducing the batch size improve the speed performance also improve cpu utilisation. 
+Dead letter queues are generated for messages that are errorrly acknowledged and its good to use sideinputs for that to check small amount of errors in memory. 
+Cogroupbykey is not necessary for error messages. 
+I see only batch size that can be customized to improve the performance. 
+In practical use case:
+you check these tools Stackdriver Monitoring and Logging, Cloud Trace, and Cloud Profiler. and try to find the cause, if its file type issue in compression, or batch size.
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: B, 
+reducing the batch size improve the speed performance also improve cpu utilisation. 
+Dead letter queues are generated for messages that are errorrly acknowledged and its good to use sideinputs for that to check small amount of errors in memory. 
+Cogroupbykey is not necessary for error messages. 
+I see only batch size that can be customized to improve the performance. 
+In practical use case:
+you check these tools Stackdriver Monitoring and Logging, Cloud Trace, and Cloud Profiler. and try to find the cause, if its file type issue in compression, or batch size.
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #64 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D
+Flatten will just merge all results into a single PCollection. To join them you can use CoGroupByKey
+
+--- Comment #65 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Atnafu
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+D
+Flatten will just merge all results into a single PCollection. To join them you can use CoGroupByKey
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+D
+Flatten will just merge all results into a single PCollection. To join them you can use CoGroupByKey
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+When optimizing for load speed, Avro file format is preferred. Avro is a binary row-based format which can be split and read in parallel by multiple slots including compressed files.
+
+--- Comment #73 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #74 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+When optimizing for load speed, Avro file format is preferred. Avro is a binary row-based format which can be split and read in parallel by multiple slots including compressed files.
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+When optimizing for load speed, Avro file format is preferred. Avro is a binary row-based format which can be split and read in parallel by multiple slots including compressed files.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+that is for Big Query isn't?
+
+--- Comment #80 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+that is for Big Query isn't?
+
+--- Comment #81 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+devaid
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #82 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+that is for Big Query isn't?
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+that is for Big Query isn't?
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #86 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+datflow can use avro format sir. streaming or batching to bigquery in avro format it can
+
+--- Comment #87 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+datflow can use avro format sir. streaming or batching to bigquery in avro format it can
+
+--- Comment #88 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+TNT87
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+datflow can use avro format sir. streaming or batching to bigquery in avro format it can
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+datflow can use avro format sir. streaming or batching to bigquery in avro format it can
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #97 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+https://cloud.google.com/blog/topics/developers-practitioners/bigquery-explained-data-ingestion
+
+--- Comment #98 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/blog/topics/developers-practitioners/bigquery-explained-data-ingestion
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/blog/topics/developers-practitioners/bigquery-explained-data-ingestion
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #105 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D probably, side inputs have to fit in memory. If the p-collection in the side input doesn't fit well in memory it's better to use CoGroupByKey.
+
+--- Comment #106 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+devaid
+			
+
+
+			2 years ago
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+D probably, side inputs have to fit in memory. If the p-collection in the side input doesn't fit well in memory it's better to use CoGroupByKey.
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+D probably, side inputs have to fit in memory. If the p-collection in the side input doesn't fit well in memory it's better to use CoGroupByKey.
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #114 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Answer A 
+the same question is in number 70 you transform the files to Avro using Dataflow
+
+--- Comment #115 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #116 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Answer A 
+the same question is in number 70 you transform the files to Avro using Dataflow
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+Answer A 
+the same question is in number 70 you transform the files to Avro using Dataflow
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #121 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Avro requires the data to be at least semi-structured, because it wants a fixed schema. Text files are unstructured data, therefore it doesn't make sense to use Avro files for them
+
+--- Comment #122 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Avro requires the data to be at least semi-structured, because it wants a fixed schema. Text files are unstructured data, therefore it doesn't make sense to use Avro files for them
+
+--- Comment #123 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+KC_go_reply
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+Avro requires the data to be at least semi-structured, because it wants a fixed schema. Text files are unstructured data, therefore it doesn't make sense to use Avro files for them
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+Avro requires the data to be at least semi-structured, because it wants a fixed schema. Text files are unstructured data, therefore it doesn't make sense to use Avro files for them
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #131 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+A switching to avro. No serialisation
+
+--- Comment #132 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+csd1fggfhfgvh234
+			
+
+
+			2 years ago
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+A switching to avro. No serialisation
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+A switching to avro. No serialisation
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #139 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Switch to Avro format 
+Answer A
+
+--- Comment #140 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #141 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Switch to Avro format 
+Answer A
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to Avro format 
+Answer A
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #145 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+https://docs.confluent.io/platform/current/schema-registry/serdes-develop/serdes-avro.html
+
+--- Comment #146 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+https://docs.confluent.io/platform/current/schema-registry/serdes-develop/serdes-avro.html
+
+--- Comment #147 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+https://docs.confluent.io/platform/current/schema-registry/serdes-develop/serdes-avro.html
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+https://docs.confluent.io/platform/current/schema-registry/serdes-develop/serdes-avro.html
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #155 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+D probably, side inputs have to fit in memory. If the p-collection in the side input doesn't fit well in memory it's better to use CoGroupByKey.
+
+--- Comment #156 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+YorelNation
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+D probably, side inputs have to fit in memory. If the p-collection in the side input doesn't fit well in memory it's better to use CoGroupByKey.
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+D probably, side inputs have to fit in memory. If the p-collection in the side input doesn't fit well in memory it's better to use CoGroupByKey.
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #164 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B. Reduce the batch size.
+
+--- Comment #165 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+AWSandeep
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+B. Reduce the batch size.
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+B. Reduce the batch size.
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

@@ -1,0 +1,10 @@
+COMMENT #16 FOR QUESTION 120
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+You would want to get alerted only if Pipeline fails & not if it is running fine. I think Option [B] is correct, because in event of Pipeline failure :
+1) subscription/ num_undelivered_messages would pile up at a constant rate as the source has consistent throughput
+2) instance/storage/ used_bytes will get closer to zero. Hence need to monitor it's rate of change
+============================================================

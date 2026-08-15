@@ -1,0 +1,643 @@
+{
+  "question": "You are designing a real-time system for a ride hailing app that identifies areas with high demand for rides to effectively reroute available drivers to meet the demand. The system ingests data from multiple sources to Pub/Sub, processes the data, and stores the results for visualization and analysis in real-time dashboards. The data sources include driver location updates every 5 seconds and app-based booking events from riders. The data processing involves real-time aggregation of supply and demand data for the last 30 seconds, every 2 seconds, and storing the results in a low-latency system for visualization. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tGroup the data by using a tumbling window in a Dataflow pipeline, and write the aggregated data to Memorystore.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tGroup the data by using a hopping window in a Dataflow pipeline, and write the aggregated data to Memorystore.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tGroup the data by using a session window in a Dataflow pipeline, and write the aggregated data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tGroup the data by using a hopping window in a Dataflow pipeline, and write the aggregated data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 277 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 277\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are designing a real-time system for a ride hailing app that identifies areas with high demand for rides to effectively reroute available drivers to meet the demand. The system ingests data from multiple sources to Pub/Sub, processes the data, and stores the results for visualization and analysis in real-time dashboards. The data sources include driver location updates every 5 seconds and app-based booking events from riders. The data processing involves real-time aggregation of supply and demand data for the last 30 seconds, every 2 seconds, and storing the results in a low-latency system for visualization. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tGroup the data by using a tumbling window in a Dataflow pipeline, and write the aggregated data to Memorystore.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tGroup the data by using a hopping window in a Dataflow pipeline, and write the aggregated data to Memorystore.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tGroup the data by using a session window in a Dataflow pipeline, and write the aggregated data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tGroup the data by using a hopping window in a Dataflow pipeline, and write the aggregated data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 4, 2024, 5:14 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 277\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 4, 2024, 5:14 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Hopping Window: Hopping windows are fixed-sized, overlapping intervals. \n- Aggregate data over the last 30 seconds, every 2 seconds, as hopping windows allow for overlapping data analysis.\n- Memorystore: Ideal for low-latency access required for real-time visualization and analysis.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Hopping Window: Hopping windows are fixed-sized, overlapping intervals. \n- Aggregate data over the last 30 seconds, every 2 seconds, as hopping windows allow for overlapping data analysis.\n- Memorystore: Ideal for low-latency access required for real-time visualization and analysis.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Hopping Window: Hopping windows are fixed-sized, overlapping intervals. \n- Aggregate data over the last 30 seconds, every 2 seconds, as hopping windows allow for overlapping data analysis.\n- Memorystore: Ideal for low-latency access required for real-time visualization and analysis.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Hopping Window: Hopping windows are fixed-sized, overlapping intervals. \n- Aggregate data over the last 30 seconds, every 2 seconds, as hopping windows allow for overlapping data analysis.\n- Memorystore: Ideal for low-latency access required for real-time visualization and analysis.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Hopping Window: Hopping windows are fixed-sized, overlapping intervals. \n- Aggregate data over the last 30 seconds, every 2 seconds, as hopping windows allow for overlapping data analysis.\n- Memorystore: Ideal for low-latency access required for real-time visualization and analysis.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "12\u00a0months ago",
+      "content": "- Hopping Window: Hopping windows are fixed-sized, overlapping intervals. \n- Aggregate data over the last 30 seconds, every 2 seconds, as hopping windows allow for overlapping data analysis.\n- Memorystore: Ideal for low-latency access required for real-time visualization and analysis.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Hopping Window: Hopping windows are fixed-sized, overlapping intervals. \n- Aggregate data over the last 30 seconds, every 2 seconds, as hopping windows allow for overlapping data analysis.\n- Memorystore: Ideal for low-latency access required for real-time visualization and analysis.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 12 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "12\u00a0months ago",
+      "content": "Hopping windows are sliding windows. It makes sense to use that over tumbling (fixed) window because the ask is to collect last 30 seconds of data every 5 second",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "12\u00a0months ago",
+      "content": "Hopping windows are sliding windows. It makes sense to use that over tumbling (fixed) window because the ask is to collect last 30 seconds of data every 5 second",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "12\u00a0months ago",
+      "content": "anushree09\n\t\t\t\n\n\n\t\t\t12\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Hopping windows are sliding windows. It makes sense to use that over tumbling (fixed) window because the ask is to collect last 30 seconds of data every 5 second",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Hopping windows are sliding windows. It makes sense to use that over tumbling (fixed) window because the ask is to collect last 30 seconds of data every 5 second",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 2\u00a0weeks ago",
+      "content": "OPTION A. (IGNORE MY Previous Comment)\n\n Tumbling windows are the best choice for this ride-hailing app because they provide accurate 2-second aggregations without the complexities of overlapping data. This is crucial for real-time decision-making and ensuring accurate visualization of supply and demand.\nHopping windows introduce potential inaccuracies and complexity, making them less suitable for this scenario. While they can be useful in other situations, they are not the optimal choice for real-time aggregation with strict accuracy requirements.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 2\u00a0weeks ago",
+      "content": "Jeyaraj\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t8\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "OPTION A. (IGNORE MY Previous Comment)\n\n Tumbling windows are the best choice for this ride-hailing app because they provide accurate 2-second aggregations without the complexities of overlapping data. This is crucial for real-time decision-making and ensuring accurate visualization of supply and demand.\nHopping windows introduce potential inaccuracies and complexity, making them less suitable for this scenario. While they can be useful in other situations, they are not the optimal choice for real-time aggregation with strict accuracy requirements.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "OPTION A. (IGNORE MY Previous Comment)\n\n Tumbling windows are the best choice for this ride-hailing app because they provide accurate 2-second aggregations without the complexities of overlapping data. This is crucial for real-time decision-making and ensuring accurate visualization of supply and demand.\nHopping windows introduce potential inaccuracies and complexity, making them less suitable for this scenario. While they can be useful in other situations, they are not the optimal choice for real-time aggregation with strict accuracy requirements.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 2\u00a0weeks ago",
+      "content": "Option B.\n\n Tumbling windows are the best choice for this ride-hailing app because they provide accurate 2-second aggregations without the complexities of overlapping data. This is crucial for real-time decision-making and ensuring accurate visualization of supply and demand.\nHopping windows introduce potential inaccuracies and complexity, making them less suitable for this scenario. While they can be useful in other situations, they are not the optimal choice for real-time aggregation with strict accuracy requirements.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 2\u00a0weeks ago",
+      "content": "Jeyaraj\n\t\t\t\n\n\n\t\t\t8\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B.\n\n Tumbling windows are the best choice for this ride-hailing app because they provide accurate 2-second aggregations without the complexities of overlapping data. This is crucial for real-time decision-making and ensuring accurate visualization of supply and demand.\nHopping windows introduce potential inaccuracies and complexity, making them less suitable for this scenario. While they can be useful in other situations, they are not the optimal choice for real-time aggregation with strict accuracy requirements.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B.\n\n Tumbling windows are the best choice for this ride-hailing app because they provide accurate 2-second aggregations without the complexities of overlapping data. This is crucial for real-time decision-making and ensuring accurate visualization of supply and demand.\nHopping windows introduce potential inaccuracies and complexity, making them less suitable for this scenario. While they can be useful in other situations, they are not the optimal choice for real-time aggregation with strict accuracy requirements.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Option B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "JyoGCP\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "hopping window is clear but memorystore vs bigquery?? Why memorystore and not bigquery?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "ashdam\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "hopping window is clear but memorystore vs bigquery?? Why memorystore and not bigquery?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "hopping window is clear but memorystore vs bigquery?? Why memorystore and not bigquery?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Memory store is an in-memory key-value database for use cases such as real-time application.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Memory store is an in-memory key-value database for use cases such as real-time application.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "ML6\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 4\u00a0weeks ago",
+      "content": "Memory store is an in-memory key-value database for use cases such as real-time application.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Memory store is an in-memory key-value database for use cases such as real-time application.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 4\u00a0weeks ago",
+      "content": "Let me complete your answer MS vs BQ in this case is a matter of low latence where MS is the winner but if precision were stated about a large amount of data BQ then would\"ve been the best choice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 4\u00a0weeks ago",
+      "content": "Let me complete your answer MS vs BQ in this case is a matter of low latence where MS is the winner but if precision were stated about a large amount of data BQ then would\"ve been the best choice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 4\u00a0weeks ago",
+      "content": "ea2023\n\t\t\t\n\n\n\t\t\t11\u00a0months, 4\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Let me complete your answer MS vs BQ in this case is a matter of low latence where MS is the winner but if precision were stated about a large amount of data BQ then would\"ve been the best choice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Let me complete your answer MS vs BQ in this case is a matter of low latence where MS is the winner but if precision were stated about a large amount of data BQ then would\"ve been the best choice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "why not D?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Jordan18\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "why not D?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "why not D?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Because BigQuery is not a low latency system...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Because BigQuery is not a low latency system...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "RenePetersen\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Because BigQuery is not a low latency system...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Because BigQuery is not a low latency system...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "B. Group the data by using a hopping window in a Dataflow pipeline, and write the aggregated data to Memorystore.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Group the data by using a hopping window in a Dataflow pipeline, and write the aggregated data to Memorystore.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Group the data by using a hopping window in a Dataflow pipeline, and write the aggregated data to Memorystore.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

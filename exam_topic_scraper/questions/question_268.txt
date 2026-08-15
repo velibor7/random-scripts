@@ -1,0 +1,721 @@
+================================================================================
+QUESTION:
+You created a new version of a Dataflow streaming data ingestion pipeline that reads from Pub/Sub and writes to BigQuery. The previous version of the pipeline that runs in production uses a 5-minute window for processing. You need to deploy the new version of the pipeline without losing any data, creating inconsistencies, or increasing the processing latency by more than 10 minutes. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Update the old pipeline with the new pipeline code.
+										
+
+
+													B.
+												
+											
+											Snapshot the old pipeline, stop the old pipeline, and then start the new pipeline from the snapshot.
+										
+
+
+													C.
+												
+											
+											Drain the old pipeline, then start the new pipeline.
+										
+
+
+													D.
+												
+											
+											Cancel the old pipeline, then start the new pipeline.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (110 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 268 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 268
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You created a new version of a Dataflow streaming data ingestion pipeline that reads from Pub/Sub and writes to BigQuery. The previous version of the pipeline that runs in production uses a 5-minute window for processing. You need to deploy the new version of the pipeline without losing any data, creating inconsistencies, or increasing the processing latency by more than 10 minutes. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Update the old pipeline with the new pipeline code.
+										
+
+
+													B.
+												
+											
+											Snapshot the old pipeline, stop the old pipeline, and then start the new pipeline from the snapshot.
+										
+
+
+													C.
+												
+											
+											Drain the old pipeline, then start the new pipeline.
+										
+
+
+													D.
+												
+											
+											Cancel the old pipeline, then start the new pipeline.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 6:31 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 268
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 6:31 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Graceful Data Transition: Draining the old pipeline ensures it processes all existing data in its buffers and watermarks before shutting down, preventing data loss or inconsistencies.
+- Minimal Latency Increase: The latency increase will be limited to the amount of time it takes to drain the old pipeline, typically within the acceptable 10-minute threshold.
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Graceful Data Transition: Draining the old pipeline ensures it processes all existing data in its buffers and watermarks before shutting down, preventing data loss or inconsistencies.
+- Minimal Latency Increase: The latency increase will be limited to the amount of time it takes to drain the old pipeline, typically within the acceptable 10-minute threshold.
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Graceful Data Transition: Draining the old pipeline ensures it processes all existing data in its buffers and watermarks before shutting down, preventing data loss or inconsistencies.
+- Minimal Latency Increase: The latency increase will be limited to the amount of time it takes to drain the old pipeline, typically within the acceptable 10-minute threshold.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Graceful Data Transition: Draining the old pipeline ensures it processes all existing data in its buffers and watermarks before shutting down, preventing data loss or inconsistencies.
+- Minimal Latency Increase: The latency increase will be limited to the amount of time it takes to drain the old pipeline, typically within the acceptable 10-minute threshold.
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Graceful Data Transition: Draining the old pipeline ensures it processes all existing data in its buffers and watermarks before shutting down, preventing data loss or inconsistencies.
+- Minimal Latency Increase: The latency increase will be limited to the amount of time it takes to drain the old pipeline, typically within the acceptable 10-minute threshold.
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+- Graceful Data Transition: Draining the old pipeline ensures it processes all existing data in its buffers and watermarks before shutting down, preventing data loss or inconsistencies.
+- Minimal Latency Increase: The latency increase will be limited to the amount of time it takes to drain the old pipeline, typically within the acceptable 10-minute threshold.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+- Graceful Data Transition: Draining the old pipeline ensures it processes all existing data in its buffers and watermarks before shutting down, preventing data loss or inconsistencies.
+- Minimal Latency Increase: The latency increase will be limited to the amount of time it takes to drain the old pipeline, typically within the acceptable 10-minute threshold.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+I don't think C is correct, as it will immediately fire the window:
+"Draining can result in partially filled windows. In that case, if you restart the drained pipeline, the same window might fire a second time, which can cause issues with your data. "
+https://cloud.google.com/dataflow/docs/guides/stopping-a-pipeline#effects
+
+Maybe "A" means launching a replacement job?
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#Launching
+
+--- Comment #23 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+AlizCert
+			
+
+
+				Highly Voted 
+
+
+			1 year, 1 month ago
+
+--- Comment #24 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+I don't think C is correct, as it will immediately fire the window:
+"Draining can result in partially filled windows. In that case, if you restart the drained pipeline, the same window might fire a second time, which can cause issues with your data. "
+https://cloud.google.com/dataflow/docs/guides/stopping-a-pipeline#effects
+
+Maybe "A" means launching a replacement job?
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#Launching
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+I don't think C is correct, as it will immediately fire the window:
+"Draining can result in partially filled windows. In that case, if you restart the drained pipeline, the same window might fire a second time, which can cause issues with your data. "
+https://cloud.google.com/dataflow/docs/guides/stopping-a-pipeline#effects
+
+Maybe "A" means launching a replacement job?
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#Launching
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+we don't restart the drained pipeline.
+
+--- Comment #29 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+we don't restart the drained pipeline.
+
+--- Comment #30 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+SamuelTsch
+			
+
+
+			5 months, 1 week ago
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+we don't restart the drained pipeline.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+we don't restart the drained pipeline.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+So why not B it is the better choice to save intermediate state and easy to use
+
+--- Comment #38 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+d11379b
+			
+
+
+			1 year ago
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+So why not B it is the better choice to save intermediate state and easy to use
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+So why not B it is the better choice to save intermediate state and easy to use
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Why not B?
+https://cloud.google.com/dataflow/docs/guides/upgrade-guide#stop-and-replace
+
+--- Comment #47 ---
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+petulda
+			
+
+
+				Most Recent 
+
+
+			4 months, 2 weeks ago
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+Why not B?
+https://cloud.google.com/dataflow/docs/guides/upgrade-guide#stop-and-replace
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+Why not B?
+https://cloud.google.com/dataflow/docs/guides/upgrade-guide#stop-and-replace
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #54 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+There is requirement to avoid data loss.
+
+https://cloud.google.com/dataflow/docs/guides/upgrade-guide#stop-and-replace
+"To avoid data loss, in most cases, draining is the preferred action."
+
+--- Comment #55 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+STEVE_PEGLEG
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+There is requirement to avoid data loss.
+
+https://cloud.google.com/dataflow/docs/guides/upgrade-guide#stop-and-replace
+"To avoid data loss, in most cases, draining is the preferred action."
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+There is requirement to avoid data loss.
+
+https://cloud.google.com/dataflow/docs/guides/upgrade-guide#stop-and-replace
+"To avoid data loss, in most cases, draining is the preferred action."
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #63 ---
+Author: Unknown | Date: 10 months ago | Votes: 0
+- Draining the old pipeline ensures that it finishes processing all in-flight data before stopping, which prevents data loss and inconsistencies.
+- After draining, you can start the new pipeline, which will begin processing new data from where the old pipeline left off.
+- This approach maintains a smooth transition between the old and new versions, minimizing latency increases and avoiding data gaps or overlaps.
+
+==> Other options, such as updating, snapshotting, or canceling, might not provide the same level of consistency and could lead to data loss or increased latency beyond the acceptable 10-minute window. Draining is the safest method to ensure a seamless transition.
+
+--- Comment #64 ---
+Author: Unknown | Date: 10 months ago | Votes: 0
+Ouss_123
+			
+
+
+			10 months ago
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+- Draining the old pipeline ensures that it finishes processing all in-flight data before stopping, which prevents data loss and inconsistencies.
+- After draining, you can start the new pipeline, which will begin processing new data from where the old pipeline left off.
+- This approach maintains a smooth transition between the old and new versions, minimizing latency increases and avoiding data gaps or overlaps.
+
+==> Other options, such as updating, snapshotting, or canceling, might not provide the same level of consistency and could lead to data loss or increased latency beyond the acceptable 10-minute window. Draining is the safest method to ensure a seamless transition.
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+- Draining the old pipeline ensures that it finishes processing all in-flight data before stopping, which prevents data loss and inconsistencies.
+- After draining, you can start the new pipeline, which will begin processing new data from where the old pipeline left off.
+- This approach maintains a smooth transition between the old and new versions, minimizing latency increases and avoiding data gaps or overlaps.
+
+==> Other options, such as updating, snapshotting, or canceling, might not provide the same level of consistency and could lead to data loss or increased latency beyond the acceptable 10-minute window. Draining is the safest method to ensure a seamless transition.
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+I would choose B as mentioned by Alizcert, a simple drain may cause problem 
+Dataflow snapshots save the state of a streaming pipeline, which lets you start a new version of your Dataflow job without losing state. Snapshots are useful for backup and recovery, testing and rolling back updates to streaming pipelines, and other similar scenarios.
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+d11379b
+			
+
+
+			1 year ago
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+I would choose B as mentioned by Alizcert, a simple drain may cause problem 
+Dataflow snapshots save the state of a streaming pipeline, which lets you start a new version of your Dataflow job without losing state. Snapshots are useful for backup and recovery, testing and rolling back updates to streaming pipelines, and other similar scenarios.
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+I would choose B as mentioned by Alizcert, a simple drain may cause problem 
+Dataflow snapshots save the state of a streaming pipeline, which lets you start a new version of your Dataflow job without losing state. Snapshots are useful for backup and recovery, testing and rolling back updates to streaming pipelines, and other similar scenarios.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #81 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+C option
+
+--- Comment #82 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+hanoverquay
+			
+
+
+			1 year ago
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+C option
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+C option
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #90 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option C, draining the old pipeline solves all requests
+
+--- Comment #91 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Matt_108
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+Option C, draining the old pipeline solves all requests
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+Option C, draining the old pipeline solves all requests
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #99 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C. Drain the old pipeline, then start the new pipeline.
+
+--- Comment #100 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+scaenruy
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+C. Drain the old pipeline, then start the new pipeline.
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+C. Drain the old pipeline, then start the new pipeline.
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

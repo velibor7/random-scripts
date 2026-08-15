@@ -1,0 +1,1012 @@
+ALL COMMENTS FOR QUESTION 302
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 302 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 302
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You work for a farming company. You have one BigQuery table named sensors, which is about 500 MB and contains the list of your 5000 sensors, with columns for id, name, and location. This table is updated every hour. Each sensor generates one metric every 30 seconds along with a timestamp, which you want to store in BigQuery. You want to run an analytical query on the data once a week for monitoring purposes. You also want to minimize costs. What data model should you use?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Create a metrics column in the sensors table.2. Set RECORD type and REPEATED mode for the metrics column.3. Use an UPDATE statement every 30 seconds to add new metrics.
+										
+
+
+													B.
+												
+											
+											1. Create a metrics column in the sensors table.2. Set RECORD type and REPEATED mode for the metrics column.3. Use an INSERT statement every 30 seconds to add new metrics.
+										
+
+
+													C.
+												
+											
+											1. Create a metrics table partitioned by timestamp.2. Create a sensorId column in the metrics table, that points to the id column in the sensors table.3. Use an INSERT statement every 30 seconds to append new metrics to the metrics table.4. Join the two tables, if needed, when running the analytical query.
+										
+
+
+													D.
+												
+											
+											1. Create a metrics table partitioned by timestamp.2. Create a sensorId column in the metrics table, which points to the id column in the sensors table.3. Use an UPDATE statement every 30 seconds to append new metrics to the metrics table.4. Join the two tables, if needed, when running the analytical query.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 4, 2024, 1:54 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 302
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 4, 2024, 1:54 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Partitioned Metrics Table: Creating a separate metrics table partitioned by timestamp is a standard practice for time-series data like sensor readings. Partitioning by timestamp allows for more efficient querying, especially when you're only interested in a specific time range (like weekly monitoring).
+Reference to Sensors Table: Including a sensorId column that references the id column in the sensors table allows you to maintain a relationship between the metrics and the sensors without duplicating sensor information.
+INSERT Every 30 Seconds: Using an INSERT statement every 30 seconds to the partitioned metrics table is a standard approach for time-series data ingestion in BigQuery. It allows for efficient data storage and querying.
+Join for Analysis: When you need to analyze the data, you can join the metrics table with the sensors table based on the sensorId, allowing for comprehensive analysis with sensor details.
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Partitioned Metrics Table: Creating a separate metrics table partitioned by timestamp is a standard practice for time-series data like sensor readings. Partitioning by timestamp allows for more efficient querying, especially when you're only interested in a specific time range (like weekly monitoring).
+Reference to Sensors Table: Including a sensorId column that references the id column in the sensors table allows you to maintain a relationship between the metrics and the sensors without duplicating sensor information.
+INSERT Every 30 Seconds: Using an INSERT statement every 30 seconds to the partitioned metrics table is a standard approach for time-series data ingestion in BigQuery. It allows for efficient data storage and querying.
+Join for Analysis: When you need to analyze the data, you can join the metrics table with the sensors table based on the sensorId, allowing for comprehensive analysis with sensor details.
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Partitioned Metrics Table: Creating a separate metrics table partitioned by timestamp is a standard practice for time-series data like sensor readings. Partitioning by timestamp allows for more efficient querying, especially when you're only interested in a specific time range (like weekly monitoring).
+Reference to Sensors Table: Including a sensorId column that references the id column in the sensors table allows you to maintain a relationship between the metrics and the sensors without duplicating sensor information.
+INSERT Every 30 Seconds: Using an INSERT statement every 30 seconds to the partitioned metrics table is a standard approach for time-series data ingestion in BigQuery. It allows for efficient data storage and querying.
+Join for Analysis: When you need to analyze the data, you can join the metrics table with the sensors table based on the sensorId, allowing for comprehensive analysis with sensor details.
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Partitioned Metrics Table: Creating a separate metrics table partitioned by timestamp is a standard practice for time-series data like sensor readings. Partitioning by timestamp allows for more efficient querying, especially when you're only interested in a specific time range (like weekly monitoring).
+Reference to Sensors Table: Including a sensorId column that references the id column in the sensors table allows you to maintain a relationship between the metrics and the sensors without duplicating sensor information.
+INSERT Every 30 Seconds: Using an INSERT statement every 30 seconds to the partitioned metrics table is a standard approach for time-series data ingestion in BigQuery. It allows for efficient data storage and querying.
+Join for Analysis: When you need to analyze the data, you can join the metrics table with the sensors table based on the sensorId, allowing for comprehensive analysis with sensor details.
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Partitioned Metrics Table: Creating a separate metrics table partitioned by timestamp is a standard practice for time-series data like sensor readings. Partitioning by timestamp allows for more efficient querying, especially when you're only interested in a specific time range (like weekly monitoring).
+Reference to Sensors Table: Including a sensorId column that references the id column in the sensors table allows you to maintain a relationship between the metrics and the sensors without duplicating sensor information.
+INSERT Every 30 Seconds: Using an INSERT statement every 30 seconds to the partitioned metrics table is a standard approach for time-series data ingestion in BigQuery. It allows for efficient data storage and querying.
+Join for Analysis: When you need to analyze the data, you can join the metrics table with the sensors table based on the sensorId, allowing for comprehensive analysis with sensor details.
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Partitioned Metrics Table: Creating a separate metrics table partitioned by timestamp is a standard practice for time-series data like sensor readings. Partitioning by timestamp allows for more efficient querying, especially when you're only interested in a specific time range (like weekly monitoring).
+Reference to Sensors Table: Including a sensorId column that references the id column in the sensors table allows you to maintain a relationship between the metrics and the sensors without duplicating sensor information.
+INSERT Every 30 Seconds: Using an INSERT statement every 30 seconds to the partitioned metrics table is a standard approach for time-series data ingestion in BigQuery. It allows for efficient data storage and querying.
+Join for Analysis: When you need to analyze the data, you can join the metrics table with the sensors table based on the sensorId, allowing for comprehensive analysis with sensor details.
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Partitioned Metrics Table: Creating a separate metrics table partitioned by timestamp is a standard practice for time-series data like sensor readings. Partitioning by timestamp allows for more efficient querying, especially when you're only interested in a specific time range (like weekly monitoring).
+Reference to Sensors Table: Including a sensorId column that references the id column in the sensors table allows you to maintain a relationship between the metrics and the sensors without duplicating sensor information.
+INSERT Every 30 Seconds: Using an INSERT statement every 30 seconds to the partitioned metrics table is a standard approach for time-series data ingestion in BigQuery. It allows for efficient data storage and querying.
+Join for Analysis: When you need to analyze the data, you can join the metrics table with the sensors table based on the sensorId, allowing for comprehensive analysis with sensor details.
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 10 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 2 months ago | Votes: 0
+C. B is not feasible – update on the metrics column will be required in such a case or an insert with all sensor data with one-element array of metrics which does not make any sense.
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 2 months ago | Votes: 0
+plum21
+			
+
+
+				Most Recent 
+
+
+			2 months ago
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C. B is not feasible – update on the metrics column will be required in such a case or an insert with all sensor data with one-element array of metrics which does not make any sense.
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C. B is not feasible – update on the metrics column will be required in such a case or an insert with all sensor data with one-element array of metrics which does not make any sense.
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date: 3 months ago | Votes: 0
+This approach offers several advantages:
+
+Cost Efficiency: Partitioning the metrics table by timestamp helps reduce query costs by allowing BigQuery to scan only the relevant partitions.
+Data Organization: Keeping metrics in a separate table maintains a clear separation between sensor metadata and sensor metrics, making it easier to manage and query the data2.
+Performance: Using INSERT statements to append new metrics ensures efficient data ingestion without the overhead of frequent updates
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date: 3 months ago | Votes: 0
+Pime13
+			
+
+
+			3 months ago
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+This approach offers several advantages:
+
+Cost Efficiency: Partitioning the metrics table by timestamp helps reduce query costs by allowing BigQuery to scan only the relevant partitions.
+Data Organization: Keeping metrics in a separate table maintains a clear separation between sensor metadata and sensor metrics, making it easier to manage and query the data2.
+Performance: Using INSERT statements to append new metrics ensures efficient data ingestion without the overhead of frequent updates
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+This approach offers several advantages:
+
+Cost Efficiency: Partitioning the metrics table by timestamp helps reduce query costs by allowing BigQuery to scan only the relevant partitions.
+Data Organization: Keeping metrics in a separate table maintains a clear separation between sensor metadata and sensor metrics, making it easier to manage and query the data2.
+Performance: Using INSERT statements to append new metrics ensures efficient data ingestion without the overhead of frequent updates
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date: 6 months, 4 weeks ago | Votes: 0
+Because "Minimize costs" was requested, i would go for C. 
+Storage cost will be lower for partitions where no writes took place for a certain amount of time, see https://cloud.google.com/bigquery/pricing#storage
+Partitioning by timestamp can be configured to use daily, hourly, monthly, or yearly partitioning - so if you choose daily partitioning, the number of partitions should not be an issue.
+Working with RECORDS (A,B) would be an option if performance was in focus.
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date: 6 months, 4 weeks ago | Votes: 0
+7787de3
+			
+
+
+			6 months, 4 weeks ago
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Because "Minimize costs" was requested, i would go for C. 
+Storage cost will be lower for partitions where no writes took place for a certain amount of time, see https://cloud.google.com/bigquery/pricing#storage
+Partitioning by timestamp can be configured to use daily, hourly, monthly, or yearly partitioning - so if you choose daily partitioning, the number of partitions should not be an issue.
+Working with RECORDS (A,B) would be an option if performance was in focus.
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Because "Minimize costs" was requested, i would go for C. 
+Storage cost will be lower for partitions where no writes took place for a certain amount of time, see https://cloud.google.com/bigquery/pricing#storage
+Partitioning by timestamp can be configured to use daily, hourly, monthly, or yearly partitioning - so if you choose daily partitioning, the number of partitions should not be an issue.
+Working with RECORDS (A,B) would be an option if performance was in focus.
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Option C will not violate partitioning limit of 4000 as the lowest grain of partitioning is hourly
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+dac9215
+			
+
+
+			8 months, 1 week ago
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C will not violate partitioning limit of 4000 as the lowest grain of partitioning is hourly
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C will not violate partitioning limit of 4000 as the lowest grain of partitioning is hourly
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Here's my logic (some people have already said same thing)
+
+Cannot be C and D
+- Total 5000 sensors are sending new timestamp every 30 seconds. If you partition this table with timestamp, you are getting partitions above 4000 (single job) or 10000 (partition limit) so option C and D don't look correct
+- For C and D, also need to consider that BigQuery best practices advise to avoid JOINs and use STRUCT and RECORD types to solve the parent-child join issue.
+
+Now coming back to A and B, we will be adding sensor readings for every sensor. I don't think this is a transactional type database where you need to update data. You will add new data for more accurate analysis later so A is discarded. BigQuery best practices also advise to avoid UPDATE statements since its an Analytical columnar database
+
+B is the correct option.
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+vbrege
+			
+
+
+			9 months, 3 weeks ago
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+Here's my logic (some people have already said same thing)
+
+Cannot be C and D
+- Total 5000 sensors are sending new timestamp every 30 seconds. If you partition this table with timestamp, you are getting partitions above 4000 (single job) or 10000 (partition limit) so option C and D don't look correct
+- For C and D, also need to consider that BigQuery best practices advise to avoid JOINs and use STRUCT and RECORD types to solve the parent-child join issue.
+
+Now coming back to A and B, we will be adding sensor readings for every sensor. I don't think this is a transactional type database where you need to update data. You will add new data for more accurate analysis later so A is discarded. BigQuery best practices also advise to avoid UPDATE statements since its an Analytical columnar database
+
+B is the correct option.
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Here's my logic (some people have already said same thing)
+
+Cannot be C and D
+- Total 5000 sensors are sending new timestamp every 30 seconds. If you partition this table with timestamp, you are getting partitions above 4000 (single job) or 10000 (partition limit) so option C and D don't look correct
+- For C and D, also need to consider that BigQuery best practices advise to avoid JOINs and use STRUCT and RECORD types to solve the parent-child join issue.
+
+Now coming back to A and B, we will be adding sensor readings for every sensor. I don't think this is a transactional type database where you need to update data. You will add new data for more accurate analysis later so A is discarded. BigQuery best practices also advise to avoid UPDATE statements since its an Analytical columnar database
+
+B is the correct option.
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+Avoid Joins when tables are large. The sensors table is 500mb, hardly anything. The only watchout is for multiplication of columns when joining.
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+Avoid Joins when tables are large. The sensors table is 500mb, hardly anything. The only watchout is for multiplication of columns when joining.
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+apoio.certificacoes.closer
+			
+
+
+			3 months, 1 week ago
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Avoid Joins when tables are large. The sensors table is 500mb, hardly anything. The only watchout is for multiplication of columns when joining.
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Avoid Joins when tables are large. The sensors table is 500mb, hardly anything. The only watchout is for multiplication of columns when joining.
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date: 10 months, 2 weeks ago | Votes: 0
+Since BigQuery tables are limited to 4000 partitions, options C & D are discarded. Option B is wrong as insertion is invalid too. So option A.
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date: 10 months, 2 weeks ago | Votes: 0
+Gloups
+			
+
+
+			10 months, 2 weeks ago
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+Since BigQuery tables are limited to 4000 partitions, options C & D are discarded. Option B is wrong as insertion is invalid too. So option A.
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Since BigQuery tables are limited to 4000 partitions, options C & D are discarded. Option B is wrong as insertion is invalid too. So option A.
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+I also thought about this limitation. But researching about partitioning with timestamp, I found this in the documentation: 
+
+"For TIMESTAMP and DATETIME columns, the partitions can have either hourly, daily, monthly, or yearly granularity. For DATE columns, the partitions can have daily, monthly, or yearly granularity."
+
+In other words, I believe that even with timestamp partitioning, it would not reach this limit.  What do you think?
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+I also thought about this limitation. But researching about partitioning with timestamp, I found this in the documentation: 
+
+"For TIMESTAMP and DATETIME columns, the partitions can have either hourly, daily, monthly, or yearly granularity. For DATE columns, the partitions can have daily, monthly, or yearly granularity."
+
+In other words, I believe that even with timestamp partitioning, it would not reach this limit.  What do you think?
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+gabrielosluz
+			
+
+
+			2 months, 2 weeks ago
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I also thought about this limitation. But researching about partitioning with timestamp, I found this in the documentation: 
+
+"For TIMESTAMP and DATETIME columns, the partitions can have either hourly, daily, monthly, or yearly granularity. For DATE columns, the partitions can have daily, monthly, or yearly granularity."
+
+In other words, I believe that even with timestamp partitioning, it would not reach this limit.  What do you think?
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I also thought about this limitation. But researching about partitioning with timestamp, I found this in the documentation: 
+
+"For TIMESTAMP and DATETIME columns, the partitions can have either hourly, daily, monthly, or yearly granularity. For DATE columns, the partitions can have daily, monthly, or yearly granularity."
+
+In other words, I believe that even with timestamp partitioning, it would not reach this limit.  What do you think?
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date: 12 months ago | Votes: 0
+I'm in favor of Option B
+Reason: BQ has nested columns feature specifically to address these scenarios where a join would be needed in a traditional/ relational data model. Nesting field will reduce the need to join tables, performance will be high and design will be simple
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date: 12 months ago | Votes: 0
+anushree09
+			
+
+
+			12 months ago
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I'm in favor of Option B
+Reason: BQ has nested columns feature specifically to address these scenarios where a join would be needed in a traditional/ relational data model. Nesting field will reduce the need to join tables, performance will be high and design will be simple
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I'm in favor of Option B
+Reason: BQ has nested columns feature specifically to address these scenarios where a join would be needed in a traditional/ relational data model. Nesting field will reduce the need to join tables, performance will be high and design will be simple
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Option C
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+96f3bfa
+			
+
+
+			1 year, 1 month ago
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option C
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Matt_108
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+Option C
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+Why C. Partitioning by timestamp could breach the 4000 cap of number of partitions easily. And with soo much less data, why partitioning is required in the first place. Ans should be B
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+Why C. Partitioning by timestamp could breach the 4000 cap of number of partitions easily. And with soo much less data, why partitioning is required in the first place. Ans should be B
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+SanjeevRoy91
+			
+
+
+			1 year ago
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Why C. Partitioning by timestamp could breach the 4000 cap of number of partitions easily. And with soo much less data, why partitioning is required in the first place. Ans should be B
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Why C. Partitioning by timestamp could breach the 4000 cap of number of partitions easily. And with soo much less data, why partitioning is required in the first place. Ans should be B
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Option C
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+raaad
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C. 
+1. Create a metrics table partitioned by timestamp.
+2. Create a sensorId column in the metrics table, that points to the id column in the sensors table.
+3. Use an INSERT statement every 30 seconds to append new metrics to the metrics table.
+4. Join the two tables, if needed, when running the analytical query.
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+scaenruy
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C. 
+1. Create a metrics table partitioned by timestamp.
+2. Create a sensorId column in the metrics table, that points to the id column in the sensors table.
+3. Use an INSERT statement every 30 seconds to append new metrics to the metrics table.
+4. Join the two tables, if needed, when running the analytical query.
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C. 
+1. Create a metrics table partitioned by timestamp.
+2. Create a sensorId column in the metrics table, that points to the id column in the sensors table.
+3. Use an INSERT statement every 30 seconds to append new metrics to the metrics table.
+4. Join the two tables, if needed, when running the analytical query.
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

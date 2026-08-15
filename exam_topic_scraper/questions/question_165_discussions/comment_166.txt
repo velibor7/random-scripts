@@ -1,0 +1,17 @@
+COMMENT #166 FOR QUESTION 165
+============================================================
+Author: Unknown
+Date: 1 year, 11 months ago
+Votes: 0
+----------------------------------------
+[A] No - Stale reads not accepted for bank account transactions. "A stale read is read at a timestamp in the past. If your application is latency sensitive but tolerant of stale data, then stale reads can provide performance benefits."
+[B] Yes - Fulfills all requirements
+[C] No - BigQuery is ACID-compliant, but it is too much to use it for such a case (mainly a CRUD app)
+[D] Yes+ - Fulfills all requirements. The BigQuery part may seem redundant, but it states a true fact that doesn't violate the "access data with SQL" requirement.
+
+So, when SQL Cloud and SQL Spanner fit both, there is no reason to prefer the second.
+And the question doesn't mention any obvious fact for which should we prefer the expensive SQL Spanner:
+- We don't know if we have to deal with a big amount of data and thousands of writes per second. 
+- We don't know the database size.
+- There is no need for multi-regional writes that would exclude SQL Cloud as an alternative. Is it a coincidence that the question limits the problem to the single region of North America?
+============================================================

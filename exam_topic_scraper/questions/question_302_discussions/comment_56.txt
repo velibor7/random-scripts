@@ -1,0 +1,16 @@
+COMMENT #56 FOR QUESTION 302
+============================================================
+Author: Unknown
+Date: 9 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+Here's my logic (some people have already said same thing)
+
+Cannot be C and D
+- Total 5000 sensors are sending new timestamp every 30 seconds. If you partition this table with timestamp, you are getting partitions above 4000 (single job) or 10000 (partition limit) so option C and D don't look correct
+- For C and D, also need to consider that BigQuery best practices advise to avoid JOINs and use STRUCT and RECORD types to solve the parent-child join issue.
+
+Now coming back to A and B, we will be adding sensor readings for every sensor. I don't think this is a transactional type database where you need to update data. You will add new data for more accurate analysis later so A is discarded. BigQuery best practices also advise to avoid UPDATE statements since its an Analytical columnar database
+
+B is the correct option.
+============================================================

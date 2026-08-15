@@ -1,0 +1,658 @@
+================================================================================
+QUESTION:
+One of your encryption keys stored in Cloud Key Management Service (Cloud KMS) was exposed. You need to re- encrypt all of your CMEK-protected Cloud Storage data that used that key, and then delete the compromised key. You also want to reduce the risk of objects getting written without customer-managed encryption key (CMEK) protection in the future. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Rotate the Cloud KMS key version. Continue to use the same Cloud Storage bucket.
+										
+
+
+													B.
+												
+											
+											Create a new Cloud KMS key. Set the default CMEK key on the existing Cloud Storage bucket to the new one.
+										
+
+
+													C.
+												
+											
+											Create a new Cloud KMS key. Create a new Cloud Storage bucket. Copy all objects from the old bucket to the new one bucket while specifying the new Cloud KMS key in the copy command.
+										
+
+
+													D.
+												
+											
+											Create a new Cloud KMS key. Create a new Cloud Storage bucket configured to use the new key as the default CMEK key. Copy all objects from the old bucket to the new bucket without specifying a key.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (93 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 298 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 298
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								One of your encryption keys stored in Cloud Key Management Service (Cloud KMS) was exposed. You need to re- encrypt all of your CMEK-protected Cloud Storage data that used that key, and then delete the compromised key. You also want to reduce the risk of objects getting written without customer-managed encryption key (CMEK) protection in the future. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Rotate the Cloud KMS key version. Continue to use the same Cloud Storage bucket.
+										
+
+
+													B.
+												
+											
+											Create a new Cloud KMS key. Set the default CMEK key on the existing Cloud Storage bucket to the new one.
+										
+
+
+													C.
+												
+											
+											Create a new Cloud KMS key. Create a new Cloud Storage bucket. Copy all objects from the old bucket to the new one bucket while specifying the new Cloud KMS key in the copy command.
+										
+
+
+													D.
+												
+											
+											Create a new Cloud KMS key. Create a new Cloud Storage bucket configured to use the new key as the default CMEK key. Copy all objects from the old bucket to the new bucket without specifying a key.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								rahulvin
+							
+							
+							at 
+							Dec. 30, 2023, 9:18 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 298
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								rahulvin
+							
+							
+							at 
+							Dec. 30, 2023, 9:18 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- New Key Creation: A new Cloud KMS key ensures a secure replacement for the compromised one.
+- New Bucket: A separate bucket prevents potential conflicts with existing objects and configurations.
+- Default CMEK: Setting the new key as default enforces encryption for all objects in the bucket, reducing the risk of unencrypted data.
+- Copy Without Key Specification: Copying objects without specifying a key leverages the default key, simplifying the process and ensuring consistent encryption.
+- Old Key Deletion: After copying, the compromised key can be safely deleted.
+
+--- Comment #6 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- New Key Creation: A new Cloud KMS key ensures a secure replacement for the compromised one.
+- New Bucket: A separate bucket prevents potential conflicts with existing objects and configurations.
+- Default CMEK: Setting the new key as default enforces encryption for all objects in the bucket, reducing the risk of unencrypted data.
+- Copy Without Key Specification: Copying objects without specifying a key leverages the default key, simplifying the process and ensuring consistent encryption.
+- Old Key Deletion: After copying, the compromised key can be safely deleted.
+
+--- Comment #7 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- New Key Creation: A new Cloud KMS key ensures a secure replacement for the compromised one.
+- New Bucket: A separate bucket prevents potential conflicts with existing objects and configurations.
+- Default CMEK: Setting the new key as default enforces encryption for all objects in the bucket, reducing the risk of unencrypted data.
+- Copy Without Key Specification: Copying objects without specifying a key leverages the default key, simplifying the process and ensuring consistent encryption.
+- Old Key Deletion: After copying, the compromised key can be safely deleted.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- New Key Creation: A new Cloud KMS key ensures a secure replacement for the compromised one.
+- New Bucket: A separate bucket prevents potential conflicts with existing objects and configurations.
+- Default CMEK: Setting the new key as default enforces encryption for all objects in the bucket, reducing the risk of unencrypted data.
+- Copy Without Key Specification: Copying objects without specifying a key leverages the default key, simplifying the process and ensuring consistent encryption.
+- Old Key Deletion: After copying, the compromised key can be safely deleted.
+
+--- Comment #13 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- New Key Creation: A new Cloud KMS key ensures a secure replacement for the compromised one.
+- New Bucket: A separate bucket prevents potential conflicts with existing objects and configurations.
+- Default CMEK: Setting the new key as default enforces encryption for all objects in the bucket, reducing the risk of unencrypted data.
+- Copy Without Key Specification: Copying objects without specifying a key leverages the default key, simplifying the process and ensuring consistent encryption.
+- Old Key Deletion: After copying, the compromised key can be safely deleted.
+
+--- Comment #14 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			9 months, 1 week ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+- New Key Creation: A new Cloud KMS key ensures a secure replacement for the compromised one.
+- New Bucket: A separate bucket prevents potential conflicts with existing objects and configurations.
+- Default CMEK: Setting the new key as default enforces encryption for all objects in the bucket, reducing the risk of unencrypted data.
+- Copy Without Key Specification: Copying objects without specifying a key leverages the default key, simplifying the process and ensuring consistent encryption.
+- Old Key Deletion: After copying, the compromised key can be safely deleted.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+- New Key Creation: A new Cloud KMS key ensures a secure replacement for the compromised one.
+- New Bucket: A separate bucket prevents potential conflicts with existing objects and configurations.
+- Default CMEK: Setting the new key as default enforces encryption for all objects in the bucket, reducing the risk of unencrypted data.
+- Copy Without Key Specification: Copying objects without specifying a key leverages the default key, simplifying the process and ensuring consistent encryption.
+- Old Key Deletion: After copying, the compromised key can be safely deleted.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 10 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Wrong:
+A - rotating external key doesn't trigger re-encryption of data already in GCS: https://cloud.google.com/kms/docs/rotate-key#rotate-external-coordinated
+C - Setting key during copy doesn't take care of objects that are later uploaded to the bucket, that will still use the default key
+
+--- Comment #23 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+rahulvin
+			
+
+
+				Highly Voted 
+
+
+			9 months, 1 week ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Wrong:
+A - rotating external key doesn't trigger re-encryption of data already in GCS: https://cloud.google.com/kms/docs/rotate-key#rotate-external-coordinated
+C - Setting key during copy doesn't take care of objects that are later uploaded to the bucket, that will still use the default key
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+Wrong:
+A - rotating external key doesn't trigger re-encryption of data already in GCS: https://cloud.google.com/kms/docs/rotate-key#rotate-external-coordinated
+C - Setting key during copy doesn't take care of objects that are later uploaded to the bucket, that will still use the default key
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #31 ---
+Author: Unknown | Date: 1 week, 5 days ago | Votes: 0
+If no key is specified, and the bucket's default CMEK key is used, there's a risk that some objects might fall back to Google-managed encryption, especially if misconfigured
+
+--- Comment #32 ---
+Author: Unknown | Date: 1 week, 5 days ago | Votes: 0
+desertlotus1211
+			
+
+
+				Most Recent 
+
+
+			1 week, 5 days ago
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+If no key is specified, and the bucket's default CMEK key is used, there's a risk that some objects might fall back to Google-managed encryption, especially if misconfigured
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+If no key is specified, and the bucket's default CMEK key is used, there's a risk that some objects might fall back to Google-managed encryption, especially if misconfigured
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #40 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+Option D
+
+--- Comment #41 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+JyoGCP
+			
+
+
+			7 months, 3 weeks ago
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Option D
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+Option D
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #49 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+The correct answer is D. Rotating the key does not seem to re-encrypt:
+
+In the event that a key is compromised, regular rotation (!!) limits the number of actual messages vulnerable to compromise (!!).
+If you suspect that a key version is compromised, disable it and revoke access to it as soon as possible.
+Source: https://cloud.google.com/kms/docs/key-rotation#why_rotate_keys
+
+--- Comment #50 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+ML6
+			
+
+
+			7 months, 3 weeks ago
+
+--- Comment #51 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+The correct answer is D. Rotating the key does not seem to re-encrypt:
+
+In the event that a key is compromised, regular rotation (!!) limits the number of actual messages vulnerable to compromise (!!).
+If you suspect that a key version is compromised, disable it and revoke access to it as soon as possible.
+Source: https://cloud.google.com/kms/docs/key-rotation#why_rotate_keys
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is D. Rotating the key does not seem to re-encrypt:
+
+In the event that a key is compromised, regular rotation (!!) limits the number of actual messages vulnerable to compromise (!!).
+If you suspect that a key version is compromised, disable it and revoke access to it as soon as possible.
+Source: https://cloud.google.com/kms/docs/key-rotation#why_rotate_keys
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+Note: When you rotate a key, data encrypted with previous key versions is not automatically re-encrypted with the new key version. You can learn more about re-encrypting data.
+Source: https://cloud.google.com/kms/docs/key-rotation#how_often_to_rotate_keys
+
+--- Comment #57 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+Note: When you rotate a key, data encrypted with previous key versions is not automatically re-encrypted with the new key version. You can learn more about re-encrypting data.
+Source: https://cloud.google.com/kms/docs/key-rotation#how_often_to_rotate_keys
+
+--- Comment #58 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+ML6
+			
+
+
+			7 months, 3 weeks ago
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Note: When you rotate a key, data encrypted with previous key versions is not automatically re-encrypted with the new key version. You can learn more about re-encrypting data.
+Source: https://cloud.google.com/kms/docs/key-rotation#how_often_to_rotate_keys
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+Note: When you rotate a key, data encrypted with previous key versions is not automatically re-encrypted with the new key version. You can learn more about re-encrypting data.
+Source: https://cloud.google.com/kms/docs/key-rotation#how_often_to_rotate_keys
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #66 ---
+Author: Unknown | Date: 8 months, 2 weeks ago | Votes: 0
+I don't understand why only Matt select A
+
+https://cloud.google.com/sdk/gcloud/reference/kms/keys/update
+
+This seems to do the job, am I wrong ?
+
+--- Comment #67 ---
+Author: Unknown | Date: 8 months, 2 weeks ago | Votes: 0
+Medmah
+			
+
+
+			8 months, 2 weeks ago
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+I don't understand why only Matt select A
+
+https://cloud.google.com/sdk/gcloud/reference/kms/keys/update
+
+This seems to do the job, am I wrong ?
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+I don't understand why only Matt select A
+
+https://cloud.google.com/sdk/gcloud/reference/kms/keys/update
+
+This seems to do the job, am I wrong ?
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #74 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Definitely A
+
+--- Comment #75 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Matt_108
+			
+
+
+			9 months ago
+
+--- Comment #76 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+Definitely A
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+Definitely A
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+Rotating does not mean you re-encrypt data.
+
+--- Comment #82 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+Rotating does not mean you re-encrypt data.
+
+--- Comment #83 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+ML6
+			
+
+
+			7 months, 3 weeks ago
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Rotating does not mean you re-encrypt data.
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+Rotating does not mean you re-encrypt data.
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

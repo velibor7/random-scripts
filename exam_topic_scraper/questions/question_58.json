@@ -1,0 +1,1105 @@
+{
+  "question": "You architect a system to analyze seismic data. Your extract, transform, and load (ETL) process runs as a series of MapReduce jobs on an Apache Hadoop cluster. The ETL process takes days to process a data set because some steps are computationally expensive. Then you discover that a sensor calibration step has been omitted. How should you change your ETL process to carry out sensor calibration systematically in the future?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tModify the transformMapReduce jobs to apply sensor calibration before they do anything else.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tIntroduce a new MapReduce job to apply sensor calibration to raw data, and ensure all other MapReduce jobs are chained after this.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAdd sensor calibration data to the output of the ETL process, and document that all users need to apply sensor calibration themselves.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tDevelop an algorithm through simulation to predict variance of data output from the last MapReduce job based on calibration factors, and apply the correction to all data.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 58 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 58\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou architect a system to analyze seismic data. Your extract, transform, and load (ETL) process runs as a series of MapReduce jobs on an Apache Hadoop cluster. The ETL process takes days to process a data set because some steps are computationally expensive. Then you discover that a sensor calibration step has been omitted. How should you change your ETL process to carry out sensor calibration systematically in the future?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tModify the transformMapReduce jobs to apply sensor calibration before they do anything else.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tIntroduce a new MapReduce job to apply sensor calibration to raw data, and ensure all other MapReduce jobs are chained after this.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAdd sensor calibration data to the output of the ETL process, and document that all users need to apply sensor calibration themselves.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tDevelop an algorithm through simulation to predict variance of data output from the last MapReduce job based on calibration factors, and apply the correction to all data.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 21, 2020, 11:31 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 58\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 21, 2020, 11:31 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "Should go with B. Two reasons, it is a cleaner approach with single job to handle the calibration before the data is used in the pipeline. Second, doing this step in later stages can be complex and maintenance of those jobs in the future will become challenging.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "Should go with B. Two reasons, it is a cleaner approach with single job to handle the calibration before the data is used in the pipeline. Second, doing this step in later stages can be complex and maintenance of those jobs in the future will become challenging.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "Should go with B. Two reasons, it is a cleaner approach with single job to handle the calibration before the data is used in the pipeline. Second, doing this step in later stages can be complex and maintenance of those jobs in the future will become challenging.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "Should go with B. Two reasons, it is a cleaner approach with single job to handle the calibration before the data is used in the pipeline. Second, doing this step in later stages can be complex and maintenance of those jobs in the future will become challenging.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "Should go with B. Two reasons, it is a cleaner approach with single job to handle the calibration before the data is used in the pipeline. Second, doing this step in later stages can be complex and maintenance of those jobs in the future will become challenging.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "SteelWarrior\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 8\u00a0months ago",
+      "content": "Should go with B. Two reasons, it is a cleaner approach with single job to handle the calibration before the data is used in the pipeline. Second, doing this step in later stages can be complex and maintenance of those jobs in the future will become challenging.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Should go with B. Two reasons, it is a cleaner approach with single job to handle the calibration before the data is used in the pipeline. Second, doing this step in later stages can be complex and maintenance of those jobs in the future will become challenging.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 58 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 8\u00a0months ago",
+      "content": "B. different MR jobs execute in series, adding 1 more job makes sense in this case.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 8\u00a0months ago",
+      "content": "B. different MR jobs execute in series, adding 1 more job makes sense in this case.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 8\u00a0months ago",
+      "content": "Yiouk\n\t\t\t\n\n\n\t\t\t3\u00a0years, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. different MR jobs execute in series, adding 1 more job makes sense in this case.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. different MR jobs execute in series, adding 1 more job makes sense in this case.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 7 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "Answer: A\nDescription: My take on this is for sensor calibration you just need to update the transform function, rather than creating a whole new mapreduce job and storing/passing the values to next job",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "[Removed]\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t5\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 10\u00a0months ago",
+      "content": "Answer: A\nDescription: My take on this is for sensor calibration you just need to update the transform function, rather than creating a whole new mapreduce job and storing/passing the values to next job",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: A\nDescription: My take on this is for sensor calibration you just need to update the transform function, rather than creating a whole new mapreduce job and storing/passing the values to next job",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 20 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 10\u00a0months ago",
+      "content": "It's B. A would involving changing every single job (notice it said jobS, plural, not a single job). If that is computationally intensive, which it is, you're repeating a computationally intense process needlessly several times. SteelWarrior and YuriP are right on this one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 10\u00a0months ago",
+      "content": "It's B. A would involving changing every single job (notice it said jobS, plural, not a single job). If that is computationally intensive, which it is, you're repeating a computationally intense process needlessly several times. SteelWarrior and YuriP are right on this one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 10\u00a0months ago",
+      "content": "Jphix\n\t\t\t\n\n\n\t\t\t3\u00a0years, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 4\u00a0weeks ago",
+      "content": "It's B. A would involving changing every single job (notice it said jobS, plural, not a single job). If that is computationally intensive, which it is, you're repeating a computationally intense process needlessly several times. SteelWarrior and YuriP are right on this one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It's B. A would involving changing every single job (notice it said jobS, plural, not a single job). If that is computationally intensive, which it is, you're repeating a computationally intense process needlessly several times. SteelWarrior and YuriP are right on this one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 11 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 4\u00a0weeks ago",
+      "content": "Why all jobs, change only the first job for calibration, right?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 4\u00a0weeks ago",
+      "content": "Why all jobs, change only the first job for calibration, right?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 4\u00a0weeks ago",
+      "content": "mark1223jkh\n\t\t\t\n\n\n\t\t\t10\u00a0months, 4\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why all jobs, change only the first job for calibration, right?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why all jobs, change only the first job for calibration, right?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "I'll choose A. WHY? cause the process already takes DAYS and adding another step will increase the time more",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "Marwan95\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t9\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I'll choose A. WHY? cause the process already takes DAYS and adding another step will increase the time more",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I'll choose A. WHY? cause the process already takes DAYS and adding another step will increase the time more",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "What kinds of sensor calibrations exists? I don't understand how computation in pipeline would be expense due to calibration being omitted..?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "jin0\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "What kinds of sensor calibrations exists? I don't understand how computation in pipeline would be expense due to calibration being omitted..?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "What kinds of sensor calibrations exists? I don't understand how computation in pipeline would be expense due to calibration being omitted..?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "B. Introduce a new MapReduce job to apply sensor calibration to raw data, and ensure all other MapReduce jobs are chained after this.\n\nThis approach would ensure that sensor calibration is systematically carried out every time the ETL process runs, as the new MapReduce job would be responsible for calibrating the sensors before the data is processed by the other steps. This would ensure that all data is calibrated before being analyzed, thus avoiding the omission of the sensor calibration step in the future.\nIt also allows you to chain all other MapReduce jobs after this one, so that the calibrated data is used in all the downstream jobs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "samdhimal\n\t\t\t\n\n\n\t\t\t2\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "B. Introduce a new MapReduce job to apply sensor calibration to raw data, and ensure all other MapReduce jobs are chained after this.\n\nThis approach would ensure that sensor calibration is systematically carried out every time the ETL process runs, as the new MapReduce job would be responsible for calibrating the sensors before the data is processed by the other steps. This would ensure that all data is calibrated before being analyzed, thus avoiding the omission of the sensor calibration step in the future.\nIt also allows you to chain all other MapReduce jobs after this one, so that the calibrated data is used in all the downstream jobs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Introduce a new MapReduce job to apply sensor calibration to raw data, and ensure all other MapReduce jobs are chained after this.\n\nThis approach would ensure that sensor calibration is systematically carried out every time the ETL process runs, as the new MapReduce job would be responsible for calibrating the sensors before the data is processed by the other steps. This would ensure that all data is calibrated before being analyzed, thus avoiding the omission of the sensor calibration step in the future.\nIt also allows you to chain all other MapReduce jobs after this one, so that the calibrated data is used in all the downstream jobs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "Option A is not ideal, as it would be time-consuming to modify all the transformMapReduce jobs to apply sensor calibration before doing anything else, and there is a risk of introducing bugs or errors.\nOption C is not ideal, as it would rely on users to apply sensor calibration themselves, which would be inefficient and could introduce inconsistencies in the data.\nOption D is not ideal, as it would require a lot of simulation and testing to develop an algorithm that can predict the variance of data output accurately and it may not be as accurate as calibrating the sensor directly.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "Option A is not ideal, as it would be time-consuming to modify all the transformMapReduce jobs to apply sensor calibration before doing anything else, and there is a risk of introducing bugs or errors.\nOption C is not ideal, as it would rely on users to apply sensor calibration themselves, which would be inefficient and could introduce inconsistencies in the data.\nOption D is not ideal, as it would require a lot of simulation and testing to develop an algorithm that can predict the variance of data output accurately and it may not be as accurate as calibrating the sensor directly.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "samdhimal\n\t\t\t\n\n\n\t\t\t2\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A is not ideal, as it would be time-consuming to modify all the transformMapReduce jobs to apply sensor calibration before doing anything else, and there is a risk of introducing bugs or errors.\nOption C is not ideal, as it would rely on users to apply sensor calibration themselves, which would be inefficient and could introduce inconsistencies in the data.\nOption D is not ideal, as it would require a lot of simulation and testing to develop an algorithm that can predict the variance of data output accurately and it may not be as accurate as calibrating the sensor directly.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A is not ideal, as it would be time-consuming to modify all the transformMapReduce jobs to apply sensor calibration before doing anything else, and there is a risk of introducing bugs or errors.\nOption C is not ideal, as it would rely on users to apply sensor calibration themselves, which would be inefficient and could introduce inconsistencies in the data.\nOption D is not ideal, as it would require a lot of simulation and testing to develop an algorithm that can predict the variance of data output accurately and it may not be as accurate as calibrating the sensor directly.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "It is much cleaner approach",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "DipT\n\t\t\t\n\n\n\t\t\t2\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It is much cleaner approach",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It is much cleaner approach",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "Best approach is calibration will be separate job because if we need to tune the calibration later also it would be to maintain without worries about all other jobs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "DGames\n\t\t\t\n\n\n\t\t\t2\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Best approach is calibration will be separate job because if we need to tune the calibration later also it would be to maintain without worries about all other jobs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Best approach is calibration will be separate job because if we need to tune the calibration later also it would be to maintain without worries about all other jobs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "Should be B. My reason, this is like an Anti corruption layer, and that's a good practice, \nC- , if you modify your transformMapReduce will be harder to test and debug, so it's a bad practice.\nC the idea de introduce manual operation is an anti patron and has a lot of problems\nD It's overkilling, a don't have sense in this scenario.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "odacir\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Should be B. My reason, this is like an Anti corruption layer, and that's a good practice, \nC- , if you modify your transformMapReduce will be harder to test and debug, so it's a bad practice.\nC the idea de introduce manual operation is an anti patron and has a lot of problems\nD It's overkilling, a don't have sense in this scenario.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Should be B. My reason, this is like an Anti corruption layer, and that's a good practice, \nC- , if you modify your transformMapReduce will be harder to test and debug, so it's a bad practice.\nC the idea de introduce manual operation is an anti patron and has a lot of problems\nD It's overkilling, a don't have sense in this scenario.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "SteelWarrior explanation is correct :)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "ZIMARAKI\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "SteelWarrior explanation is correct :)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "SteelWarrior explanation is correct :)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "SteelWarrior explanation is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "lord_ryder\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "SteelWarrior explanation is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "SteelWarrior explanation is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "SteelWarrior explanation is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "medeis_jar\n\t\t\t\n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "SteelWarrior explanation is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "SteelWarrior explanation is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "SteelWarrior's answer is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "hendrixlives\n\t\t\t\n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "SteelWarrior's answer is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "SteelWarrior's answer is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "Ans: B\nAdding a new job in the beginning of chain makes more sense than updating existing chain of jobs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "anji007\n\t\t\t\n\n\n\t\t\t3\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Ans: B\nAdding a new job in the beginning of chain makes more sense than updating existing chain of jobs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Ans: B\nAdding a new job in the beginning of chain makes more sense than updating existing chain of jobs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 9\u00a0months ago",
+      "content": "Vote for 'B' (introduce new job) over 'A',  (instead of modifying existing job)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 9\u00a0months ago",
+      "content": "sumanshu\n\t\t\t\n\n\n\t\t\t3\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Vote for 'B' (introduce new job) over 'A',  (instead of modifying existing job)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Vote for 'B' (introduce new job) over 'A',  (instead of modifying existing job)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 8\u00a0months ago",
+      "content": "Should be B. It's a Data Quality step which has to go right after Raw Ingest. Otherwise you repeat the same step unknown (see \"job_s_\" in A) number of times, possibly for no reason, therefore extending ETL time.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 8\u00a0months ago",
+      "content": "YuriP\n\t\t\t\n\n\n\t\t\t4\u00a0years, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Should be B. It's a Data Quality step which has to go right after Raw Ingest. Otherwise you repeat the same step unknown (see \"job_s_\" in A) number of times, possibly for no reason, therefore extending ETL time.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Should be B. It's a Data Quality step which has to go right after Raw Ingest. Otherwise you repeat the same step unknown (see \"job_s_\" in A) number of times, possibly for no reason, therefore extending ETL time.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "It's between A or B.\nShould choose A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "[Removed]\n\t\t\t\n\n\n\t\t\t5\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It's between A or B.\nShould choose A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It's between A or B.\nShould choose A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

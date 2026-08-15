@@ -1,0 +1,24 @@
+COMMENT #55 FOR QUESTION 269
+============================================================
+Author: Unknown
+Date: 2 weeks ago
+Votes: 0
+----------------------------------------
+Why C is Correct?
+BigQuery datasets → ✅ Automatically cataloged in Data Catalog
+
+Pub/Sub topics → ✅ Automatically cataloged in Data Catalog
+
+PostgreSQL on Compute Engine → ❌ Not automatically cataloged
+
+Requires a custom connector to extract metadata and push it to Data Catalog.
+
+Option B (using Data Catalog APIs manually) is not enough because PostgreSQL metadata isn’t natively supported.
+
+Why Not B?
+Option B suggests using Data Catalog APIs manually for PostgreSQL.
+
+However, Data Catalog does not natively support PostgreSQL metadata extraction.
+
+You need a custom connector to first extract PostgreSQL schema information, then push it to Data Catalog.
+============================================================

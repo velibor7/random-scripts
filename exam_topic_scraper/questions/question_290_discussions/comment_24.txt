@@ -1,0 +1,13 @@
+COMMENT #24 FOR QUESTION 290
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+https://cloud.google.com/pubsub/docs/subscription-overview
+
+D. Use exponential backoff as the subscription retry policy, and configure dead lettering to a different topic with maximum delivery attempts set to 10.
+Exponential Backoff: This retry policy helps to avoid overloading the consumer app by gradually increasing the time between retries, which is more efficient than immediate redelivery.
+Dead Lettering: Configuring dead lettering to a different topic ensures that messages that cannot be processed after the maximum number of retries (10 in this case) are stored separately. This allows you to handle these messages later without losing any data.
+Reliability: This configuration ensures that your messaging system is reliable and can handle temporary downtime of the consumer app while maintaining data integrity
+============================================================

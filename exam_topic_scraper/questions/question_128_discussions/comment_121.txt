@@ -1,0 +1,15 @@
+COMMENT #121 FOR QUESTION 128
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Could be B (data requirement for task is vague), but let's assume 100 million data points is enough and rule that out.
+
+Indication of overfitting is significantly better performance on training data compared to unseen data. Here we are told that the unseen data is performing significantly better which is the opposite of what we should see if it were overfitting. Rule out C.
+
+Symptoms of model underfitting is poor performance in BOTH training AND unseen data. While underfitting might be the issue, the more pressing concern is that the test set is clearly not representative of the overall data and could be skewed. This is further supported by the 90/10 split (academic/industry standard is 80/20 or 75/25 based on the Pareto principle: https://en.wikipedia.org/wiki/Pareto_principle). A 90/10 split would be useful if we were doing k-fold cross validation (https://machinelearningmastery.com/k-fold-cross-validation/), however there is no indication of such in the prompt.
+
+Note: The question does not explicitly say that the model is performing poorly/errors are significantly bad, just that the error is twice as high in the training set (they could both have low error values).
+So whilst it could be a case of underfitting (D), the first step taken should be addressing the obviously problematic data representation by adjusting the train-test split (option A).
+============================================================

@@ -1,0 +1,18 @@
+COMMENT #46 FOR QUESTION 15
+============================================================
+Author: Unknown
+Date: 3 months, 2 weeks ago
+Votes: 0
+----------------------------------------
+To address the issue of strong consistency and ensure your reports do not miss in-flight data after streaming inserts, you should re-write the application to load accumulated data every 2 minutes (option A).
+
+Here's why:
+
+By accumulating and loading data in 2-minute intervals, you can balance between real-time data processing and ensuring data consistency.
+
+This approach allows you to process the data in manageable batches, reducing the likelihood of inconsistencies that might occur with individual streaming inserts.
+
+It maintains a near real-time analysis capability while allowing enough time for all in-flight data to be captured and accurately represented in your reports.
+
+This adjustment should help improve the reliability of your data analysis and reporting.
+============================================================

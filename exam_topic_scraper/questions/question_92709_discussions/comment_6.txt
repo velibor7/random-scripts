@@ -1,0 +1,16 @@
+COMMENT #6 FOR QUESTION 92709
+============================================================
+Author: Unknown
+Date: 1 year, 3 months ago
+Votes: 0
+----------------------------------------
+https://cloud.google.com/spanner/docs/instance-configurations#multi-region-best-practices
+Best practices
+For optimal performance, follow these best practices:
+
+Design a schema that prevents hotspots and other performance issues.
+For optimal write latency, place compute resources for write-heavy workloads within or close to the default leader region.
+For optimal read performance outside of the default leader region, use staleness of at least 15 seconds.
+To avoid single-region dependency for your workloads, place critical compute resources in at least two regions. A good option is to place them next to the two different read-write regions so that any single region outage will not impact all of your application.
+Provision enough compute capacity to keep high priority total CPU utilization under 45% in each region.
+============================================================

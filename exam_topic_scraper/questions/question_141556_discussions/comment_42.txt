@@ -1,0 +1,16 @@
+COMMENT #42 FOR QUESTION 141556
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+B. Set the skipChangeCommits flag to true on raw_iot
+
+Let's break down the requirements and explain why this is the best solution:
+
+Retain manually deleted or updated records in raw_iot: The skipChangeCommits flag, when set to true, tells Delta Live Tables (DLT) to ignore any manual changes (updates or deletes) made to the table outside of the pipeline. This means that even if records are manually deleted or updated in the raw_iot table, these changes won't be reflected in the table when the pipeline runs again.
+Recompute downstream bpm_stats table: By default, DLT will recompute downstream tables when their upstream dependencies change. Since bpm_stats is based on raw_iot, it will naturally be recomputed when the pipeline updates, without any special configuration.
+Why the other options are not correct:
+
+A. Setting pipelines.reset.allowed to false on raw_iot would prevent the table from being reset, but it wouldn't address the requirement to retain manually deleted or updated records.
+============================================================

@@ -1,0 +1,8 @@
+COMMENT #151 FOR QUESTION 110
+============================================================
+Author: Unknown
+Date: 2 years, 10 months ago
+Votes: 0
+----------------------------------------
+Seems like two answers may be correct. With ParDo you can discard corrupt data. With Partition you can split the data into two PCollections: corrupt and ok. You stream ok data further to BigQuery and corrupt data to some other storage for analysis. If one is not interested in analysis, then ParDo is enough.
+============================================================

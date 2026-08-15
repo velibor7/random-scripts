@@ -1,0 +1,12 @@
+COMMENT #121 FOR QUESTION 181
+============================================================
+Author: Unknown
+Date: 1 year, 5 months ago
+Votes: 0
+----------------------------------------
+gpt: Option C is a better approach as it allows for object creation to occur in a more controlled manner within the DoFn, potentially reducing the pressure on the system. However, it could still create a large number of objects depending on the rate of incoming messages.
+
+Option D of batching the job into ten-second increments can also be a good solution to reduce backpressure on the system. This way, you can limit the number of messages being processed at any given time, which can help prevent bottlenecks and reduce the likelihood of backpressure.
+
+Therefore, the best approach would be to combine options C and D, creating a new object in the startBundle method of a DoFn, and batching the job into smaller time increments, such as 10 seconds. This way, you can control the rate of object creation and processing, which can help minimize backpressure on the system.
+============================================================

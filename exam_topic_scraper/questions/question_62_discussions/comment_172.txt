@@ -1,0 +1,10 @@
+COMMENT #172 FOR QUESTION 62
+============================================================
+Author: Unknown
+Date: 2 years, 3 months ago
+Votes: 0
+----------------------------------------
+A is a direct No, if data don’t have timestamp, we’ll only have the procesing time and not the “event time”.
+B is not either, sliding windows are not for this. Hopping|sliding windowing is useful for taking running averages of data, but not to process late data.
+D looks correct but has one concept missing, the watermark to know if the process time is ok with the event time or not. I’m not 100% sure is incorrect. If, since we have a “predictable time period”, might be this will do. I mean, if our dashboard is shown after the last input data has arrived (single global window), this should be ok. We’d have a “perfect watermark”. Anyway we’d need triggering .
+============================================================

@@ -1,0 +1,16 @@
+COMMENT #6 FOR QUESTION 212
+============================================================
+Author: Unknown
+Date: 9 months ago
+Votes: 0
+----------------------------------------
+The best approach would be to check if there is a firewall rule allowing traffic on TCP ports 12345 and 12346 for the Dataflow network tag.
+Dataflow uses TCP ports 12345 and 12346 for communication between worker nodes. Using network tags and associated firewall rules is a Google-recommended security practice for controlling access between Compute Engine instances like Dataflow workers.
+
+So the key things to check would be:
+
+1.	Ensure your Dataflow pipeline is using the Dataflow network tag on the worker nodes. This tag is applied by default unless overridden.
+2.	Check if there is a firewall rule allowing TCP 12345 and 12346 ingress and egress traffic for instances with the Dataflow network tag. If not, add the rule.
+
+Options A, C and D relate to other networking aspects but do not directly address the Google recommended practice of using network tags and firewall rules.
+============================================================

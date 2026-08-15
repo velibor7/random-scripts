@@ -1,0 +1,19 @@
+COMMENT #158 FOR QUESTION 127
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Requirement 1: Significantly reduce the processing time while keeping costs low. 
+Requirement 2: Bulky matrix multiplication takes up to several days.
+
+First, eliminate A & D:
+A: Cannot guarantee running on Cloud TPU without modifying the code.
+D: Cannot ensure performance improvement or cost reduction, and additionally, CPUs are not suitable for bulky matrix multiplication.
+
+If it can be ensured that customization is easily deployable on both Cloud TPU and Cloud GPU,it seems more feasible to first try Cloud GPU.
+
+Because:
+It provides a better balance between performance and cost.
+Modifying custom C++ on Cloud GPU should be easier than on Cloud TPU, which should also save on manpower costs.
+============================================================

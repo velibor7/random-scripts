@@ -1,0 +1,1580 @@
+================================================================================
+QUESTION:
+You need to give new website users a globally unique identifier (GUID) using a service that takes in data points and returns a GUID. This data is sourced from both internal and external systems via HTTP calls that you will make via microservices within your pipeline. There will be tens of thousands of messages per second and that can be multi-threaded. and you worry about the backpressure on the system. How should you design your pipeline to minimize that backpressure?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Call out to the service via HTTP.
+										
+
+
+													B.
+												
+											
+											Create the pipeline statically in the class definition.
+										
+
+
+													C.
+												
+											
+											Create a new object in the startBundle method of DoFn.
+										
+
+
+													D.
+												
+											
+											Batch the job into ten-second increments.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (257 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 181 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 181
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You need to give new website users a globally unique identifier (GUID) using a service that takes in data points and returns a GUID. This data is sourced from both internal and external systems via HTTP calls that you will make via microservices within your pipeline. There will be tens of thousands of messages per second and that can be multi-threaded. and you worry about the backpressure on the system. How should you design your pipeline to minimize that backpressure?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Call out to the service via HTTP.
+										
+
+
+													B.
+												
+											
+											Create the pipeline statically in the class definition.
+										
+
+
+													C.
+												
+											
+											Create a new object in the startBundle method of DoFn.
+										
+
+
+													D.
+												
+											
+											Batch the job into ten-second increments.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								ducc
+							
+							
+							at 
+							Sept. 4, 2022, 3:19 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 181
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								ducc
+							
+							
+							at 
+							Sept. 4, 2022, 3:19 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D:  I have insisted on this choice all aling.
+ please read  find the keyword massive backpressure
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+
+if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead.
+
+--- Comment #6 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D:  I have insisted on this choice all aling.
+ please read  find the keyword massive backpressure
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+
+if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead.
+
+--- Comment #7 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D:  I have insisted on this choice all aling.
+ please read  find the keyword massive backpressure
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+
+if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D:  I have insisted on this choice all aling.
+ please read  find the keyword massive backpressure
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+
+if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead.
+
+--- Comment #13 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D:  I have insisted on this choice all aling.
+ please read  find the keyword massive backpressure
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+
+if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead.
+
+--- Comment #14 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+John_Pongthorn
+			
+
+
+				Highly Voted 
+
+
+			2 years ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+D:  I have insisted on this choice all aling.
+ please read  find the keyword massive backpressure
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+
+if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+D:  I have insisted on this choice all aling.
+ please read  find the keyword massive backpressure
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+
+if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 20 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Thanks for sharing, you found exactly the same problem!
+The document defitely proposes batching for this scenario.
+
+I'm quoting another part from the same example that would be useful for a similar question with different conditions:
+- If you're using a client in the DoFn that has heavy instantiation steps, rather than create that object in each DoFn call:
+    * If the client is thread-safe and serializable, create it statically in the class definition of the DoFn.
+    * If it's not thread-safe, create a new object in the startBundle method of DoFn. By doing so, the client will be reused across all elements of a bundle, saving initialization time.
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Thanks for sharing, you found exactly the same problem!
+The document defitely proposes batching for this scenario.
+
+I'm quoting another part from the same example that would be useful for a similar question with different conditions:
+- If you're using a client in the DoFn that has heavy instantiation steps, rather than create that object in each DoFn call:
+    * If the client is thread-safe and serializable, create it statically in the class definition of the DoFn.
+    * If it's not thread-safe, create a new object in the startBundle method of DoFn. By doing so, the client will be reused across all elements of a bundle, saving initialization time.
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+NicolasN
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Thanks for sharing, you found exactly the same problem!
+The document defitely proposes batching for this scenario.
+
+I'm quoting another part from the same example that would be useful for a similar question with different conditions:
+- If you're using a client in the DoFn that has heavy instantiation steps, rather than create that object in each DoFn call:
+    * If the client is thread-safe and serializable, create it statically in the class definition of the DoFn.
+    * If it's not thread-safe, create a new object in the startBundle method of DoFn. By doing so, the client will be reused across all elements of a bundle, saving initialization time.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Thanks for sharing, you found exactly the same problem!
+The document defitely proposes batching for this scenario.
+
+I'm quoting another part from the same example that would be useful for a similar question with different conditions:
+- If you're using a client in the DoFn that has heavy instantiation steps, rather than create that object in each DoFn call:
+    * If the client is thread-safe and serializable, create it statically in the class definition of the DoFn.
+    * If it's not thread-safe, create a new object in the startBundle method of DoFn. By doing so, the client will be reused across all elements of a bundle, saving initialization time.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+By the way if you see the shared Pseudocode, it's talking about start bundle and finish bundle of DoFn. The question is which one to choose to avoid back pressure? 
+you can see why you need to choose bundle instead of batching in below link
+ Batching introduces some processing overhead as well as the need for a magic number to determine the key space.
+Instead, use the StartBundle and FinishBundle lifecycle elements to batch your data. With these options, no shuffling is needed.
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#micro-batch-calls
+
+--- Comment #28 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+By the way if you see the shared Pseudocode, it's talking about start bundle and finish bundle of DoFn. The question is which one to choose to avoid back pressure? 
+you can see why you need to choose bundle instead of batching in below link
+ Batching introduces some processing overhead as well as the need for a magic number to determine the key space.
+Instead, use the StartBundle and FinishBundle lifecycle elements to batch your data. With these options, no shuffling is needed.
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#micro-batch-calls
+
+--- Comment #29 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Atnafu
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #30 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+By the way if you see the shared Pseudocode, it's talking about start bundle and finish bundle of DoFn. The question is which one to choose to avoid back pressure? 
+you can see why you need to choose bundle instead of batching in below link
+ Batching introduces some processing overhead as well as the need for a magic number to determine the key space.
+Instead, use the StartBundle and FinishBundle lifecycle elements to batch your data. With these options, no shuffling is needed.
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#micro-batch-calls
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+By the way if you see the shared Pseudocode, it's talking about start bundle and finish bundle of DoFn. The question is which one to choose to avoid back pressure? 
+you can see why you need to choose bundle instead of batching in below link
+ Batching introduces some processing overhead as well as the need for a magic number to determine the key space.
+Instead, use the StartBundle and FinishBundle lifecycle elements to batch your data. With these options, no shuffling is needed.
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#micro-batch-calls
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Valid points. but I don't change my mind, regarding the requirements of this particular question:
+- multi-threaded ability
+- no mention of heavy initialization steps or a lot of disk I/O (where shuffling might be a problem).
+And especially the excerpt:
+"if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead"
+It's like the guys that authored the question had this sentence in front of their eyes.
+
+--- Comment #35 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Valid points. but I don't change my mind, regarding the requirements of this particular question:
+- multi-threaded ability
+- no mention of heavy initialization steps or a lot of disk I/O (where shuffling might be a problem).
+And especially the excerpt:
+"if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead"
+It's like the guys that authored the question had this sentence in front of their eyes.
+
+--- Comment #36 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+NicolasN
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+Valid points. but I don't change my mind, regarding the requirements of this particular question:
+- multi-threaded ability
+- no mention of heavy initialization steps or a lot of disk I/O (where shuffling might be a problem).
+And especially the excerpt:
+"if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead"
+It's like the guys that authored the question had this sentence in front of their eyes.
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+Valid points. but I don't change my mind, regarding the requirements of this particular question:
+- multi-threaded ability
+- no mention of heavy initialization steps or a lot of disk I/O (where shuffling might be a problem).
+And especially the excerpt:
+"if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead"
+It's like the guys that authored the question had this sentence in front of their eyes.
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D
+All guys ,pls read carefully on Pattern: Calling external services for data enrichment
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1   
+A , B , C  all of them are solution for  norma case but if you  need to stand for backpressure,
+in last sector in Note : Note: When using this pattern, be sure to plan for the load that's placed on the external service and any associated backpressure. For example, imagine a pipeline that's processing tens of thousands of messages per second in steady state. If you made a callout per element, you would need the system to deal with the same number of API calls per second. Also, if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances, you should consider batching these requests, instead.
+
+Anyone can share ideas to debate with me.
+
+--- Comment #47 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+John_Pongthorn
+			
+
+
+				Highly Voted 
+
+
+			2 years ago
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+D
+All guys ,pls read carefully on Pattern: Calling external services for data enrichment
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1   
+A , B , C  all of them are solution for  norma case but if you  need to stand for backpressure,
+in last sector in Note : Note: When using this pattern, be sure to plan for the load that's placed on the external service and any associated backpressure. For example, imagine a pipeline that's processing tens of thousands of messages per second in steady state. If you made a callout per element, you would need the system to deal with the same number of API calls per second. Also, if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances, you should consider batching these requests, instead.
+
+Anyone can share ideas to debate with me.
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+D
+All guys ,pls read carefully on Pattern: Calling external services for data enrichment
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1   
+A , B , C  all of them are solution for  norma case but if you  need to stand for backpressure,
+in last sector in Note : Note: When using this pattern, be sure to plan for the load that's placed on the external service and any associated backpressure. For example, imagine a pipeline that's processing tens of thousands of messages per second in steady state. If you made a callout per element, you would need the system to deal with the same number of API calls per second. Also, if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances, you should consider batching these requests, instead.
+
+Anyone can share ideas to debate with me.
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #55 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Option D is the best approach to minimize backpressure in this scenario. By batching the jobs into 10-second increments, you can throttle the rate at which requests are made to the external GUID service. This prevents too many simultaneous requests from overloading the service.
+
+Option A would not help with backpressure since it just makes synchronous HTTP requests as messages arrive. Similarly, options B and C don't provide any inherent batching or throttling mechanism.
+
+Batching into time windows is a common strategy in stream processing to deal with high velocity data. The 10-second windows allow some buffering to happen, rather than making a call immediately for each message. This provides a natural throttling that can be tuned based on the external service's capacity.
+
+--- Comment #56 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+				Most Recent 
+
+
+			9 months, 3 weeks ago
+
+--- Comment #57 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Option D is the best approach to minimize backpressure in this scenario. By batching the jobs into 10-second increments, you can throttle the rate at which requests are made to the external GUID service. This prevents too many simultaneous requests from overloading the service.
+
+Option A would not help with backpressure since it just makes synchronous HTTP requests as messages arrive. Similarly, options B and C don't provide any inherent batching or throttling mechanism.
+
+Batching into time windows is a common strategy in stream processing to deal with high velocity data. The 10-second windows allow some buffering to happen, rather than making a call immediately for each message. This provides a natural throttling that can be tuned based on the external service's capacity.
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Option D is the best approach to minimize backpressure in this scenario. By batching the jobs into 10-second increments, you can throttle the rate at which requests are made to the external GUID service. This prevents too many simultaneous requests from overloading the service.
+
+Option A would not help with backpressure since it just makes synchronous HTTP requests as messages arrive. Similarly, options B and C don't provide any inherent batching or throttling mechanism.
+
+Batching into time windows is a common strategy in stream processing to deal with high velocity data. The 10-second windows allow some buffering to happen, rather than making a call immediately for each message. This provides a natural throttling that can be tuned based on the external service's capacity.
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+To design a pipeline that minimizes backpressure, especially when dealing with tens of thousands of messages per second in a multi-threaded environment, it's important to consider how each option affects system performance and scalability. Let's examine each of your options:
+
+--- Comment #63 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+To design a pipeline that minimizes backpressure, especially when dealing with tens of thousands of messages per second in a multi-threaded environment, it's important to consider how each option affects system performance and scalability. Let's examine each of your options:
+
+--- Comment #64 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #65 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+To design a pipeline that minimizes backpressure, especially when dealing with tens of thousands of messages per second in a multi-threaded environment, it's important to consider how each option affects system performance and scalability. Let's examine each of your options:
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+To design a pipeline that minimizes backpressure, especially when dealing with tens of thousands of messages per second in a multi-threaded environment, it's important to consider how each option affects system performance and scalability. Let's examine each of your options:
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #69 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+A. Call out to the service via HTTP: Making HTTP calls to an external service for each message can introduce significant latency and backpressure, especially at high throughput. This is due to the overhead of establishing a connection, waiting for the response, and handling potential network delays or failures.
+
+--- Comment #70 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+A. Call out to the service via HTTP: Making HTTP calls to an external service for each message can introduce significant latency and backpressure, especially at high throughput. This is due to the overhead of establishing a connection, waiting for the response, and handling potential network delays or failures.
+
+--- Comment #71 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #72 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+A. Call out to the service via HTTP: Making HTTP calls to an external service for each message can introduce significant latency and backpressure, especially at high throughput. This is due to the overhead of establishing a connection, waiting for the response, and handling potential network delays or failures.
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+A. Call out to the service via HTTP: Making HTTP calls to an external service for each message can introduce significant latency and backpressure, especially at high throughput. This is due to the overhead of establishing a connection, waiting for the response, and handling potential network delays or failures.
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #76 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Given these considerations, option D (Batch the job into ten-second increments) seems to be the most effective strategy for minimizing backpressure in your scenario. By batching messages, you can reduce the strain on your pipeline and external services, making the system more resilient and scalable under high load. However, the exact batch size and interval should be fine-tuned based on the specific characteristics of your workload and the capabilities of the external systems you are interacting with.
+
+Additionally, it's important to consider other strategies in conjunction with batching, such as implementing efficient error handling, load balancing, and potentially using asynchronous I/O for external HTTP calls to further optimize performance and minimize backpressure.
+
+--- Comment #77 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Given these considerations, option D (Batch the job into ten-second increments) seems to be the most effective strategy for minimizing backpressure in your scenario. By batching messages, you can reduce the strain on your pipeline and external services, making the system more resilient and scalable under high load. However, the exact batch size and interval should be fine-tuned based on the specific characteristics of your workload and the capabilities of the external systems you are interacting with.
+
+Additionally, it's important to consider other strategies in conjunction with batching, such as implementing efficient error handling, load balancing, and potentially using asynchronous I/O for external HTTP calls to further optimize performance and minimize backpressure.
+
+--- Comment #78 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+Given these considerations, option D (Batch the job into ten-second increments) seems to be the most effective strategy for minimizing backpressure in your scenario. By batching messages, you can reduce the strain on your pipeline and external services, making the system more resilient and scalable under high load. However, the exact batch size and interval should be fine-tuned based on the specific characteristics of your workload and the capabilities of the external systems you are interacting with.
+
+Additionally, it's important to consider other strategies in conjunction with batching, such as implementing efficient error handling, load balancing, and potentially using asynchronous I/O for external HTTP calls to further optimize performance and minimize backpressure.
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+Given these considerations, option D (Batch the job into ten-second increments) seems to be the most effective strategy for minimizing backpressure in your scenario. By batching messages, you can reduce the strain on your pipeline and external services, making the system more resilient and scalable under high load. However, the exact batch size and interval should be fine-tuned based on the specific characteristics of your workload and the capabilities of the external systems you are interacting with.
+
+Additionally, it's important to consider other strategies in conjunction with batching, such as implementing efficient error handling, load balancing, and potentially using asynchronous I/O for external HTTP calls to further optimize performance and minimize backpressure.
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #85 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+B. Create the pipeline statically in the class definition: While this approach can improve initialization time and reduce overhead during execution, it doesn't directly address the issue of backpressure caused by high message throughput.
+
+--- Comment #86 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #87 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+B. Create the pipeline statically in the class definition: While this approach can improve initialization time and reduce overhead during execution, it doesn't directly address the issue of backpressure caused by high message throughput.
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+B. Create the pipeline statically in the class definition: While this approach can improve initialization time and reduce overhead during execution, it doesn't directly address the issue of backpressure caused by high message throughput.
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #91 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+C. Create a new object in the startBundle method of DoFn: This approach is typically used in Apache Beam to initialize resources before processing a bundle of elements. While it can optimize resource usage and performance within each bundle, it doesn't inherently solve the backpressure issue caused by high message rates.
+
+--- Comment #92 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+C. Create a new object in the startBundle method of DoFn: This approach is typically used in Apache Beam to initialize resources before processing a bundle of elements. While it can optimize resource usage and performance within each bundle, it doesn't inherently solve the backpressure issue caused by high message rates.
+
+--- Comment #93 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #94 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+C. Create a new object in the startBundle method of DoFn: This approach is typically used in Apache Beam to initialize resources before processing a bundle of elements. While it can optimize resource usage and performance within each bundle, it doesn't inherently solve the backpressure issue caused by high message rates.
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+C. Create a new object in the startBundle method of DoFn: This approach is typically used in Apache Beam to initialize resources before processing a bundle of elements. While it can optimize resource usage and performance within each bundle, it doesn't inherently solve the backpressure issue caused by high message rates.
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+D. Batch the job into ten-second increments: Batching messages can be an effective way to reduce backpressure. By grouping multiple messages into larger batches, you can reduce the frequency of external calls and distribute the processing load more evenly over time. This can lead to more efficient use of resources and potentially lower latency, as the system spends less time waiting on external services.
+
+--- Comment #99 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+D. Batch the job into ten-second increments: Batching messages can be an effective way to reduce backpressure. By grouping multiple messages into larger batches, you can reduce the frequency of external calls and distribute the processing load more evenly over time. This can lead to more efficient use of resources and potentially lower latency, as the system spends less time waiting on external services.
+
+--- Comment #100 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+D. Batch the job into ten-second increments: Batching messages can be an effective way to reduce backpressure. By grouping multiple messages into larger batches, you can reduce the frequency of external calls and distribute the processing load more evenly over time. This can lead to more efficient use of resources and potentially lower latency, as the system spends less time waiting on external services.
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+D. Batch the job into ten-second increments: Batching messages can be an effective way to reduce backpressure. By grouping multiple messages into larger batches, you can reduce the frequency of external calls and distribute the processing load more evenly over time. This can lead to more efficient use of resources and potentially lower latency, as the system spends less time waiting on external services.
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #112 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Option C is not correct because it does not address the issue of backpressure. Creating a new object in the startBundle method of DoFn will not help to reduce the number of calls that are made to the service, which can lead to backpressure.
+
+Here are some reasons why C is not correct:
+
+Creating a new object in the startBundle method of DoFn is not a scalable solution. As the number of messages increases, the number of objects that need to be created will also increase. This can lead to performance problems and memory usage issues.
+Creating a new object in the startBundle method of DoFn does not address the issue of backpressure. The service may still experience backpressure if the number of messages exceeds the service's capacity.
+A better solution would be to use batching to reduce the number of calls that are made to the service. This can help to improve performance and reduce backpressure.
+
+--- Comment #113 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+izekc
+			
+
+
+			1 year, 5 months ago
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+Option C is not correct because it does not address the issue of backpressure. Creating a new object in the startBundle method of DoFn will not help to reduce the number of calls that are made to the service, which can lead to backpressure.
+
+Here are some reasons why C is not correct:
+
+Creating a new object in the startBundle method of DoFn is not a scalable solution. As the number of messages increases, the number of objects that need to be created will also increase. This can lead to performance problems and memory usage issues.
+Creating a new object in the startBundle method of DoFn does not address the issue of backpressure. The service may still experience backpressure if the number of messages exceeds the service's capacity.
+A better solution would be to use batching to reduce the number of calls that are made to the service. This can help to improve performance and reduce backpressure.
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+Option C is not correct because it does not address the issue of backpressure. Creating a new object in the startBundle method of DoFn will not help to reduce the number of calls that are made to the service, which can lead to backpressure.
+
+Here are some reasons why C is not correct:
+
+Creating a new object in the startBundle method of DoFn is not a scalable solution. As the number of messages increases, the number of objects that need to be created will also increase. This can lead to performance problems and memory usage issues.
+Creating a new object in the startBundle method of DoFn does not address the issue of backpressure. The service may still experience backpressure if the number of messages exceeds the service's capacity.
+A better solution would be to use batching to reduce the number of calls that are made to the service. This can help to improve performance and reduce backpressure.
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #121 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+gpt: Option C is a better approach as it allows for object creation to occur in a more controlled manner within the DoFn, potentially reducing the pressure on the system. However, it could still create a large number of objects depending on the rate of incoming messages.
+
+Option D of batching the job into ten-second increments can also be a good solution to reduce backpressure on the system. This way, you can limit the number of messages being processed at any given time, which can help prevent bottlenecks and reduce the likelihood of backpressure.
+
+Therefore, the best approach would be to combine options C and D, creating a new object in the startBundle method of a DoFn, and batching the job into smaller time increments, such as 10 seconds. This way, you can control the rate of object creation and processing, which can help minimize backpressure on the system.
+
+--- Comment #122 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Oleksandr0501
+			
+
+
+			1 year, 5 months ago
+
+--- Comment #123 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+gpt: Option C is a better approach as it allows for object creation to occur in a more controlled manner within the DoFn, potentially reducing the pressure on the system. However, it could still create a large number of objects depending on the rate of incoming messages.
+
+Option D of batching the job into ten-second increments can also be a good solution to reduce backpressure on the system. This way, you can limit the number of messages being processed at any given time, which can help prevent bottlenecks and reduce the likelihood of backpressure.
+
+Therefore, the best approach would be to combine options C and D, creating a new object in the startBundle method of a DoFn, and batching the job into smaller time increments, such as 10 seconds. This way, you can control the rate of object creation and processing, which can help minimize backpressure on the system.
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+gpt: Option C is a better approach as it allows for object creation to occur in a more controlled manner within the DoFn, potentially reducing the pressure on the system. However, it could still create a large number of objects depending on the rate of incoming messages.
+
+Option D of batching the job into ten-second increments can also be a good solution to reduce backpressure on the system. This way, you can limit the number of messages being processed at any given time, which can help prevent bottlenecks and reduce the likelihood of backpressure.
+
+Therefore, the best approach would be to combine options C and D, creating a new object in the startBundle method of a DoFn, and batching the job into smaller time increments, such as 10 seconds. This way, you can control the rate of object creation and processing, which can help minimize backpressure on the system.
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #127 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+another vague question, as we see... 
+so, i`ll choose D... if i get this test
+"However, depending on the specifics of your use case, one option may be better suited than the other. For example, if you have a high volume of incoming messages with occasional spikes, option D of batching the job into smaller time increments may be more effective in managing the load. On the other hand, if the incoming messages are more evenly distributed over time, option C of creating a new object in the startBundle method of DoFn may be a better option.
+Ultimately, it may be necessary to experiment with both approaches and determine which one works best for your specific use case."
+
+--- Comment #128 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+another vague question, as we see... 
+so, i`ll choose D... if i get this test
+"However, depending on the specifics of your use case, one option may be better suited than the other. For example, if you have a high volume of incoming messages with occasional spikes, option D of batching the job into smaller time increments may be more effective in managing the load. On the other hand, if the incoming messages are more evenly distributed over time, option C of creating a new object in the startBundle method of DoFn may be a better option.
+Ultimately, it may be necessary to experiment with both approaches and determine which one works best for your specific use case."
+
+--- Comment #129 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Oleksandr0501
+			
+
+
+			1 year, 5 months ago
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+another vague question, as we see... 
+so, i`ll choose D... if i get this test
+"However, depending on the specifics of your use case, one option may be better suited than the other. For example, if you have a high volume of incoming messages with occasional spikes, option D of batching the job into smaller time increments may be more effective in managing the load. On the other hand, if the incoming messages are more evenly distributed over time, option C of creating a new object in the startBundle method of DoFn may be a better option.
+Ultimately, it may be necessary to experiment with both approaches and determine which one works best for your specific use case."
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+another vague question, as we see... 
+so, i`ll choose D... if i get this test
+"However, depending on the specifics of your use case, one option may be better suited than the other. For example, if you have a high volume of incoming messages with occasional spikes, option D of batching the job into smaller time increments may be more effective in managing the load. On the other hand, if the incoming messages are more evenly distributed over time, option C of creating a new object in the startBundle method of DoFn may be a better option.
+Ultimately, it may be necessary to experiment with both approaches and determine which one works best for your specific use case."
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #137 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+D works.
+Could be C, but who said that the pipeline is in Dataflow/Beam?
+
+--- Comment #138 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+juliobs
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+D works.
+Could be C, but who said that the pipeline is in Dataflow/Beam?
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+D works.
+Could be C, but who said that the pipeline is in Dataflow/Beam?
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #146 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Answer C
+batch increment in 10 sec, can improve load balancing, but overall back pressure (messages are generating more than consuming or publishing) in this case startBundle in DoFn or find other options in future like
+ caching, 
+load shedding (prioritising message flow), 
+messege queuing 
+These options handle backpressure..
+If your cpu is performing bad then go with change in batch increment timing
+
+--- Comment #147 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+musumusu
+			
+
+
+			1 year, 7 months ago
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C
+batch increment in 10 sec, can improve load balancing, but overall back pressure (messages are generating more than consuming or publishing) in this case startBundle in DoFn or find other options in future like
+ caching, 
+load shedding (prioritising message flow), 
+messege queuing 
+These options handle backpressure..
+If your cpu is performing bad then go with change in batch increment timing
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C
+batch increment in 10 sec, can improve load balancing, but overall back pressure (messages are generating more than consuming or publishing) in this case startBundle in DoFn or find other options in future like
+ caching, 
+load shedding (prioritising message flow), 
+messege queuing 
+These options handle backpressure..
+If your cpu is performing bad then go with change in batch increment timing
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #154 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+I was hesitating between C and D, but then I realised this: https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1 
+Here is says "If it's not thread-safe, create a new object in the startBundle method of DoFn." The task explicitly says "There will be tens of thousands of messages per second and that can be multi-threaded." 
+Correct me if I'm wrong, but multi-threaded == thread-safe. Therefore, no need to go for the C approach.
+
+--- Comment #155 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+maci_f
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+I was hesitating between C and D, but then I realised this: https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1 
+Here is says "If it's not thread-safe, create a new object in the startBundle method of DoFn." The task explicitly says "There will be tens of thousands of messages per second and that can be multi-threaded." 
+Correct me if I'm wrong, but multi-threaded == thread-safe. Therefore, no need to go for the C approach.
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+I was hesitating between C and D, but then I realised this: https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1 
+Here is says "If it's not thread-safe, create a new object in the startBundle method of DoFn." The task explicitly says "There will be tens of thousands of messages per second and that can be multi-threaded." 
+Correct me if I'm wrong, but multi-threaded == thread-safe. Therefore, no need to go for the C approach.
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #163 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+D is the answer.
+
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+For example, imagine a pipeline that's processing tens of thousands of messages per second in steady state. If you made a callout per element, you would need the system to deal with the same number of API calls per second. Also, if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead.
+
+--- Comment #164 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+zellck
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #165 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D is the answer.
+
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+For example, imagine a pipeline that's processing tens of thousands of messages per second in steady state. If you made a callout per element, you would need the system to deal with the same number of API calls per second. Also, if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead.
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+D is the answer.
+
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+For example, imagine a pipeline that's processing tens of thousands of messages per second in steady state. If you made a callout per element, you would need the system to deal with the same number of API calls per second. Also, if the call takes on average 1 sec, that would cause massive backpressure on the pipeline. In these circumstances you should consider batching these requests, instead.
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #170 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D. Batch the job into ten-second increments.
+
+--- Comment #171 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D. Batch the job into ten-second increments.
+
+--- Comment #172 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+AzureDP900
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+D. Batch the job into ten-second increments.
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+D. Batch the job into ten-second increments.
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #180 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+C
+C is an answer because
+First of all, no doubt that we should avoid single call of element that's why we use multi-threading else it overwhelm an external service endpoint.To avoid this issue, batch calls to external systems.
+Batch calls has also issue:GroupByKey transform or Apache Beam Timer API.
+these approaches both require shuffling, which introduces some processing overhead as well as the need for a magic number to determine the key space.
+Instead, use the StartBundle and FinishBundle lifecycle elements to batch your data. With these options, no shuffling is needed.
+Source:
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#micro-batch-calls
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+Summary:
+StartBundle and FinishBundle do batch with no shuffling
+
+--- Comment #181 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Atnafu
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+C
+C is an answer because
+First of all, no doubt that we should avoid single call of element that's why we use multi-threading else it overwhelm an external service endpoint.To avoid this issue, batch calls to external systems.
+Batch calls has also issue:GroupByKey transform or Apache Beam Timer API.
+these approaches both require shuffling, which introduces some processing overhead as well as the need for a magic number to determine the key space.
+Instead, use the StartBundle and FinishBundle lifecycle elements to batch your data. With these options, no shuffling is needed.
+Source:
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#micro-batch-calls
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+Summary:
+StartBundle and FinishBundle do batch with no shuffling
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+C
+C is an answer because
+First of all, no doubt that we should avoid single call of element that's why we use multi-threading else it overwhelm an external service endpoint.To avoid this issue, batch calls to external systems.
+Batch calls has also issue:GroupByKey transform or Apache Beam Timer API.
+these approaches both require shuffling, which introduces some processing overhead as well as the need for a magic number to determine the key space.
+Instead, use the StartBundle and FinishBundle lifecycle elements to batch your data. With these options, no shuffling is needed.
+Source:
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#micro-batch-calls
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+Summary:
+StartBundle and FinishBundle do batch with no shuffling
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #188 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Ans C: reference https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+
+--- Comment #189 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+AHUI
+			
+
+
+			2 years ago
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+Ans C: reference https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+Ans C: reference https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #193 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #194 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #196 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Based on the answers in this discussion thread, I would go for C. The most important link to support this choice is as following: https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+
+--- Comment #197 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+SMASL
+			
+
+
+			2 years ago
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+Based on the answers in this discussion thread, I would go for C. The most important link to support this choice is as following: https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+
+--- Comment #199 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #200 ---
+Author: Unknown | Date:  | Votes: 0
+Based on the answers in this discussion thread, I would go for C. The most important link to support this choice is as following: https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+
+--- Comment #201 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #202 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #203 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #204 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #205 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Beam docs recommend batching 
+https://beam.apache.org/documentation/patterns/grouping-elements-for-efficient-external-service-calls/
+
+--- Comment #206 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Thobm
+			
+
+
+			2 years ago
+
+--- Comment #207 ---
+Author: Unknown | Date:  | Votes: 0
+Beam docs recommend batching 
+https://beam.apache.org/documentation/patterns/grouping-elements-for-efficient-external-service-calls/
+
+--- Comment #208 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #209 ---
+Author: Unknown | Date:  | Votes: 0
+Beam docs recommend batching 
+https://beam.apache.org/documentation/patterns/grouping-elements-for-efficient-external-service-calls/
+
+--- Comment #210 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #211 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #212 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #213 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #214 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+C , It is straight foward , You can take a look at https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1  
+Pattern : Calling external services for data enrichmen
+
+--- Comment #215 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #216 ---
+Author: Unknown | Date:  | Votes: 0
+C , It is straight foward , You can take a look at https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1  
+Pattern : Calling external services for data enrichmen
+
+--- Comment #217 ---
+Author: Unknown | Date:  | Votes: 0
+C , It is straight foward , You can take a look at https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1  
+Pattern : Calling external services for data enrichmen
+
+--- Comment #218 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #219 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #220 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #221 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #222 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Answer C
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+
+--- Comment #223 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #224 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Answer C
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+
+--- Comment #225 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C
+https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1
+
+--- Comment #226 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #227 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #228 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+To support choice C
+
+--- Comment #229 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+To support choice C
+
+--- Comment #230 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #231 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+To support choice C
+
+--- Comment #232 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+To support choice C
+
+--- Comment #233 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #234 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #235 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #236 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #237 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #238 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+i think you are right gg
+
+--- Comment #239 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+YorelNation
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #240 ---
+Author: Unknown | Date:  | Votes: 0
+i think you are right gg
+
+--- Comment #241 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #242 ---
+Author: Unknown | Date:  | Votes: 0
+i think you are right gg
+
+--- Comment #243 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #244 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #245 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #246 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #247 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+How about C?
+https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+
+--- Comment #248 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+nwk
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #249 ---
+Author: Unknown | Date:  | Votes: 0
+How about C?
+https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+
+--- Comment #250 ---
+Author: Unknown | Date:  | Votes: 0
+How about C?
+https://cloud.google.com/architecture/e-commerce/patterns/batching-external-calls
+
+--- Comment #251 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #252 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #253 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #254 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #255 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #256 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #257 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

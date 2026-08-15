@@ -1,0 +1,626 @@
+================================================================================
+QUESTION:
+You want to migrate your PostgreSQL database from another cloud provider to Cloud SQL. You plan on using Database Migration Service and need to assess the impact of any known limitations. What should you do? (Choose two.)
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Identify whether the database has over 512 tables.
+										
+
+
+													B.
+												
+											
+											Identify all tables that do not have a primary key.
+										
+
+
+													C.
+												
+											
+											Identity all tables that do not have at least one foreign key.
+										
+
+
+													D.
+												
+											
+											Identify whether the source database is encrypted using pgcrypto extension.
+										
+
+
+													E.
+												
+											
+											Identify whether the source database uses customer-managed encryption keys (CMEK).
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+BE
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (83 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Cloud Database Engineer topic 1 question 74 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Cloud Database Engineer
+
+							Question #: 74
+							Topic #: 1
+						
+[All Professional Cloud Database Engineer Questions]
+
+
+
+							
+								You want to migrate your PostgreSQL database from another cloud provider to Cloud SQL. You plan on using Database Migration Service and need to assess the impact of any known limitations. What should you do? (Choose two.)
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Identify whether the database has over 512 tables.
+										
+
+
+													B.
+												
+											
+											Identify all tables that do not have a primary key.
+										
+
+
+													C.
+												
+											
+											Identity all tables that do not have at least one foreign key.
+										
+
+
+													D.
+												
+											
+											Identify whether the source database is encrypted using pgcrypto extension.
+										
+
+
+													E.
+												
+											
+											Identify whether the source database uses customer-managed encryption keys (CMEK).
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+BE
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								pk349
+							
+							
+							at 
+							Dec. 24, 2022, 11:54 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Cloud Database Engineer
+
+							Question #: 74
+							Topic #: 1
+						
+[All Professional Cloud Database Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								pk349
+							
+							
+							at 
+							Dec. 24, 2022, 11:54 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+https://cloud.google.com/database-migration/docs/postgres/known-limitations
+
+--- Comment #6 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+https://cloud.google.com/database-migration/docs/postgres/known-limitations
+
+--- Comment #7 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+https://cloud.google.com/database-migration/docs/postgres/known-limitations
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+https://cloud.google.com/database-migration/docs/postgres/known-limitations
+
+--- Comment #13 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+https://cloud.google.com/database-migration/docs/postgres/known-limitations
+
+--- Comment #14 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+chelbsik
+			
+
+
+				Highly Voted 
+
+
+			2 years, 3 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/database-migration/docs/postgres/known-limitations
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BE
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/database-migration/docs/postgres/known-limitations
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+From this link (https://cloud.google.com/database-migration/docs/postgres/known-limitations), correct answers should be B and D.
+
+Excerpts supporting these choices:
+
+"For tables that don't have primary keys, Database Migration Service supports migration of the initial snapshot and INSERT statements during the change data capture (CDC) phase. You should migrate UPDATE and DELETE statements manually."
+
+"If encrypted databases require customer-managed encryption keys to decrypt the databases, and if Database Migration Service doesn't have access to the keys, then the databases can't be migrated.
+However, if customer data is encrypted by the pgcrypto extension, then the data can be migrated with Database Migration Service (because Cloud SQL supports the extension)."
+
+Therefore, for the migration to be executable:
+
+* Only tables with a primary key can be migrated;
+* Only data encrypted by the pgcrypto extension can be migrated.
+
+--- Comment #23 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+examprof
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+From this link (https://cloud.google.com/database-migration/docs/postgres/known-limitations), correct answers should be B and D.
+
+Excerpts supporting these choices:
+
+"For tables that don't have primary keys, Database Migration Service supports migration of the initial snapshot and INSERT statements during the change data capture (CDC) phase. You should migrate UPDATE and DELETE statements manually."
+
+"If encrypted databases require customer-managed encryption keys to decrypt the databases, and if Database Migration Service doesn't have access to the keys, then the databases can't be migrated.
+However, if customer data is encrypted by the pgcrypto extension, then the data can be migrated with Database Migration Service (because Cloud SQL supports the extension)."
+
+Therefore, for the migration to be executable:
+
+* Only tables with a primary key can be migrated;
+* Only data encrypted by the pgcrypto extension can be migrated.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+From this link (https://cloud.google.com/database-migration/docs/postgres/known-limitations), correct answers should be B and D.
+
+Excerpts supporting these choices:
+
+"For tables that don't have primary keys, Database Migration Service supports migration of the initial snapshot and INSERT statements during the change data capture (CDC) phase. You should migrate UPDATE and DELETE statements manually."
+
+"If encrypted databases require customer-managed encryption keys to decrypt the databases, and if Database Migration Service doesn't have access to the keys, then the databases can't be migrated.
+However, if customer data is encrypted by the pgcrypto extension, then the data can be migrated with Database Migration Service (because Cloud SQL supports the extension)."
+
+Therefore, for the migration to be executable:
+
+* Only tables with a primary key can be migrated;
+* Only data encrypted by the pgcrypto extension can be migrated.
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+If encrypted databases require customer-managed encryption keys to decrypt the databases, and if Database Migration Service doesn't have access to the keys, then the databases can't be migrated.
+
+However, if customer data is encrypted by the pgcrypto extension, then the data can be migrated with Database Migration Service (because Cloud SQL supports the extension).
+
+--- Comment #31 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+rglearn
+			
+
+
+				Most Recent 
+
+
+			5 months, 2 weeks ago
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+If encrypted databases require customer-managed encryption keys to decrypt the databases, and if Database Migration Service doesn't have access to the keys, then the databases can't be migrated.
+
+However, if customer data is encrypted by the pgcrypto extension, then the data can be migrated with Database Migration Service (because Cloud SQL supports the extension).
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BE
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+If encrypted databases require customer-managed encryption keys to decrypt the databases, and if Database Migration Service doesn't have access to the keys, then the databases can't be migrated.
+
+However, if customer data is encrypted by the pgcrypto extension, then the data can be migrated with Database Migration Service (because Cloud SQL supports the extension).
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #39 ---
+Author: Unknown | Date: 11 months, 2 weeks ago | Votes: 0
+https://cloud.google.com/database-migration/docs/postgres/known-limitations:
+If encrypted databases require customer-managed encryption keys to decrypt the databases, and if Database Migration Service doesn't have access to the keys, then the databases can't be migrated.
+
+For tables that don't have primary keys, Database Migration Service supports migration of the initial snapshot and INSERT statements during the change data capture (CDC) phase. You should migrate UPDATE and DELETE statements manually.
+
+--- Comment #40 ---
+Author: Unknown | Date: 11 months, 2 weeks ago | Votes: 0
+Pime13
+			
+
+
+			11 months, 2 weeks ago
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/database-migration/docs/postgres/known-limitations:
+If encrypted databases require customer-managed encryption keys to decrypt the databases, and if Database Migration Service doesn't have access to the keys, then the databases can't be migrated.
+
+For tables that don't have primary keys, Database Migration Service supports migration of the initial snapshot and INSERT statements during the change data capture (CDC) phase. You should migrate UPDATE and DELETE statements manually.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BE
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/database-migration/docs/postgres/known-limitations:
+If encrypted databases require customer-managed encryption keys to decrypt the databases, and if Database Migration Service doesn't have access to the keys, then the databases can't be migrated.
+
+For tables that don't have primary keys, Database Migration Service supports migration of the initial snapshot and INSERT statements during the change data capture (CDC) phase. You should migrate UPDATE and DELETE statements manually.
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #48 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+PKs (needed) and pgcrypto extension (confirm if enabled) to assess limitations during migration
+
+--- Comment #49 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+DBA03
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+PKs (needed) and pgcrypto extension (confirm if enabled) to assess limitations during migration
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BD
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+PKs (needed) and pgcrypto extension (confirm if enabled) to assess limitations during migration
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #57 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+The correct answer is B & D. option E (customer-managed encryption keys) is not directly related to the limitations of Database Migration Service for PostgreSQL to Cloud SQL.
+
+--- Comment #58 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+learnazureportal
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is B & D. option E (customer-managed encryption keys) is not directly related to the limitations of Database Migration Service for PostgreSQL to Cloud SQL.
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is B & D. option E (customer-managed encryption keys) is not directly related to the limitations of Database Migration Service for PostgreSQL to Cloud SQL.
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #65 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+B, E.
+A is irrelevant. So is C. Cloud SQL supports the pgcrypto extension so that’s also irrelevant. That leaves B and E. The link provided by chelbsik is spot on.
+
+--- Comment #66 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+dynamic_dba
+			
+
+
+			2 years ago
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+B, E.
+A is irrelevant. So is C. Cloud SQL supports the pgcrypto extension so that’s also irrelevant. That leaves B and E. The link provided by chelbsik is spot on.
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+B, E.
+A is irrelevant. So is C. Cloud SQL supports the pgcrypto extension so that’s also irrelevant. That leaves B and E. The link provided by chelbsik is spot on.
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #73 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+B: Identify all tables that do not have a ***** primary key. Tables in databases that don't have a primary key aren't migrated automatically by Database Migration Service. You must manually migrate them. The Migrating tables without a primary key section outlines different strategies.
+
+ E: Identify whether the source database uses customer-managed encryption ***** keys (CMEK).
+
+--- Comment #74 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+pk349
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+B: Identify all tables that do not have a ***** primary key. Tables in databases that don't have a primary key aren't migrated automatically by Database Migration Service. You must manually migrate them. The Migrating tables without a primary key section outlines different strategies.
+
+ E: Identify whether the source database uses customer-managed encryption ***** keys (CMEK).
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+B: Identify all tables that do not have a ***** primary key. Tables in databases that don't have a primary key aren't migrated automatically by Database Migration Service. You must manually migrate them. The Migrating tables without a primary key section outlines different strategies.
+
+ E: Identify whether the source database uses customer-managed encryption ***** keys (CMEK).
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

@@ -1,0 +1,12 @@
+COMMENT #75 FOR QUESTION 214
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+D seems correct. We are required to simulate and not test in a different environment.
+"How data protection modes work
+The limited-data-loss mode minimizes data loss by verifying that the difference in data between the primary and replica is below 30 MB before initiating the failover. The offset on the primary is incremented for each byte of data that must be synchronized to its replicas. In the limited-data-loss mode, the failover will abort if the greatest offset delta between the primary and each replica is 30MB or greater. If you can tolerate more data loss and want to aggressively execute the failover, try setting the data protection mode to force-data-loss.
+
+The force-data-loss mode employs a chain of failover strategies to aggressively execute the failover. It does not check the offset delta between the primary and replicas before initiating the failover; you can potentially lose more than 30MB of data changes."
+============================================================

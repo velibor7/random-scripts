@@ -1,0 +1,11 @@
+COMMENT #5 FOR QUESTION 209
+============================================================
+Author: Unknown
+Date: 3 months, 4 weeks ago
+Votes: 0
+----------------------------------------
+You don't need to recreate a table to cluster it, contrary to partitioning, where you have to create a new table with the old data (migration)
+
+> If you alter an existing non-clustered table to be clustered, the existing data is not automatically clustered. Only new data that's stored using the clustered columns is subject to automatic reclustering. 
+https://cloud.google.com/bigquery/docs/clustered-tables#limitations
+============================================================

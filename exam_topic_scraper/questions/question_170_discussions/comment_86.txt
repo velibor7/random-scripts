@@ -1,0 +1,14 @@
+COMMENT #86 FOR QUESTION 170
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Q: You are concerned that upon deployment the subscriber may erroneously acknowledge messages, leading to message loss. 
+   -> So the message is mistakenly acked and removed from topic/subscription. This means even if you have a snapshot of pre-deployment but you don't have a backup or copy of post-deployment messages.
+
+Q: Your subscriber is not set up to retain acknowledged messages.
+  -> To seek to a time in the past and replay previously-acknowledged messages, "you must first configure message retention on the topic" or "configure the subscription to retain acknowledged messages" (ref: https://cloud.google.com/pubsub/docs/replay-overview#configuring_message_retention)
+
+So B, C, D do not solve the problem of erroneously acked messages as long as you don't have message retention configured on topic/subscription.
+============================================================

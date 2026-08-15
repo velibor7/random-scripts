@@ -1,0 +1,18 @@
+COMMENT #165 FOR QUESTION 266
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+OPTION D is correct for the specific scenario where we want to detect the average noise level for a duration of more than 30 minutes but end the window when no data has been received for 15 minutes.
+
+Explanation:
+
+- Tumbling windows are non-overlapping windows, and in this case, you want to capture data continuously for 30-minute intervals.
+
+- Using a tumbling window with a 15-minute window size aligns with your requirement to detect the average noise level for a duration of more than 30 minutes.
+
+- Adding a .withAllowedLateness operator with a duration of fifteen minutes ensures that the window will still consider late-arriving data within that time frame. After fifteen minutes of no data, the window will be closed, and any late-arriving data will not be considered.
+
+Option A and B invalid as they capture fixed logic with 15 or 30 mins. Option C captures only 15 min average with 30 min trigger hence not suitable.
+============================================================

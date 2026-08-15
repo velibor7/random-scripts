@@ -1,0 +1,972 @@
+================================================================================
+QUESTION:
+You have Cloud Functions written in Node.js that pull messages from Cloud Pub/Sub and send the data to BigQuery. You observe that the message processing rate on the Pub/Sub topic is orders of magnitude higher than anticipated, but there is no error logged in Cloud Logging. What are the two most likely causes of this problem? (Choose two.)
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Publisher throughput quota is too small.
+										
+
+
+													B.
+												
+											
+											Total outstanding messages exceed the 10-MB maximum.
+										
+
+
+													C.
+												
+											
+											Error handling in the subscriber code is not handling run-time errors properly.
+										
+
+
+													D.
+												
+											
+											The subscriber code cannot keep up with the messages.
+										
+
+
+													E.
+												
+											
+											The subscriber code does not acknowledge the messages that it pulls.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+DE
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (151 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 109 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 109
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have Cloud Functions written in Node.js that pull messages from Cloud Pub/Sub and send the data to BigQuery. You observe that the message processing rate on the Pub/Sub topic is orders of magnitude higher than anticipated, but there is no error logged in Cloud Logging. What are the two most likely causes of this problem? (Choose two.)
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Publisher throughput quota is too small.
+										
+
+
+													B.
+												
+											
+											Total outstanding messages exceed the 10-MB maximum.
+										
+
+
+													C.
+												
+											
+											Error handling in the subscriber code is not handling run-time errors properly.
+										
+
+
+													D.
+												
+											
+											The subscriber code cannot keep up with the messages.
+										
+
+
+													E.
+												
+											
+											The subscriber code does not acknowledge the messages that it pulls.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+DE
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 3, 2022, 2:09 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 109
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 3, 2022, 2:09 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Answer C E
+By not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.
+
+--- Comment #6 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Answer C E
+By not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.
+
+--- Comment #7 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Answer C E
+By not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Answer C E
+By not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.
+
+--- Comment #13 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Answer C E
+By not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.
+
+--- Comment #14 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+TNT87
+			
+
+
+				Highly Voted 
+
+
+			2 years, 6 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C E
+By not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C E
+By not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 13 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #21 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+While poor error handling can cause issues, it would likely result in errors being logged rather than an increased message processing rate without errors, excluding C
+
+--- Comment #22 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+Pime13
+			
+
+
+				Most Recent 
+
+
+			3 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+While poor error handling can cause issues, it would likely result in errors being logged rather than an increased message processing rate without errors, excluding C
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: DE
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+While poor error handling can cause issues, it would likely result in errors being logged rather than an increased message processing rate without errors, excluding C
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+Not C, its talking about the unknown!
+
+--- Comment #31 ---
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+clouditis
+			
+
+
+			3 months, 3 weeks ago
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Not C, its talking about the unknown!
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: DE
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Not C, its talking about the unknown!
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #39 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+The issue is that the acknowledgment is not sent back to sub properly. D, E should be correct.
+
+--- Comment #40 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+SamuelTsch
+			
+
+
+			5 months, 2 weeks ago
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+The issue is that the acknowledgment is not sent back to sub properly. D, E should be correct.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: DE
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+The issue is that the acknowledgment is not sent back to sub properly. D, E should be correct.
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #48 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D. The subscriber code cannot keep up with the messages.
+
+If the processing rate of the subscriber (Cloud Functions) is lower than the incoming message rate, it can lead to a backlog of messages. This would result in higher-than-expected message rates, as messages accumulate while waiting to be processed.
+
+E. The subscriber code does not acknowledge the messages that it pulls.
+
+If messages are not acknowledged properly, Pub/Sub will keep retrying to deliver them, which can lead to the same messages being sent repeatedly. This could also contribute to the perception that the message processing rate is very high.
+
+Both of these issues can lead to unanticipated behavior in your message processing pipeline without generating errors that would be logged in Cloud Logging.
+
+--- Comment #49 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Preetmehta1234
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+D. The subscriber code cannot keep up with the messages.
+
+If the processing rate of the subscriber (Cloud Functions) is lower than the incoming message rate, it can lead to a backlog of messages. This would result in higher-than-expected message rates, as messages accumulate while waiting to be processed.
+
+E. The subscriber code does not acknowledge the messages that it pulls.
+
+If messages are not acknowledged properly, Pub/Sub will keep retrying to deliver them, which can lead to the same messages being sent repeatedly. This could also contribute to the perception that the message processing rate is very high.
+
+Both of these issues can lead to unanticipated behavior in your message processing pipeline without generating errors that would be logged in Cloud Logging.
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: DE
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+D. The subscriber code cannot keep up with the messages.
+
+If the processing rate of the subscriber (Cloud Functions) is lower than the incoming message rate, it can lead to a backlog of messages. This would result in higher-than-expected message rates, as messages accumulate while waiting to be processed.
+
+E. The subscriber code does not acknowledge the messages that it pulls.
+
+If messages are not acknowledged properly, Pub/Sub will keep retrying to deliver them, which can lead to the same messages being sent repeatedly. This could also contribute to the perception that the message processing rate is very high.
+
+Both of these issues can lead to unanticipated behavior in your message processing pipeline without generating errors that would be logged in Cloud Logging.
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #57 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+The code in the CF can't keep up with the amount of messages, thus C D is a better fit
+
+--- Comment #58 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+JamesKarianis
+			
+
+
+			8 months ago
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+The code in the CF can't keep up with the amount of messages, thus C D is a better fit
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: CD
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+The code in the CF can't keep up with the amount of messages, thus C D is a better fit
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #66 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Ref chatgpt
+Option C, "Error handling in the subscriber code is not handling run-time errors properly," suggests that the subscriber code may not be correctly handling errors that occur during message processing. If the subscriber code encounters an error that it cannot handle, such as a syntax error or a network issue, it may stop processing messages, leading to a slowdown in message processing.
+
+However, the lack of error logs in Cloud Logging suggests that there are no errors being logged, which makes it less likely that this is the primary cause of the observed behavior. Additionally, while incorrect error handling could contribute to the issue, it may not be the primary reason why the message processing rate is much higher than anticipated.
+
+--- Comment #67 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+mialll
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #68 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Ref chatgpt
+Option C, "Error handling in the subscriber code is not handling run-time errors properly," suggests that the subscriber code may not be correctly handling errors that occur during message processing. If the subscriber code encounters an error that it cannot handle, such as a syntax error or a network issue, it may stop processing messages, leading to a slowdown in message processing.
+
+However, the lack of error logs in Cloud Logging suggests that there are no errors being logged, which makes it less likely that this is the primary cause of the observed behavior. Additionally, while incorrect error handling could contribute to the issue, it may not be the primary reason why the message processing rate is much higher than anticipated.
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: DE
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+Ref chatgpt
+Option C, "Error handling in the subscriber code is not handling run-time errors properly," suggests that the subscriber code may not be correctly handling errors that occur during message processing. If the subscriber code encounters an error that it cannot handle, such as a syntax error or a network issue, it may stop processing messages, leading to a slowdown in message processing.
+
+However, the lack of error logs in Cloud Logging suggests that there are no errors being logged, which makes it less likely that this is the primary cause of the observed behavior. Additionally, while incorrect error handling could contribute to the issue, it may not be the primary reason why the message processing rate is much higher than anticipated.
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Chat says about Option C: "it may stop processing messages, leading to a slowdown in message processing" - but is doesn't say there's a slowdown in the question. It says it's increased.
+
+I would replace C with D.  If the Cloud Function isn't capable of processing messages as quickly as they arrive, the backlog will grow, leading to higher processing rates as the function continuously tries to catch up. This scenario might not generate errors in Cloud Logging if the function is simply falling behind.
+
+--- Comment #74 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Chat says about Option C: "it may stop processing messages, leading to a slowdown in message processing" - but is doesn't say there's a slowdown in the question. It says it's increased.
+
+I would replace C with D.  If the Cloud Function isn't capable of processing messages as quickly as they arrive, the backlog will grow, leading to higher processing rates as the function continuously tries to catch up. This scenario might not generate errors in Cloud Logging if the function is simply falling behind.
+
+--- Comment #75 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+GCPete
+			
+
+
+			1 year, 5 months ago
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+Chat says about Option C: "it may stop processing messages, leading to a slowdown in message processing" - but is doesn't say there's a slowdown in the question. It says it's increased.
+
+I would replace C with D.  If the Cloud Function isn't capable of processing messages as quickly as they arrive, the backlog will grow, leading to higher processing rates as the function continuously tries to catch up. This scenario might not generate errors in Cloud Logging if the function is simply falling behind.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+Chat says about Option C: "it may stop processing messages, leading to a slowdown in message processing" - but is doesn't say there's a slowdown in the question. It says it's increased.
+
+I would replace C with D.  If the Cloud Function isn't capable of processing messages as quickly as they arrive, the backlog will grow, leading to higher processing rates as the function continuously tries to catch up. This scenario might not generate errors in Cloud Logging if the function is simply falling behind.
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #83 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+C - as no error shown in Cloud Logging
+Between D & E, both could lead to the problem. I have worked with lot of PubSub issues, most of them are due to the bottleneck at the code where it takes too long to process 1 message and causes backlog. E could lead to backlog too, but it is too obvious and not likely to happen in reality.
+However, when I ask AI the same question, it said C and E
+
+--- Comment #84 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+midgoo
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #85 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+C - as no error shown in Cloud Logging
+Between D & E, both could lead to the problem. I have worked with lot of PubSub issues, most of them are due to the bottleneck at the code where it takes too long to process 1 message and causes backlog. E could lead to backlog too, but it is too obvious and not likely to happen in reality.
+However, when I ask AI the same question, it said C and E
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: CE
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+C - as no error shown in Cloud Logging
+Between D & E, both could lead to the problem. I have worked with lot of PubSub issues, most of them are due to the bottleneck at the code where it takes too long to process 1 message and causes backlog. E could lead to backlog too, but it is too obvious and not likely to happen in reality.
+However, when I ask AI the same question, it said C and E
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #90 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+C. Error handling in the subscriber (Cloud Functions) code is not handling run-time errors properly.
+
+This would mean to have error logs in Cloud Logging as CF by default logs to it.
+
+--- Comment #91 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+C. Error handling in the subscriber (Cloud Functions) code is not handling run-time errors properly.
+
+This would mean to have error logs in Cloud Logging as CF by default logs to it.
+
+--- Comment #92 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+cetanx
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+C. Error handling in the subscriber (Cloud Functions) code is not handling run-time errors properly.
+
+This would mean to have error logs in Cloud Logging as CF by default logs to it.
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+C. Error handling in the subscriber (Cloud Functions) code is not handling run-time errors properly.
+
+This would mean to have error logs in Cloud Logging as CF by default logs to it.
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #100 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Answer D&E
+I am not in the favour of C, error handling is a side factor but not the primary cause. 
+First check the configuration access. 
+Does subscriber has enough acknowledge policies (option E)
+Does sub have ability to keep up the message( enough network, cpu and capable codes) (option D)
+option C is just a part of option D somewhere showing incapable handling
+
+--- Comment #101 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+musumusu
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D&E
+I am not in the favour of C, error handling is a side factor but not the primary cause. 
+First check the configuration access. 
+Does subscriber has enough acknowledge policies (option E)
+Does sub have ability to keep up the message( enough network, cpu and capable codes) (option D)
+option C is just a part of option D somewhere showing incapable handling
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D&E
+I am not in the favour of C, error handling is a side factor but not the primary cause. 
+First check the configuration access. 
+Does subscriber has enough acknowledge policies (option E)
+Does sub have ability to keep up the message( enough network, cpu and capable codes) (option D)
+option C is just a part of option D somewhere showing incapable handling
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #108 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+My question is: 'What is the actual problem?'
+- That there is no logs in Cloud Logging?
+- That Pub/Sub is having a problem?
+- Or there an actual problem?
+- Is there an actual error?
+
+So what is Pub/Sub the message processing rate is high...Does that mean there is a problem?
+
+Thoughts?
+
+--- Comment #109 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+desertlotus1211
+			
+
+
+			2 years, 2 months ago
+
+--- Comment #110 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+My question is: 'What is the actual problem?'
+- That there is no logs in Cloud Logging?
+- That Pub/Sub is having a problem?
+- Or there an actual problem?
+- Is there an actual error?
+
+So what is Pub/Sub the message processing rate is high...Does that mean there is a problem?
+
+Thoughts?
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+My question is: 'What is the actual problem?'
+- That there is no logs in Cloud Logging?
+- That Pub/Sub is having a problem?
+- Or there an actual problem?
+- Is there an actual error?
+
+So what is Pub/Sub the message processing rate is high...Does that mean there is a problem?
+
+Thoughts?
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #114 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Like TNT87 mentioned the message processing rate is high "meaning the messages accumulate instead of being consumed and removed from Pub/Sub."
+
+--- Comment #115 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Like TNT87 mentioned the message processing rate is high "meaning the messages accumulate instead of being consumed and removed from Pub/Sub."
+
+--- Comment #116 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+squishy_fishy
+			
+
+
+			1 year, 7 months ago
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+Like TNT87 mentioned the message processing rate is high "meaning the messages accumulate instead of being consumed and removed from Pub/Sub."
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+Like TNT87 mentioned the message processing rate is high "meaning the messages accumulate instead of being consumed and removed from Pub/Sub."
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #124 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+C, E seems correct
+
+--- Comment #125 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+AzureDP900
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+C, E seems correct
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+C, E seems correct
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #132 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+D might also be right? 
+Subscriber might not be provisioned enough
+
+--- Comment #133 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+MounicaN
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+D might also be right? 
+Subscriber might not be provisioned enough
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+D might also be right? 
+Subscriber might not be provisioned enough
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #140 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+C. Error handling in the subscriber code is not handling run-time errors properly.
+E. The subscriber code does not acknowledge the messages that it pulls.
+
+--- Comment #141 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+AWSandeep
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+C. Error handling in the subscriber code is not handling run-time errors properly.
+E. The subscriber code does not acknowledge the messages that it pulls.
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: CE
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+C. Error handling in the subscriber code is not handling run-time errors properly.
+E. The subscriber code does not acknowledge the messages that it pulls.
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

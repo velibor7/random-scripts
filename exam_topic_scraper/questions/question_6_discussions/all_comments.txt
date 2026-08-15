@@ -1,0 +1,1182 @@
+ALL COMMENTS FOR QUESTION 6
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 6 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 6
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your weather app queries a database every 15 minutes to get the current temperature. The frontend is powered by Google App Engine and server millions of users. How should you design the frontend to respond to a database failure?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Issue a command to restart the database servers.
+										
+
+
+													B.
+												
+											
+											Retry the query with exponential backoff, up to a cap of 15 minutes.
+										
+
+
+													C.
+												
+											
+											Retry the query every second until it comes back online to minimize staleness of data.
+										
+
+
+													D.
+												
+											
+											Reduce the query frequency to once every hour until the database comes back online.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 15, 2020, 8:43 a.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 6
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 15, 2020, 8:43 a.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+Correct answer is B. App engine create applications that use Cloud SQL database connections effectively. Below is what is written in google cloud documnetation.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+This retry only makes sense when first connecting, or when first grabbing a connection from the pool. If errors happen in the middle of a transaction, the application must do the retrying, and it must retry from the beginning of a transaction. So even if your pool is configured properly, the application might still see errors if connections are lost.
+
+reference link is https://cloud.google.com/sql/docs/mysql/manage-connections
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+Correct answer is B. App engine create applications that use Cloud SQL database connections effectively. Below is what is written in google cloud documnetation.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+This retry only makes sense when first connecting, or when first grabbing a connection from the pool. If errors happen in the middle of a transaction, the application must do the retrying, and it must retry from the beginning of a transaction. So even if your pool is configured properly, the application might still see errors if connections are lost.
+
+reference link is https://cloud.google.com/sql/docs/mysql/manage-connections
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+Correct answer is B. App engine create applications that use Cloud SQL database connections effectively. Below is what is written in google cloud documnetation.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+This retry only makes sense when first connecting, or when first grabbing a connection from the pool. If errors happen in the middle of a transaction, the application must do the retrying, and it must retry from the beginning of a transaction. So even if your pool is configured properly, the application might still see errors if connections are lost.
+
+reference link is https://cloud.google.com/sql/docs/mysql/manage-connections
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+Correct answer is B. App engine create applications that use Cloud SQL database connections effectively. Below is what is written in google cloud documnetation.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+This retry only makes sense when first connecting, or when first grabbing a connection from the pool. If errors happen in the middle of a transaction, the application must do the retrying, and it must retry from the beginning of a transaction. So even if your pool is configured properly, the application might still see errors if connections are lost.
+
+reference link is https://cloud.google.com/sql/docs/mysql/manage-connections
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+Correct answer is B. App engine create applications that use Cloud SQL database connections effectively. Below is what is written in google cloud documnetation.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+This retry only makes sense when first connecting, or when first grabbing a connection from the pool. If errors happen in the middle of a transaction, the application must do the retrying, and it must retry from the beginning of a transaction. So even if your pool is configured properly, the application might still see errors if connections are lost.
+
+reference link is https://cloud.google.com/sql/docs/mysql/manage-connections
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+Radhika7983
+			
+
+
+				Highly Voted 
+
+
+			4 years, 5 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct answer is B. App engine create applications that use Cloud SQL database connections effectively. Below is what is written in google cloud documnetation.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+This retry only makes sense when first connecting, or when first grabbing a connection from the pool. If errors happen in the middle of a transaction, the application must do the retrying, and it must retry from the beginning of a transaction. So even if your pool is configured properly, the application might still see errors if connections are lost.
+
+reference link is https://cloud.google.com/sql/docs/mysql/manage-connections
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct answer is B. App engine create applications that use Cloud SQL database connections effectively. Below is what is written in google cloud documnetation.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+This retry only makes sense when first connecting, or when first grabbing a connection from the pool. If errors happen in the middle of a transaction, the application must do the retrying, and it must retry from the beginning of a transaction. So even if your pool is configured properly, the application might still see errors if connections are lost.
+
+reference link is https://cloud.google.com/sql/docs/mysql/manage-connections
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 54 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+https://cloud.google.com/sql/docs/mysql/manage-connections#backoff
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+llamaste
+			
+
+
+				Highly Voted 
+
+
+			4 years, 8 months ago
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/sql/docs/mysql/manage-connections#backoff
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/sql/docs/mysql/manage-connections#backoff
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 3 weeks, 2 days ago | Votes: 0
+Exponential backoff avoids swamping the server. Higher rates may only make problem worse. Front-end should not have option to restart DB.
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date: 3 weeks, 2 days ago | Votes: 0
+willyunger
+			
+
+
+				Most Recent 
+
+
+			3 weeks, 2 days ago
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exponential backoff avoids swamping the server. Higher rates may only make problem worse. Front-end should not have option to restart DB.
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exponential backoff avoids swamping the server. Higher rates may only make problem worse. Front-end should not have option to restart DB.
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date: 2 months, 3 weeks ago | Votes: 0
+We should use exponential backoff because it reduces load on the failing database, optimizes retry timing and is the industry best practice. Exponential backoff is a retry strategy where the wait time between retry increase exponentially. By gradually increasing the retry interval, the system avoids wasting resources on immediate retries when the database is likely still down.
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date: 2 months, 3 weeks ago | Votes: 0
+cqrm3n
+			
+
+
+			2 months, 3 weeks ago
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+We should use exponential backoff because it reduces load on the failing database, optimizes retry timing and is the industry best practice. Exponential backoff is a retry strategy where the wait time between retry increase exponentially. By gradually increasing the retry interval, the system avoids wasting resources on immediate retries when the database is likely still down.
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+We should use exponential backoff because it reduces load on the failing database, optimizes retry timing and is the industry best practice. Exponential backoff is a retry strategy where the wait time between retry increase exponentially. By gradually increasing the retry interval, the system avoids wasting resources on immediate retries when the database is likely still down.
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Exponential backoff is a commonly used technique to handle temporary failures, such as a database server becoming temporarily unavailable. This approach retries the query, initially with a short delay and then with increasingly longer intervals between retries. Setting a cap of 15 minutes ensures that you don't excessively burden your system with constant retries.
+
+Option C (retrying the query every second) can be too aggressive and may lead to excessive load on the server when it comes back online.
+
+Option D (reducing the query frequency to once every hour) would result in significantly stale data and a poor user experience, which is generally not desirable for a weather app.
+
+Option A (issuing a command to restart the database servers) is not a suitable action for a frontend component and might not address the issue effectively. Database server restarts should be managed as a part of the infrastructure and not initiated by the frontend.
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+rtcpost
+			
+
+
+			6 months, 2 weeks ago
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exponential backoff is a commonly used technique to handle temporary failures, such as a database server becoming temporarily unavailable. This approach retries the query, initially with a short delay and then with increasingly longer intervals between retries. Setting a cap of 15 minutes ensures that you don't excessively burden your system with constant retries.
+
+Option C (retrying the query every second) can be too aggressive and may lead to excessive load on the server when it comes back online.
+
+Option D (reducing the query frequency to once every hour) would result in significantly stale data and a poor user experience, which is generally not desirable for a weather app.
+
+Option A (issuing a command to restart the database servers) is not a suitable action for a frontend component and might not address the issue effectively. Database server restarts should be managed as a part of the infrastructure and not initiated by the frontend.
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exponential backoff is a commonly used technique to handle temporary failures, such as a database server becoming temporarily unavailable. This approach retries the query, initially with a short delay and then with increasingly longer intervals between retries. Setting a cap of 15 minutes ensures that you don't excessively burden your system with constant retries.
+
+Option C (retrying the query every second) can be too aggressive and may lead to excessive load on the server when it comes back online.
+
+Option D (reducing the query frequency to once every hour) would result in significantly stale data and a poor user experience, which is generally not desirable for a weather app.
+
+Option A (issuing a command to restart the database servers) is not a suitable action for a frontend component and might not address the issue effectively. Database server restarts should be managed as a part of the infrastructure and not initiated by the frontend.
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+correct answer -> Retry the query with exponential backoff, up to a cap of 15 minutes.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+samdhimal
+			
+
+
+			6 months, 2 weeks ago
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+correct answer -> Retry the query with exponential backoff, up to a cap of 15 minutes.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+correct answer -> Retry the query with exponential backoff, up to a cap of 15 minutes.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+Exponential backoff with a cap is a common technique used to handle temporary failures, such as database outages. In this approach, the frontend will retry the query with increasing intervals (e.g., 1s, 2s, 4s, 8s, etc.) up to a maximum interval (in this case, 15 minutes), this will help to avoid overwhelming the database servers with too many requests at once, and minimize the impact of the failure on the users.
+
+Option A, is not recommended because it's not guaranteed that restarting the database servers will fix the problem, it could be a network or a configuration problem and it could cause more downtime.
+
+Option C is not recommended because it could cause too many requests to be sent to the server, overwhelming the database and causing more downtime.
+
+Option D is not recommended because reducing the query frequency too much would result in stale data, and users will not receive the most up-to-date information.
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+Exponential backoff with a cap is a common technique used to handle temporary failures, such as database outages. In this approach, the frontend will retry the query with increasing intervals (e.g., 1s, 2s, 4s, 8s, etc.) up to a maximum interval (in this case, 15 minutes), this will help to avoid overwhelming the database servers with too many requests at once, and minimize the impact of the failure on the users.
+
+Option A, is not recommended because it's not guaranteed that restarting the database servers will fix the problem, it could be a network or a configuration problem and it could cause more downtime.
+
+Option C is not recommended because it could cause too many requests to be sent to the server, overwhelming the database and causing more downtime.
+
+Option D is not recommended because reducing the query frequency too much would result in stale data, and users will not receive the most up-to-date information.
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+samdhimal
+			
+
+
+			2 years, 2 months ago
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exponential backoff with a cap is a common technique used to handle temporary failures, such as database outages. In this approach, the frontend will retry the query with increasing intervals (e.g., 1s, 2s, 4s, 8s, etc.) up to a maximum interval (in this case, 15 minutes), this will help to avoid overwhelming the database servers with too many requests at once, and minimize the impact of the failure on the users.
+
+Option A, is not recommended because it's not guaranteed that restarting the database servers will fix the problem, it could be a network or a configuration problem and it could cause more downtime.
+
+Option C is not recommended because it could cause too many requests to be sent to the server, overwhelming the database and causing more downtime.
+
+Option D is not recommended because reducing the query frequency too much would result in stale data, and users will not receive the most up-to-date information.
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exponential backoff with a cap is a common technique used to handle temporary failures, such as database outages. In this approach, the frontend will retry the query with increasing intervals (e.g., 1s, 2s, 4s, 8s, etc.) up to a maximum interval (in this case, 15 minutes), this will help to avoid overwhelming the database servers with too many requests at once, and minimize the impact of the failure on the users.
+
+Option A, is not recommended because it's not guaranteed that restarting the database servers will fix the problem, it could be a network or a configuration problem and it could cause more downtime.
+
+Option C is not recommended because it could cause too many requests to be sent to the server, overwhelming the database and causing more downtime.
+
+Option D is not recommended because reducing the query frequency too much would result in stale data, and users will not receive the most up-to-date information.
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Retries with exponential backoff seems like the most efficient option in this scenario
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+RT_G
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Retries with exponential backoff seems like the most efficient option in this scenario
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Retries with exponential backoff seems like the most efficient option in this scenario
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Correct answer is B
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+rocky48
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct answer is B
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct answer is B
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+good answer, good answer @radhika7983.
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+gudguy1a
+			
+
+
+			1 year, 7 months ago
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+good answer, good answer @radhika7983.
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+good answer, good answer @radhika7983.
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is anser
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Datardp
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is anser
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is anser
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+I agree with the exponential backoff technique, even thoght I do not see why 15 minutes should be a desired choice.
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+vaga1
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+I agree with the exponential backoff technique, even thoght I do not see why 15 minutes should be a desired choice.
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I agree with the exponential backoff technique, even thoght I do not see why 15 minutes should be a desired choice.
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+I guess that when u have failed after 15 minutes, your app must go through a serious review before being used again, since it is not able to provide the updated results as quickly as desired.
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+I guess that when u have failed after 15 minutes, your app must go through a serious review before being used again, since it is not able to provide the updated results as quickly as desired.
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+vaga1
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I guess that when u have failed after 15 minutes, your app must go through a serious review before being used again, since it is not able to provide the updated results as quickly as desired.
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I guess that when u have failed after 15 minutes, your app must go through a serious review before being used again, since it is not able to provide the updated results as quickly as desired.
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Truncated exponential backoff is a standard error-handling strategy for network applications. In this approach, a client periodically retries a failed request with increasing delays between requests
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+yafsong
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Truncated exponential backoff is a standard error-handling strategy for network applications. In this approach, a client periodically retries a failed request with increasing delays between requests
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Truncated exponential backoff is a standard error-handling strategy for network applications. In this approach, a client periodically retries a failed request with increasing delays between requests
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+B is right
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+hiromi
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is right
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is right
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+According to the documentation
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+shiv14
+			
+
+
+			3 years, 1 month ago
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+According to the documentation
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+According to the documentation
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+B is Correct; this question appeared in Cloud Architect exam also
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+deep_ROOT
+			
+
+
+			3 years, 2 months ago
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is Correct; this question appeared in Cloud Architect exam also
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is Correct; this question appeared in Cloud Architect exam also
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+B, 
+backoff is a standard error handling strategy for network applications in which a client periodically retries a failed request with increasing delays between requests. Clients should use truncated exponential backoff for all requests to Cloud Storage that return HTTP 5xx and 429 response codes, including uploads and downloads of data or metadata.
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+MaxNRG
+			
+
+
+			3 years, 5 months ago
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B, 
+backoff is a standard error handling strategy for network applications in which a client periodically retries a failed request with increasing delays between requests. Clients should use truncated exponential backoff for all requests to Cloud Storage that return HTTP 5xx and 429 response codes, including uploads and downloads of data or metadata.
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B, 
+backoff is a standard error handling strategy for network applications in which a client periodically retries a failed request with increasing delays between requests. Clients should use truncated exponential backoff for all requests to Cloud Storage that return HTTP 5xx and 429 response codes, including uploads and downloads of data or metadata.
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+Ans: B
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+anji007
+			
+
+
+			3 years, 5 months ago
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Ans: B
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Ans: B
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

@@ -1,0 +1,1446 @@
+ALL COMMENTS FOR QUESTION 54
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 54 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 54
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your globally distributed auction application allows users to bid on items. Occasionally, users place identical bids at nearly identical times, and different application servers process those bids. Each bid event contains the item, amount, user, and timestamp. You want to collate those bid events into a single location in real time to determine which user bid first. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a file on a shared file and have the application servers write all bid events to that file. Process the file with Apache Hadoop to identify which user bid first.
+										
+
+
+													B.
+												
+											
+											Have each application server write the bid events to Cloud Pub/Sub as they occur. Push the events from Cloud Pub/Sub to a custom endpoint that writes the bid event information into Cloud SQL.
+										
+
+
+													C.
+												
+											
+											Set up a MySQL database for each application server to write bid events into. Periodically query each of those distributed MySQL databases and update a master MySQL database with bid event information.
+										
+
+
+													D.
+												
+											
+											Have each application server write the bid events to Google Cloud Pub/Sub as they occur. Use a pull subscription to pull the bid events using Google Cloud Dataflow. Give the bid for each item to the user in the bid event that is processed first.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 15, 2020, 4:17 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 54
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 15, 2020, 4:17 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+I'd go with B: real-time is requested, and the only scenario for real time (in the 4 presented) is the use of pub/sub with push.
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+I'd go with B: real-time is requested, and the only scenario for real time (in the 4 presented) is the use of pub/sub with push.
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+I'd go with B: real-time is requested, and the only scenario for real time (in the 4 presented) is the use of pub/sub with push.
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+I'd go with B: real-time is requested, and the only scenario for real time (in the 4 presented) is the use of pub/sub with push.
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+I'd go with B: real-time is requested, and the only scenario for real time (in the 4 presented) is the use of pub/sub with push.
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+jvg637
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+I'd go with B: real-time is requested, and the only scenario for real time (in the 4 presented) is the use of pub/sub with push.
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I'd go with B: real-time is requested, and the only scenario for real time (in the 4 presented) is the use of pub/sub with push.
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 65 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+B. 
+- for realtime pub/sub push is critical. pull creates latency. (eliminates D)
+- process by event-time, not by process -time (eliminates D)
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+B. 
+- for realtime pub/sub push is critical. pull creates latency. (eliminates D)
+- process by event-time, not by process -time (eliminates D)
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Tanzu
+			
+
+
+			3 years, 1 month ago
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+B. 
+- for realtime pub/sub push is critical. pull creates latency. (eliminates D)
+- process by event-time, not by process -time (eliminates D)
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. 
+- for realtime pub/sub push is critical. pull creates latency. (eliminates D)
+- process by event-time, not by process -time (eliminates D)
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+no push avail: https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#streaming-pull-migration
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+no push avail: https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#streaming-pull-migration
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+godot
+			
+
+
+			3 years ago
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+no push avail: https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#streaming-pull-migration
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+no push avail: https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#streaming-pull-migration
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+The dataflow is designed for realtime processing. and this case should be needed to use dataflow because there is no option to order the data if not using dataflow. So D is answer I think
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+jin0
+			
+
+
+			2 years, 1 month ago
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The dataflow is designed for realtime processing. and this case should be needed to use dataflow because there is no option to order the data if not using dataflow. So D is answer I think
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The dataflow is designed for realtime processing. and this case should be needed to use dataflow because there is no option to order the data if not using dataflow. So D is answer I think
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Agree with B
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+AzureDP900
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Agree with B
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Agree with B
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date: 3 years, 11 months ago | Votes: 0
+i would go with option B, Cause option D states "Give the bid for each item to the user in the bid event that is processed first"  . The requirement is to get the first bid based on event time not processed first in dataflow.
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date: 3 years, 11 months ago | Votes: 0
+[Removed]
+			
+
+
+			3 years, 11 months ago
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+i would go with option B, Cause option D states "Give the bid for each item to the user in the bid event that is processed first"  . The requirement is to get the first bid based on event time not processed first in dataflow.
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+i would go with option B, Cause option D states "Give the bid for each item to the user in the bid event that is processed first"  . The requirement is to get the first bid based on event time not processed first in dataflow.
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 28 times
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+This approach is not ideal because it requires a custom endpoint to write the bid event information into Cloud SQL. This adds additional complexity and potential points of failure to the architecture, as well as adding latency to the processing of bid events, since the data must be written to both Pub/Sub and Cloud SQL. Additionally, it can be more challenging to ensure that bid events are processed in the order they were received, since the data is being written to multiple databases. Finally, using a single database to store bid events could limit scalability and availability, and can also result in slow query performance.
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+donbigi
+			
+
+
+			2 years, 2 months ago
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+This approach is not ideal because it requires a custom endpoint to write the bid event information into Cloud SQL. This adds additional complexity and potential points of failure to the architecture, as well as adding latency to the processing of bid events, since the data must be written to both Pub/Sub and Cloud SQL. Additionally, it can be more challenging to ensure that bid events are processed in the order they were received, since the data is being written to multiple databases. Finally, using a single database to store bid events could limit scalability and availability, and can also result in slow query performance.
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+This approach is not ideal because it requires a custom endpoint to write the bid event information into Cloud SQL. This adds additional complexity and potential points of failure to the architecture, as well as adding latency to the processing of bid events, since the data must be written to both Pub/Sub and Cloud SQL. Additionally, it can be more challenging to ensure that bid events are processed in the order they were received, since the data is being written to multiple databases. Finally, using a single database to store bid events could limit scalability and availability, and can also result in slow query performance.
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date: 4 years, 12 months ago | Votes: 0
+D
+The need is to collate the messages in real-time. We need to de-dupe the messages based on timestamp of when the event occurred. This can be done by publishing ot Pub-Sub and consuming via Dataflow.
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date: 4 years, 12 months ago | Votes: 0
+Ganshank
+			
+
+
+				Highly Voted 
+
+
+			4 years, 12 months ago
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+D
+The need is to collate the messages in real-time. We need to de-dupe the messages based on timestamp of when the event occurred. This can be done by publishing ot Pub-Sub and consuming via Dataflow.
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D
+The need is to collate the messages in real-time. We need to de-dupe the messages based on timestamp of when the event occurred. This can be done by publishing ot Pub-Sub and consuming via Dataflow.
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 34 times
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+D isnt correct, Pub/sub can send messages out of order, it is no guaranty that the event with lowest timestamp will be processed first
+B is correct
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+D isnt correct, Pub/sub can send messages out of order, it is no guaranty that the event with lowest timestamp will be processed first
+B is correct
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+unnamed12355
+			
+
+
+			2 years ago
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D isnt correct, Pub/sub can send messages out of order, it is no guaranty that the event with lowest timestamp will be processed first
+B is correct
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D isnt correct, Pub/sub can send messages out of order, it is no guaranty that the event with lowest timestamp will be processed first
+B is correct
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Yeap, that's why B is the right one. It has pub/sub push, more real time than pub/sub pull. You need to aware at some point , something has to be pulled which adds a latency.
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Tanzu
+			
+
+
+			3 years, 1 month ago
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Yeap, that's why B is the right one. It has pub/sub push, more real time than pub/sub pull. You need to aware at some point , something has to be pulled which adds a latency.
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Yeap, that's why B is the right one. It has pub/sub push, more real time than pub/sub pull. You need to aware at some point , something has to be pulled which adds a latency.
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date: 1 month, 1 week ago | Votes: 0
+Answer is B
+This sentence invalidates D
+"Give the bid for each item to the user in the bid event that is processed first."
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date: 1 month, 1 week ago | Votes: 0
+dcruzado
+			
+
+
+				Most Recent 
+
+
+			1 month, 1 week ago
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is B
+This sentence invalidates D
+"Give the bid for each item to the user in the bid event that is processed first."
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is B
+This sentence invalidates D
+"Give the bid for each item to the user in the bid event that is processed first."
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date: 3 months ago | Votes: 0
+process by event-time, not by process -time (eliminates D
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date: 3 months ago | Votes: 0
+manikolbe
+			
+
+
+			3 months ago
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+process by event-time, not by process -time (eliminates D
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+process by event-time, not by process -time (eliminates D
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date: 3 months ago | Votes: 0
+Writing directly to Cloud SQL in real time can cause bottlenecks as Cloud SQL is not designed for high-frequency, low-latency writes from multiple sources.
+
+Answer D is right as Dataflow and Pubsub has the realtime capability
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date: 3 months ago | Votes: 0
+Ronn27
+			
+
+
+			3 months ago
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Writing directly to Cloud SQL in real time can cause bottlenecks as Cloud SQL is not designed for high-frequency, low-latency writes from multiple sources.
+
+Answer D is right as Dataflow and Pubsub has the realtime capability
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Writing directly to Cloud SQL in real time can cause bottlenecks as Cloud SQL is not designed for high-frequency, low-latency writes from multiple sources.
+
+Answer D is right as Dataflow and Pubsub has the realtime capability
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+Bid event time and Pull Subscription is important part.
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+DGames
+			
+
+
+			3 months, 3 weeks ago
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Bid event time and Pull Subscription is important part.
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Bid event time and Pull Subscription is important part.
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+It feels like it depends what's actually in the dataflow pipeline. D I believe is the answer they intend, even if messages are pulled out of order.
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+baimus
+			
+
+
+			6 months, 2 weeks ago
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It feels like it depends what's actually in the dataflow pipeline. D I believe is the answer they intend, even if messages are pulled out of order.
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It feels like it depends what's actually in the dataflow pipeline. D I believe is the answer they intend, even if messages are pulled out of order.
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+While using Cloud Pub/Sub for real-time event streaming is a good choice, pushing events to a custom endpoint that writes to Cloud SQL introduces additional complexity.
+Custom endpoints need to be maintained, and the process of writing to Cloud SQL might not be as efficient as using a purpose-built data processing service.
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+manel_bhs
+			
+
+
+			8 months, 3 weeks ago
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+While using Cloud Pub/Sub for real-time event streaming is a good choice, pushing events to a custom endpoint that writes to Cloud SQL introduces additional complexity.
+Custom endpoints need to be maintained, and the process of writing to Cloud SQL might not be as efficient as using a purpose-built data processing service.
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+While using Cloud Pub/Sub for real-time event streaming is a good choice, pushing events to a custom endpoint that writes to Cloud SQL introduces additional complexity.
+Custom endpoints need to be maintained, and the process of writing to Cloud SQL might not be as efficient as using a purpose-built data processing service.
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+In D the user gets it where the data is ingested first. That can be wrong for a global auction solution
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Snnnnneee
+			
+
+
+			9 months, 1 week ago
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+In D the user gets it where the data is ingested first. That can be wrong for a global auction solution
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+In D the user gets it where the data is ingested first. That can be wrong for a global auction solution
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+This is the most suitable solution for the requirements. Google Cloud Pub/Sub can handle high throughput and low-latency data ingestion. Coupled with Google Cloud Dataflow, which can process data streams in real time, this setup allows for immediate processing of bid events. Dataflow can also handle ordering and timestamp extraction, crucial for determining which bid came first. This architecture supports scalability and real-time analytics, which are essential for a global auction system.
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+yassoraa88
+			
+
+
+			11 months, 1 week ago
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+This is the most suitable solution for the requirements. Google Cloud Pub/Sub can handle high throughput and low-latency data ingestion. Coupled with Google Cloud Dataflow, which can process data streams in real time, this setup allows for immediate processing of bid events. Dataflow can also handle ordering and timestamp extraction, crucial for determining which bid came first. This architecture supports scalability and real-time analytics, which are essential for a global auction system.
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+This is the most suitable solution for the requirements. Google Cloud Pub/Sub can handle high throughput and low-latency data ingestion. Coupled with Google Cloud Dataflow, which can process data streams in real time, this setup allows for immediate processing of bid events. Dataflow can also handle ordering and timestamp extraction, crucial for determining which bid came first. This architecture supports scalability and real-time analytics, which are essential for a global auction system.
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+the Answer should be D for the following 
+Real-time Processing
+Centralized Processing
+Winner Determination
+also, B is unsuitable as While Pub/Sub can ingest data, Cloud SQL is a relational database not designed for real-time processing at this scale. Maintaining a custom endpoint adds complexity.
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+teka112233
+			
+
+
+			11 months, 1 week ago
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+the Answer should be D for the following 
+Real-time Processing
+Centralized Processing
+Winner Determination
+also, B is unsuitable as While Pub/Sub can ingest data, Cloud SQL is a relational database not designed for real-time processing at this scale. Maintaining a custom endpoint adds complexity.
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+the Answer should be D for the following 
+Real-time Processing
+Centralized Processing
+Winner Determination
+also, B is unsuitable as While Pub/Sub can ingest data, Cloud SQL is a relational database not designed for real-time processing at this scale. Maintaining a custom endpoint adds complexity.
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+Google Cloud Pub/Sub is a scalable and reliable messaging service that can handle high volumes of data and deliver messages in real-time. By having each application server publish bid events to Cloud Pub/Sub, you ensure that all bid events are collected centrally.
+
+Using Cloud Dataflow with a pull subscription allows you to process the bid events in real-time. Cloud Dataflow provides a managed service for stream and batch processing, and it can handle the real-time processing requirements efficiently.
+
+By processing the bid events with Cloud Dataflow, you can determine which user bid first by applying the appropriate logic within your Dataflow pipeline. This approach ensures scalability, reliability, and real-time processing capabilities, making it suitable for handling bid events from multiple application servers.
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+I__SHA1234567
+			
+
+
+			1 year ago
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Google Cloud Pub/Sub is a scalable and reliable messaging service that can handle high volumes of data and deliver messages in real-time. By having each application server publish bid events to Cloud Pub/Sub, you ensure that all bid events are collected centrally.
+
+Using Cloud Dataflow with a pull subscription allows you to process the bid events in real-time. Cloud Dataflow provides a managed service for stream and batch processing, and it can handle the real-time processing requirements efficiently.
+
+By processing the bid events with Cloud Dataflow, you can determine which user bid first by applying the appropriate logic within your Dataflow pipeline. This approach ensures scalability, reliability, and real-time processing capabilities, making it suitable for handling bid events from multiple application servers.
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Google Cloud Pub/Sub is a scalable and reliable messaging service that can handle high volumes of data and deliver messages in real-time. By having each application server publish bid events to Cloud Pub/Sub, you ensure that all bid events are collected centrally.
+
+Using Cloud Dataflow with a pull subscription allows you to process the bid events in real-time. Cloud Dataflow provides a managed service for stream and batch processing, and it can handle the real-time processing requirements efficiently.
+
+By processing the bid events with Cloud Dataflow, you can determine which user bid first by applying the appropriate logic within your Dataflow pipeline. This approach ensures scalability, reliability, and real-time processing capabilities, making it suitable for handling bid events from multiple application servers.
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+B should be the answer, because it writes the bid into Cloud SQL to a distributed system. This way the customer know if they get the bid or not, immediately.
+Also, push requests are faster than pull requests, hence they are better for realtime experience.
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+philli1011
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B should be the answer, because it writes the bid into Cloud SQL to a distributed system. This way the customer know if they get the bid or not, immediately.
+Also, push requests are faster than pull requests, hence they are better for realtime experience.
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B should be the answer, because it writes the bid into Cloud SQL to a distributed system. This way the customer know if they get the bid or not, immediately.
+Also, push requests are faster than pull requests, hence they are better for realtime experience.
+
+COMMENT #187
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #188
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #189
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #190
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #191
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+pub/sub for entry time stamp + event time 
+dataflow for processing and dataflow is better for real time
+
+COMMENT #192
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+arpana_naa
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #193
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+pub/sub for entry time stamp + event time 
+dataflow for processing and dataflow is better for real time
+
+COMMENT #194
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #195
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+pub/sub for entry time stamp + event time 
+dataflow for processing and dataflow is better for real time
+
+COMMENT #196
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #197
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #198
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #199
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #200
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+To accurately determine who bid first in a globally distributed auction application, utilizing a push mechanism instead of a pull mechanism is generally considered the more reliable approach. 
+B should be correct answer.
+
+COMMENT #201
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Nandababy
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #202
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+To accurately determine who bid first in a globally distributed auction application, utilizing a push mechanism instead of a pull mechanism is generally considered the more reliable approach. 
+B should be correct answer.
+
+COMMENT #203
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+To accurately determine who bid first in a globally distributed auction application, utilizing a push mechanism instead of a pull mechanism is generally considered the more reliable approach. 
+B should be correct answer.
+
+COMMENT #204
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #205
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #206
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #207
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #208
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+key words is "single location in real time"
+
+COMMENT #209
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Zepopo
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #210
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+key words is "single location in real time"
+
+COMMENT #211
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #212
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+key words is "single location in real time"
+
+COMMENT #213
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #214
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #215
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #216
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #217
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Answer : D
+We need to de-dupe the messages based on timestamp of when the event occurred. This can be done by publishing ot Pub-Sub and consuming via Dataflow.
+D sounds like a complete answer. B does not.
+
+COMMENT #218
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+rocky48
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #219
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer : D
+We need to de-dupe the messages based on timestamp of when the event occurred. This can be done by publishing ot Pub-Sub and consuming via Dataflow.
+D sounds like a complete answer. B does not.
+
+COMMENT #220
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #221
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer : D
+We need to de-dupe the messages based on timestamp of when the event occurred. This can be done by publishing ot Pub-Sub and consuming via Dataflow.
+D sounds like a complete answer. B does not.
+
+COMMENT #222
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #223
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #224
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #225
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #226
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #227
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #228
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

@@ -1,0 +1,12 @@
+COMMENT #187 FOR QUESTION 21
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+To deduplicate the data most efficiently, especially in a cloud environment where the data is sent periodically and re-transmissions can occur, the recommended approach would be:
+
+D. Maintain a database table to store the hash value and other metadata for each data entry.
+
+This approach allows you to quickly check if an incoming data entry is a duplicate by comparing hash values, which is much faster than comparing all fields of a data entry. The metadata, which includes the timestamp and possibly other relevant information, can help resolve any ambiguities that may arise if the hash function ever produces collisions.
+============================================================

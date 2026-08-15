@@ -1,0 +1,12 @@
+COMMENT #92 FOR QUESTION 256
+============================================================
+Author: Unknown
+Date: 1 year ago
+Votes: 0
+----------------------------------------
+The answer should be D 
+Serverless VPC Access makes it possible for you to connect directly to your Virtual Private Cloud (VPC) network from serverless environments such as Cloud Run, App Engine, or Cloud Functions. Configuring Serverless VPC Access allows your serverless environment to send requests to your VPC network by using internal DNS and internal IP addresses (as defined by RFC 1918 and RFC 6598). The responses to these requests also use your internal network.
+You can use Serverless VPC Access to access Compute Engine VM instances, Memorystore instances, and any other resources with internal DNS or internal IP address.
+(Reference: https://cloud.google.com/vpc/docs/serverless-vpc-access)
+When you use Airflow Rest API to tigger the job, the url is based on the private IP address of Cloud Composer Instance, so you need to use Serverless VPC Access for it.
+============================================================

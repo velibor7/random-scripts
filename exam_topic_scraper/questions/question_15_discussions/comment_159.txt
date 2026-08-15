@@ -1,0 +1,9 @@
+COMMENT #159 FOR QUESTION 15
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Streaming inserts in BigQuery are not immediately available to be queried, which is causing the weak consistency you're observing. A better approach is to batch the data and load it at regular intervals. Loading the data every two minutes is still relatively real-time, and it should help solve the consistency problem.
+Answer A.
+============================================================

@@ -1,0 +1,18 @@
+COMMENT #69 FOR QUESTION 207
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+The best answer is B. Partition table data by create_date, cluster table data by location_id, and device_version.
+
+Here's a breakdown of why this structure is optimal:
+
+Partitioning by create_date:
+
+Aligns with query pattern: Filters for recent data based on create_date, so partitioning by this column allows BigQuery to quickly narrow down the data to scan, reducing query costs and improving performance.
+Manages data growth: Partitioning effectively segments data by date, making it easier to manage large datasets and optimize storage costs.
+Clustering by location_id and device_version:
+
+Enhances filtering: Frequently filtering by location_id and device_version, clustering physically co-locates related data within partitions, further reducing scan time and improving performance.
+============================================================

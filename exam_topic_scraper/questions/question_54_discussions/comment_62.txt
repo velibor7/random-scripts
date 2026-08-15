@@ -1,0 +1,8 @@
+COMMENT #62 FOR QUESTION 54
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+This approach is not ideal because it requires a custom endpoint to write the bid event information into Cloud SQL. This adds additional complexity and potential points of failure to the architecture, as well as adding latency to the processing of bid events, since the data must be written to both Pub/Sub and Cloud SQL. Additionally, it can be more challenging to ensure that bid events are processed in the order they were received, since the data is being written to multiple databases. Finally, using a single database to store bid events could limit scalability and availability, and can also result in slow query performance.
+============================================================

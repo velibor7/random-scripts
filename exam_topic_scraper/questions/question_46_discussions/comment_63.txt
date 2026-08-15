@@ -1,0 +1,19 @@
+COMMENT #63 FOR QUESTION 46
+============================================================
+Author: Unknown
+Date: 11 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+D. Store the data in a file in a regional Google Cloud Storage bucket. Use Cloud Dataflow to query BigQuery and combine the data programmatically with the data stored in Google Cloud Storage.
+
+Here's why this approach is ideal:
+
+Cost-Effective Storage: Cloud Storage offers regional storage classes that are cost-effective for frequently accessed data. Storing the price data in a regional Cloud Storage bucket keeps it readily available.
+
+Cloud Dataflow for Updates: Cloud Dataflow is a managed service for building data pipelines. You can create a Dataflow job that runs every 30 minutes to:
+
+Download the latest economic data file from Cloud Storage.
+Process and potentially transform the data as needed.
+Load the updated data into BigQuery.
+BigQuery Integration: BigQuery seamlessly integrates with Cloud Dataflow. The Dataflow job can directly load the processed data into a BigQuery table for further analysis with your customer data.
+============================================================

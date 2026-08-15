@@ -1,0 +1,908 @@
+================================================================================
+QUESTION:
+You migrated a data backend for an application that serves 10 PB of historical product data for analytics. Only the last known state for a product, which is about 10 GB of data, needs to be served through an API to the other applications. You need to choose a cost-effective persistent storage solution that can accommodate the analytics requirements and the API performance of up to 1000 queries per second (QPS) with less than 1 second latency. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Store the historical data in BigQuery for analytics.2. Use a materialized view to precompute the last state of a product.3. Serve the last state data directly from BigQuery to the API.
+										
+
+
+													B.
+												
+											
+											1. Store the products as a collection in Firestore with each product having a set of historical changes.2. Use simple and compound queries for analytics.3. Serve the last state data directly from Firestore to the API.
+										
+
+
+													C.
+												
+											
+											1. Store the historical data in Cloud SQL for analytics.2. In a separate table, store the last state of the product after every product change.3. Serve the last state data directly from Cloud SQL to the API.
+										
+
+
+													D.
+												
+											
+											1. Store the historical data in BigQuery for analytics.2. In a Cloud SQL table, store the last state of the product after every product change.3. Serve the last state data directly from Cloud SQL to the API.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (138 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 234 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 234
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You migrated a data backend for an application that serves 10 PB of historical product data for analytics. Only the last known state for a product, which is about 10 GB of data, needs to be served through an API to the other applications. You need to choose a cost-effective persistent storage solution that can accommodate the analytics requirements and the API performance of up to 1000 queries per second (QPS) with less than 1 second latency. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Store the historical data in BigQuery for analytics.2. Use a materialized view to precompute the last state of a product.3. Serve the last state data directly from BigQuery to the API.
+										
+
+
+													B.
+												
+											
+											1. Store the products as a collection in Firestore with each product having a set of historical changes.2. Use simple and compound queries for analytics.3. Serve the last state data directly from Firestore to the API.
+										
+
+
+													C.
+												
+											
+											1. Store the historical data in Cloud SQL for analytics.2. In a separate table, store the last state of the product after every product change.3. Serve the last state data directly from Cloud SQL to the API.
+										
+
+
+													D.
+												
+											
+											1. Store the historical data in BigQuery for analytics.2. In a Cloud SQL table, store the last state of the product after every product change.3. Serve the last state data directly from Cloud SQL to the API.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 12:56 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 234
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 12:56 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Serve the last state data directly from Cloud SQL to the API.
+Here's why this option is most suitable:
+
+BigQuery for Analytics: BigQuery is an excellent choice for storing and analyzing large datasets like your 10 PB of historical product data. It is designed for handling big data analytics efficiently and cost-effectively.
+
+Cloud SQL for Last State Data: Cloud SQL is a fully managed relational database that can effectively handle the storage of the last known state of products. Storing this subset of data (about 10 GB) in Cloud SQL allows for optimized and faster query performance for your API needs. Cloud SQL can comfortably handle the requirement of up to 1000 QPS with sub-second latency.
+
+Separation of Concerns: This approach separates the analytics workload (BigQuery) from the operational query workload (Cloud SQL). This separation ensures that analytics queries do not interfere with the operational performance of the API and vice versa.
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Serve the last state data directly from Cloud SQL to the API.
+Here's why this option is most suitable:
+
+BigQuery for Analytics: BigQuery is an excellent choice for storing and analyzing large datasets like your 10 PB of historical product data. It is designed for handling big data analytics efficiently and cost-effectively.
+
+Cloud SQL for Last State Data: Cloud SQL is a fully managed relational database that can effectively handle the storage of the last known state of products. Storing this subset of data (about 10 GB) in Cloud SQL allows for optimized and faster query performance for your API needs. Cloud SQL can comfortably handle the requirement of up to 1000 QPS with sub-second latency.
+
+Separation of Concerns: This approach separates the analytics workload (BigQuery) from the operational query workload (Cloud SQL). This separation ensures that analytics queries do not interfere with the operational performance of the API and vice versa.
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Serve the last state data directly from Cloud SQL to the API.
+Here's why this option is most suitable:
+
+BigQuery for Analytics: BigQuery is an excellent choice for storing and analyzing large datasets like your 10 PB of historical product data. It is designed for handling big data analytics efficiently and cost-effectively.
+
+Cloud SQL for Last State Data: Cloud SQL is a fully managed relational database that can effectively handle the storage of the last known state of products. Storing this subset of data (about 10 GB) in Cloud SQL allows for optimized and faster query performance for your API needs. Cloud SQL can comfortably handle the requirement of up to 1000 QPS with sub-second latency.
+
+Separation of Concerns: This approach separates the analytics workload (BigQuery) from the operational query workload (Cloud SQL). This separation ensures that analytics queries do not interfere with the operational performance of the API and vice versa.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Serve the last state data directly from Cloud SQL to the API.
+Here's why this option is most suitable:
+
+BigQuery for Analytics: BigQuery is an excellent choice for storing and analyzing large datasets like your 10 PB of historical product data. It is designed for handling big data analytics efficiently and cost-effectively.
+
+Cloud SQL for Last State Data: Cloud SQL is a fully managed relational database that can effectively handle the storage of the last known state of products. Storing this subset of data (about 10 GB) in Cloud SQL allows for optimized and faster query performance for your API needs. Cloud SQL can comfortably handle the requirement of up to 1000 QPS with sub-second latency.
+
+Separation of Concerns: This approach separates the analytics workload (BigQuery) from the operational query workload (Cloud SQL). This separation ensures that analytics queries do not interfere with the operational performance of the API and vice versa.
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Serve the last state data directly from Cloud SQL to the API.
+Here's why this option is most suitable:
+
+BigQuery for Analytics: BigQuery is an excellent choice for storing and analyzing large datasets like your 10 PB of historical product data. It is designed for handling big data analytics efficiently and cost-effectively.
+
+Cloud SQL for Last State Data: Cloud SQL is a fully managed relational database that can effectively handle the storage of the last known state of products. Storing this subset of data (about 10 GB) in Cloud SQL allows for optimized and faster query performance for your API needs. Cloud SQL can comfortably handle the requirement of up to 1000 QPS with sub-second latency.
+
+Separation of Concerns: This approach separates the analytics workload (BigQuery) from the operational query workload (Cloud SQL). This separation ensures that analytics queries do not interfere with the operational performance of the API and vice versa.
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+einchkrein
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+Serve the last state data directly from Cloud SQL to the API.
+Here's why this option is most suitable:
+
+BigQuery for Analytics: BigQuery is an excellent choice for storing and analyzing large datasets like your 10 PB of historical product data. It is designed for handling big data analytics efficiently and cost-effectively.
+
+Cloud SQL for Last State Data: Cloud SQL is a fully managed relational database that can effectively handle the storage of the last known state of products. Storing this subset of data (about 10 GB) in Cloud SQL allows for optimized and faster query performance for your API needs. Cloud SQL can comfortably handle the requirement of up to 1000 QPS with sub-second latency.
+
+Separation of Concerns: This approach separates the analytics workload (BigQuery) from the operational query workload (Cloud SQL). This separation ensures that analytics queries do not interfere with the operational performance of the API and vice versa.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Serve the last state data directly from Cloud SQL to the API.
+Here's why this option is most suitable:
+
+BigQuery for Analytics: BigQuery is an excellent choice for storing and analyzing large datasets like your 10 PB of historical product data. It is designed for handling big data analytics efficiently and cost-effectively.
+
+Cloud SQL for Last State Data: Cloud SQL is a fully managed relational database that can effectively handle the storage of the last known state of products. Storing this subset of data (about 10 GB) in Cloud SQL allows for optimized and faster query performance for your API needs. Cloud SQL can comfortably handle the requirement of up to 1000 QPS with sub-second latency.
+
+Separation of Concerns: This approach separates the analytics workload (BigQuery) from the operational query workload (Cloud SQL). This separation ensures that analytics queries do not interfere with the operational performance of the API and vice versa.
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+D. 1. Store the historical data in BigQuery for analytics.
+2. In a Cloud SQL table, store the last state of the product after every product change.
+3. Serve the last state data directly from Cloud SQL to the AP
+
+This approach leverages BigQuery's scalability and efficiency for handling large datasets for analytics. BigQuery is well-suited for managing the 10 PB of historical product data. Meanwhile, Cloud SQL provides the necessary performance to handle the API queries with the required low latency. By storing the latest state of each product in Cloud SQL, you can efficiently handle the high QPS with sub-second latency, which is crucial for the API's performance. This combination of BigQuery and Cloud SQL offers a balanced solution for both the large-scale analytics and the high-performance API needs.
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+datapassionate
+			
+
+
+				Highly Voted 
+
+
+			1 year, 2 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+D. 1. Store the historical data in BigQuery for analytics.
+2. In a Cloud SQL table, store the last state of the product after every product change.
+3. Serve the last state data directly from Cloud SQL to the AP
+
+This approach leverages BigQuery's scalability and efficiency for handling large datasets for analytics. BigQuery is well-suited for managing the 10 PB of historical product data. Meanwhile, Cloud SQL provides the necessary performance to handle the API queries with the required low latency. By storing the latest state of each product in Cloud SQL, you can efficiently handle the high QPS with sub-second latency, which is crucial for the API's performance. This combination of BigQuery and Cloud SQL offers a balanced solution for both the large-scale analytics and the high-performance API needs.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+D. 1. Store the historical data in BigQuery for analytics.
+2. In a Cloud SQL table, store the last state of the product after every product change.
+3. Serve the last state data directly from Cloud SQL to the AP
+
+This approach leverages BigQuery's scalability and efficiency for handling large datasets for analytics. BigQuery is well-suited for managing the 10 PB of historical product data. Meanwhile, Cloud SQL provides the necessary performance to handle the API queries with the required low latency. By storing the latest state of each product in Cloud SQL, you can efficiently handle the high QPS with sub-second latency, which is crucial for the API's performance. This combination of BigQuery and Cloud SQL offers a balanced solution for both the large-scale analytics and the high-performance API needs.
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 2 months ago | Votes: 0
+Why not A? Because BQ API 100 reqs per second for API method. Other possible limits do not meet the 1000 QPS requirement. Yes, max number of tabledata.list reqs per second is 1000 but we won't always call tabledata.list all time.
+https://cloud.google.com/bigquery/quotas#api_request_quotas
+
+--- Comment #31 ---
+Author: Unknown | Date: 2 months ago | Votes: 0
+zanhsieh
+			
+
+
+				Most Recent 
+
+
+			2 months ago
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Why not A? Because BQ API 100 reqs per second for API method. Other possible limits do not meet the 1000 QPS requirement. Yes, max number of tabledata.list reqs per second is 1000 but we won't always call tabledata.list all time.
+https://cloud.google.com/bigquery/quotas#api_request_quotas
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Why not A? Because BQ API 100 reqs per second for API method. Other possible limits do not meet the 1000 QPS requirement. Yes, max number of tabledata.list reqs per second is 1000 but we won't always call tabledata.list all time.
+https://cloud.google.com/bigquery/quotas#api_request_quotas
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #39 ---
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+A is the most plausible option - Cloud SQL can not retrieve results out with 1 second latency as the requirement here is, with BQ MV"s that could be a possibility as its  pre-computed.
+
+--- Comment #40 ---
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+clouditis
+			
+
+
+			3 months, 3 weeks ago
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+A is the most plausible option - Cloud SQL can not retrieve results out with 1 second latency as the requirement here is, with BQ MV"s that could be a possibility as its  pre-computed.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+A is the most plausible option - Cloud SQL can not retrieve results out with 1 second latency as the requirement here is, with BQ MV"s that could be a possibility as its  pre-computed.
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #48 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+Why A? Because:
+
+Materialized View for API: A materialized view in BigQuery pre-computes the last known state of each product. This ensures that your API can quickly retrieve the latest product information without needing to query the entire historical dataset.   
+BigQuery for API Serving: BigQuery can handle high query volumes with low latency, meeting your requirement of 1000 QPS with sub-second latency.
+Cost-Effectiveness: This solution avoids the need for a separate database like Cloud SQL, minimizing costs and management overhead.
+
+Why not D:
+While Cloud SQL is a good option for transactional workloads, it's not as cost-effective or scalable as BigQuery for analytical queries on 10 PB of data. It might also not be the ideal choice for serving high-volume API requests with low latency.
+
+--- Comment #49 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+ToiToi
+			
+
+
+			5 months, 1 week ago
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Why A? Because:
+
+Materialized View for API: A materialized view in BigQuery pre-computes the last known state of each product. This ensures that your API can quickly retrieve the latest product information without needing to query the entire historical dataset.   
+BigQuery for API Serving: BigQuery can handle high query volumes with low latency, meeting your requirement of 1000 QPS with sub-second latency.
+Cost-Effectiveness: This solution avoids the need for a separate database like Cloud SQL, minimizing costs and management overhead.
+
+Why not D:
+While Cloud SQL is a good option for transactional workloads, it's not as cost-effective or scalable as BigQuery for analytical queries on 10 PB of data. It might also not be the ideal choice for serving high-volume API requests with low latency.
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+Why A? Because:
+
+Materialized View for API: A materialized view in BigQuery pre-computes the last known state of each product. This ensures that your API can quickly retrieve the latest product information without needing to query the entire historical dataset.   
+BigQuery for API Serving: BigQuery can handle high query volumes with low latency, meeting your requirement of 1000 QPS with sub-second latency.
+Cost-Effectiveness: This solution avoids the need for a separate database like Cloud SQL, minimizing costs and management overhead.
+
+Why not D:
+While Cloud SQL is a good option for transactional workloads, it's not as cost-effective or scalable as BigQuery for analytical queries on 10 PB of data. It might also not be the ideal choice for serving high-volume API requests with low latency.
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #57 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+Why not A:
+Serving data directly from BigQuery to the API may not meet the low latency requirements for high QPS operations, as BigQuery is optimized for analytical queries rather than transactional workloads.
+
+--- Comment #58 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+Anudeep58
+			
+
+
+			10 months, 1 week ago
+
+--- Comment #59 ---
+Author: Unknown | Date: 2 months, 1 week ago | Votes: 0
+Why not A:
+Serving data directly from BigQuery to the API may not meet the low latency requirements for high QPS operations, as BigQuery is optimized for analytical queries rather than transactional workloads.
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+Why not A:
+Serving data directly from BigQuery to the API may not meet the low latency requirements for high QPS operations, as BigQuery is optimized for analytical queries rather than transactional workloads.
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #64 ---
+Author: Unknown | Date: 2 months, 1 week ago | Votes: 0
+what transactional workload? you just need to provide latest status for each product through an API. Select from a 10GB BQ MV will provide the result in 1 sec.
+
+--- Comment #65 ---
+Author: Unknown | Date: 2 months, 1 week ago | Votes: 0
+what transactional workload? you just need to provide latest status for each product through an API. Select from a 10GB BQ MV will provide the result in 1 sec.
+
+--- Comment #66 ---
+Author: Unknown | Date: 2 months, 1 week ago | Votes: 0
+Ryannn23
+			
+
+
+			2 months, 1 week ago
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+what transactional workload? you just need to provide latest status for each product through an API. Select from a 10GB BQ MV will provide the result in 1 sec.
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+what transactional workload? you just need to provide latest status for each product through an API. Select from a 10GB BQ MV will provide the result in 1 sec.
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #74 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+Materialized views are precomputed views that periodically cache the results of a query for increased performance and efficiency. Materialized views can optimize queries with high computation cost and small dataset results. https://cloud.google.com/bigquery/docs/materialized-views-intro#use_cases
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #75 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+josech
+			
+
+
+			10 months, 3 weeks ago
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+Materialized views are precomputed views that periodically cache the results of a query for increased performance and efficiency. Materialized views can optimize queries with high computation cost and small dataset results. https://cloud.google.com/bigquery/docs/materialized-views-intro#use_cases
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+Materialized views are precomputed views that periodically cache the results of a query for increased performance and efficiency. Materialized views can optimize queries with high computation cost and small dataset results. https://cloud.google.com/bigquery/docs/materialized-views-intro#use_cases
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #83 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Why D is the best choice:
+
+Cost-Effective Analytics: BigQuery excels at handling large datasets (10 PB) and complex analytical queries. Its columnar storage and massively parallel processing make it ideal for analyzing historical product data.
+High-Performance API: Cloud SQL provides a managed relational database service optimized for transactional workloads. It can easily handle the 1000 QPS requirement with low latency, ensuring fast API responses.
+Separation of Concerns: Storing historical data in BigQuery and the last known state in Cloud SQL separates analytical and transactional workloads, optimizing performance and cost for each use case.
+
+--- Comment #84 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+CGS22
+			
+
+
+			1 year ago
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+Why D is the best choice:
+
+Cost-Effective Analytics: BigQuery excels at handling large datasets (10 PB) and complex analytical queries. Its columnar storage and massively parallel processing make it ideal for analyzing historical product data.
+High-Performance API: Cloud SQL provides a managed relational database service optimized for transactional workloads. It can easily handle the 1000 QPS requirement with low latency, ensuring fast API responses.
+Separation of Concerns: Storing historical data in BigQuery and the last known state in Cloud SQL separates analytical and transactional workloads, optimizing performance and cost for each use case.
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+Why D is the best choice:
+
+Cost-Effective Analytics: BigQuery excels at handling large datasets (10 PB) and complex analytical queries. Its columnar storage and massively parallel processing make it ideal for analyzing historical product data.
+High-Performance API: Cloud SQL provides a managed relational database service optimized for transactional workloads. It can easily handle the 1000 QPS requirement with low latency, ensuring fast API responses.
+Separation of Concerns: Storing historical data in BigQuery and the last known state in Cloud SQL separates analytical and transactional workloads, optimizing performance and cost for each use case.
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #92 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Option D
+
+--- Comment #93 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+JyoGCP
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+Option D
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+Option D
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #101 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+BigQuery = data warehouse that is optimized for querying and analyzing large datasets using SQL. Can easily process petabytes of data.
+Cloud SQL = designed for transactional workloads and traditional relational database use cases, such as web applications, e-commerce platforms, and content management systems.
+
+--- Comment #102 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+ML6
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+BigQuery = data warehouse that is optimized for querying and analyzing large datasets using SQL. Can easily process petabytes of data.
+Cloud SQL = designed for transactional workloads and traditional relational database use cases, such as web applications, e-commerce platforms, and content management systems.
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+BigQuery = data warehouse that is optimized for querying and analyzing large datasets using SQL. Can easily process petabytes of data.
+Cloud SQL = designed for transactional workloads and traditional relational database use cases, such as web applications, e-commerce platforms, and content management systems.
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #110 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option D is the right one, compared to option A, Cloud SQL is more efficient and cost effective for the amount of time the data needs to be accessed by the api
+
+--- Comment #111 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Matt_108
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+Option D is the right one, compared to option A, Cloud SQL is more efficient and cost effective for the amount of time the data needs to be accessed by the api
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+Option D is the right one, compared to option A, Cloud SQL is more efficient and cost effective for the amount of time the data needs to be accessed by the api
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #119 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+A. 1. Store the historical data in BigQuery for analytics.
+2. Use a materialized view to precompute the last state of a product.
+3. Serve the last state data directly from BigQuery to the API.
+
+--- Comment #120 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+scaenruy
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #121 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+A. 1. Store the historical data in BigQuery for analytics.
+2. Use a materialized view to precompute the last state of a product.
+3. Serve the last state data directly from BigQuery to the API.
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+A. 1. Store the historical data in BigQuery for analytics.
+2. Use a materialized view to precompute the last state of a product.
+3. Serve the last state data directly from BigQuery to the API.
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #126 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+I believe the latency of BigQuery is too high to accommodate the sub-second latency requirement.
+
+--- Comment #127 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+I believe the latency of BigQuery is too high to accommodate the sub-second latency requirement.
+
+--- Comment #128 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+RenePetersen
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+I believe the latency of BigQuery is too high to accommodate the sub-second latency requirement.
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+I believe the latency of BigQuery is too high to accommodate the sub-second latency requirement.
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

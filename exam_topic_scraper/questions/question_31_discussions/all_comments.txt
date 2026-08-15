@@ -1,0 +1,2115 @@
+ALL COMMENTS FOR QUESTION 31
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 31 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 31
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have Google Cloud Dataflow streaming pipeline running with a Google Cloud Pub/Sub subscription as the source. You need to make an update to the code that will make the new Cloud Dataflow pipeline incompatible with the current version. You do not want to lose any data when making this update. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Update the current pipeline and use the drain flag.
+										
+
+
+													B.
+												
+											
+											Update the current pipeline and provide the transform mapping JSON object.
+										
+
+
+													C.
+												
+											
+											Create a new pipeline that has the same Cloud Pub/Sub subscription and cancel the old pipeline.
+										
+
+
+													D.
+												
+											
+											Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 20, 2020, 2:13 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 31
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 20, 2020, 2:13 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+Correct Option : A
+Explanation:-This option is correct as the key requirement is not to lose
+the data, the Dataflow pipeline can be stopped using the Drain option.
+Drain options would cause Dataflow to stop any new processing, but would
+also allow the existing processing to complete
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+Correct Option : A
+Explanation:-This option is correct as the key requirement is not to lose
+the data, the Dataflow pipeline can be stopped using the Drain option.
+Drain options would cause Dataflow to stop any new processing, but would
+also allow the existing processing to complete
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+Correct Option : A
+Explanation:-This option is correct as the key requirement is not to lose
+the data, the Dataflow pipeline can be stopped using the Drain option.
+Drain options would cause Dataflow to stop any new processing, but would
+also allow the existing processing to complete
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+Correct Option : A
+Explanation:-This option is correct as the key requirement is not to lose
+the data, the Dataflow pipeline can be stopped using the Drain option.
+Drain options would cause Dataflow to stop any new processing, but would
+also allow the existing processing to complete
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+Correct Option : A
+Explanation:-This option is correct as the key requirement is not to lose
+the data, the Dataflow pipeline can be stopped using the Drain option.
+Drain options would cause Dataflow to stop any new processing, but would
+also allow the existing processing to complete
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+VishalB
+			
+
+
+				Highly Voted 
+
+
+			4 years, 8 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+Correct Option : A
+Explanation:-This option is correct as the key requirement is not to lose
+the data, the Dataflow pipeline can be stopped using the Drain option.
+Drain options would cause Dataflow to stop any new processing, but would
+also allow the existing processing to complete
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct Option : A
+Explanation:-This option is correct as the key requirement is not to lose
+the data, the Dataflow pipeline can be stopped using the Drain option.
+Drain options would cause Dataflow to stop any new processing, but would
+also allow the existing processing to complete
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 80 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+To all the New Guys Here. Please don't get confused with all the people's fight over here. Just google the question and you will get the correct ans in many website. Still I recommend to refer this website for question. for this Particular problem ans is A. Reason is here --> https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#python
+have time to read the full page when to use Update using Json mapping and when to use Drain. (you will have question following for Drain option though).
+Thumb rule is this,
+# If any major change  to windowing transformation (like completely changing window fn from fixed to sliding) in Beam/Dataflow/you want to stop pipeline but want inflight data --> use Drain option.
+# For all other use cases and Minor changing to windowing fn (like just changing window time of sliding window) --> Use Update with Json mapping.
+
+In this case it is Code change to new version. so, Update with Json mapping. Simple as that.
+
+All the Best Guys.
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+To all the New Guys Here. Please don't get confused with all the people's fight over here. Just google the question and you will get the correct ans in many website. Still I recommend to refer this website for question. for this Particular problem ans is A. Reason is here --> https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#python
+have time to read the full page when to use Update using Json mapping and when to use Drain. (you will have question following for Drain option though).
+Thumb rule is this,
+# If any major change  to windowing transformation (like completely changing window fn from fixed to sliding) in Beam/Dataflow/you want to stop pipeline but want inflight data --> use Drain option.
+# For all other use cases and Minor changing to windowing fn (like just changing window time of sliding window) --> Use Update with Json mapping.
+
+In this case it is Code change to new version. so, Update with Json mapping. Simple as that.
+
+All the Best Guys.
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+BigQuery
+			
+
+
+			3 years, 4 months ago
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+To all the New Guys Here. Please don't get confused with all the people's fight over here. Just google the question and you will get the correct ans in many website. Still I recommend to refer this website for question. for this Particular problem ans is A. Reason is here --> https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#python
+have time to read the full page when to use Update using Json mapping and when to use Drain. (you will have question following for Drain option though).
+Thumb rule is this,
+# If any major change  to windowing transformation (like completely changing window fn from fixed to sliding) in Beam/Dataflow/you want to stop pipeline but want inflight data --> use Drain option.
+# For all other use cases and Minor changing to windowing fn (like just changing window time of sliding window) --> Use Update with Json mapping.
+
+In this case it is Code change to new version. so, Update with Json mapping. Simple as that.
+
+All the Best Guys.
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+To all the New Guys Here. Please don't get confused with all the people's fight over here. Just google the question and you will get the correct ans in many website. Still I recommend to refer this website for question. for this Particular problem ans is A. Reason is here --> https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#python
+have time to read the full page when to use Update using Json mapping and when to use Drain. (you will have question following for Drain option though).
+Thumb rule is this,
+# If any major change  to windowing transformation (like completely changing window fn from fixed to sliding) in Beam/Dataflow/you want to stop pipeline but want inflight data --> use Drain option.
+# For all other use cases and Minor changing to windowing fn (like just changing window time of sliding window) --> Use Update with Json mapping.
+
+In this case it is Code change to new version. so, Update with Json mapping. Simple as that.
+
+All the Best Guys.
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 33 times
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+SORRY I MEANT TO SAY ANS IS 'B'. In this case it is Code change to new version. so, Update with Json mapping.
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+SORRY I MEANT TO SAY ANS IS 'B'. In this case it is Code change to new version. so, Update with Json mapping.
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+BigQuery
+			
+
+
+			3 years, 4 months ago
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+SORRY I MEANT TO SAY ANS IS 'B'. In this case it is Code change to new version. so, Update with Json mapping.
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+SORRY I MEANT TO SAY ANS IS 'B'. In this case it is Code change to new version. so, Update with Json mapping.
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Its clearly mentioned in the question that pipeline in compatible, if it is so you can not update with JSON mapping. Only way is to stop the pipeline with Drain and replace it with a new one. So the closest answer is A only.
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Its clearly mentioned in the question that pipeline in compatible, if it is so you can not update with JSON mapping. Only way is to stop the pipeline with Drain and replace it with a new one. So the closest answer is A only.
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+anji007
+			
+
+
+			3 years ago
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Its clearly mentioned in the question that pipeline in compatible, if it is so you can not update with JSON mapping. Only way is to stop the pipeline with Drain and replace it with a new one. So the closest answer is A only.
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Its clearly mentioned in the question that pipeline in compatible, if it is so you can not update with JSON mapping. Only way is to stop the pipeline with Drain and replace it with a new one. So the closest answer is A only.
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+JSON Mapping is a way to solve compatibility issues when updating
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+JSON Mapping is a way to solve compatibility issues when updating
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+maxdataengineer
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+JSON Mapping is a way to solve compatibility issues when updating
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+JSON Mapping is a way to solve compatibility issues when updating
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+C and D are incorrect because canceling the old pipeline can cause data loss 
+https://cloud.google.com/dataflow/docs/guides/stopping-a-pipeline  
+A is incorrect because updating pipeline does not include any drain flag
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+sergio6
+			
+
+
+			3 years, 7 months ago
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+C and D are incorrect because canceling the old pipeline can cause data loss 
+https://cloud.google.com/dataflow/docs/guides/stopping-a-pipeline  
+A is incorrect because updating pipeline does not include any drain flag
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C and D are incorrect because canceling the old pipeline can cause data loss 
+https://cloud.google.com/dataflow/docs/guides/stopping-a-pipeline  
+A is incorrect because updating pipeline does not include any drain flag
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+drain is in the guide ...stopping-a-pipeline. Just ...updating-a-pipeline  is not enough to evaluate this question.
+
+that's why drainnin is not a flag in a pipeline update. it is a process about how to stop a pipeline w/o data loss !
+
+data in dataflow is in 3 stages. ingestion data, buffered data and in-flight data which is processing by old pipeline.
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+drain is in the guide ...stopping-a-pipeline. Just ...updating-a-pipeline  is not enough to evaluate this question.
+
+that's why drainnin is not a flag in a pipeline update. it is a process about how to stop a pipeline w/o data loss !
+
+data in dataflow is in 3 stages. ingestion data, buffered data and in-flight data which is processing by old pipeline.
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Tanzu
+			
+
+
+			3 years, 2 months ago
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+drain is in the guide ...stopping-a-pipeline. Just ...updating-a-pipeline  is not enough to evaluate this question.
+
+that's why drainnin is not a flag in a pipeline update. it is a process about how to stop a pipeline w/o data loss !
+
+data in dataflow is in 3 stages. ingestion data, buffered data and in-flight data which is processing by old pipeline.
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+drain is in the guide ...stopping-a-pipeline. Just ...updating-a-pipeline  is not enough to evaluate this question.
+
+that's why drainnin is not a flag in a pipeline update. it is a process about how to stop a pipeline w/o data loss !
+
+data in dataflow is in 3 stages. ingestion data, buffered data and in-flight data which is processing by old pipeline.
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+B is correct: Update the current pipeline and provide the transform mapping JSON object.
+ Dataflow always performs a compatibility check between the old and new job and without the mapping (necessary as old and new are incompatible) it would give an error and the old job would continue to be executed
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#Mapping
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#CCheck
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+sergio6
+			
+
+
+			3 years, 5 months ago
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+B is correct: Update the current pipeline and provide the transform mapping JSON object.
+ Dataflow always performs a compatibility check between the old and new job and without the mapping (necessary as old and new are incompatible) it would give an error and the old job would continue to be executed
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#Mapping
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#CCheck
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is correct: Update the current pipeline and provide the transform mapping JSON object.
+ Dataflow always performs a compatibility check between the old and new job and without the mapping (necessary as old and new are incompatible) it would give an error and the old job would continue to be executed
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#Mapping
+https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#CCheck
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+new pipeline is incompatible means, compatibility check will fail. so you wil not be able to update as new pipeline.
+
+that's why B cannot be valid answer here in this context.
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+new pipeline is incompatible means, compatibility check will fail. so you wil not be able to update as new pipeline.
+
+that's why B cannot be valid answer here in this context.
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Tanzu
+			
+
+
+			3 years, 2 months ago
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+new pipeline is incompatible means, compatibility check will fail. so you wil not be able to update as new pipeline.
+
+that's why B cannot be valid answer here in this context.
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+new pipeline is incompatible means, compatibility check will fail. so you wil not be able to update as new pipeline.
+
+that's why B cannot be valid answer here in this context.
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+B is a way to solve compatibility issues
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+B is a way to solve compatibility issues
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+maxdataengineer
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is a way to solve compatibility issues
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is a way to solve compatibility issues
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+Option C & D are incorrect as Cancel Option will lead to loose the data
+Option B is very Close, since the new Code make pipeline incompatible by providing transform mapping JSON file you can handle this
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+VishalB
+			
+
+
+			4 years, 8 months ago
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+Option C & D are incorrect as Cancel Option will lead to loose the data
+Option B is very Close, since the new Code make pipeline incompatible by providing transform mapping JSON file you can handle this
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C & D are incorrect as Cancel Option will lead to loose the data
+Option B is very Close, since the new Code make pipeline incompatible by providing transform mapping JSON file you can handle this
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+A is incorrect because updating pipeline does not include any drain flag
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+A is incorrect because updating pipeline does not include any drain flag
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+sergio6
+			
+
+
+			3 years, 5 months ago
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+A is incorrect because updating pipeline does not include any drain flag
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A is incorrect because updating pipeline does not include any drain flag
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+two steps.. 1st drain the job w/ sdk or console. then, update the pipeline. cause it is OK to update a job  while in draining
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+two steps.. 1st drain the job w/ sdk or console. then, update the pipeline. cause it is OK to update a job  while in draining
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Tanzu
+			
+
+
+			3 years, 2 months ago
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+two steps.. 1st drain the job w/ sdk or console. then, update the pipeline. cause it is OK to update a job  while in draining
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+two steps.. 1st drain the job w/ sdk or console. then, update the pipeline. cause it is OK to update a job  while in draining
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Yes but the compatibility problem will still be there, stopping the pipeline does not solve that
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Yes but the compatibility problem will still be there, stopping the pipeline does not solve that
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+maxdataengineer
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Yes but the compatibility problem will still be there, stopping the pipeline does not solve that
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Yes but the compatibility problem will still be there, stopping the pipeline does not solve that
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+There are 5 update scenarios in a job in update-a-pipeline context. 
+a- changing transform name (requires mapping) , adding a new step (no need for mapping)
+b- windowing or triggering (only for minor changes, otherwise don't do that)
+c- coders (don't do that
+d- schema (adding or required to nullable is possible) other scenarios not possible
+e- stateful operations
+
+none of them are relevant, here. cause there is no specific detail, secondly incompatible w. new pipeline. 
+
+and mostly if in compatible only a has a solve. but not for all cases.
+so, drain == no data loss (ingesting, buffered and in-flight data) is the only scenario.
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Tanzu
+			
+
+
+			3 years, 2 months ago
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+There are 5 update scenarios in a job in update-a-pipeline context. 
+a- changing transform name (requires mapping) , adding a new step (no need for mapping)
+b- windowing or triggering (only for minor changes, otherwise don't do that)
+c- coders (don't do that
+d- schema (adding or required to nullable is possible) other scenarios not possible
+e- stateful operations
+
+none of them are relevant, here. cause there is no specific detail, secondly incompatible w. new pipeline. 
+
+and mostly if in compatible only a has a solve. but not for all cases.
+so, drain == no data loss (ingesting, buffered and in-flight data) is the only scenario.
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+There are 5 update scenarios in a job in update-a-pipeline context. 
+a- changing transform name (requires mapping) , adding a new step (no need for mapping)
+b- windowing or triggering (only for minor changes, otherwise don't do that)
+c- coders (don't do that
+d- schema (adding or required to nullable is possible) other scenarios not possible
+e- stateful operations
+
+none of them are relevant, here. cause there is no specific detail, secondly incompatible w. new pipeline. 
+
+and mostly if in compatible only a has a solve. but not for all cases.
+so, drain == no data loss (ingesting, buffered and in-flight data) is the only scenario.
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+As you said, Drain stops the pipeline but it does not solve the compatibility issue. The pipeline will not be able to be updated which is the core problem of the question.
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+maxdataengineer
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+As you said, Drain stops the pipeline but it does not solve the compatibility issue. The pipeline will not be able to be updated which is the core problem of the question.
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+As you said, Drain stops the pipeline but it does not solve the compatibility issue. The pipeline will not be able to be updated which is the core problem of the question.
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+You do not want to lose any data when making this update - is the core problem. You are doing it ANYWAY.
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+You do not want to lose any data when making this update - is the core problem. You are doing it ANYWAY.
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+assU2
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You do not want to lose any data when making this update - is the core problem. You are doing it ANYWAY.
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You do not want to lose any data when making this update - is the core problem. You are doing it ANYWAY.
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+Correct B - https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#preventing_compatibility_breaks
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+Correct B - https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#preventing_compatibility_breaks
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct B - https://cloud.google.com/dataflow/docs/guides/updating-a-pipeline#preventing_compatibility_breaks
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 24 times
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+Changing the pipeline graph without providing a mapping. When you update a job, the Dataflow service attempts to match the transforms in your prior job to the transforms in the replacement job in order to transfer intermediate state data for each step. If you've renamed or removed any steps, you'll need to provide a transform mapping so that Dataflow can match state data accordingly.
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+Changing the pipeline graph without providing a mapping. When you update a job, the Dataflow service attempts to match the transforms in your prior job to the transforms in the replacement job in order to transfer intermediate state data for each step. If you've renamed or removed any steps, you'll need to provide a transform mapping so that Dataflow can match state data accordingly.
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+[Removed]
+			
+
+
+			5 years ago
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+Changing the pipeline graph without providing a mapping. When you update a job, the Dataflow service attempts to match the transforms in your prior job to the transforms in the replacement job in order to transfer intermediate state data for each step. If you've renamed or removed any steps, you'll need to provide a transform mapping so that Dataflow can match state data accordingly.
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Changing the pipeline graph without providing a mapping. When you update a job, the Dataflow service attempts to match the transforms in your prior job to the transforms in the replacement job in order to transfer intermediate state data for each step. If you've renamed or removed any steps, you'll need to provide a transform mapping so that Dataflow can match state data accordingly.
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+The job can be incompatible for reasons other than transformation changes. Since it is clearly mentioned that the change job is incompatible, I think we have to create a new job and D should be correct.
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+The job can be incompatible for reasons other than transformation changes. Since it is clearly mentioned that the change job is incompatible, I think we have to create a new job and D should be correct.
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+arnabbis4u
+			
+
+
+			4 years, 11 months ago
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+The job can be incompatible for reasons other than transformation changes. Since it is clearly mentioned that the change job is incompatible, I think we have to create a new job and D should be correct.
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The job can be incompatible for reasons other than transformation changes. Since it is clearly mentioned that the change job is incompatible, I think we have to create a new job and D should be correct.
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 9 times
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+Canceling the job will cause data loss, against the requirement
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+Canceling the job will cause data loss, against the requirement
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+sergio6
+			
+
+
+			3 years, 5 months ago
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Canceling the job will cause data loss, against the requirement
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Canceling the job will cause data loss, against the requirement
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date: 2 weeks, 1 day ago | Votes: 0
+Please refer the google doc link below,
+https://cloud.google.com/dataflow/docs/guides/stopping-a-pipeline#drain
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date: 2 weeks, 1 day ago | Votes: 0
+abhaya2608
+			
+
+
+				Most Recent 
+
+
+			2 weeks, 1 day ago
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Please refer the google doc link below,
+https://cloud.google.com/dataflow/docs/guides/stopping-a-pipeline#drain
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Please refer the google doc link below,
+https://cloud.google.com/dataflow/docs/guides/stopping-a-pipeline#drain
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #187
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #188
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #189
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #190
+----------------------------------------
+Author: Unknown | Date: 3 weeks, 4 days ago | Votes: 0
+Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline
+
+COMMENT #191
+----------------------------------------
+Author: Unknown | Date: 3 weeks, 4 days ago | Votes: 0
+Parandhaman_Margan
+			
+
+
+			3 weeks, 4 days ago
+
+COMMENT #192
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline
+
+COMMENT #193
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #194
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline
+
+COMMENT #195
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #196
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #197
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #198
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #199
+----------------------------------------
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+D. Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline:
+
+By creating a new subscription, the new pipeline will consume messages independently of the old pipeline. This ensures no data is lost as messages published to Pub/Sub are delivered to all subscriptions.
+Once the new pipeline is verified to be running as expected, the old pipeline can be safely canceled.
+
+COMMENT #200
+----------------------------------------
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+dans_puts
+			
+
+
+			3 months, 3 weeks ago
+
+COMMENT #201
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline:
+
+By creating a new subscription, the new pipeline will consume messages independently of the old pipeline. This ensures no data is lost as messages published to Pub/Sub are delivered to all subscriptions.
+Once the new pipeline is verified to be running as expected, the old pipeline can be safely canceled.
+
+COMMENT #202
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #203
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline:
+
+By creating a new subscription, the new pipeline will consume messages independently of the old pipeline. This ensures no data is lost as messages published to Pub/Sub are delivered to all subscriptions.
+Once the new pipeline is verified to be running as expected, the old pipeline can be safely canceled.
+
+COMMENT #204
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #205
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #206
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #207
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #208
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Why option D is better for this case - In this scenario: the pipeline is incompatible with the old one; running the two pipelines concurrently ensures no data loss and allows for easier debugging of the new pipeline; a new subscription ensures the old pipeline can finish processing its messages while the new pipeline starts fresh
+
+COMMENT #209
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Smakyel79
+			
+
+
+			4 months, 2 weeks ago
+
+COMMENT #210
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Why option D is better for this case - In this scenario: the pipeline is incompatible with the old one; running the two pipelines concurrently ensures no data loss and allows for easier debugging of the new pipeline; a new subscription ensures the old pipeline can finish processing its messages while the new pipeline starts fresh
+
+COMMENT #211
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Why option D is better for this case - In this scenario: the pipeline is incompatible with the old one; running the two pipelines concurrently ensures no data loss and allows for easier debugging of the new pipeline; a new subscription ensures the old pipeline can finish processing its messages while the new pipeline starts fresh
+
+COMMENT #212
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #213
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #214
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #215
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #216
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Draining a pipeline stops it in an orderly manner but does not address incompatibility issues. Once the pipeline is drained, no more data is processed, and the new pipeline starts fresh. This can lead to data loss if there are messages in Pub/Sub that the drained pipeline didn't process.
+
+COMMENT #217
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Smakyel79
+			
+
+
+			4 months, 2 weeks ago
+
+COMMENT #218
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Draining a pipeline stops it in an orderly manner but does not address incompatibility issues. Once the pipeline is drained, no more data is processed, and the new pipeline starts fresh. This can lead to data loss if there are messages in Pub/Sub that the drained pipeline didn't process.
+
+COMMENT #219
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Draining a pipeline stops it in an orderly manner but does not address incompatibility issues. Once the pipeline is drained, no more data is processed, and the new pipeline starts fresh. This can lead to data loss if there are messages in Pub/Sub that the drained pipeline didn't process.
+
+COMMENT #220
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #221
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #222
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #223
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #224
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option: C
+using draining will stop the subscription totally while allowing the existing data to complete processing. While the pipeline is stopped, will lose streaming data. The best option is to create a new pipeline that is connected to the same subscription, then we can apply drain to the old pipeline and end it. That way we will capture all the streaming data.
+
+COMMENT #225
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+philli1011
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #226
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option: C
+using draining will stop the subscription totally while allowing the existing data to complete processing. While the pipeline is stopped, will lose streaming data. The best option is to create a new pipeline that is connected to the same subscription, then we can apply drain to the old pipeline and end it. That way we will capture all the streaming data.
+
+COMMENT #227
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option: C
+using draining will stop the subscription totally while allowing the existing data to complete processing. While the pipeline is stopped, will lose streaming data. The best option is to create a new pipeline that is connected to the same subscription, then we can apply drain to the old pipeline and end it. That way we will capture all the streaming data.
+
+COMMENT #228
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #229
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #230
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #231
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #232
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Drain flag: This flag allows the pipeline to finish processing all existing data in the Pub/Sub subscription before shutting down. This ensures no data is lost during the update.
+Current pipeline: Updating the current pipeline minimizes disruption and avoids setting up entirely new infrastructure.
+Incompatible changes: Even with incompatible changes, the drain flag ensures existing data is processed correctly.
+
+COMMENT #233
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #234
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Drain flag: This flag allows the pipeline to finish processing all existing data in the Pub/Sub subscription before shutting down. This ensures no data is lost during the update.
+Current pipeline: Updating the current pipeline minimizes disruption and avoids setting up entirely new infrastructure.
+Incompatible changes: Even with incompatible changes, the drain flag ensures existing data is processed correctly.
+
+COMMENT #235
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #236
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Drain flag: This flag allows the pipeline to finish processing all existing data in the Pub/Sub subscription before shutting down. This ensures no data is lost during the update.
+Current pipeline: Updating the current pipeline minimizes disruption and avoids setting up entirely new infrastructure.
+Incompatible changes: Even with incompatible changes, the drain flag ensures existing data is processed correctly.
+
+COMMENT #237
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #238
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #239
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+While other options might work in some cases, they have drawbacks:
+
+B. Transform mapping JSON: This option is mainly for schema changes and doesn't guarantee data completion before shutdown.
+C. New pipeline, same subscription: This risks duplicate processing of data if both pipelines run concurrently.
+D. New pipeline, new subscription: This loses the current pipeline's state and potentially data, making it impractical for incompatible changes.
+Therefore, the most reliable and data-safe approach is to update the current pipeline with the drain flag for seamless transition and data integrity.
+
+Remember, always test updates in a staging environment before deploying to production.
+
+COMMENT #240
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+While other options might work in some cases, they have drawbacks:
+
+B. Transform mapping JSON: This option is mainly for schema changes and doesn't guarantee data completion before shutdown.
+C. New pipeline, same subscription: This risks duplicate processing of data if both pipelines run concurrently.
+D. New pipeline, new subscription: This loses the current pipeline's state and potentially data, making it impractical for incompatible changes.
+Therefore, the most reliable and data-safe approach is to update the current pipeline with the drain flag for seamless transition and data integrity.
+
+Remember, always test updates in a staging environment before deploying to production.
+
+COMMENT #241
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #242
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+While other options might work in some cases, they have drawbacks:
+
+B. Transform mapping JSON: This option is mainly for schema changes and doesn't guarantee data completion before shutdown.
+C. New pipeline, same subscription: This risks duplicate processing of data if both pipelines run concurrently.
+D. New pipeline, new subscription: This loses the current pipeline's state and potentially data, making it impractical for incompatible changes.
+Therefore, the most reliable and data-safe approach is to update the current pipeline with the drain flag for seamless transition and data integrity.
+
+Remember, always test updates in a staging environment before deploying to production.
+
+COMMENT #243
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+While other options might work in some cases, they have drawbacks:
+
+B. Transform mapping JSON: This option is mainly for schema changes and doesn't guarantee data completion before shutdown.
+C. New pipeline, same subscription: This risks duplicate processing of data if both pipelines run concurrently.
+D. New pipeline, new subscription: This loses the current pipeline's state and potentially data, making it impractical for incompatible changes.
+Therefore, the most reliable and data-safe approach is to update the current pipeline with the drain flag for seamless transition and data integrity.
+
+Remember, always test updates in a staging environment before deploying to production.
+
+COMMENT #244
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #245
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #246
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #247
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #248
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #249
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Same Cloud Pub/Sub Subscription: By using the same Cloud Pub/Sub subscription for the new pipeline, you ensure that no messages are lost during the transition. Pub/Sub manages message delivery, ensuring that unacknowledged messages (those that haven't been processed by your old pipeline) will be available for the new pipeline to process.
+
+Creating a New Pipeline: Since the update makes the new pipeline incompatible with the current version, it's necessary to create a new pipeline. Attempting to update the current pipeline in place (options A and B) would not be feasible due to compatibility issues.
+
+Cancel the Old Pipeline: Once the new pipeline is up and running and processing messages, you can safely cancel the old pipeline. This ensures a smooth transition with no data loss.
+
+COMMENT #250
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+TVH_Data_Engineer
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #251
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Same Cloud Pub/Sub Subscription: By using the same Cloud Pub/Sub subscription for the new pipeline, you ensure that no messages are lost during the transition. Pub/Sub manages message delivery, ensuring that unacknowledged messages (those that haven't been processed by your old pipeline) will be available for the new pipeline to process.
+
+Creating a New Pipeline: Since the update makes the new pipeline incompatible with the current version, it's necessary to create a new pipeline. Attempting to update the current pipeline in place (options A and B) would not be feasible due to compatibility issues.
+
+Cancel the Old Pipeline: Once the new pipeline is up and running and processing messages, you can safely cancel the old pipeline. This ensures a smooth transition with no data loss.
+
+COMMENT #252
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #253
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Same Cloud Pub/Sub Subscription: By using the same Cloud Pub/Sub subscription for the new pipeline, you ensure that no messages are lost during the transition. Pub/Sub manages message delivery, ensuring that unacknowledged messages (those that haven't been processed by your old pipeline) will be available for the new pipeline to process.
+
+Creating a New Pipeline: Since the update makes the new pipeline incompatible with the current version, it's necessary to create a new pipeline. Attempting to update the current pipeline in place (options A and B) would not be feasible due to compatibility issues.
+
+Cancel the Old Pipeline: Once the new pipeline is up and running and processing messages, you can safely cancel the old pipeline. This ensures a smooth transition with no data loss.
+
+COMMENT #254
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #255
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #256
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #257
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #258
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+In order to make an update to a Google Cloud Dataflow streaming pipeline without losing any data, the recommended approach is:
+
+A. Update the current pipeline and use the drain flag.
+
+Explanation:
+
+The drain flag is designed to allow the current pipeline to finish processing any remaining data before shutting down. This helps ensure that no data is lost during the update process.
+By updating the current pipeline and using the drain flag, you allow the pipeline to complete its current processing before the update takes effect, minimizing the risk of data loss.
+This approach is a safe way to transition from the old version to the new version without interrupting data processing.
+
+COMMENT #259
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+JOKKUNO
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #260
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+In order to make an update to a Google Cloud Dataflow streaming pipeline without losing any data, the recommended approach is:
+
+A. Update the current pipeline and use the drain flag.
+
+Explanation:
+
+The drain flag is designed to allow the current pipeline to finish processing any remaining data before shutting down. This helps ensure that no data is lost during the update process.
+By updating the current pipeline and using the drain flag, you allow the pipeline to complete its current processing before the update takes effect, minimizing the risk of data loss.
+This approach is a safe way to transition from the old version to the new version without interrupting data processing.
+
+COMMENT #261
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+In order to make an update to a Google Cloud Dataflow streaming pipeline without losing any data, the recommended approach is:
+
+A. Update the current pipeline and use the drain flag.
+
+Explanation:
+
+The drain flag is designed to allow the current pipeline to finish processing any remaining data before shutting down. This helps ensure that no data is lost during the update process.
+By updating the current pipeline and using the drain flag, you allow the pipeline to complete its current processing before the update takes effect, minimizing the risk of data loss.
+This approach is a safe way to transition from the old version to the new version without interrupting data processing.
+
+COMMENT #262
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #263
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #264
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #265
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #266
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+I would vote for A because of the structure of the exam, but there are other options worth considering as well
+
+COMMENT #267
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+axantroff
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #268
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I would vote for A because of the structure of the exam, but there are other options worth considering as well
+
+COMMENT #269
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I would vote for A because of the structure of the exam, but there are other options worth considering as well
+
+COMMENT #270
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #271
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #272
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #273
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #274
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+My answer is C. Chatted with ChatGPT and narrowed down on this option. Let me know your thoughts on this perspective.
+Option C - By using the existing subscription, you can ensure that the data flow remains uninterrupted, and there is no loss of data during the transition from the old pipeline to the new one.
+
+Creating a new pipeline that uses the same Cloud Pub/Sub subscription allows for a seamless transition without any interruptions to the data flow. This approach ensures that the new pipeline can continue to consume data from the same subscription as the old pipeline, thereby maintaining data continuity throughout the update process.
+
+COMMENT #275
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+RT_G
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #276
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+My answer is C. Chatted with ChatGPT and narrowed down on this option. Let me know your thoughts on this perspective.
+Option C - By using the existing subscription, you can ensure that the data flow remains uninterrupted, and there is no loss of data during the transition from the old pipeline to the new one.
+
+Creating a new pipeline that uses the same Cloud Pub/Sub subscription allows for a seamless transition without any interruptions to the data flow. This approach ensures that the new pipeline can continue to consume data from the same subscription as the old pipeline, thereby maintaining data continuity throughout the update process.
+
+COMMENT #277
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #278
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+My answer is C. Chatted with ChatGPT and narrowed down on this option. Let me know your thoughts on this perspective.
+Option C - By using the existing subscription, you can ensure that the data flow remains uninterrupted, and there is no loss of data during the transition from the old pipeline to the new one.
+
+Creating a new pipeline that uses the same Cloud Pub/Sub subscription allows for a seamless transition without any interruptions to the data flow. This approach ensures that the new pipeline can continue to consume data from the same subscription as the old pipeline, thereby maintaining data continuity throughout the update process.
+
+COMMENT #279
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #280
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #281
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #282
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #283
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Correct Option : A
+Explanation:-This option is correct as the key requirement is not to lose
+the data, the Dataflow pipeline can be stopped using the Drain option.
+
+COMMENT #284
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+rocky48
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #285
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct Option : A
+Explanation:-This option is correct as the key requirement is not to lose
+the data, the Dataflow pipeline can be stopped using the Drain option.
+
+COMMENT #286
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #287
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct Option : A
+Explanation:-This option is correct as the key requirement is not to lose
+the data, the Dataflow pipeline can be stopped using the Drain option.
+
+COMMENT #288
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #289
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #290
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #291
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #292
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+It should be B
+Drain will stop the existing job only and it does not suffice the updated schema.
+In order to bring updated schema into effect, updated JSON mapping need to be applied.
+
+COMMENT #293
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+mk_choudhary
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #294
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It should be B
+Drain will stop the existing job only and it does not suffice the updated schema.
+In order to bring updated schema into effect, updated JSON mapping need to be applied.
+
+COMMENT #295
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It should be B
+Drain will stop the existing job only and it does not suffice the updated schema.
+In order to bring updated schema into effect, updated JSON mapping need to be applied.
+
+COMMENT #296
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #297
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #298
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #299
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #300
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+The two cores of this question are: 1- Don't lose data ← Drain, is perfect for this because you process all buffer data and stop reviving messages; normally this message is alive for 7 days of retry, so when you start a new job you will receive all without lose any data. 2- Incompatible new code ← mapping solve some incompatibilities like change name of a ParDO but no a version issue. So launch a new job with the new code, it's the only option.
+So, option is A.
+
+COMMENT #301
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Simhamed2015
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #302
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The two cores of this question are: 1- Don't lose data ← Drain, is perfect for this because you process all buffer data and stop reviving messages; normally this message is alive for 7 days of retry, so when you start a new job you will receive all without lose any data. 2- Incompatible new code ← mapping solve some incompatibilities like change name of a ParDO but no a version issue. So launch a new job with the new code, it's the only option.
+So, option is A.
+
+COMMENT #303
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The two cores of this question are: 1- Don't lose data ← Drain, is perfect for this because you process all buffer data and stop reviving messages; normally this message is alive for 7 days of retry, so when you start a new job you will receive all without lose any data. 2- Incompatible new code ← mapping solve some incompatibilities like change name of a ParDO but no a version issue. So launch a new job with the new code, it's the only option.
+So, option is A.
+
+COMMENT #304
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #305
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #306
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #307
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #308
+----------------------------------------
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+The best choice is D. Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline.
+
+COMMENT #309
+----------------------------------------
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+imran79
+			
+
+
+			1 year, 6 months ago
+
+COMMENT #310
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The best choice is D. Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline.
+
+COMMENT #311
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The best choice is D. Create a new pipeline that has a new Cloud Pub/Sub subscription and cancel the old pipeline.
+
+COMMENT #312
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #313
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #314
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #315
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #316
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #317
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #318
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

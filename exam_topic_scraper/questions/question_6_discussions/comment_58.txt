@@ -1,0 +1,10 @@
+COMMENT #58 FOR QUESTION 6
+============================================================
+Author: Unknown
+Date: 2 years, 2 months ago
+Votes: 0
+----------------------------------------
+correct answer -> Retry the query with exponential backoff, up to a cap of 15 minutes.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+============================================================

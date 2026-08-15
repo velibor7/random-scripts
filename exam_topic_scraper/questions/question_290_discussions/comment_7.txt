@@ -1,0 +1,10 @@
+COMMENT #7 FOR QUESTION 290
+============================================================
+Author: Unknown
+Date: 9 months ago
+Votes: 0
+----------------------------------------
+- Exponential Backoff: This retry policy gradually increases the delay between retries, which helps to avoid overloading the consumer app. 
+- Dead Lettering to a Different Topic: Configuring dead lettering sends messages that couldn't be processed after the specified number of delivery attempts (10 in this case) to a separate topic. This allows for handling of failed messages without interrupting the regular flow of new messages.
+- Maximum Delivery Attempts Set to 10: This setting ensures that the system retries each message up to 10 times before considering it a failure and moving it to the dead letter topic.
+============================================================

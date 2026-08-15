@@ -1,0 +1,1072 @@
+================================================================================
+QUESTION:
+You are designing an Apache Beam pipeline to enrich data from Cloud Pub/Sub with static reference data from BigQuery. The reference data is small enough to fit in memory on a single worker. The pipeline should write enriched results to BigQuery for analysis. Which job type and transforms should this pipeline use?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Batch job, PubSubIO, side-inputs
+										
+
+
+													B.
+												
+											
+											Streaming job, PubSubIO, JdbcIO, side-outputs
+										
+
+
+													C.
+												
+											
+											Streaming job, PubSubIO, BigQueryIO, side-inputs
+										
+
+
+													D.
+												
+											
+											Streaming job, PubSubIO, BigQueryIO, side-outputs
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (190 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 94 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 94
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are designing an Apache Beam pipeline to enrich data from Cloud Pub/Sub with static reference data from BigQuery. The reference data is small enough to fit in memory on a single worker. The pipeline should write enriched results to BigQuery for analysis. Which job type and transforms should this pipeline use?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Batch job, PubSubIO, side-inputs
+										
+
+
+													B.
+												
+											
+											Streaming job, PubSubIO, JdbcIO, side-outputs
+										
+
+
+													C.
+												
+											
+											Streaming job, PubSubIO, BigQueryIO, side-inputs
+										
+
+
+													D.
+												
+											
+											Streaming job, PubSubIO, BigQueryIO, side-outputs
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 17, 2020, 9:34 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 94
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 17, 2020, 9:34 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Why not C? Without BigQueryIO how can data be written back to BigQuery?
+
+--- Comment #6 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Why not C? Without BigQueryIO how can data be written back to BigQuery?
+
+--- Comment #7 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Why not C? Without BigQueryIO how can data be written back to BigQuery?
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Why not C? Without BigQueryIO how can data be written back to BigQuery?
+
+--- Comment #13 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Why not C? Without BigQueryIO how can data be written back to BigQuery?
+
+--- Comment #14 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+rickywck
+			
+
+
+				Highly Voted 
+
+
+			4 years, 6 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Why not C? Without BigQueryIO how can data be written back to BigQuery?
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Why not C? Without BigQueryIO how can data be written back to BigQuery?
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 31 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+C should be right
+
+--- Comment #20 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+C should be right
+
+--- Comment #21 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+xq
+			
+
+
+			4 years, 6 months ago
+
+--- Comment #22 ---
+Author: Unknown | Date:  | Votes: 0
+C should be right
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+C should be right
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Answer: C
+Description: Sideinput for Bigquery data
+
+--- Comment #30 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			4 years, 6 months ago
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: C
+Description: Sideinput for Bigquery data
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: C
+Description: Sideinput for Bigquery data
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 16 times
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+Side inputs
+In addition to the main input PCollection, you can provide additional inputs to a ParDo transform in the form of side inputs. A side input is an additional input that your DoFn can access each time it processes an element in the input PCollection. When you specify a side input, you create a view of some other data that can be read from within the ParDo transform’s DoFn while processing each element.
+
+Side inputs are useful if your ParDo needs to inject additional data when processing each element in the input PCollection, but the additional data needs to be determined at runtime (and not hard-coded). Such values might be determined by the input data, or depend on a different branch of your pipeline.
+
+--- Comment #38 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+JOKKUNO
+			
+
+
+				Most Recent 
+
+
+			9 months, 2 weeks ago
+
+--- Comment #39 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+Side inputs
+In addition to the main input PCollection, you can provide additional inputs to a ParDo transform in the form of side inputs. A side input is an additional input that your DoFn can access each time it processes an element in the input PCollection. When you specify a side input, you create a view of some other data that can be read from within the ParDo transform’s DoFn while processing each element.
+
+Side inputs are useful if your ParDo needs to inject additional data when processing each element in the input PCollection, but the additional data needs to be determined at runtime (and not hard-coded). Such values might be determined by the input data, or depend on a different branch of your pipeline.
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+Side inputs
+In addition to the main input PCollection, you can provide additional inputs to a ParDo transform in the form of side inputs. A side input is an additional input that your DoFn can access each time it processes an element in the input PCollection. When you specify a side input, you create a view of some other data that can be read from within the ParDo transform’s DoFn while processing each element.
+
+Side inputs are useful if your ParDo needs to inject additional data when processing each element in the input PCollection, but the additional data needs to be determined at runtime (and not hard-coded). Such values might be determined by the input data, or depend on a different branch of your pipeline.
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #43 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+https://beam.apache.org/documentation/programming-guide/#side-inputs
+
+--- Comment #44 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+https://beam.apache.org/documentation/programming-guide/#side-inputs
+
+--- Comment #45 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+JOKKUNO
+			
+
+
+			9 months, 2 weeks ago
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+https://beam.apache.org/documentation/programming-guide/#side-inputs
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+https://beam.apache.org/documentation/programming-guide/#side-inputs
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #53 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Why not side-output?
+
+--- Comment #54 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+piyush7777
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+Why not side-output?
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+Why not side-output?
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #61 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+B. Use multi-cluster routing to add a second cluster to the existing instance, utilizing a live traffic app profile for the regular workload and a batch analytics profile for the analytical workload.
+
+--- Comment #62 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+TQM__9MD
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+B. Use multi-cluster routing to add a second cluster to the existing instance, utilizing a live traffic app profile for the regular workload and a batch analytics profile for the analytical workload.
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+B. Use multi-cluster routing to add a second cluster to the existing instance, utilizing a live traffic app profile for the regular workload and a batch analytics profile for the analytical workload.
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #70 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+The answer is C. It's a trap so that you answer A because of batch vs streaming but you need BigQueryIO. On the other hand, streaming is absolutely redundant here and will incur extra costs. C is right but would be better with batch.
+
+--- Comment #71 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Mathew106
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is C. It's a trap so that you answer A because of batch vs streaming but you need BigQueryIO. On the other hand, streaming is absolutely redundant here and will incur extra costs. C is right but would be better with batch.
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is C. It's a trap so that you answer A because of batch vs streaming but you need BigQueryIO. On the other hand, streaming is absolutely redundant here and will incur extra costs. C is right but would be better with batch.
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #79 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+A is the Answer.
+ A. Batch job, PubSubIO, side-inputs
+
+--- Comment #80 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Siadd
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+A is the Answer.
+ A. Batch job, PubSubIO, side-inputs
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+A is the Answer.
+ A. Batch job, PubSubIO, side-inputs
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #87 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+C is the answer.
+
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#side-input-pattern
+In streaming analytics applications, data is often enriched with additional information that might be useful for further analysis. For example, if you have the store ID for a transaction, you might want to add information about the store location. This additional information is often added by taking an element and bringing in information from a lookup table.
+
+--- Comment #88 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+zellck
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+C is the answer.
+
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#side-input-pattern
+In streaming analytics applications, data is often enriched with additional information that might be useful for further analysis. For example, if you have the store ID for a transaction, you might want to add information about the store location. This additional information is often added by taking an element and bringing in information from a lookup table.
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+C is the answer.
+
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#side-input-pattern
+In streaming analytics applications, data is often enriched with additional information that might be useful for further analysis. For example, if you have the store ID for a transaction, you might want to add information about the store location. This additional information is often added by taking an element and bringing in information from a lookup table.
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #96 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+I got this question on sept 2022. Answer is C
+
+--- Comment #97 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+sedado77
+			
+
+
+			2 years ago
+
+--- Comment #98 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+I got this question on sept 2022. Answer is C
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+I got this question on sept 2022. Answer is C
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #103 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+dear can you please help, i have some questions about how to prepare the cerification exam using this questionnaire. this is my email [email protected], ping me to have some conversation
+
+--- Comment #104 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+dear can you please help, i have some questions about how to prepare the cerification exam using this questionnaire. this is my email [email protected], ping me to have some conversation
+
+--- Comment #105 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+chrismayola
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+dear can you please help, i have some questions about how to prepare the cerification exam using this questionnaire. this is my email [email protected], ping me to have some conversation
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+dear can you please help, i have some questions about how to prepare the cerification exam using this questionnaire. this is my email [email protected], ping me to have some conversation
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #113 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+Answer: C
+
+--- Comment #114 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+alex12441
+			
+
+
+			2 years, 8 months ago
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: C
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: C
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #122 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+I vote for C, because data will come from Pub/Sub, so it should be streaming, we'll need PubSubIO to be able to read from PubSub and BigQueryIO to be able to write to BigQuery, finally the side-inputs pattern let us enrich data
+
+--- Comment #123 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+medeis_jar
+			
+
+
+			2 years, 9 months ago
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+I vote for C, because data will come from Pub/Sub, so it should be streaming, we'll need PubSubIO to be able to read from PubSub and BigQueryIO to be able to write to BigQuery, finally the side-inputs pattern let us enrich data
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+I vote for C, because data will come from Pub/Sub, so it should be streaming, we'll need PubSubIO to be able to read from PubSub and BigQueryIO to be able to write to BigQuery, finally the side-inputs pattern let us enrich data
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #131 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+Static reference data from BigQuery will go as side-inputs and data from pub-sub will go as streaming data using PubSubIO and finally BigQueryIO is required to push the final data to BigQuery
+
+--- Comment #132 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+MaxNRG
+			
+
+
+			2 years, 9 months ago
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+Static reference data from BigQuery will go as side-inputs and data from pub-sub will go as streaming data using PubSubIO and finally BigQueryIO is required to push the final data to BigQuery
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+Static reference data from BigQuery will go as side-inputs and data from pub-sub will go as streaming data using PubSubIO and finally BigQueryIO is required to push the final data to BigQuery
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #140 ---
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+Ans: C
+
+--- Comment #141 ---
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+JG123
+			
+
+
+			2 years, 10 months ago
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+Ans: C
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+Ans: C
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #148 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Answer is C,
+You need pubsubIO and BigQueryIO for streaming data and writing enriched data back to BigQuery. side-inputs are a way to enrich the data
+https://cloud.google.com/architecture/e-commerce/patterns/slow-updating-side-inputs
+
+--- Comment #149 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+pals_muthu
+			
+
+
+			3 years, 1 month ago
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is C,
+You need pubsubIO and BigQueryIO for streaming data and writing enriched data back to BigQuery. side-inputs are a way to enrich the data
+https://cloud.google.com/architecture/e-commerce/patterns/slow-updating-side-inputs
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is C,
+You need pubsubIO and BigQueryIO for streaming data and writing enriched data back to BigQuery. side-inputs are a way to enrich the data
+https://cloud.google.com/architecture/e-commerce/patterns/slow-updating-side-inputs
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #156 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+I choose C, because data will come from Pub/Sub, so it should be streaming, we'll need PubSubIO to be able to read from PubSub y BigQueryIO to be able to write to BigQuery, finally the side-inputs pattern let us enrich data
+https://beam.apache.org/releases/javadoc/2.4.0/org/apache/beam/sdk/io/gcp/pubsub/PubsubIO.html
+https://cloud.google.com/architecture/e-commerce/patterns/slow-updating-side-inputs
+https://beam.apache.org/releases/javadoc/2.3.0/org/apache/beam/sdk/io/gcp/bigquery/BigQueryIO.html
+
+--- Comment #157 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Meuter
+			
+
+
+			3 years, 1 month ago
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+I choose C, because data will come from Pub/Sub, so it should be streaming, we'll need PubSubIO to be able to read from PubSub y BigQueryIO to be able to write to BigQuery, finally the side-inputs pattern let us enrich data
+https://beam.apache.org/releases/javadoc/2.4.0/org/apache/beam/sdk/io/gcp/pubsub/PubsubIO.html
+https://cloud.google.com/architecture/e-commerce/patterns/slow-updating-side-inputs
+https://beam.apache.org/releases/javadoc/2.3.0/org/apache/beam/sdk/io/gcp/bigquery/BigQueryIO.html
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+I choose C, because data will come from Pub/Sub, so it should be streaming, we'll need PubSubIO to be able to read from PubSub y BigQueryIO to be able to write to BigQuery, finally the side-inputs pattern let us enrich data
+https://beam.apache.org/releases/javadoc/2.4.0/org/apache/beam/sdk/io/gcp/pubsub/PubsubIO.html
+https://cloud.google.com/architecture/e-commerce/patterns/slow-updating-side-inputs
+https://beam.apache.org/releases/javadoc/2.3.0/org/apache/beam/sdk/io/gcp/bigquery/BigQueryIO.html
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #164 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+C:
+we have to use Streaming job because of Pub/Sub, and side-input thanks to static reference data. and we have to leverage BigQueryIO since finally we want to write data to BigQuery. then C is the correct answer.
+
+--- Comment #165 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+daghayeghi
+			
+
+
+			3 years, 7 months ago
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+C:
+we have to use Streaming job because of Pub/Sub, and side-input thanks to static reference data. and we have to leverage BigQueryIO since finally we want to write data to BigQuery. then C is the correct answer.
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+C:
+we have to use Streaming job because of Pub/Sub, and side-input thanks to static reference data. and we have to leverage BigQueryIO since finally we want to write data to BigQuery. then C is the correct answer.
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #172 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+Correct A. batch is cost-effective and no need to go for streaming
+
+--- Comment #173 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+someshsehgal
+			
+
+
+			3 years, 7 months ago
+
+--- Comment #174 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+Correct A. batch is cost-effective and no need to go for streaming
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+Correct A. batch is cost-effective and no need to go for streaming
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #178 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+How you are going to write back to BQ?
+
+--- Comment #179 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+How you are going to write back to BQ?
+
+--- Comment #180 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+funtoosh
+			
+
+
+			3 years, 7 months ago
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+How you are going to write back to BQ?
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+How you are going to write back to BQ?
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #188 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

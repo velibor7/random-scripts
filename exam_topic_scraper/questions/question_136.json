@@ -1,0 +1,1165 @@
+{
+  "question": "You are running a pipeline in Dataflow that receives messages from a Pub/Sub topic and writes the results to a BigQuery dataset in the EU. Currently, your pipeline is located in europe-west4 and has a maximum of 3 workers, instance type n1-standard-1. You notice that during peak periods, your pipeline is struggling to process records in a timely fashion, when all 3 workers are at maximum CPU utilization. Which two actions can you take to increase performance of your pipeline? (Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tIncrease the number of max workers\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse a larger instance type for your Dataflow workers\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tChange the zone of your Dataflow pipeline to run in us-central1\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a temporary table in Bigtable that will act as a buffer for new data. Create a new step in your pipeline to write to this table first, and then create a new pipeline to write from Bigtable to BigQuery\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a temporary table in Cloud Spanner that will act as a buffer for new data. Create a new step in your pipeline to write to this table first, and then create a new pipeline to write from Cloud Spanner to BigQuery\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nAB\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 136 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 136\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are running a pipeline in Dataflow that receives messages from a Pub/Sub topic and writes the results to a BigQuery dataset in the EU. Currently, your pipeline is located in europe-west4 and has a maximum of 3 workers, instance type n1-standard-1. You notice that during peak periods, your pipeline is struggling to process records in a timely fashion, when all 3 workers are at maximum CPU utilization. Which two actions can you take to increase performance of your pipeline? (Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tIncrease the number of max workers\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse a larger instance type for your Dataflow workers\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tChange the zone of your Dataflow pipeline to run in us-central1\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a temporary table in Bigtable that will act as a buffer for new data. Create a new step in your pipeline to write to this table first, and then create a new pipeline to write from Bigtable to BigQuery\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a temporary table in Cloud Spanner that will act as a buffer for new data. Create a new step in your pipeline to write to this table first, and then create a new pipeline to write from Cloud Spanner to BigQuery\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nAB\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tjvg637\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 18, 2020, 4:39 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 136\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tjvg637\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 18, 2020, 4:39 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "A &  B\ninstance n1-standard-1 is low configuration and hence need to be larger configuration, definitely B should be one of the option.\nIncrease max workers will increase parallelism and hence will be able to process faster given larger CPU size and multi core processor instance type is chosen. Option A can be a better step.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "A &  B\ninstance n1-standard-1 is low configuration and hence need to be larger configuration, definitely B should be one of the option.\nIncrease max workers will increase parallelism and hence will be able to process faster given larger CPU size and multi core processor instance type is chosen. Option A can be a better step.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "A &  B\ninstance n1-standard-1 is low configuration and hence need to be larger configuration, definitely B should be one of the option.\nIncrease max workers will increase parallelism and hence will be able to process faster given larger CPU size and multi core processor instance type is chosen. Option A can be a better step.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "A &  B\ninstance n1-standard-1 is low configuration and hence need to be larger configuration, definitely B should be one of the option.\nIncrease max workers will increase parallelism and hence will be able to process faster given larger CPU size and multi core processor instance type is chosen. Option A can be a better step.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "A &  B\ninstance n1-standard-1 is low configuration and hence need to be larger configuration, definitely B should be one of the option.\nIncrease max workers will increase parallelism and hence will be able to process faster given larger CPU size and multi core processor instance type is chosen. Option A can be a better step.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "jvg637\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "A &  B\ninstance n1-standard-1 is low configuration and hence need to be larger configuration, definitely B should be one of the option.\nIncrease max workers will increase parallelism and hence will be able to process faster given larger CPU size and multi core processor instance type is chosen. Option A can be a better step.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A &  B\ninstance n1-standard-1 is low configuration and hence need to be larger configuration, definitely B should be one of the option.\nIncrease max workers will increase parallelism and hence will be able to process faster given larger CPU size and multi core processor instance type is chosen. Option A can be a better step.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 50 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "Agreed",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "Agreed",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "AzureDP900\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agreed",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agreed",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "A & B.\n\nWith autoscaling enabled, the Dataflow service does not allow user control of the exact number of worker instances allocated to your job. You might still cap the number of workers by specifying the --max_num_workers option when you run your pipeline. Here as per question CAP is 3, So we can change that CAP.\n\nFor batch jobs, the default machine type is n1-standard-1. For streaming jobs, the default machine type for Streaming Engine-enabled jobs is n1-standard-2 and the default machine type for non-Streaming Engine jobs is n1-standard-4. When using the default machine types, the Dataflow service can therefore allocate up to 4000 cores per job. If you need more cores for your job, you can select a larger machine type.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "sumanshu\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A & B.\n\nWith autoscaling enabled, the Dataflow service does not allow user control of the exact number of worker instances allocated to your job. You might still cap the number of workers by specifying the --max_num_workers option when you run your pipeline. Here as per question CAP is 3, So we can change that CAP.\n\nFor batch jobs, the default machine type is n1-standard-1. For streaming jobs, the default machine type for Streaming Engine-enabled jobs is n1-standard-2 and the default machine type for non-Streaming Engine jobs is n1-standard-4. When using the default machine types, the Dataflow service can therefore allocate up to 4000 cores per job. If you need more cores for your job, you can select a larger machine type.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A & B.\n\nWith autoscaling enabled, the Dataflow service does not allow user control of the exact number of worker instances allocated to your job. You might still cap the number of workers by specifying the --max_num_workers option when you run your pipeline. Here as per question CAP is 3, So we can change that CAP.\n\nFor batch jobs, the default machine type is n1-standard-1. For streaming jobs, the default machine type for Streaming Engine-enabled jobs is n1-standard-2 and the default machine type for non-Streaming Engine jobs is n1-standard-4. When using the default machine types, the Dataflow service can therefore allocate up to 4000 cores per job. If you need more cores for your job, you can select a larger machine type.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 14 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "A & B is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "et2137\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t7\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A & B is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A & B is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "A & B is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "kcl10\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A & B is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A & B is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "A because more workers improves performance through parallel work\nB because the current instance size is too small",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "juliorevk\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A because more workers improves performance through parallel work\nB because the current instance size is too small",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A because more workers improves performance through parallel work\nB because the current instance size is too small",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "A. Increase the number of max workers:\nBy increasing the number of maximum workers, you allow Dataflow to allocate more computing resources to handle the peak load of incoming data. This can help improve processing speed and reduce CPU utilization per worker.\n\nB. Use a larger instance type for your Dataflow workers:\nUsing a larger instance type with more CPU and memory resources can help your Dataflow workers handle a higher volume of data and processing tasks more efficiently. It can address CPU bottlenecks during peak periods.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "barnac1es\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Increase the number of max workers:\nBy increasing the number of maximum workers, you allow Dataflow to allocate more computing resources to handle the peak load of incoming data. This can help improve processing speed and reduce CPU utilization per worker.\n\nB. Use a larger instance type for your Dataflow workers:\nUsing a larger instance type with more CPU and memory resources can help your Dataflow workers handle a higher volume of data and processing tasks more efficiently. It can address CPU bottlenecks during peak periods.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Increase the number of max workers:\nBy increasing the number of maximum workers, you allow Dataflow to allocate more computing resources to handle the peak load of incoming data. This can help improve processing speed and reduce CPU utilization per worker.\n\nB. Use a larger instance type for your Dataflow workers:\nUsing a larger instance type with more CPU and memory resources can help your Dataflow workers handle a higher volume of data and processing tasks more efficiently. It can address CPU bottlenecks during peak periods.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "AB is the answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "zellck\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AB is the answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AB is the answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "Scale in and Scale Out",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "mbacelar\n\t\t\t\n\n\n\t\t\t1\u00a0year, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Scale in and Scale Out",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Scale in and Scale Out",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "maximum of 3 workers:  Increase the number of max workers (A)\ninstance type n1-standard-1:  Use a larger instance type for your Cloud Dataflow workers (B)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "FrankT2L\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "maximum of 3 workers:  Increase the number of max workers (A)\ninstance type n1-standard-1:  Use a larger instance type for your Cloud Dataflow workers (B)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "maximum of 3 workers:  Increase the number of max workers (A)\ninstance type n1-standard-1:  Use a larger instance type for your Cloud Dataflow workers (B)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 9\u00a0months ago",
+      "content": "A & B, other options don't make sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 9\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t2\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A & B, other options don't make sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A & B, other options don't make sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 9\u00a0months ago",
+      "content": "Only A & B make sense for improving pipeline performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 9\u00a0months ago",
+      "content": "medeis_jar\n\t\t\t\n\n\n\t\t\t2\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Only A & B make sense for improving pipeline performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Only A & B make sense for improving pipeline performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 9\u00a0months ago",
+      "content": "Should be A & B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 9\u00a0months ago",
+      "content": "Mjvsj\n\t\t\t\n\n\n\t\t\t2\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Should be A & B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Should be A & B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 7\u00a0months ago",
+      "content": "B, E:\nB: Dataflow manage number of worker automatically, then we only can define machine type worker.\nhttps://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline\nE: and adding a horizontally scale-able database like cloud spanner will reduce pressure on dataflow as it don't have to move data to specific zone and can be remain in same zone of EU, then E is correct.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 7\u00a0months ago",
+      "content": "daghayeghi\n\t\t\t\n\n\n\t\t\t3\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "B, E:\nB: Dataflow manage number of worker automatically, then we only can define machine type worker.\nhttps://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline\nE: and adding a horizontally scale-able database like cloud spanner will reduce pressure on dataflow as it don't have to move data to specific zone and can be remain in same zone of EU, then E is correct.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B, E:\nB: Dataflow manage number of worker automatically, then we only can define machine type worker.\nhttps://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline\nE: and adding a horizontally scale-able database like cloud spanner will reduce pressure on dataflow as it don't have to move data to specific zone and can be remain in same zone of EU, then E is correct.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "A & B is the right answer: You can set disable auto-scaling by setting the option --numWorkers (default is 3) and select the machine type by setting --workerMachineType at the time of creation of the pipeline (this applies to both auto and manual scaling)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "A & B is the right answer: You can set disable auto-scaling by setting the option --numWorkers (default is 3) and select the machine type by setting --workerMachineType at the time of creation of the pipeline (this applies to both auto and manual scaling)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "Vasu_1\n\t\t\t\n\n\n\t\t\t3\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A & B is the right answer: You can set disable auto-scaling by setting the option --numWorkers (default is 3) and select the machine type by setting --workerMachineType at the time of creation of the pipeline (this applies to both auto and manual scaling)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A & B is the right answer: You can set disable auto-scaling by setting the option --numWorkers (default is 3) and select the machine type by setting --workerMachineType at the time of creation of the pipeline (this applies to both auto and manual scaling)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 10\u00a0months ago",
+      "content": "Dataset is in EU so data can't be moved outside EU due to privacy law so zone option is ruled out. AB is Ok but intermediate table will boost perf apanee ruled out not sure of bigtable",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 10\u00a0months ago",
+      "content": "kavs\n\t\t\t\n\n\n\t\t\t3\u00a0years, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Dataset is in EU so data can't be moved outside EU due to privacy law so zone option is ruled out. AB is Ok but intermediate table will boost perf apanee ruled out not sure of bigtable",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Dataset is in EU so data can't be moved outside EU due to privacy law so zone option is ruled out. AB is Ok but intermediate table will boost perf apanee ruled out not sure of bigtable",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 11\u00a0months ago",
+      "content": "Option A and B for sure, \nOption C : Changing Zone has nothing to do in improving performance \nOption D and E : Adding BQ and BT is waste of many and does not solve the purpose of the question.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 11\u00a0months ago",
+      "content": "Alasmindas\n\t\t\t\n\n\n\t\t\t3\u00a0years, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A and B for sure, \nOption C : Changing Zone has nothing to do in improving performance \nOption D and E : Adding BQ and BT is waste of many and does not solve the purpose of the question.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A and B for sure, \nOption C : Changing Zone has nothing to do in improving performance \nOption D and E : Adding BQ and BT is waste of many and does not solve the purpose of the question.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "B & D\nDF will automatically take care of increasing workers. Developers won't need to access the settings . https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#autoscaling",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "SureshKotla\n\t\t\t\n\n\n\t\t\t4\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "B & D\nDF will automatically take care of increasing workers. Developers won't need to access the settings . https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#autoscaling",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B & D\nDF will automatically take care of increasing workers. Developers won't need to access the settings . https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#autoscaling",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "automatically taking care of workers up to 3 (as the maximum worker is 3 set as per questions)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "automatically taking care of workers up to 3 (as the maximum worker is 3 set as per questions)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "sumanshu\n\t\t\t\n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "automatically taking care of workers up to 3 (as the maximum worker is 3 set as per questions)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "automatically taking care of workers up to 3 (as the maximum worker is 3 set as per questions)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "On second thought, A B is looking right",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "SureshKotla\n\t\t\t\n\n\n\t\t\t4\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "On second thought, A B is looking right",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "On second thought, A B is looking right",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 1\u00a0month ago",
+      "content": "AB \nis correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 1\u00a0month ago",
+      "content": "atnafu2020\n\t\t\t\n\n\n\t\t\t4\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AB \nis correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AB \nis correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

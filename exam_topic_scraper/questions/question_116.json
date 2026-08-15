@@ -1,0 +1,1063 @@
+{
+  "question": "Your company is in the process of migrating its on-premises data warehousing solutions to BigQuery. The existing data warehouse uses trigger-based change data capture (CDC) to apply updates from multiple transactional database sources on a daily basis. With BigQuery, your company hopes to improve its handling ofCDC so that changes to the source systems are available to query in BigQuery in near-real time using log-based CDC streams, while also optimizing for the performance of applying changes to the data warehouse. Which two steps should they take to ensure that changes are available in the BigQuery reporting table with minimal latency while reducing compute overhead? (Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tPerform a DML INSERT, UPDATE, or DELETE to replicate each individual CDC record in real time directly on the reporting table.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tInsert each new CDC record and corresponding operation type to a staging table in real time.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tPeriodically DELETE outdated records from the reporting table.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tPeriodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tInsert each new CDC record and corresponding operation type in real time to the reporting table, and use a materialized view to expose only the newest version of each unique record.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nBD\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 116 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 116\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYour company is in the process of migrating its on-premises data warehousing solutions to BigQuery. The existing data warehouse uses trigger-based change data capture (CDC) to apply updates from multiple transactional database sources on a daily basis. With BigQuery, your company hopes to improve its handling ofCDC so that changes to the source systems are available to query in BigQuery in near-real time using log-based CDC streams, while also optimizing for the performance of applying changes to the data warehouse. Which two steps should they take to ensure that changes are available in the BigQuery reporting table with minimal latency while reducing compute overhead? (Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tPerform a DML INSERT, UPDATE, or DELETE to replicate each individual CDC record in real time directly on the reporting table.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tInsert each new CDC record and corresponding operation type to a staging table in real time.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tPeriodically DELETE outdated records from the reporting table.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tPeriodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tInsert each new CDC record and corresponding operation type in real time to the reporting table, and use a materialized view to expose only the newest version of each unique record.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nBD\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tducc\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 3, 2022, 6:25 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 116\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tducc\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 3, 2022, 6:25 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "To aim for minimal latency while reducing compute overhead:\n\nB. Insert each new CDC record and corresponding operation type to a staging table in real time.\n\nD. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "To aim for minimal latency while reducing compute overhead:\n\nB. Insert each new CDC record and corresponding operation type to a staging table in real time.\n\nD. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "To aim for minimal latency while reducing compute overhead:\n\nB. Insert each new CDC record and corresponding operation type to a staging table in real time.\n\nD. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "To aim for minimal latency while reducing compute overhead:\n\nB. Insert each new CDC record and corresponding operation type to a staging table in real time.\n\nD. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "To aim for minimal latency while reducing compute overhead:\n\nB. Insert each new CDC record and corresponding operation type to a staging table in real time.\n\nD. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "YorelNation\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t2\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To aim for minimal latency while reducing compute overhead:\n\nB. Insert each new CDC record and corresponding operation type to a staging table in real time.\n\nD. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: BD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To aim for minimal latency while reducing compute overhead:\n\nB. Insert each new CDC record and corresponding operation type to a staging table in real time.\n\nD. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 15 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "B&D\nTricks here: Always choose google recommended approach, Use data first in Staging table then merge with original tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "musumusu\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B&D\nTricks here: Always choose google recommended approach, Use data first in Staging table then merge with original tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B&D\nTricks here: Always choose google recommended approach, Use data first in Staging table then merge with original tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "I'm going for E &C - this in the only solution with low TCO. \nE - is the best way to work with CDC when real nearline data is needed BQ snapshots can be online! . & C - is good practice to delete old records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "Nirca\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "I'm going for E &C - this in the only solution with low TCO. \nE - is the best way to work with CDC when real nearline data is needed BQ snapshots can be online! . & C - is good practice to delete old records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I'm going for E &C - this in the only solution with low TCO. \nE - is the best way to work with CDC when real nearline data is needed BQ snapshots can be online! . & C - is good practice to delete old records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "A isn't correct, as the requirement is \"reducing compute overhead\"\nB isn't correct, as there is no mention of a \"staging table\" in the scenario\nD isn't correct as it's done periodically, and the requirement is \"near real-time\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "A isn't correct, as the requirement is \"reducing compute overhead\"\nB isn't correct, as there is no mention of a \"staging table\" in the scenario\nD isn't correct as it's done periodically, and the requirement is \"near real-time\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "nadavw\n\t\t\t\n\n\n\t\t\t7\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A isn't correct, as the requirement is \"reducing compute overhead\"\nB isn't correct, as there is no mention of a \"staging table\" in the scenario\nD isn't correct as it's done periodically, and the requirement is \"near real-time\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A isn't correct, as the requirement is \"reducing compute overhead\"\nB isn't correct, as there is no mention of a \"staging table\" in the scenario\nD isn't correct as it's done periodically, and the requirement is \"near real-time\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "with both the delta table and the main table  changes could be queried in near realtime, by using a view that unions both tables and queries the laters record for the given key, eventually the delta table should be merged into the main table and truncated. Google recently introduced datastream that would take away all these headaches.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "dconesoko\n\t\t\t\n\n\n\t\t\t2\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "with both the delta table and the main table  changes could be queried in near realtime, by using a view that unions both tables and queries the laters record for the given key, eventually the delta table should be merged into the main table and truncated. Google recently introduced datastream that would take away all these headaches.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: BD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "with both the delta table and the main table  changes could be queried in near realtime, by using a view that unions both tables and queries the laters record for the given key, eventually the delta table should be merged into the main table and truncated. Google recently introduced datastream that would take away all these headaches.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "The solution is B and D. I perform a similar task in my work, and this is the best way to do it at scale with BigQuery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "odacir\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The solution is B and D. I perform a similar task in my work, and this is the best way to do it at scale with BigQuery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: BD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The solution is B and D. I perform a similar task in my work, and this is the best way to do it at scale with BigQuery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "BD is the answer.\n\nhttps://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#overview_of_cdc_data_replication\nDelta tables contain all change events for a particular table since the initial load. Having all change events available can be valuable for identifying trends, the state of the entities that a table represents at a particular moment, or change frequency.\n\nThe best way to merge data frequently and consistently is to use a MERGE statement, which lets you combine multiple INSERT, UPDATE, and DELETE statements into a single atomic operation.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "zellck\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "BD is the answer.\n\nhttps://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#overview_of_cdc_data_replication\nDelta tables contain all change events for a particular table since the initial load. Having all change events available can be valuable for identifying trends, the state of the entities that a table represents at a particular moment, or change frequency.\n\nThe best way to merge data frequently and consistently is to use a MERGE statement, which lets you combine multiple INSERT, UPDATE, and DELETE statements into a single atomic operation.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: BD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "BD is the answer.\n\nhttps://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#overview_of_cdc_data_replication\nDelta tables contain all change events for a particular table since the initial load. Having all change events available can be valuable for identifying trends, the state of the entities that a table represents at a particular moment, or change frequency.\n\nThe best way to merge data frequently and consistently is to use a MERGE statement, which lets you combine multiple INSERT, UPDATE, and DELETE statements into a single atomic operation.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "I really can\u2019t find a correct combination of answers. I'm between the following alternatives, but with no one fitting:\n1\ufe0f\u20e3 [B] and [D]: That's a proposed solution, but as a cost-optimized approach (along with an extra step to \"Periodically DELETE outdated records from the STAGING table\" - more details on my subsequent reply). Also, I can't imagine how an answer with the word \"Periodically\" may be compatible with the \"minimal latency\" requirement.\n2\ufe0f\u20e3 [E] and [C]: It could be a valid approach, but near-real time requirement would demand also for a materialized view refresh. And it seems to contradict the \"reducing compute overhead\" req.\n3\ufe0f\u20e3 [A] standalone: Provides immediate results but is far from compute-optimized.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "NicolasN\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "I really can\u2019t find a correct combination of answers. I'm between the following alternatives, but with no one fitting:\n1\ufe0f\u20e3 [B] and [D]: That's a proposed solution, but as a cost-optimized approach (along with an extra step to \"Periodically DELETE outdated records from the STAGING table\" - more details on my subsequent reply). Also, I can't imagine how an answer with the word \"Periodically\" may be compatible with the \"minimal latency\" requirement.\n2\ufe0f\u20e3 [E] and [C]: It could be a valid approach, but near-real time requirement would demand also for a materialized view refresh. And it seems to contradict the \"reducing compute overhead\" req.\n3\ufe0f\u20e3 [A] standalone: Provides immediate results but is far from compute-optimized.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I really can\u2019t find a correct combination of answers. I'm between the following alternatives, but with no one fitting:\n1\ufe0f\u20e3 [B] and [D]: That's a proposed solution, but as a cost-optimized approach (along with an extra step to \"Periodically DELETE outdated records from the STAGING table\" - more details on my subsequent reply). Also, I can't imagine how an answer with the word \"Periodically\" may be compatible with the \"minimal latency\" requirement.\n2\ufe0f\u20e3 [E] and [C]: It could be a valid approach, but near-real time requirement would demand also for a materialized view refresh. And it seems to contradict the \"reducing compute overhead\" req.\n3\ufe0f\u20e3 [A] standalone: Provides immediate results but is far from compute-optimized.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "The previous guidelines were here: \n\ud83d\udd17 https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#immediate_consistency_approach\nThere were two approaches:\n1\ufe0f\u20e3 Immediate consistency approach\n2\ufe0f\u20e3 Cost-optimized approach\nFor approach 1\ufe0f\u20e3, which is the objective of this question, it proposes:\n\ta. Insert CDC data into a delta table in BigQuery => that's answer [B]\n\tb. Create a BigQuery view that joins the main and delta tables and finds the most recent row => there' no answer that fits\nFor approach 2\ufe0f\u20e3 it proposes:\n\ta. Insert CDC data into a delta table in BigQuery => that's answer [B]\n\tb. Merge delta table changes into the main table and periodically purge merged rows from the delta table - Run Merge statement on a regular interval => that's answer [D]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "The previous guidelines were here: \n\ud83d\udd17 https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#immediate_consistency_approach\nThere were two approaches:\n1\ufe0f\u20e3 Immediate consistency approach\n2\ufe0f\u20e3 Cost-optimized approach\nFor approach 1\ufe0f\u20e3, which is the objective of this question, it proposes:\n\ta. Insert CDC data into a delta table in BigQuery => that's answer [B]\n\tb. Create a BigQuery view that joins the main and delta tables and finds the most recent row => there' no answer that fits\nFor approach 2\ufe0f\u20e3 it proposes:\n\ta. Insert CDC data into a delta table in BigQuery => that's answer [B]\n\tb. Merge delta table changes into the main table and periodically purge merged rows from the delta table - Run Merge statement on a regular interval => that's answer [D]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "NicolasN\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The previous guidelines were here: \n\ud83d\udd17 https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#immediate_consistency_approach\nThere were two approaches:\n1\ufe0f\u20e3 Immediate consistency approach\n2\ufe0f\u20e3 Cost-optimized approach\nFor approach 1\ufe0f\u20e3, which is the objective of this question, it proposes:\n\ta. Insert CDC data into a delta table in BigQuery => that's answer [B]\n\tb. Create a BigQuery view that joins the main and delta tables and finds the most recent row => there' no answer that fits\nFor approach 2\ufe0f\u20e3 it proposes:\n\ta. Insert CDC data into a delta table in BigQuery => that's answer [B]\n\tb. Merge delta table changes into the main table and periodically purge merged rows from the delta table - Run Merge statement on a regular interval => that's answer [D]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The previous guidelines were here: \n\ud83d\udd17 https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#immediate_consistency_approach\nThere were two approaches:\n1\ufe0f\u20e3 Immediate consistency approach\n2\ufe0f\u20e3 Cost-optimized approach\nFor approach 1\ufe0f\u20e3, which is the objective of this question, it proposes:\n\ta. Insert CDC data into a delta table in BigQuery => that's answer [B]\n\tb. Create a BigQuery view that joins the main and delta tables and finds the most recent row => there' no answer that fits\nFor approach 2\ufe0f\u20e3 it proposes:\n\ta. Insert CDC data into a delta table in BigQuery => that's answer [B]\n\tb. Merge delta table changes into the main table and periodically purge merged rows from the delta table - Run Merge statement on a regular interval => that's answer [D]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "Nowadays (Nov. 2022) I don't expect to confront this question in a real exam with this set of answers since the more recent documentation proposes the use of Datastream.\n\ud83d\udd17 https://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "NicolasN\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Nowadays (Nov. 2022) I don't expect to confront this question in a real exam with this set of answers since the more recent documentation proposes the use of Datastream.\n\ud83d\udd17 https://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Nowadays (Nov. 2022) I don't expect to confront this question in a real exam with this set of answers since the more recent documentation proposes the use of Datastream.\n\ud83d\udd17 https://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 5\u00a0months ago",
+      "content": "B and E. Typically in a Data Warehouse you don't delete date. Data Warehouse should store full history to see how the data changed over time. All the solutions with 'DELETE' should not be used as this goes against being able to access the history of the data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 5\u00a0months ago",
+      "content": "beanz00\n\t\t\t\n\n\n\t\t\t2\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B and E. Typically in a Data Warehouse you don't delete date. Data Warehouse should store full history to see how the data changed over time. All the solutions with 'DELETE' should not be used as this goes against being able to access the history of the data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B and E. Typically in a Data Warehouse you don't delete date. Data Warehouse should store full history to see how the data changed over time. All the solutions with 'DELETE' should not be used as this goes against being able to access the history of the data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "https://www.striim.com/blog/oracle-to-google-bigquery/",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "TNT87\n\t\t\t\n\n\n\t\t\t2\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://www.striim.com/blog/oracle-to-google-bigquery/",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://www.striim.com/blog/oracle-to-google-bigquery/",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#data_latency",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "TNT87\n\t\t\t\n\n\n\t\t\t2\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#data_latency",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#data_latency",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "https://docs.streamsets.com/platform-datacollector/latest/datacollector/UserGuide/Destinations/GBigQuery.html",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "TNT87\n\t\t\t\n\n\n\t\t\t2\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://docs.streamsets.com/platform-datacollector/latest/datacollector/UserGuide/Destinations/GBigQuery.html",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://docs.streamsets.com/platform-datacollector/latest/datacollector/UserGuide/Destinations/GBigQuery.html",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "B and D \nhttps://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "Wasss123\n\t\t\t\n\n\n\t\t\t2\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B and D \nhttps://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: BD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B and D \nhttps://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "B D you have to do the both to get it done.\nTo merge process, you have to perform between the report table and stage a table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "John_Pongthorn\n\t\t\t\n\n\n\t\t\t2\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B D you have to do the both to get it done.\nTo merge process, you have to perform between the report table and stage a table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: BC",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B D you have to do the both to get it done.\nTo merge process, you have to perform between the report table and stage a table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "Answers are tricky, official documentation suggests Dataflow or Datafusion path as well as inclusion of DataStreams\nhttps://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "Remi2021\n\t\t\t\n\n\n\t\t\t2\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answers are tricky, official documentation suggests Dataflow or Datafusion path as well as inclusion of DataStreams\nhttps://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answers are tricky, official documentation suggests Dataflow or Datafusion path as well as inclusion of DataStreams\nhttps://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "It costs more to update/delete.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "changsu\n\t\t\t\n\n\n\t\t\t2\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It costs more to update/delete.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It costs more to update/delete.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "BE is correct\nBig Query only need to capture change, no need DELETE, UPDATE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "ducc\n\t\t\t\n\n\n\t\t\t2\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "BE is correct\nBig Query only need to capture change, no need DELETE, UPDATE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: BE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "BE is correct\nBig Query only need to capture change, no need DELETE, UPDATE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

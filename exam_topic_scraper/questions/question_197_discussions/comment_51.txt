@@ -1,0 +1,16 @@
+COMMENT #51 FOR QUESTION 197
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+The best option to meet the ACID compliance and minimal human intervention requirements is to configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+
+Key reasons:
+
+Cloud SQL for PostgreSQL provides full ACID compliance, unlike Bigtable which provides only atomicity and consistency guarantees.
+Enabling high availability removes the need for manual failover as Cloud SQL will automatically failover to a standby replica if the leader instance goes down.
+Point-in-time recovery in MySQL requires manual intervention to restore data if needed.
+BigQuery does not provide transactional guarantees required for an ACID database.
+Therefore, a Cloud SQL for PostgreSQL instance with high availability meets the ACID and minimal intervention requirements best. The automatic failover will ensure availability and uptime without administrative effort.
+============================================================

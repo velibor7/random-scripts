@@ -1,0 +1,1137 @@
+================================================================================
+QUESTION:
+You have historical data covering the last three years in BigQuery and a data pipeline that delivers new data to BigQuery daily. You have noticed that when theData Science team runs a query filtered on a date column and limited to 30`"90 days of data, the query scans the entire table. You also noticed that your bill is increasing more quickly than you expected. You want to resolve the issue as cost-effectively as possible while maintaining the ability to conduct SQL queries.What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Re-create the tables using DDL. Partition the tables by a column containing a TIMESTAMP or DATE Type.
+										
+
+
+													B.
+												
+											
+											Recommend that the Data Science team export the table to a CSV file on Cloud Storage and use Cloud Datalab to explore the data by reading the files directly.
+										
+
+
+													C.
+												
+											
+											Modify your pipeline to maintain the last 30ג€"90 days of data in one table and the longer history in a different table to minimize full table scans over the entire history.
+										
+
+
+													D.
+												
+											
+											Write an Apache Beam pipeline that creates a BigQuery table per day. Recommend that the Data Science team use wildcards on the table name suffixes to select the data they need.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (200 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 111 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 111
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have historical data covering the last three years in BigQuery and a data pipeline that delivers new data to BigQuery daily. You have noticed that when theData Science team runs a query filtered on a date column and limited to 30`"90 days of data, the query scans the entire table. You also noticed that your bill is increasing more quickly than you expected. You want to resolve the issue as cost-effectively as possible while maintaining the ability to conduct SQL queries.What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Re-create the tables using DDL. Partition the tables by a column containing a TIMESTAMP or DATE Type.
+										
+
+
+													B.
+												
+											
+											Recommend that the Data Science team export the table to a CSV file on Cloud Storage and use Cloud Datalab to explore the data by reading the files directly.
+										
+
+
+													C.
+												
+											
+											Modify your pipeline to maintain the last 30ג€"90 days of data in one table and the longer history in a different table to minimize full table scans over the entire history.
+										
+
+
+													D.
+												
+											
+											Write an Apache Beam pipeline that creates a BigQuery table per day. Recommend that the Data Science team use wildcards on the table name suffixes to select the data they need.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 1:15 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 111
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 1:15 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+should be A
+
+--- Comment #6 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+should be A
+
+--- Comment #7 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+should be A
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+should be A
+
+--- Comment #13 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+should be A
+
+--- Comment #14 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			3 years, 6 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+should be A
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+should be A
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 35 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #21 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Answer: A
+Description: Partition is the solution for reducing cost and time
+
+--- Comment #22 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			3 years, 6 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+Answer: A
+Description: Partition is the solution for reducing cost and time
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+Description: Partition is the solution for reducing cost and time
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 18 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+but how would recreating tables with 3 years of data, maintain the ability to conduct sql queries during that time?
+
+--- Comment #28 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+but how would recreating tables with 3 years of data, maintain the ability to conduct sql queries during that time?
+
+--- Comment #29 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+willbot
+			
+
+
+			3 years, 4 months ago
+
+--- Comment #30 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+but how would recreating tables with 3 years of data, maintain the ability to conduct sql queries during that time?
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+but how would recreating tables with 3 years of data, maintain the ability to conduct sql queries during that time?
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Recreating the new table, the old table will still have new data coming, then append the difference to the new table.
+
+--- Comment #35 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Recreating the new table, the old table will still have new data coming, then append the difference to the new table.
+
+--- Comment #36 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+squishy_fishy
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+Recreating the new table, the old table will still have new data coming, then append the difference to the new table.
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+Recreating the new table, the old table will still have new data coming, then append the difference to the new table.
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #45 ---
+Author: Unknown | Date: 10 months ago | Votes: 0
+Answer: A, has no cost to reload the data, Also Partition is the solution for reducing cost and time
+
+--- Comment #46 ---
+Author: Unknown | Date: 10 months ago | Votes: 0
+odacir
+			
+
+
+				Most Recent 
+
+
+			10 months ago
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: A, has no cost to reload the data, Also Partition is the solution for reducing cost and time
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: A, has no cost to reload the data, Also Partition is the solution for reducing cost and time
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #54 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+A is the answer.
+
+https://cloud.google.com/bigquery/docs/partitioned-tables
+A partitioned table is a special table that is divided into segments, called partitions, that make it easier to manage and query your data. By dividing a large table into smaller partitions, you can improve query performance, and you can control costs by reducing the number of bytes read by a query.
+
+You can partition BigQuery tables by:
+- Time-unit column: Tables are partitioned based on a TIMESTAMP, DATE, or DATETIME column in the table.
+
+--- Comment #55 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+zellck
+			
+
+
+			10 months, 1 week ago
+
+--- Comment #56 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+A is the answer.
+
+https://cloud.google.com/bigquery/docs/partitioned-tables
+A partitioned table is a special table that is divided into segments, called partitions, that make it easier to manage and query your data. By dividing a large table into smaller partitions, you can improve query performance, and you can control costs by reducing the number of bytes read by a query.
+
+You can partition BigQuery tables by:
+- Time-unit column: Tables are partitioned based on a TIMESTAMP, DATE, or DATETIME column in the table.
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+A is the answer.
+
+https://cloud.google.com/bigquery/docs/partitioned-tables
+A partitioned table is a special table that is divided into segments, called partitions, that make it easier to manage and query your data. By dividing a large table into smaller partitions, you can improve query performance, and you can control costs by reducing the number of bytes read by a query.
+
+You can partition BigQuery tables by:
+- Time-unit column: Tables are partitioned based on a TIMESTAMP, DATE, or DATETIME column in the table.
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #61 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+A is right
+
+--- Comment #62 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+A is right
+
+--- Comment #63 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+AzureDP900
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+A is right
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+A is right
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #71 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+it is not B in the sense of cost-effective certainly. read below in limitation
+https://cloud.google.com/bigquery/docs/querying-wildcard-tables#limitations
+Currently, cached results are not supported for queries against multiple tables using a wildcard even if the Use Cached Results option is checked. If you run the same wildcard query multiple times, you are billed for each query.
+
+--- Comment #72 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+John_Pongthorn
+			
+
+
+			1 year ago
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+it is not B in the sense of cost-effective certainly. read below in limitation
+https://cloud.google.com/bigquery/docs/querying-wildcard-tables#limitations
+Currently, cached results are not supported for queries against multiple tables using a wildcard even if the Use Cached Results option is checked. If you run the same wildcard query multiple times, you are billed for each query.
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+it is not B in the sense of cost-effective certainly. read below in limitation
+https://cloud.google.com/bigquery/docs/querying-wildcard-tables#limitations
+Currently, cached results are not supported for queries against multiple tables using a wildcard even if the Use Cached Results option is checked. If you run the same wildcard query multiple times, you are billed for each query.
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #80 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard
+Partitioning is recommended over table sharding, because partitioned tables perform better
+
+--- Comment #81 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+John_Pongthorn
+			
+
+
+			1 year ago
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard
+Partitioning is recommended over table sharding, because partitioned tables perform better
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard
+Partitioning is recommended over table sharding, because partitioned tables perform better
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #89 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+A AND D , they are the most likely choiced but  the  questionn want 
+issue as cost-effectively as possible while maintaining the ability to conduct SQL queries.   
+1 table may be cheaper so partition is better than wildcarf
+
+--- Comment #90 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+John_Pongthorn
+			
+
+
+			1 year ago
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+A AND D , they are the most likely choiced but  the  questionn want 
+issue as cost-effectively as possible while maintaining the ability to conduct SQL queries.   
+1 table may be cheaper so partition is better than wildcarf
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+A AND D , they are the most likely choiced but  the  questionn want 
+issue as cost-effectively as possible while maintaining the ability to conduct SQL queries.   
+1 table may be cheaper so partition is better than wildcarf
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #98 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+answer A
+
+--- Comment #99 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Didine_22
+			
+
+
+			1 year, 5 months ago
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+answer A
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+answer A
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #107 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+https://cloud.google.com/bigquery/docs/partitioned-tables
+
+--- Comment #108 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+medeis_jar
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/bigquery/docs/partitioned-tables
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/bigquery/docs/partitioned-tables
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #116 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+A. Partiotioning
+https://cloud.google.com/bigquery/docs/partitioned-tables
+
+--- Comment #117 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+A. Partiotioning
+https://cloud.google.com/bigquery/docs/partitioned-tables
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+A. Partiotioning
+https://cloud.google.com/bigquery/docs/partitioned-tables
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #125 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Why not D? You can use SQL.
+This is the cheapest and fastest option 
+https://cloud.google.com/bigquery/docs/querying-wildcard-tables
+
+--- Comment #126 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Tomi1313
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #127 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Why not D? You can use SQL.
+This is the cheapest and fastest option 
+https://cloud.google.com/bigquery/docs/querying-wildcard-tables
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+Why not D? You can use SQL.
+This is the cheapest and fastest option 
+https://cloud.google.com/bigquery/docs/querying-wildcard-tables
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #131 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Partitioning is recommended over table sharding, because partitioned tables perform better
+This is a google recommendation nowaday.
+
+--- Comment #132 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Partitioning is recommended over table sharding, because partitioned tables perform better
+This is a google recommendation nowaday.
+
+--- Comment #133 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+John_Pongthorn
+			
+
+
+			1 year ago
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+Partitioning is recommended over table sharding, because partitioned tables perform better
+This is a google recommendation nowaday.
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+Partitioning is recommended over table sharding, because partitioned tables perform better
+This is a google recommendation nowaday.
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #141 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+The D solution is obviously discarded. 
+The request NOT require ONLY LAST 30-90 days, so the C solution is not the right solution. 
+In addition to this, the request ask to keep the possibility to made queries, so B is wrost. 
+Is not mandatory make the queries while you make the modify so the right answer is A
+
+--- Comment #142 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+StefanoG
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+The D solution is obviously discarded. 
+The request NOT require ONLY LAST 30-90 days, so the C solution is not the right solution. 
+In addition to this, the request ask to keep the possibility to made queries, so B is wrost. 
+Is not mandatory make the queries while you make the modify so the right answer is A
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+The D solution is obviously discarded. 
+The request NOT require ONLY LAST 30-90 days, so the C solution is not the right solution. 
+In addition to this, the request ask to keep the possibility to made queries, so B is wrost. 
+Is not mandatory make the queries while you make the modify so the right answer is A
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #150 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+B sounds more feasible. 
+The point is 'historical' data, not new table/data. Recreating tables from the past three years is a lot of work. Might as well export the table and run analyses there. No cost for exporting in BigQuery.
+
+--- Comment #151 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+JayZeeLee
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+B sounds more feasible. 
+The point is 'historical' data, not new table/data. Recreating tables from the past three years is a lot of work. Might as well export the table and run analyses there. No cost for exporting in BigQuery.
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+B sounds more feasible. 
+The point is 'historical' data, not new table/data. Recreating tables from the past three years is a lot of work. Might as well export the table and run analyses there. No cost for exporting in BigQuery.
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #158 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Vote for A
+
+--- Comment #159 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+sumanshu
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+Vote for A
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+Vote for A
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #166 ---
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+I will go with Option A
+
+--- Comment #167 ---
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+arghya13
+			
+
+
+			2 years, 10 months ago
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+I will go with Option A
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+I will go with Option A
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #174 ---
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+I will go with Option A, although at first instance I felt Option C would be correct. 
+Option A : Because partitioning will help to address both the concerns mentioned in the question - i.e. faster query and reducing cost.
+Option C : Modifying the data pipeline to store last 30-90 days data would have possible, if there was a point mentioned that only the latest data (30-90 days) is kept and the older data - beyond 90 days is moved to the master table. Since that point is mot mentioned, we will land up having multiple - 30-90 days data in separate tables + the master table.
+
+--- Comment #175 ---
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+Alasmindas
+			
+
+
+			2 years, 11 months ago
+
+--- Comment #176 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+I will go with Option A, although at first instance I felt Option C would be correct. 
+Option A : Because partitioning will help to address both the concerns mentioned in the question - i.e. faster query and reducing cost.
+Option C : Modifying the data pipeline to store last 30-90 days data would have possible, if there was a point mentioned that only the latest data (30-90 days) is kept and the older data - beyond 90 days is moved to the master table. Since that point is mot mentioned, we will land up having multiple - 30-90 days data in separate tables + the master table.
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+I will go with Option A, although at first instance I felt Option C would be correct. 
+Option A : Because partitioning will help to address both the concerns mentioned in the question - i.e. faster query and reducing cost.
+Option C : Modifying the data pipeline to store last 30-90 days data would have possible, if there was a point mentioned that only the latest data (30-90 days) is kept and the older data - beyond 90 days is moved to the master table. Since that point is mot mentioned, we will land up having multiple - 30-90 days data in separate tables + the master table.
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #180 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+but how will you append the data that is older than 90days in to the master table?
+
+--- Comment #181 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+but how will you append the data that is older than 90days in to the master table?
+
+--- Comment #182 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+karthik89
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+but how will you append the data that is older than 90days in to the master table?
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+but how will you append the data that is older than 90days in to the master table?
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #188 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #190 ---
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+Answer is A. Recreating the DDL with new parition is easy and does not require any changes on applications that read data from it
+
+--- Comment #191 ---
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+Cloud_Enthusiast
+			
+
+
+			2 years, 11 months ago
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is A. Recreating the DDL with new parition is easy and does not require any changes on applications that read data from it
+
+--- Comment #193 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is A. Recreating the DDL with new parition is easy and does not require any changes on applications that read data from it
+
+--- Comment #194 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #196 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #197 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #199 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #200 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

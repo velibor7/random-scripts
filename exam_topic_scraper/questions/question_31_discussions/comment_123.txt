@@ -1,0 +1,18 @@
+COMMENT #123 FOR QUESTION 31
+============================================================
+Author: Unknown
+Date: 3 years, 2 months ago
+Votes: 0
+----------------------------------------
+There are 5 update scenarios in a job in update-a-pipeline context. 
+a- changing transform name (requires mapping) , adding a new step (no need for mapping)
+b- windowing or triggering (only for minor changes, otherwise don't do that)
+c- coders (don't do that
+d- schema (adding or required to nullable is possible) other scenarios not possible
+e- stateful operations
+
+none of them are relevant, here. cause there is no specific detail, secondly incompatible w. new pipeline. 
+
+and mostly if in compatible only a has a solve. but not for all cases.
+so, drain == no data loss (ingesting, buffered and in-flight data) is the only scenario.
+============================================================

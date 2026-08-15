@@ -1,0 +1,15 @@
+COMMENT #25 FOR QUESTION 308
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+C. Create a new TSV file for the remaining files by generating signed URLs with a longer validity period. Split the TSV file into multiple smaller files and submit them as separate Storage Transfer Service jobs in parallel.
+
+Here's why:
+
+HTTP 403 errors: These errors indicate unauthorized access, but since you verified the source system and signed URLs, the issue likely lies with expired signed URLs. Renewing the URLs with a longer validity period prevents this issue for the remaining files.
+Separate jobs: Splitting the file into smaller chunks and submitting them as separate jobs improves parallelism and potentially speeds up the transfer process.
+Avoid manual intervention: Options A and D require manual intervention and complex setups, which are less efficient and might introduce risks.
+Longer validity: While option B addresses expired URLs, splitting the file offers additional benefits for faster migration.
+============================================================

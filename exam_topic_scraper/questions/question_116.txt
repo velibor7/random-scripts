@@ -1,0 +1,1101 @@
+================================================================================
+QUESTION:
+Your company is in the process of migrating its on-premises data warehousing solutions to BigQuery. The existing data warehouse uses trigger-based change data capture (CDC) to apply updates from multiple transactional database sources on a daily basis. With BigQuery, your company hopes to improve its handling ofCDC so that changes to the source systems are available to query in BigQuery in near-real time using log-based CDC streams, while also optimizing for the performance of applying changes to the data warehouse. Which two steps should they take to ensure that changes are available in the BigQuery reporting table with minimal latency while reducing compute overhead? (Choose two.)
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Perform a DML INSERT, UPDATE, or DELETE to replicate each individual CDC record in real time directly on the reporting table.
+										
+
+
+													B.
+												
+											
+											Insert each new CDC record and corresponding operation type to a staging table in real time.
+										
+
+
+													C.
+												
+											
+											Periodically DELETE outdated records from the reporting table.
+										
+
+
+													D.
+												
+											
+											Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table.
+										
+
+
+													E.
+												
+											
+											Insert each new CDC record and corresponding operation type in real time to the reporting table, and use a materialized view to expose only the newest version of each unique record.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+BD
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (176 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 116 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 116
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your company is in the process of migrating its on-premises data warehousing solutions to BigQuery. The existing data warehouse uses trigger-based change data capture (CDC) to apply updates from multiple transactional database sources on a daily basis. With BigQuery, your company hopes to improve its handling ofCDC so that changes to the source systems are available to query in BigQuery in near-real time using log-based CDC streams, while also optimizing for the performance of applying changes to the data warehouse. Which two steps should they take to ensure that changes are available in the BigQuery reporting table with minimal latency while reducing compute overhead? (Choose two.)
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Perform a DML INSERT, UPDATE, or DELETE to replicate each individual CDC record in real time directly on the reporting table.
+										
+
+
+													B.
+												
+											
+											Insert each new CDC record and corresponding operation type to a staging table in real time.
+										
+
+
+													C.
+												
+											
+											Periodically DELETE outdated records from the reporting table.
+										
+
+
+													D.
+												
+											
+											Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table.
+										
+
+
+													E.
+												
+											
+											Insert each new CDC record and corresponding operation type in real time to the reporting table, and use a materialized view to expose only the newest version of each unique record.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+BD
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								ducc
+							
+							
+							at 
+							Sept. 3, 2022, 6:25 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 116
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								ducc
+							
+							
+							at 
+							Sept. 3, 2022, 6:25 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+To aim for minimal latency while reducing compute overhead:
+
+B. Insert each new CDC record and corresponding operation type to a staging table in real time.
+
+D. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)
+
+--- Comment #6 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+To aim for minimal latency while reducing compute overhead:
+
+B. Insert each new CDC record and corresponding operation type to a staging table in real time.
+
+D. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)
+
+--- Comment #7 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+To aim for minimal latency while reducing compute overhead:
+
+B. Insert each new CDC record and corresponding operation type to a staging table in real time.
+
+D. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+To aim for minimal latency while reducing compute overhead:
+
+B. Insert each new CDC record and corresponding operation type to a staging table in real time.
+
+D. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)
+
+--- Comment #13 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+To aim for minimal latency while reducing compute overhead:
+
+B. Insert each new CDC record and corresponding operation type to a staging table in real time.
+
+D. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)
+
+--- Comment #14 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+YorelNation
+			
+
+
+				Highly Voted 
+
+
+			2 years, 7 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+To aim for minimal latency while reducing compute overhead:
+
+B. Insert each new CDC record and corresponding operation type to a staging table in real time.
+
+D. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BD
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+To aim for minimal latency while reducing compute overhead:
+
+B. Insert each new CDC record and corresponding operation type to a staging table in real time.
+
+D. Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table. (all statements comes from the staging table)
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 15 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B&D
+Tricks here: Always choose google recommended approach, Use data first in Staging table then merge with original tables.
+
+--- Comment #23 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+musumusu
+			
+
+
+				Highly Voted 
+
+
+			2 years, 1 month ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+B&D
+Tricks here: Always choose google recommended approach, Use data first in Staging table then merge with original tables.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+B&D
+Tricks here: Always choose google recommended approach, Use data first in Staging table then merge with original tables.
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+I'm going for E &C - this in the only solution with low TCO. 
+E - is the best way to work with CDC when real nearline data is needed BQ snapshots can be online! . & C - is good practice to delete old records.
+
+--- Comment #31 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+Nirca
+			
+
+
+				Most Recent 
+
+
+			1 year, 6 months ago
+
+--- Comment #32 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+I'm going for E &C - this in the only solution with low TCO. 
+E - is the best way to work with CDC when real nearline data is needed BQ snapshots can be online! . & C - is good practice to delete old records.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: CE
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+I'm going for E &C - this in the only solution with low TCO. 
+E - is the best way to work with CDC when real nearline data is needed BQ snapshots can be online! . & C - is good practice to delete old records.
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+A isn't correct, as the requirement is "reducing compute overhead"
+B isn't correct, as there is no mention of a "staging table" in the scenario
+D isn't correct as it's done periodically, and the requirement is "near real-time"
+
+--- Comment #38 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+A isn't correct, as the requirement is "reducing compute overhead"
+B isn't correct, as there is no mention of a "staging table" in the scenario
+D isn't correct as it's done periodically, and the requirement is "near real-time"
+
+--- Comment #39 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+nadavw
+			
+
+
+			7 months, 3 weeks ago
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+A isn't correct, as the requirement is "reducing compute overhead"
+B isn't correct, as there is no mention of a "staging table" in the scenario
+D isn't correct as it's done periodically, and the requirement is "near real-time"
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+A isn't correct, as the requirement is "reducing compute overhead"
+B isn't correct, as there is no mention of a "staging table" in the scenario
+D isn't correct as it's done periodically, and the requirement is "near real-time"
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #47 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+with both the delta table and the main table  changes could be queried in near realtime, by using a view that unions both tables and queries the laters record for the given key, eventually the delta table should be merged into the main table and truncated. Google recently introduced datastream that would take away all these headaches.
+
+--- Comment #48 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+dconesoko
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+with both the delta table and the main table  changes could be queried in near realtime, by using a view that unions both tables and queries the laters record for the given key, eventually the delta table should be merged into the main table and truncated. Google recently introduced datastream that would take away all these headaches.
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BD
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+with both the delta table and the main table  changes could be queried in near realtime, by using a view that unions both tables and queries the laters record for the given key, eventually the delta table should be merged into the main table and truncated. Google recently introduced datastream that would take away all these headaches.
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #56 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+The solution is B and D. I perform a similar task in my work, and this is the best way to do it at scale with BigQuery.
+
+--- Comment #57 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+odacir
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+The solution is B and D. I perform a similar task in my work, and this is the best way to do it at scale with BigQuery.
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BD
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+The solution is B and D. I perform a similar task in my work, and this is the best way to do it at scale with BigQuery.
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #65 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+BD is the answer.
+
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#overview_of_cdc_data_replication
+Delta tables contain all change events for a particular table since the initial load. Having all change events available can be valuable for identifying trends, the state of the entities that a table represents at a particular moment, or change frequency.
+
+The best way to merge data frequently and consistently is to use a MERGE statement, which lets you combine multiple INSERT, UPDATE, and DELETE statements into a single atomic operation.
+
+--- Comment #66 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+zellck
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+BD is the answer.
+
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#overview_of_cdc_data_replication
+Delta tables contain all change events for a particular table since the initial load. Having all change events available can be valuable for identifying trends, the state of the entities that a table represents at a particular moment, or change frequency.
+
+The best way to merge data frequently and consistently is to use a MERGE statement, which lets you combine multiple INSERT, UPDATE, and DELETE statements into a single atomic operation.
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BD
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+BD is the answer.
+
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#overview_of_cdc_data_replication
+Delta tables contain all change events for a particular table since the initial load. Having all change events available can be valuable for identifying trends, the state of the entities that a table represents at a particular moment, or change frequency.
+
+The best way to merge data frequently and consistently is to use a MERGE statement, which lets you combine multiple INSERT, UPDATE, and DELETE statements into a single atomic operation.
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #74 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+I really can’t find a correct combination of answers. I'm between the following alternatives, but with no one fitting:
+1️⃣ [B] and [D]: That's a proposed solution, but as a cost-optimized approach (along with an extra step to "Periodically DELETE outdated records from the STAGING table" - more details on my subsequent reply). Also, I can't imagine how an answer with the word "Periodically" may be compatible with the "minimal latency" requirement.
+2️⃣ [E] and [C]: It could be a valid approach, but near-real time requirement would demand also for a materialized view refresh. And it seems to contradict the "reducing compute overhead" req.
+3️⃣ [A] standalone: Provides immediate results but is far from compute-optimized.
+
+--- Comment #75 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+NicolasN
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #76 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+I really can’t find a correct combination of answers. I'm between the following alternatives, but with no one fitting:
+1️⃣ [B] and [D]: That's a proposed solution, but as a cost-optimized approach (along with an extra step to "Periodically DELETE outdated records from the STAGING table" - more details on my subsequent reply). Also, I can't imagine how an answer with the word "Periodically" may be compatible with the "minimal latency" requirement.
+2️⃣ [E] and [C]: It could be a valid approach, but near-real time requirement would demand also for a materialized view refresh. And it seems to contradict the "reducing compute overhead" req.
+3️⃣ [A] standalone: Provides immediate results but is far from compute-optimized.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+I really can’t find a correct combination of answers. I'm between the following alternatives, but with no one fitting:
+1️⃣ [B] and [D]: That's a proposed solution, but as a cost-optimized approach (along with an extra step to "Periodically DELETE outdated records from the STAGING table" - more details on my subsequent reply). Also, I can't imagine how an answer with the word "Periodically" may be compatible with the "minimal latency" requirement.
+2️⃣ [E] and [C]: It could be a valid approach, but near-real time requirement would demand also for a materialized view refresh. And it seems to contradict the "reducing compute overhead" req.
+3️⃣ [A] standalone: Provides immediate results but is far from compute-optimized.
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+The previous guidelines were here: 
+🔗 https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#immediate_consistency_approach
+There were two approaches:
+1️⃣ Immediate consistency approach
+2️⃣ Cost-optimized approach
+For approach 1️⃣, which is the objective of this question, it proposes:
+	a. Insert CDC data into a delta table in BigQuery => that's answer [B]
+	b. Create a BigQuery view that joins the main and delta tables and finds the most recent row => there' no answer that fits
+For approach 2️⃣ it proposes:
+	a. Insert CDC data into a delta table in BigQuery => that's answer [B]
+	b. Merge delta table changes into the main table and periodically purge merged rows from the delta table - Run Merge statement on a regular interval => that's answer [D]
+
+--- Comment #81 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+The previous guidelines were here: 
+🔗 https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#immediate_consistency_approach
+There were two approaches:
+1️⃣ Immediate consistency approach
+2️⃣ Cost-optimized approach
+For approach 1️⃣, which is the objective of this question, it proposes:
+	a. Insert CDC data into a delta table in BigQuery => that's answer [B]
+	b. Create a BigQuery view that joins the main and delta tables and finds the most recent row => there' no answer that fits
+For approach 2️⃣ it proposes:
+	a. Insert CDC data into a delta table in BigQuery => that's answer [B]
+	b. Merge delta table changes into the main table and periodically purge merged rows from the delta table - Run Merge statement on a regular interval => that's answer [D]
+
+--- Comment #82 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+NicolasN
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+The previous guidelines were here: 
+🔗 https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#immediate_consistency_approach
+There were two approaches:
+1️⃣ Immediate consistency approach
+2️⃣ Cost-optimized approach
+For approach 1️⃣, which is the objective of this question, it proposes:
+	a. Insert CDC data into a delta table in BigQuery => that's answer [B]
+	b. Create a BigQuery view that joins the main and delta tables and finds the most recent row => there' no answer that fits
+For approach 2️⃣ it proposes:
+	a. Insert CDC data into a delta table in BigQuery => that's answer [B]
+	b. Merge delta table changes into the main table and periodically purge merged rows from the delta table - Run Merge statement on a regular interval => that's answer [D]
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+The previous guidelines were here: 
+🔗 https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#immediate_consistency_approach
+There were two approaches:
+1️⃣ Immediate consistency approach
+2️⃣ Cost-optimized approach
+For approach 1️⃣, which is the objective of this question, it proposes:
+	a. Insert CDC data into a delta table in BigQuery => that's answer [B]
+	b. Create a BigQuery view that joins the main and delta tables and finds the most recent row => there' no answer that fits
+For approach 2️⃣ it proposes:
+	a. Insert CDC data into a delta table in BigQuery => that's answer [B]
+	b. Merge delta table changes into the main table and periodically purge merged rows from the delta table - Run Merge statement on a regular interval => that's answer [D]
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #89 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Nowadays (Nov. 2022) I don't expect to confront this question in a real exam with this set of answers since the more recent documentation proposes the use of Datastream.
+🔗 https://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery
+
+--- Comment #90 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+NicolasN
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+Nowadays (Nov. 2022) I don't expect to confront this question in a real exam with this set of answers since the more recent documentation proposes the use of Datastream.
+🔗 https://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+Nowadays (Nov. 2022) I don't expect to confront this question in a real exam with this set of answers since the more recent documentation proposes the use of Datastream.
+🔗 https://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #98 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+B and E. Typically in a Data Warehouse you don't delete date. Data Warehouse should store full history to see how the data changed over time. All the solutions with 'DELETE' should not be used as this goes against being able to access the history of the data.
+
+--- Comment #99 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+beanz00
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+B and E. Typically in a Data Warehouse you don't delete date. Data Warehouse should store full history to see how the data changed over time. All the solutions with 'DELETE' should not be used as this goes against being able to access the history of the data.
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+B and E. Typically in a Data Warehouse you don't delete date. Data Warehouse should store full history to see how the data changed over time. All the solutions with 'DELETE' should not be used as this goes against being able to access the history of the data.
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #106 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+https://www.striim.com/blog/oracle-to-google-bigquery/
+
+--- Comment #107 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 6 months ago
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+https://www.striim.com/blog/oracle-to-google-bigquery/
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+https://www.striim.com/blog/oracle-to-google-bigquery/
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #114 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#data_latency
+
+--- Comment #115 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 6 months ago
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#data_latency
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#data_latency
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #122 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+https://docs.streamsets.com/platform-datacollector/latest/datacollector/UserGuide/Destinations/GBigQuery.html
+
+--- Comment #123 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 6 months ago
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+https://docs.streamsets.com/platform-datacollector/latest/datacollector/UserGuide/Destinations/GBigQuery.html
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+https://docs.streamsets.com/platform-datacollector/latest/datacollector/UserGuide/Destinations/GBigQuery.html
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #130 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+B and D 
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture
+
+--- Comment #131 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Wasss123
+			
+
+
+			2 years, 6 months ago
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+B and D 
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BD
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+B and D 
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #139 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+B D you have to do the both to get it done.
+To merge process, you have to perform between the report table and stage a table
+
+--- Comment #140 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years, 6 months ago
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+B D you have to do the both to get it done.
+To merge process, you have to perform between the report table and stage a table
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BC
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+B D you have to do the both to get it done.
+To merge process, you have to perform between the report table and stage a table
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #148 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Answers are tricky, official documentation suggests Dataflow or Datafusion path as well as inclusion of DataStreams
+https://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery
+
+--- Comment #149 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Remi2021
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+Answers are tricky, official documentation suggests Dataflow or Datafusion path as well as inclusion of DataStreams
+https://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+Answers are tricky, official documentation suggests Dataflow or Datafusion path as well as inclusion of DataStreams
+https://cloud.google.com/blog/products/data-analytics/real-time-cdc-replication-bigquery
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #156 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+It costs more to update/delete.
+
+--- Comment #157 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+changsu
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+It costs more to update/delete.
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: CE
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+It costs more to update/delete.
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #165 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+BE is correct
+Big Query only need to capture change, no need DELETE, UPDATE
+
+--- Comment #166 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+ducc
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+BE is correct
+Big Query only need to capture change, no need DELETE, UPDATE
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: BE
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+BE is correct
+Big Query only need to capture change, no need DELETE, UPDATE
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

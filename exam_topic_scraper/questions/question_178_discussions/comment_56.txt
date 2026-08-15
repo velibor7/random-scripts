@@ -1,0 +1,14 @@
+COMMENT #56 FOR QUESTION 178
+============================================================
+Author: Unknown
+Date: 1 year, 7 months ago
+Votes: 0
+----------------------------------------
+Answer: B, 
+reducing the batch size improve the speed performance also improve cpu utilisation. 
+Dead letter queues are generated for messages that are errorrly acknowledged and its good to use sideinputs for that to check small amount of errors in memory. 
+Cogroupbykey is not necessary for error messages. 
+I see only batch size that can be customized to improve the performance. 
+In practical use case:
+you check these tools Stackdriver Monitoring and Logging, Cloud Trace, and Cloud Profiler. and try to find the cause, if its file type issue in compression, or batch size.
+============================================================

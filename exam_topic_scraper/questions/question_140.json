@@ -1,0 +1,727 @@
+{
+  "question": "You need to create a new transaction table in Cloud Spanner that stores product sales data. You are deciding what to use as a primary key. From a performance perspective, which strategy should you choose?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe current epoch time\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tA concatenation of the product name and the current epoch time\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tA random universally unique identifier number (version 4 UUID)\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe original order identification number from the sales system, which is a monotonically increasing integer\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 140 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 140\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou need to create a new transaction table in Cloud Spanner that stores product sales data. You are deciding what to use as a primary key. From a performance perspective, which strategy should you choose?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe current epoch time\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tA concatenation of the product name and the current epoch time\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tA random universally unique identifier number (version 4 UUID)\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe original order identification number from the sales system, which is a monotonically increasing integer\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tjsree236\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 5, 2022, 10:23 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 140\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tjsree236\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 5, 2022, 10:23 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "According to the documentation:\nUse a Universally Unique Identifier (UUID)\nYou can use a Universally Unique Identifier (UUID) as defined by RFC 4122 as the primary key. Version 4 UUID is recommended, because it uses random values in the bit sequence. Version 1 UUID stores the timestamp in the high order bits and is not recommended.\n\nhttps://cloud.google.com/spanner/docs/schema-design",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "According to the documentation:\nUse a Universally Unique Identifier (UUID)\nYou can use a Universally Unique Identifier (UUID) as defined by RFC 4122 as the primary key. Version 4 UUID is recommended, because it uses random values in the bit sequence. Version 1 UUID stores the timestamp in the high order bits and is not recommended.\n\nhttps://cloud.google.com/spanner/docs/schema-design",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "According to the documentation:\nUse a Universally Unique Identifier (UUID)\nYou can use a Universally Unique Identifier (UUID) as defined by RFC 4122 as the primary key. Version 4 UUID is recommended, because it uses random values in the bit sequence. Version 1 UUID stores the timestamp in the high order bits and is not recommended.\n\nhttps://cloud.google.com/spanner/docs/schema-design",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "According to the documentation:\nUse a Universally Unique Identifier (UUID)\nYou can use a Universally Unique Identifier (UUID) as defined by RFC 4122 as the primary key. Version 4 UUID is recommended, because it uses random values in the bit sequence. Version 1 UUID stores the timestamp in the high order bits and is not recommended.\n\nhttps://cloud.google.com/spanner/docs/schema-design",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "According to the documentation:\nUse a Universally Unique Identifier (UUID)\nYou can use a Universally Unique Identifier (UUID) as defined by RFC 4122 as the primary key. Version 4 UUID is recommended, because it uses random values in the bit sequence. Version 1 UUID stores the timestamp in the high order bits and is not recommended.\n\nhttps://cloud.google.com/spanner/docs/schema-design",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "Remi2021\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t2\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "According to the documentation:\nUse a Universally Unique Identifier (UUID)\nYou can use a Universally Unique Identifier (UUID) as defined by RFC 4122 as the primary key. Version 4 UUID is recommended, because it uses random values in the bit sequence. Version 1 UUID stores the timestamp in the high order bits and is not recommended.\n\nhttps://cloud.google.com/spanner/docs/schema-design",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "According to the documentation:\nUse a Universally Unique Identifier (UUID)\nYou can use a Universally Unique Identifier (UUID) as defined by RFC 4122 as the primary key. Version 4 UUID is recommended, because it uses random values in the bit sequence. Version 1 UUID stores the timestamp in the high order bits and is not recommended.\n\nhttps://cloud.google.com/spanner/docs/schema-design",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 9 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "Agree with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "Agree with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "AzureDP900\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agree with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agree with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "For a transaction table in Cloud Spanner that stores product sales data, from a performance perspective, it is generally recommended to choose a primary key that allows for even distribution of data across nodes and minimizes hotspots. Therefore, option C, which suggests using a random universally unique identifier number (version 4 UUID), is the preferred choice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "barnac1es\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "For a transaction table in Cloud Spanner that stores product sales data, from a performance perspective, it is generally recommended to choose a primary key that allows for even distribution of data across nodes and minimizes hotspots. Therefore, option C, which suggests using a random universally unique identifier number (version 4 UUID), is the preferred choice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "For a transaction table in Cloud Spanner that stores product sales data, from a performance perspective, it is generally recommended to choose a primary key that allows for even distribution of data across nodes and minimizes hotspots. Therefore, option C, which suggests using a random universally unique identifier number (version 4 UUID), is the preferred choice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "For a RDB I would choice D.\n\nBut for Google Spanner, Google says: \nhttps://cloud.google.com/spanner/docs/schema-and-data-model#:~:text=monotonically%20increasing%20integer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "arien_chen\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "For a RDB I would choice D.\n\nBut for Google Spanner, Google says: \nhttps://cloud.google.com/spanner/docs/schema-and-data-model#:~:text=monotonically%20increasing%20integer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "For a RDB I would choice D.\n\nBut for Google Spanner, Google says: \nhttps://cloud.google.com/spanner/docs/schema-and-data-model#:~:text=monotonically%20increasing%20integer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "B might work if you say timestamp instead than epoch. PK of sales should contain the exact purchase date or timestamp, not the time when the transaction was processed. I personally associate the term epoch in this context to the process timestamp instead than the purchase timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "vaga1\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B might work if you say timestamp instead than epoch. PK of sales should contain the exact purchase date or timestamp, not the time when the transaction was processed. I personally associate the term epoch in this context to the process timestamp instead than the purchase timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B might work if you say timestamp instead than epoch. PK of sales should contain the exact purchase date or timestamp, not the time when the transaction was processed. I personally associate the term epoch in this context to the process timestamp instead than the purchase timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "B may cause error if same product ID came at the same time (same id + same epoch)\nSo C is the correct answer here",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "midgoo\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "B may cause error if same product ID came at the same time (same id + same epoch)\nSo C is the correct answer here",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B may cause error if same product ID came at the same time (same id + same epoch)\nSo C is the correct answer here",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "Agreed. Additionally, using the product name can lead to unbalanced distribution if some products are sold more frequently than others.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "Agreed. Additionally, using the product name can lead to unbalanced distribution if some products are sold more frequently than others.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "NickNtaken\n\t\t\t\n\n\n\t\t\t4\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agreed. Additionally, using the product name can lead to unbalanced distribution if some products are sold more frequently than others.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agreed. Additionally, using the product name can lead to unbalanced distribution if some products are sold more frequently than others.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "A and D are invalid because they monotonically increases.\nB would work, but in terms of pure performance UUID 4 is the fastest because it virtually will not cause hotspots",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "jkhong\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A and D are invalid because they monotonically increases.\nB would work, but in terms of pure performance UUID 4 is the fastest because it virtually will not cause hotspots",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A and D are invalid because they monotonically increases.\nB would work, but in terms of pure performance UUID 4 is the fastest because it virtually will not cause hotspots",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "A and D are not valid, because they monotonically increase.\nC avoid hotspots for sure, but It's nor relate with querys. So for writing performance it's perfect that the reason for chose this: \u00a0\u201cYou need to create a new transaction table in Cloud Spanner that stores product sales data\u201d. They only ask you to store product data, its a writing ops.\nIf the question had spoken about query the info or hard performance read, the best option would be B, because it has the balance of writing/reading best practices.\nThere are a few disadvantages to using a UUID:\n\n    They are slightly large, using 16 bytes or more. Other options for primary keys don't use this much storage.\n    They carry no information about the record. For example, a primary key of SingerId and AlbumId has an inherent meaning, while a UUID does not.\n    You lose locality between records that are related, which is why using a UUID eliminates hotspots.\n\n\nhttps://cloud.google.com/spanner/docs/schema-design#uuid_primary_key",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "odacir\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A and D are not valid, because they monotonically increase.\nC avoid hotspots for sure, but It's nor relate with querys. So for writing performance it's perfect that the reason for chose this: \u00a0\u201cYou need to create a new transaction table in Cloud Spanner that stores product sales data\u201d. They only ask you to store product data, its a writing ops.\nIf the question had spoken about query the info or hard performance read, the best option would be B, because it has the balance of writing/reading best practices.\nThere are a few disadvantages to using a UUID:\n\n    They are slightly large, using 16 bytes or more. Other options for primary keys don't use this much storage.\n    They carry no information about the record. For example, a primary key of SingerId and AlbumId has an inherent meaning, while a UUID does not.\n    You lose locality between records that are related, which is why using a UUID eliminates hotspots.\n\n\nhttps://cloud.google.com/spanner/docs/schema-design#uuid_primary_key",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A and D are not valid, because they monotonically increase.\nC avoid hotspots for sure, but It's nor relate with querys. So for writing performance it's perfect that the reason for chose this: \u00a0\u201cYou need to create a new transaction table in Cloud Spanner that stores product sales data\u201d. They only ask you to store product data, its a writing ops.\nIf the question had spoken about query the info or hard performance read, the best option would be B, because it has the balance of writing/reading best practices.\nThere are a few disadvantages to using a UUID:\n\n    They are slightly large, using 16 bytes or more. Other options for primary keys don't use this much storage.\n    They carry no information about the record. For example, a primary key of SingerId and AlbumId has an inherent meaning, while a UUID does not.\n    You lose locality between records that are related, which is why using a UUID eliminates hotspots.\n\n\nhttps://cloud.google.com/spanner/docs/schema-design#uuid_primary_key",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "C. A random universally unique identifier number (version 4 UUID)\n\nFrom https://cloud.google.com/spanner/docs/schema-and-data-model\n\n\nThere are techniques that can spread the load across multiple servers and avoid hotspots:\n\nHash the key and store it in a column. Use the hash column (or the hash column and the unique key columns together) as the primary key.\nSwap the order of the columns in the primary key.\nUse a Universally Unique Identifier (UUID). Version 4 UUID is recommended, because it uses random values in the high-order bits. Don't use a UUID algorithm (such as version 1 UUID) that stores the timestamp in the high order bits.\nBit-reverse sequential values.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "YorelNation\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. A random universally unique identifier number (version 4 UUID)\n\nFrom https://cloud.google.com/spanner/docs/schema-and-data-model\n\n\nThere are techniques that can spread the load across multiple servers and avoid hotspots:\n\nHash the key and store it in a column. Use the hash column (or the hash column and the unique key columns together) as the primary key.\nSwap the order of the columns in the primary key.\nUse a Universally Unique Identifier (UUID). Version 4 UUID is recommended, because it uses random values in the high-order bits. Don't use a UUID algorithm (such as version 1 UUID) that stores the timestamp in the high order bits.\nBit-reverse sequential values.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. A random universally unique identifier number (version 4 UUID)\n\nFrom https://cloud.google.com/spanner/docs/schema-and-data-model\n\n\nThere are techniques that can spread the load across multiple servers and avoid hotspots:\n\nHash the key and store it in a column. Use the hash column (or the hash column and the unique key columns together) as the primary key.\nSwap the order of the columns in the primary key.\nUse a Universally Unique Identifier (UUID). Version 4 UUID is recommended, because it uses random values in the high-order bits. Don't use a UUID algorithm (such as version 1 UUID) that stores the timestamp in the high order bits.\nBit-reverse sequential values.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "Answer should be B as in all the other options hotspotting is possible. According to proper schema design guideline.. \nSchema design best practice #1: Do not choose a column whose value monotonically increases or decreases as the first key part for a high write rate table.\n\nSupporting link: \nhttps://cloud.google.com/spanner/docs/schema-design#primary-key-prevent-hotspots",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "jsree236\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "Answer should be B as in all the other options hotspotting is possible. According to proper schema design guideline.. \nSchema design best practice #1: Do not choose a column whose value monotonically increases or decreases as the first key part for a high write rate table.\n\nSupporting link: \nhttps://cloud.google.com/spanner/docs/schema-design#primary-key-prevent-hotspots",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer should be B as in all the other options hotspotting is possible. According to proper schema design guideline.. \nSchema design best practice #1: Do not choose a column whose value monotonically increases or decreases as the first key part for a high write rate table.\n\nSupporting link: \nhttps://cloud.google.com/spanner/docs/schema-design#primary-key-prevent-hotspots",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "Potential Skew: If there are a limited number of product names, this could still lead to uneven data distribution and potential hotspots.\nIncreased Key Size: Concatenating strings can result in larger primary keys, which can slightly impact storage and performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "Potential Skew: If there are a limited number of product names, this could still lead to uneven data distribution and potential hotspots.\nIncreased Key Size: Concatenating strings can result in larger primary keys, which can slightly impact storage and performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "LP_PDE\n\t\t\t\n\n\n\t\t\t3\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Potential Skew: If there are a limited number of product names, this could still lead to uneven data distribution and potential hotspots.\nIncreased Key Size: Concatenating strings can result in larger primary keys, which can slightly impact storage and performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Potential Skew: If there are a limited number of product names, this could still lead to uneven data distribution and potential hotspots.\nIncreased Key Size: Concatenating strings can result in larger primary keys, which can slightly impact storage and performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+COMMENT #107 FOR QUESTION 169
+============================================================
+Author: Unknown
+Date: 1 year, 11 months ago
+Votes: 0
+----------------------------------------
+Partitioning for time is obvious to improve performance and costs of querying only the last 30 days of the table. 
+
+So, the answer is A or B.
+
+https://cloud.google.com/bigquery/docs/querying-clustered-tables
+
+"... To get the benefits of clustering, include all of the clustered columns or a subset of the columns in left-to-right sort order, starting with the first column."
+
+This means that it is a better choice to sort the table rows by region-province-city (region-state-city in the US case). 
+
+So, the answer is A.
+============================================================

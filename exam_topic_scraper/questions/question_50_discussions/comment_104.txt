@@ -1,0 +1,14 @@
+COMMENT #104 FOR QUESTION 50
+============================================================
+Author: Unknown
+Date: 2 years, 3 months ago
+Votes: 0
+----------------------------------------
+BDE:
+A. Redis is a key-value store (and in many cases used as in-memory and non persistent cache). It is not designed for "100TB per year" of highly available storage.
+B. HBase is similar to Google Bigtable, fits the requirements perfectly: highly available, scalable and with very low latency.
+C. MySQL is a relational DB, designed precisely for ACID transactions and not for the stated requirements. Also, growth may be an issue.
+D. MongoDB is a document-db used for high volume data and maintains currently used data in RAM, so performance is usually really good. Should also fit the requirements well.
+E. Cassandra is designed precisely for highly available massive datasets, and a fine tuned cluster may offer low latency in reads. Fits the requirements.
+F. HDFS with Hive is great for OLAP and data-warehouse scenarios, allowing to solve map-reduce problems using an SQL subset, but the latency is usually really high (we may talk about seconds, not milliseconds, when obtaining results), so this does not complies with the requirements.
+============================================================

@@ -1,0 +1,10 @@
+COMMENT #154 FOR QUESTION 181
+============================================================
+Author: Unknown
+Date: 1 year, 8 months ago
+Votes: 0
+----------------------------------------
+I was hesitating between C and D, but then I realised this: https://cloud.google.com/blog/products/data-analytics/guide-to-common-cloud-dataflow-use-case-patterns-part-1 
+Here is says "If it's not thread-safe, create a new object in the startBundle method of DoFn." The task explicitly says "There will be tens of thousands of messages per second and that can be multi-threaded." 
+Correct me if I'm wrong, but multi-threaded == thread-safe. Therefore, no need to go for the C approach.
+============================================================

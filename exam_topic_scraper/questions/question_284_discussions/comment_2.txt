@@ -1,0 +1,80 @@
+COMMENT #2 FOR QUESTION 284
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 284
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have a network of 1000 sensors. The sensors generate time series data: one metric per sensor per second, along with a timestamp. You already have 1 TB of data, and expect the data to grow by 1 GB every day. You need to access this data in two ways. The first access pattern requires retrieving the metric from one specific sensor stored at a specific timestamp, with a median single-digit millisecond latency. The second access pattern requires running complex analytic queries on the data, including joins, once a day. How should you store this data?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Store your data in BigQuery. Concatenate the sensor ID and timestamp, and use it as the primary key.
+										
+
+
+													B.
+												
+											
+											Store your data in Bigtable. Concatenate the sensor ID and timestamp and use it as the row key. Perform an export to BigQuery every day.
+										
+
+
+													C.
+												
+											
+											Store your data in Bigtable. Concatenate the sensor ID and metric, and use it as the row key. Perform an export to BigQuery every day.
+										
+
+
+													D.
+												
+											
+											Store your data in BigQuery. Use the metric as a primary key.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 4, 2024, 7:37 a.m.
+============================================================

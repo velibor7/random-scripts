@@ -1,0 +1,1663 @@
+{
+  "question": "You need to copy millions of sensitive patient records from a relational database to BigQuery. The total size of the database is 10 TB. You need to design a solution that is secure and time-efficient. What should you do?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tExport the records from the database as an Avro file. Upload the file to GCS using gsutil, and then load the Avro file into BigQuery using the BigQuery web UI in the GCP Console.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tExport the records from the database as an Avro file. Copy the file onto a Transfer Appliance and send it to Google, and then load the Avro file into BigQuery using the BigQuery web UI in the GCP Console.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tExport the records from the database into a CSV file. Create a public URL for the CSV file, and then use Storage Transfer Service to move the file to Cloud Storage. Load the CSV file into BigQuery using the BigQuery web UI in the GCP Console.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tExport the records from the database as an Avro file. Create a public URL for the Avro file, and then use Storage Transfer Service to move the file to Cloud Storage. Load the Avro file into BigQuery using the BigQuery web UI in the GCP Console.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 101 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 101\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou need to copy millions of sensitive patient records from a relational database to BigQuery. The total size of the database is 10 TB. You need to design a solution that is secure and time-efficient. What should you do?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tExport the records from the database as an Avro file. Upload the file to GCS using gsutil, and then load the Avro file into BigQuery using the BigQuery web UI in the GCP Console.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tExport the records from the database as an Avro file. Copy the file onto a Transfer Appliance and send it to Google, and then load the Avro file into BigQuery using the BigQuery web UI in the GCP Console.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tExport the records from the database into a CSV file. Create a public URL for the CSV file, and then use Storage Transfer Service to move the file to Cloud Storage. Load the CSV file into BigQuery using the BigQuery web UI in the GCP Console.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tExport the records from the database as an Avro file. Create a public URL for the Avro file, and then use Storage Transfer Service to move the file to Cloud Storage. Load the Avro file into BigQuery using the BigQuery web UI in the GCP Console.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tRajokkiyam\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 22, 2020, 6:35 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 101\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tRajokkiyam\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 22, 2020, 6:35 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 11\u00a0months ago",
+      "content": "You are transferring sensitive patient information, so C & D are ruled out. Choice comes down to A & B. Here it gets tricky. How to choose Transfer Appliance: (https://cloud.google.com/transfer-appliance/docs/2.0/overview)\nWithout knowing the bandwidth, it is not possible to determine whether the upload can be completed within 7 days, as recommended by Google. So the safest and most performant way is to use Transfer Appliance.\nTherefore my choice is B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 11\u00a0months ago",
+      "content": "You are transferring sensitive patient information, so C & D are ruled out. Choice comes down to A & B. Here it gets tricky. How to choose Transfer Appliance: (https://cloud.google.com/transfer-appliance/docs/2.0/overview)\nWithout knowing the bandwidth, it is not possible to determine whether the upload can be completed within 7 days, as recommended by Google. So the safest and most performant way is to use Transfer Appliance.\nTherefore my choice is B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 11\u00a0months ago",
+      "content": "You are transferring sensitive patient information, so C & D are ruled out. Choice comes down to A & B. Here it gets tricky. How to choose Transfer Appliance: (https://cloud.google.com/transfer-appliance/docs/2.0/overview)\nWithout knowing the bandwidth, it is not possible to determine whether the upload can be completed within 7 days, as recommended by Google. So the safest and most performant way is to use Transfer Appliance.\nTherefore my choice is B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 11\u00a0months ago",
+      "content": "You are transferring sensitive patient information, so C & D are ruled out. Choice comes down to A & B. Here it gets tricky. How to choose Transfer Appliance: (https://cloud.google.com/transfer-appliance/docs/2.0/overview)\nWithout knowing the bandwidth, it is not possible to determine whether the upload can be completed within 7 days, as recommended by Google. So the safest and most performant way is to use Transfer Appliance.\nTherefore my choice is B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 11\u00a0months ago",
+      "content": "You are transferring sensitive patient information, so C & D are ruled out. Choice comes down to A & B. Here it gets tricky. How to choose Transfer Appliance: (https://cloud.google.com/transfer-appliance/docs/2.0/overview)\nWithout knowing the bandwidth, it is not possible to determine whether the upload can be completed within 7 days, as recommended by Google. So the safest and most performant way is to use Transfer Appliance.\nTherefore my choice is B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 11\u00a0months ago",
+      "content": "Ganshank\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "You are transferring sensitive patient information, so C & D are ruled out. Choice comes down to A & B. Here it gets tricky. How to choose Transfer Appliance: (https://cloud.google.com/transfer-appliance/docs/2.0/overview)\nWithout knowing the bandwidth, it is not possible to determine whether the upload can be completed within 7 days, as recommended by Google. So the safest and most performant way is to use Transfer Appliance.\nTherefore my choice is B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You are transferring sensitive patient information, so C & D are ruled out. Choice comes down to A & B. Here it gets tricky. How to choose Transfer Appliance: (https://cloud.google.com/transfer-appliance/docs/2.0/overview)\nWithout knowing the bandwidth, it is not possible to determine whether the upload can be completed within 7 days, as recommended by Google. So the safest and most performant way is to use Transfer Appliance.\nTherefore my choice is B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 62 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "With reasonable network connectivity (for example, 1 Gbps), transferring 100 TB of data online takes over 10 days to complete. If this rate is acceptable, an online transfer is likely a good solution for your needs. If you only have a 100 Mbps connection (or worse from a remote location), the same transfer takes over 100 days. At this point, it's worth considering an offline-transfer option such as Transfer Appliance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "With reasonable network connectivity (for example, 1 Gbps), transferring 100 TB of data online takes over 10 days to complete. If this rate is acceptable, an online transfer is likely a good solution for your needs. If you only have a 100 Mbps connection (or worse from a remote location), the same transfer takes over 100 days. At this point, it's worth considering an offline-transfer option such as Transfer Appliance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "grshankar9\n\t\t\t\n\n\n\t\t\t2\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "With reasonable network connectivity (for example, 1 Gbps), transferring 100 TB of data online takes over 10 days to complete. If this rate is acceptable, an online transfer is likely a good solution for your needs. If you only have a 100 Mbps connection (or worse from a remote location), the same transfer takes over 100 days. At this point, it's worth considering an offline-transfer option such as Transfer Appliance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "With reasonable network connectivity (for example, 1 Gbps), transferring 100 TB of data online takes over 10 days to complete. If this rate is acceptable, an online transfer is likely a good solution for your needs. If you only have a 100 Mbps connection (or worse from a remote location), the same transfer takes over 100 days. At this point, it's worth considering an offline-transfer option such as Transfer Appliance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 9\u00a0months ago",
+      "content": "https://cloud.google.com/solutions/migration-to-google-cloud-transferring-your-large-datasets\nThe table shows for 1Gbps, it takes 30 hrs for 10 TB. Generally, corporate internet speeds are over 1Gbps. I'm inclined to pick A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 9\u00a0months ago",
+      "content": "tprashanth\n\t\t\t\n\n\n\t\t\t4\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "https://cloud.google.com/solutions/migration-to-google-cloud-transferring-your-large-datasets\nThe table shows for 1Gbps, it takes 30 hrs for 10 TB. Generally, corporate internet speeds are over 1Gbps. I'm inclined to pick A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/solutions/migration-to-google-cloud-transferring-your-large-datasets\nThe table shows for 1Gbps, it takes 30 hrs for 10 TB. Generally, corporate internet speeds are over 1Gbps. I'm inclined to pick A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "SAY MY NAME!\nYou need to Transfer Sensitive Patient information, over public ISP you shouldn't do that.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "SAY MY NAME!\nYou need to Transfer Sensitive Patient information, over public ISP you shouldn't do that.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "BigQuery\n\t\t\t\n\n\n\t\t\t3\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "SAY MY NAME!\nYou need to Transfer Sensitive Patient information, over public ISP you shouldn't do that.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "SAY MY NAME!\nYou need to Transfer Sensitive Patient information, over public ISP you shouldn't do that.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "Security is not a concern, the data is encrypted at rest as well as in transit",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "Security is not a concern, the data is encrypted at rest as well as in transit",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "grshankar9\n\t\t\t\n\n\n\t\t\t2\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Security is not a concern, the data is encrypted at rest as well as in transit",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Security is not a concern, the data is encrypted at rest as well as in transit",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "If you transfer 10TBs over the wire, your network will be blocked for the entire transfer time. This isn't something a company would be happy to swallow.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "forepick\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If you transfer 10TBs over the wire, your network will be blocked for the entire transfer time. This isn't something a company would be happy to swallow.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If you transfer 10TBs over the wire, your network will be blocked for the entire transfer time. This isn't something a company would be happy to swallow.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "Answer is B,gsutil has a limit of 1TBaccording to Google documentation,if data is morethan 1TBthen we have to use Transfer Appliance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "TNT87\n\t\t\t\n\n\n\t\t\t4\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "Answer is B,gsutil has a limit of 1TBaccording to Google documentation,if data is morethan 1TBthen we have to use Transfer Appliance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is B,gsutil has a limit of 1TBaccording to Google documentation,if data is morethan 1TBthen we have to use Transfer Appliance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 19 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "While gsutil itself doesn't have a strict data limit, the underlying Google Cloud Storage service does, allowing for individual object sizes up to 5 Terabytes (TiB). This means that when using gsutil to transfer data, the maximum file size you can upload or download is 5 TiB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "While gsutil itself doesn't have a strict data limit, the underlying Google Cloud Storage service does, allowing for individual object sizes up to 5 Terabytes (TiB). This means that when using gsutil to transfer data, the maximum file size you can upload or download is 5 TiB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "grshankar9\n\t\t\t\n\n\n\t\t\t2\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "While gsutil itself doesn't have a strict data limit, the underlying Google Cloud Storage service does, allowing for individual object sizes up to 5 Terabytes (TiB). This means that when using gsutil to transfer data, the maximum file size you can upload or download is 5 TiB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "While gsutil itself doesn't have a strict data limit, the underlying Google Cloud Storage service does, allowing for individual object sizes up to 5 Terabytes (TiB). This means that when using gsutil to transfer data, the maximum file size you can upload or download is 5 TiB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "According to Google documentation, for files of size > 1TB STS is to be used",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "grshankar9\n\t\t\t\n\n\n\t\t\t2\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "According to Google documentation, for files of size > 1TB STS is to be used",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "According to Google documentation, for files of size > 1TB STS is to be used",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 8\u00a0months ago",
+      "content": "The answer is clearly seen here: https://cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#transfer-options",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 8\u00a0months ago",
+      "content": "Yiouk\n\t\t\t\n\n\n\t\t\t3\u00a0years, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The answer is clearly seen here: https://cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#transfer-options",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The answer is clearly seen here: https://cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#transfer-options",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 9 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "B is right answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "AzureDP900\n\t\t\t\n\n\n\t\t\t2\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B is right answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B is right answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 9\u00a0months ago",
+      "content": "Answer should be B: A is also correct but it has its own limit. It allows only 5TB data upload at a time to cloud storage. \nhttps://cloud.google.com/storage/quotas\nI will go with B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 9\u00a0months ago",
+      "content": "SSV\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 3\u00a0months ago",
+      "content": "Answer should be B: A is also correct but it has its own limit. It allows only 5TB data upload at a time to cloud storage. \nhttps://cloud.google.com/storage/quotas\nI will go with B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer should be B: A is also correct but it has its own limit. It allows only 5TB data upload at a time to cloud storage. \nhttps://cloud.google.com/storage/quotas\nI will go with B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 8 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 3\u00a0months ago",
+      "content": "5Tb \"for individual objects\". Create smaller AVRO files.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 3\u00a0months ago",
+      "content": "5Tb \"for individual objects\". Create smaller AVRO files.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 3\u00a0months ago",
+      "content": "VASI\n\t\t\t\n\n\n\t\t\t4\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "5Tb \"for individual objects\". Create smaller AVRO files.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "5Tb \"for individual objects\". Create smaller AVRO files.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 3\u00a0months ago",
+      "content": "AVRO compression can reduce file size to a tenth",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 3\u00a0months ago",
+      "content": "VASI\n\t\t\t\n\n\n\t\t\t4\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AVRO compression can reduce file size to a tenth",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AVRO compression can reduce file size to a tenth",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "C and D are ruled out owing to limitations of Cloud Storage with regards to max file size of 5 TB ( Refer - https://cloud.google.com/storage-transfer/docs/known-limitations-transfer#:~:text=performance%20uploads%3A%206GiB-,Scaling%20limitations,of%20Gbps%20in%20transfer%20speed ). The answer should be between A & B. if we were to assume bandwidth of 1 GBPS, it would only take about 1 day. Even if the bandwidth were a tenth of 1 GBPS, it would take about 10 days to transfer 10 TB. With a transfer appliance, it would take minimum of 25 days. I would go with A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "grshankar9\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t2\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C and D are ruled out owing to limitations of Cloud Storage with regards to max file size of 5 TB ( Refer - https://cloud.google.com/storage-transfer/docs/known-limitations-transfer#:~:text=performance%20uploads%3A%206GiB-,Scaling%20limitations,of%20Gbps%20in%20transfer%20speed ). The answer should be between A & B. if we were to assume bandwidth of 1 GBPS, it would only take about 1 day. Even if the bandwidth were a tenth of 1 GBPS, it would take about 10 days to transfer 10 TB. With a transfer appliance, it would take minimum of 25 days. I would go with A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C and D are ruled out owing to limitations of Cloud Storage with regards to max file size of 5 TB ( Refer - https://cloud.google.com/storage-transfer/docs/known-limitations-transfer#:~:text=performance%20uploads%3A%206GiB-,Scaling%20limitations,of%20Gbps%20in%20transfer%20speed ). The answer should be between A & B. if we were to assume bandwidth of 1 GBPS, it would only take about 1 day. Even if the bandwidth were a tenth of 1 GBPS, it would take about 10 days to transfer 10 TB. With a transfer appliance, it would take minimum of 25 days. I would go with A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "B - only because it says sensitive data, you can never be sure uploading over internet!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "clouditis\n\t\t\t\n\n\n\t\t\t3\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B - only because it says sensitive data, you can never be sure uploading over internet!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B - only because it says sensitive data, you can never be sure uploading over internet!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Also, \nFor your scenario with 10 TB of data in Cloud SQL, if you export to Avro without specifying compression, you can expect the resulting Avro file to be around the same size, potentially slightly smaller depending on the data characteristics. Here in this question, there is no mentioning about compression. \n\nSo let's not assume that the data being used in Avro format will get compressed. \n\nIf Google cloud storage itself, can't handle an object of size greater than 5 TB, there is no point of using gsutil",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Preetmehta1234\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "Also, \nFor your scenario with 10 TB of data in Cloud SQL, if you export to Avro without specifying compression, you can expect the resulting Avro file to be around the same size, potentially slightly smaller depending on the data characteristics. Here in this question, there is no mentioning about compression. \n\nSo let's not assume that the data being used in Avro format will get compressed. \n\nIf Google cloud storage itself, can't handle an object of size greater than 5 TB, there is no point of using gsutil",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Also, \nFor your scenario with 10 TB of data in Cloud SQL, if you export to Avro without specifying compression, you can expect the resulting Avro file to be around the same size, potentially slightly smaller depending on the data characteristics. Here in this question, there is no mentioning about compression. \n\nSo let's not assume that the data being used in Avro format will get compressed. \n\nIf Google cloud storage itself, can't handle an object of size greater than 5 TB, there is no point of using gsutil",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "gsutil is deprecated and has been replaced by gcloud storage. Gcloud storage is faster and requires less manual optimization for uploads and downloads",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "gsutil is deprecated and has been replaced by gcloud storage. Gcloud storage is faster and requires less manual optimization for uploads and downloads",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 3\u00a0weeks ago",
+      "content": "grshankar9\n\t\t\t\n\n\n\t\t\t2\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "gsutil is deprecated and has been replaced by gcloud storage. Gcloud storage is faster and requires less manual optimization for uploads and downloads",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "gsutil is deprecated and has been replaced by gcloud storage. Gcloud storage is faster and requires less manual optimization for uploads and downloads",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "https://cloud.google.com/storage-transfer/docs/known-limitations-transfer\n\nCloud Storage 5TiB object size limit\nCloud Storage supports a maximum single-object size up 5 tebibytes. If you have objects larger than 5TiB, the object transfer fails for those objects for either Cloud Storage or Storage Transfer Service.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Preetmehta1234\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/storage-transfer/docs/known-limitations-transfer\n\nCloud Storage 5TiB object size limit\nCloud Storage supports a maximum single-object size up 5 tebibytes. If you have objects larger than 5TiB, the object transfer fails for those objects for either Cloud Storage or Storage Transfer Service.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/storage-transfer/docs/known-limitations-transfer\n\nCloud Storage 5TiB object size limit\nCloud Storage supports a maximum single-object size up 5 tebibytes. If you have objects larger than 5TiB, the object transfer fails for those objects for either Cloud Storage or Storage Transfer Service.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 2\u00a0weeks ago",
+      "content": "while Option A is feasible and could work depending on specific requirements and security measures implemented, Option D (exporting as Avro, using Storage Transfer Service, and then loading into BigQuery) generally offers a more secure, efficient, and managed approach for transferring sensitive patient records into BigQuery from a relational database.Avro files uploaded to GCS will need to be secured. While GCS itself offers security features like IAM policies and access controls, using a public URL (as suggested in Option A) introduces additional security concerns.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 2\u00a0weeks ago",
+      "content": "hussain.sain\n\t\t\t\n\n\n\t\t\t9\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "while Option A is feasible and could work depending on specific requirements and security measures implemented, Option D (exporting as Avro, using Storage Transfer Service, and then loading into BigQuery) generally offers a more secure, efficient, and managed approach for transferring sensitive patient records into BigQuery from a relational database.Avro files uploaded to GCS will need to be secured. While GCS itself offers security features like IAM policies and access controls, using a public URL (as suggested in Option A) introduces additional security concerns.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "while Option A is feasible and could work depending on specific requirements and security measures implemented, Option D (exporting as Avro, using Storage Transfer Service, and then loading into BigQuery) generally offers a more secure, efficient, and managed approach for transferring sensitive patient records into BigQuery from a relational database.Avro files uploaded to GCS will need to be secured. While GCS itself offers security features like IAM policies and access controls, using a public URL (as suggested in Option A) introduces additional security concerns.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 1\u00a0week ago",
+      "content": "to securely transfer data and looking at the size of data B is the correct option.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 1\u00a0week ago",
+      "content": "Naresh_4u\n\t\t\t\n\n\n\t\t\t11\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "to securely transfer data and looking at the size of data B is the correct option.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "to securely transfer data and looking at the size of data B is the correct option.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "IMO \"A\" is the most suitable option since the transfer appliance could take 25 days to get the appliance and then 25 days to ship it back and have the data available.\nhttps://cloud.google.com/transfer-appliance/docs/4.0/overview#transfer-speeds",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "GCanteiro\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "IMO \"A\" is the most suitable option since the transfer appliance could take 25 days to get the appliance and then 25 days to ship it back and have the data available.\nhttps://cloud.google.com/transfer-appliance/docs/4.0/overview#transfer-speeds",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "IMO \"A\" is the most suitable option since the transfer appliance could take 25 days to get the appliance and then 25 days to ship it back and have the data available.\nhttps://cloud.google.com/transfer-appliance/docs/4.0/overview#transfer-speeds",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Given the sensitivity of the patient records and the large size of the data, using Google's Transfer Appliance is a secure and efficient method. The Transfer Appliance is a hardware solution provided by Google for transferring large amounts of data. It enables you to securely transfer data without exposing it over the internet.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "TVH_Data_Engineer\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Given the sensitivity of the patient records and the large size of the data, using Google's Transfer Appliance is a secure and efficient method. The Transfer Appliance is a hardware solution provided by Google for transferring large amounts of data. It enables you to securely transfer data without exposing it over the internet.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Given the sensitivity of the patient records and the large size of the data, using Google's Transfer Appliance is a secure and efficient method. The Transfer Appliance is a hardware solution provided by Google for transferring large amounts of data. It enables you to securely transfer data without exposing it over the internet.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "Option B combines security, efficiency, and ease of use, making it a suitable choice for transferring sensitive patient records to BigQuery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "rocky48\n\t\t\t\n\n\n\t\t\t1\u00a0year, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B combines security, efficiency, and ease of use, making it a suitable choice for transferring sensitive patient records to BigQuery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B combines security, efficiency, and ease of use, making it a suitable choice for transferring sensitive patient records to BigQuery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "10 TB is nothing. With a single 10 GB interconnect you could transfer the data in 3 hours or even with a 1 GB speeds without interconnect you could transfer it in one weekend. The transfer appliance will take 25 days to get the appliance and then 25 days while you wait for the data to be available that is not \"time-efficient\" at all. I go with A instead of B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "spicebits\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "10 TB is nothing. With a single 10 GB interconnect you could transfer the data in 3 hours or even with a 1 GB speeds without interconnect you could transfer it in one weekend. The transfer appliance will take 25 days to get the appliance and then 25 days while you wait for the data to be available that is not \"time-efficient\" at all. I go with A instead of B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "10 TB is nothing. With a single 10 GB interconnect you could transfer the data in 3 hours or even with a 1 GB speeds without interconnect you could transfer it in one weekend. The transfer appliance will take 25 days to get the appliance and then 25 days while you wait for the data to be available that is not \"time-efficient\" at all. I go with A instead of B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "I got the 25 days + 25 days from here: https://cloud.google.com/transfer-appliance/docs/4.0/overview#transfer-speeds",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "I got the 25 days + 25 days from here: https://cloud.google.com/transfer-appliance/docs/4.0/overview#transfer-speeds",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "spicebits\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I got the 25 days + 25 days from here: https://cloud.google.com/transfer-appliance/docs/4.0/overview#transfer-speeds",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I got the 25 days + 25 days from here: https://cloud.google.com/transfer-appliance/docs/4.0/overview#transfer-speeds",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "transfer appliance will take time more than gsutil. and we did not mention yet if the location of the organization has google data centre",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "A_Nasser\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "transfer appliance will take time more than gsutil. and we did not mention yet if the location of the organization has google data centre",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "transfer appliance will take time more than gsutil. and we did not mention yet if the location of the organization has google data centre",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "As per Google recommendation above 1TB of transfer from onprem or from Google cloud or other cloud storage like s3 etc we need to use storage transfer service.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "DineshVarma\n\t\t\t\n\n\n\t\t\t1\u00a0year, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "As per Google recommendation above 1TB of transfer from onprem or from Google cloud or other cloud storage like s3 etc we need to use storage transfer service.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "As per Google recommendation above 1TB of transfer from onprem or from Google cloud or other cloud storage like s3 etc we need to use storage transfer service.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Transfer Appliance would take 20 days for epected turnaround time. https://cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#expected%20turnaround:~:text=The%20expected%20turnaround%20time%20for%20a%20network%20appliance%20to%20be%20shipped%2C%20loaded%20with%20your%20data%2C%20shipped%20back%2C%20and%20rehydrated%20on%20Google%20Cloud%20is%2020%20days.\n\nThe best answer would be A. \nIf gsutil consume/leverage 100MB it would take 12 days and more time-efficient than B. \nThis is a reasonable assumption. \nhttps://cloud.google.com/static/architecture/images/big-data-transfer-how-to-get-started-transfer-size-and-speed.png",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "arien_chen\n\t\t\t\n\n\n\t\t\t1\u00a0year, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Transfer Appliance would take 20 days for epected turnaround time. https://cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#expected%20turnaround:~:text=The%20expected%20turnaround%20time%20for%20a%20network%20appliance%20to%20be%20shipped%2C%20loaded%20with%20your%20data%2C%20shipped%20back%2C%20and%20rehydrated%20on%20Google%20Cloud%20is%2020%20days.\n\nThe best answer would be A. \nIf gsutil consume/leverage 100MB it would take 12 days and more time-efficient than B. \nThis is a reasonable assumption. \nhttps://cloud.google.com/static/architecture/images/big-data-transfer-how-to-get-started-transfer-size-and-speed.png",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Transfer Appliance would take 20 days for epected turnaround time. https://cloud.google.com/architecture/migration-to-google-cloud-transferring-your-large-datasets#expected%20turnaround:~:text=The%20expected%20turnaround%20time%20for%20a%20network%20appliance%20to%20be%20shipped%2C%20loaded%20with%20your%20data%2C%20shipped%20back%2C%20and%20rehydrated%20on%20Google%20Cloud%20is%2020%20days.\n\nThe best answer would be A. \nIf gsutil consume/leverage 100MB it would take 12 days and more time-efficient than B. \nThis is a reasonable assumption. \nhttps://cloud.google.com/static/architecture/images/big-data-transfer-how-to-get-started-transfer-size-and-speed.png",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "I will go with \" A\" because of the transition time to take transfer appliance to Google and that also depends in the organisation location. gsutil works anywhere internet is available.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Colourseun\n\t\t\t\n\n\n\t\t\t1\u00a0year, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I will go with \" A\" because of the transition time to take transfer appliance to Google and that also depends in the organisation location. gsutil works anywhere internet is available.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I will go with \" A\" because of the transition time to take transfer appliance to Google and that also depends in the organisation location. gsutil works anywhere internet is available.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "A will take crazy time if the organization didnt have a dedicated link",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "aewis\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A will take crazy time if the organization didnt have a dedicated link",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A will take crazy time if the organization didnt have a dedicated link",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

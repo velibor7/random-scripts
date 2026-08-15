@@ -1,0 +1,14 @@
+COMMENT #73 FOR QUESTION 162
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Customer-Supplied Encryption Key (CSEK): CSEK allows you to provide your encryption keys, ensuring that the cloud provider staff does not have access to the keys and cannot decrypt your data.
+
+Separate Project for Key Management: Saving the CSEK in a different project that only the security team can access adds an additional layer of security. It isolates the encryption keys from the project where the data is stored, ensuring that even within the same cloud provider, only authorized personnel can access the keys.
+
+Use of .boto Configuration: Specifying the CSEK in the .boto configuration file ensures that it is applied consistently when interacting with Cloud Storage through tools like gsutil. This way, every archival file is encrypted using your keys.
+
+Options A and B involve using Google Cloud Key Management Service (KMS) to manage keys, which does not align with the TNO approach because cloud provider staff could potentially access the keys stored in Google Cloud KMS.
+============================================================

@@ -1,0 +1,10 @@
+COMMENT #12 FOR QUESTION 254
+============================================================
+Author: Unknown
+Date: 1 year, 3 months ago
+Votes: 0
+----------------------------------------
+- Fusion optimization in Dataflow can lead to steps being "fused" together, which can sometimes hinder parallelization. 
+- Introducing a Reshuffle step can prevent fusion and force the distribution of work across more workers. 
+- This can be an effective way to improve parallelism and potentially trigger the autoscaler to increase the number of workers.
+============================================================

@@ -1,0 +1,915 @@
+ALL COMMENTS FOR QUESTION 173
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 173 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 173
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are designing a pipeline that publishes application events to a Pub/Sub topic. Although message ordering is not important, you need to be able to aggregate events across disjoint hourly intervals before loading the results to BigQuery for analysis. What technology should you use to process and load this data toBigQuery while ensuring that it will scale with large volumes of events?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a Cloud Function to perform the necessary data processing that executes using the Pub/Sub trigger every time a new message is published to the topic.
+										
+
+
+													B.
+												
+											
+											Schedule a Cloud Function to run hourly, pulling all available messages from the Pub/Sub topic and performing the necessary aggregations.
+										
+
+
+													C.
+												
+											
+											Schedule a batch Dataflow job to run hourly, pulling all available messages from the Pub/Sub topic and performing the necessary aggregations.
+										
+
+
+													D.
+												
+											
+											Create a streaming Dataflow job that reads continually from the Pub/Sub topic and performs the necessary aggregations using tumbling windows.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 2, 2022, 7:51 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 173
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 2, 2022, 7:51 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+D
+
+TUMBLE=> fixed windows.
+HOP=> sliding windows. 
+SESSION=> session windows.
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+D
+
+TUMBLE=> fixed windows.
+HOP=> sliding windows. 
+SESSION=> session windows.
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+D
+
+TUMBLE=> fixed windows.
+HOP=> sliding windows. 
+SESSION=> session windows.
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+D
+
+TUMBLE=> fixed windows.
+HOP=> sliding windows. 
+SESSION=> session windows.
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+D
+
+TUMBLE=> fixed windows.
+HOP=> sliding windows. 
+SESSION=> session windows.
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Atnafu
+			
+
+
+				Highly Voted 
+
+
+			2 years, 3 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D
+
+TUMBLE=> fixed windows.
+HOP=> sliding windows. 
+SESSION=> session windows.
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D
+
+TUMBLE=> fixed windows.
+HOP=> sliding windows. 
+SESSION=> session windows.
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+why not c ? as data is arriving hourly why we can use batch processing rather than streaming with 1 hour fixed window?
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+musumusu
+			
+
+
+				Highly Voted 
+
+
+			2 years, 1 month ago
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+why not c ? as data is arriving hourly why we can use batch processing rather than streaming with 1 hour fixed window?
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+why not c ? as data is arriving hourly why we can use batch processing rather than streaming with 1 hour fixed window?
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+"you need to be able to aggregate events across disjoint hourly intervals" does not means data is arriving hourly. however, it's tricky! Answer D
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+"you need to be able to aggregate events across disjoint hourly intervals" does not means data is arriving hourly. however, it's tricky! Answer D
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+MrMone
+			
+
+
+			1 year, 12 months ago
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+"you need to be able to aggregate events across disjoint hourly intervals" does not means data is arriving hourly. however, it's tricky! Answer D
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+"you need to be able to aggregate events across disjoint hourly intervals" does not means data is arriving hourly. however, it's tricky! Answer D
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+I second your question. Noone who suggests Dataflow streaming (D) has given an explanation why an hourly batch job is insufficient.
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+ga8our
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I second your question. Noone who suggests Dataflow streaming (D) has given an explanation why an hourly batch job is insufficient.
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I second your question. Noone who suggests Dataflow streaming (D) has given an explanation why an hourly batch job is insufficient.
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+I second your question. Noone who suggests C has given an explanation why an hourly batch job is insufficient.
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+ga8our
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I second your question. Noone who suggests C has given an explanation why an hourly batch job is insufficient.
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I second your question. Noone who suggests C has given an explanation why an hourly batch job is insufficient.
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date: 6 months, 1 week ago | Votes: 0
+Just to provide clarity to people asking "why not C" - the source is a pub/sub. Pub/Sub has a limit of 10 MB or 1000 messages for a single batch publish request, which means that batch dataflow will not necessarily be able to retrieve all messages. If the question had said "there will always be less than 1000 messages and less than 10mb", only then would batch be acceptable.
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date: 6 months, 1 week ago | Votes: 0
+baimus
+			
+
+
+				Most Recent 
+
+
+			6 months, 1 week ago
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Just to provide clarity to people asking "why not C" - the source is a pub/sub. Pub/Sub has a limit of 10 MB or 1000 messages for a single batch publish request, which means that batch dataflow will not necessarily be able to retrieve all messages. If the question had said "there will always be less than 1000 messages and less than 10mb", only then would batch be acceptable.
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Just to provide clarity to people asking "why not C" - the source is a pub/sub. Pub/Sub has a limit of 10 MB or 1000 messages for a single batch publish request, which means that batch dataflow will not necessarily be able to retrieve all messages. If the question had said "there will always be less than 1000 messages and less than 10mb", only then would batch be acceptable.
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date: 7 months, 1 week ago | Votes: 0
+The question asks for future scalability for large volumes of events, its better to go with streaming dataflow job.
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date: 7 months, 1 week ago | Votes: 0
+mayankazyour
+			
+
+
+			7 months, 1 week ago
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The question asks for future scalability for large volumes of events, its better to go with streaming dataflow job.
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The question asks for future scalability for large volumes of events, its better to go with streaming dataflow job.
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+I just do not understand why this needs to be streamed. I understand that there might be a slight delay using batch processing but there is no indication this is critical data. Can someone please provide your thinking?
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+emmylou
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I just do not understand why this needs to be streamed. I understand that there might be a slight delay using batch processing but there is no indication this is critical data. Can someone please provide your thinking?
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I just do not understand why this needs to be streamed. I understand that there might be a slight delay using batch processing but there is no indication this is critical data. Can someone please provide your thinking?
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+We can use TUMBLE(1 HOUR) to create hourly windows, where each window contains events from a specific hour.
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+vamgcp
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+We can use TUMBLE(1 HOUR) to create hourly windows, where each window contains events from a specific hour.
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+We can use TUMBLE(1 HOUR) to create hourly windows, where each window contains events from a specific hour.
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Option D : A streaming Dataflow job is the best way to process and load data from Pub/Sub to BigQuery in real time. This is because streaming Dataflow jobs can scale to handle large volumes of data, and they can perform aggregations using tumbling windows.
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+vamgcp
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option D : A streaming Dataflow job is the best way to process and load data from Pub/Sub to BigQuery in real time. This is because streaming Dataflow jobs can scale to handle large volumes of data, and they can perform aggregations using tumbling windows.
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option D : A streaming Dataflow job is the best way to process and load data from Pub/Sub to BigQuery in real time. This is because streaming Dataflow jobs can scale to handle large volumes of data, and they can perform aggregations using tumbling windows.
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+D is the answer.
+
+https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#tumbling-windows
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+zellck
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D is the answer.
+
+https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#tumbling-windows
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D is the answer.
+
+https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#tumbling-windows
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Answer D
+Tumbling Windows = Fixed Windows
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+devaid
+			
+
+
+			2 years, 5 months ago
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer D
+Tumbling Windows = Fixed Windows
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer D
+Tumbling Windows = Fixed Windows
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Answer D
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer D
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer D
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+D. Create a streaming Dataflow job that reads continually from the Pub/Sub topic and performs the necessary aggregations using tumbling windows.
+
+A tumbling window represents a consistent, disjoint time interval in the data stream.
+
+Reference:
+https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#tumbling-windows
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+AWSandeep
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Create a streaming Dataflow job that reads continually from the Pub/Sub topic and performs the necessary aggregations using tumbling windows.
+
+A tumbling window represents a consistent, disjoint time interval in the data stream.
+
+Reference:
+https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#tumbling-windows
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Create a streaming Dataflow job that reads continually from the Pub/Sub topic and performs the necessary aggregations using tumbling windows.
+
+A tumbling window represents a consistent, disjoint time interval in the data stream.
+
+Reference:
+https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#tumbling-windows
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

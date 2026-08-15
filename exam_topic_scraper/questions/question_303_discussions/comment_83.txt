@@ -1,0 +1,18 @@
+COMMENT #83 FOR QUESTION 303
+============================================================
+Author: Unknown
+Date: 7 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+Discovery configuration
+Discovery is enabled by default when you create a new zone or asset. You can disable Discovery at the zone or asset level.
+
+For each Dataplex asset with Discovery enabled, Dataplex does the following:
+
+Scans the data associated with the asset.
+Groups structured and semi-structured files into tables.
+Collects technical metadata, such as table name, schema, and partition definition.
+For unstructured data, such as images and videos, Dataplex Discovery automatically detects and registers groups of files sharing media type as filesets. For example, if gs://images/group1 contains GIF images, and gs://images/group2 contains JPEG images, Dataplex Discovery detects and registers two filesets. For structured data, such as Avro, Discovery detects files only if they are located in folders that contain the same data format and schema.
+
+Reference : https://cloud.google.com/dataplex/docs/discover-data#exclude-files-from-Discovery
+============================================================

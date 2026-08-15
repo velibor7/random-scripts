@@ -1,0 +1,14 @@
+COMMENT #50 FOR QUESTION 278
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Option B.
+
+ Here's why:
+
+    Side Output for Failed Messages: Dataflow allows you to use side outputs to handle messages that fail processing. In your DoFn , you can catch exceptions and write the failed messages to a separate PCollection . This PCollection can then be written to a new Pub/Sub topic.
+    New Pub/Sub Topic for Monitoring: Creating a dedicated Pub/Sub topic for failed messages allows you to monitor it specifically for alerting purposes. This provides a clear view of any issues with your business logic.
+    topic/num_unacked_messages_by_region Metric: This Cloud Monitoring metric tracks the number of unacknowledged messages in a Pub/Sub topic. By monitoring this metric on your new topic, you can identify when messages are failing to be processed correctly.
+============================================================

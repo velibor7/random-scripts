@@ -1,0 +1,1572 @@
+================================================================================
+QUESTION:
+You want to process payment transactions in a point-of-sale application that will run on Google Cloud Platform. Your user base could grow exponentially, but you do not want to manage infrastructure scaling.Which Google database service should you use?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Cloud SQL
+										
+
+
+													B.
+												
+											
+											BigQuery
+										
+
+
+													C.
+												
+											
+											Cloud Bigtable
+										
+
+
+													D.
+												
+											
+											Cloud Datastore
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (268 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 13 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 13
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You want to process payment transactions in a point-of-sale application that will run on Google Cloud Platform. Your user base could grow exponentially, but you do not want to manage infrastructure scaling.Which Google database service should you use?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Cloud SQL
+										
+
+
+													B.
+												
+											
+											BigQuery
+										
+
+
+													C.
+												
+											
+											Cloud Bigtable
+										
+
+
+													D.
+												
+											
+											Cloud Datastore
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 11, 2020, 6:22 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 13
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 11, 2020, 6:22 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 4 years, 10 months ago | Votes: 0
+Initially, thinking D is the best answer but when question is re-re-read, A seems to be correct answer for following reasons
+1. Is payment TRANSACTION -- DB should able to perform full blown transaction (updating inventory, sales info etc, though not specified) , not just ATOMIC which DataStore provides
+2. Its point-of-sale application, not ONLINE STORE where HIGH number of concurrent users ordering stuff. 
+3. User Base could grow exponentially - again more users does mot mean concurrent users and more processing power. Its only about storage.
+4. Do not want to Manage infrastructure scaling. - Cloud SQL can scale in terms of storage.
+5. CloudStore is poor selection for OLTP application 
+   - Each property is index - so higher latency
+   
+Not sure, during exam 2 min is enough  to think on various point.. 
+I may be wrong or wrong path ... lets brainstrom..
+
+--- Comment #6 ---
+Author: Unknown | Date: 4 years, 10 months ago | Votes: 0
+Initially, thinking D is the best answer but when question is re-re-read, A seems to be correct answer for following reasons
+1. Is payment TRANSACTION -- DB should able to perform full blown transaction (updating inventory, sales info etc, though not specified) , not just ATOMIC which DataStore provides
+2. Its point-of-sale application, not ONLINE STORE where HIGH number of concurrent users ordering stuff. 
+3. User Base could grow exponentially - again more users does mot mean concurrent users and more processing power. Its only about storage.
+4. Do not want to Manage infrastructure scaling. - Cloud SQL can scale in terms of storage.
+5. CloudStore is poor selection for OLTP application 
+   - Each property is index - so higher latency
+   
+Not sure, during exam 2 min is enough  to think on various point.. 
+I may be wrong or wrong path ... lets brainstrom..
+
+--- Comment #7 ---
+Author: Unknown | Date: 4 years, 10 months ago | Votes: 0
+Initially, thinking D is the best answer but when question is re-re-read, A seems to be correct answer for following reasons
+1. Is payment TRANSACTION -- DB should able to perform full blown transaction (updating inventory, sales info etc, though not specified) , not just ATOMIC which DataStore provides
+2. Its point-of-sale application, not ONLINE STORE where HIGH number of concurrent users ordering stuff. 
+3. User Base could grow exponentially - again more users does mot mean concurrent users and more processing power. Its only about storage.
+4. Do not want to Manage infrastructure scaling. - Cloud SQL can scale in terms of storage.
+5. CloudStore is poor selection for OLTP application 
+   - Each property is index - so higher latency
+   
+Not sure, during exam 2 min is enough  to think on various point.. 
+I may be wrong or wrong path ... lets brainstrom..
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 4 years, 10 months ago | Votes: 0
+Initially, thinking D is the best answer but when question is re-re-read, A seems to be correct answer for following reasons
+1. Is payment TRANSACTION -- DB should able to perform full blown transaction (updating inventory, sales info etc, though not specified) , not just ATOMIC which DataStore provides
+2. Its point-of-sale application, not ONLINE STORE where HIGH number of concurrent users ordering stuff. 
+3. User Base could grow exponentially - again more users does mot mean concurrent users and more processing power. Its only about storage.
+4. Do not want to Manage infrastructure scaling. - Cloud SQL can scale in terms of storage.
+5. CloudStore is poor selection for OLTP application 
+   - Each property is index - so higher latency
+   
+Not sure, during exam 2 min is enough  to think on various point.. 
+I may be wrong or wrong path ... lets brainstrom..
+
+--- Comment #13 ---
+Author: Unknown | Date: 4 years, 10 months ago | Votes: 0
+Initially, thinking D is the best answer but when question is re-re-read, A seems to be correct answer for following reasons
+1. Is payment TRANSACTION -- DB should able to perform full blown transaction (updating inventory, sales info etc, though not specified) , not just ATOMIC which DataStore provides
+2. Its point-of-sale application, not ONLINE STORE where HIGH number of concurrent users ordering stuff. 
+3. User Base could grow exponentially - again more users does mot mean concurrent users and more processing power. Its only about storage.
+4. Do not want to Manage infrastructure scaling. - Cloud SQL can scale in terms of storage.
+5. CloudStore is poor selection for OLTP application 
+   - Each property is index - so higher latency
+   
+Not sure, during exam 2 min is enough  to think on various point.. 
+I may be wrong or wrong path ... lets brainstrom..
+
+--- Comment #14 ---
+Author: Unknown | Date: 4 years, 10 months ago | Votes: 0
+DeepakKhattar
+			
+
+
+				Highly Voted 
+
+
+			4 years, 10 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+Initially, thinking D is the best answer but when question is re-re-read, A seems to be correct answer for following reasons
+1. Is payment TRANSACTION -- DB should able to perform full blown transaction (updating inventory, sales info etc, though not specified) , not just ATOMIC which DataStore provides
+2. Its point-of-sale application, not ONLINE STORE where HIGH number of concurrent users ordering stuff. 
+3. User Base could grow exponentially - again more users does mot mean concurrent users and more processing power. Its only about storage.
+4. Do not want to Manage infrastructure scaling. - Cloud SQL can scale in terms of storage.
+5. CloudStore is poor selection for OLTP application 
+   - Each property is index - so higher latency
+   
+Not sure, during exam 2 min is enough  to think on various point.. 
+I may be wrong or wrong path ... lets brainstrom..
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Initially, thinking D is the best answer but when question is re-re-read, A seems to be correct answer for following reasons
+1. Is payment TRANSACTION -- DB should able to perform full blown transaction (updating inventory, sales info etc, though not specified) , not just ATOMIC which DataStore provides
+2. Its point-of-sale application, not ONLINE STORE where HIGH number of concurrent users ordering stuff. 
+3. User Base could grow exponentially - again more users does mot mean concurrent users and more processing power. Its only about storage.
+4. Do not want to Manage infrastructure scaling. - Cloud SQL can scale in terms of storage.
+5. CloudStore is poor selection for OLTP application 
+   - Each property is index - so higher latency
+   
+Not sure, during exam 2 min is enough  to think on various point.. 
+I may be wrong or wrong path ... lets brainstrom..
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 78 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+CloudSql does not auto scale.
+
+--- Comment #20 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+CloudSql does not auto scale.
+
+--- Comment #21 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+canon123
+			
+
+
+			3 years, 5 months ago
+
+--- Comment #22 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+CloudSql does not auto scale.
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+CloudSql does not auto scale.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 10 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+https://cloud.google.com/architecture/elastically-scaling-your-mysql-environment#objectives
+
+Please read. It can be configured for autoscaling.
+
+--- Comment #27 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+https://cloud.google.com/architecture/elastically-scaling-your-mysql-environment#objectives
+
+Please read. It can be configured for autoscaling.
+
+--- Comment #28 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+BigQuery
+			
+
+
+			3 years, 4 months ago
+
+--- Comment #29 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+https://cloud.google.com/architecture/elastically-scaling-your-mysql-environment#objectives
+
+Please read. It can be configured for autoscaling.
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/architecture/elastically-scaling-your-mysql-environment#objectives
+
+Please read. It can be configured for autoscaling.
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #33 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+That link explains how to set MySQL autoscaling with Google Compute Engine instances (you install and manage MySQL on the VM). This can not be applied to Cloud SQL (managed service). In Cloud SQL, only the storage can be automatically increased, and changing the Cloud SQL instance size requires a manual edit of the instance type.
+
+--- Comment #34 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+That link explains how to set MySQL autoscaling with Google Compute Engine instances (you install and manage MySQL on the VM). This can not be applied to Cloud SQL (managed service). In Cloud SQL, only the storage can be automatically increased, and changing the Cloud SQL instance size requires a manual edit of the instance type.
+
+--- Comment #35 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+hendrixlives
+			
+
+
+			3 years, 3 months ago
+
+--- Comment #36 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+That link explains how to set MySQL autoscaling with Google Compute Engine instances (you install and manage MySQL on the VM). This can not be applied to Cloud SQL (managed service). In Cloud SQL, only the storage can be automatically increased, and changing the Cloud SQL instance size requires a manual edit of the instance type.
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+That link explains how to set MySQL autoscaling with Google Compute Engine instances (you install and manage MySQL on the VM). This can not be applied to Cloud SQL (managed service). In Cloud SQL, only the storage can be automatically increased, and changing the Cloud SQL instance size requires a manual edit of the instance type.
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #40 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+yes. and that is ok since this is a point of sale. an exponential increase in number of clients still means reduced parallel processing (how many customers can buy in the very same time) so an increase in memory and CPU is very unlikely to be necessary. yes, an exponential increase in the number of customers means more memory, and more storage, which in cloud SQL increases automatically.
+
+--- Comment #41 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+yes. and that is ok since this is a point of sale. an exponential increase in number of clients still means reduced parallel processing (how many customers can buy in the very same time) so an increase in memory and CPU is very unlikely to be necessary. yes, an exponential increase in the number of customers means more memory, and more storage, which in cloud SQL increases automatically.
+
+--- Comment #42 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+MisuLava
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+yes. and that is ok since this is a point of sale. an exponential increase in number of clients still means reduced parallel processing (how many customers can buy in the very same time) so an increase in memory and CPU is very unlikely to be necessary. yes, an exponential increase in the number of customers means more memory, and more storage, which in cloud SQL increases automatically.
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+yes. and that is ok since this is a point of sale. an exponential increase in number of clients still means reduced parallel processing (how many customers can buy in the very same time) so an increase in memory and CPU is very unlikely to be necessary. yes, an exponential increase in the number of customers means more memory, and more storage, which in cloud SQL increases automatically.
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #50 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+C SQL doesn't AUTO SCALE, you need to manually edit , Please show where does it says AUTO SCALING
+
+--- Comment #51 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+nkunwar
+			
+
+
+			2 years, 6 months ago
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+C SQL doesn't AUTO SCALE, you need to manually edit , Please show where does it says AUTO SCALING
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+C SQL doesn't AUTO SCALE, you need to manually edit , Please show where does it says AUTO SCALING
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #60 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+Can't online be considered PoS? CloudSQL does have constraints for scaling and Google seem to specifically be selling Datastore for transactional use cases so going with D: 
+https://cloud.google.com/datastore/docs/concepts/transactions
+
+--- Comment #61 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+Blobby
+			
+
+
+			3 years, 7 months ago
+
+--- Comment #62 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Can't online be considered PoS? CloudSQL does have constraints for scaling and Google seem to specifically be selling Datastore for transactional use cases so going with D: 
+https://cloud.google.com/datastore/docs/concepts/transactions
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+Can't online be considered PoS? CloudSQL does have constraints for scaling and Google seem to specifically be selling Datastore for transactional use cases so going with D: 
+https://cloud.google.com/datastore/docs/concepts/transactions
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #66 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Based on a re-read of the above comments and other later questions agree with A. 
+pls ignore my first answer.
+
+--- Comment #67 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Based on a re-read of the above comments and other later questions agree with A. 
+pls ignore my first answer.
+
+--- Comment #68 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Blobby
+			
+
+
+			3 years, 6 months ago
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+Based on a re-read of the above comments and other later questions agree with A. 
+pls ignore my first answer.
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+Based on a re-read of the above comments and other later questions agree with A. 
+pls ignore my first answer.
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #77 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+D seems to be the right one. Cloud SQL doesn't automatically scale
+
+--- Comment #78 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+jvg637
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+--- Comment #79 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+D seems to be the right one. Cloud SQL doesn't automatically scale
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+D seems to be the right one. Cloud SQL doesn't automatically scale
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 38 times
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #83 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+Cloud SQL does scale automatically. THERE IS A SETTING WHERE YOU DEFINE INCREASE MEMORY SPACE WHEN IT REACHED 70%. 
+
+https://cloud.google.com/sql/docs/features#features_3
+
+Here it say's 
+-> Fully managed SQL Server databases in the cloud.
+-> Custom machine types with up to 624 GB of RAM and 96 CPUs.
+-> Up to 64 TB of storage available, with the ability to automatically increase storage size as needed.
+
+--- Comment #84 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+Cloud SQL does scale automatically. THERE IS A SETTING WHERE YOU DEFINE INCREASE MEMORY SPACE WHEN IT REACHED 70%. 
+
+https://cloud.google.com/sql/docs/features#features_3
+
+Here it say's 
+-> Fully managed SQL Server databases in the cloud.
+-> Custom machine types with up to 624 GB of RAM and 96 CPUs.
+-> Up to 64 TB of storage available, with the ability to automatically increase storage size as needed.
+
+--- Comment #85 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+BigQuery
+			
+
+
+			3 years, 4 months ago
+
+--- Comment #86 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Cloud SQL does scale automatically. THERE IS A SETTING WHERE YOU DEFINE INCREASE MEMORY SPACE WHEN IT REACHED 70%. 
+
+https://cloud.google.com/sql/docs/features#features_3
+
+Here it say's 
+-> Fully managed SQL Server databases in the cloud.
+-> Custom machine types with up to 624 GB of RAM and 96 CPUs.
+-> Up to 64 TB of storage available, with the ability to automatically increase storage size as needed.
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+Cloud SQL does scale automatically. THERE IS A SETTING WHERE YOU DEFINE INCREASE MEMORY SPACE WHEN IT REACHED 70%. 
+
+https://cloud.google.com/sql/docs/features#features_3
+
+Here it say's 
+-> Fully managed SQL Server databases in the cloud.
+-> Custom machine types with up to 624 GB of RAM and 96 CPUs.
+-> Up to 64 TB of storage available, with the ability to automatically increase storage size as needed.
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #90 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Storage scale is automatic (e.g. you begin with a 50GB disk and it grows automatically as needed), but the instance size (CPU/memory) will be the same. The questions states that the user base may increase exponentially. Even if you have enough disk space to store all your user data, the increase in users will cause problems if your instance (CPU/memory) is too small, since the instance will not be able to process all the queries at the required speed.
+
+--- Comment #91 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Storage scale is automatic (e.g. you begin with a 50GB disk and it grows automatically as needed), but the instance size (CPU/memory) will be the same. The questions states that the user base may increase exponentially. Even if you have enough disk space to store all your user data, the increase in users will cause problems if your instance (CPU/memory) is too small, since the instance will not be able to process all the queries at the required speed.
+
+--- Comment #92 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+hendrixlives
+			
+
+
+			3 years, 3 months ago
+
+--- Comment #93 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Storage scale is automatic (e.g. you begin with a 50GB disk and it grows automatically as needed), but the instance size (CPU/memory) will be the same. The questions states that the user base may increase exponentially. Even if you have enough disk space to store all your user data, the increase in users will cause problems if your instance (CPU/memory) is too small, since the instance will not be able to process all the queries at the required speed.
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+Storage scale is automatic (e.g. you begin with a 50GB disk and it grows automatically as needed), but the instance size (CPU/memory) will be the same. The questions states that the user base may increase exponentially. Even if you have enough disk space to store all your user data, the increase in users will cause problems if your instance (CPU/memory) is too small, since the instance will not be able to process all the queries at the required speed.
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+I believe the key point is it's a POS, not an e-commerce. Keeping that in mind, exponential user increase in POS might not mean concurrent user increase, which could be a huge consideration in case of it is being e-commerce.
+
+I would rather go with 'Cloud SQL' as the best answer.
+
+--- Comment #98 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+I believe the key point is it's a POS, not an e-commerce. Keeping that in mind, exponential user increase in POS might not mean concurrent user increase, which could be a huge consideration in case of it is being e-commerce.
+
+I would rather go with 'Cloud SQL' as the best answer.
+
+--- Comment #99 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+imsaikat50
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+I believe the key point is it's a POS, not an e-commerce. Keeping that in mind, exponential user increase in POS might not mean concurrent user increase, which could be a huge consideration in case of it is being e-commerce.
+
+I would rather go with 'Cloud SQL' as the best answer.
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+I believe the key point is it's a POS, not an e-commerce. Keeping that in mind, exponential user increase in POS might not mean concurrent user increase, which could be a huge consideration in case of it is being e-commerce.
+
+I would rather go with 'Cloud SQL' as the best answer.
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #109 ---
+Author: Unknown | Date: 3 weeks, 4 days ago | Votes: 0
+POS app needing scalable DB without managing infrastructure. Cloud Datastore or Firestore? But options are Cloud SQL, BigQuery, Bigtable, Datastore. Since it's for transactions and scale, maybe Cloud Datastore (D) or Cloud Bigtable. But Cloud Bigtable is for high throughput. The question says not to manage scaling. Cloud Datastore is serverless. So D.
+
+--- Comment #110 ---
+Author: Unknown | Date: 3 weeks, 4 days ago | Votes: 0
+Parandhaman_Margan
+			
+
+
+				Most Recent 
+
+
+			3 weeks, 4 days ago
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+POS app needing scalable DB without managing infrastructure. Cloud Datastore or Firestore? But options are Cloud SQL, BigQuery, Bigtable, Datastore. Since it's for transactions and scale, maybe Cloud Datastore (D) or Cloud Bigtable. But Cloud Bigtable is for high throughput. The question says not to manage scaling. Cloud Datastore is serverless. So D.
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+POS app needing scalable DB without managing infrastructure. Cloud Datastore or Firestore? But options are Cloud SQL, BigQuery, Bigtable, Datastore. Since it's for transactions and scale, maybe Cloud Datastore (D) or Cloud Bigtable. But Cloud Bigtable is for high throughput. The question says not to manage scaling. Cloud Datastore is serverless. So D.
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #118 ---
+Author: Unknown | Date: 1 month ago | Votes: 0
+B and C are discarded Since we are dealing with transactional data. 
+A is discarded since we require to deal with Infrastructure scaling in case the base of users increase and also (not necessarily) the concurrent transactions. 
+
+Users base is gonna grow and we DO NOT WANT TO DEAL with infrastructure scaling.  D is the most appropriated
+
+--- Comment #119 ---
+Author: Unknown | Date: 1 month ago | Votes: 0
+monyu
+			
+
+
+			1 month ago
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+B and C are discarded Since we are dealing with transactional data. 
+A is discarded since we require to deal with Infrastructure scaling in case the base of users increase and also (not necessarily) the concurrent transactions. 
+
+Users base is gonna grow and we DO NOT WANT TO DEAL with infrastructure scaling.  D is the most appropriated
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+B and C are discarded Since we are dealing with transactional data. 
+A is discarded since we require to deal with Infrastructure scaling in case the base of users increase and also (not necessarily) the concurrent transactions. 
+
+Users base is gonna grow and we DO NOT WANT TO DEAL with infrastructure scaling.  D is the most appropriated
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #127 ---
+Author: Unknown | Date: 2 months, 3 weeks ago | Votes: 0
+The answer is D, Cloud Datastore (now Firestore in Datastore mode), because it supports auto scaling and low latency reads and writes. Cloud SQL is not the correct answer because it requires more active management for scaling.
+
+--- Comment #128 ---
+Author: Unknown | Date: 2 months, 3 weeks ago | Votes: 0
+cqrm3n
+			
+
+
+			2 months, 3 weeks ago
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is D, Cloud Datastore (now Firestore in Datastore mode), because it supports auto scaling and low latency reads and writes. Cloud SQL is not the correct answer because it requires more active management for scaling.
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is D, Cloud Datastore (now Firestore in Datastore mode), because it supports auto scaling and low latency reads and writes. Cloud SQL is not the correct answer because it requires more active management for scaling.
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #136 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+For handling payment transactions in a point-of-sale application with potential exponential growth and without the need to manage infrastructure scaling, Cloud Bigtable would be the best choice.
+
+--- Comment #137 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+GHill1982
+			
+
+
+			5 months, 2 weeks ago
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+For handling payment transactions in a point-of-sale application with potential exponential growth and without the need to manage infrastructure scaling, Cloud Bigtable would be the best choice.
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+For handling payment transactions in a point-of-sale application with potential exponential growth and without the need to manage infrastructure scaling, Cloud Bigtable would be the best choice.
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #145 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D seems to be the answer. This is what I think based on my analysis below.
+POS is OLTP system but now a days NOSQL with ACID properties also are used for OLTP,
+Cloud sql is good for relational database and it would have been an option here but it clearly says that "you do not want to manage infrastructure scaling". In cloud SQL, which is managed service and not server less, you need to manually do vertical scaling(scale up and scale down). 
+Hence I believe CLOUD SQL is not the option here. 
+I also tried creating a datastore using google cloud console and it gives 2 options now that is cloud firestore in native mode and cloud firestore in data store mode. automatic scaling is available in both where there is no manual scaling up or down is required. Also, both firestore in native and datastore provides ACID properties. Also, firestore is now optimized for OLTP. Please see below
+https://cloud.google.com/solutions/building-scalable-apps-with-cloud-firestore
+Though the question only talks about datastore, I am just providing additional information. 
+Considering all what I read through, D is the answer.
+
+--- Comment #146 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Radhika7983
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #147 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+D seems to be the answer. This is what I think based on my analysis below.
+POS is OLTP system but now a days NOSQL with ACID properties also are used for OLTP,
+Cloud sql is good for relational database and it would have been an option here but it clearly says that "you do not want to manage infrastructure scaling". In cloud SQL, which is managed service and not server less, you need to manually do vertical scaling(scale up and scale down). 
+Hence I believe CLOUD SQL is not the option here. 
+I also tried creating a datastore using google cloud console and it gives 2 options now that is cloud firestore in native mode and cloud firestore in data store mode. automatic scaling is available in both where there is no manual scaling up or down is required. Also, both firestore in native and datastore provides ACID properties. Also, firestore is now optimized for OLTP. Please see below
+https://cloud.google.com/solutions/building-scalable-apps-with-cloud-firestore
+Though the question only talks about datastore, I am just providing additional information. 
+Considering all what I read through, D is the answer.
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+D seems to be the answer. This is what I think based on my analysis below.
+POS is OLTP system but now a days NOSQL with ACID properties also are used for OLTP,
+Cloud sql is good for relational database and it would have been an option here but it clearly says that "you do not want to manage infrastructure scaling". In cloud SQL, which is managed service and not server less, you need to manually do vertical scaling(scale up and scale down). 
+Hence I believe CLOUD SQL is not the option here. 
+I also tried creating a datastore using google cloud console and it gives 2 options now that is cloud firestore in native mode and cloud firestore in data store mode. automatic scaling is available in both where there is no manual scaling up or down is required. Also, both firestore in native and datastore provides ACID properties. Also, firestore is now optimized for OLTP. Please see below
+https://cloud.google.com/solutions/building-scalable-apps-with-cloud-firestore
+Though the question only talks about datastore, I am just providing additional information. 
+Considering all what I read through, D is the answer.
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 13 times
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #151 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+I agree. I think people are missing the part of the question that mentions they don't want to maintain the DB.
+
+--- Comment #152 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+I agree. I think people are missing the part of the question that mentions they don't want to maintain the DB.
+
+--- Comment #153 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+awssp12345
+			
+
+
+			3 years, 9 months ago
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+I agree. I think people are missing the part of the question that mentions they don't want to maintain the DB.
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+I agree. I think people are missing the part of the question that mentions they don't want to maintain the DB.
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #160 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+This should be accepted and the highest voted answer.
+
+--- Comment #161 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+awssp12345
+			
+
+
+			3 years, 9 months ago
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+This should be accepted and the highest voted answer.
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+This should be accepted and the highest voted answer.
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #169 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D is the hero here.
+Though Cloud SQL has an upper hand when it comes to transactions(OLTP), it does not autoscale its computing capabilities as compared to datastore.
+Do visit: https://cloud.google.com/datastore/docs/concepts/overview#what_its_good_for
+
+--- Comment #170 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+kishanu
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+D is the hero here.
+Though Cloud SQL has an upper hand when it comes to transactions(OLTP), it does not autoscale its computing capabilities as compared to datastore.
+Do visit: https://cloud.google.com/datastore/docs/concepts/overview#what_its_good_for
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+D is the hero here.
+Though Cloud SQL has an upper hand when it comes to transactions(OLTP), it does not autoscale its computing capabilities as compared to datastore.
+Do visit: https://cloud.google.com/datastore/docs/concepts/overview#what_its_good_for
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #178 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D is correct: Datastore (currently Firestore in native or datastore mode). It is a fully managed and serverless solution that allows for transactions and will autoscale (storage and compute) without the need to manage any infrastructure. 
+A is wrong: Cloud SQL is fully a managed transactional DB, but only the storage grows automatically. As your user base increases, you will need to increase the CPU/memory of the instance, and to do that you must edit the instance manually (and the questions specifically says "you do not want to manage infrastructure scaling")
+B is wrong: Bigquery is OLAP (for analytics). NoOps, fully managed, autoscales and allows transactions, but it is not designed for this use case.
+C is wrong: Bigtable is a NoSQL database for massive writes, and to scale (storage and CPU) you must add nodes, so it is completely out of this use case.
+
+--- Comment #179 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+hendrixlives
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #180 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+D is correct: Datastore (currently Firestore in native or datastore mode). It is a fully managed and serverless solution that allows for transactions and will autoscale (storage and compute) without the need to manage any infrastructure. 
+A is wrong: Cloud SQL is fully a managed transactional DB, but only the storage grows automatically. As your user base increases, you will need to increase the CPU/memory of the instance, and to do that you must edit the instance manually (and the questions specifically says "you do not want to manage infrastructure scaling")
+B is wrong: Bigquery is OLAP (for analytics). NoOps, fully managed, autoscales and allows transactions, but it is not designed for this use case.
+C is wrong: Bigtable is a NoSQL database for massive writes, and to scale (storage and CPU) you must add nodes, so it is completely out of this use case.
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct: Datastore (currently Firestore in native or datastore mode). It is a fully managed and serverless solution that allows for transactions and will autoscale (storage and compute) without the need to manage any infrastructure. 
+A is wrong: Cloud SQL is fully a managed transactional DB, but only the storage grows automatically. As your user base increases, you will need to increase the CPU/memory of the instance, and to do that you must edit the instance manually (and the questions specifically says "you do not want to manage infrastructure scaling")
+B is wrong: Bigquery is OLAP (for analytics). NoOps, fully managed, autoscales and allows transactions, but it is not designed for this use case.
+C is wrong: Bigtable is a NoSQL database for massive writes, and to scale (storage and CPU) you must add nodes, so it is completely out of this use case.
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #185 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+May be some history can help to decide which is best answer.
+Datastore built by Google uses BigTable as it's storage, while the company who built FireStore uses Cloud Spanner as it's storage.  Google decided that they like the FireStore technology and acquired it.
+If Cloud Spanner is an option I would choose it.  So, D for me, although it's json storage format, but the Cloud Spanner it uses as storage fits all the requirements.
+
+--- Comment #186 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+May be some history can help to decide which is best answer.
+Datastore built by Google uses BigTable as it's storage, while the company who built FireStore uses Cloud Spanner as it's storage.  Google decided that they like the FireStore technology and acquired it.
+If Cloud Spanner is an option I would choose it.  So, D for me, although it's json storage format, but the Cloud Spanner it uses as storage fits all the requirements.
+
+--- Comment #187 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+kuik
+			
+
+
+			3 years, 3 months ago
+
+--- Comment #188 ---
+Author: Unknown | Date:  | Votes: 0
+May be some history can help to decide which is best answer.
+Datastore built by Google uses BigTable as it's storage, while the company who built FireStore uses Cloud Spanner as it's storage.  Google decided that they like the FireStore technology and acquired it.
+If Cloud Spanner is an option I would choose it.  So, D for me, although it's json storage format, but the Cloud Spanner it uses as storage fits all the requirements.
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+May be some history can help to decide which is best answer.
+Datastore built by Google uses BigTable as it's storage, while the company who built FireStore uses Cloud Spanner as it's storage.  Google decided that they like the FireStore technology and acquired it.
+If Cloud Spanner is an option I would choose it.  So, D for me, although it's json storage format, but the Cloud Spanner it uses as storage fits all the requirements.
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #193 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #194 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #195 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+B - not an option
+C - lack of ACID transactions
+A - lack of resource automatic scalability 
+D - (correct, IMHO) support ACID, suitable for OLPT and scalable enough
+
+--- Comment #196 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+axantroff
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #197 ---
+Author: Unknown | Date:  | Votes: 0
+B - not an option
+C - lack of ACID transactions
+A - lack of resource automatic scalability 
+D - (correct, IMHO) support ACID, suitable for OLPT and scalable enough
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #199 ---
+Author: Unknown | Date:  | Votes: 0
+B - not an option
+C - lack of ACID transactions
+A - lack of resource automatic scalability 
+D - (correct, IMHO) support ACID, suitable for OLPT and scalable enough
+
+--- Comment #200 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #201 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #202 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #203 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #204 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+B - not an option
+C - lack of ACID transactions
+A - lack of resource automatic scalability
+D - (correct, IMHO) support ACID, suitable for OLPT and scalable enough
+
+--- Comment #205 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+rocky48
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #206 ---
+Author: Unknown | Date:  | Votes: 0
+B - not an option
+C - lack of ACID transactions
+A - lack of resource automatic scalability
+D - (correct, IMHO) support ACID, suitable for OLPT and scalable enough
+
+--- Comment #207 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #208 ---
+Author: Unknown | Date:  | Votes: 0
+B - not an option
+C - lack of ACID transactions
+A - lack of resource automatic scalability
+D - (correct, IMHO) support ACID, suitable for OLPT and scalable enough
+
+--- Comment #209 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #210 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #211 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #212 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #213 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Cloud Datastore (now part of Google Cloud Firestore in Datastore mode) is designed for high scalability and ease of management for applications. It is a NoSQL document database built for automatic scaling, high performance, and ease of application development. It's serverless, meaning it handles the scaling, performance, and management automatically, fitting your requirement of not wanting to manage infrastructure scaling.
+
+Cloud SQL, while a fully-managed relational database service that makes it easy to set up, manage, and administer your SQL databases, is not as automatically scalable as Datastore. It's better suited for applications that require a traditional relational database.
+
+--- Comment #214 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+TVH_Data_Engineer
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #215 ---
+Author: Unknown | Date:  | Votes: 0
+Cloud Datastore (now part of Google Cloud Firestore in Datastore mode) is designed for high scalability and ease of management for applications. It is a NoSQL document database built for automatic scaling, high performance, and ease of application development. It's serverless, meaning it handles the scaling, performance, and management automatically, fitting your requirement of not wanting to manage infrastructure scaling.
+
+Cloud SQL, while a fully-managed relational database service that makes it easy to set up, manage, and administer your SQL databases, is not as automatically scalable as Datastore. It's better suited for applications that require a traditional relational database.
+
+--- Comment #216 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #217 ---
+Author: Unknown | Date:  | Votes: 0
+Cloud Datastore (now part of Google Cloud Firestore in Datastore mode) is designed for high scalability and ease of management for applications. It is a NoSQL document database built for automatic scaling, high performance, and ease of application development. It's serverless, meaning it handles the scaling, performance, and management automatically, fitting your requirement of not wanting to manage infrastructure scaling.
+
+Cloud SQL, while a fully-managed relational database service that makes it easy to set up, manage, and administer your SQL databases, is not as automatically scalable as Datastore. It's better suited for applications that require a traditional relational database.
+
+--- Comment #218 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #219 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #220 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #221 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #222 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+This actually is A. I was initially in the D camp, and have spent considerable time reading about it now (circa 1 hour). D is explicitly not suitable for payment transactions, as Datastore supports ACID transactions, but only within entity groups, which are small, localized sets of data. This restriction means that transactions are not suitable for scenarios requiring multi-entity consistency across the entire database.
+The only two products recommended for payments in the Google ecosystem are Cloud Spanner and Cloud SQL. Is Cloud SQL managed? I'd say it wasn't really, due to the need to configure instances, but that is trumped by the fact it is the only choice suitable for a payment transaction system.
+
+--- Comment #223 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+baimus
+			
+
+
+			6 months, 3 weeks ago
+
+--- Comment #224 ---
+Author: Unknown | Date:  | Votes: 0
+This actually is A. I was initially in the D camp, and have spent considerable time reading about it now (circa 1 hour). D is explicitly not suitable for payment transactions, as Datastore supports ACID transactions, but only within entity groups, which are small, localized sets of data. This restriction means that transactions are not suitable for scenarios requiring multi-entity consistency across the entire database.
+The only two products recommended for payments in the Google ecosystem are Cloud Spanner and Cloud SQL. Is Cloud SQL managed? I'd say it wasn't really, due to the need to configure instances, but that is trumped by the fact it is the only choice suitable for a payment transaction system.
+
+--- Comment #225 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #226 ---
+Author: Unknown | Date:  | Votes: 0
+This actually is A. I was initially in the D camp, and have spent considerable time reading about it now (circa 1 hour). D is explicitly not suitable for payment transactions, as Datastore supports ACID transactions, but only within entity groups, which are small, localized sets of data. This restriction means that transactions are not suitable for scenarios requiring multi-entity consistency across the entire database.
+The only two products recommended for payments in the Google ecosystem are Cloud Spanner and Cloud SQL. Is Cloud SQL managed? I'd say it wasn't really, due to the need to configure instances, but that is trumped by the fact it is the only choice suitable for a payment transaction system.
+
+--- Comment #227 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #228 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #229 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #230 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #231 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+Cloud Datastore is a fully managed, NoSQL document database that is highly scalable and designed to automatically handle large increases in traffic without requiring manual intervention. It's well-suited for applications with a rapidly growing user base.
+
+--- Comment #232 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+SatyamKishore
+			
+
+
+			8 months ago
+
+--- Comment #233 ---
+Author: Unknown | Date:  | Votes: 0
+Cloud Datastore is a fully managed, NoSQL document database that is highly scalable and designed to automatically handle large increases in traffic without requiring manual intervention. It's well-suited for applications with a rapidly growing user base.
+
+--- Comment #234 ---
+Author: Unknown | Date:  | Votes: 0
+Cloud Datastore is a fully managed, NoSQL document database that is highly scalable and designed to automatically handle large increases in traffic without requiring manual intervention. It's well-suited for applications with a rapidly growing user base.
+
+--- Comment #235 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #236 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #237 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #238 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #239 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Firestore extension of Datastore can handle acid transactions and allows autoscaling
+
+--- Comment #240 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+iooj
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #241 ---
+Author: Unknown | Date:  | Votes: 0
+Firestore extension of Datastore can handle acid transactions and allows autoscaling
+
+--- Comment #242 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #243 ---
+Author: Unknown | Date:  | Votes: 0
+Firestore extension of Datastore can handle acid transactions and allows autoscaling
+
+--- Comment #244 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #245 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #246 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #247 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #248 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+A. Requires Transactions.
+
+--- Comment #249 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+jamalkhan
+			
+
+
+			9 months, 2 weeks ago
+
+--- Comment #250 ---
+Author: Unknown | Date:  | Votes: 0
+A. Requires Transactions.
+
+--- Comment #251 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #252 ---
+Author: Unknown | Date:  | Votes: 0
+A. Requires Transactions.
+
+--- Comment #253 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #254 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #255 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #256 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #257 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+Transactional = SQL. Anything with payment processors should NOT be NoSQL
+
+--- Comment #258 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+8ad5266
+			
+
+
+			10 months, 1 week ago
+
+--- Comment #259 ---
+Author: Unknown | Date:  | Votes: 0
+Transactional = SQL. Anything with payment processors should NOT be NoSQL
+
+--- Comment #260 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #261 ---
+Author: Unknown | Date:  | Votes: 0
+Transactional = SQL. Anything with payment processors should NOT be NoSQL
+
+--- Comment #262 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #263 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #264 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #265 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #266 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #267 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #268 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

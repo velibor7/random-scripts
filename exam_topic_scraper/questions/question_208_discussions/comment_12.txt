@@ -1,0 +1,24 @@
+COMMENT #12 FOR QUESTION 208
+============================================================
+Author: Unknown
+Date: 9 months, 1 week ago
+Votes: 0
+----------------------------------------
+Since cost optimization and minimal latency are key requirements, option D is likely the best choice to meet all the needs:
+
+The key reasons option D works well:
+
+Using Pub/Sub to ingest votes provides scalable, reliable transport.
+
+Loading into Bigtable and BigQuery provides both:
+
+Low latency reads from Bigtable for real-time results.
+Cost effective storage in BigQuery for longer term analysis.
+Shutting down Bigtable after voting concludes reduces costs.
+
+BigQuery remains available for cost-optimized storage and analysis.
+
+So you are correct that option D combines the best of real-time performance for queries using Bigtable, with cost-optimized storage in BigQuery.
+
+The only additional consideration may be if 3 minutes of Bigtable usage still incurs higher charges than ingesting directly into BigQuery. But for minimizing latency while optimizing cost, option D is likely the right architectural choice given the requirements.
+============================================================

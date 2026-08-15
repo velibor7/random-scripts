@@ -1,0 +1,80 @@
+COMMENT #2 FOR QUESTION 271
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 271
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are monitoring your organization’s data lake hosted on BigQuery. The ingestion pipelines read data from Pub/Sub and write the data into tables on BigQuery. After a new version of the ingestion pipelines is deployed, the daily stored data increased by 50%. The volumes of data in Pub/Sub remained the same and only some tables had their daily partition data size doubled. You need to investigate and fix the cause of the data increase. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Check for duplicate rows in the BigQuery tables that have the daily partition data size doubled.2. Schedule daily SQL jobs to deduplicate the affected tables.3. Share the deduplication script with the other operational teams to reuse if this occurs to other tables.
+										
+
+
+													B.
+												
+											
+											1. Check for code errors in the deployed pipelines.2. Check for multiple writing to pipeline BigQuery sink.3. Check for errors in Cloud Logging during the day of the release of the new pipelines.4. If no errors, restore the BigQuery tables to their content before the last release by using time travel.
+										
+
+
+													C.
+												
+											
+											1. Check for duplicate rows in the BigQuery tables that have the daily partition data size doubled.2. Check the BigQuery Audit logs to find job IDs.3. Use Cloud Monitoring to determine when the identified Dataflow jobs started and the pipeline code version.4. When more than one pipeline ingests data into a table, stop all versions except the latest one.
+										
+
+
+													D.
+												
+											
+											1. Roll back the last deployment.2. Restore the BigQuery tables to their content before the last release by using time travel.3. Restart the Dataflow jobs and replay the messages by seeking the subscription to the timestamp of the release.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								raaad
+							
+							
+							at 
+							Jan. 5, 2024, 6:29 p.m.
+============================================================

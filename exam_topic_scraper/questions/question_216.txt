@@ -1,0 +1,1004 @@
+================================================================================
+QUESTION:
+You are developing an Apache Beam pipeline to extract data from a Cloud SQL instance by using JdbcIO. You have two projects running in Google Cloud. The pipeline will be deployed and executed on Dataflow in Project A. The Cloud SQL. instance is running in Project B and does not have a public IP address. After deploying the pipeline, you noticed that the pipeline failed to extract data from the Cloud SQL instance due to connection failure. You verified that VPC Service Controls and shared VPC are not in use in these projects. You want to resolve this error while ensuring that the data does not go through the public internet. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Set up VPC Network Peering between Project A and Project B. Add a firewall rule to allow the peered subnet range to access all instances on the network.
+										
+
+
+													B.
+												
+											
+											Turn off the external IP addresses on the Dataflow worker. Enable Cloud NAT in Project A.
+										
+
+
+													C.
+												
+											
+											Add the external IP addresses of the Dataflow worker as authorized networks in the Cloud SQL instance.
+										
+
+
+													D.
+												
+											
+											Set up VPC Network Peering between Project A and Project B. Create a Compute Engine instance without external IP address in Project B on the peered subnet to serve as a proxy server to the Cloud SQL database.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (172 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 216 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 216
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are developing an Apache Beam pipeline to extract data from a Cloud SQL instance by using JdbcIO. You have two projects running in Google Cloud. The pipeline will be deployed and executed on Dataflow in Project A. The Cloud SQL. instance is running in Project B and does not have a public IP address. After deploying the pipeline, you noticed that the pipeline failed to extract data from the Cloud SQL instance due to connection failure. You verified that VPC Service Controls and shared VPC are not in use in these projects. You want to resolve this error while ensuring that the data does not go through the public internet. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Set up VPC Network Peering between Project A and Project B. Add a firewall rule to allow the peered subnet range to access all instances on the network.
+										
+
+
+													B.
+												
+											
+											Turn off the external IP addresses on the Dataflow worker. Enable Cloud NAT in Project A.
+										
+
+
+													C.
+												
+											
+											Add the external IP addresses of the Dataflow worker as authorized networks in the Cloud SQL instance.
+										
+
+
+													D.
+												
+											
+											Set up VPC Network Peering between Project A and Project B. Create a Compute Engine instance without external IP address in Project B on the peered subnet to serve as a proxy server to the Cloud SQL database.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:41 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 216
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:41 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+It is a tie between A and D. 
+Option A will definitely provide necessary connectivity but is less secure as access is enabled to "all instances". Which i feel is unnecessary considering industry best practices.
+
+Option D provides the necessary connectivity but brings in the unnecessary overhead of managing an extra VM and introduces a bit of extra complexity.
+
+Since the question emphasises on data not going through public internet(which is satisfied in both options), i would prioritise security over simplicity and choose option D in this case.
+
+--- Comment #6 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+It is a tie between A and D. 
+Option A will definitely provide necessary connectivity but is less secure as access is enabled to "all instances". Which i feel is unnecessary considering industry best practices.
+
+Option D provides the necessary connectivity but brings in the unnecessary overhead of managing an extra VM and introduces a bit of extra complexity.
+
+Since the question emphasises on data not going through public internet(which is satisfied in both options), i would prioritise security over simplicity and choose option D in this case.
+
+--- Comment #7 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+It is a tie between A and D. 
+Option A will definitely provide necessary connectivity but is less secure as access is enabled to "all instances". Which i feel is unnecessary considering industry best practices.
+
+Option D provides the necessary connectivity but brings in the unnecessary overhead of managing an extra VM and introduces a bit of extra complexity.
+
+Since the question emphasises on data not going through public internet(which is satisfied in both options), i would prioritise security over simplicity and choose option D in this case.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+It is a tie between A and D. 
+Option A will definitely provide necessary connectivity but is less secure as access is enabled to "all instances". Which i feel is unnecessary considering industry best practices.
+
+Option D provides the necessary connectivity but brings in the unnecessary overhead of managing an extra VM and introduces a bit of extra complexity.
+
+Since the question emphasises on data not going through public internet(which is satisfied in both options), i would prioritise security over simplicity and choose option D in this case.
+
+--- Comment #13 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+It is a tie between A and D. 
+Option A will definitely provide necessary connectivity but is less secure as access is enabled to "all instances". Which i feel is unnecessary considering industry best practices.
+
+Option D provides the necessary connectivity but brings in the unnecessary overhead of managing an extra VM and introduces a bit of extra complexity.
+
+Since the question emphasises on data not going through public internet(which is satisfied in both options), i would prioritise security over simplicity and choose option D in this case.
+
+--- Comment #14 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+aoifneofi_ef
+			
+
+
+				Highly Voted 
+
+
+			7 months, 3 weeks ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+It is a tie between A and D. 
+Option A will definitely provide necessary connectivity but is less secure as access is enabled to "all instances". Which i feel is unnecessary considering industry best practices.
+
+Option D provides the necessary connectivity but brings in the unnecessary overhead of managing an extra VM and introduces a bit of extra complexity.
+
+Since the question emphasises on data not going through public internet(which is satisfied in both options), i would prioritise security over simplicity and choose option D in this case.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+It is a tie between A and D. 
+Option A will definitely provide necessary connectivity but is less secure as access is enabled to "all instances". Which i feel is unnecessary considering industry best practices.
+
+Option D provides the necessary connectivity but brings in the unnecessary overhead of managing an extra VM and introduces a bit of extra complexity.
+
+Since the question emphasises on data not going through public internet(which is satisfied in both options), i would prioritise security over simplicity and choose option D in this case.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+A looks to be the best out of the 4, D is complicated involving Compute Engine which is unnecessary making it cumbersome to address the problem
+
+--- Comment #23 ---
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+clouditis
+			
+
+
+				Highly Voted 
+
+
+			3 months, 3 weeks ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+A looks to be the best out of the 4, D is complicated involving Compute Engine which is unnecessary making it cumbersome to address the problem
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+A looks to be the best out of the 4, D is complicated involving Compute Engine which is unnecessary making it cumbersome to address the problem
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #31 ---
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+"all instances" freaks me out
+
+--- Comment #32 ---
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+71083a7
+			
+
+
+				Most Recent 
+
+
+			2 months, 2 weeks ago
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+"all instances" freaks me out
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+"all instances" freaks me out
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #40 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+vpc create a subnet beetwen sql Cloud and the dataflow.
+https://cloud.google.com/sql/docs/mysql/private-ip#multiple_vpc_connectivity
+
+--- Comment #41 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+julydev82
+			
+
+
+			4 months ago
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+vpc create a subnet beetwen sql Cloud and the dataflow.
+https://cloud.google.com/sql/docs/mysql/private-ip#multiple_vpc_connectivity
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+vpc create a subnet beetwen sql Cloud and the dataflow.
+https://cloud.google.com/sql/docs/mysql/private-ip#multiple_vpc_connectivity
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #49 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+The answer is A. While D might work, it adds unnecessary complexity. Setting up a proxy is an extra layer of infrastructure that isn’t required
+
+--- Comment #50 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+fadlkhafdofpew
+			
+
+
+			6 months, 3 weeks ago
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is A. While D might work, it adds unnecessary complexity. Setting up a proxy is an extra layer of infrastructure that isn’t required
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is A. While D might work, it adds unnecessary complexity. Setting up a proxy is an extra layer of infrastructure that isn’t required
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #58 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+If properly implemented with the right routing and firewall rules, Option A can be the correct and most straightforward solution, as it leverages VPC Peering to maintain internal traffic without going through the public internet.
+
+--- Comment #59 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+Saaaurabh
+			
+
+
+			7 months, 3 weeks ago
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+If properly implemented with the right routing and firewall rules, Option A can be the correct and most straightforward solution, as it leverages VPC Peering to maintain internal traffic without going through the public internet.
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+If properly implemented with the right routing and firewall rules, Option A can be the correct and most straightforward solution, as it leverages VPC Peering to maintain internal traffic without going through the public internet.
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #67 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+A is correct
+
+--- Comment #68 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+meh_33
+			
+
+
+			8 months ago
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+A is correct
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+A is correct
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #75 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+still confused between A and D
+
+--- Comment #76 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+kk1211
+			
+
+
+			9 months ago
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+still confused between A and D
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+still confused between A and D
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #83 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+A is correct
+
+--- Comment #84 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Lenifia
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+A is correct
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+A is correct
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #92 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+no proxy needed
+
+--- Comment #93 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+kajitsu
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+no proxy needed
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+no proxy needed
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #101 ---
+Author: Unknown | Date: 10 months ago | Votes: 0
+People referencing "VPC Network Peering does not provide transitive routing. For example, if VPC networks net-a and net-b are connected using VPC Network Peering, and VPC networks net-a and net-c are also connected using VPC Network Peering, VPC Network Peering does not provide connectivity between net-b and net-c."
+
+the question states that  cloud sql is running in project B. 
+Which means the instance is already part of the VPC in project B, so with Network Peering workers from A can definitely access data in B. No proxy is needed.
+
+--- Comment #102 ---
+Author: Unknown | Date: 10 months ago | Votes: 0
+Lestrang
+			
+
+
+			10 months ago
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+People referencing "VPC Network Peering does not provide transitive routing. For example, if VPC networks net-a and net-b are connected using VPC Network Peering, and VPC networks net-a and net-c are also connected using VPC Network Peering, VPC Network Peering does not provide connectivity between net-b and net-c."
+
+the question states that  cloud sql is running in project B. 
+Which means the instance is already part of the VPC in project B, so with Network Peering workers from A can definitely access data in B. No proxy is needed.
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+People referencing "VPC Network Peering does not provide transitive routing. For example, if VPC networks net-a and net-b are connected using VPC Network Peering, and VPC networks net-a and net-c are also connected using VPC Network Peering, VPC Network Peering does not provide connectivity between net-b and net-c."
+
+the question states that  cloud sql is running in project B. 
+Which means the instance is already part of the VPC in project B, so with Network Peering workers from A can definitely access data in B. No proxy is needed.
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #110 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+Why so many people are voting for D? There's no need for a proxy, the peering is enough to allow network traffic between subnets.
+
+--- Comment #111 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+fabiogoma
+			
+
+
+			10 months, 3 weeks ago
+
+--- Comment #112 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+Why so many people are voting for D? There's no need for a proxy, the peering is enough to allow network traffic between subnets.
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+Why so many people are voting for D? There's no need for a proxy, the peering is enough to allow network traffic between subnets.
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #117 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+Now I see why, I put this on ChatGPT and it thinks the right answer is D. I'm pretty sure that's a hallucination.
+
+--- Comment #118 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+Now I see why, I put this on ChatGPT and it thinks the right answer is D. I'm pretty sure that's a hallucination.
+
+--- Comment #119 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+fabiogoma
+			
+
+
+			10 months, 3 weeks ago
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+Now I see why, I put this on ChatGPT and it thinks the right answer is D. I'm pretty sure that's a hallucination.
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+Now I see why, I put this on ChatGPT and it thinks the right answer is D. I'm pretty sure that's a hallucination.
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #127 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+Proxy? no, it is not necessary..
+
+A
+
+--- Comment #128 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+ccpmad
+			
+
+
+			10 months, 3 weeks ago
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+Proxy? no, it is not necessary..
+
+A
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+Proxy? no, it is not necessary..
+
+A
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #135 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+https://cloud.google.com/sql/docs/mysql/connect-multiple-vpcs
+
+--- Comment #136 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+josech
+			
+
+
+			10 months, 3 weeks ago
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/sql/docs/mysql/connect-multiple-vpcs
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/sql/docs/mysql/connect-multiple-vpcs
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #144 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+A - The requirement for a proxy is un-necessary: 
+ https://cloud.google.com/sql/docs/mysql/private-ip#multiple_vpc_connectivity
+
+--- Comment #145 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+chrissamharris
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+A - The requirement for a proxy is un-necessary: 
+ https://cloud.google.com/sql/docs/mysql/private-ip#multiple_vpc_connectivity
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+A - The requirement for a proxy is un-necessary: 
+ https://cloud.google.com/sql/docs/mysql/private-ip#multiple_vpc_connectivity
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #153 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Option D. Source: https://cloud.google.com/sql/docs/mysql/private-ip#multiple_vpc_connectivity
+
+--- Comment #154 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+ML6
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+Option D. Source: https://cloud.google.com/sql/docs/mysql/private-ip#multiple_vpc_connectivity
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+Option D. Source: https://cloud.google.com/sql/docs/mysql/private-ip#multiple_vpc_connectivity
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #161 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Option D
+
+--- Comment #162 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+JyoGCP
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+Option D
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+Option D
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

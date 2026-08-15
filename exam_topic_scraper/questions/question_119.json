@@ -1,0 +1,1225 @@
+{
+  "question": "You operate a database that stores stock trades and an application that retrieves average stock price for a given company over an adjustable window of time. The data is stored in Cloud Bigtable where the datetime of the stock trade is the beginning of the row key. Your application has thousands of concurrent users, and you notice that performance is starting to degrade as more stocks are added. What should you do to improve the performance of your application?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tChange the row key syntax in your Cloud Bigtable table to begin with the stock symbol.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tChange the row key syntax in your Cloud Bigtable table to begin with a random number per second.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tChange the data pipeline to use BigQuery for storing stock trades, and update your application.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse Cloud Dataflow to write a summary of each day's stock trades to an Avro file on Cloud Storage. Update your application to read from Cloud Storage and Cloud Bigtable to compute the responses.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 119 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 119\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou operate a database that stores stock trades and an application that retrieves average stock price for a given company over an adjustable window of time. The data is stored in Cloud Bigtable where the datetime of the stock trade is the beginning of the row key. Your application has thousands of concurrent users, and you notice that performance is starting to degrade as more stocks are added. What should you do to improve the performance of your application?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tChange the row key syntax in your Cloud Bigtable table to begin with the stock symbol.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tChange the row key syntax in your Cloud Bigtable table to begin with a random number per second.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tChange the data pipeline to use BigQuery for storing stock trades, and update your application.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse Cloud Dataflow to write a summary of each day's stock trades to an Avro file on Cloud Storage. Update your application to read from Cloud Storage and Cloud Bigtable to compute the responses.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 22, 2020, 12:41 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 119\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 22, 2020, 12:41 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "Answer: A\nDescription: Timestamp at starting of rowkey causes bottleneck issues",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "Answer: A\nDescription: Timestamp at starting of rowkey causes bottleneck issues",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "Answer: A\nDescription: Timestamp at starting of rowkey causes bottleneck issues",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "Answer: A\nDescription: Timestamp at starting of rowkey causes bottleneck issues",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "Answer: A\nDescription: Timestamp at starting of rowkey causes bottleneck issues",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "[Removed]\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t5\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: A\nDescription: Timestamp at starting of rowkey causes bottleneck issues",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: A\nDescription: Timestamp at starting of rowkey causes bottleneck issues",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 41 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 12\u00a0months ago",
+      "content": "Stock symbol will be similar for most of the records, so it's better to start with random number.. Answer should be B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 12\u00a0months ago",
+      "content": "kichukonr\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years, 12\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "Stock symbol will be similar for most of the records, so it's better to start with random number.. Answer should be B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Stock symbol will be similar for most of the records, so it's better to start with random number.. Answer should be B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 13 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "You never use something called random number in bigtable rowkey because it gives you no use in querying possibilities, since we can't run sql querys in bigtable we should not randomise rowkeys in bigtable. \nDon't confuse the above point with the hotspot logic, both are different if you think so.\n\nAnd another thing is, what you said can be good choice if we are using cloud spanner and trying to comeup with primary key situation, since there we can always run sql query.\n\nI think you got the point now.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "You never use something called random number in bigtable rowkey because it gives you no use in querying possibilities, since we can't run sql querys in bigtable we should not randomise rowkeys in bigtable. \nDon't confuse the above point with the hotspot logic, both are different if you think so.\n\nAnd another thing is, what you said can be good choice if we are using cloud spanner and trying to comeup with primary key situation, since there we can always run sql query.\n\nI think you got the point now.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "Abhi16820\n\t\t\t\n\n\n\t\t\t3\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You never use something called random number in bigtable rowkey because it gives you no use in querying possibilities, since we can't run sql querys in bigtable we should not randomise rowkeys in bigtable. \nDon't confuse the above point with the hotspot logic, both are different if you think so.\n\nAnd another thing is, what you said can be good choice if we are using cloud spanner and trying to comeup with primary key situation, since there we can always run sql query.\n\nI think you got the point now.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You never use something called random number in bigtable rowkey because it gives you no use in querying possibilities, since we can't run sql querys in bigtable we should not randomise rowkeys in bigtable. \nDon't confuse the above point with the hotspot logic, both are different if you think so.\n\nAnd another thing is, what you said can be good choice if we are using cloud spanner and trying to comeup with primary key situation, since there we can always run sql query.\n\nI think you got the point now.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 13 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 11\u00a0months ago",
+      "content": "I agree with u",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 11\u00a0months ago",
+      "content": "taepyung\n\t\t\t\n\n\n\t\t\t4\u00a0years, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I agree with u",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I agree with u",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 1\u00a0month ago",
+      "content": "it can start with stock symbol concated with timestamp can be a good row key design",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 1\u00a0month ago",
+      "content": "karthik89\n\t\t\t\n\n\n\t\t\t4\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "it can start with stock symbol concated with timestamp can be a good row key design",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "it can start with stock symbol concated with timestamp can be a good row key design",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "for a given company, the data poits starts with the same stock symbol. The dataset is not distrubuted. It is not a good option.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "for a given company, the data poits starts with the same stock symbol. The dataset is not distrubuted. It is not a good option.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "Yonghai\n\t\t\t\n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "for a given company, the data poits starts with the same stock symbol. The dataset is not distrubuted. It is not a good option.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "for a given company, the data poits starts with the same stock symbol. The dataset is not distrubuted. It is not a good option.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "the most plausible option to pick here is B, A can introduce hot-spotting",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "clouditis\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t3\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "the most plausible option to pick here is B, A can introduce hot-spotting",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "the most plausible option to pick here is B, A can introduce hot-spotting",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 2\u00a0weeks ago",
+      "content": "B is correct, By introducing a random number or a hash at the beginning of the row key, you distribute the writes and reads more evenly across the Bigtable cluster, thereby improving performance under heavy load.\n\nWHY NOT A?\nThis might still cause hotspots if certain stocks are more popular than others. It could lead to uneven load distribution, which wouldn't solve the performance degradation problem.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 2\u00a0weeks ago",
+      "content": "Vineet_Mor\n\t\t\t\n\n\n\t\t\t7\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B is correct, By introducing a random number or a hash at the beginning of the row key, you distribute the writes and reads more evenly across the Bigtable cluster, thereby improving performance under heavy load.\n\nWHY NOT A?\nThis might still cause hotspots if certain stocks are more popular than others. It could lead to uneven load distribution, which wouldn't solve the performance degradation problem.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B is correct, By introducing a random number or a hash at the beginning of the row key, you distribute the writes and reads more evenly across the Bigtable cluster, thereby improving performance under heavy load.\n\nWHY NOT A?\nThis might still cause hotspots if certain stocks are more popular than others. It could lead to uneven load distribution, which wouldn't solve the performance degradation problem.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Answer is A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Sofiia98\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "Answer A:\nTrick to remember: Row-key adjustment always be like in decending order. \n#<<Least value>>#<<Lesser value>>\nFor example: \n1. #<<Earth>>#<<continents>>#<<countries>>#<<cities>> and so on.. \n2. #<<Stock>>#<<users>>#timestamp.. \nin 99% cases timestamp will be in the end, as its smallest division...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "musumusu\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Answer A:\nTrick to remember: Row-key adjustment always be like in decending order. \n#<<Least value>>#<<Lesser value>>\nFor example: \n1. #<<Earth>>#<<continents>>#<<countries>>#<<cities>> and so on.. \n2. #<<Stock>>#<<users>>#timestamp.. \nin 99% cases timestamp will be in the end, as its smallest division...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer A:\nTrick to remember: Row-key adjustment always be like in decending order. \n#<<Least value>>#<<Lesser value>>\nFor example: \n1. #<<Earth>>#<<continents>>#<<countries>>#<<cities>> and so on.. \n2. #<<Stock>>#<<users>>#timestamp.. \nin 99% cases timestamp will be in the end, as its smallest division...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 12 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Awesome!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Awesome!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "piyush7777\n\t\t\t\n\n\n\t\t\t1\u00a0year, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Awesome!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Awesome!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "A is the answer.\n\nhttps://cloud.google.com/bigtable/docs/schema-design#row-keys\nIt's important to create a row key that makes it possible to retrieve a well-defined range of rows. Otherwise, your query requires a table scan, which is much slower than retrieving specific rows.\n\nhttps://cloud.google.com/bigtable/docs/schema-design#row-keys-avoid\nSome types of row keys can make it difficult to query your data, and some result in poor performance. This section describes some types of row keys that you should avoid using in Bigtable.\n- Row keys that start with a timestamp. This pattern causes sequential writes to be pushed onto a single node, creating a hotspot. If you put a timestamp in a row key, precede it with a high-cardinality value like a user ID to avoid hotspots.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 4\u00a0months ago",
+      "content": "zellck\n\t\t\t\n\n\n\t\t\t2\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "A is the answer.\n\nhttps://cloud.google.com/bigtable/docs/schema-design#row-keys\nIt's important to create a row key that makes it possible to retrieve a well-defined range of rows. Otherwise, your query requires a table scan, which is much slower than retrieving specific rows.\n\nhttps://cloud.google.com/bigtable/docs/schema-design#row-keys-avoid\nSome types of row keys can make it difficult to query your data, and some result in poor performance. This section describes some types of row keys that you should avoid using in Bigtable.\n- Row keys that start with a timestamp. This pattern causes sequential writes to be pushed onto a single node, creating a hotspot. If you put a timestamp in a row key, precede it with a high-cardinality value like a user ID to avoid hotspots.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is the answer.\n\nhttps://cloud.google.com/bigtable/docs/schema-design#row-keys\nIt's important to create a row key that makes it possible to retrieve a well-defined range of rows. Otherwise, your query requires a table scan, which is much slower than retrieving specific rows.\n\nhttps://cloud.google.com/bigtable/docs/schema-design#row-keys-avoid\nSome types of row keys can make it difficult to query your data, and some result in poor performance. This section describes some types of row keys that you should avoid using in Bigtable.\n- Row keys that start with a timestamp. This pattern causes sequential writes to be pushed onto a single node, creating a hotspot. If you put a timestamp in a row key, precede it with a high-cardinality value like a user ID to avoid hotspots.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "I agree with you . A is right",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "I agree with you . A is right",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "AzureDP900\n\t\t\t\n\n\n\t\t\t2\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I agree with you . A is right",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I agree with you . A is right",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "A: https://cloud.google.com/bigtable/docs/schema-design-time-series#prefer_rows_to_column_versions",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A: https://cloud.google.com/bigtable/docs/schema-design-time-series#prefer_rows_to_column_versions",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A: https://cloud.google.com/bigtable/docs/schema-design-time-series#prefer_rows_to_column_versions",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "Correct: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "JG123\n\t\t\t\n\n\n\t\t\t3\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Correct: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Correct: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "A and B would both work, since both would distribute the work. This question is not framed properly.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "JayZeeLee\n\t\t\t\n\n\n\t\t\t3\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A and B would both work, since both would distribute the work. This question is not framed properly.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A and B would both work, since both would distribute the work. This question is not framed properly.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 9\u00a0months ago",
+      "content": "Vote for A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 9\u00a0months ago",
+      "content": "sumanshu\n\t\t\t\n\n\n\t\t\t3\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Vote for A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Vote for A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 1\u00a0month ago",
+      "content": "Option A.\nBelow document explains \nHaving EXCHANGE and SYMBOL in the leading positions in the row key will naturally distribute activity.\nhttps://cloud.google.com/bigtable/docs/schema-design-time-series",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 1\u00a0month ago",
+      "content": "Jay3244\n\t\t\t\n\n\n\t\t\t4\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A.\nBelow document explains \nHaving EXCHANGE and SYMBOL in the leading positions in the row key will naturally distribute activity.\nhttps://cloud.google.com/bigtable/docs/schema-design-time-series",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A.\nBelow document explains \nHaving EXCHANGE and SYMBOL in the leading positions in the row key will naturally distribute activity.\nhttps://cloud.google.com/bigtable/docs/schema-design-time-series",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 4\u00a0months ago",
+      "content": "I think A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 4\u00a0months ago",
+      "content": "arghya13\n\t\t\t\n\n\n\t\t\t4\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I think A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I think A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 4\u00a0months ago",
+      "content": "Catch here is current Rowley starts with timestamp which should not be in the starting or end position so symbolmshould be prefixed before timestamp",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 4\u00a0months ago",
+      "content": "kavs\n\t\t\t\n\n\n\t\t\t4\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Catch here is current Rowley starts with timestamp which should not be in the starting or end position so symbolmshould be prefixed before timestamp",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Catch here is current Rowley starts with timestamp which should not be in the starting or end position so symbolmshould be prefixed before timestamp",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 5\u00a0months ago",
+      "content": "A is correct..A Good ROW KEY has to be an ID followed by timestamp. Stock symbol in this case works as an ID",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 5\u00a0months ago",
+      "content": "Cloud_Enthusiast\n\t\t\t\n\n\n\t\t\t4\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is correct..A Good ROW KEY has to be an ID followed by timestamp. Stock symbol in this case works as an ID",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is correct..A Good ROW KEY has to be an ID followed by timestamp. Stock symbol in this case works as an ID",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "A.\nYou can find an example in Google's introductory guide.\nhttps://cloud.google.com/bigtable/docs/schema-design-time-series?hl=ja#financial_market_data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "kino2020\n\t\t\t\n\n\n\t\t\t4\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A.\nYou can find an example in Google's introductory guide.\nhttps://cloud.google.com/bigtable/docs/schema-design-time-series?hl=ja#financial_market_data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A.\nYou can find an example in Google's introductory guide.\nhttps://cloud.google.com/bigtable/docs/schema-design-time-series?hl=ja#financial_market_data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "I think A would be best practice. Adding random numbers as start of rowkey doesn't help with troubleshooting",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 6\u00a0months ago",
+      "content": "Diqtator\n\t\t\t\n\n\n\t\t\t4\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I think A would be best practice. Adding random numbers as start of rowkey doesn't help with troubleshooting",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I think A would be best practice. Adding random numbers as start of rowkey doesn't help with troubleshooting",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

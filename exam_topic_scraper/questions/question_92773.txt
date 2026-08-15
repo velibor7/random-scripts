@@ -1,0 +1,842 @@
+================================================================================
+QUESTION:
+You are working on a new centralized inventory management system to track items available in 200 stores, which each have 500 GB of data. You are planning a gradual rollout of the system to a few stores each week. You need to design an SQL database architecture that minimizes costs and user disruption during each regional rollout and can scale up or down on nights and holidays. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Use Oracle Real Application Cluster (RAC) databases on Bare Metal Solution for Oracle.
+										
+
+
+													B.
+												
+											
+											Use sharded Cloud SQL instances with one or more stores per database instance.
+										
+
+
+													C.
+												
+											
+											Use a Biglable cluster with autoscaling.
+										
+
+
+													D.
+												
+											
+											Use Cloud Spanner with a custom autoscaling solution.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (134 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Cloud Database Engineer topic 1 question 57 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Cloud Database Engineer
+
+							Question #: 57
+							Topic #: 1
+						
+[All Professional Cloud Database Engineer Questions]
+
+
+
+							
+								You are working on a new centralized inventory management system to track items available in 200 stores, which each have 500 GB of data. You are planning a gradual rollout of the system to a few stores each week. You need to design an SQL database architecture that minimizes costs and user disruption during each regional rollout and can scale up or down on nights and holidays. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Use Oracle Real Application Cluster (RAC) databases on Bare Metal Solution for Oracle.
+										
+
+
+													B.
+												
+											
+											Use sharded Cloud SQL instances with one or more stores per database instance.
+										
+
+
+													C.
+												
+											
+											Use a Biglable cluster with autoscaling.
+										
+
+
+													D.
+												
+											
+											Use Cloud Spanner with a custom autoscaling solution.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								pk349
+							
+							
+							at 
+							Dec. 25, 2022, 3:33 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Cloud Database Engineer
+
+							Question #: 57
+							Topic #: 1
+						
+[All Professional Cloud Database Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								pk349
+							
+							
+							at 
+							Dec. 25, 2022, 3:33 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D.
+A SQL database architecture rules out Bigtable. Minimizing costs rules out Oracle RAC. That leaves B and D. B would work with each Cloud SQL instance being dedicated to a few stores which would not impact other Cloud SQL instances already running. The downside is the scaling up/down. To change the vCPU on a Cloud SQL instance requires it to be re-started and that’s disruption. Spanner also doesn’t autoscale by itself, but there’s a tool available for Spanner called Autoscaler which can automate scaling up/down. So on balance, D is the best answer.
+https://cloud.google.com/spanner/docs/autoscaling-overview
+
+--- Comment #6 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D.
+A SQL database architecture rules out Bigtable. Minimizing costs rules out Oracle RAC. That leaves B and D. B would work with each Cloud SQL instance being dedicated to a few stores which would not impact other Cloud SQL instances already running. The downside is the scaling up/down. To change the vCPU on a Cloud SQL instance requires it to be re-started and that’s disruption. Spanner also doesn’t autoscale by itself, but there’s a tool available for Spanner called Autoscaler which can automate scaling up/down. So on balance, D is the best answer.
+https://cloud.google.com/spanner/docs/autoscaling-overview
+
+--- Comment #7 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D.
+A SQL database architecture rules out Bigtable. Minimizing costs rules out Oracle RAC. That leaves B and D. B would work with each Cloud SQL instance being dedicated to a few stores which would not impact other Cloud SQL instances already running. The downside is the scaling up/down. To change the vCPU on a Cloud SQL instance requires it to be re-started and that’s disruption. Spanner also doesn’t autoscale by itself, but there’s a tool available for Spanner called Autoscaler which can automate scaling up/down. So on balance, D is the best answer.
+https://cloud.google.com/spanner/docs/autoscaling-overview
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D.
+A SQL database architecture rules out Bigtable. Minimizing costs rules out Oracle RAC. That leaves B and D. B would work with each Cloud SQL instance being dedicated to a few stores which would not impact other Cloud SQL instances already running. The downside is the scaling up/down. To change the vCPU on a Cloud SQL instance requires it to be re-started and that’s disruption. Spanner also doesn’t autoscale by itself, but there’s a tool available for Spanner called Autoscaler which can automate scaling up/down. So on balance, D is the best answer.
+https://cloud.google.com/spanner/docs/autoscaling-overview
+
+--- Comment #13 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D.
+A SQL database architecture rules out Bigtable. Minimizing costs rules out Oracle RAC. That leaves B and D. B would work with each Cloud SQL instance being dedicated to a few stores which would not impact other Cloud SQL instances already running. The downside is the scaling up/down. To change the vCPU on a Cloud SQL instance requires it to be re-started and that’s disruption. Spanner also doesn’t autoscale by itself, but there’s a tool available for Spanner called Autoscaler which can automate scaling up/down. So on balance, D is the best answer.
+https://cloud.google.com/spanner/docs/autoscaling-overview
+
+--- Comment #14 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+dynamic_dba
+			
+
+
+				Highly Voted 
+
+
+			2 years ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+D.
+A SQL database architecture rules out Bigtable. Minimizing costs rules out Oracle RAC. That leaves B and D. B would work with each Cloud SQL instance being dedicated to a few stores which would not impact other Cloud SQL instances already running. The downside is the scaling up/down. To change the vCPU on a Cloud SQL instance requires it to be re-started and that’s disruption. Spanner also doesn’t autoscale by itself, but there’s a tool available for Spanner called Autoscaler which can automate scaling up/down. So on balance, D is the best answer.
+https://cloud.google.com/spanner/docs/autoscaling-overview
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+D.
+A SQL database architecture rules out Bigtable. Minimizing costs rules out Oracle RAC. That leaves B and D. B would work with each Cloud SQL instance being dedicated to a few stores which would not impact other Cloud SQL instances already running. The downside is the scaling up/down. To change the vCPU on a Cloud SQL instance requires it to be re-started and that’s disruption. Spanner also doesn’t autoscale by itself, but there’s a tool available for Spanner called Autoscaler which can automate scaling up/down. So on balance, D is the best answer.
+https://cloud.google.com/spanner/docs/autoscaling-overview
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+i agree with you on ruling out A and C, however cloud spanner is much costlier than cloud SQL , so B woudlnt be the best answer ?
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+i agree with you on ruling out A and C, however cloud spanner is much costlier than cloud SQL , so B woudlnt be the best answer ?
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Jason_Cloud_at
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #22 ---
+Author: Unknown | Date:  | Votes: 0
+i agree with you on ruling out A and C, however cloud spanner is much costlier than cloud SQL , so B woudlnt be the best answer ?
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+i agree with you on ruling out A and C, however cloud spanner is much costlier than cloud SQL , so B woudlnt be the best answer ?
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+D- and Why D?
+Max Instance size in Cloud SQL is 64TB, 200 Store each 500GB DB Size and growing it is way over 65 TB
+
+--- Comment #30 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+orbo
+			
+
+
+				Most Recent 
+
+
+			3 months ago
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+D- and Why D?
+Max Instance size in Cloud SQL is 64TB, 200 Store each 500GB DB Size and growing it is way over 65 TB
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+D- and Why D?
+Max Instance size in Cloud SQL is 64TB, 200 Store each 500GB DB Size and growing it is way over 65 TB
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #38 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+CloudSQL auto scale up/down causes disruption.
+in case of cloudspanner it is automatic. Plus Global solution by spanner is big plus. 
+but again technical downside of multi regional spanner is, only one region will be a leader, because of which app from non-leader region may observe bit higher write latency.
+
+--- Comment #39 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+rglearn
+			
+
+
+			5 months, 2 weeks ago
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+CloudSQL auto scale up/down causes disruption.
+in case of cloudspanner it is automatic. Plus Global solution by spanner is big plus. 
+but again technical downside of multi regional spanner is, only one region will be a leader, because of which app from non-leader region may observe bit higher write latency.
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+CloudSQL auto scale up/down causes disruption.
+in case of cloudspanner it is automatic. Plus Global solution by spanner is big plus. 
+but again technical downside of multi regional spanner is, only one region will be a leader, because of which app from non-leader region may observe bit higher write latency.
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #47 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+To me, it is "B" here. A couple of reasons; the statement "minimizes costs and user disruption during each regional rollout" explicitly emphasises that the disruption relates to the rollout not the scale-up or scale-down, and considering it's only a few stores per db, I would presume it would take like a few minutes tops. Lastly, the cost is a bit of a give away as well since Cloud SQL is like twice as cheap (I did some rough estimates recently using europe-west2 as my benchmark).
+
+--- Comment #48 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+RaphaelG
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+To me, it is "B" here. A couple of reasons; the statement "minimizes costs and user disruption during each regional rollout" explicitly emphasises that the disruption relates to the rollout not the scale-up or scale-down, and considering it's only a few stores per db, I would presume it would take like a few minutes tops. Lastly, the cost is a bit of a give away as well since Cloud SQL is like twice as cheap (I did some rough estimates recently using europe-west2 as my benchmark).
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+To me, it is "B" here. A couple of reasons; the statement "minimizes costs and user disruption during each regional rollout" explicitly emphasises that the disruption relates to the rollout not the scale-up or scale-down, and considering it's only a few stores per db, I would presume it would take like a few minutes tops. Lastly, the cost is a bit of a give away as well since Cloud SQL is like twice as cheap (I did some rough estimates recently using europe-west2 as my benchmark).
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #56 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+The correct answer is ==>  B. Use sharded Cloud SQL instances with one or more stores per database instance.
+
+--- Comment #57 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+learnazureportal
+			
+
+
+			1 year, 7 months ago
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is ==>  B. Use sharded Cloud SQL instances with one or more stores per database instance.
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is ==>  B. Use sharded Cloud SQL instances with one or more stores per database instance.
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #64 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+B
+Guys, either B or D. The keyword is :Minimize cost" Although D is the best solution, B is less costly
+
+--- Comment #65 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Mitra123
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+B
+Guys, either B or D. The keyword is :Minimize cost" Although D is the best solution, B is less costly
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+B
+Guys, either B or D. The keyword is :Minimize cost" Although D is the best solution, B is less costly
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+1. CloudSQL max out at 64TB, so unable to told 100TB of data. https://cloud.google.com/sql/docs/quotas#metrics_collection_limit
+2. Scale is done manually on SQL Cloud.
+
+--- Comment #73 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Nirca
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+1. CloudSQL max out at 64TB, so unable to told 100TB of data. https://cloud.google.com/sql/docs/quotas#metrics_collection_limit
+2. Scale is done manually on SQL Cloud.
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+1. CloudSQL max out at 64TB, so unable to told 100TB of data. https://cloud.google.com/sql/docs/quotas#metrics_collection_limit
+2. Scale is done manually on SQL Cloud.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #81 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+CloudSQL max out at 64TB, so unable to told 200 * 500 GB of data.
+A: No. Oracle RAC cannot scale up or down
+B: No. Cloud SQL cannot scale up or down manually and the sharded Cloud SQL sound weird, and doesn't meet the "minimize costs and user disruption during each REGIONAL rollout". Also can't break storage limits 64TB.
+C: No. BigTable handles rational db poorly
+https://cloud.google.com/sql/docs/quotas#:~:text=Cloud%20SQL%20storage%20limits,core%3A%20Up%20to%203%20TB.
+
+--- Comment #82 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+zanhsieh
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+CloudSQL max out at 64TB, so unable to told 200 * 500 GB of data.
+A: No. Oracle RAC cannot scale up or down
+B: No. Cloud SQL cannot scale up or down manually and the sharded Cloud SQL sound weird, and doesn't meet the "minimize costs and user disruption during each REGIONAL rollout". Also can't break storage limits 64TB.
+C: No. BigTable handles rational db poorly
+https://cloud.google.com/sql/docs/quotas#:~:text=Cloud%20SQL%20storage%20limits,core%3A%20Up%20to%203%20TB.
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+CloudSQL max out at 64TB, so unable to told 200 * 500 GB of data.
+A: No. Oracle RAC cannot scale up or down
+B: No. Cloud SQL cannot scale up or down manually and the sharded Cloud SQL sound weird, and doesn't meet the "minimize costs and user disruption during each REGIONAL rollout". Also can't break storage limits 64TB.
+C: No. BigTable handles rational db poorly
+https://cloud.google.com/sql/docs/quotas#:~:text=Cloud%20SQL%20storage%20limits,core%3A%20Up%20to%203%20TB.
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #90 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+CloudSQL max out at 64TB, so unable to told 200 * 500 GB of data.
+D: choose Spanner
+
+--- Comment #91 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+JayGeotab
+			
+
+
+			2 years, 2 months ago
+
+--- Comment #92 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+CloudSQL max out at 64TB, so unable to told 200 * 500 GB of data.
+D: choose Spanner
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+CloudSQL max out at 64TB, so unable to told 200 * 500 GB of data.
+D: choose Spanner
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+it's written 500 GB of data per store and cloud sql instance per 1 or couple of stores, what's so hard to understand?
+
+--- Comment #98 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+it's written 500 GB of data per store and cloud sql instance per 1 or couple of stores, what's so hard to understand?
+
+--- Comment #99 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+wolfie09
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+it's written 500 GB of data per store and cloud sql instance per 1 or couple of stores, what's so hard to understand?
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+it's written 500 GB of data per store and cloud sql instance per 1 or couple of stores, what's so hard to understand?
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #107 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+A - No- oracle RAC cannot scale up or down
+C- No, Big Table is for nonSQL
+B or D
+B - Cloud SQL cannot scale up or down manually and the sharded Cloud SQL sound weird, and doesn't meet the "minimize costs and user disruption during each REGIONAL rollout" 
+
+For my, D is the best option as it
+
+--- Comment #108 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+marpayer
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+A - No- oracle RAC cannot scale up or down
+C- No, Big Table is for nonSQL
+B or D
+B - Cloud SQL cannot scale up or down manually and the sharded Cloud SQL sound weird, and doesn't meet the "minimize costs and user disruption during each REGIONAL rollout" 
+
+For my, D is the best option as it
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+A - No- oracle RAC cannot scale up or down
+C- No, Big Table is for nonSQL
+B or D
+B - Cloud SQL cannot scale up or down manually and the sharded Cloud SQL sound weird, and doesn't meet the "minimize costs and user disruption during each REGIONAL rollout" 
+
+For my, D is the best option as it
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #115 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Cloud SQL sharding looks like a good option since we need to minimize costs  
+ and we don't need global scaling https://cloud.google.com/community/tutorials/horizontally-scale-mysql-database-backend-with-google-cloud-sql-and-proxysql
+
+--- Comment #116 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+chelbsik
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+Cloud SQL sharding looks like a good option since we need to minimize costs  
+ and we don't need global scaling https://cloud.google.com/community/tutorials/horizontally-scale-mysql-database-backend-with-google-cloud-sql-and-proxysql
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+Cloud SQL sharding looks like a good option since we need to minimize costs  
+ and we don't need global scaling https://cloud.google.com/community/tutorials/horizontally-scale-mysql-database-backend-with-google-cloud-sql-and-proxysql
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #124 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+B: Use sharded ***** Cloud SQL instances with one or more stores per database instance.
+Sharding makes horizontal scaling possible by partitioning the database into smaller, more manageable parts (shards), then deploying the parts across a cluster of machines. Data queries are routed to the corresponding server automatically, usually with rules embedded in application logic or a query router.
+
+--- Comment #125 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+pk349
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+B: Use sharded ***** Cloud SQL instances with one or more stores per database instance.
+Sharding makes horizontal scaling possible by partitioning the database into smaller, more manageable parts (shards), then deploying the parts across a cluster of machines. Data queries are routed to the corresponding server automatically, usually with rules embedded in application logic or a query router.
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+B: Use sharded ***** Cloud SQL instances with one or more stores per database instance.
+Sharding makes horizontal scaling possible by partitioning the database into smaller, more manageable parts (shards), then deploying the parts across a cluster of machines. Data queries are routed to the corresponding server automatically, usually with rules embedded in application logic or a query router.
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

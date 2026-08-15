@@ -1,0 +1,14 @@
+COMMENT #49 FOR QUESTION 139
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+B. Use a Cloud Pub/Sub topic to publish jobs, and use subscriptions to execute them.
+
+Scalability: Cloud Pub/Sub is a highly scalable messaging service that can handle a significant volume of messages and subscribers. It can easily accommodate increases in usage as your data pipeline scales.
+
+Decoupling: Using Pub/Sub decouples the job generators from the job runners, which is a good architectural choice for flexibility and scalability. Job generators publish messages to a topic, and job runners subscribe to that topic to execute jobs when they are available.
+
+Adding New Applications: With Cloud Pub/Sub, adding new applications (new publishers or subscribers) is straightforward. You can simply create new publishers to send jobs or new subscribers to consume jobs without impacting existing components.
+============================================================

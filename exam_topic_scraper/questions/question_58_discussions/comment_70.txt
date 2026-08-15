@@ -1,0 +1,11 @@
+COMMENT #70 FOR QUESTION 58
+============================================================
+Author: Unknown
+Date: 2 years, 2 months ago
+Votes: 0
+----------------------------------------
+B. Introduce a new MapReduce job to apply sensor calibration to raw data, and ensure all other MapReduce jobs are chained after this.
+
+This approach would ensure that sensor calibration is systematically carried out every time the ETL process runs, as the new MapReduce job would be responsible for calibrating the sensors before the data is processed by the other steps. This would ensure that all data is calibrated before being analyzed, thus avoiding the omission of the sensor calibration step in the future.
+It also allows you to chain all other MapReduce jobs after this one, so that the calibrated data is used in all the downstream jobs.
+============================================================

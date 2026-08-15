@@ -1,0 +1,13 @@
+COMMENT #17 FOR QUESTION 197
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+We exclude [C[ as non ACID and [D] for being invalid (location is configured on Dataset level, not Table).
+Then, let's focus on "minimal human intervention in case of a failure" requirement in order to eliminate one answer among [A] and [B]. 
+Basically, we have to compare point-in-time recovery with high availability. It doesn't matter whether it's about MySQL or PostgreSQL since both databases support those features.
+- Point-in-time recovery logs are created automatically, but restoring an instance in case of failure requires manual steps (described here: https://cloud.google.com/sql/docs/mysql/backup-recovery/pitr#perform-pitr)
+- High availability, in case of failure requires no human intervention: "If an HA-configured instance becomes unresponsive, Cloud SQL automatically switches to serving data from the standby instance." (from https://cloud.google.com/sql/docs/postgres/high-availability#failover-overview)
+So answer [B] wins.
+============================================================

@@ -1,0 +1,16 @@
+COMMENT #6 FOR QUESTION 203
+============================================================
+Author: Unknown
+Date: 9 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+The best way to reduce the TensorFlow training time in a cost-effective manner is to use a VM with a GPU hardware accelerator. TensorFlow can take advantage of GPUs to significantly speed up training time for many models.
+
+Specifically, option C is the best choice.
+
+Changing the VM to another standard type like n2-highmem-32 or e2-standard-32 (options A and B) may provide some improvement, but likely not a significant speedup.
+
+Using a TPU (option D) could speed up training, but TPUs are more costly than GPUs. For a cost-effective solution, GPU acceleration provides the best performance per dollar.
+
+Since the model must run partially on CPUs, a VM instance with GPUs added will allow TensorFlow to offload appropriate operations to the GPUs while keeping CPU-specific operations on the CPU. This can provide a significant reduction in training time for many common TensorFlow models while keeping costs reasonable
+============================================================

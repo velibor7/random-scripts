@@ -1,0 +1,10 @@
+COMMENT #39 FOR QUESTION 133
+============================================================
+Author: Unknown
+Date: 9 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+The key requirements are serving predictions for individual user IDs with low (sub-100ms) latency.
+Option D meets this by batch predicting for all users in BigQuery ML, writing predictions to Bigtable for fast reads, and allowing the application access to query Bigtable directly for low latency reads.
+Since the application needs to serve low-latency predictions for individual user IDs, using Dataflow to batch predict for all users and write to Bigtable allows low-latency reads. Granting the Bigtable Reader role allows the application to retrieve predictions for a specific user ID from Bigtable.
+============================================================

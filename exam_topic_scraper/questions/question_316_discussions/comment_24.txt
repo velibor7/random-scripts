@@ -1,0 +1,13 @@
+COMMENT #24 FOR QUESTION 316
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+C is the answer.
+Materialized Views:
+
+Materialized views in BigQuery are precomputed views that store the results of a query, allowing for much faster query execution because BigQuery doesn’t need to recompute the results each time the query is run. The results are stored in a persistent table, which significantly improves performance for repeated queries that aggregate the same data.
+In this case, you can create materialized views that aggregate the sales data at the day and month levels. This will reduce the amount of data that needs to be processed for each query and speed up the response time.
+Materialized views also lower costs because BigQuery only scans the precomputed data in the materialized view, rather than the full 50 TB sales history table.
+============================================================

@@ -1,0 +1,1689 @@
+ALL COMMENTS FOR QUESTION 184
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 184 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 184
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are building a report-only data warehouse where the data is streamed into BigQuery via the streaming API. Following Google's best practices, you have both a staging and a production table for the data. How should you design your data loading to ensure that there is only one master dataset without affecting performance on either the ingestion or reporting pieces?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Have a staging table that is an append-only model, and then update the production table every three hours with the changes written to staging.
+										
+
+
+													B.
+												
+											
+											Have a staging table that is an append-only model, and then update the production table every ninety minutes with the changes written to staging.
+										
+
+
+													C.
+												
+											
+											Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every three hours.
+										
+
+
+													D.
+												
+											
+											Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every thirty minutes.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 2, 2022, 10:36 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 184
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 2, 2022, 10:36 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+[C]
+I found the correct answer based on a real case, where Google's Solutions Architect team decided to move an internal process to use BigQuery.
+The related doc is here: https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+[C]
+I found the correct answer based on a real case, where Google's Solutions Architect team decided to move an internal process to use BigQuery.
+The related doc is here: https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+[C]
+I found the correct answer based on a real case, where Google's Solutions Architect team decided to move an internal process to use BigQuery.
+The related doc is here: https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+[C]
+I found the correct answer based on a real case, where Google's Solutions Architect team decided to move an internal process to use BigQuery.
+The related doc is here: https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+[C]
+I found the correct answer based on a real case, where Google's Solutions Architect team decided to move an internal process to use BigQuery.
+The related doc is here: https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+NicolasN
+			
+
+
+				Highly Voted 
+
+
+			2 years, 5 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+[C]
+I found the correct answer based on a real case, where Google's Solutions Architect team decided to move an internal process to use BigQuery.
+The related doc is here: https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+[C]
+I found the correct answer based on a real case, where Google's Solutions Architect team decided to move an internal process to use BigQuery.
+The related doc is here: https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 20 times
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+The interesting excerpts:
+"Following common extract, transform, load (ETL) best practices, we used a staging table and a separate production table so that we could load data into the staging table without impacting users of the data. The design we created based on ETL best practices called for first deleting all the records from the staging table, loading the staging table, and then replacing the production table with the contents."
+"When using the streaming API, the BigQuery streaming buffer remains active for about 30 to 60 minutes or more after use, which means that you can’t delete or change data during that time. Since we used the streaming API, we scheduled the load every three hours to balance getting data into BigQuery quickly and being able to subsequently delete the data from the staging table during the load process."
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+The interesting excerpts:
+"Following common extract, transform, load (ETL) best practices, we used a staging table and a separate production table so that we could load data into the staging table without impacting users of the data. The design we created based on ETL best practices called for first deleting all the records from the staging table, loading the staging table, and then replacing the production table with the contents."
+"When using the streaming API, the BigQuery streaming buffer remains active for about 30 to 60 minutes or more after use, which means that you can’t delete or change data during that time. Since we used the streaming API, we scheduled the load every three hours to balance getting data into BigQuery quickly and being able to subsequently delete the data from the staging table during the load process."
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+NicolasN
+			
+
+
+			2 years, 5 months ago
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+The interesting excerpts:
+"Following common extract, transform, load (ETL) best practices, we used a staging table and a separate production table so that we could load data into the staging table without impacting users of the data. The design we created based on ETL best practices called for first deleting all the records from the staging table, loading the staging table, and then replacing the production table with the contents."
+"When using the streaming API, the BigQuery streaming buffer remains active for about 30 to 60 minutes or more after use, which means that you can’t delete or change data during that time. Since we used the streaming API, we scheduled the load every three hours to balance getting data into BigQuery quickly and being able to subsequently delete the data from the staging table during the load process."
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The interesting excerpts:
+"Following common extract, transform, load (ETL) best practices, we used a staging table and a separate production table so that we could load data into the staging table without impacting users of the data. The design we created based on ETL best practices called for first deleting all the records from the staging table, loading the staging table, and then replacing the production table with the contents."
+"When using the streaming API, the BigQuery streaming buffer remains active for about 30 to 60 minutes or more after use, which means that you can’t delete or change data during that time. Since we used the streaming API, we scheduled the load every three hours to balance getting data into BigQuery quickly and being able to subsequently delete the data from the staging table during the load process."
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 18 times
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+I second this. At my work, I run into this exact steaming buffer thing, it will not let me delete the data until after 60 minutes.
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+I second this. At my work, I run into this exact steaming buffer thing, it will not let me delete the data until after 60 minutes.
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+squishy_fishy
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I second this. At my work, I run into this exact steaming buffer thing, it will not let me delete the data until after 60 minutes.
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I second this. At my work, I run into this exact steaming buffer thing, it will not let me delete the data until after 60 minutes.
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Agreed C is right
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+AzureDP900
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Agreed C is right
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Agreed C is right
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Vote B - "Some recently streamed rows might not be available for table copy typically for a few minutes. In rare cases, this can take up to 90 minutes"
+https://cloud.google.com/bigquery/docs/streaming-data-into-bigquery#dataavailability
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+nwk
+			
+
+
+				Highly Voted 
+
+
+			2 years, 7 months ago
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Vote B - "Some recently streamed rows might not be available for table copy typically for a few minutes. In rare cases, this can take up to 90 minutes"
+https://cloud.google.com/bigquery/docs/streaming-data-into-bigquery#dataavailability
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Vote B - "Some recently streamed rows might not be available for table copy typically for a few minutes. In rare cases, this can take up to 90 minutes"
+https://cloud.google.com/bigquery/docs/streaming-data-into-bigquery#dataavailability
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Aren't there other aspects of data pipelining that we should be aware of? other than merely referring to the number of 'recommended' minutes stated in docs. B doesn't address how the appended data is subsequently deleted, since the table is append-only, the size will constantly grow, and so the user may unnecessarily incur more storage costs.
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Aren't there other aspects of data pipelining that we should be aware of? other than merely referring to the number of 'recommended' minutes stated in docs. B doesn't address how the appended data is subsequently deleted, since the table is append-only, the size will constantly grow, and so the user may unnecessarily incur more storage costs.
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+jkhong
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Aren't there other aspects of data pipelining that we should be aware of? other than merely referring to the number of 'recommended' minutes stated in docs. B doesn't address how the appended data is subsequently deleted, since the table is append-only, the size will constantly grow, and so the user may unnecessarily incur more storage costs.
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Aren't there other aspects of data pipelining that we should be aware of? other than merely referring to the number of 'recommended' minutes stated in docs. B doesn't address how the appended data is subsequently deleted, since the table is append-only, the size will constantly grow, and so the user may unnecessarily incur more storage costs.
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+They don't seems concerned too much by data accuracy in the question
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+YorelNation
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+They don't seems concerned too much by data accuracy in the question
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+They don't seems concerned too much by data accuracy in the question
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+A and B are discarded because the UPDATE statement, is not performance efficient. Neither appending more and more values to the stagging table. It's better cleaning the stagging table, and merging with the master dataset.
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+devaid
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+A and B are discarded because the UPDATE statement, is not performance efficient. Neither appending more and more values to the stagging table. It's better cleaning the stagging table, and merging with the master dataset.
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A and B are discarded because the UPDATE statement, is not performance efficient. Neither appending more and more values to the stagging table. It's better cleaning the stagging table, and merging with the master dataset.
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+You can use BigQuery's features like MERGE to efficiently update the production table with only the new or changed data from the staging table, reducing processing time and costs.
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+You can use BigQuery's features like MERGE to efficiently update the production table with only the new or changed data from the staging table, reducing processing time and costs.
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You can use BigQuery's features like MERGE to efficiently update the production table with only the new or changed data from the staging table, reducing processing time and costs.
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You can use BigQuery's features like MERGE to efficiently update the production table with only the new or changed data from the staging table, reducing processing time and costs.
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+deleting data from my point of view is not a good practice to build datawarehouse solutions. So, C and D are excluded. 
+according to the official documentation, the updating/merging process could last till 90 minutes. 3 hours could be enough.
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+SamuelTsch
+			
+
+
+				Most Recent 
+
+
+			5 months, 2 weeks ago
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+deleting data from my point of view is not a good practice to build datawarehouse solutions. So, C and D are excluded. 
+according to the official documentation, the updating/merging process could last till 90 minutes. 3 hours could be enough.
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+deleting data from my point of view is not a good practice to build datawarehouse solutions. So, C and D are excluded. 
+according to the official documentation, the updating/merging process could last till 90 minutes. 3 hours could be enough.
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+An append-only staging table ensures that all incoming data is captured without risk of data loss or overwrites, which is crucial for maintaining data integrity in a streaming ingestion scenario.
+Three-Hour Update Interval:
+
+Updating the production table every three hours strikes a good balance between minimizing the latency of data availability for reporting and reducing the frequency of potentially resource-intensive update operations.
+This interval is frequent enough to keep the production table relatively up-to-date for reporting purposes while ensuring that the performance of both ingestion and reporting processes is not significantly impacted.
+Frequent updates (like every ninety minutes or every thirty minutes) could introduce unnecessary overhead and contention, especially if the dataset is large or if there are complex transformations involved.
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+TVH_Data_Engineer
+			
+
+
+			10 months, 3 weeks ago
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+An append-only staging table ensures that all incoming data is captured without risk of data loss or overwrites, which is crucial for maintaining data integrity in a streaming ingestion scenario.
+Three-Hour Update Interval:
+
+Updating the production table every three hours strikes a good balance between minimizing the latency of data availability for reporting and reducing the frequency of potentially resource-intensive update operations.
+This interval is frequent enough to keep the production table relatively up-to-date for reporting purposes while ensuring that the performance of both ingestion and reporting processes is not significantly impacted.
+Frequent updates (like every ninety minutes or every thirty minutes) could introduce unnecessary overhead and contention, especially if the dataset is large or if there are complex transformations involved.
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+An append-only staging table ensures that all incoming data is captured without risk of data loss or overwrites, which is crucial for maintaining data integrity in a streaming ingestion scenario.
+Three-Hour Update Interval:
+
+Updating the production table every three hours strikes a good balance between minimizing the latency of data availability for reporting and reducing the frequency of potentially resource-intensive update operations.
+This interval is frequent enough to keep the production table relatively up-to-date for reporting purposes while ensuring that the performance of both ingestion and reporting processes is not significantly impacted.
+Frequent updates (like every ninety minutes or every thirty minutes) could introduce unnecessary overhead and contention, especially if the dataset is large or if there are complex transformations involved.
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Not C nor D. Moving and deleting: 
+Deleting data from the staging table every 3 or 30 minutes could lead to data loss if the production table update fails, and it also requires more frequent and potentially resource-intensive operations.
+
+Options C and D cause rebuilding of the staging table, which slows down ingestion, and may lose data if errors occur during recreation.
+
+A or B
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Not C nor D. Moving and deleting: 
+Deleting data from the staging table every 3 or 30 minutes could lead to data loss if the production table update fails, and it also requires more frequent and potentially resource-intensive operations.
+
+Options C and D cause rebuilding of the staging table, which slows down ingestion, and may lose data if errors occur during recreation.
+
+A or B
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Not C nor D. Moving and deleting: 
+Deleting data from the staging table every 3 or 30 minutes could lead to data loss if the production table update fails, and it also requires more frequent and potentially resource-intensive operations.
+
+Options C and D cause rebuilding of the staging table, which slows down ingestion, and may lose data if errors occur during recreation.
+
+A or B
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+When designing a report-only data warehouse in BigQuery, where data is streamed in and you have both staging and production tables, the key is to balance the frequency of updates with the performance needs of both the ingestion and reporting processes. Let's evaluate each option:
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+When designing a report-only data warehouse in BigQuery, where data is streamed in and you have both staging and production tables, the key is to balance the frequency of updates with the performance needs of both the ingestion and reporting processes. Let's evaluate each option:
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+When designing a report-only data warehouse in BigQuery, where data is streamed in and you have both staging and production tables, the key is to balance the frequency of updates with the performance needs of both the ingestion and reporting processes. Let's evaluate each option:
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+When designing a report-only data warehouse in BigQuery, where data is streamed in and you have both staging and production tables, the key is to balance the frequency of updates with the performance needs of both the ingestion and reporting processes. Let's evaluate each option:
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+A. Staging table as append-only, updating production every three hours: This approach allows for a consistent flow of data into the staging table without interruptions. Updating the production table every three hours strikes a balance between having reasonably fresh data and not overloading the system with too frequent updates. However, this may not be suitable if your reporting requirements demand more up-to-date data.
+
+B. Staging table as append-only, updating production every ninety minutes: This is similar to option A but with a more frequent update cycle. This could be more appropriate if your reporting needs require more current data. However, more frequent updates can impact performance, especially during the update windows.
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+A. Staging table as append-only, updating production every three hours: This approach allows for a consistent flow of data into the staging table without interruptions. Updating the production table every three hours strikes a balance between having reasonably fresh data and not overloading the system with too frequent updates. However, this may not be suitable if your reporting requirements demand more up-to-date data.
+
+B. Staging table as append-only, updating production every ninety minutes: This is similar to option A but with a more frequent update cycle. This could be more appropriate if your reporting needs require more current data. However, more frequent updates can impact performance, especially during the update windows.
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+A. Staging table as append-only, updating production every three hours: This approach allows for a consistent flow of data into the staging table without interruptions. Updating the production table every three hours strikes a balance between having reasonably fresh data and not overloading the system with too frequent updates. However, this may not be suitable if your reporting requirements demand more up-to-date data.
+
+B. Staging table as append-only, updating production every ninety minutes: This is similar to option A but with a more frequent update cycle. This could be more appropriate if your reporting needs require more current data. However, more frequent updates can impact performance, especially during the update windows.
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A. Staging table as append-only, updating production every three hours: This approach allows for a consistent flow of data into the staging table without interruptions. Updating the production table every three hours strikes a balance between having reasonably fresh data and not overloading the system with too frequent updates. However, this may not be suitable if your reporting requirements demand more up-to-date data.
+
+B. Staging table as append-only, updating production every ninety minutes: This is similar to option A but with a more frequent update cycle. This could be more appropriate if your reporting needs require more current data. However, more frequent updates can impact performance, especially during the update windows.
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C. Staging table moves data to production and clears staging every three hours: Moving data from staging to production and then clearing the staging table ensures that there is only one master dataset. However, this method might lead to more significant interruptions in data availability, both during the move and the clearing process. This might not be ideal if continuous access to the latest data is required.
+
+D. Staging table moves data to production and clears staging every thirty minutes: This option provides the most up-to-date data in the production table but could significantly impact performance. Such frequent data transfers and deletions might lead to more overhead and could interrupt both the ingestion and reporting processes.
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C. Staging table moves data to production and clears staging every three hours: Moving data from staging to production and then clearing the staging table ensures that there is only one master dataset. However, this method might lead to more significant interruptions in data availability, both during the move and the clearing process. This might not be ideal if continuous access to the latest data is required.
+
+D. Staging table moves data to production and clears staging every thirty minutes: This option provides the most up-to-date data in the production table but could significantly impact performance. Such frequent data transfers and deletions might lead to more overhead and could interrupt both the ingestion and reporting processes.
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C. Staging table moves data to production and clears staging every three hours: Moving data from staging to production and then clearing the staging table ensures that there is only one master dataset. However, this method might lead to more significant interruptions in data availability, both during the move and the clearing process. This might not be ideal if continuous access to the latest data is required.
+
+D. Staging table moves data to production and clears staging every thirty minutes: This option provides the most up-to-date data in the production table but could significantly impact performance. Such frequent data transfers and deletions might lead to more overhead and could interrupt both the ingestion and reporting processes.
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C. Staging table moves data to production and clears staging every three hours: Moving data from staging to production and then clearing the staging table ensures that there is only one master dataset. However, this method might lead to more significant interruptions in data availability, both during the move and the clearing process. This might not be ideal if continuous access to the latest data is required.
+
+D. Staging table moves data to production and clears staging every thirty minutes: This option provides the most up-to-date data in the production table but could significantly impact performance. Such frequent data transfers and deletions might lead to more overhead and could interrupt both the ingestion and reporting processes.
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Considering these options, A (Staging table as append-only, updating production every three hours) seems to be the most balanced approach. It provides a good compromise between having up-to-date data in the production environment and maintaining system performance. However, the exact frequency should be fine-tuned based on the specific performance characteristics of your system and the timeliness requirements of your reports.
+
+It's also important to implement efficient mechanisms for transferring data from staging to production to minimize the impact on system performance. Techniques like partitioning and clustering in BigQuery can be used to optimize query performance and manage large datasets more effectively.
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Considering these options, A (Staging table as append-only, updating production every three hours) seems to be the most balanced approach. It provides a good compromise between having up-to-date data in the production environment and maintaining system performance. However, the exact frequency should be fine-tuned based on the specific performance characteristics of your system and the timeliness requirements of your reports.
+
+It's also important to implement efficient mechanisms for transferring data from staging to production to minimize the impact on system performance. Techniques like partitioning and clustering in BigQuery can be used to optimize query performance and manage large datasets more effectively.
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Considering these options, A (Staging table as append-only, updating production every three hours) seems to be the most balanced approach. It provides a good compromise between having up-to-date data in the production environment and maintaining system performance. However, the exact frequency should be fine-tuned based on the specific performance characteristics of your system and the timeliness requirements of your reports.
+
+It's also important to implement efficient mechanisms for transferring data from staging to production to minimize the impact on system performance. Techniques like partitioning and clustering in BigQuery can be used to optimize query performance and manage large datasets more effectively.
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Considering these options, A (Staging table as append-only, updating production every three hours) seems to be the most balanced approach. It provides a good compromise between having up-to-date data in the production environment and maintaining system performance. However, the exact frequency should be fine-tuned based on the specific performance characteristics of your system and the timeliness requirements of your reports.
+
+It's also important to implement efficient mechanisms for transferring data from staging to production to minimize the impact on system performance. Techniques like partitioning and clustering in BigQuery can be used to optimize query performance and manage large datasets more effectively.
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Neither. In the current scenario, DataStream (a new google resource) captures the CDC data and uses Dataflow to Replicate the changes to big query.
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Aman47
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Neither. In the current scenario, DataStream (a new google resource) captures the CDC data and uses Dataflow to Replicate the changes to big query.
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Neither. In the current scenario, DataStream (a new google resource) captures the CDC data and uses Dataflow to Replicate the changes to big query.
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Vote B
+ C : the doc says streaming data can be used up to 90 minutes not 3 hours
+ B : correct , insert staging table first with append
+and use merge from staging into production table
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+hauhau
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Vote B
+ C : the doc says streaming data can be used up to 90 minutes not 3 hours
+ B : correct , insert staging table first with append
+and use merge from staging into production table
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Vote B
+ C : the doc says streaming data can be used up to 90 minutes not 3 hours
+ B : correct , insert staging table first with append
+and use merge from staging into production table
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+B just say "update", not specificlly mention DML. update can be merge
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+B just say "update", not specificlly mention DML. update can be merge
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+hauhau
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+B just say "update", not specificlly mention DML. update can be merge
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B just say "update", not specificlly mention DML. update can be merge
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+You can use BigQuery's features like MERGE to efficiently update the production table with only the new or changed data from the staging table, reducing processing time and costs.
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+You can use BigQuery's features like MERGE to efficiently update the production table with only the new or changed data from the staging table, reducing processing time and costs.
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You can use BigQuery's features like MERGE to efficiently update the production table with only the new or changed data from the staging table, reducing processing time and costs.
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You can use BigQuery's features like MERGE to efficiently update the production table with only the new or changed data from the staging table, reducing processing time and costs.
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+C is the answer.
+
+https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+Following common extract, transform, load (ETL) best practices, we used a staging table and a separate production table so that we could load data into the staging table without impacting users of the data. The design we created based on ETL best practices called for first deleting all the records from the staging table, loading the staging table, and then replacing the production table with the contents. 
+
+When using the streaming API, the BigQuery streaming buffer remains active for about 30 to 60 minutes or more after use, which means that you can’t delete or change data during that time. Since we used the streaming API, we scheduled the load every three hours to balance getting data into BigQuery quickly and being able to subsequently delete the data from the staging table during the load process.
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+zellck
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C is the answer.
+
+https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+Following common extract, transform, load (ETL) best practices, we used a staging table and a separate production table so that we could load data into the staging table without impacting users of the data. The design we created based on ETL best practices called for first deleting all the records from the staging table, loading the staging table, and then replacing the production table with the contents. 
+
+When using the streaming API, the BigQuery streaming buffer remains active for about 30 to 60 minutes or more after use, which means that you can’t delete or change data during that time. Since we used the streaming API, we scheduled the load every three hours to balance getting data into BigQuery quickly and being able to subsequently delete the data from the staging table during the load process.
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C is the answer.
+
+https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+Following common extract, transform, load (ETL) best practices, we used a staging table and a separate production table so that we could load data into the staging table without impacting users of the data. The design we created based on ETL best practices called for first deleting all the records from the staging table, loading the staging table, and then replacing the production table with the contents. 
+
+When using the streaming API, the BigQuery streaming buffer remains active for about 30 to 60 minutes or more after use, which means that you can’t delete or change data during that time. Since we used the streaming API, we scheduled the load every three hours to balance getting data into BigQuery quickly and being able to subsequently delete the data from the staging table during the load process.
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #187
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+C
+Following common extract, transform, load (ETL) best practices, we used a staging table and a separate production table so that we could load data into the staging table without impacting users of the data. The design we created based on ETL best practices called for first deleting all the records from the staging table, loading the staging table, and then replacing the production table with the contents. 
+
+When using the streaming API, the BigQuery streaming buffer remains active for about 30 to 60 minutes or more after use, which means that you can’t delete or change data during that time. Since we used the streaming API, we scheduled the load every three hours to balance getting data into BigQuery quickly and being able to subsequently delete the data from the staging table during the load process.
+Building a script with BigQuery on the back end
+https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+
+COMMENT #188
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Atnafu
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #189
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C
+Following common extract, transform, load (ETL) best practices, we used a staging table and a separate production table so that we could load data into the staging table without impacting users of the data. The design we created based on ETL best practices called for first deleting all the records from the staging table, loading the staging table, and then replacing the production table with the contents. 
+
+When using the streaming API, the BigQuery streaming buffer remains active for about 30 to 60 minutes or more after use, which means that you can’t delete or change data during that time. Since we used the streaming API, we scheduled the load every three hours to balance getting data into BigQuery quickly and being able to subsequently delete the data from the staging table during the load process.
+Building a script with BigQuery on the back end
+https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+
+COMMENT #190
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C
+Following common extract, transform, load (ETL) best practices, we used a staging table and a separate production table so that we could load data into the staging table without impacting users of the data. The design we created based on ETL best practices called for first deleting all the records from the staging table, loading the staging table, and then replacing the production table with the contents. 
+
+When using the streaming API, the BigQuery streaming buffer remains active for about 30 to 60 minutes or more after use, which means that you can’t delete or change data during that time. Since we used the streaming API, we scheduled the load every three hours to balance getting data into BigQuery quickly and being able to subsequently delete the data from the staging table during the load process.
+Building a script with BigQuery on the back end
+https://cloud.google.com/blog/products/data-analytics/moving-a-publishing-workflow-to-bigquery-for-new-data-insights
+
+COMMENT #191
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #192
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #193
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #194
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #195
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+D : read more on Streaming inserts and timestamp-aware queries as the following link
+it is the same as this question exactly, but it is quite similar.
+https://cloud.google.com/blog/products/bigquery/performing-large-scale-mutations-in-bigquery
+
+read carefully in the content below.
+When using timestamps to keep track of updated and deleted records, it’s a good idea to periodically delete stale entries. To illustrate, the following pair of DML statements can be used to remove older versions as well as deleted records.
+
+You’ll notice that the above DELETE statements don’t attempt to remove records that are newer than 3 hours. This is because data in BigQuery’s streaming buffer is not immediately available for UPDATE, DELETE, or MERGE operations, as described in DML Limitations. These queries assume that the actual values for RecordTime roughly match the actual ingestion time.
+
+COMMENT #196
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #197
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+D : read more on Streaming inserts and timestamp-aware queries as the following link
+it is the same as this question exactly, but it is quite similar.
+https://cloud.google.com/blog/products/bigquery/performing-large-scale-mutations-in-bigquery
+
+read carefully in the content below.
+When using timestamps to keep track of updated and deleted records, it’s a good idea to periodically delete stale entries. To illustrate, the following pair of DML statements can be used to remove older versions as well as deleted records.
+
+You’ll notice that the above DELETE statements don’t attempt to remove records that are newer than 3 hours. This is because data in BigQuery’s streaming buffer is not immediately available for UPDATE, DELETE, or MERGE operations, as described in DML Limitations. These queries assume that the actual values for RecordTime roughly match the actual ingestion time.
+
+COMMENT #198
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #199
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D : read more on Streaming inserts and timestamp-aware queries as the following link
+it is the same as this question exactly, but it is quite similar.
+https://cloud.google.com/blog/products/bigquery/performing-large-scale-mutations-in-bigquery
+
+read carefully in the content below.
+When using timestamps to keep track of updated and deleted records, it’s a good idea to periodically delete stale entries. To illustrate, the following pair of DML statements can be used to remove older versions as well as deleted records.
+
+You’ll notice that the above DELETE statements don’t attempt to remove records that are newer than 3 hours. This is because data in BigQuery’s streaming buffer is not immediately available for UPDATE, DELETE, or MERGE operations, as described in DML Limitations. These queries assume that the actual values for RecordTime roughly match the actual ingestion time.
+
+COMMENT #200
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #201
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #202
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#prune_merged_data
+
+https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language#limitations
+
+COMMENT #203
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#prune_merged_data
+
+https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language#limitations
+
+COMMENT #204
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #205
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#prune_merged_data
+
+https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language#limitations
+
+COMMENT #206
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#prune_merged_data
+
+https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-language#limitations
+
+COMMENT #207
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #208
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #209
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #210
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #211
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #212
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Either C or D  But When will we delete stale data on staging table ? Every xxx???? 
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#prune_merged_data
+
+COMMENT #213
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #214
+----------------------------------------
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Either C or D  But When will we delete stale data on staging table ? Every xxx???? 
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#prune_merged_data
+
+COMMENT #215
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Either C or D  But When will we delete stale data on staging table ? Every xxx???? 
+https://cloud.google.com/architecture/database-replication-to-bigquery-using-change-data-capture#prune_merged_data
+
+COMMENT #216
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #217
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #218
+----------------------------------------
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+gpt: "Overall, deleting the staging table every 30 minutes is a better choice than every 3 hours because it reduces the risk of data inconsistencies and performance issues."
+
+COMMENT #219
+----------------------------------------
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+gpt: "Overall, deleting the staging table every 30 minutes is a better choice than every 3 hours because it reduces the risk of data inconsistencies and performance issues."
+
+COMMENT #220
+----------------------------------------
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Oleksandr0501
+			
+
+
+			1 year, 11 months ago
+
+COMMENT #221
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+gpt: "Overall, deleting the staging table every 30 minutes is a better choice than every 3 hours because it reduces the risk of data inconsistencies and performance issues."
+
+COMMENT #222
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+gpt: "Overall, deleting the staging table every 30 minutes is a better choice than every 3 hours because it reduces the risk of data inconsistencies and performance issues."
+
+COMMENT #223
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #224
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #225
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #226
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #227
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #228
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+D. Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every thirty minutes.
+
+COMMENT #229
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #230
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every thirty minutes.
+
+COMMENT #231
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #232
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every thirty minutes.
+
+COMMENT #233
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #234
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #235
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #236
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #237
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Ans D
+D. Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every thirty minutes.
+
+COMMENT #238
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #239
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Ans D
+D. Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every thirty minutes.
+
+COMMENT #240
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Ans D
+D. Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every thirty minutes.
+
+COMMENT #241
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #242
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #243
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #244
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #245
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+D. Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every thirty minutes.
+
+COMMENT #246
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+AWSandeep
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #247
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every thirty minutes.
+
+COMMENT #248
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #249
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Have a staging table that moves the staged data over to the production table and deletes the contents of the staging table every thirty minutes.
+
+COMMENT #250
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #251
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #252
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #253
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #254
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #255
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #256
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

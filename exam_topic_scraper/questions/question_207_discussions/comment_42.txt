@@ -1,0 +1,11 @@
+COMMENT #42 FOR QUESTION 207
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+1.	Partitioning the data by create_date will allow BigQuery to prune partitions that are not relevant to the query by date.
+2.	Clustering the data by location_id and device_version within each partition will keep related data close together and optimize the performance of filters on those columns. 
+This provides both the pruning benefits of partitioning and locality benefits of clustering for filters on multiple columns.
+The query provided indicates that the access pattern is primarily based on the most recent data (within the last 7 days), filtered by location_id and device_version. Given this pattern, you would want to optimize your table structure in such a way that queries scanning through the data will process the least amount of data possible to reduce costs and improve performance.
+============================================================

@@ -1,0 +1,12 @@
+COMMENT #25 FOR QUESTION 234
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+D. 1. Store the historical data in BigQuery for analytics.
+2. In a Cloud SQL table, store the last state of the product after every product change.
+3. Serve the last state data directly from Cloud SQL to the AP
+
+This approach leverages BigQuery's scalability and efficiency for handling large datasets for analytics. BigQuery is well-suited for managing the 10 PB of historical product data. Meanwhile, Cloud SQL provides the necessary performance to handle the API queries with the required low latency. By storing the latest state of each product in Cloud SQL, you can efficiently handle the high QPS with sub-second latency, which is crucial for the API's performance. This combination of BigQuery and Cloud SQL offers a balanced solution for both the large-scale analytics and the high-performance API needs.
+============================================================

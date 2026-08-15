@@ -1,0 +1,463 @@
+================================================================================
+QUESTION:
+The data engineering team has been tasked with configuring connections to an external database that does not have a supported native connector with Databricks. The external database already has data security configured by group membership. These groups map directly to user groups already created in Databricks that represent various teams within the company.A new login credential has been created for each group in the external database. The Databricks Utilities Secrets module will be used to make these credentials available to Databricks users.Assuming that all the credentials are configured correctly on the external database and group membership is properly configured on Databricks, which statement describes how teams can be granted the minimum necessary access to using these credentials?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											"Manage" permissions should be set on a secret key mapped to those credentials that will be used by a given team.
+										
+
+
+													B.
+												
+											
+											"Read" permissions should be set on a secret key mapped to those credentials that will be used by a given team.
+										
+
+
+													C.
+												
+											
+											"Read" permissions should be set on a secret scope containing only those credentials that will be used by a given team.
+										
+
+
+													D.
+												
+											
+											"Manage" permissions should be set on a secret scope containing only those credentials that will be used by a given team.No additional configuration is necessary as long as all users are configured as administrators in the workspace where secrets have been added.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (59 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Certified Data Engineer Professional topic 1 question 100 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Databricks's
+						Certified Data Engineer Professional
+
+							Question #: 100
+							Topic #: 1
+						
+[All Certified Data Engineer Professional Questions]
+
+
+
+							
+								The data engineering team has been tasked with configuring connections to an external database that does not have a supported native connector with Databricks. The external database already has data security configured by group membership. These groups map directly to user groups already created in Databricks that represent various teams within the company.A new login credential has been created for each group in the external database. The Databricks Utilities Secrets module will be used to make these credentials available to Databricks users.Assuming that all the credentials are configured correctly on the external database and group membership is properly configured on Databricks, which statement describes how teams can be granted the minimum necessary access to using these credentials?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											"Manage" permissions should be set on a secret key mapped to those credentials that will be used by a given team.
+										
+
+
+													B.
+												
+											
+											"Read" permissions should be set on a secret key mapped to those credentials that will be used by a given team.
+										
+
+
+													C.
+												
+											
+											"Read" permissions should be set on a secret scope containing only those credentials that will be used by a given team.
+										
+
+
+													D.
+												
+											
+											"Manage" permissions should be set on a secret scope containing only those credentials that will be used by a given team.No additional configuration is necessary as long as all users are configured as administrators in the workspace where secrets have been added.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								Enduresoul
+							
+							
+							at 
+							Nov. 26, 2023, 7:03 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Databricks's
+						Certified Data Engineer Professional
+
+							Question #: 100
+							Topic #: 1
+						
+[All Certified Data Engineer Professional Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								Enduresoul
+							
+							
+							at 
+							Nov. 26, 2023, 7:03 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+In Databricks, secret scopes are used to manage and organize secrets. By setting "Read" permissions on a secret scope containing the credentials, you allow the team to access the necessary credentials without granting unnecessary privileges. This approach ensures that the teams have the minimum necessary access to the credentials required for connecting to the external database. "Manage" permissions would provide more access than needed for just using the credentials.
+
+Option A and D suggest setting permissions on individual secret keys, which might work, but using a secret scope for organizational purposes is a cleaner and more scalable solution.
+
+--- Comment #6 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+In Databricks, secret scopes are used to manage and organize secrets. By setting "Read" permissions on a secret scope containing the credentials, you allow the team to access the necessary credentials without granting unnecessary privileges. This approach ensures that the teams have the minimum necessary access to the credentials required for connecting to the external database. "Manage" permissions would provide more access than needed for just using the credentials.
+
+Option A and D suggest setting permissions on individual secret keys, which might work, but using a secret scope for organizational purposes is a cleaner and more scalable solution.
+
+--- Comment #7 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+In Databricks, secret scopes are used to manage and organize secrets. By setting "Read" permissions on a secret scope containing the credentials, you allow the team to access the necessary credentials without granting unnecessary privileges. This approach ensures that the teams have the minimum necessary access to the credentials required for connecting to the external database. "Manage" permissions would provide more access than needed for just using the credentials.
+
+Option A and D suggest setting permissions on individual secret keys, which might work, but using a secret scope for organizational purposes is a cleaner and more scalable solution.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+In Databricks, secret scopes are used to manage and organize secrets. By setting "Read" permissions on a secret scope containing the credentials, you allow the team to access the necessary credentials without granting unnecessary privileges. This approach ensures that the teams have the minimum necessary access to the credentials required for connecting to the external database. "Manage" permissions would provide more access than needed for just using the credentials.
+
+Option A and D suggest setting permissions on individual secret keys, which might work, but using a secret scope for organizational purposes is a cleaner and more scalable solution.
+
+--- Comment #13 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+In Databricks, secret scopes are used to manage and organize secrets. By setting "Read" permissions on a secret scope containing the credentials, you allow the team to access the necessary credentials without granting unnecessary privileges. This approach ensures that the teams have the minimum necessary access to the credentials required for connecting to the external database. "Manage" permissions would provide more access than needed for just using the credentials.
+
+Option A and D suggest setting permissions on individual secret keys, which might work, but using a secret scope for organizational purposes is a cleaner and more scalable solution.
+
+--- Comment #14 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+vctrhugo
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+In Databricks, secret scopes are used to manage and organize secrets. By setting "Read" permissions on a secret scope containing the credentials, you allow the team to access the necessary credentials without granting unnecessary privileges. This approach ensures that the teams have the minimum necessary access to the credentials required for connecting to the external database. "Manage" permissions would provide more access than needed for just using the credentials.
+
+Option A and D suggest setting permissions on individual secret keys, which might work, but using a secret scope for organizational purposes is a cleaner and more scalable solution.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+In Databricks, secret scopes are used to manage and organize secrets. By setting "Read" permissions on a secret scope containing the credentials, you allow the team to access the necessary credentials without granting unnecessary privileges. This approach ensures that the teams have the minimum necessary access to the credentials required for connecting to the external database. "Manage" permissions would provide more access than needed for just using the credentials.
+
+Option A and D suggest setting permissions on individual secret keys, which might work, but using a secret scope for organizational purposes is a cleaner and more scalable solution.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+Answer C.
+
+You cannot manage permissions on secretes, only on secret scopes: https://docs.databricks.com/en/security/auth/access-control/index.html#secret-acls
+
+--- Comment #21 ---
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+Answer C.
+
+You cannot manage permissions on secretes, only on secret scopes: https://docs.databricks.com/en/security/auth/access-control/index.html#secret-acls
+
+--- Comment #22 ---
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+arekm
+			
+
+
+			3 months, 1 week ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C.
+
+You cannot manage permissions on secretes, only on secret scopes: https://docs.databricks.com/en/security/auth/access-control/index.html#secret-acls
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C.
+
+You cannot manage permissions on secretes, only on secret scopes: https://docs.databricks.com/en/security/auth/access-control/index.html#secret-acls
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Access is at scope level and not key level
+
+--- Comment #31 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Somesh512
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Access is at scope level and not key level
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Access is at scope level and not key level
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #39 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+In summary, while technically feasible, setting "Read" permissions on a secret key might not be the most efficient or scalable solution when dealing with multiple teams and their corresponding credentials. Using secret scopes provides a more organized and maintainable approach for managing secrets in Databricks.
+
+--- Comment #40 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+petrv
+			
+
+
+			10 months, 1 week ago
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+In summary, while technically feasible, setting "Read" permissions on a secret key might not be the most efficient or scalable solution when dealing with multiple teams and their corresponding credentials. Using secret scopes provides a more organized and maintainable approach for managing secrets in Databricks.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+In summary, while technically feasible, setting "Read" permissions on a secret key might not be the most efficient or scalable solution when dealing with multiple teams and their corresponding credentials. Using secret scopes provides a more organized and maintainable approach for managing secrets in Databricks.
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #48 ---
+Author: Unknown | Date: 10 months, 2 weeks ago | Votes: 0
+Answer C is correct:
+https://docs.databricks.com/en/security/auth-authz/access-control/secret-acl.html#secret-access-control
+"Access control for secrets is managed at the secret scope level"
+
+--- Comment #49 ---
+Author: Unknown | Date: 10 months, 2 weeks ago | Votes: 0
+Enduresoul
+			
+
+
+			10 months, 2 weeks ago
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C is correct:
+https://docs.databricks.com/en/security/auth-authz/access-control/secret-acl.html#secret-access-control
+"Access control for secrets is managed at the secret scope level"
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C is correct:
+https://docs.databricks.com/en/security/auth-authz/access-control/secret-acl.html#secret-access-control
+"Access control for secrets is managed at the secret scope level"
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

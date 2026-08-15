@@ -1,0 +1,12 @@
+COMMENT #50 FOR QUESTION 311
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+https://cloud.google.com/pubsub/docs/exactly-once-delivery
+
+Option A, using a Deduplicate PTransform in Dataflow, could help remove duplicate messages, but it adds complexity to your workflow. Dataflow is a separate service that would need to be integrated and managed, which might not be necessary if Pub/Sub's exactly-once delivery can handle the deduplication for you.
+
+Using Pub/Sub's exactly-once delivery (Option C) is a more straightforward solution that directly addresses the issue of duplicate processing without adding extra components to your system.
+============================================================

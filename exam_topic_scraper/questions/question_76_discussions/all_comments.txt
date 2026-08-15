@@ -1,0 +1,1623 @@
+ALL COMMENTS FOR QUESTION 76
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 76 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 76
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Government regulations in your industry mandate that you have to maintain an auditable record of access to certain types of data. Assuming that all expiring logs will be archived correctly, where should you store data that is subject to that mandate?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Encrypted on Cloud Storage with user-supplied encryption keys. A separate decryption key will be given to each authorized user.
+										
+
+
+													B.
+												
+											
+											In a BigQuery dataset that is viewable only by authorized personnel, with the Data Access log used to provide the auditability.
+										
+
+
+													C.
+												
+											
+											In Cloud SQL, with separate database user names to each user. The Cloud SQL Admin activity logs will be used to provide the auditability.
+										
+
+
+													D.
+												
+											
+											In a bucket on Cloud Storage that is accessible only by an AppEngine service that collects user information and logs the access before providing a link to the bucket.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 21, 2020, 6:01 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 76
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 21, 2020, 6:01 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Keywords here are
+1. "Archived": Immutable and hence, BQ and Cloud SQL are ruled out
+2. "Auditable": Means track any changes done. 
+Only D can provide the audibility piece!
+I will go with D
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Keywords here are
+1. "Archived": Immutable and hence, BQ and Cloud SQL are ruled out
+2. "Auditable": Means track any changes done. 
+Only D can provide the audibility piece!
+I will go with D
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Keywords here are
+1. "Archived": Immutable and hence, BQ and Cloud SQL are ruled out
+2. "Auditable": Means track any changes done. 
+Only D can provide the audibility piece!
+I will go with D
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Keywords here are
+1. "Archived": Immutable and hence, BQ and Cloud SQL are ruled out
+2. "Auditable": Means track any changes done. 
+Only D can provide the audibility piece!
+I will go with D
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Keywords here are
+1. "Archived": Immutable and hence, BQ and Cloud SQL are ruled out
+2. "Auditable": Means track any changes done. 
+Only D can provide the audibility piece!
+I will go with D
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Mitra123
+			
+
+
+				Highly Voted 
+
+
+			3 years, 6 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Keywords here are
+1. "Archived": Immutable and hence, BQ and Cloud SQL are ruled out
+2. "Auditable": Means track any changes done. 
+Only D can provide the audibility piece!
+I will go with D
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Keywords here are
+1. "Archived": Immutable and hence, BQ and Cloud SQL are ruled out
+2. "Auditable": Means track any changes done. 
+Only D can provide the audibility piece!
+I will go with D
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 50 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+I have no idea why so many upvotes on this answer:
+1) archived doesn't mean immutable and cloud storage is not immutable too.
+2) auditable means viewable for authorized personel - and in this case not changes need to be monitored but any access.
+3) with option D it is easy to go around logging - you can add another access to the bucket read the data remove the access and no one will ever know that you accessed the data.
+4) option D is much more difficult - you need to application on AppEngine to log the data and provide access for users.
+5) option D doesn;t explain where and how it stores the audit data - it could be accessed and modified from some side app/service.
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+I have no idea why so many upvotes on this answer:
+1) archived doesn't mean immutable and cloud storage is not immutable too.
+2) auditable means viewable for authorized personel - and in this case not changes need to be monitored but any access.
+3) with option D it is easy to go around logging - you can add another access to the bucket read the data remove the access and no one will ever know that you accessed the data.
+4) option D is much more difficult - you need to application on AppEngine to log the data and provide access for users.
+5) option D doesn;t explain where and how it stores the audit data - it could be accessed and modified from some side app/service.
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Jarek7
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I have no idea why so many upvotes on this answer:
+1) archived doesn't mean immutable and cloud storage is not immutable too.
+2) auditable means viewable for authorized personel - and in this case not changes need to be monitored but any access.
+3) with option D it is easy to go around logging - you can add another access to the bucket read the data remove the access and no one will ever know that you accessed the data.
+4) option D is much more difficult - you need to application on AppEngine to log the data and provide access for users.
+5) option D doesn;t explain where and how it stores the audit data - it could be accessed and modified from some side app/service.
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I have no idea why so many upvotes on this answer:
+1) archived doesn't mean immutable and cloud storage is not immutable too.
+2) auditable means viewable for authorized personel - and in this case not changes need to be monitored but any access.
+3) with option D it is easy to go around logging - you can add another access to the bucket read the data remove the access and no one will ever know that you accessed the data.
+4) option D is much more difficult - you need to application on AppEngine to log the data and provide access for users.
+5) option D doesn;t explain where and how it stores the audit data - it could be accessed and modified from some side app/service.
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Answer: B
+Description: Bigquery is used to analyse access logs, data access logs capture the details of the user that accessed the data
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			4 years, 6 months ago
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+Answer: B
+Description: Bigquery is used to analyse access logs, data access logs capture the details of the user that accessed the data
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+Description: Bigquery is used to analyse access logs, data access logs capture the details of the user that accessed the data
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 23 times
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+There is no option for archiving with BQ
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+There is no option for archiving with BQ
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+sraakesh95
+			
+
+
+			2 years, 8 months ago
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+There is no option for archiving with BQ
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+There is no option for archiving with BQ
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+You dont need to archive the expiring logs, you have to archive the un-archived data here! See the question, it says "Assuming that all expiring logs will be archived correctly", which means they are already stored somewhere like in GCS!!! Hence, better to store the remaining un-archived data in BQ.
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+You dont need to archive the expiring logs, you have to archive the un-archived data here! See the question, it says "Assuming that all expiring logs will be archived correctly", which means they are already stored somewhere like in GCS!!! Hence, better to store the remaining un-archived data in BQ.
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+tavva_prudhvi
+			
+
+
+			2 years, 5 months ago
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+You dont need to archive the expiring logs, you have to archive the un-archived data here! See the question, it says "Assuming that all expiring logs will be archived correctly", which means they are already stored somewhere like in GCS!!! Hence, better to store the remaining un-archived data in BQ.
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You dont need to archive the expiring logs, you have to archive the un-archived data here! See the question, it says "Assuming that all expiring logs will be archived correctly", which means they are already stored somewhere like in GCS!!! Hence, better to store the remaining un-archived data in BQ.
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+The question is about where to store the _data_ for which the logs will be generated. 
+
+The bit you quoted is about the _logs_ that will be generated when accesssing data. The “archived correctly” implies that proper retention policies will be set up if you choose GCS.
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+The question is about where to store the _data_ for which the logs will be generated. 
+
+The bit you quoted is about the _logs_ that will be generated when accesssing data. The “archived correctly” implies that proper retention policies will be set up if you choose GCS.
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+vartiklis
+			
+
+
+			2 years, 2 months ago
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The question is about where to store the _data_ for which the logs will be generated. 
+
+The bit you quoted is about the _logs_ that will be generated when accesssing data. The “archived correctly” implies that proper retention policies will be set up if you choose GCS.
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The question is about where to store the _data_ for which the logs will be generated. 
+
+The bit you quoted is about the _logs_ that will be generated when accesssing data. The “archived correctly” implies that proper retention policies will be set up if you choose GCS.
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+The question has no mention of ANALYZE.. BQ is not correct. I would go with D.
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+awssp12345
+			
+
+
+			3 years, 3 months ago
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The question has no mention of ANALYZE.. BQ is not correct. I would go with D.
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The question has no mention of ANALYZE.. BQ is not correct. I would go with D.
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date: 8 months ago | Votes: 0
+In recent GCP, we have cloud audit.
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date: 8 months ago | Votes: 0
+philli1011
+			
+
+
+				Most Recent 
+
+
+			8 months ago
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+In recent GCP, we have cloud audit.
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+In recent GCP, we have cloud audit.
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+Option B is valid only when analytics to be performed over logs, which is not mentioned anywhere
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+Nandababy
+			
+
+
+			10 months, 1 week ago
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B is valid only when analytics to be performed over logs, which is not mentioned anywhere
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B is valid only when analytics to be performed over logs, which is not mentioned anywhere
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+For maintaining an auditable record of access to certain types of data, especially when government regulations are in place, the most suitable option would be:
+
+B. In a BigQuery dataset that is viewable only by authorized personnel, with the Data Access log used to provide the auditability.
+
+Storing the data in a BigQuery dataset with restricted access ensures control over who can view the data, and utilizing Data Access logs provides a comprehensive audit trail for compliance purposes. This option aligns well with the need for maintaining an auditable record as mandated by government regulations.
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+rocky48
+			
+
+
+			10 months, 1 week ago
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+For maintaining an auditable record of access to certain types of data, especially when government regulations are in place, the most suitable option would be:
+
+B. In a BigQuery dataset that is viewable only by authorized personnel, with the Data Access log used to provide the auditability.
+
+Storing the data in a BigQuery dataset with restricted access ensures control over who can view the data, and utilizing Data Access logs provides a comprehensive audit trail for compliance purposes. This option aligns well with the need for maintaining an auditable record as mandated by government regulations.
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+For maintaining an auditable record of access to certain types of data, especially when government regulations are in place, the most suitable option would be:
+
+B. In a BigQuery dataset that is viewable only by authorized personnel, with the Data Access log used to provide the auditability.
+
+Storing the data in a BigQuery dataset with restricted access ensures control over who can view the data, and utilizing Data Access logs provides a comprehensive audit trail for compliance purposes. This option aligns well with the need for maintaining an auditable record as mandated by government regulations.
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+If you are going for option D, why do you eliminate option B? The only REAL difference is that for opption D you need to develop an app for storing log data and providing bucket link and in option B you have it all done BETTER by GCP. You might also pay a bit more for BQ storage, but the question never mentions about cost optimization.
+BTW in the D option the bucket is accessible only by AppEngine service, so what will the user do with the provided link? he has no access anyway... And if he even has the access to this link what stops him form using the same link many times? How the AppEngine get and store the information what specific data he accessed and how?
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Jarek7
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+If you are going for option D, why do you eliminate option B? The only REAL difference is that for opption D you need to develop an app for storing log data and providing bucket link and in option B you have it all done BETTER by GCP. You might also pay a bit more for BQ storage, but the question never mentions about cost optimization.
+BTW in the D option the bucket is accessible only by AppEngine service, so what will the user do with the provided link? he has no access anyway... And if he even has the access to this link what stops him form using the same link many times? How the AppEngine get and store the information what specific data he accessed and how?
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+If you are going for option D, why do you eliminate option B? The only REAL difference is that for opption D you need to develop an app for storing log data and providing bucket link and in option B you have it all done BETTER by GCP. You might also pay a bit more for BQ storage, but the question never mentions about cost optimization.
+BTW in the D option the bucket is accessible only by AppEngine service, so what will the user do with the provided link? he has no access anyway... And if he even has the access to this link what stops him form using the same link many times? How the AppEngine get and store the information what specific data he accessed and how?
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 9 times
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+That was my thought, either B or D could work but D it’s a little bit odd create an app to do something that could be achieved natively gcp
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+That was my thought, either B or D could work but D it’s a little bit odd create an app to do something that could be achieved natively gcp
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Kiroo
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+That was my thought, either B or D could work but D it’s a little bit odd create an app to do something that could be achieved natively gcp
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+That was my thought, either B or D could work but D it’s a little bit odd create an app to do something that could be achieved natively gcp
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+I was about to say the same thing. Why go through that stress?
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+phidelics
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I was about to say the same thing. Why go through that stress?
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I was about to say the same thing. Why go through that stress?
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+D amongus
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Rodrigo4N
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D amongus
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D amongus
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+They want to know where you can store **data** in a way that every access is logged in an auditable way.
+
+Both BQ and GCS have audit logs, except that in alternative D you're circumventing it by creating your own logs. I doubt Google would recommend that.
+
+By types of data you can understand "financial type", "marketing type", etc.
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+juliobs
+			
+
+
+			1 year, 6 months ago
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+They want to know where you can store **data** in a way that every access is logged in an auditable way.
+
+Both BQ and GCS have audit logs, except that in alternative D you're circumventing it by creating your own logs. I doubt Google would recommend that.
+
+By types of data you can understand "financial type", "marketing type", etc.
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+They want to know where you can store **data** in a way that every access is logged in an auditable way.
+
+Both BQ and GCS have audit logs, except that in alternative D you're circumventing it by creating your own logs. I doubt Google would recommend that.
+
+By types of data you can understand "financial type", "marketing type", etc.
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+I was thinking it should be A. However, 'data' in this question is too vague. It does not say anywhere that the data could fit in BigQuery tables. It could be unstructure data such as videos or images
+Option D seems to involve more setup but it is the only viable option for this scenario. Note that GCS do have Cloud Audit logs. That should be the best option. Maybe this question was asked when Cloud Audit log is not yet available for GCS.
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+midgoo
+			
+
+
+			1 year, 7 months ago
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I was thinking it should be A. However, 'data' in this question is too vague. It does not say anywhere that the data could fit in BigQuery tables. It could be unstructure data such as videos or images
+Option D seems to involve more setup but it is the only viable option for this scenario. Note that GCS do have Cloud Audit logs. That should be the best option. Maybe this question was asked when Cloud Audit log is not yet available for GCS.
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I was thinking it should be A. However, 'data' in this question is too vague. It does not say anywhere that the data could fit in BigQuery tables. It could be unstructure data such as videos or images
+Option D seems to involve more setup but it is the only viable option for this scenario. Note that GCS do have Cloud Audit logs. That should be the best option. Maybe this question was asked when Cloud Audit log is not yet available for GCS.
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+It is so clear that is B lol
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+aleixfc96
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It is so clear that is B lol
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It is so clear that is B lol
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+B bigquery for a record set store
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+NamitSehgal
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B bigquery for a record set store
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B bigquery for a record set store
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+B. In a BigQuery dataset that is viewable only by authorized personnel, with the Data Access log used to provide the auditability.
+
+BigQuery provides built-in logging of all data access, including the user's identity, the specific query run and the time of the query. This log can be used to provide an auditable record of access to the data. Additionally, BigQuery allows you to control access to the dataset using Identity and Access Management (IAM) roles, so you can ensure that only authorized personnel can view the dataset.
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+PolyMoe
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. In a BigQuery dataset that is viewable only by authorized personnel, with the Data Access log used to provide the auditability.
+
+BigQuery provides built-in logging of all data access, including the user's identity, the specific query run and the time of the query. This log can be used to provide an auditable record of access to the data. Additionally, BigQuery allows you to control access to the dataset using Identity and Access Management (IAM) roles, so you can ensure that only authorized personnel can view the dataset.
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. In a BigQuery dataset that is viewable only by authorized personnel, with the Data Access log used to provide the auditability.
+
+BigQuery provides built-in logging of all data access, including the user's identity, the specific query run and the time of the query. This log can be used to provide an auditable record of access to the data. Additionally, BigQuery allows you to control access to the dataset using Identity and Access Management (IAM) roles, so you can ensure that only authorized personnel can view the dataset.
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+B. In a BigQuery dataset that is viewable only by authorized personnel, with the Data Access log used to provide the auditability.
+
+BigQuery provides built-in logging of all data access, including the user's identity, the specific query run and the time of the query. This log can be used to provide an auditable record of access to the data. Additionally, BigQuery allows you to control access to the dataset using Identity and Access Management (IAM) roles, so you can ensure that only authorized personnel can view the dataset.
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+samdhimal
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+B. In a BigQuery dataset that is viewable only by authorized personnel, with the Data Access log used to provide the auditability.
+
+BigQuery provides built-in logging of all data access, including the user's identity, the specific query run and the time of the query. This log can be used to provide an auditable record of access to the data. Additionally, BigQuery allows you to control access to the dataset using Identity and Access Management (IAM) roles, so you can ensure that only authorized personnel can view the dataset.
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. In a BigQuery dataset that is viewable only by authorized personnel, with the Data Access log used to provide the auditability.
+
+BigQuery provides built-in logging of all data access, including the user's identity, the specific query run and the time of the query. This log can be used to provide an auditable record of access to the data. Additionally, BigQuery allows you to control access to the dataset using Identity and Access Management (IAM) roles, so you can ensure that only authorized personnel can view the dataset.
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+gpt: You are correct that option A does not provide an auditable record of access to the data, as it only addresses data security through encryption. Option C provides auditability through Cloud SQL Admin activity logs, but it may not be the best option as it requires additional setup and management.
+
+Option D is a feasible solution, but as you mentioned, it requires additional setup and maintenance of the AppEngine service. It also may not provide a comprehensive audit log of all data access.
+
+Option B, storing the data in a BigQuery dataset that is viewable only by authorized personnel and using the Data Access log to provide auditability, is the most appropriate option as it provides built-in logging of all data access and allows you to control access to the dataset using IAM roles. Therefore, it provides both data security and auditable access to the data.   /// ok let it be B
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+gpt: You are correct that option A does not provide an auditable record of access to the data, as it only addresses data security through encryption. Option C provides auditability through Cloud SQL Admin activity logs, but it may not be the best option as it requires additional setup and management.
+
+Option D is a feasible solution, but as you mentioned, it requires additional setup and maintenance of the AppEngine service. It also may not provide a comprehensive audit log of all data access.
+
+Option B, storing the data in a BigQuery dataset that is viewable only by authorized personnel and using the Data Access log to provide auditability, is the most appropriate option as it provides built-in logging of all data access and allows you to control access to the dataset using IAM roles. Therefore, it provides both data security and auditable access to the data.   /// ok let it be B
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Oleksandr0501
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+gpt: You are correct that option A does not provide an auditable record of access to the data, as it only addresses data security through encryption. Option C provides auditability through Cloud SQL Admin activity logs, but it may not be the best option as it requires additional setup and management.
+
+Option D is a feasible solution, but as you mentioned, it requires additional setup and maintenance of the AppEngine service. It also may not provide a comprehensive audit log of all data access.
+
+Option B, storing the data in a BigQuery dataset that is viewable only by authorized personnel and using the Data Access log to provide auditability, is the most appropriate option as it provides built-in logging of all data access and allows you to control access to the dataset using IAM roles. Therefore, it provides both data security and auditable access to the data.   /// ok let it be B
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+gpt: You are correct that option A does not provide an auditable record of access to the data, as it only addresses data security through encryption. Option C provides auditability through Cloud SQL Admin activity logs, but it may not be the best option as it requires additional setup and management.
+
+Option D is a feasible solution, but as you mentioned, it requires additional setup and maintenance of the AppEngine service. It also may not provide a comprehensive audit log of all data access.
+
+Option B, storing the data in a BigQuery dataset that is viewable only by authorized personnel and using the Data Access log to provide auditability, is the most appropriate option as it provides built-in logging of all data access and allows you to control access to the dataset using IAM roles. Therefore, it provides both data security and auditable access to the data.   /// ok let it be B
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+OR MAYBE D....
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+OR MAYBE D....
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Oleksandr0501
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #187
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+OR MAYBE D....
+
+COMMENT #188
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+OR MAYBE D....
+
+COMMENT #189
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #190
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #191
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+!!! confused. Give 69% confidence to B, as user Jarek7 explained
+
+COMMENT #192
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+!!! confused. Give 69% confidence to B, as user Jarek7 explained
+
+COMMENT #193
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Oleksandr0501
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #194
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+!!! confused. Give 69% confidence to B, as user Jarek7 explained
+
+COMMENT #195
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+!!! confused. Give 69% confidence to B, as user Jarek7 explained
+
+COMMENT #196
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #197
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #198
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #199
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #200
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #201
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #202
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+A. Encrypted on Cloud Storage with user-supplied encryption keys. A separate decryption key will be given to each authorized user. is a good option for data security but it does not provide an auditable record of access to the data.
+
+C. In Cloud SQL, with separate database user names to each user. The Cloud SQL Admin activity logs will be used to provide the auditability. is also a good option for data security but it does not provide an auditable record of access to the data.
+
+D. In a bucket on Cloud Storage that is accessible only by an AppEngine service that collects user information and logs the access before providing a link to the bucket. is also a good option but it requires additional setup and maintenance of the AppEngine service, and it may not provide an auditable record of access to the data.
+
+COMMENT #203
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+samdhimal
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #204
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A. Encrypted on Cloud Storage with user-supplied encryption keys. A separate decryption key will be given to each authorized user. is a good option for data security but it does not provide an auditable record of access to the data.
+
+C. In Cloud SQL, with separate database user names to each user. The Cloud SQL Admin activity logs will be used to provide the auditability. is also a good option for data security but it does not provide an auditable record of access to the data.
+
+D. In a bucket on Cloud Storage that is accessible only by an AppEngine service that collects user information and logs the access before providing a link to the bucket. is also a good option but it requires additional setup and maintenance of the AppEngine service, and it may not provide an auditable record of access to the data.
+
+COMMENT #205
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A. Encrypted on Cloud Storage with user-supplied encryption keys. A separate decryption key will be given to each authorized user. is a good option for data security but it does not provide an auditable record of access to the data.
+
+C. In Cloud SQL, with separate database user names to each user. The Cloud SQL Admin activity logs will be used to provide the auditability. is also a good option for data security but it does not provide an auditable record of access to the data.
+
+D. In a bucket on Cloud Storage that is accessible only by an AppEngine service that collects user information and logs the access before providing a link to the bucket. is also a good option but it requires additional setup and maintenance of the AppEngine service, and it may not provide an auditable record of access to the data.
+
+COMMENT #206
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #207
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #208
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #209
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #210
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #211
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+D is the correct answer
+
+COMMENT #212
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+GCPpro
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #213
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D is the correct answer
+
+COMMENT #214
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D is the correct answer
+
+COMMENT #215
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #216
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #217
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #218
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #219
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Keys
+TYPES of data --> Cloud Storage not BQ 
+Archival --> Cloud Storage
+Access --> No decryption keys to all users
+
+COMMENT #220
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+RoshanAshraf
+			
+
+
+			1 year, 9 months ago
+
+COMMENT #221
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Keys
+TYPES of data --> Cloud Storage not BQ 
+Archival --> Cloud Storage
+Access --> No decryption keys to all users
+
+COMMENT #222
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #223
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Keys
+TYPES of data --> Cloud Storage not BQ 
+Archival --> Cloud Storage
+Access --> No decryption keys to all users
+
+COMMENT #224
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #225
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #226
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #227
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #228
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+I will go with D
+
+COMMENT #229
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+PrashantGupta1616
+			
+
+
+			1 year, 9 months ago
+
+COMMENT #230
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I will go with D
+
+COMMENT #231
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #232
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I will go with D
+
+COMMENT #233
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #234
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #235
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #236
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #237
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Keyword, Archiver , certain type of data, auditable, GCS is better option . Durability 11 time 9 to store log immutable for long time.
+
+COMMENT #238
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+DGames
+			
+
+
+			1 year, 9 months ago
+
+COMMENT #239
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Keyword, Archiver , certain type of data, auditable, GCS is better option . Durability 11 time 9 to store log immutable for long time.
+
+COMMENT #240
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #241
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Keyword, Archiver , certain type of data, auditable, GCS is better option . Durability 11 time 9 to store log immutable for long time.
+
+COMMENT #242
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #243
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #244
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #245
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #246
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #247
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #248
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

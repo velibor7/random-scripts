@@ -1,0 +1,19 @@
+COMMENT #68 FOR QUESTION 296
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Based on the key requirements highlighted:
+•	Interconnect link between GCP and on-prem Kafka
+•	High throughput streaming pipeline
+•	Minimal latency
+•	Data to be stored in BigQuery
+D - The key reasons this meets the requirements:
+•	Kafka connect provides a reliable bridge to Pub/Sub over the interconnect
+•	Reading from Pub/Sub minimizes latency vs reading directly from Kafka
+•	Dataflow provides a high throughput streaming engine
+•	Writing to BigQuery gives scalable data storage
+By leveraging these fully managed GCP services over the dedicated interconnect, a low latency streaming pipeline from on-prem Kafka into BigQuery can be implemented rapidly.
+Options A/B/C have higher latencies or custom code requirements, so do not meet the minimal latency criteria as well as option D.
+============================================================

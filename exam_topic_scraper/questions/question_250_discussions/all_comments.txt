@@ -1,0 +1,1014 @@
+ALL COMMENTS FOR QUESTION 250
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 250 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 250
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your company's data platform ingests CSV file dumps of booking and user profile data from upstream sources into Cloud Storage. The data analyst team wants to join these datasets on the email field available in both the datasets to perform analysis. However, personally identifiable information (PII) should not be accessible to the analysts. You need to de-identify the email field in both the datasets before loading them into BigQuery for analysts. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Create a pipeline to de-identify the email field by using recordTransformations in Cloud Data Loss Prevention (Cloud DLP) with masking as the de-identification transformations type.2. Load the booking and user profile data into a BigQuery table.
+										
+
+
+													B.
+												
+											
+											1. Create a pipeline to de-identify the email field by using recordTransformations in Cloud DLP with format-preserving encryption with FFX as the de-identification transformation type.2. Load the booking and user profile data into a BigQuery table.
+										
+
+
+													C.
+												
+											
+											1. Load the CSV files from Cloud Storage into a BigQuery table, and enable dynamic data masking.2. Create a policy tag with the email mask as the data masking rule.3. Assign the policy to the email field in both tables. A4. Assign the Identity and Access Management bigquerydatapolicy.maskedReader role for the BigQuery tables to the analysts.
+										
+
+
+													D.
+												
+											
+											1. Load the CSV files from Cloud Storage into a BigQuery table, and enable dynamic data masking.2. Create a policy tag with the default masking value as the data masking rule.3. Assign the policy to the email field in both tables.4. Assign the Identity and Access Management bigquerydatapolicy.maskedReader role for the BigQuery tables to the analysts
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 3:35 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 250
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 3:35 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Format-preserving encryption (FPE) with FFX in Cloud DLP is a strong choice for de-identifying PII like email addresses. FPE maintains the format of the data and ensures that the same input results in the same encrypted output consistently. This means the email fields in both datasets can be encrypted to the same value, allowing for accurate joins in BigQuery while keeping the actual email addresses hidden.
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Format-preserving encryption (FPE) with FFX in Cloud DLP is a strong choice for de-identifying PII like email addresses. FPE maintains the format of the data and ensures that the same input results in the same encrypted output consistently. This means the email fields in both datasets can be encrypted to the same value, allowing for accurate joins in BigQuery while keeping the actual email addresses hidden.
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Format-preserving encryption (FPE) with FFX in Cloud DLP is a strong choice for de-identifying PII like email addresses. FPE maintains the format of the data and ensures that the same input results in the same encrypted output consistently. This means the email fields in both datasets can be encrypted to the same value, allowing for accurate joins in BigQuery while keeping the actual email addresses hidden.
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Format-preserving encryption (FPE) with FFX in Cloud DLP is a strong choice for de-identifying PII like email addresses. FPE maintains the format of the data and ensures that the same input results in the same encrypted output consistently. This means the email fields in both datasets can be encrypted to the same value, allowing for accurate joins in BigQuery while keeping the actual email addresses hidden.
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Format-preserving encryption (FPE) with FFX in Cloud DLP is a strong choice for de-identifying PII like email addresses. FPE maintains the format of the data and ensures that the same input results in the same encrypted output consistently. This means the email fields in both datasets can be encrypted to the same value, allowing for accurate joins in BigQuery while keeping the actual email addresses hidden.
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+lipa31
+			
+
+
+				Highly Voted 
+
+
+			1 year, 2 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Format-preserving encryption (FPE) with FFX in Cloud DLP is a strong choice for de-identifying PII like email addresses. FPE maintains the format of the data and ensures that the same input results in the same encrypted output consistently. This means the email fields in both datasets can be encrypted to the same value, allowing for accurate joins in BigQuery while keeping the actual email addresses hidden.
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Format-preserving encryption (FPE) with FFX in Cloud DLP is a strong choice for de-identifying PII like email addresses. FPE maintains the format of the data and ensures that the same input results in the same encrypted output consistently. This means the email fields in both datasets can be encrypted to the same value, allowing for accurate joins in BigQuery while keeping the actual email addresses hidden.
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 15 times
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+As it states "You need to de-identify the email field in both the datasets before loading them into BigQuery for analysts" data masking should not be an option as the data would stored unmasked in BigQuery?
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Smakyel79
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+As it states "You need to de-identify the email field in both the datasets before loading them into BigQuery for analysts" data masking should not be an option as the data would stored unmasked in BigQuery?
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+As it states "You need to de-identify the email field in both the datasets before loading them into BigQuery for analysts" data masking should not be an option as the data would stored unmasked in BigQuery?
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date: 10 months ago | Votes: 0
+Option A:
+Masking: Simple masking might not preserve the uniqueness and joinability of the email field, making it difficult to perform accurate joins between datasets.
+Option C and D:
+Dynamic Data Masking: These options involve masking the email field dynamically within BigQuery, which does not address the requirement to de-identify data before loading into BigQuery. Additionally, dynamic masking does not prevent access to the actual email data before it is loaded into BigQuery, potentially exposing PII during the data ingestion process.
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date: 10 months ago | Votes: 0
+Anudeep58
+			
+
+
+				Most Recent 
+
+
+			10 months ago
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A:
+Masking: Simple masking might not preserve the uniqueness and joinability of the email field, making it difficult to perform accurate joins between datasets.
+Option C and D:
+Dynamic Data Masking: These options involve masking the email field dynamically within BigQuery, which does not address the requirement to de-identify data before loading into BigQuery. Additionally, dynamic masking does not prevent access to the actual email data before it is loaded into BigQuery, potentially exposing PII during the data ingestion process.
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A:
+Masking: Simple masking might not preserve the uniqueness and joinability of the email field, making it difficult to perform accurate joins between datasets.
+Option C and D:
+Dynamic Data Masking: These options involve masking the email field dynamically within BigQuery, which does not address the requirement to de-identify data before loading into BigQuery. Additionally, dynamic masking does not prevent access to the actual email data before it is loaded into BigQuery, potentially exposing PII during the data ingestion process.
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date: 10 months, 4 weeks ago | Votes: 0
+format-preserving encryption with FFX is required as the analysts want to perform JOINs
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date: 10 months, 4 weeks ago | Votes: 0
+chrissamharris
+			
+
+
+			10 months, 4 weeks ago
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+format-preserving encryption with FFX is required as the analysts want to perform JOINs
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+format-preserving encryption with FFX is required as the analysts want to perform JOINs
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Option B
+https://cloud.google.com/sensitive-data-protection/docs/pseudonymization
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+JyoGCP
+			
+
+
+			1 year, 1 month ago
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B
+https://cloud.google.com/sensitive-data-protection/docs/pseudonymization
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B
+https://cloud.google.com/sensitive-data-protection/docs/pseudonymization
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+A) masking = replace with a surrogate character like # or * = output not unique, so cannot apply joins
+C and D) question specifies to de-identify BEFORE loading into BQ, whereas these options perform dynamic masking IN BigQuery.
+
+Therefore, only valid option is B.
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+ML6
+			
+
+
+			1 year, 1 month ago
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A) masking = replace with a surrogate character like # or * = output not unique, so cannot apply joins
+C and D) question specifies to de-identify BEFORE loading into BQ, whereas these options perform dynamic masking IN BigQuery.
+
+Therefore, only valid option is B.
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A) masking = replace with a surrogate character like # or * = output not unique, so cannot apply joins
+C and D) question specifies to de-identify BEFORE loading into BQ, whereas these options perform dynamic masking IN BigQuery.
+
+Therefore, only valid option is B.
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option C. The need is to just mask the data to Analyst, without modifying the underlying data. Moreover, it's stored on 2 separate tables and the analysts need to be able to perform joins based on the masked data. Dynamic masking is the right module and the right masking rule is email mask (https://cloud.google.com/bigquery/docs/column-data-masking-intro#masking_options) which guarantees the join capabilities join
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Matt_108
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C. The need is to just mask the data to Analyst, without modifying the underlying data. Moreover, it's stored on 2 separate tables and the analysts need to be able to perform joins based on the masked data. Dynamic masking is the right module and the right masking rule is email mask (https://cloud.google.com/bigquery/docs/column-data-masking-intro#masking_options) which guarantees the join capabilities join
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C. The need is to just mask the data to Analyst, without modifying the underlying data. Moreover, it's stored on 2 separate tables and the analysts need to be able to perform joins based on the masked data. Dynamic masking is the right module and the right masking rule is email mask (https://cloud.google.com/bigquery/docs/column-data-masking-intro#masking_options) which guarantees the join capabilities join
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+A  wouldn't preserve the email format
+C&D maskedReader roles still grant access to the underlying values.
+the only option is B
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+task_7
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+A  wouldn't preserve the email format
+C&D maskedReader roles still grant access to the underlying values.
+the only option is B
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A  wouldn't preserve the email format
+C&D maskedReader roles still grant access to the underlying values.
+the only option is B
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+I dont't know why preserve email format is necessary to perform the join. A could be valid.
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+I dont't know why preserve email format is necessary to perform the join. A could be valid.
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+alfguemat
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+I dont't know why preserve email format is necessary to perform the join. A could be valid.
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I dont't know why preserve email format is necessary to perform the join. A could be valid.
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+masking only replace by specific characters, doing the field not unique and not ready for joins.
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+masking only replace by specific characters, doing the field not unique and not ready for joins.
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+dduenas
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+masking only replace by specific characters, doing the field not unique and not ready for joins.
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+masking only replace by specific characters, doing the field not unique and not ready for joins.
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+I will go for C, because there is a separate type of masking for emails, so whe to use the dafault? https://cloud.google.com/bigquery/docs/column-data-masking-intro#masking_options
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Sofiia98
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I will go for C, because there is a separate type of masking for emails, so whe to use the dafault? https://cloud.google.com/bigquery/docs/column-data-masking-intro#masking_options
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I will go for C, because there is a separate type of masking for emails, so whe to use the dafault? https://cloud.google.com/bigquery/docs/column-data-masking-intro#masking_options
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+data masking with BQ is correct with email masking rule.
+Ref - https://cloud.google.com/bigquery/docs/column-data-masking-intro
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+GCP001
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+data masking with BQ is correct with email masking rule.
+Ref - https://cloud.google.com/bigquery/docs/column-data-masking-intro
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+data masking with BQ is correct with email masking rule.
+Ref - https://cloud.google.com/bigquery/docs/column-data-masking-intro
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+should be correct if they want to access tables and it's not valid for datasets
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+should be correct if they want to access tables and it's not valid for datasets
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+tibuenoc
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+should be correct if they want to access tables and it's not valid for datasets
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+should be correct if they want to access tables and it's not valid for datasets
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+why not B?
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Jordan18
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+why not B?
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+why not B?
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The reason option C works well is that dynamic data masking in BigQuery allows the underlying data to remain unaltered (thus preserving the ability to join on this field), while also preventing analysts from viewing the actual PII. 
+- The analysts can query and join the data as needed for their analysis, but when they access the data, the email field will be masked according to the policy tag, and they will only see the masked version.
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+raaad
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+- The reason option C works well is that dynamic data masking in BigQuery allows the underlying data to remain unaltered (thus preserving the ability to join on this field), while also preventing analysts from viewing the actual PII. 
+- The analysts can query and join the data as needed for their analysis, but when they access the data, the email field will be masked according to the policy tag, and they will only see the masked version.
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+- The reason option C works well is that dynamic data masking in BigQuery allows the underlying data to remain unaltered (thus preserving the ability to join on this field), while also preventing analysts from viewing the actual PII. 
+- The analysts can query and join the data as needed for their analysis, but when they access the data, the email field will be masked according to the policy tag, and they will only see the masked version.
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+D. 1. Load the CSV files from Cloud Storage into a BigQuery table, and enable dynamic data masking.
+2. Create a policy tag with the default masking value as the data masking rule.
+3. Assign the policy to the email field in both tables.
+4. Assign the Identity and Access Management bigquerydatapolicy.maskedReader role for the BigQuery tables to the analysts
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+scaenruy
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. 1. Load the CSV files from Cloud Storage into a BigQuery table, and enable dynamic data masking.
+2. Create a policy tag with the default masking value as the data masking rule.
+3. Assign the policy to the email field in both tables.
+4. Assign the Identity and Access Management bigquerydatapolicy.maskedReader role for the BigQuery tables to the analysts
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. 1. Load the CSV files from Cloud Storage into a BigQuery table, and enable dynamic data masking.
+2. Create a policy tag with the default masking value as the data masking rule.
+3. Assign the policy to the email field in both tables.
+4. Assign the Identity and Access Management bigquerydatapolicy.maskedReader role for the BigQuery tables to the analysts
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

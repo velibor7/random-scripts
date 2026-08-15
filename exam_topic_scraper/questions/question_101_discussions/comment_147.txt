@@ -1,0 +1,13 @@
+COMMENT #147 FOR QUESTION 101
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Also, 
+For your scenario with 10 TB of data in Cloud SQL, if you export to Avro without specifying compression, you can expect the resulting Avro file to be around the same size, potentially slightly smaller depending on the data characteristics. Here in this question, there is no mentioning about compression. 
+
+So let's not assume that the data being used in Avro format will get compressed. 
+
+If Google cloud storage itself, can't handle an object of size greater than 5 TB, there is no point of using gsutil
+============================================================

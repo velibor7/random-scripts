@@ -1,0 +1,925 @@
+{
+  "question": "You are updating the code for a subscriber to a Pub/Sub feed. You are concerned that upon deployment the subscriber may erroneously acknowledge messages, leading to message loss. Your subscriber is not set up to retain acknowledged messages. What should you do to ensure that you can recover from errors after deployment?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet up the Pub/Sub emulator on your local machine. Validate the behavior of your new subscriber logic before deploying it to production.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse Cloud Build for your deployment. If an error occurs after deployment, use a Seek operation to locate a timestamp logged by Cloud Build at the start of the deployment.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tEnable dead-lettering on the Pub/Sub topic to capture messages that aren't successfully acknowledged. If an error occurs after deployment, re-deliver any messages captured by the dead-letter queue.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 170 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 170\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are updating the code for a subscriber to a Pub/Sub feed. You are concerned that upon deployment the subscriber may erroneously acknowledge messages, leading to message loss. Your subscriber is not set up to retain acknowledged messages. What should you do to ensure that you can recover from errors after deployment?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet up the Pub/Sub emulator on your local machine. Validate the behavior of your new subscriber logic before deploying it to production.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse Cloud Build for your deployment. If an error occurs after deployment, use a Seek operation to locate a timestamp logged by Cloud Build at the start of the deployment.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tEnable dead-lettering on the Pub/Sub topic to capture messages that aren't successfully acknowledged. If an error occurs after deployment, re-deliver any messages captured by the dead-letter queue.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAWSandeep\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 2, 2022, 7:38 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 170\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAWSandeep\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 2, 2022, 7:38 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "B. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\n\nAccording to the second reference in the list below, a concern with deploying new subscriber code is that the new executable may erroneously acknowledge messages, leading to message loss. Incorporating snapshots into your deployment process gives you a way to recover from bugs in new subscriber code.\n\nAnswer cannot be C because To seek to a timestamp, you must first configure the subscription to retain acknowledged messages using retain-acked-messages. If retain-acked-messages is set, Pub/Sub retains acknowledged messages for 7 days.\n\nReferences: \nhttps://cloud.google.com/pubsub/docs/replay-message\nhttps://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "B. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\n\nAccording to the second reference in the list below, a concern with deploying new subscriber code is that the new executable may erroneously acknowledge messages, leading to message loss. Incorporating snapshots into your deployment process gives you a way to recover from bugs in new subscriber code.\n\nAnswer cannot be C because To seek to a timestamp, you must first configure the subscription to retain acknowledged messages using retain-acked-messages. If retain-acked-messages is set, Pub/Sub retains acknowledged messages for 7 days.\n\nReferences: \nhttps://cloud.google.com/pubsub/docs/replay-message\nhttps://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "B. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\n\nAccording to the second reference in the list below, a concern with deploying new subscriber code is that the new executable may erroneously acknowledge messages, leading to message loss. Incorporating snapshots into your deployment process gives you a way to recover from bugs in new subscriber code.\n\nAnswer cannot be C because To seek to a timestamp, you must first configure the subscription to retain acknowledged messages using retain-acked-messages. If retain-acked-messages is set, Pub/Sub retains acknowledged messages for 7 days.\n\nReferences: \nhttps://cloud.google.com/pubsub/docs/replay-message\nhttps://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "B. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\n\nAccording to the second reference in the list below, a concern with deploying new subscriber code is that the new executable may erroneously acknowledge messages, leading to message loss. Incorporating snapshots into your deployment process gives you a way to recover from bugs in new subscriber code.\n\nAnswer cannot be C because To seek to a timestamp, you must first configure the subscription to retain acknowledged messages using retain-acked-messages. If retain-acked-messages is set, Pub/Sub retains acknowledged messages for 7 days.\n\nReferences: \nhttps://cloud.google.com/pubsub/docs/replay-message\nhttps://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "B. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\n\nAccording to the second reference in the list below, a concern with deploying new subscriber code is that the new executable may erroneously acknowledge messages, leading to message loss. Incorporating snapshots into your deployment process gives you a way to recover from bugs in new subscriber code.\n\nAnswer cannot be C because To seek to a timestamp, you must first configure the subscription to retain acknowledged messages using retain-acked-messages. If retain-acked-messages is set, Pub/Sub retains acknowledged messages for 7 days.\n\nReferences: \nhttps://cloud.google.com/pubsub/docs/replay-message\nhttps://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "AWSandeep\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "B. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\n\nAccording to the second reference in the list below, a concern with deploying new subscriber code is that the new executable may erroneously acknowledge messages, leading to message loss. Incorporating snapshots into your deployment process gives you a way to recover from bugs in new subscriber code.\n\nAnswer cannot be C because To seek to a timestamp, you must first configure the subscription to retain acknowledged messages using retain-acked-messages. If retain-acked-messages is set, Pub/Sub retains acknowledged messages for 7 days.\n\nReferences: \nhttps://cloud.google.com/pubsub/docs/replay-message\nhttps://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\n\nAccording to the second reference in the list below, a concern with deploying new subscriber code is that the new executable may erroneously acknowledge messages, leading to message loss. Incorporating snapshots into your deployment process gives you a way to recover from bugs in new subscriber code.\n\nAnswer cannot be C because To seek to a timestamp, you must first configure the subscription to retain acknowledged messages using retain-acked-messages. If retain-acked-messages is set, Pub/Sub retains acknowledged messages for 7 days.\n\nReferences: \nhttps://cloud.google.com/pubsub/docs/replay-message\nhttps://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 13 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "Don't think we need to configure subscription to retain ack messages. It is defaulted to retain for 7 days",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "Don't think we need to configure subscription to retain ack messages. It is defaulted to retain for 7 days",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "jkhong\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Don't think we need to configure subscription to retain ack messages. It is defaulted to retain for 7 days",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Don't think we need to configure subscription to retain ack messages. It is defaulted to retain for 7 days",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Creating a snapshot allows you to capture the state of your subscription at a specific point in time. If an error occurs, you can use the Seek operation to reset the acknowledgment state of messages to the snapshot, ensuring that no messages are lost\n\nhttps://cloud.google.com/pubsub/docs/reference/rest/v1/Snapshot",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Pime13\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Creating a snapshot allows you to capture the state of your subscription at a specific point in time. If an error occurs, you can use the Seek operation to reset the acknowledgment state of messages to the snapshot, ensuring that no messages are lost\n\nhttps://cloud.google.com/pubsub/docs/reference/rest/v1/Snapshot",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Creating a snapshot allows you to capture the state of your subscription at a specific point in time. If an error occurs, you can use the Seek operation to reset the acknowledgment state of messages to the snapshot, ensuring that no messages are lost\n\nhttps://cloud.google.com/pubsub/docs/reference/rest/v1/Snapshot",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "not D because: Dead-lettering is useful for handling messages that can't be processed successfully, but it doesn't help with messages that have been erroneously acknowledged. Once a message is acknowledged, it is considered processed and won't be sent to the dead-letter queue.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "not D because: Dead-lettering is useful for handling messages that can't be processed successfully, but it doesn't help with messages that have been erroneously acknowledged. Once a message is acknowledged, it is considered processed and won't be sent to the dead-letter queue.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Pime13\n\t\t\t\n\n\n\t\t\t3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "not D because: Dead-lettering is useful for handling messages that can't be processed successfully, but it doesn't help with messages that have been erroneously acknowledged. Once a message is acknowledged, it is considered processed and won't be sent to the dead-letter queue.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "not D because: Dead-lettering is useful for handling messages that can't be processed successfully, but it doesn't help with messages that have been erroneously acknowledged. Once a message is acknowledged, it is considered processed and won't be sent to the dead-letter queue.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "C. Use a BigQuery view to define your preprocessing logic. When creating your model, use the view as your model training data. At prediction time, use BigQuery's ML.EVALUATE clause without specifying any transformations on the raw input data.\n\nExplanation:\nPreventing Data Skew:\n\nTraining-serving skew occurs when the transformations applied to training data are not identically applied to prediction data. Using a BigQuery view ensures consistent preprocessing for both training and prediction.\nAdvantages of BigQuery Views:\n\nViews encapsulate preprocessing logic, ensuring that the same transformations are applied whenever the view is queried.\nBy referencing the view during both training and prediction, you eliminate the need for manual transformations and the risk of discrepancies.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "f74ca0c\n\t\t\t\n\n\n\t\t\t3\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Use a BigQuery view to define your preprocessing logic. When creating your model, use the view as your model training data. At prediction time, use BigQuery's ML.EVALUATE clause without specifying any transformations on the raw input data.\n\nExplanation:\nPreventing Data Skew:\n\nTraining-serving skew occurs when the transformations applied to training data are not identically applied to prediction data. Using a BigQuery view ensures consistent preprocessing for both training and prediction.\nAdvantages of BigQuery Views:\n\nViews encapsulate preprocessing logic, ensuring that the same transformations are applied whenever the view is queried.\nBy referencing the view during both training and prediction, you eliminate the need for manual transformations and the risk of discrepancies.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Use a BigQuery view to define your preprocessing logic. When creating your model, use the view as your model training data. At prediction time, use BigQuery's ML.EVALUATE clause without specifying any transformations on the raw input data.\n\nExplanation:\nPreventing Data Skew:\n\nTraining-serving skew occurs when the transformations applied to training data are not identically applied to prediction data. Using a BigQuery view ensures consistent preprocessing for both training and prediction.\nAdvantages of BigQuery Views:\n\nViews encapsulate preprocessing logic, ensuring that the same transformations are applied whenever the view is queried.\nBy referencing the view during both training and prediction, you eliminate the need for manual transformations and the risk of discrepancies.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "Taking a snapshot allows redelivering messages that were published while any faulty subscriber logic was running. \nThe seek timestamp would come after deployment so even erroneously acknowledged messages could be recovered.\nhttps://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases\nBy creating a snapshot of the subscription before deploying new code, you can preserve the state of unacknowledged messages. If after deployment you find that the new subscriber code is erroneously acknowledging messages, you can use the Seek operation with the snapshot to reset the subscription's acknowledgment state to the time the snapshot was created. This would effectively re-deliver messages available since the snapshot, ensuring you can recover from errors. This approach does not require setting up a local emulator and directly addresses the concern of message loss due to erroneous acknowledgments.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t9\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Taking a snapshot allows redelivering messages that were published while any faulty subscriber logic was running. \nThe seek timestamp would come after deployment so even erroneously acknowledged messages could be recovered.\nhttps://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases\nBy creating a snapshot of the subscription before deploying new code, you can preserve the state of unacknowledged messages. If after deployment you find that the new subscriber code is erroneously acknowledging messages, you can use the Seek operation with the snapshot to reset the subscription's acknowledgment state to the time the snapshot was created. This would effectively re-deliver messages available since the snapshot, ensuring you can recover from errors. This approach does not require setting up a local emulator and directly addresses the concern of message loss due to erroneous acknowledgments.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Taking a snapshot allows redelivering messages that were published while any faulty subscriber logic was running. \nThe seek timestamp would come after deployment so even erroneously acknowledged messages could be recovered.\nhttps://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases\nBy creating a snapshot of the subscription before deploying new code, you can preserve the state of unacknowledged messages. If after deployment you find that the new subscriber code is erroneously acknowledging messages, you can use the Seek operation with the snapshot to reset the subscription's acknowledgment state to the time the snapshot was created. This would effectively re-deliver messages available since the snapshot, ensuring you can recover from errors. This approach does not require setting up a local emulator and directly addresses the concern of message loss due to erroneous acknowledgments.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "B.\n\nfrom the documentation: \nhttps://cloud.google.com/pubsub/docs/replay-message \nPub/Sub cannot retrieve the messages after you have acknowledged them. However, sometimes you might find it necessary to replay the acknowledged messages, for example, if you performed an erroneous acknowledgment. Then you can use the Seek feature to mark previously acknowledged messages as unacknowledged, and force Pub/Sub to redeliver those messages. You can also use seek to delete the unacknowledged messages by changing their state to acknowledged.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "[Removed]\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B.\n\nfrom the documentation: \nhttps://cloud.google.com/pubsub/docs/replay-message \nPub/Sub cannot retrieve the messages after you have acknowledged them. However, sometimes you might find it necessary to replay the acknowledged messages, for example, if you performed an erroneous acknowledgment. Then you can use the Seek feature to mark previously acknowledged messages as unacknowledged, and force Pub/Sub to redeliver those messages. You can also use seek to delete the unacknowledged messages by changing their state to acknowledged.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B.\n\nfrom the documentation: \nhttps://cloud.google.com/pubsub/docs/replay-message \nPub/Sub cannot retrieve the messages after you have acknowledged them. However, sometimes you might find it necessary to replay the acknowledged messages, for example, if you performed an erroneous acknowledgment. Then you can use the Seek feature to mark previously acknowledged messages as unacknowledged, and force Pub/Sub to redeliver those messages. You can also use seek to delete the unacknowledged messages by changing their state to acknowledged.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "pls correct me if I am wrong , option B Option B only allows you to re-deliver messages that were available before the snapshot was created. If an error occurs after the snapshot was created, you will not be able to re-deliver those messages.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "vamgcp\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "pls correct me if I am wrong , option B Option B only allows you to re-deliver messages that were available before the snapshot was created. If an error occurs after the snapshot was created, you will not be able to re-deliver those messages.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "pls correct me if I am wrong , option B Option B only allows you to re-deliver messages that were available before the snapshot was created. If an error occurs after the snapshot was created, you will not be able to re-deliver those messages.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Q: You are concerned that upon deployment the subscriber may erroneously acknowledge messages, leading to message loss. \n   -> So the message is mistakenly acked and removed from topic/subscription. This means even if you have a snapshot of pre-deployment but you don't have a backup or copy of post-deployment messages.\n\nQ: Your subscriber is not set up to retain acknowledged messages.\n  -> To seek to a time in the past and replay previously-acknowledged messages, \"you must first configure message retention on the topic\" or \"configure the subscription to retain acknowledged messages\" (ref: https://cloud.google.com/pubsub/docs/replay-overview#configuring_message_retention)\n\nSo B, C, D do not solve the problem of erroneously acked messages as long as you don't have message retention configured on topic/subscription.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "cetanx\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Q: You are concerned that upon deployment the subscriber may erroneously acknowledge messages, leading to message loss. \n   -> So the message is mistakenly acked and removed from topic/subscription. This means even if you have a snapshot of pre-deployment but you don't have a backup or copy of post-deployment messages.\n\nQ: Your subscriber is not set up to retain acknowledged messages.\n  -> To seek to a time in the past and replay previously-acknowledged messages, \"you must first configure message retention on the topic\" or \"configure the subscription to retain acknowledged messages\" (ref: https://cloud.google.com/pubsub/docs/replay-overview#configuring_message_retention)\n\nSo B, C, D do not solve the problem of erroneously acked messages as long as you don't have message retention configured on topic/subscription.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Q: You are concerned that upon deployment the subscriber may erroneously acknowledge messages, leading to message loss. \n   -> So the message is mistakenly acked and removed from topic/subscription. This means even if you have a snapshot of pre-deployment but you don't have a backup or copy of post-deployment messages.\n\nQ: Your subscriber is not set up to retain acknowledged messages.\n  -> To seek to a time in the past and replay previously-acknowledged messages, \"you must first configure message retention on the topic\" or \"configure the subscription to retain acknowledged messages\" (ref: https://cloud.google.com/pubsub/docs/replay-overview#configuring_message_retention)\n\nSo B, C, D do not solve the problem of erroneously acked messages as long as you don't have message retention configured on topic/subscription.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "You are updating the code for a subscriber to a Pub/Sub feed. You are concerned that upon deployment the subscriber may erroneously acknowledge messages, leading to message loss. Your subscriber is not set up to retain acknowledged messages. What should you do to ensure that you can recover from errors after deployment?\nA. Set up the Pub/Sub emulator on your local machine. Validate the behavior of your new subscriber logic before deploying it to production.\nB. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\nC. Use Cloud Build for your deployment. If an error occurs after deployment, use a Seek operation to locate a timestamp logged by Cloud Build at the start of the deployment.\nD. Enable dead-lettering on the Pub/Sub topic to capture messages that aren't successfully acknowledged. If an error occurs after deployment, re-deliver any messages captured by the dead-letter queue.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "lucaluca1982\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You are updating the code for a subscriber to a Pub/Sub feed. You are concerned that upon deployment the subscriber may erroneously acknowledge messages, leading to message loss. Your subscriber is not set up to retain acknowledged messages. What should you do to ensure that you can recover from errors after deployment?\nA. Set up the Pub/Sub emulator on your local machine. Validate the behavior of your new subscriber logic before deploying it to production.\nB. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\nC. Use Cloud Build for your deployment. If an error occurs after deployment, use a Seek operation to locate a timestamp logged by Cloud Build at the start of the deployment.\nD. Enable dead-lettering on the Pub/Sub topic to capture messages that aren't successfully acknowledged. If an error occurs after deployment, re-deliver any messages captured by the dead-letter queue.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You are updating the code for a subscriber to a Pub/Sub feed. You are concerned that upon deployment the subscriber may erroneously acknowledge messages, leading to message loss. Your subscriber is not set up to retain acknowledged messages. What should you do to ensure that you can recover from errors after deployment?\nA. Set up the Pub/Sub emulator on your local machine. Validate the behavior of your new subscriber logic before deploying it to production.\nB. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.\nC. Use Cloud Build for your deployment. If an error occurs after deployment, use a Seek operation to locate a timestamp logged by Cloud Build at the start of the deployment.\nD. Enable dead-lettering on the Pub/Sub topic to capture messages that aren't successfully acknowledged. If an error occurs after deployment, re-deliver any messages captured by the dead-letter queue.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Option D:\nDead letter option allow you to recover message from errors after deployment by re-delivering any messages captured by the dead-letter queue. \nhttps://cloud.google.com/pubsub/docs/handling-failures#dead_letter_topic\nwhy not B, \nbecause snapshot is time taking process and if messages were erroneously acknowledged, it will not bring them back. It is useful when you want to secure the current data and want to make changes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "musumusu\n\t\t\t\n\n\n\t\t\t1\u00a0year, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Option D:\nDead letter option allow you to recover message from errors after deployment by re-delivering any messages captured by the dead-letter queue. \nhttps://cloud.google.com/pubsub/docs/handling-failures#dead_letter_topic\nwhy not B, \nbecause snapshot is time taking process and if messages were erroneously acknowledged, it will not bring them back. It is useful when you want to secure the current data and want to make changes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option D:\nDead letter option allow you to recover message from errors after deployment by re-delivering any messages captured by the dead-letter queue. \nhttps://cloud.google.com/pubsub/docs/handling-failures#dead_letter_topic\nwhy not B, \nbecause snapshot is time taking process and if messages were erroneously acknowledged, it will not bring them back. It is useful when you want to secure the current data and want to make changes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Dead letter queue would help if the messages would not get acknowledged, however here they are talking about messages being erroneously acknowledged. Pub/Sub would interpret the message as being succesfully processed -> they would not end up in the dead-letter queue -> D is wrong",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Dead letter queue would help if the messages would not get acknowledged, however here they are talking about messages being erroneously acknowledged. Pub/Sub would interpret the message as being succesfully processed -> they would not end up in the dead-letter queue -> D is wrong",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "wjtb\n\t\t\t\n\n\n\t\t\t1\u00a0year, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Dead letter queue would help if the messages would not get acknowledged, however here they are talking about messages being erroneously acknowledged. Pub/Sub would interpret the message as being succesfully processed -> they would not end up in the dead-letter queue -> D is wrong",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Dead letter queue would help if the messages would not get acknowledged, however here they are talking about messages being erroneously acknowledged. Pub/Sub would interpret the message as being succesfully processed -> they would not end up in the dead-letter queue -> D is wrong",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 7 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "B is the answer.\n\nhttps://cloud.google.com/pubsub/docs/replay-overview\nThe Seek feature extends subscriber functionality by allowing you to alter the acknowledgement state of messages in bulk. For example, you can replay previously acknowledged messages or purge messages in bulk. In addition, you can copy the state of one subscription to another by using seek in combination with a Snapshot.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "zellck\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B is the answer.\n\nhttps://cloud.google.com/pubsub/docs/replay-overview\nThe Seek feature extends subscriber functionality by allowing you to alter the acknowledgement state of messages in bulk. For example, you can replay previously acknowledged messages or purge messages in bulk. In addition, you can copy the state of one subscription to another by using seek in combination with a Snapshot.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B is the answer.\n\nhttps://cloud.google.com/pubsub/docs/replay-overview\nThe Seek feature extends subscriber functionality by allowing you to alter the acknowledgement state of messages in bulk. For example, you can replay previously acknowledged messages or purge messages in bulk. In addition, you can copy the state of one subscription to another by using seek in combination with a Snapshot.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "B\nThe Seek feature extends subscriber functionality by allowing you to alter the acknowledgement state of messages in bulk. For example, you can replay previously acknowledged messages or purge messages in bulk. In addition, you can copy the state of one subscription to another by using seek in combination with a Snapshot.\n\nhttps://cloud.google.com/pubsub/docs/replay-overview",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "Atnafu\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B\nThe Seek feature extends subscriber functionality by allowing you to alter the acknowledgement state of messages in bulk. For example, you can replay previously acknowledged messages or purge messages in bulk. In addition, you can copy the state of one subscription to another by using seek in combination with a Snapshot.\n\nhttps://cloud.google.com/pubsub/docs/replay-overview",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B\nThe Seek feature extends subscriber functionality by allowing you to alter the acknowledgement state of messages in bulk. For example, you can replay previously acknowledged messages or purge messages in bulk. In addition, you can copy the state of one subscription to another by using seek in combination with a Snapshot.\n\nhttps://cloud.google.com/pubsub/docs/replay-overview",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "Answer B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "TNT87\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "should be B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "PhuocT\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "should be B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "should be B.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

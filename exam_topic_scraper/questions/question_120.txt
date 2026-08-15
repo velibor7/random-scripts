@@ -1,0 +1,1380 @@
+================================================================================
+QUESTION:
+You are operating a Cloud Dataflow streaming pipeline. The pipeline aggregates events from a Cloud Pub/Sub subscription source, within a window, and sinks the resulting aggregation to a Cloud Storage bucket. The source has consistent throughput. You want to monitor an alert on behavior of the pipeline with CloudStackdriver to ensure that it is processing data. Which Stackdriver alerts should you create?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											An alert based on a decrease of subscription/num_undelivered_messages for the source and a rate of change increase of instance/storage/ used_bytes for the destination
+										
+
+
+													B.
+												
+											
+											An alert based on an increase of subscription/num_undelivered_messages for the source and a rate of change decrease of instance/storage/ used_bytes for the destination
+										
+
+
+													C.
+												
+											
+											An alert based on a decrease of instance/storage/used_bytes for the source and a rate of change increase of subscription/ num_undelivered_messages for the destination
+										
+
+
+													D.
+												
+											
+											An alert based on an increase of instance/storage/used_bytes for the source and a rate of change decrease of subscription/ num_undelivered_messages for the destination
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (237 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 120 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 120
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are operating a Cloud Dataflow streaming pipeline. The pipeline aggregates events from a Cloud Pub/Sub subscription source, within a window, and sinks the resulting aggregation to a Cloud Storage bucket. The source has consistent throughput. You want to monitor an alert on behavior of the pipeline with CloudStackdriver to ensure that it is processing data. Which Stackdriver alerts should you create?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											An alert based on a decrease of subscription/num_undelivered_messages for the source and a rate of change increase of instance/storage/ used_bytes for the destination
+										
+
+
+													B.
+												
+											
+											An alert based on an increase of subscription/num_undelivered_messages for the source and a rate of change decrease of instance/storage/ used_bytes for the destination
+										
+
+
+													C.
+												
+											
+											An alert based on a decrease of instance/storage/used_bytes for the source and a rate of change increase of subscription/ num_undelivered_messages for the destination
+										
+
+
+													D.
+												
+											
+											An alert based on an increase of instance/storage/used_bytes for the source and a rate of change decrease of subscription/ num_undelivered_messages for the destination
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 12:46 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 120
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 12:46 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+You would want to get alerted only if Pipeline fails & not if it is running fine. I think Option [B] is correct, because in event of Pipeline failure :
+1) subscription/ num_undelivered_messages would pile up at a constant rate as the source has consistent throughput
+2) instance/storage/ used_bytes will get closer to zero. Hence need to monitor it's rate of change
+
+--- Comment #6 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+You would want to get alerted only if Pipeline fails & not if it is running fine. I think Option [B] is correct, because in event of Pipeline failure :
+1) subscription/ num_undelivered_messages would pile up at a constant rate as the source has consistent throughput
+2) instance/storage/ used_bytes will get closer to zero. Hence need to monitor it's rate of change
+
+--- Comment #7 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+You would want to get alerted only if Pipeline fails & not if it is running fine. I think Option [B] is correct, because in event of Pipeline failure :
+1) subscription/ num_undelivered_messages would pile up at a constant rate as the source has consistent throughput
+2) instance/storage/ used_bytes will get closer to zero. Hence need to monitor it's rate of change
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+You would want to get alerted only if Pipeline fails & not if it is running fine. I think Option [B] is correct, because in event of Pipeline failure :
+1) subscription/ num_undelivered_messages would pile up at a constant rate as the source has consistent throughput
+2) instance/storage/ used_bytes will get closer to zero. Hence need to monitor it's rate of change
+
+--- Comment #13 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+You would want to get alerted only if Pipeline fails & not if it is running fine. I think Option [B] is correct, because in event of Pipeline failure :
+1) subscription/ num_undelivered_messages would pile up at a constant rate as the source has consistent throughput
+2) instance/storage/ used_bytes will get closer to zero. Hence need to monitor it's rate of change
+
+--- Comment #14 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+dambilwa
+			
+
+
+				Highly Voted 
+
+
+			3 years, 3 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+You would want to get alerted only if Pipeline fails & not if it is running fine. I think Option [B] is correct, because in event of Pipeline failure :
+1) subscription/ num_undelivered_messages would pile up at a constant rate as the source has consistent throughput
+2) instance/storage/ used_bytes will get closer to zero. Hence need to monitor it's rate of change
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+You would want to get alerted only if Pipeline fails & not if it is running fine. I think Option [B] is correct, because in event of Pipeline failure :
+1) subscription/ num_undelivered_messages would pile up at a constant rate as the source has consistent throughput
+2) instance/storage/ used_bytes will get closer to zero. Hence need to monitor it's rate of change
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 28 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Yes, you are right, it should be B:
+Thank you
+
+--- Comment #20 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Yes, you are right, it should be B:
+Thank you
+
+--- Comment #21 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Barniyah
+			
+
+
+			3 years, 3 months ago
+
+--- Comment #22 ---
+Author: Unknown | Date:  | Votes: 0
+Yes, you are right, it should be B:
+Thank you
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+Yes, you are right, it should be B:
+Thank you
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #28 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Why would the instance/storage/used_bytes get closer to zero? If there's an error at a certain point, wouldn't we just see that the used_bytes remain constant while the num_undelivered_messages increases? I don't get why the destination's used bytes should decrease.
+
+--- Comment #29 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+marioferrulli
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #30 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Why would the instance/storage/used_bytes get closer to zero? If there's an error at a certain point, wouldn't we just see that the used_bytes remain constant while the num_undelivered_messages increases? I don't get why the destination's used bytes should decrease.
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+Why would the instance/storage/used_bytes get closer to zero? If there's an error at a certain point, wouldn't we just see that the used_bytes remain constant while the num_undelivered_messages increases? I don't get why the destination's used bytes should decrease.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+"If there's an error at a certain point, wouldn't we just see that the used_bytes remain constant while the num_undelivered_messages increases?"
+It's the rate of change, not the absolute value
+
+--- Comment #35 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+"If there's an error at a certain point, wouldn't we just see that the used_bytes remain constant while the num_undelivered_messages increases?"
+It's the rate of change, not the absolute value
+
+--- Comment #36 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+baubaumiaomiao
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+"If there's an error at a certain point, wouldn't we just see that the used_bytes remain constant while the num_undelivered_messages increases?"
+It's the rate of change, not the absolute value
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+"If there's an error at a certain point, wouldn't we just see that the used_bytes remain constant while the num_undelivered_messages increases?"
+It's the rate of change, not the absolute value
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #43 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+"rate of change decrease of instance/storage/ used_bytes" - if rate of instance/storage/ used_bytes decreases that means less data is written - so something is wrong with the pipeline.
+It's not used bytes that decreases - it's rate of change decreases. 
+Example: if everything works fine your pipeline writes 5MB/s to the sink. If it decreases to 0.1MB/s it means something is wrong
+
+--- Comment #44 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+szefco
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+"rate of change decrease of instance/storage/ used_bytes" - if rate of instance/storage/ used_bytes decreases that means less data is written - so something is wrong with the pipeline.
+It's not used bytes that decreases - it's rate of change decreases. 
+Example: if everything works fine your pipeline writes 5MB/s to the sink. If it decreases to 0.1MB/s it means something is wrong
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+"rate of change decrease of instance/storage/ used_bytes" - if rate of instance/storage/ used_bytes decreases that means less data is written - so something is wrong with the pipeline.
+It's not used bytes that decreases - it's rate of change decreases. 
+Example: if everything works fine your pipeline writes 5MB/s to the sink. If it decreases to 0.1MB/s it means something is wrong
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #53 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Correct - B
+
+--- Comment #54 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			3 years, 6 months ago
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+Correct - B
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+Correct - B
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 21 times
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #61 ---
+Author: Unknown | Date: 3 weeks, 3 days ago | Votes: 0
+It should be Answer A.  You want to see in being processed versus looking for a bottleneck.
+
+--- Comment #62 ---
+Author: Unknown | Date: 3 weeks, 3 days ago | Votes: 0
+desertlotus1211
+			
+
+
+				Most Recent 
+
+
+			3 weeks, 3 days ago
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+It should be Answer A.  You want to see in being processed versus looking for a bottleneck.
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+It should be Answer A.  You want to see in being processed versus looking for a bottleneck.
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #70 ---
+Author: Unknown | Date: 6 months, 4 weeks ago | Votes: 0
+For those who may get confuse at the start by the term 'subscription/num_undelivered_messages', it is not a division. It is the full path of the metric. So we should just read it as 'num_undelivered_messages'. The same for 'used_bytes'.
+
+So if we see the source have more backlog (more num_undelivered_messages), or the destination ultilization going down, that is the indicator of something going wrong
+
+--- Comment #71 ---
+Author: Unknown | Date: 6 months, 4 weeks ago | Votes: 0
+midgoo
+			
+
+
+			6 months, 4 weeks ago
+
+--- Comment #72 ---
+Author: Unknown | Date: 3 weeks, 3 days ago | Votes: 0
+For those who may get confuse at the start by the term 'subscription/num_undelivered_messages', it is not a division. It is the full path of the metric. So we should just read it as 'num_undelivered_messages'. The same for 'used_bytes'.
+
+So if we see the source have more backlog (more num_undelivered_messages), or the destination ultilization going down, that is the indicator of something going wrong
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+For those who may get confuse at the start by the term 'subscription/num_undelivered_messages', it is not a division. It is the full path of the metric. So we should just read it as 'num_undelivered_messages'. The same for 'used_bytes'.
+
+So if we see the source have more backlog (more num_undelivered_messages), or the destination ultilization going down, that is the indicator of something going wrong
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 15 times
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #77 ---
+Author: Unknown | Date: 3 weeks, 3 days ago | Votes: 0
+the Answer is A.  You want to see it working.
+
+--- Comment #78 ---
+Author: Unknown | Date: 3 weeks, 3 days ago | Votes: 0
+the Answer is A.  You want to see it working.
+
+--- Comment #79 ---
+Author: Unknown | Date: 3 weeks, 3 days ago | Votes: 0
+desertlotus1211
+			
+
+
+			3 weeks, 3 days ago
+
+--- Comment #80 ---
+Author: Unknown | Date: 3 weeks, 3 days ago | Votes: 0
+the Answer is A.  You want to see it working.
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+the Answer is A.  You want to see it working.
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #84 ---
+Author: Unknown | Date: 3 weeks, 3 days ago | Votes: 0
+you're looking for evidence that it's working:
+' that it is processing data....'
+
+--- Comment #85 ---
+Author: Unknown | Date: 3 weeks, 3 days ago | Votes: 0
+you're looking for evidence that it's working:
+' that it is processing data....'
+
+--- Comment #86 ---
+Author: Unknown | Date: 3 weeks, 3 days ago | Votes: 0
+desertlotus1211
+			
+
+
+			3 weeks, 3 days ago
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+you're looking for evidence that it's working:
+' that it is processing data....'
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+you're looking for evidence that it's working:
+' that it is processing data....'
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #94 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+great explanation thanks !
+
+--- Comment #95 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+kryzo
+			
+
+
+			4 months ago
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+great explanation thanks !
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+great explanation thanks !
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #103 ---
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+Answer B:
+Trick: In stackdriver always put Alert for Subscriber  + CPU
+Subscriber - num of undelivered message INCREASE alert
+CPU  - Instance or storage DECREASE alert. 
+Make sense right !
+
+--- Comment #104 ---
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+musumusu
+			
+
+
+			7 months, 2 weeks ago
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+Answer B:
+Trick: In stackdriver always put Alert for Subscriber  + CPU
+Subscriber - num of undelivered message INCREASE alert
+CPU  - Instance or storage DECREASE alert. 
+Make sense right !
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+Answer B:
+Trick: In stackdriver always put Alert for Subscriber  + CPU
+Subscriber - num of undelivered message INCREASE alert
+CPU  - Instance or storage DECREASE alert. 
+Make sense right !
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #111 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Nobody seems to pay attention to instance/storage/used_bytes. I only find this metric for Spanner. 
+https://cloud.google.com/monitoring/api/metrics_gcp#gcp-spanner
+
+While Dataflow processes and stores everything in Cloud Storage, Spanner could only be the source.
+https://cloud.google.com/spanner/docs/change-streams
+
+Also, if it is either A or B, the instance/storage/used_bytes metric does not make sense for the destination, which is Cloud Storage.
+
+Can anyone help me understand?
+
+--- Comment #112 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+atlan
+			
+
+
+			9 months ago
+
+--- Comment #113 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+Nobody seems to pay attention to instance/storage/used_bytes. I only find this metric for Spanner. 
+https://cloud.google.com/monitoring/api/metrics_gcp#gcp-spanner
+
+While Dataflow processes and stores everything in Cloud Storage, Spanner could only be the source.
+https://cloud.google.com/spanner/docs/change-streams
+
+Also, if it is either A or B, the instance/storage/used_bytes metric does not make sense for the destination, which is Cloud Storage.
+
+Can anyone help me understand?
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+Nobody seems to pay attention to instance/storage/used_bytes. I only find this metric for Spanner. 
+https://cloud.google.com/monitoring/api/metrics_gcp#gcp-spanner
+
+While Dataflow processes and stores everything in Cloud Storage, Spanner could only be the source.
+https://cloud.google.com/spanner/docs/change-streams
+
+Also, if it is either A or B, the instance/storage/used_bytes metric does not make sense for the destination, which is Cloud Storage.
+
+Can anyone help me understand?
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #117 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+look here: https://cloud.google.com/monitoring/api/metrics_gcp
+
+instance/storage/used_bytes GA
+Storage used.
+
+--- Comment #118 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+look here: https://cloud.google.com/monitoring/api/metrics_gcp
+
+instance/storage/used_bytes GA
+Storage used.
+
+--- Comment #119 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+desertlotus1211
+			
+
+
+			8 months, 3 weeks ago
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+look here: https://cloud.google.com/monitoring/api/metrics_gcp
+
+instance/storage/used_bytes GA
+Storage used.
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+look here: https://cloud.google.com/monitoring/api/metrics_gcp
+
+instance/storage/used_bytes GA
+Storage used.
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #127 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+B. An alert based on an increase of subscription/num_undelivered_messages for the source and a rate of change decrease of instance/storage/ used_bytes for the destination
+
+--- Comment #128 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+AzureDP900
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+B. An alert based on an increase of subscription/num_undelivered_messages for the source and a rate of change decrease of instance/storage/ used_bytes for the destination
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+B. An alert based on an increase of subscription/num_undelivered_messages for the source and a rate of change decrease of instance/storage/ used_bytes for the destination
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #135 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+B is right
+
+--- Comment #136 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+AzureDP900
+			
+
+
+			9 months, 2 weeks ago
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+B is right
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+B is right
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #143 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+An alert based on a decrease of subscription/num_undelivered_messages for the source and a rate of change increase of instance/storage/ used_bytes for the destination
+
+10 subscriptions / 1 undelivered messages = 10
+10 subscriptions / 5 undelivered messages = 2
+You clearly want to be alerted when the number of undelivered messages increases. The ratio then decreases. In my example from 10 to 2.
+
+--- Comment #144 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+Catweazle1983
+			
+
+
+			9 months, 2 weeks ago
+
+--- Comment #145 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+An alert based on a decrease of subscription/num_undelivered_messages for the source and a rate of change increase of instance/storage/ used_bytes for the destination
+
+10 subscriptions / 1 undelivered messages = 10
+10 subscriptions / 5 undelivered messages = 2
+You clearly want to be alerted when the number of undelivered messages increases. The ratio then decreases. In my example from 10 to 2.
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+An alert based on a decrease of subscription/num_undelivered_messages for the source and a rate of change increase of instance/storage/ used_bytes for the destination
+
+10 subscriptions / 1 undelivered messages = 10
+10 subscriptions / 5 undelivered messages = 2
+You clearly want to be alerted when the number of undelivered messages increases. The ratio then decreases. In my example from 10 to 2.
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #150 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+subscription/num_undelivered_messages  is a path, not a division.
+
+--- Comment #151 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+subscription/num_undelivered_messages  is a path, not a division.
+
+--- Comment #152 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+squishy_fishy
+			
+
+
+			6 months, 3 weeks ago
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+subscription/num_undelivered_messages  is a path, not a division.
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+subscription/num_undelivered_messages  is a path, not a division.
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #160 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/pubsub/docs/monitoring#monitoring_the_backlog
+Monitor message backlog
+To ensure that your subscribers are keeping up with the flow of messages, create a dashboard. The dashboard can show the following backlog metrics, aggregated by resource, for all your subscriptions:
+- Unacknowledged messages (subscription/num_undelivered_messages) to see the number of unacknowledged messages.
+
+--- Comment #161 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+zellck
+			
+
+
+			10 months, 1 week ago
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+https://cloud.google.com/pubsub/docs/monitoring#monitoring_the_backlog
+Monitor message backlog
+To ensure that your subscribers are keeping up with the flow of messages, create a dashboard. The dashboard can show the following backlog metrics, aggregated by resource, for all your subscriptions:
+- Unacknowledged messages (subscription/num_undelivered_messages) to see the number of unacknowledged messages.
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+https://cloud.google.com/pubsub/docs/monitoring#monitoring_the_backlog
+Monitor message backlog
+To ensure that your subscribers are keeping up with the flow of messages, create a dashboard. The dashboard can show the following backlog metrics, aggregated by resource, for all your subscriptions:
+- Unacknowledged messages (subscription/num_undelivered_messages) to see the number of unacknowledged messages.
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #169 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Increase subscription/num delivered message
+decrease instance/storage/used bytes
+
+--- Comment #170 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+A1000
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+Increase subscription/num delivered message
+decrease instance/storage/used bytes
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+Increase subscription/num delivered message
+decrease instance/storage/used bytes
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #178 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Correct - B
+
+--- Comment #179 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Pime13
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #180 ---
+Author: Unknown | Date:  | Votes: 0
+Correct - B
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+Correct - B
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #187 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Correct: B
+
+--- Comment #188 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+JG123
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+Correct: B
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+Correct: B
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #193 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #194 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #195 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+isn't B and C are same.
+
+--- Comment #196 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Abhi16820
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #197 ---
+Author: Unknown | Date:  | Votes: 0
+isn't B and C are same.
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+isn't B and C are same.
+
+--- Comment #199 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #200 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #201 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #202 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #203 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+B.
+It's useful to monitor the source that keeps sending data while the destination that doesn't take anything in.
+
+--- Comment #204 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+JayZeeLee
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #205 ---
+Author: Unknown | Date:  | Votes: 0
+B.
+It's useful to monitor the source that keeps sending data while the destination that doesn't take anything in.
+
+--- Comment #206 ---
+Author: Unknown | Date:  | Votes: 0
+B.
+It's useful to monitor the source that keeps sending data while the destination that doesn't take anything in.
+
+--- Comment #207 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #208 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #209 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #210 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #211 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+The answer is B. 
+subscription/num_undelivered_messages: the number of messages that subscribers haven't processed https://cloud.google.com/pubsub/docs/monitoring#monitoring_forwarded_undeliverable_messages
+
+--- Comment #212 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+squishy_fishy
+			
+
+
+			2 years ago
+
+--- Comment #213 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is B. 
+subscription/num_undelivered_messages: the number of messages that subscribers haven't processed https://cloud.google.com/pubsub/docs/monitoring#monitoring_forwarded_undeliverable_messages
+
+--- Comment #214 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is B. 
+subscription/num_undelivered_messages: the number of messages that subscribers haven't processed https://cloud.google.com/pubsub/docs/monitoring#monitoring_forwarded_undeliverable_messages
+
+--- Comment #215 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #216 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #217 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #218 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #219 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Silly question: what is subscription/ num_undelivered_messages, it is divided by? or per subscription per num_undelivered_messages?
+
+--- Comment #220 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+squishy_fishy
+			
+
+
+			2 years ago
+
+--- Comment #221 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+Silly question: what is subscription/ num_undelivered_messages, it is divided by? or per subscription per num_undelivered_messages?
+
+--- Comment #222 ---
+Author: Unknown | Date:  | Votes: 0
+Silly question: what is subscription/ num_undelivered_messages, it is divided by? or per subscription per num_undelivered_messages?
+
+--- Comment #223 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #224 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #225 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+yes is misleading:
+the metric "subscription/num_undelivered_messages" is just the path of the API URL
+
+actions.googleapis.com/...subscription/num_undelivered_messages
+
+ref: https://cloud.google.com/monitoring/api/metrics_gcp#pubsub/subscription/num_undelivered_messages
+
+--- Comment #226 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+yes is misleading:
+the metric "subscription/num_undelivered_messages" is just the path of the API URL
+
+actions.googleapis.com/...subscription/num_undelivered_messages
+
+ref: https://cloud.google.com/monitoring/api/metrics_gcp#pubsub/subscription/num_undelivered_messages
+
+--- Comment #227 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+910
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #228 ---
+Author: Unknown | Date:  | Votes: 0
+yes is misleading:
+the metric "subscription/num_undelivered_messages" is just the path of the API URL
+
+actions.googleapis.com/...subscription/num_undelivered_messages
+
+ref: https://cloud.google.com/monitoring/api/metrics_gcp#pubsub/subscription/num_undelivered_messages
+
+--- Comment #229 ---
+Author: Unknown | Date:  | Votes: 0
+yes is misleading:
+the metric "subscription/num_undelivered_messages" is just the path of the API URL
+
+actions.googleapis.com/...subscription/num_undelivered_messages
+
+ref: https://cloud.google.com/monitoring/api/metrics_gcp#pubsub/subscription/num_undelivered_messages
+
+--- Comment #230 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #231 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #232 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #233 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #234 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #235 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #236 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #237 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

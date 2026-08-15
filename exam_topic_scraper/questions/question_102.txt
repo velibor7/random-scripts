@@ -1,0 +1,1528 @@
+================================================================================
+QUESTION:
+You need to create a near real-time inventory dashboard that reads the main inventory tables in your BigQuery data warehouse. Historical inventory data is stored as inventory balances by item and location. You have several thousand updates to inventory every hour. You want to maximize performance of the dashboard and ensure that the data is accurate. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Leverage BigQuery UPDATE statements to update the inventory balances as they are changing.
+										
+
+
+													B.
+												
+											
+											Partition the inventory balance table by item to reduce the amount of data scanned with each inventory update.
+										
+
+
+													C.
+												
+											
+											Use the BigQuery streaming the stream changes into a daily inventory movement table. Calculate balances in a view that joins it to the historical inventory balance table. Update the inventory balance table nightly.
+										
+
+
+													D.
+												
+											
+											Use the BigQuery bulk loader to batch load inventory changes into a daily inventory movement table. Calculate balances in a view that joins it to the historical inventory balance table. Update the inventory balance table nightly.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (263 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 102 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 102
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You need to create a near real-time inventory dashboard that reads the main inventory tables in your BigQuery data warehouse. Historical inventory data is stored as inventory balances by item and location. You have several thousand updates to inventory every hour. You want to maximize performance of the dashboard and ensure that the data is accurate. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Leverage BigQuery UPDATE statements to update the inventory balances as they are changing.
+										
+
+
+													B.
+												
+											
+											Partition the inventory balance table by item to reduce the amount of data scanned with each inventory update.
+										
+
+
+													C.
+												
+											
+											Use the BigQuery streaming the stream changes into a daily inventory movement table. Calculate balances in a view that joins it to the historical inventory balance table. Update the inventory balance table nightly.
+										
+
+
+													D.
+												
+											
+											Use the BigQuery bulk loader to batch load inventory changes into a daily inventory movement table. Calculate balances in a view that joins it to the historical inventory balance table. Update the inventory balance table nightly.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								Rajokkiyam
+							
+							
+							at 
+							March 22, 2020, 6:37 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 102
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								Rajokkiyam
+							
+							
+							at 
+							March 22, 2020, 6:37 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+A - New correct answer
+C - Old correct answer (for 2019)
+
+--- Comment #6 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+A - New correct answer
+C - Old correct answer (for 2019)
+
+--- Comment #7 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+A - New correct answer
+C - Old correct answer (for 2019)
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+A - New correct answer
+C - Old correct answer (for 2019)
+
+--- Comment #13 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+A - New correct answer
+C - Old correct answer (for 2019)
+
+--- Comment #14 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+				Highly Voted 
+
+
+			3 years, 3 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+A - New correct answer
+C - Old correct answer (for 2019)
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+A - New correct answer
+C - Old correct answer (for 2019)
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 33 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C is better
+
+The best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C is better
+
+The best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C is better
+
+The best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+C is better
+
+The best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The key reasons this is better than the other options:
+
+Using BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.
+Partitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.
+Using the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.
+So option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.
+
+--- Comment #28 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The key reasons this is better than the other options:
+
+Using BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.
+Partitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.
+Using the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.
+So option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.
+
+--- Comment #29 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #30 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The key reasons this is better than the other options:
+
+Using BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.
+Partitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.
+Using the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.
+So option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+The key reasons this is better than the other options:
+
+Using BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.
+Partitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.
+Using the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.
+So option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Here's why the other options are less suitable:
+
+A. Leverage BigQuery UPDATE statements: While technically possible, this approach is inefficient for frequent updates as it requires individual record scans and updates, affecting performance and potentially causing data race conditions.
+
+B. Partition the inventory balance table: Partitioning helps with query performance for large datasets, but it doesn't address the need for near real-time updates.
+
+D. Use the BigQuery bulk loader: Bulk loading daily changes is helpful for historical data ingestion, but it won't provide near real-time updates necessary for the dashboard.
+
+--- Comment #35 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Here's why the other options are less suitable:
+
+A. Leverage BigQuery UPDATE statements: While technically possible, this approach is inefficient for frequent updates as it requires individual record scans and updates, affecting performance and potentially causing data race conditions.
+
+B. Partition the inventory balance table: Partitioning helps with query performance for large datasets, but it doesn't address the need for near real-time updates.
+
+D. Use the BigQuery bulk loader: Bulk loading daily changes is helpful for historical data ingestion, but it won't provide near real-time updates necessary for the dashboard.
+
+--- Comment #36 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #37 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Here's why the other options are less suitable:
+
+A. Leverage BigQuery UPDATE statements: While technically possible, this approach is inefficient for frequent updates as it requires individual record scans and updates, affecting performance and potentially causing data race conditions.
+
+B. Partition the inventory balance table: Partitioning helps with query performance for large datasets, but it doesn't address the need for near real-time updates.
+
+D. Use the BigQuery bulk loader: Bulk loading daily changes is helpful for historical data ingestion, but it won't provide near real-time updates necessary for the dashboard.
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+Here's why the other options are less suitable:
+
+A. Leverage BigQuery UPDATE statements: While technically possible, this approach is inefficient for frequent updates as it requires individual record scans and updates, affecting performance and potentially causing data race conditions.
+
+B. Partition the inventory balance table: Partitioning helps with query performance for large datasets, but it doesn't address the need for near real-time updates.
+
+D. Use the BigQuery bulk loader: Bulk loading daily changes is helpful for historical data ingestion, but it won't provide near real-time updates necessary for the dashboard.
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #41 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Option C offers the following advantages:
+
+Streams inventory changes near real-time: BigQuery streaming ingests data immediately, keeping the inventory movement table constantly updated.
+Daily balance calculation: Joining the movement table with the historical balance table provides an accurate view of current inventory levels without affecting the actual balance table.
+Nightly update for historical data: Updating the main inventory balance table nightly ensures long-term data consistency while maintaining near real-time insights through the view.
+This approach balances near real-time updates with efficiency and data accuracy, making it the optimal solution for the given scenario.
+
+--- Comment #42 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Option C offers the following advantages:
+
+Streams inventory changes near real-time: BigQuery streaming ingests data immediately, keeping the inventory movement table constantly updated.
+Daily balance calculation: Joining the movement table with the historical balance table provides an accurate view of current inventory levels without affecting the actual balance table.
+Nightly update for historical data: Updating the main inventory balance table nightly ensures long-term data consistency while maintaining near real-time insights through the view.
+This approach balances near real-time updates with efficiency and data accuracy, making it the optimal solution for the given scenario.
+
+--- Comment #43 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+Option C offers the following advantages:
+
+Streams inventory changes near real-time: BigQuery streaming ingests data immediately, keeping the inventory movement table constantly updated.
+Daily balance calculation: Joining the movement table with the historical balance table provides an accurate view of current inventory levels without affecting the actual balance table.
+Nightly update for historical data: Updating the main inventory balance table nightly ensures long-term data consistency while maintaining near real-time insights through the view.
+This approach balances near real-time updates with efficiency and data accuracy, making it the optimal solution for the given scenario.
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+Option C offers the following advantages:
+
+Streams inventory changes near real-time: BigQuery streaming ingests data immediately, keeping the inventory movement table constantly updated.
+Daily balance calculation: Joining the movement table with the historical balance table provides an accurate view of current inventory levels without affecting the actual balance table.
+Nightly update for historical data: Updating the main inventory balance table nightly ensures long-term data consistency while maintaining near real-time insights through the view.
+This approach balances near real-time updates with efficiency and data accuracy, making it the optimal solution for the given scenario.
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #53 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+There are still limitations on DML statements (2023) e.g. only 2 concurrent UPDATES and up to 20 queued hence not appropriate for this scenario:
+https://cloud.google.com/bigquery/quotas#data-manipulation-language-statements
+
+--- Comment #54 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Yiouk
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #55 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+There are still limitations on DML statements (2023) e.g. only 2 concurrent UPDATES and up to 20 queued hence not appropriate for this scenario:
+https://cloud.google.com/bigquery/quotas#data-manipulation-language-statements
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+There are still limitations on DML statements (2023) e.g. only 2 concurrent UPDATES and up to 20 queued hence not appropriate for this scenario:
+https://cloud.google.com/bigquery/quotas#data-manipulation-language-statements
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #59 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #60 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #61 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+NeoNitin
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #62 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #66 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+In question it mentioned several thousands of updates every hour, several thousands could be 20-30 thousands as well. Where it is mentioned for only 1000 updates?
+
+--- Comment #67 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+In question it mentioned several thousands of updates every hour, several thousands could be 20-30 thousands as well. Where it is mentioned for only 1000 updates?
+
+--- Comment #68 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Nandababy
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+In question it mentioned several thousands of updates every hour, several thousands could be 20-30 thousands as well. Where it is mentioned for only 1000 updates?
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+In question it mentioned several thousands of updates every hour, several thousands could be 20-30 thousands as well. Where it is mentioned for only 1000 updates?
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #78 ---
+Author: Unknown | Date: 4 years, 7 months ago | Votes: 0
+C is correct.
+It says “update Every hour”
+And need “ accuracy”
+
+--- Comment #79 ---
+Author: Unknown | Date: 4 years, 7 months ago | Votes: 0
+haroldbenites
+			
+
+
+				Highly Voted 
+
+
+			4 years, 7 months ago
+
+--- Comment #80 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+C is correct.
+It says “update Every hour”
+And need “ accuracy”
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+C is correct.
+It says “update Every hour”
+And need “ accuracy”
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 25 times
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #84 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #85 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #86 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+NeoNitin
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #94 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+BigQuery is not optimized for updating statement. So, go to C.
+
+--- Comment #95 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+SamuelTsch
+			
+
+
+				Most Recent 
+
+
+			5 months, 2 weeks ago
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+BigQuery is not optimized for updating statement. So, go to C.
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+BigQuery is not optimized for updating statement. So, go to C.
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #103 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+The answer is C because the requirement is near real-time
+
+--- Comment #104 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+edre
+			
+
+
+			8 months, 3 weeks ago
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is C because the requirement is near real-time
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is C because the requirement is near real-time
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #112 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).
+
+--- Comment #113 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #114 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+The best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #119 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The key reasons this is better than the other options:
+
+Using BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.
+
+Partitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.
+
+Using the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.
+
+So option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.
+
+--- Comment #120 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The key reasons this is better than the other options:
+
+Using BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.
+
+Partitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.
+
+Using the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.
+
+So option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.
+
+--- Comment #121 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+The key reasons this is better than the other options:
+
+Using BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.
+
+Partitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.
+
+Using the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.
+
+So option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+The key reasons this is better than the other options:
+
+Using BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.
+
+Partitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.
+
+Using the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.
+
+So option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #129 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Option C.
+
+Using the BigQuery streaming to stream changes into a daily inventory movement table and calculating balances in a view that joins it to the historical inventory balance table can help you achieve the desired performance and accuracy. You can then update the inventory balance table nightly. This approach can help you avoid the overhead of scanning large amounts of data with each inventory update, which can be time-consuming and resource-intensive.
+Leveraging BigQuery UPDATE statements to update the inventory balances as they are changing (option A) can be resource-intensive and may not be the most efficient way to achieve the desired performance.
+
+--- Comment #130 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+rocky48
+			
+
+
+			1 year, 4 months ago
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+Option C.
+
+Using the BigQuery streaming to stream changes into a daily inventory movement table and calculating balances in a view that joins it to the historical inventory balance table can help you achieve the desired performance and accuracy. You can then update the inventory balance table nightly. This approach can help you avoid the overhead of scanning large amounts of data with each inventory update, which can be time-consuming and resource-intensive.
+Leveraging BigQuery UPDATE statements to update the inventory balances as they are changing (option A) can be resource-intensive and may not be the most efficient way to achieve the desired performance.
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+Option C.
+
+Using the BigQuery streaming to stream changes into a daily inventory movement table and calculating balances in a view that joins it to the historical inventory balance table can help you achieve the desired performance and accuracy. You can then update the inventory balance table nightly. This approach can help you avoid the overhead of scanning large amounts of data with each inventory update, which can be time-consuming and resource-intensive.
+Leveraging BigQuery UPDATE statements to update the inventory balances as they are changing (option A) can be resource-intensive and may not be the most efficient way to achieve the desired performance.
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #138 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+As per other answers C
+
+--- Comment #139 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+AnonymousPanda
+			
+
+
+			1 year, 4 months ago
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+As per other answers C
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+As per other answers C
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #147 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Simple and will work
+
+--- Comment #148 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Nirca
+			
+
+
+			1 year, 5 months ago
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+Simple and will work
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+Simple and will work
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #156 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Answer is C. Why because “Update” limits is 1500/per day, and the question say: You have several thousand updates to inventory every hour. So is impossible to use updates all the time.
+
+--- Comment #157 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+odacir
+			
+
+
+			1 year, 5 months ago
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is C. Why because “Update” limits is 1500/per day, and the question say: You have several thousand updates to inventory every hour. So is impossible to use updates all the time.
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is C. Why because “Update” limits is 1500/per day, and the question say: You have several thousand updates to inventory every hour. So is impossible to use updates all the time.
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #165 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+A. Leverage BigQuery UPDATE statements to update the inventory balances as they are changing - is so simple and RIGHT!
+
+--- Comment #166 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+Nirca
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+A. Leverage BigQuery UPDATE statements to update the inventory balances as they are changing - is so simple and RIGHT!
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+A. Leverage BigQuery UPDATE statements to update the inventory balances as they are changing - is so simple and RIGHT!
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #174 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+C is more universal and sustainable
+
+--- Comment #175 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+brookpetit
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+C is more universal and sustainable
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+C is more universal and sustainable
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #180 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #183 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+UPDATE is too expensive. Joining main and delta tables is the right wat to capture data change.
+
+--- Comment #184 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+ZZHZZH
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+UPDATE is too expensive. Joining main and delta tables is the right wat to capture data change.
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+UPDATE is too expensive. Joining main and delta tables is the right wat to capture data change.
+
+--- Comment #188 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #192 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+I think the answer is C. The question is about maximizing performance and accuracy, it's ok if we need expensive JOINs. BigQuery has a daily quota of 1500 UPDATEs, and the question talks about several thousand updates every hour.
+
+--- Comment #193 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+euro202
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #194 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+I think the answer is C. The question is about maximizing performance and accuracy, it's ok if we need expensive JOINs. BigQuery has a daily quota of 1500 UPDATEs, and the question talks about several thousand updates every hour.
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #196 ---
+Author: Unknown | Date:  | Votes: 0
+I think the answer is C. The question is about maximizing performance and accuracy, it's ok if we need expensive JOINs. BigQuery has a daily quota of 1500 UPDATEs, and the question talks about several thousand updates every hour.
+
+--- Comment #197 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #199 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+DML statements do not count toward the number of table modifications per day.
+https://cloud.google.com/bigquery/quotas#data-manipulation-language-statements
+
+So I would go with A.
+
+--- Comment #200 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+DML statements do not count toward the number of table modifications per day.
+https://cloud.google.com/bigquery/quotas#data-manipulation-language-statements
+
+So I would go with A.
+
+--- Comment #201 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+jackdbd
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #202 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+DML statements do not count toward the number of table modifications per day.
+https://cloud.google.com/bigquery/quotas#data-manipulation-language-statements
+
+So I would go with A.
+
+--- Comment #203 ---
+Author: Unknown | Date:  | Votes: 0
+DML statements do not count toward the number of table modifications per day.
+https://cloud.google.com/bigquery/quotas#data-manipulation-language-statements
+
+So I would go with A.
+
+--- Comment #204 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #205 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #206 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+Sorry, wrong link. Here is the correct one: https://cloud.google.com/bigquery/quotas#standard_tables
+
+--- Comment #207 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+Sorry, wrong link. Here is the correct one: https://cloud.google.com/bigquery/quotas#standard_tables
+
+--- Comment #208 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+jackdbd
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #209 ---
+Author: Unknown | Date:  | Votes: 0
+Sorry, wrong link. Here is the correct one: https://cloud.google.com/bigquery/quotas#standard_tables
+
+--- Comment #210 ---
+Author: Unknown | Date:  | Votes: 0
+Sorry, wrong link. Here is the correct one: https://cloud.google.com/bigquery/quotas#standard_tables
+
+--- Comment #211 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #212 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #213 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #214 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #215 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #216 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #217 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+C create a view that joins to a table seems dumb to me
+
+--- Comment #218 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+vaga1
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #219 ---
+Author: Unknown | Date:  | Votes: 0
+C create a view that joins to a table seems dumb to me
+
+--- Comment #220 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #221 ---
+Author: Unknown | Date:  | Votes: 0
+C create a view that joins to a table seems dumb to me
+
+--- Comment #222 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #223 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #224 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #225 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #226 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Too frequent updates are way too expensive in an OLAP solution. This is much more likely to stream changes to the table(s) and aggregate these changes in the view.
+
+https://stackoverflow.com/questions/74657435/bigquery-frequent-updates-to-a-record
+
+--- Comment #227 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+forepick
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #228 ---
+Author: Unknown | Date:  | Votes: 0
+Too frequent updates are way too expensive in an OLAP solution. This is much more likely to stream changes to the table(s) and aggregate these changes in the view.
+
+https://stackoverflow.com/questions/74657435/bigquery-frequent-updates-to-a-record
+
+--- Comment #229 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #230 ---
+Author: Unknown | Date:  | Votes: 0
+Too frequent updates are way too expensive in an OLAP solution. This is much more likely to stream changes to the table(s) and aggregate these changes in the view.
+
+https://stackoverflow.com/questions/74657435/bigquery-frequent-updates-to-a-record
+
+--- Comment #231 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #232 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #233 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #234 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #235 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Has to be C. 
+DML has hard limit of 1500 operations per table per day: https://cloud.google.com/bigquery/quotas#standard_tables
+
+--- Comment #236 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+streeeber
+			
+
+
+			2 years ago
+
+--- Comment #237 ---
+Author: Unknown | Date:  | Votes: 0
+Has to be C. 
+DML has hard limit of 1500 operations per table per day: https://cloud.google.com/bigquery/quotas#standard_tables
+
+--- Comment #238 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #239 ---
+Author: Unknown | Date:  | Votes: 0
+Has to be C. 
+DML has hard limit of 1500 operations per table per day: https://cloud.google.com/bigquery/quotas#standard_tables
+
+--- Comment #240 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #241 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #242 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #243 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #244 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Update action is not efficient
+
+--- Comment #245 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+lucaluca1982
+			
+
+
+			2 years ago
+
+--- Comment #246 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Update action is not efficient
+
+--- Comment #247 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #248 ---
+Author: Unknown | Date:  | Votes: 0
+Update action is not efficient
+
+--- Comment #249 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #250 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #251 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #252 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #253 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+NeoNitin
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #254 ---
+Author: Unknown | Date:  | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #255 ---
+Author: Unknown | Date:  | Votes: 0
+option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,
+now speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .
+thats why I thing DML is best option for this work
+
+--- Comment #256 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #257 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #258 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #259 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #260 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #261 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #262 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #263 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

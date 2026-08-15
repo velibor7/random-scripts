@@ -1,0 +1,769 @@
+{
+  "question": "You have a table that contains millions of rows of sales data, partitioned by date. Various applications and users query this data many times a minute. The query requires aggregating values by using AVG, MAX, and SUM, and does not require joining to other tables. The required aggregations are only computed over the past year of data, though you need to retain full historical data in the base tables. You want to ensure that the query results always include the latest data from the tables, while also reducing computation cost, maintenance overhead, and duration. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a materialized view to aggregate the base table data. Include a filter clause to specify the last one year of partitions.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a materialized view to aggregate the base table data. Configure a partition expiration on the base table to retain only the last one year of partitions.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a view to aggregate the base table data. Include a filter clause to specify the last year of partitions.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a new table that aggregates the base table data. Include a filter clause to specify the last year of partitions. Set up a scheduled query to recreate the new table every hour.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 304 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 304\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou have a table that contains millions of rows of sales data, partitioned by date. Various applications and users query this data many times a minute. The query requires aggregating values by using AVG, MAX, and SUM, and does not require joining to other tables. The required aggregations are only computed over the past year of data, though you need to retain full historical data in the base tables. You want to ensure that the query results always include the latest data from the tables, while also reducing computation cost, maintenance overhead, and duration. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a materialized view to aggregate the base table data. Include a filter clause to specify the last one year of partitions.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a materialized view to aggregate the base table data. Configure a partition expiration on the base table to retain only the last one year of partitions.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a view to aggregate the base table data. Include a filter clause to specify the last year of partitions.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a new table that aggregates the base table data. Include a filter clause to specify the last year of partitions. Set up a scheduled query to recreate the new table every hour.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 4, 2024, 1:41 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 304\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 4, 2024, 1:41 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.\n- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.\n- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.\n- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.\n- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.\n- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.\n- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.\n- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.\n- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.\n- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.\n- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.\n- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.\n- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.\n- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.\n- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 11 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0weeks, 4\u00a0days ago",
+      "content": "Answer : A\nQuestion has below three requirements , it did NOT talk about STORAGE cost\nReducing computation cost: Using Materialized views in BigQuery, query costs can be lower due to faster performance\nmaintenance overhead : Bigquery takes care of data updates\nand duration: Since the results are precomputed and stored , it takes very less time for the query output",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0weeks, 4\u00a0days ago",
+      "content": "MBNR\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t3\u00a0weeks, 4\u00a0days ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer : A\nQuestion has below three requirements , it did NOT talk about STORAGE cost\nReducing computation cost: Using Materialized views in BigQuery, query costs can be lower due to faster performance\nmaintenance overhead : Bigquery takes care of data updates\nand duration: Since the results are precomputed and stored , it takes very less time for the query output",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer : A\nQuestion has below three requirements , it did NOT talk about STORAGE cost\nReducing computation cost: Using Materialized views in BigQuery, query costs can be lower due to faster performance\nmaintenance overhead : Bigquery takes care of data updates\nand duration: Since the results are precomputed and stored , it takes very less time for the query output",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Option B, creating a materialized view and configuring a partition expiration on the base table to retain only the last one year of partitions, would not meet the requirement of retaining full historical data in the base tables. Partition expiration would delete older data, which is not desirable if you need to keep the full historical data.\n\nOption A, on the other hand, allows you to create a materialized view that aggregates the data for the past year without deleting any historical data from the base table. This ensures that you always have access to the latest data while retaining the full history.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Pime13\n\t\t\t\n\n\n\t\t\t3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B, creating a materialized view and configuring a partition expiration on the base table to retain only the last one year of partitions, would not meet the requirement of retaining full historical data in the base tables. Partition expiration would delete older data, which is not desirable if you need to keep the full historical data.\n\nOption A, on the other hand, allows you to create a materialized view that aggregates the data for the past year without deleting any historical data from the base table. This ensures that you always have access to the latest data while retaining the full history.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B, creating a materialized view and configuring a partition expiration on the base table to retain only the last one year of partitions, would not meet the requirement of retaining full historical data in the base tables. Partition expiration would delete older data, which is not desirable if you need to keep the full historical data.\n\nOption A, on the other hand, allows you to create a materialized view that aggregates the data for the past year without deleting any historical data from the base table. This ensures that you always have access to the latest data while retaining the full history.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "JyoGCP\n\t\t\t\n\n\n\t\t\t7\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "materialized view requires refreshing so it might not fulfill the requirement: \"results always include the latest data from the tables\". Opt. C will give you the newest data every time you execute the query but it will have to be computed every time",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "et2137\n\t\t\t\n\n\n\t\t\t7\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "materialized view requires refreshing so it might not fulfill the requirement: \"results always include the latest data from the tables\". Opt. C will give you the newest data every time you execute the query but it will have to be computed every time",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "materialized view requires refreshing so it might not fulfill the requirement: \"results always include the latest data from the tables\". Opt. C will give you the newest data every time you execute the query but it will have to be computed every time",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Agree, these questions always play with words, making many of options seem plausible",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Agree, these questions always play with words, making many of options seem plausible",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "d11379b\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Agree, these questions always play with words, making many of options seem plausible",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agree, these questions always play with words, making many of options seem plausible",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "But materialized view always returns fresh data \nFresh data. Materialized views return fresh data. If changes to base tables might invalidate the materialized view, then data is read directly from the base tables. If the changes to the base tables don't invalidate the materialized view, then rest of the data is read from the materialized view and only the changes are read from the base tables.\nhttps://cloud.google.com/bigquery/docs/materialized-views-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "But materialized view always returns fresh data \nFresh data. Materialized views return fresh data. If changes to base tables might invalidate the materialized view, then data is read directly from the base tables. If the changes to the base tables don't invalidate the materialized view, then rest of the data is read from the materialized view and only the changes are read from the base tables.\nhttps://cloud.google.com/bigquery/docs/materialized-views-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "d11379b\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "But materialized view always returns fresh data \nFresh data. Materialized views return fresh data. If changes to base tables might invalidate the materialized view, then data is read directly from the base tables. If the changes to the base tables don't invalidate the materialized view, then rest of the data is read from the materialized view and only the changes are read from the base tables.\nhttps://cloud.google.com/bigquery/docs/materialized-views-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "But materialized view always returns fresh data \nFresh data. Materialized views return fresh data. If changes to base tables might invalidate the materialized view, then data is read directly from the base tables. If the changes to the base tables don't invalidate the materialized view, then rest of the data is read from the materialized view and only the changes are read from the base tables.\nhttps://cloud.google.com/bigquery/docs/materialized-views-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 1\u00a0week ago",
+      "content": "A We can do aggregations, bit if not specified table will not be partitioned on the view. \nB partition expiration is not possible, as expiration is the same as base table\nC It might be the right one, although not specific savings vs the original query, but here we would guarantee accessing only last year data. \nD not a good one in any sense \n\nA and C might be equally good solutions depending on some understandings. Would probably opt for A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 1\u00a0week ago",
+      "content": "casadocc\n\t\t\t\n\n\n\t\t\t8\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A We can do aggregations, bit if not specified table will not be partitioned on the view. \nB partition expiration is not possible, as expiration is the same as base table\nC It might be the right one, although not specific savings vs the original query, but here we would guarantee accessing only last year data. \nD not a good one in any sense \n\nA and C might be equally good solutions depending on some understandings. Would probably opt for A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A We can do aggregations, bit if not specified table will not be partitioned on the view. \nB partition expiration is not possible, as expiration is the same as base table\nC It might be the right one, although not specific savings vs the original query, but here we would guarantee accessing only last year data. \nD not a good one in any sense \n\nA and C might be equally good solutions depending on some understandings. Would probably opt for A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": ". Create a materialized view to aggregate the base table data. Include a filter clause to specify the last one year of partitions.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": ". Create a materialized view to aggregate the base table data. Include a filter clause to specify the last one year of partitions.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": ". Create a materialized view to aggregate the base table data. Include a filter clause to specify the last one year of partitions.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "To preserve the historical data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "Sofiia98\n\t\t\t\n\n\n\t\t\t9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To preserve the historical data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To preserve the historical data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "B. Create a materialized view to aggregate the base table data. Configure a partition expiration on the base table to retain only the last one year of partitions.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t9\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "B. Create a materialized view to aggregate the base table data. Configure a partition expiration on the base table to retain only the last one year of partitions.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Create a materialized view to aggregate the base table data. Configure a partition expiration on the base table to retain only the last one year of partitions.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "Don't agree, it is said thad that we need to store the historical data, so answer A is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "Don't agree, it is said thad that we need to store the historical data, so answer A is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "Sofiia98\n\t\t\t\n\n\n\t\t\t9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Don't agree, it is said thad that we need to store the historical data, so answer A is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Don't agree, it is said thad that we need to store the historical data, so answer A is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "Why not B\n- Configuring partition expiration on the BASE TABLE is a way to manage storage and costs by automatically dropping old data. However, the question specifies the need to retain full historical data, making this approach not suitable since it doesnt keep all historical records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not B\n- Configuring partition expiration on the BASE TABLE is a way to manage storage and costs by automatically dropping old data. However, the question specifies the need to retain full historical data, making this approach not suitable since it doesnt keep all historical records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not B\n- Configuring partition expiration on the BASE TABLE is a way to manage storage and costs by automatically dropping old data. However, the question specifies the need to retain full historical data, making this approach not suitable since it doesnt keep all historical records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

@@ -1,0 +1,913 @@
+{
+  "question": "You have Cloud Functions written in Node.js that pull messages from Cloud Pub/Sub and send the data to BigQuery. You observe that the message processing rate on the Pub/Sub topic is orders of magnitude higher than anticipated, but there is no error logged in Cloud Logging. What are the two most likely causes of this problem? (Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tPublisher throughput quota is too small.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tTotal outstanding messages exceed the 10-MB maximum.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tError handling in the subscriber code is not handling run-time errors properly.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe subscriber code cannot keep up with the messages.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe subscriber code does not acknowledge the messages that it pulls.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nDE\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 109 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 109\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou have Cloud Functions written in Node.js that pull messages from Cloud Pub/Sub and send the data to BigQuery. You observe that the message processing rate on the Pub/Sub topic is orders of magnitude higher than anticipated, but there is no error logged in Cloud Logging. What are the two most likely causes of this problem? (Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tPublisher throughput quota is too small.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tTotal outstanding messages exceed the 10-MB maximum.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tError handling in the subscriber code is not handling run-time errors properly.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe subscriber code cannot keep up with the messages.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tThe subscriber code does not acknowledge the messages that it pulls.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nDE\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAWSandeep\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 3, 2022, 2:09 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 109\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAWSandeep\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 3, 2022, 2:09 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "Answer C E\nBy not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "Answer C E\nBy not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "Answer C E\nBy not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "Answer C E\nBy not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "Answer C E\nBy not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "TNT87\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t2\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer C E\nBy not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer C E\nBy not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 13 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "While poor error handling can cause issues, it would likely result in errors being logged rather than an increased message processing rate without errors, excluding C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Pime13\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "While poor error handling can cause issues, it would likely result in errors being logged rather than an increased message processing rate without errors, excluding C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "While poor error handling can cause issues, it would likely result in errors being logged rather than an increased message processing rate without errors, excluding C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "Not C, its talking about the unknown!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 3\u00a0weeks ago",
+      "content": "clouditis\n\t\t\t\n\n\n\t\t\t3\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Not C, its talking about the unknown!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Not C, its talking about the unknown!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 2\u00a0weeks ago",
+      "content": "The issue is that the acknowledgment is not sent back to sub properly. D, E should be correct.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 2\u00a0weeks ago",
+      "content": "SamuelTsch\n\t\t\t\n\n\n\t\t\t5\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The issue is that the acknowledgment is not sent back to sub properly. D, E should be correct.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The issue is that the acknowledgment is not sent back to sub properly. D, E should be correct.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "D. The subscriber code cannot keep up with the messages.\n\nIf the processing rate of the subscriber (Cloud Functions) is lower than the incoming message rate, it can lead to a backlog of messages. This would result in higher-than-expected message rates, as messages accumulate while waiting to be processed.\n\nE. The subscriber code does not acknowledge the messages that it pulls.\n\nIf messages are not acknowledged properly, Pub/Sub will keep retrying to deliver them, which can lead to the same messages being sent repeatedly. This could also contribute to the perception that the message processing rate is very high.\n\nBoth of these issues can lead to unanticipated behavior in your message processing pipeline without generating errors that would be logged in Cloud Logging.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Preetmehta1234\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. The subscriber code cannot keep up with the messages.\n\nIf the processing rate of the subscriber (Cloud Functions) is lower than the incoming message rate, it can lead to a backlog of messages. This would result in higher-than-expected message rates, as messages accumulate while waiting to be processed.\n\nE. The subscriber code does not acknowledge the messages that it pulls.\n\nIf messages are not acknowledged properly, Pub/Sub will keep retrying to deliver them, which can lead to the same messages being sent repeatedly. This could also contribute to the perception that the message processing rate is very high.\n\nBoth of these issues can lead to unanticipated behavior in your message processing pipeline without generating errors that would be logged in Cloud Logging.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. The subscriber code cannot keep up with the messages.\n\nIf the processing rate of the subscriber (Cloud Functions) is lower than the incoming message rate, it can lead to a backlog of messages. This would result in higher-than-expected message rates, as messages accumulate while waiting to be processed.\n\nE. The subscriber code does not acknowledge the messages that it pulls.\n\nIf messages are not acknowledged properly, Pub/Sub will keep retrying to deliver them, which can lead to the same messages being sent repeatedly. This could also contribute to the perception that the message processing rate is very high.\n\nBoth of these issues can lead to unanticipated behavior in your message processing pipeline without generating errors that would be logged in Cloud Logging.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "The code in the CF can't keep up with the amount of messages, thus C D is a better fit",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "JamesKarianis\n\t\t\t\n\n\n\t\t\t8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The code in the CF can't keep up with the amount of messages, thus C D is a better fit",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The code in the CF can't keep up with the amount of messages, thus C D is a better fit",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "Ref chatgpt\nOption C, \"Error handling in the subscriber code is not handling run-time errors properly,\" suggests that the subscriber code may not be correctly handling errors that occur during message processing. If the subscriber code encounters an error that it cannot handle, such as a syntax error or a network issue, it may stop processing messages, leading to a slowdown in message processing.\n\nHowever, the lack of error logs in Cloud Logging suggests that there are no errors being logged, which makes it less likely that this is the primary cause of the observed behavior. Additionally, while incorrect error handling could contribute to the issue, it may not be the primary reason why the message processing rate is much higher than anticipated.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "mialll\n\t\t\t\n\n\n\t\t\t1\u00a0year, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "Ref chatgpt\nOption C, \"Error handling in the subscriber code is not handling run-time errors properly,\" suggests that the subscriber code may not be correctly handling errors that occur during message processing. If the subscriber code encounters an error that it cannot handle, such as a syntax error or a network issue, it may stop processing messages, leading to a slowdown in message processing.\n\nHowever, the lack of error logs in Cloud Logging suggests that there are no errors being logged, which makes it less likely that this is the primary cause of the observed behavior. Additionally, while incorrect error handling could contribute to the issue, it may not be the primary reason why the message processing rate is much higher than anticipated.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Ref chatgpt\nOption C, \"Error handling in the subscriber code is not handling run-time errors properly,\" suggests that the subscriber code may not be correctly handling errors that occur during message processing. If the subscriber code encounters an error that it cannot handle, such as a syntax error or a network issue, it may stop processing messages, leading to a slowdown in message processing.\n\nHowever, the lack of error logs in Cloud Logging suggests that there are no errors being logged, which makes it less likely that this is the primary cause of the observed behavior. Additionally, while incorrect error handling could contribute to the issue, it may not be the primary reason why the message processing rate is much higher than anticipated.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "Chat says about Option C: \"it may stop processing messages, leading to a slowdown in message processing\" - but is doesn't say there's a slowdown in the question. It says it's increased.\n\nI would replace C with D.  If the Cloud Function isn't capable of processing messages as quickly as they arrive, the backlog will grow, leading to higher processing rates as the function continuously tries to catch up. This scenario might not generate errors in Cloud Logging if the function is simply falling behind.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "Chat says about Option C: \"it may stop processing messages, leading to a slowdown in message processing\" - but is doesn't say there's a slowdown in the question. It says it's increased.\n\nI would replace C with D.  If the Cloud Function isn't capable of processing messages as quickly as they arrive, the backlog will grow, leading to higher processing rates as the function continuously tries to catch up. This scenario might not generate errors in Cloud Logging if the function is simply falling behind.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "GCPete\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chat says about Option C: \"it may stop processing messages, leading to a slowdown in message processing\" - but is doesn't say there's a slowdown in the question. It says it's increased.\n\nI would replace C with D.  If the Cloud Function isn't capable of processing messages as quickly as they arrive, the backlog will grow, leading to higher processing rates as the function continuously tries to catch up. This scenario might not generate errors in Cloud Logging if the function is simply falling behind.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chat says about Option C: \"it may stop processing messages, leading to a slowdown in message processing\" - but is doesn't say there's a slowdown in the question. It says it's increased.\n\nI would replace C with D.  If the Cloud Function isn't capable of processing messages as quickly as they arrive, the backlog will grow, leading to higher processing rates as the function continuously tries to catch up. This scenario might not generate errors in Cloud Logging if the function is simply falling behind.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "C - as no error shown in Cloud Logging\nBetween D & E, both could lead to the problem. I have worked with lot of PubSub issues, most of them are due to the bottleneck at the code where it takes too long to process 1 message and causes backlog. E could lead to backlog too, but it is too obvious and not likely to happen in reality.\nHowever, when I ask AI the same question, it said C and E",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "midgoo\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "C - as no error shown in Cloud Logging\nBetween D & E, both could lead to the problem. I have worked with lot of PubSub issues, most of them are due to the bottleneck at the code where it takes too long to process 1 message and causes backlog. E could lead to backlog too, but it is too obvious and not likely to happen in reality.\nHowever, when I ask AI the same question, it said C and E",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C - as no error shown in Cloud Logging\nBetween D & E, both could lead to the problem. I have worked with lot of PubSub issues, most of them are due to the bottleneck at the code where it takes too long to process 1 message and causes backlog. E could lead to backlog too, but it is too obvious and not likely to happen in reality.\nHowever, when I ask AI the same question, it said C and E",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "C. Error handling in the subscriber (Cloud Functions) code is not handling run-time errors properly.\n\nThis would mean to have error logs in Cloud Logging as CF by default logs to it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "C. Error handling in the subscriber (Cloud Functions) code is not handling run-time errors properly.\n\nThis would mean to have error logs in Cloud Logging as CF by default logs to it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "cetanx\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Error handling in the subscriber (Cloud Functions) code is not handling run-time errors properly.\n\nThis would mean to have error logs in Cloud Logging as CF by default logs to it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Error handling in the subscriber (Cloud Functions) code is not handling run-time errors properly.\n\nThis would mean to have error logs in Cloud Logging as CF by default logs to it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "Answer D&E\nI am not in the favour of C, error handling is a side factor but not the primary cause. \nFirst check the configuration access. \nDoes subscriber has enough acknowledge policies (option E)\nDoes sub have ability to keep up the message( enough network, cpu and capable codes) (option D)\noption C is just a part of option D somewhere showing incapable handling",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "musumusu\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer D&E\nI am not in the favour of C, error handling is a side factor but not the primary cause. \nFirst check the configuration access. \nDoes subscriber has enough acknowledge policies (option E)\nDoes sub have ability to keep up the message( enough network, cpu and capable codes) (option D)\noption C is just a part of option D somewhere showing incapable handling",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer D&E\nI am not in the favour of C, error handling is a side factor but not the primary cause. \nFirst check the configuration access. \nDoes subscriber has enough acknowledge policies (option E)\nDoes sub have ability to keep up the message( enough network, cpu and capable codes) (option D)\noption C is just a part of option D somewhere showing incapable handling",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "My question is: 'What is the actual problem?'\n- That there is no logs in Cloud Logging?\n- That Pub/Sub is having a problem?\n- Or there an actual problem?\n- Is there an actual error?\n\nSo what is Pub/Sub the message processing rate is high...Does that mean there is a problem?\n\nThoughts?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "desertlotus1211\n\t\t\t\n\n\n\t\t\t2\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "My question is: 'What is the actual problem?'\n- That there is no logs in Cloud Logging?\n- That Pub/Sub is having a problem?\n- Or there an actual problem?\n- Is there an actual error?\n\nSo what is Pub/Sub the message processing rate is high...Does that mean there is a problem?\n\nThoughts?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "My question is: 'What is the actual problem?'\n- That there is no logs in Cloud Logging?\n- That Pub/Sub is having a problem?\n- Or there an actual problem?\n- Is there an actual error?\n\nSo what is Pub/Sub the message processing rate is high...Does that mean there is a problem?\n\nThoughts?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Like TNT87 mentioned the message processing rate is high \"meaning the messages accumulate instead of being consumed and removed from Pub/Sub.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Like TNT87 mentioned the message processing rate is high \"meaning the messages accumulate instead of being consumed and removed from Pub/Sub.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "squishy_fishy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Like TNT87 mentioned the message processing rate is high \"meaning the messages accumulate instead of being consumed and removed from Pub/Sub.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Like TNT87 mentioned the message processing rate is high \"meaning the messages accumulate instead of being consumed and removed from Pub/Sub.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "C, E seems correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "AzureDP900\n\t\t\t\n\n\n\t\t\t2\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C, E seems correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C, E seems correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "D might also be right? \nSubscriber might not be provisioned enough",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "MounicaN\n\t\t\t\n\n\n\t\t\t2\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D might also be right? \nSubscriber might not be provisioned enough",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D might also be right? \nSubscriber might not be provisioned enough",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "C. Error handling in the subscriber code is not handling run-time errors properly.\nE. The subscriber code does not acknowledge the messages that it pulls.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "AWSandeep\n\t\t\t\n\n\n\t\t\t2\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Error handling in the subscriber code is not handling run-time errors properly.\nE. The subscriber code does not acknowledge the messages that it pulls.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Error handling in the subscriber code is not handling run-time errors properly.\nE. The subscriber code does not acknowledge the messages that it pulls.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

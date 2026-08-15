@@ -1,0 +1,12 @@
+COMMENT #31 FOR QUESTION 181
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+By the way if you see the shared Pseudocode, it's talking about start bundle and finish bundle of DoFn. The question is which one to choose to avoid back pressure? 
+you can see why you need to choose bundle instead of batching in below link
+ Batching introduces some processing overhead as well as the need for a magic number to determine the key space.
+Instead, use the StartBundle and FinishBundle lifecycle elements to batch your data. With these options, no shuffling is needed.
+https://cloud.google.com/dataflow/docs/tutorials/ecommerce-java#micro-batch-calls
+============================================================

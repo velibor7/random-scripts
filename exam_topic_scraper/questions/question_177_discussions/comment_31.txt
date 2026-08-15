@@ -1,0 +1,14 @@
+COMMENT #31 FOR QUESTION 177
+============================================================
+Author: Unknown
+Date: 9 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+Option C is the best approach to meet the stated requirements. Here's why:
+
+BigQuery SQL provides a fast, scalable, and serverless method for transforming structured data, easier to develop than PySpark.
+Directly ingesting the raw Cloud Storage data into BigQuery avoids needing an intermediate processing cluster like Dataproc.
+Transforming the data via BigQuery SQL queries will be faster than PySpark, especially since the data is already loaded into BigQuery.
+Writing the transformed results to a new BigQuery table keeps the original raw data intact and provides a clean output.
+So migrating to BigQuery SQL for transformations provides a fully managed serverless architecture that can significantly expedite development and reduce pipeline runtime versus PySpark. The ability to avoid clusters and conduct transformations completely within BigQuery is the most efficient approach here.
+============================================================

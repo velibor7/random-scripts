@@ -1,0 +1,1105 @@
+{
+  "question": "Your organization has been collecting and analyzing data in Google BigQuery for 6 months. The majority of the data analyzed is placed in a time-partitioned table named events_partitioned. To reduce the cost of queries, your organization created a view called events, which queries only the last 14 days of data. The view is described in legacy SQL. Next month, existing applications will be connecting to BigQuery to read the events data via an ODBC connection. You need to ensure the applications can connect. Which two actions should you take? (Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a new view over events using standard SQL\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a new partitioned table using a standard SQL query\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a new view over events_partitioned using standard SQL\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a service account for the ODBC connection to use for authentication\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a Google Cloud Identity and Access Management (Cloud IAM) role for the ODBC connection and shared \u05d2\u20acevents\u05d2\u20ac\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nCD\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 55 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 55\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYour organization has been collecting and analyzing data in Google BigQuery for 6 months. The majority of the data analyzed is placed in a time-partitioned table named events_partitioned. To reduce the cost of queries, your organization created a view called events, which queries only the last 14 days of data. The view is described in legacy SQL. Next month, existing applications will be connecting to BigQuery to read the events data via an ODBC connection. You need to ensure the applications can connect. Which two actions should you take? (Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a new view over events using standard SQL\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a new partitioned table using a standard SQL query\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a new view over events_partitioned using standard SQL\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a service account for the ODBC connection to use for authentication\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a Google Cloud Identity and Access Management (Cloud IAM) role for the ODBC connection and shared \u05d2\u20acevents\u05d2\u20ac\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nCD\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tjvg637\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 15, 2020, 4:14 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 55\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tjvg637\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 15, 2020, 4:14 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "C = A standard SQL query cannot reference a view defined using legacy SQL syntax.\nD = For the ODBC drivers is needed a service account which will get a standard Bigquery role.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "C = A standard SQL query cannot reference a view defined using legacy SQL syntax.\nD = For the ODBC drivers is needed a service account which will get a standard Bigquery role.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "C = A standard SQL query cannot reference a view defined using legacy SQL syntax.\nD = For the ODBC drivers is needed a service account which will get a standard Bigquery role.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "C = A standard SQL query cannot reference a view defined using legacy SQL syntax.\nD = For the ODBC drivers is needed a service account which will get a standard Bigquery role.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "C = A standard SQL query cannot reference a view defined using legacy SQL syntax.\nD = For the ODBC drivers is needed a service account which will get a standard Bigquery role.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "jvg637\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t5\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C = A standard SQL query cannot reference a view defined using legacy SQL syntax.\nD = For the ODBC drivers is needed a service account which will get a standard Bigquery role.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C = A standard SQL query cannot reference a view defined using legacy SQL syntax.\nD = For the ODBC drivers is needed a service account which will get a standard Bigquery role.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 54 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "Answer: CD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "[Removed]\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t5\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: CD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: CD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 10 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0weeks, 5\u00a0days ago",
+      "content": "ODBC requires standard SQL. **A** creates a new view using standard SQL, and **D** sets up a service account for authentication. Options A and D are necessary.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0weeks, 5\u00a0days ago",
+      "content": "Parandhaman_Margan\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t3\u00a0weeks, 5\u00a0days ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "ODBC requires standard SQL. **A** creates a new view using standard SQL, and **D** sets up a service account for authentication. Options A and D are necessary.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "ODBC requires standard SQL. **A** creates a new view using standard SQL, and **D** sets up a service account for authentication. Options A and D are necessary.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 2\u00a0weeks ago",
+      "content": "To ensure applications can connect to BigQuery via an ODBC connection, take these two actions: \nA. Create a new view over events using standard SQL to replace the legacy SQL view, ensuring compatibility with ODBC, and D. Create a service account for the ODBC connection to authenticate and access the data. These steps ensure the applications can query the last 14 days of data efficiently and securely. Avoid unnecessary changes like creating new tables or custom IAM roles.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 2\u00a0weeks ago",
+      "content": "Yad_datatonic\n\t\t\t\n\n\n\t\t\t2\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To ensure applications can connect to BigQuery via an ODBC connection, take these two actions: \nA. Create a new view over events using standard SQL to replace the legacy SQL view, ensuring compatibility with ODBC, and D. Create a service account for the ODBC connection to authenticate and access the data. These steps ensure the applications can query the last 14 days of data efficiently and securely. Avoid unnecessary changes like creating new tables or custom IAM roles.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To ensure applications can connect to BigQuery via an ODBC connection, take these two actions: \nA. Create a new view over events using standard SQL to replace the legacy SQL view, ensuring compatibility with ODBC, and D. Create a service account for the ODBC connection to authenticate and access the data. These steps ensure the applications can query the last 14 days of data efficiently and securely. Avoid unnecessary changes like creating new tables or custom IAM roles.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "A. Legacy SQL views are not compatible with ODBC connections, which require standard SQL. Creating a new view in standard SQL ensures compatibility for the applications connecting via ODBC.\nD. ODBC connections to BigQuery require authentication, typically via a service account with the appropriate permissions. Setting up a service account ensures secure and reliable access.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 2\u00a0weeks ago",
+      "content": "Smakyel79\n\t\t\t\n\n\n\t\t\t4\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Legacy SQL views are not compatible with ODBC connections, which require standard SQL. Creating a new view in standard SQL ensures compatibility for the applications connecting via ODBC.\nD. ODBC connections to BigQuery require authentication, typically via a service account with the appropriate permissions. Setting up a service account ensures secure and reliable access.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Legacy SQL views are not compatible with ODBC connections, which require standard SQL. Creating a new view in standard SQL ensures compatibility for the applications connecting via ODBC.\nD. ODBC connections to BigQuery require authentication, typically via a service account with the appropriate permissions. Setting up a service account ensures secure and reliable access.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "I think question should be rewrite slightly like which 3 actions should you take rather than 2 ..\nThen answer would be A,D and E..No ambiguity then",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Vullibabu\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I think question should be rewrite slightly like which 3 actions should you take rather than 2 ..\nThen answer would be A,D and E..No ambiguity then",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I think question should be rewrite slightly like which 3 actions should you take rather than 2 ..\nThen answer would be A,D and E..No ambiguity then",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "ODBC connections require standard SQL, not legacy SQL.\nService account for the ODBC connection",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "task_7\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "ODBC connections require standard SQL, not legacy SQL.\nService account for the ODBC connection",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: BD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "ODBC connections require standard SQL, not legacy SQL.\nService account for the ODBC connection",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "This dump is full of wrong answers - not sure which one to go for.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "Bahubali1988\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This dump is full of wrong answers - not sure which one to go for.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This dump is full of wrong answers - not sure which one to go for.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "CD..... C because, ODBC drivers dont support switch b/w legacy SQL & google SQL, hence better to create a new view from recent partitioned table & D as Google best practice for role binding",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "alihabib\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "CD..... C because, ODBC drivers dont support switch b/w legacy SQL & google SQL, hence better to create a new view from recent partitioned table & D as Google best practice for role binding",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "CD..... C because, ODBC drivers dont support switch b/w legacy SQL & google SQL, hence better to create a new view from recent partitioned table & D as Google best practice for role binding",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "the answer is C & D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "baht\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "the answer is C & D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "the answer is C & D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "answer: A & D\nConfusion here: Legacy SQL vs Standard, BQ supports legacy SQL but ODBC or Most RDBMS connection doesn't support Legacy SQL, so in this case we need to create a new view on existing view or replace the existing one by changing syntax. \nFor ODBC, you just need a service account to authenticate as its external service connection. Option E is not necessary.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "musumusu\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "answer: A & D\nConfusion here: Legacy SQL vs Standard, BQ supports legacy SQL but ODBC or Most RDBMS connection doesn't support Legacy SQL, so in this case we need to create a new view on existing view or replace the existing one by changing syntax. \nFor ODBC, you just need a service account to authenticate as its external service connection. Option E is not necessary.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "answer: A & D\nConfusion here: Legacy SQL vs Standard, BQ supports legacy SQL but ODBC or Most RDBMS connection doesn't support Legacy SQL, so in this case we need to create a new view on existing view or replace the existing one by changing syntax. \nFor ODBC, you just need a service account to authenticate as its external service connection. Option E is not necessary.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "Go for B, create a new view from the table, If you modify the syntex in option A, its also mean you created a new view on table :P",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "Go for B, create a new view from the table, If you modify the syntex in option A, its also mean you created a new view on table :P",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "musumusu\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Go for B, create a new view from the table, If you modify the syntex in option A, its also mean you created a new view on table :P",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Go for B, create a new view from the table, If you modify the syntex in option A, its also mean you created a new view on table :P",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "D. Create a service account for the ODBC connection to use for authentication. This service account will be used to authenticate the ODBC connection, and will be granted specific permissions to access the BigQuery resources.\nE. Create a Cloud IAM role for the ODBC connection and shared events. This role will be used to grant permissions to the service account created in step D, and will allow the applications to access the events view in BigQuery.\nCreating a new view over events using standard SQL may also be beneficial to improve performance and compatibility with the applications, but is not required for the ODBC connection to work.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "PolyMoe\n\t\t\t\n\n\n\t\t\t2\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Create a service account for the ODBC connection to use for authentication. This service account will be used to authenticate the ODBC connection, and will be granted specific permissions to access the BigQuery resources.\nE. Create a Cloud IAM role for the ODBC connection and shared events. This role will be used to grant permissions to the service account created in step D, and will allow the applications to access the events view in BigQuery.\nCreating a new view over events using standard SQL may also be beneficial to improve performance and compatibility with the applications, but is not required for the ODBC connection to work.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: DE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Create a service account for the ODBC connection to use for authentication. This service account will be used to authenticate the ODBC connection, and will be granted specific permissions to access the BigQuery resources.\nE. Create a Cloud IAM role for the ODBC connection and shared events. This role will be used to grant permissions to the service account created in step D, and will allow the applications to access the events view in BigQuery.\nCreating a new view over events using standard SQL may also be beneficial to improve performance and compatibility with the applications, but is not required for the ODBC connection to work.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "INFO:\n- The majority of the data analyzed is placed in a time-partitioned table named events_partitioned. \n- To reduce the cost of queries, your organization created a view called events, which queries only the last 14 days of data. \n- The view is described in legacy SQL. \nQUESTION:\nNext month, existing applications will be connecting to BigQuery to read the events data via an ODBC connection. You need to ensure the applications can connect. Which two actions should you take? (Choose two.)\n\n-> First and foremost we need to understand the information. So our actual data is stored in events_partitioned table. The organization is currently using view called events to reduce the cost. \n-> Since the view called events only has last 14 days of data we cannot use that view.\n-> We also cannot use that view because standard SQL is not used to describe the view. In order to connectt ODBC we need a view described by standard SQL.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "samdhimal\n\t\t\t\n\n\n\t\t\t2\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "INFO:\n- The majority of the data analyzed is placed in a time-partitioned table named events_partitioned. \n- To reduce the cost of queries, your organization created a view called events, which queries only the last 14 days of data. \n- The view is described in legacy SQL. \nQUESTION:\nNext month, existing applications will be connecting to BigQuery to read the events data via an ODBC connection. You need to ensure the applications can connect. Which two actions should you take? (Choose two.)\n\n-> First and foremost we need to understand the information. So our actual data is stored in events_partitioned table. The organization is currently using view called events to reduce the cost. \n-> Since the view called events only has last 14 days of data we cannot use that view.\n-> We also cannot use that view because standard SQL is not used to describe the view. In order to connectt ODBC we need a view described by standard SQL.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "INFO:\n- The majority of the data analyzed is placed in a time-partitioned table named events_partitioned. \n- To reduce the cost of queries, your organization created a view called events, which queries only the last 14 days of data. \n- The view is described in legacy SQL. \nQUESTION:\nNext month, existing applications will be connecting to BigQuery to read the events data via an ODBC connection. You need to ensure the applications can connect. Which two actions should you take? (Choose two.)\n\n-> First and foremost we need to understand the information. So our actual data is stored in events_partitioned table. The organization is currently using view called events to reduce the cost. \n-> Since the view called events only has last 14 days of data we cannot use that view.\n-> We also cannot use that view because standard SQL is not used to describe the view. In order to connectt ODBC we need a view described by standard SQL.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "A. Create a new view over events using standard SQL\n-> Wrong, events view contains only last 14 days of data and also it uses Legacy SQL.\n\nB. Create a new partitioned table using a standard SQL query\n-> Partitioned Table is not helpful in this situation.Hence, I am ruling it out.\n\nC. Create a new view over events_partitioned using standard SQL\n-> Correct this is exactly what we need. \n1.We need to create a new view over events_partitioned.\n2. We need to use Standard SQL.\nThis is a valid option.\n\nD. Create a service account for the ODBC connection to use for authentication.\n- Correct answer because we are required to authenticate before ODBC connection.\n\nE. Create a Google Cloud Identity and Access Management (Cloud IAM) role for the ODBC connection and shared \u05d2\u20acevents\u05d2\u20ac\n- This option is of no use in this scenario",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "A. Create a new view over events using standard SQL\n-> Wrong, events view contains only last 14 days of data and also it uses Legacy SQL.\n\nB. Create a new partitioned table using a standard SQL query\n-> Partitioned Table is not helpful in this situation.Hence, I am ruling it out.\n\nC. Create a new view over events_partitioned using standard SQL\n-> Correct this is exactly what we need. \n1.We need to create a new view over events_partitioned.\n2. We need to use Standard SQL.\nThis is a valid option.\n\nD. Create a service account for the ODBC connection to use for authentication.\n- Correct answer because we are required to authenticate before ODBC connection.\n\nE. Create a Google Cloud Identity and Access Management (Cloud IAM) role for the ODBC connection and shared \u05d2\u20acevents\u05d2\u20ac\n- This option is of no use in this scenario",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "samdhimal\n\t\t\t\n\n\n\t\t\t2\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Create a new view over events using standard SQL\n-> Wrong, events view contains only last 14 days of data and also it uses Legacy SQL.\n\nB. Create a new partitioned table using a standard SQL query\n-> Partitioned Table is not helpful in this situation.Hence, I am ruling it out.\n\nC. Create a new view over events_partitioned using standard SQL\n-> Correct this is exactly what we need. \n1.We need to create a new view over events_partitioned.\n2. We need to use Standard SQL.\nThis is a valid option.\n\nD. Create a service account for the ODBC connection to use for authentication.\n- Correct answer because we are required to authenticate before ODBC connection.\n\nE. Create a Google Cloud Identity and Access Management (Cloud IAM) role for the ODBC connection and shared \u05d2\u20acevents\u05d2\u20ac\n- This option is of no use in this scenario",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Create a new view over events using standard SQL\n-> Wrong, events view contains only last 14 days of data and also it uses Legacy SQL.\n\nB. Create a new partitioned table using a standard SQL query\n-> Partitioned Table is not helpful in this situation.Hence, I am ruling it out.\n\nC. Create a new view over events_partitioned using standard SQL\n-> Correct this is exactly what we need. \n1.We need to create a new view over events_partitioned.\n2. We need to use Standard SQL.\nThis is a valid option.\n\nD. Create a service account for the ODBC connection to use for authentication.\n- Correct answer because we are required to authenticate before ODBC connection.\n\nE. Create a Google Cloud Identity and Access Management (Cloud IAM) role for the ODBC connection and shared \u05d2\u20acevents\u05d2\u20ac\n- This option is of no use in this scenario",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "CE is the correct answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "GCPpro\n\t\t\t\n\n\n\t\t\t2\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "CE is the correct answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "CE is the correct answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "needed a service account for ODBC drivers\nstandard SQL vs legacy SQL.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "MisuLava\n\t\t\t\n\n\n\t\t\t2\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "needed a service account for ODBC drivers\nstandard SQL vs legacy SQL.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "needed a service account for ODBC drivers\nstandard SQL vs legacy SQL.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 8\u00a0months ago",
+      "content": "1. Create Services account from IAM & Admin\n2. Add Services account permission Roles as \"BigQuery Admin\" or any custom Role.\nOther options are not related ' to ensure the applications can connect'",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 8\u00a0months ago",
+      "content": "Smaks\n\t\t\t\n\n\n\t\t\t2\u00a0years, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 8\u00a0months ago",
+      "content": "1. Create Services account from IAM & Admin\n2. Add Services account permission Roles as \"BigQuery Admin\" or any custom Role.\nOther options are not related ' to ensure the applications can connect'",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "1. Create Services account from IAM & Admin\n2. Add Services account permission Roles as \"BigQuery Admin\" or any custom Role.\nOther options are not related ' to ensure the applications can connect'",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 8\u00a0months ago",
+      "content": "typo - D; E",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 8\u00a0months ago",
+      "content": "typo - D; E",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 8\u00a0months ago",
+      "content": "Smaks\n\t\t\t\n\n\n\t\t\t2\u00a0years, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "typo - D; E",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "typo - D; E",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 1\u00a0month ago",
+      "content": "As stated by jvg637\n\nC = A standard SQL query cannot reference a view defined using legacy SQL syntax.\nD = For the ODBC drivers is needed a service account which will get a standard Bigquery role.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 1\u00a0month ago",
+      "content": "Arkon88\n\t\t\t\n\n\n\t\t\t3\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "As stated by jvg637\n\nC = A standard SQL query cannot reference a view defined using legacy SQL syntax.\nD = For the ODBC drivers is needed a service account which will get a standard Bigquery role.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: CD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "As stated by jvg637\n\nC = A standard SQL query cannot reference a view defined using legacy SQL syntax.\nD = For the ODBC drivers is needed a service account which will get a standard Bigquery role.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

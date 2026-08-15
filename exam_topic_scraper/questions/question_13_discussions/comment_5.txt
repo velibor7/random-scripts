@@ -1,0 +1,17 @@
+COMMENT #5 FOR QUESTION 13
+============================================================
+Author: Unknown
+Date: 4 years, 10 months ago
+Votes: 0
+----------------------------------------
+Initially, thinking D is the best answer but when question is re-re-read, A seems to be correct answer for following reasons
+1. Is payment TRANSACTION -- DB should able to perform full blown transaction (updating inventory, sales info etc, though not specified) , not just ATOMIC which DataStore provides
+2. Its point-of-sale application, not ONLINE STORE where HIGH number of concurrent users ordering stuff. 
+3. User Base could grow exponentially - again more users does mot mean concurrent users and more processing power. Its only about storage.
+4. Do not want to Manage infrastructure scaling. - Cloud SQL can scale in terms of storage.
+5. CloudStore is poor selection for OLTP application 
+   - Each property is index - so higher latency
+   
+Not sure, during exam 2 min is enough  to think on various point.. 
+I may be wrong or wrong path ... lets brainstrom..
+============================================================

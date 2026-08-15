@@ -1,0 +1,18 @@
+COMMENT #45 FOR QUESTION 37
+============================================================
+Author: Unknown
+Date: 5 months, 2 weeks ago
+Votes: 0
+----------------------------------------
+B. Attach the timestamp and Package ID on the outbound message from each publisher device as they are sent to Cloud Pub/Sub.
+
+Here's why this approach is the most suitable:
+
+By attaching a timestamp and Package ID at the point of origin (publisher device), you ensure that each message has a clear and consistent timestamp associated with it from the moment it is generated. This provides a reliable and accurate record of when each package-tracking message was created, which is crucial for analyzing the data over time.
+
+This approach allows you to maintain the chronological order of events as they occurred at the source, which is important for real-time reporting and historical analysis.
+
+Option A suggests attaching the timestamp in the Cloud Pub/Sub subscriber application. While this can work, it introduces a potential delay and the risk of timestamps not being accurate if there are issues with message processing.
+
+Option C, using the NOW() function in BigQuery, records the time when the data is ingested into BigQuery, which may not reflect the actual time of the event.
+============================================================

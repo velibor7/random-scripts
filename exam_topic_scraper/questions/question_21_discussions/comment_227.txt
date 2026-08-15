@@ -1,0 +1,12 @@
+COMMENT #227 FOR QUESTION 21
+============================================================
+Author: Unknown
+Date: 1 year, 5 months ago
+Votes: 0
+----------------------------------------
+D. Maintain a database table to store the hash value and other metadata for each data entry.
+
+Storing a database table with hash values and metadata is an efficient way to deduplicate data. When new data is transmitted, you can calculate the hash of the payload and check whether it already exists in the database. This approach allows for efficient duplicate detection without the need to compare the new data with all historical data. It's a common and scalable technique used to ensure data consistency and avoid processing the same data multiple times.
+
+Options A (assigning GUIDs to each data entry) and C (storing each data entry as the primary key) can work, but they might be less efficient than using hash values when dealing with a large volume of data. Option B (computing the hash value of each data entry and comparing it with all historical data) can be computationally expensive and slow, especially if there's a significant amount of historical data to compare against. Storing hash values in a table allows for fast and efficient deduplication.
+============================================================

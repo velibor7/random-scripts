@@ -1,0 +1,16 @@
+COMMENT #116 FOR QUESTION 228
+============================================================
+Author: Unknown
+Date: 10 months, 1 week ago
+Votes: 0
+----------------------------------------
+BE
+B. Use Pub/Sub Snapshot capture two days before the deployment.
+
+Pub/Sub Snapshot: Creating a snapshot captures the state of the subscription at a specific point in time. You can then seek to this snapshot to replay messages from that point onwards.
+By capturing a snapshot two days before the deployment, you can ensure that your pipeline reprocesses messages from the past two days.
+E. Use Pub/Sub Seek with a timestamp.
+
+Pub/Sub Seek: This feature allows you to reset the subscription to a specific timestamp. Messages published to the topic after this timestamp are re-delivered.
+By seeking to the timestamp from two days ago, you can instruct Pub/Sub to start re-delivering messages from that point in time
+============================================================

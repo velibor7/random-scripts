@@ -1,0 +1,979 @@
+================================================================================
+QUESTION:
+You want to use Google Stackdriver Logging to monitor Google BigQuery usage. You need an instant notification to be sent to your monitoring tool when new data is appended to a certain table using an insert job, but you do not want to receive notifications for other tables. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Make a call to the Stackdriver API to list all logs, and apply an advanced filter.
+										
+
+
+													B.
+												
+											
+											In the Stackdriver logging admin interface, and enable a log sink export to BigQuery.
+										
+
+
+													C.
+												
+											
+											In the Stackdriver logging admin interface, enable a log sink export to Google Cloud Pub/Sub, and subscribe to the topic from your monitoring tool.
+										
+
+
+													D.
+												
+											
+											Using the Stackdriver API, create a project sink with advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (162 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 25 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 25
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You want to use Google Stackdriver Logging to monitor Google BigQuery usage. You need an instant notification to be sent to your monitoring tool when new data is appended to a certain table using an insert job, but you do not want to receive notifications for other tables. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Make a call to the Stackdriver API to list all logs, and apply an advanced filter.
+										
+
+
+													B.
+												
+											
+											In the Stackdriver logging admin interface, and enable a log sink export to BigQuery.
+										
+
+
+													C.
+												
+											
+											In the Stackdriver logging admin interface, enable a log sink export to Google Cloud Pub/Sub, and subscribe to the topic from your monitoring tool.
+										
+
+
+													D.
+												
+											
+											Using the Stackdriver API, create a project sink with advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 11, 2020, 7:16 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 25
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 11, 2020, 7:16 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 4 years, 7 months ago | Votes: 0
+I would choose D.
+A and B are wrong since don't notify anything to the monitoring tool.
+C has no filter on what will be notified. We want only some tables.
+
+--- Comment #6 ---
+Author: Unknown | Date: 4 years, 7 months ago | Votes: 0
+I would choose D.
+A and B are wrong since don't notify anything to the monitoring tool.
+C has no filter on what will be notified. We want only some tables.
+
+--- Comment #7 ---
+Author: Unknown | Date: 4 years, 7 months ago | Votes: 0
+I would choose D.
+A and B are wrong since don't notify anything to the monitoring tool.
+C has no filter on what will be notified. We want only some tables.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 4 years, 7 months ago | Votes: 0
+I would choose D.
+A and B are wrong since don't notify anything to the monitoring tool.
+C has no filter on what will be notified. We want only some tables.
+
+--- Comment #13 ---
+Author: Unknown | Date: 4 years, 7 months ago | Votes: 0
+I would choose D.
+A and B are wrong since don't notify anything to the monitoring tool.
+C has no filter on what will be notified. We want only some tables.
+
+--- Comment #14 ---
+Author: Unknown | Date: 4 years, 7 months ago | Votes: 0
+jvg637
+			
+
+
+				Highly Voted 
+
+
+			4 years, 7 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+I would choose D.
+A and B are wrong since don't notify anything to the monitoring tool.
+C has no filter on what will be notified. We want only some tables.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+I would choose D.
+A and B are wrong since don't notify anything to the monitoring tool.
+C has no filter on what will be notified. We want only some tables.
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 49 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #21 ---
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+D as the key requirement is to have notification on a particular table. It can be achieved using advanced log filter to filter only the table logs and create a project sink to Cloud Pub/Sub for notification.
+Refer GCP documentation - Advanced Logs Filters: https://cloud.google.com/logging/docs/view/advanced-queries
+A is wrong as advanced filter will help in filtering. However, there is no notification sends.
+B is wrong as it would send all the logs and BigQuery does not provide notifications.
+C is wrong as it would send all the logs.
+
+--- Comment #22 ---
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+MaxNRG
+			
+
+
+				Highly Voted 
+
+
+			2 years, 11 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+D as the key requirement is to have notification on a particular table. It can be achieved using advanced log filter to filter only the table logs and create a project sink to Cloud Pub/Sub for notification.
+Refer GCP documentation - Advanced Logs Filters: https://cloud.google.com/logging/docs/view/advanced-queries
+A is wrong as advanced filter will help in filtering. However, there is no notification sends.
+B is wrong as it would send all the logs and BigQuery does not provide notifications.
+C is wrong as it would send all the logs.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+D as the key requirement is to have notification on a particular table. It can be achieved using advanced log filter to filter only the table logs and create a project sink to Cloud Pub/Sub for notification.
+Refer GCP documentation - Advanced Logs Filters: https://cloud.google.com/logging/docs/view/advanced-queries
+A is wrong as advanced filter will help in filtering. However, there is no notification sends.
+B is wrong as it would send all the logs and BigQuery does not provide notifications.
+C is wrong as it would send all the logs.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 15 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date: 4 months, 3 weeks ago | Votes: 0
+D is the correct answer because: 
+- we need to advance filtering to filter the logs for the specific table
+- we need to use monitoring tool for notification.
+
+--- Comment #30 ---
+Author: Unknown | Date: 4 months, 3 weeks ago | Votes: 0
+suwalsageen12
+			
+
+
+				Most Recent 
+
+
+			4 months, 3 weeks ago
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+D is the correct answer because: 
+- we need to advance filtering to filter the logs for the specific table
+- we need to use monitoring tool for notification.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+D is the correct answer because: 
+- we need to advance filtering to filter the logs for the specific table
+- we need to use monitoring tool for notification.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+Good point by MaxNRG about reducing the number of logs sending to Pub/Sub
+
+--- Comment #38 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+axantroff
+			
+
+
+			10 months, 3 weeks ago
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+Good point by MaxNRG about reducing the number of logs sending to Pub/Sub
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+Good point by MaxNRG about reducing the number of logs sending to Pub/Sub
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date: 11 months, 2 weeks ago | Votes: 0
+Theorically Pub/Sub could filters log to forward the right ones to the correct topic. https://cloud.google.com/pubsub/docs/subscription-message-filter
+So C could be accepted, but It's better if filtering is performed earlier, so in this case D is more performing
+
+--- Comment #47 ---
+Author: Unknown | Date: 11 months, 2 weeks ago | Votes: 0
+ruben82
+			
+
+
+			11 months, 2 weeks ago
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+Theorically Pub/Sub could filters log to forward the right ones to the correct topic. https://cloud.google.com/pubsub/docs/subscription-message-filter
+So C could be accepted, but It's better if filtering is performed earlier, so in this case D is more performing
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+Theorically Pub/Sub could filters log to forward the right ones to the correct topic. https://cloud.google.com/pubsub/docs/subscription-message-filter
+So C could be accepted, but It's better if filtering is performed earlier, so in this case D is more performing
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #54 ---
+Author: Unknown | Date: 11 months, 3 weeks ago | Votes: 0
+D. Using the Stackdriver API, create a project sink with an advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+This approach allows you to set up a custom log sink with an advanced filter that targets the specific table and then export the log entries to Google Cloud Pub/Sub. Your monitoring tool can subscribe to the Pub/Sub topic, providing you with instant notifications when relevant events occur without being inundated with notifications from other tables.
+
+Options A and B do not offer the same level of customization and specificity in targeting notifications for a particular table.
+
+Option C is almost correct but doesn't mention the use of an advanced log filter in the sink configuration, which is typically needed to filter the logs to a specific table effectively. Using the Stackdriver API for more advanced configuration is often necessary for fine-grained control over log filtering.
+
+--- Comment #55 ---
+Author: Unknown | Date: 11 months, 3 weeks ago | Votes: 0
+rtcpost
+			
+
+
+			11 months, 3 weeks ago
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+D. Using the Stackdriver API, create a project sink with an advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+This approach allows you to set up a custom log sink with an advanced filter that targets the specific table and then export the log entries to Google Cloud Pub/Sub. Your monitoring tool can subscribe to the Pub/Sub topic, providing you with instant notifications when relevant events occur without being inundated with notifications from other tables.
+
+Options A and B do not offer the same level of customization and specificity in targeting notifications for a particular table.
+
+Option C is almost correct but doesn't mention the use of an advanced log filter in the sink configuration, which is typically needed to filter the logs to a specific table effectively. Using the Stackdriver API for more advanced configuration is often necessary for fine-grained control over log filtering.
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+D. Using the Stackdriver API, create a project sink with an advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+This approach allows you to set up a custom log sink with an advanced filter that targets the specific table and then export the log entries to Google Cloud Pub/Sub. Your monitoring tool can subscribe to the Pub/Sub topic, providing you with instant notifications when relevant events occur without being inundated with notifications from other tables.
+
+Options A and B do not offer the same level of customization and specificity in targeting notifications for a particular table.
+
+Option C is almost correct but doesn't mention the use of an advanced log filter in the sink configuration, which is typically needed to filter the logs to a specific table effectively. Using the Stackdriver API for more advanced configuration is often necessary for fine-grained control over log filtering.
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #63 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+D makes sense.
+
+--- Comment #64 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+suku2
+			
+
+
+			1 year ago
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+D makes sense.
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+D makes sense.
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+D should be the answer
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+GCP_PDE_AG
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+D should be the answer
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+D should be the answer
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #80 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+A and B mention nothing about notifications and C would push all data. It's D.
+
+--- Comment #81 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Mathew106
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+A and B mention nothing about notifications and C would push all data. It's D.
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+A and B mention nothing about notifications and C would push all data. It's D.
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #89 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+D makes sense
+
+--- Comment #90 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+bha11111
+			
+
+
+			1 year, 7 months ago
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+D makes sense
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+D makes sense
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #98 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+"advanced log filter" is the key word here, all other options push all data ...
+
+--- Comment #99 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Jackalski
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+"advanced log filter" is the key word here, all other options push all data ...
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+"advanced log filter" is the key word here, all other options push all data ...
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #107 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+D is the best choice
+
+--- Comment #108 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Jasar
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+D is the best choice
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+D is the best choice
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #116 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Using the Stackdriver API, create a project sink with advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+--- Comment #117 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+alecuba16
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+Using the Stackdriver API, create a project sink with advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+Using the Stackdriver API, create a project sink with advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #125 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+D. Option B doesn't make sense
+
+--- Comment #126 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+devric
+			
+
+
+			2 years, 6 months ago
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+D. Option B doesn't make sense
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+D. Option B doesn't make sense
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #134 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+correct answer -> Using the Stackdriver API, create a project sink with advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+Option C is also most likely right answer but it doesn't have the filter. We don't want all the tables. We only want one. So the correct answer is D.
+
+Logging sink - Using a Logging sink, you can direct specific log entries to your business logic. In this example, you can use Cloud Audit logs for Compute Engine which use the resource type gce_firewall_rule to filter for the logs of interest. You can also add an event type GCE_OPERATION_DONE to the filter to capture only the completed log events. Here is the Logging filter used to identify the logs. You can try out the query in the Logs Viewer.
+
+Pub/Sub topic – In Pub/Sub, you can create a topic to which to direct the log sink and use the Pub/Sub message to trigger a cloud function. 
+
+Reference: https://cloud.google.com/blog/products/management-tools/automate-your-response-to-a-cloud-logging-event
+
+--- Comment #135 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+samdhimal
+			
+
+
+			2 years, 8 months ago
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+correct answer -> Using the Stackdriver API, create a project sink with advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+Option C is also most likely right answer but it doesn't have the filter. We don't want all the tables. We only want one. So the correct answer is D.
+
+Logging sink - Using a Logging sink, you can direct specific log entries to your business logic. In this example, you can use Cloud Audit logs for Compute Engine which use the resource type gce_firewall_rule to filter for the logs of interest. You can also add an event type GCE_OPERATION_DONE to the filter to capture only the completed log events. Here is the Logging filter used to identify the logs. You can try out the query in the Logs Viewer.
+
+Pub/Sub topic – In Pub/Sub, you can create a topic to which to direct the log sink and use the Pub/Sub message to trigger a cloud function. 
+
+Reference: https://cloud.google.com/blog/products/management-tools/automate-your-response-to-a-cloud-logging-event
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+correct answer -> Using the Stackdriver API, create a project sink with advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+Option C is also most likely right answer but it doesn't have the filter. We don't want all the tables. We only want one. So the correct answer is D.
+
+Logging sink - Using a Logging sink, you can direct specific log entries to your business logic. In this example, you can use Cloud Audit logs for Compute Engine which use the resource type gce_firewall_rule to filter for the logs of interest. You can also add an event type GCE_OPERATION_DONE to the filter to capture only the completed log events. Here is the Logging filter used to identify the logs. You can try out the query in the Logs Viewer.
+
+Pub/Sub topic – In Pub/Sub, you can create a topic to which to direct the log sink and use the Pub/Sub message to trigger a cloud function. 
+
+Reference: https://cloud.google.com/blog/products/management-tools/automate-your-response-to-a-cloud-logging-event
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #142 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+explained by MaxNRG
+
+--- Comment #143 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+santoshindia
+			
+
+
+			2 years, 9 months ago
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+explained by MaxNRG
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+explained by MaxNRG
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #151 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+as explained by MaxNRG
+
+--- Comment #152 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+medeis_jar
+			
+
+
+			2 years, 9 months ago
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+as explained by MaxNRG
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+as explained by MaxNRG
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

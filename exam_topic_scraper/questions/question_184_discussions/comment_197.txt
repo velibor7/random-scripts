@@ -1,0 +1,15 @@
+COMMENT #197 FOR QUESTION 184
+============================================================
+Author: Unknown
+Date: 2 years, 6 months ago
+Votes: 0
+----------------------------------------
+D : read more on Streaming inserts and timestamp-aware queries as the following link
+it is the same as this question exactly, but it is quite similar.
+https://cloud.google.com/blog/products/bigquery/performing-large-scale-mutations-in-bigquery
+
+read carefully in the content below.
+When using timestamps to keep track of updated and deleted records, it’s a good idea to periodically delete stale entries. To illustrate, the following pair of DML statements can be used to remove older versions as well as deleted records.
+
+You’ll notice that the above DELETE statements don’t attempt to remove records that are newer than 3 hours. This is because data in BigQuery’s streaming buffer is not immediately available for UPDATE, DELETE, or MERGE operations, as described in DML Limitations. These queries assume that the actual values for RecordTime roughly match the actual ingestion time.
+============================================================

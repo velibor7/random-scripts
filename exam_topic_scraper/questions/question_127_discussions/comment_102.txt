@@ -1,0 +1,18 @@
+COMMENT #102 FOR QUESTION 127
+============================================================
+Author: Unknown
+Date: 10 months ago
+Votes: 0
+----------------------------------------
+Why Not Other Options?
+A. Use Cloud TPUs without any additional adjustment to your code:
+
+TPUs are optimized for standard TensorFlow operations and require custom TensorFlow ops to be adapted to TPU-compatible kernels, which is not trivial.
+Without modifications, your custom C++ ops will not run efficiently on TPUs.
+B. Use Cloud TPUs after implementing GPU kernel support for your customs ops:
+
+Implementing GPU kernel support alone is not sufficient for running on TPUs. TPUs require specific optimizations and adaptations beyond GPU kernels.
+D. Stay on CPUs, and increase the size of the cluster you're training your model on:
+
+While increasing the CPU cluster size might reduce training time, it is not as efficient or cost-effective as using GPUs, especially for matrix multiplication tasks.
+============================================================

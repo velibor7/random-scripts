@@ -1,0 +1,791 @@
+================================================================================
+QUESTION:
+You have a BigQuery dataset named “customers”. All tables will be tagged by using a Data Catalog tag template named “gdpr”. The template contains one mandatory field, “has_sensitive_data”, with a boolean value. All employees must be able to do a simple search and find tables in the dataset that have either true or false in the “has_sensitive_data’ field. However, only the Human Resources (HR) group should be able to see the data inside the tables for which “has_sensitive data” is true. You give the all employees group the bigquery.metadataViewer and bigquery.connectionUser roles on the dataset. You want to minimize configuration overhead. What should you do next?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create the “gdpr” tag template with private visibility. Assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+										
+
+
+													B.
+												
+											
+											Create the “gdpr” tag template with private visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+										
+
+
+													C.
+												
+											
+											Create the “gdpr” tag template with public visibility. Assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+										
+
+
+													D.
+												
+											
+											Create the “gdpr” tag template with public visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (118 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 272 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 272
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have a BigQuery dataset named “customers”. All tables will be tagged by using a Data Catalog tag template named “gdpr”. The template contains one mandatory field, “has_sensitive_data”, with a boolean value. All employees must be able to do a simple search and find tables in the dataset that have either true or false in the “has_sensitive_data’ field. However, only the Human Resources (HR) group should be able to see the data inside the tables for which “has_sensitive data” is true. You give the all employees group the bigquery.metadataViewer and bigquery.connectionUser roles on the dataset. You want to minimize configuration overhead. What should you do next?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create the “gdpr” tag template with private visibility. Assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+										
+
+
+													B.
+												
+											
+											Create the “gdpr” tag template with private visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+										
+
+
+													C.
+												
+											
+											Create the “gdpr” tag template with public visibility. Assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+										
+
+
+													D.
+												
+											
+											Create the “gdpr” tag template with public visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 6:55 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 272
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 6:55 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The most straightforward solution with minimal configuration overhead.
+- By creating the "gdpr" tag template with public visibility, you ensure that all employees can search and find tables based on the "has_sensitive_data" field. 
+- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The most straightforward solution with minimal configuration overhead.
+- By creating the "gdpr" tag template with public visibility, you ensure that all employees can search and find tables based on the "has_sensitive_data" field. 
+- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The most straightforward solution with minimal configuration overhead.
+- By creating the "gdpr" tag template with public visibility, you ensure that all employees can search and find tables based on the "has_sensitive_data" field. 
+- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The most straightforward solution with minimal configuration overhead.
+- By creating the "gdpr" tag template with public visibility, you ensure that all employees can search and find tables based on the "has_sensitive_data" field. 
+- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- The most straightforward solution with minimal configuration overhead.
+- By creating the "gdpr" tag template with public visibility, you ensure that all employees can search and find tables based on the "has_sensitive_data" field. 
+- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+- The most straightforward solution with minimal configuration overhead.
+- By creating the "gdpr" tag template with public visibility, you ensure that all employees can search and find tables based on the "has_sensitive_data" field. 
+- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+- The most straightforward solution with minimal configuration overhead.
+- By creating the "gdpr" tag template with public visibility, you ensure that all employees can search and find tables based on the "has_sensitive_data" field. 
+- Assigning the bigquery.dataViewer role to the HR group on tables with sensitive data ensures that only they can view the actual data in these tables.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 18 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Wouldn't employees still need the roles/datacatalog.tagTemplateViewer role to view private AND public tags?
+To get the permissions that you need to view public and private tags on Bigtable resources, ask your administrator to grant you the following IAM roles:
+- roles/datacatalog.tagTemplateViewer
+- roles/bigtable.viewer
+Source: https://cloud.google.com/bigtable/docs/manage-data-assets-using-data-catalog#permissions-view-tags
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Wouldn't employees still need the roles/datacatalog.tagTemplateViewer role to view private AND public tags?
+To get the permissions that you need to view public and private tags on Bigtable resources, ask your administrator to grant you the following IAM roles:
+- roles/datacatalog.tagTemplateViewer
+- roles/bigtable.viewer
+Source: https://cloud.google.com/bigtable/docs/manage-data-assets-using-data-catalog#permissions-view-tags
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+ML6
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+Wouldn't employees still need the roles/datacatalog.tagTemplateViewer role to view private AND public tags?
+To get the permissions that you need to view public and private tags on Bigtable resources, ask your administrator to grant you the following IAM roles:
+- roles/datacatalog.tagTemplateViewer
+- roles/bigtable.viewer
+Source: https://cloud.google.com/bigtable/docs/manage-data-assets-using-data-catalog#permissions-view-tags
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Wouldn't employees still need the roles/datacatalog.tagTemplateViewer role to view private AND public tags?
+To get the permissions that you need to view public and private tags on Bigtable resources, ask your administrator to grant you the following IAM roles:
+- roles/datacatalog.tagTemplateViewer
+- roles/bigtable.viewer
+Source: https://cloud.google.com/bigtable/docs/manage-data-assets-using-data-catalog#permissions-view-tags
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Ignore the last reply. The correct answer would be C.
+Tags = Custom metadata fields that you can attach to a data entry to provide context.
+Tag templates = Reusable structures that you can use to rapidly create new tags.
+In short, the employees do not need a tagTemplateViewer role because it pertains to the tag templates, not the tags themselves.
+
+--- Comment #30 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+ML6
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+Ignore the last reply. The correct answer would be C.
+Tags = Custom metadata fields that you can attach to a data entry to provide context.
+Tag templates = Reusable structures that you can use to rapidly create new tags.
+In short, the employees do not need a tagTemplateViewer role because it pertains to the tag templates, not the tags themselves.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Ignore the last reply. The correct answer would be C.
+Tags = Custom metadata fields that you can attach to a data entry to provide context.
+Tag templates = Reusable structures that you can use to rapidly create new tags.
+In short, the employees do not need a tagTemplateViewer role because it pertains to the tag templates, not the tags themselves.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #38 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+Option C:
+Public Visibility: Ensures that all employees can see the tags and their values.
+Data Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.
+Option D:
+Public Visibility: Ensures that all employees can see the tags and their values.
+Tag Template Viewer Role: Explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags.
+Data Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.
+While both options provide public visibility for the tags and restrict data access to the HR group, Option D explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags and perform searches based on the "hs_sensitive_data" field.
+
+--- Comment #39 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+Pime13
+			
+
+
+				Most Recent 
+
+
+			3 months ago
+
+--- Comment #40 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+Option C:
+Public Visibility: Ensures that all employees can see the tags and their values.
+Data Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.
+Option D:
+Public Visibility: Ensures that all employees can see the tags and their values.
+Tag Template Viewer Role: Explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags.
+Data Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.
+While both options provide public visibility for the tags and restrict data access to the HR group, Option D explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags and perform searches based on the "hs_sensitive_data" field.
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Option C:
+Public Visibility: Ensures that all employees can see the tags and their values.
+Data Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.
+Option D:
+Public Visibility: Ensures that all employees can see the tags and their values.
+Tag Template Viewer Role: Explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags.
+Data Viewer Role for HR: Restricts access to the data inside the tables with sensitive data to the HR group.
+While both options provide public visibility for the tags and restrict data access to the HR group, Option D explicitly grants the datacatalog.tagTemplateViewer role to the all employees group, ensuring they can view the tags and perform searches based on the "hs_sensitive_data" field.
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+You can search for public tags using simple search. You can view a data entry, including its public tags, as long as you have the required permissions to view the data entry. No additional permissions on the tag template are required. For permissions required to view the data entry, see the table in this section.
+However, we recommend to also grant the datacatalog.tagTemplates.get permission to users who are expected to search for these public tags. This permission allows users to also use the search predicate tag: or use the tag template search facet in the Data Catalog search page.
+For private tags, you need view permissions on both the tag template and the data entry to search for the tag and to see the tag in the entry detail page. Users must use the tag: search predicate or the tag template search facet to find the tags; simple search for private tags isn't supported.
+
+--- Comment #46 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+You can search for public tags using simple search. You can view a data entry, including its public tags, as long as you have the required permissions to view the data entry. No additional permissions on the tag template are required. For permissions required to view the data entry, see the table in this section.
+However, we recommend to also grant the datacatalog.tagTemplates.get permission to users who are expected to search for these public tags. This permission allows users to also use the search predicate tag: or use the tag template search facet in the Data Catalog search page.
+For private tags, you need view permissions on both the tag template and the data entry to search for the tag and to see the tag in the entry detail page. Users must use the tag: search predicate or the tag template search facet to find the tags; simple search for private tags isn't supported.
+
+--- Comment #47 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+Pime13
+			
+
+
+			3 months ago
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+You can search for public tags using simple search. You can view a data entry, including its public tags, as long as you have the required permissions to view the data entry. No additional permissions on the tag template are required. For permissions required to view the data entry, see the table in this section.
+However, we recommend to also grant the datacatalog.tagTemplates.get permission to users who are expected to search for these public tags. This permission allows users to also use the search predicate tag: or use the tag template search facet in the Data Catalog search page.
+For private tags, you need view permissions on both the tag template and the data entry to search for the tag and to see the tag in the entry detail page. Users must use the tag: search predicate or the tag template search facet to find the tags; simple search for private tags isn't supported.
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+You can search for public tags using simple search. You can view a data entry, including its public tags, as long as you have the required permissions to view the data entry. No additional permissions on the tag template are required. For permissions required to view the data entry, see the table in this section.
+However, we recommend to also grant the datacatalog.tagTemplates.get permission to users who are expected to search for these public tags. This permission allows users to also use the search predicate tag: or use the tag template search facet in the Data Catalog search page.
+For private tags, you need view permissions on both the tag template and the data entry to search for the tag and to see the tag in the entry detail page. Users must use the tag: search predicate or the tag template search facet to find the tags; simple search for private tags isn't supported.
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #55 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+This Guy Raasd is mostly correct with explanation thanks mate.
+
+--- Comment #56 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+meh_33
+			
+
+
+			8 months ago
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+This Guy Raasd is mostly correct with explanation thanks mate.
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+This Guy Raasd is mostly correct with explanation thanks mate.
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #64 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+A - employees cannot use the tag
+B - increases the configuration overhead
+C - exactly what we need
+D - unnecessary role assignment, the tag template is already visibile
+
+--- Comment #65 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+iooj
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+A - employees cannot use the tag
+B - increases the configuration overhead
+C - exactly what we need
+D - unnecessary role assignment, the tag template is already visibile
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+A - employees cannot use the tag
+B - increases the configuration overhead
+C - exactly what we need
+D - unnecessary role assignment, the tag template is already visibile
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+While D works well, it is not obligated to give all employees the role of   tagTemplateViewer, as it will give them the view permission for tag templates as well as the tags created by the template.
+However, Tags are a type of business metadata. Adding tags to a data entry helps provide meaningful context to anyone who needs to use the asset.And public tags provide less strict access control for searching and viewing the tag as compared to private tags. Any user who has the required view permissions for a data entry can view all the public tags associated with it. View permissions for public tags are only required when you perform a search in Data Catalog using the tag: syntax or when you view an unattached tag template.
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+d11379b
+			
+
+
+			1 year ago
+
+--- Comment #74 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+While D works well, it is not obligated to give all employees the role of   tagTemplateViewer, as it will give them the view permission for tag templates as well as the tags created by the template.
+However, Tags are a type of business metadata. Adding tags to a data entry helps provide meaningful context to anyone who needs to use the asset.And public tags provide less strict access control for searching and viewing the tag as compared to private tags. Any user who has the required view permissions for a data entry can view all the public tags associated with it. View permissions for public tags are only required when you perform a search in Data Catalog using the tag: syntax or when you view an unattached tag template.
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+While D works well, it is not obligated to give all employees the role of   tagTemplateViewer, as it will give them the view permission for tag templates as well as the tags created by the template.
+However, Tags are a type of business metadata. Adding tags to a data entry helps provide meaningful context to anyone who needs to use the asset.And public tags provide less strict access control for searching and viewing the tag as compared to private tags. Any user who has the required view permissions for a data entry can view all the public tags associated with it. View permissions for public tags are only required when you perform a search in Data Catalog using the tag: syntax or when you view an unattached tag template.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+As all employees have the role “ bigquery.metadataViewer” they are already capable to see tags on BigQuery then
+
+--- Comment #80 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+As all employees have the role “ bigquery.metadataViewer” they are already capable to see tags on BigQuery then
+
+--- Comment #81 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+d11379b
+			
+
+
+			1 year ago
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+As all employees have the role “ bigquery.metadataViewer” they are already capable to see tags on BigQuery then
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+As all employees have the role “ bigquery.metadataViewer” they are already capable to see tags on BigQuery then
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #89 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+I'll go with raaad's answer
+
+--- Comment #90 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+JyoGCP
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+I'll go with raaad's answer
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+I'll go with raaad's answer
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #98 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+If you working with PII, We can't granted public access. So Private Visibility for the Tag Template its the best option.
+
+Check it https://cloud.google.com/data-catalog/docs/tags-and-tag-templates
+
+--- Comment #99 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+tibuenoc
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+If you working with PII, We can't granted public access. So Private Visibility for the Tag Template its the best option.
+
+Check it https://cloud.google.com/data-catalog/docs/tags-and-tag-templates
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+If you working with PII, We can't granted public access. So Private Visibility for the Tag Template its the best option.
+
+Check it https://cloud.google.com/data-catalog/docs/tags-and-tag-templates
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #107 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+D. Create the “gdpr” tag template with public visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+
+--- Comment #108 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+scaenruy
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create the “gdpr” tag template with public visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create the “gdpr” tag template with public visibility. Assign the datacatalog.tagTemplateViewer role on this tag to the all employees group, and assign the bigquery.dataViewer role to the HR group on the tables that contain sensitive data.
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

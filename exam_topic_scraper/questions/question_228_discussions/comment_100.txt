@@ -1,0 +1,16 @@
+COMMENT #100 FOR QUESTION 228
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+First, read this document: https://cloud.google.com/pubsub/docs/replay-overview.
+
+Key Points:
+
+Seek to a Snapshot: Reprocesses only unacknowledged messages.
+Seek to a Timestamp: Reprocesses all messages (acknowledged and unacknowledged) after that time.
+Since the question asks for delivering all messages, option E is correct, as it includes both acknowledged and unacknowledged messages.
+
+Regarding Option D: Configuring a subscription with the retain_acked_messages property allows replaying previously acknowledged messages retained for up to 31 days. This satisfies the requirement to deliver all messages and retains them longer than the mentioned 2 days.
+============================================================

@@ -1,0 +1,751 @@
+================================================================================
+QUESTION:
+You have designed an Apache Beam processing pipeline that reads from a Pub/Sub topic. The topic has a message retention duration of one day, and writes to a Cloud Storage bucket. You need to select a bucket location and processing strategy to prevent data loss in case of a regional outage with an RPO of 15 minutes. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Use a dual-region Cloud Storage bucket.2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.3. Seek the subscription back in time by 15 minutes to recover the acknowledged messages.4. Start the Dataflow job in a secondary region.
+										
+
+
+													B.
+												
+											
+											1. Use a multi-regional Cloud Storage bucket.2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.4. Start the Dataflow job in a secondary region.
+										
+
+
+													C.
+												
+											
+											1. Use a regional Cloud Storage bucket.2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.3. Seek the subscription back in time by one day to recover the acknowledged messages.4. Start the Dataflow job in a secondary region and write in a bucket in the same region.
+										
+
+
+													D.
+												
+											
+											1. Use a dual-region Cloud Storage bucket with turbo replication enabled.2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.4. Start the Dataflow job in a secondary region.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (111 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 242 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 242
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have designed an Apache Beam processing pipeline that reads from a Pub/Sub topic. The topic has a message retention duration of one day, and writes to a Cloud Storage bucket. You need to select a bucket location and processing strategy to prevent data loss in case of a regional outage with an RPO of 15 minutes. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Use a dual-region Cloud Storage bucket.2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.3. Seek the subscription back in time by 15 minutes to recover the acknowledged messages.4. Start the Dataflow job in a secondary region.
+										
+
+
+													B.
+												
+											
+											1. Use a multi-regional Cloud Storage bucket.2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.4. Start the Dataflow job in a secondary region.
+										
+
+
+													C.
+												
+											
+											1. Use a regional Cloud Storage bucket.2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.3. Seek the subscription back in time by one day to recover the acknowledged messages.4. Start the Dataflow job in a secondary region and write in a bucket in the same region.
+										
+
+
+													D.
+												
+											
+											1. Use a dual-region Cloud Storage bucket with turbo replication enabled.2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.4. Start the Dataflow job in a secondary region.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 2:15 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 242
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 2:15 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+D. 1. Use a dual-region Cloud Storage bucket with turbo replication enabled.
+2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.
+3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.
+4. Start the Dataflow job in a secondary region.
+
+RPO of 15 minutes is guaranteed when turbo replication is used
+https://cloud.google.com/storage/docs/availability-durability
+
+--- Comment #6 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+D. 1. Use a dual-region Cloud Storage bucket with turbo replication enabled.
+2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.
+3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.
+4. Start the Dataflow job in a secondary region.
+
+RPO of 15 minutes is guaranteed when turbo replication is used
+https://cloud.google.com/storage/docs/availability-durability
+
+--- Comment #7 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+D. 1. Use a dual-region Cloud Storage bucket with turbo replication enabled.
+2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.
+3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.
+4. Start the Dataflow job in a secondary region.
+
+RPO of 15 minutes is guaranteed when turbo replication is used
+https://cloud.google.com/storage/docs/availability-durability
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+D. 1. Use a dual-region Cloud Storage bucket with turbo replication enabled.
+2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.
+3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.
+4. Start the Dataflow job in a secondary region.
+
+RPO of 15 minutes is guaranteed when turbo replication is used
+https://cloud.google.com/storage/docs/availability-durability
+
+--- Comment #13 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+D. 1. Use a dual-region Cloud Storage bucket with turbo replication enabled.
+2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.
+3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.
+4. Start the Dataflow job in a secondary region.
+
+RPO of 15 minutes is guaranteed when turbo replication is used
+https://cloud.google.com/storage/docs/availability-durability
+
+--- Comment #14 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+datapassionate
+			
+
+
+				Highly Voted 
+
+
+			8 months, 4 weeks ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+D. 1. Use a dual-region Cloud Storage bucket with turbo replication enabled.
+2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.
+3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.
+4. Start the Dataflow job in a secondary region.
+
+RPO of 15 minutes is guaranteed when turbo replication is used
+https://cloud.google.com/storage/docs/availability-durability
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+D. 1. Use a dual-region Cloud Storage bucket with turbo replication enabled.
+2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.
+3. Seek the subscription back in time by 60 minutes to recover the acknowledged messages.
+4. Start the Dataflow job in a secondary region.
+
+RPO of 15 minutes is guaranteed when turbo replication is used
+https://cloud.google.com/storage/docs/availability-durability
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+Why multi-region is not correct. There is no downtime in case a region goes down.
+
+--- Comment #21 ---
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+Why multi-region is not correct. There is no downtime in case a region goes down.
+
+--- Comment #22 ---
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+ashdam
+			
+
+
+			7 months, 2 weeks ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+Why multi-region is not correct. There is no downtime in case a region goes down.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Why multi-region is not correct. There is no downtime in case a region goes down.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+Option D is correct.
+
+Not A, because dual-region bucket WITHOUT turbo replication takes atleast 1 hour to sync data between regions. SLA for 100% data sync is 12 hours as per google.
+
+--- Comment #31 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+JyoGCP
+			
+
+
+				Highly Voted 
+
+
+			7 months, 3 weeks ago
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Option D is correct.
+
+Not A, because dual-region bucket WITHOUT turbo replication takes atleast 1 hour to sync data between regions. SLA for 100% data sync is 12 hours as per google.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Option D is correct.
+
+Not A, because dual-region bucket WITHOUT turbo replication takes atleast 1 hour to sync data between regions. SLA for 100% data sync is 12 hours as per google.
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #39 ---
+Author: Unknown | Date: 2 months, 1 week ago | Votes: 0
+Could be A or D. The choice between a 15-minute seek and a 60-minute seek depends on your specific requirements and priorities. If a very low RPO is critical, a 60-minute seek might be necessary to ensure data completeness.If minimizing cost and processing time is more important, a 15-minute seek might be sufficient, especially if you're confident in the reliability of Turbo Replication.
+
+--- Comment #40 ---
+Author: Unknown | Date: 2 months, 1 week ago | Votes: 0
+LP_PDE
+			
+
+
+				Most Recent 
+
+
+			2 months, 1 week ago
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+Could be A or D. The choice between a 15-minute seek and a 60-minute seek depends on your specific requirements and priorities. If a very low RPO is critical, a 60-minute seek might be necessary to ensure data completeness.If minimizing cost and processing time is more important, a 15-minute seek might be sufficient, especially if you're confident in the reliability of Turbo Replication.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+Could be A or D. The choice between a 15-minute seek and a 60-minute seek depends on your specific requirements and priorities. If a very low RPO is critical, a 60-minute seek might be necessary to ensure data completeness.If minimizing cost and processing time is more important, a 15-minute seek might be sufficient, especially if you're confident in the reliability of Turbo Replication.
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #48 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+An RPO of 15 minutes seemingly suggests using Turbo Replication. But here's the thing - why would you want to seek the subscription back in time by 60 minutes and run the Dataflow job? Thus, if turbo replication is enabled, steps 3 & 4 are completely redundant and unnecessary. Which is why option A is correct. This was a tricky one!
+
+--- Comment #49 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+m_a_p_s
+			
+
+
+			3 months, 2 weeks ago
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+An RPO of 15 minutes seemingly suggests using Turbo Replication. But here's the thing - why would you want to seek the subscription back in time by 60 minutes and run the Dataflow job? Thus, if turbo replication is enabled, steps 3 & 4 are completely redundant and unnecessary. Which is why option A is correct. This was a tricky one!
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+An RPO of 15 minutes seemingly suggests using Turbo Replication. But here's the thing - why would you want to seek the subscription back in time by 60 minutes and run the Dataflow job? Thus, if turbo replication is enabled, steps 3 & 4 are completely redundant and unnecessary. Which is why option A is correct. This was a tricky one!
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #57 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+I don't like answer D. If we have turbo replication can ensure that change within 15min can be replicated, why do we still need to seek the subscription back in time by 60min?
+
+--- Comment #58 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+shangning007
+			
+
+
+			3 months, 2 weeks ago
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+I don't like answer D. If we have turbo replication can ensure that change within 15min can be replicated, why do we still need to seek the subscription back in time by 60min?
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+I don't like answer D. If we have turbo replication can ensure that change within 15min can be replicated, why do we still need to seek the subscription back in time by 60min?
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #66 ---
+Author: Unknown | Date: 4 months, 4 weeks ago | Votes: 0
+D
+https://cloud.google.com/storage/docs/availability-durability#cross-region-redundancy
+
+--- Comment #67 ---
+Author: Unknown | Date: 4 months, 4 weeks ago | Votes: 0
+SVGoogle89
+			
+
+
+			4 months, 4 weeks ago
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+D
+https://cloud.google.com/storage/docs/availability-durability#cross-region-redundancy
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+D
+https://cloud.google.com/storage/docs/availability-durability#cross-region-redundancy
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #74 ---
+Author: Unknown | Date: 8 months, 2 weeks ago | Votes: 0
+https://cloud.google.com/storage/docs/availability-durability#turbo-replication says : "When enabled, turbo replication is designed to replicate 100% of newly written objects to both regions that constitute the dual-region within the recovery point objective of 15 minutes, regardless of object size."
+so seems D to me
+
+--- Comment #75 ---
+Author: Unknown | Date: 8 months, 2 weeks ago | Votes: 0
+lipa31
+			
+
+
+			8 months, 2 weeks ago
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/storage/docs/availability-durability#turbo-replication says : "When enabled, turbo replication is designed to replicate 100% of newly written objects to both regions that constitute the dual-region within the recovery point objective of 15 minutes, regardless of object size."
+so seems D to me
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/storage/docs/availability-durability#turbo-replication says : "When enabled, turbo replication is designed to replicate 100% of newly written objects to both regions that constitute the dual-region within the recovery point objective of 15 minutes, regardless of object size."
+so seems D to me
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #83 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Low RPO: Dual-region buckets offer synchronous replication, ensuring data is immediately available in both regions, aligning with the 15-minute RPO.
+- Turbo Replication: enabling turbo replication can further reduce replication latency to near-real-time for even stricter RPO requirements.
+- Resilient Data Storage: Dual-region buckets ensure data availability even during regional outages, protecting processed data.
+- Fast Recovery: Reprocessing from the last 15 minutes of acknowledged messages minimizes data loss and downtime.
+
+--- Comment #84 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+raaad
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #85 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+- Low RPO: Dual-region buckets offer synchronous replication, ensuring data is immediately available in both regions, aligning with the 15-minute RPO.
+- Turbo Replication: enabling turbo replication can further reduce replication latency to near-real-time for even stricter RPO requirements.
+- Resilient Data Storage: Dual-region buckets ensure data availability even during regional outages, protecting processed data.
+- Fast Recovery: Reprocessing from the last 15 minutes of acknowledged messages minimizes data loss and downtime.
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+- Low RPO: Dual-region buckets offer synchronous replication, ensuring data is immediately available in both regions, aligning with the 15-minute RPO.
+- Turbo Replication: enabling turbo replication can further reduce replication latency to near-real-time for even stricter RPO requirements.
+- Resilient Data Storage: Dual-region buckets ensure data availability even during regional outages, protecting processed data.
+- Fast Recovery: Reprocessing from the last 15 minutes of acknowledged messages minimizes data loss and downtime.
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #90 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+why not D then, if turbo replication improves RPO??
+
+--- Comment #91 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+why not D then, if turbo replication improves RPO??
+
+--- Comment #92 ---
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+qq589539483084gfrgrgfr
+			
+
+
+			8 months, 3 weeks ago
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+why not D then, if turbo replication improves RPO??
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+why not D then, if turbo replication improves RPO??
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #100 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+A. 
+1. Use a dual-region Cloud Storage bucket.
+2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.
+3. Seek the subscription back in time by 15 minutes to recover the acknowledged messages.
+4. Start the Dataflow job in a secondary region.
+
+--- Comment #101 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+scaenruy
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+A. 
+1. Use a dual-region Cloud Storage bucket.
+2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.
+3. Seek the subscription back in time by 15 minutes to recover the acknowledged messages.
+4. Start the Dataflow job in a secondary region.
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+A. 
+1. Use a dual-region Cloud Storage bucket.
+2. Monitor Dataflow metrics with Cloud Monitoring to determine when an outage occurs.
+3. Seek the subscription back in time by 15 minutes to recover the acknowledged messages.
+4. Start the Dataflow job in a secondary region.
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

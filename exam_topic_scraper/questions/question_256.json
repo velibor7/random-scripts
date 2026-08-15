@@ -1,0 +1,829 @@
+{
+  "question": "You are deploying an Apache Airflow directed acyclic graph (DAG) in a Cloud Composer 2 instance. You have incoming files in a Cloud Storage bucket that the DAG processes, one file at a time. The Cloud Composer instance is deployed in a subnetwork with no Internet access. Instead of running the DAG based on a schedule, you want to run the DAG in a reactive way every time a new file is received. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Enable Private Google Access in the subnetwork, and set up Cloud Storage notifications to a Pub/Sub topic.2. Create a push subscription that points to the web server URL.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Enable the Cloud Composer API, and set up Cloud Storage notifications to trigger a Cloud Function.2. Write a Cloud Function instance to call the DAG by using the Cloud Composer API and the web server URL.3. Use VPC Serverless Access to reach the web server URL.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Enable the Airflow REST API, and set up Cloud Storage notifications to trigger a Cloud Function instance.2. Create a Private Service Connect (PSC) endpoint.3. Write a Cloud Function that connects to the Cloud Composer cluster through the PSC endpoint.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Enable the Airflow REST API, and set up Cloud Storage notifications to trigger a Cloud Function instance.2. Write a Cloud Function instance to call the DAG by using the Airflow REST API and the web server URL.3. Use VPC Serverless Access to reach the web server URL.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 256 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 256\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are deploying an Apache Airflow directed acyclic graph (DAG) in a Cloud Composer 2 instance. You have incoming files in a Cloud Storage bucket that the DAG processes, one file at a time. The Cloud Composer instance is deployed in a subnetwork with no Internet access. Instead of running the DAG based on a schedule, you want to run the DAG in a reactive way every time a new file is received. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Enable Private Google Access in the subnetwork, and set up Cloud Storage notifications to a Pub/Sub topic.2. Create a push subscription that points to the web server URL.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Enable the Cloud Composer API, and set up Cloud Storage notifications to trigger a Cloud Function.2. Write a Cloud Function instance to call the DAG by using the Cloud Composer API and the web server URL.3. Use VPC Serverless Access to reach the web server URL.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Enable the Airflow REST API, and set up Cloud Storage notifications to trigger a Cloud Function instance.2. Create a Private Service Connect (PSC) endpoint.3. Write a Cloud Function that connects to the Cloud Composer cluster through the PSC endpoint.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Enable the Airflow REST API, and set up Cloud Storage notifications to trigger a Cloud Function instance.2. Write a Cloud Function instance to call the DAG by using the Airflow REST API and the web server URL.3. Use VPC Serverless Access to reach the web server URL.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 4:56 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 256\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 4:56 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Enable Airflow REST API: In Cloud Composer, enable the \"Airflow web server\" option.\n- Set Up Cloud Storage Notifications: Create a notification for new files, routing to a Cloud Function.\n- Create PSC Endpoint: Establish a PSC endpoint for Cloud Composer.\n- Write Cloud Function: Code the function to use the Airflow REST API (via PSC endpoint) to trigger the DAG.\n\n========\nWhy not Option D\n- Using the web server URL directly wouldn't work without internet access or a direct path to the web server.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Enable Airflow REST API: In Cloud Composer, enable the \"Airflow web server\" option.\n- Set Up Cloud Storage Notifications: Create a notification for new files, routing to a Cloud Function.\n- Create PSC Endpoint: Establish a PSC endpoint for Cloud Composer.\n- Write Cloud Function: Code the function to use the Airflow REST API (via PSC endpoint) to trigger the DAG.\n\n========\nWhy not Option D\n- Using the web server URL directly wouldn't work without internet access or a direct path to the web server.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Enable Airflow REST API: In Cloud Composer, enable the \"Airflow web server\" option.\n- Set Up Cloud Storage Notifications: Create a notification for new files, routing to a Cloud Function.\n- Create PSC Endpoint: Establish a PSC endpoint for Cloud Composer.\n- Write Cloud Function: Code the function to use the Airflow REST API (via PSC endpoint) to trigger the DAG.\n\n========\nWhy not Option D\n- Using the web server URL directly wouldn't work without internet access or a direct path to the web server.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Enable Airflow REST API: In Cloud Composer, enable the \"Airflow web server\" option.\n- Set Up Cloud Storage Notifications: Create a notification for new files, routing to a Cloud Function.\n- Create PSC Endpoint: Establish a PSC endpoint for Cloud Composer.\n- Write Cloud Function: Code the function to use the Airflow REST API (via PSC endpoint) to trigger the DAG.\n\n========\nWhy not Option D\n- Using the web server URL directly wouldn't work without internet access or a direct path to the web server.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Enable Airflow REST API: In Cloud Composer, enable the \"Airflow web server\" option.\n- Set Up Cloud Storage Notifications: Create a notification for new files, routing to a Cloud Function.\n- Create PSC Endpoint: Establish a PSC endpoint for Cloud Composer.\n- Write Cloud Function: Code the function to use the Airflow REST API (via PSC endpoint) to trigger the DAG.\n\n========\nWhy not Option D\n- Using the web server URL directly wouldn't work without internet access or a direct path to the web server.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "- Enable Airflow REST API: In Cloud Composer, enable the \"Airflow web server\" option.\n- Set Up Cloud Storage Notifications: Create a notification for new files, routing to a Cloud Function.\n- Create PSC Endpoint: Establish a PSC endpoint for Cloud Composer.\n- Write Cloud Function: Code the function to use the Airflow REST API (via PSC endpoint) to trigger the DAG.\n\n========\nWhy not Option D\n- Using the web server URL directly wouldn't work without internet access or a direct path to the web server.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Enable Airflow REST API: In Cloud Composer, enable the \"Airflow web server\" option.\n- Set Up Cloud Storage Notifications: Create a notification for new files, routing to a Cloud Function.\n- Create PSC Endpoint: Establish a PSC endpoint for Cloud Composer.\n- Write Cloud Function: Code the function to use the Airflow REST API (via PSC endpoint) to trigger the DAG.\n\n========\nWhy not Option D\n- Using the web server URL directly wouldn't work without internet access or a direct path to the web server.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 12 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not B, use Cloud Composer API",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not B, use Cloud Composer API",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "AllenChen123\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not B, use Cloud Composer API",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not B, use Cloud Composer API",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "This is the guidance how to use method in A:\nhttps://cloud.google.com/composer/docs/composer-2/triggering-gcf-pubsub\n\"In this specific example, you create a Cloud Function and deploy two DAGs. The first DAG pulls Pub/Sub messages and triggers the second DAG according to the Pub/Sub message content.\"\n\nFor C & D, this guidance says it can't be done when you have Private or VPS Service Controls set up:\nhttps://cloud.google.com/composer/docs/composer-2/triggering-with-gcf#check_your_environments_networking_configuration\n\"This solution does not work in Private IP and VPC Service Controls configurations because it is not possible to configure connectivity from Cloud Functions to the Airflow web server in these configurations.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "STEVE_PEGLEG\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This is the guidance how to use method in A:\nhttps://cloud.google.com/composer/docs/composer-2/triggering-gcf-pubsub\n\"In this specific example, you create a Cloud Function and deploy two DAGs. The first DAG pulls Pub/Sub messages and triggers the second DAG according to the Pub/Sub message content.\"\n\nFor C & D, this guidance says it can't be done when you have Private or VPS Service Controls set up:\nhttps://cloud.google.com/composer/docs/composer-2/triggering-with-gcf#check_your_environments_networking_configuration\n\"This solution does not work in Private IP and VPC Service Controls configurations because it is not possible to configure connectivity from Cloud Functions to the Airflow web server in these configurations.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This is the guidance how to use method in A:\nhttps://cloud.google.com/composer/docs/composer-2/triggering-gcf-pubsub\n\"In this specific example, you create a Cloud Function and deploy two DAGs. The first DAG pulls Pub/Sub messages and triggers the second DAG according to the Pub/Sub message content.\"\n\nFor C & D, this guidance says it can't be done when you have Private or VPS Service Controls set up:\nhttps://cloud.google.com/composer/docs/composer-2/triggering-with-gcf#check_your_environments_networking_configuration\n\"This solution does not work in Private IP and VPC Service Controls configurations because it is not possible to configure connectivity from Cloud Functions to the Airflow web server in these configurations.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months ago",
+      "content": "Option B is the only viable solution because:\n\n    It uses the Cloud Composer API, which is compatible with Private IP configurations.\n\n    It leverages VPC Serverless Access to allow Cloud Functions to securely access the Airflow web server within the subnetwork.\n\n    It avoids the limitations of the Airflow REST API in Private IP environments.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months ago",
+      "content": "Augustax\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B is the only viable solution because:\n\n    It uses the Cloud Composer API, which is compatible with Private IP configurations.\n\n    It leverages VPC Serverless Access to allow Cloud Functions to securely access the Airflow web server within the subnetwork.\n\n    It avoids the limitations of the Airflow REST API in Private IP environments.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B is the only viable solution because:\n\n    It uses the Cloud Composer API, which is compatible with Private IP configurations.\n\n    It leverages VPC Serverless Access to allow Cloud Functions to securely access the Airflow web server within the subnetwork.\n\n    It avoids the limitations of the Airflow REST API in Private IP environments.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Why Option D is the Best Choice:\nAirflow REST API: Enabling the Airflow REST API allows you to programmatically trigger DAG runs, which is essential for a reactive setup.\nCloud Storage Notifications: Setting up notifications ensures that your DAG is triggered every time a new file is received in the Cloud Storage bucket.\nVPC Serverless Access: This allows your Cloud Function to securely access the Cloud Composer web server URL without needing external IP addresses, complying with your subnetwork's no Internet access constraint.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Pime13\n\t\t\t\n\n\n\t\t\t3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why Option D is the Best Choice:\nAirflow REST API: Enabling the Airflow REST API allows you to programmatically trigger DAG runs, which is essential for a reactive setup.\nCloud Storage Notifications: Setting up notifications ensures that your DAG is triggered every time a new file is received in the Cloud Storage bucket.\nVPC Serverless Access: This allows your Cloud Function to securely access the Cloud Composer web server URL without needing external IP addresses, complying with your subnetwork's no Internet access constraint.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why Option D is the Best Choice:\nAirflow REST API: Enabling the Airflow REST API allows you to programmatically trigger DAG runs, which is essential for a reactive setup.\nCloud Storage Notifications: Setting up notifications ensures that your DAG is triggered every time a new file is received in the Cloud Storage bucket.\nVPC Serverless Access: This allows your Cloud Function to securely access the Cloud Composer web server URL without needing external IP addresses, complying with your subnetwork's no Internet access constraint.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months ago",
+      "content": "This is A, as steve_pegleg says, there is no way to connect the cloud function to the Airflow instance, without first enabling private access. The pubsub pattern makes sense in this context.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months ago",
+      "content": "baimus\n\t\t\t\n\n\n\t\t\t6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This is A, as steve_pegleg says, there is no way to connect the cloud function to the Airflow instance, without first enabling private access. The pubsub pattern makes sense in this context.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This is A, as steve_pegleg says, there is no way to connect the cloud function to the Airflow instance, without first enabling private access. The pubsub pattern makes sense in this context.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 3\u00a0weeks ago",
+      "content": "C is not correct because \"this solution does not work in Private IP and VPC Service Controls configurations because it is not possible to configure connectivity from Cloud Functions to the Airflow web server in these configurations\".\nhttps://cloud.google.com/composer/docs/how-to/using/triggering-with-gcf\nThe correct answer is A using Pub/Sub https://cloud.google.com/composer/docs/composer-2/triggering-gcf-pubsub",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 3\u00a0weeks ago",
+      "content": "josech\n\t\t\t\n\n\n\t\t\t10\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is not correct because \"this solution does not work in Private IP and VPC Service Controls configurations because it is not possible to configure connectivity from Cloud Functions to the Airflow web server in these configurations\".\nhttps://cloud.google.com/composer/docs/how-to/using/triggering-with-gcf\nThe correct answer is A using Pub/Sub https://cloud.google.com/composer/docs/composer-2/triggering-gcf-pubsub",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is not correct because \"this solution does not work in Private IP and VPC Service Controls configurations because it is not possible to configure connectivity from Cloud Functions to the Airflow web server in these configurations\".\nhttps://cloud.google.com/composer/docs/how-to/using/triggering-with-gcf\nThe correct answer is A using Pub/Sub https://cloud.google.com/composer/docs/composer-2/triggering-gcf-pubsub",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Why not Option C? C involves creating a Private Service Connect (PSC) endpoint, which, while viable for creating private connections to Google services, adds complexity and might not be required when simpler solutions like VPC Serverless Access (as in Option D) can suffice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "chrissamharris\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Why not Option C? C involves creating a Private Service Connect (PSC) endpoint, which, while viable for creating private connections to Google services, adds complexity and might not be required when simpler solutions like VPC Serverless Access (as in Option D) can suffice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not Option C? C involves creating a Private Service Connect (PSC) endpoint, which, while viable for creating private connections to Google services, adds complexity and might not be required when simpler solutions like VPC Serverless Access (as in Option D) can suffice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "https://cloud.google.com/vpc/docs/serverless-vpc-access: Serverless VPC Access makes it possible for you to connect directly to your Virtual Private Cloud (VPC) network from serverless environments such as Cloud Run, App Engine, or Cloud Functions",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "https://cloud.google.com/vpc/docs/serverless-vpc-access: Serverless VPC Access makes it possible for you to connect directly to your Virtual Private Cloud (VPC) network from serverless environments such as Cloud Run, App Engine, or Cloud Functions",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "chrissamharris\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/vpc/docs/serverless-vpc-access: Serverless VPC Access makes it possible for you to connect directly to your Virtual Private Cloud (VPC) network from serverless environments such as Cloud Run, App Engine, or Cloud Functions",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/vpc/docs/serverless-vpc-access: Serverless VPC Access makes it possible for you to connect directly to your Virtual Private Cloud (VPC) network from serverless environments such as Cloud Run, App Engine, or Cloud Functions",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "The answer should be D \nServerless VPC Access makes it possible for you to connect directly to your Virtual Private Cloud (VPC) network from serverless environments such as Cloud Run, App Engine, or Cloud Functions. Configuring Serverless VPC Access allows your serverless environment to send requests to your VPC network by using internal DNS and internal IP addresses (as defined by RFC 1918 and RFC 6598). The responses to these requests also use your internal network.\nYou can use Serverless VPC Access to access Compute Engine VM instances, Memorystore instances, and any other resources with internal DNS or internal IP address.\n(Reference: https://cloud.google.com/vpc/docs/serverless-vpc-access)\nWhen you use Airflow Rest API to tigger the job, the url is based on the private IP address of Cloud Composer Instance, so you need to use Serverless VPC Access for it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "d11379b\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "The answer should be D \nServerless VPC Access makes it possible for you to connect directly to your Virtual Private Cloud (VPC) network from serverless environments such as Cloud Run, App Engine, or Cloud Functions. Configuring Serverless VPC Access allows your serverless environment to send requests to your VPC network by using internal DNS and internal IP addresses (as defined by RFC 1918 and RFC 6598). The responses to these requests also use your internal network.\nYou can use Serverless VPC Access to access Compute Engine VM instances, Memorystore instances, and any other resources with internal DNS or internal IP address.\n(Reference: https://cloud.google.com/vpc/docs/serverless-vpc-access)\nWhen you use Airflow Rest API to tigger the job, the url is based on the private IP address of Cloud Composer Instance, so you need to use Serverless VPC Access for it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The answer should be D \nServerless VPC Access makes it possible for you to connect directly to your Virtual Private Cloud (VPC) network from serverless environments such as Cloud Run, App Engine, or Cloud Functions. Configuring Serverless VPC Access allows your serverless environment to send requests to your VPC network by using internal DNS and internal IP addresses (as defined by RFC 1918 and RFC 6598). The responses to these requests also use your internal network.\nYou can use Serverless VPC Access to access Compute Engine VM instances, Memorystore instances, and any other resources with internal DNS or internal IP address.\n(Reference: https://cloud.google.com/vpc/docs/serverless-vpc-access)\nWhen you use Airflow Rest API to tigger the job, the url is based on the private IP address of Cloud Composer Instance, so you need to use Serverless VPC Access for it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Why not C:\nThe reference here (https://cloud.google.com/vpc/docs/private-service-connect#published-services) limits the available use cases:\nPrivate Service Connect supports access to the following types of managed services:\nPublished VPC-hosted services, which include the following:\n\tGoogle published services, such as Apigee or the GKE control plane\n\tThird-party published services provided by Private Service Connect partners\n\tIntra-organization published services, where the consumer and producer might be two different VPC networks within the same company\nGoogle APIs, such as Cloud Storage or BigQuery\n\nUnfortunately your airflow Rest API is not published as a service in the list, so you can not use it \nThis is also one of the reasons why you should reject A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Why not C:\nThe reference here (https://cloud.google.com/vpc/docs/private-service-connect#published-services) limits the available use cases:\nPrivate Service Connect supports access to the following types of managed services:\nPublished VPC-hosted services, which include the following:\n\tGoogle published services, such as Apigee or the GKE control plane\n\tThird-party published services provided by Private Service Connect partners\n\tIntra-organization published services, where the consumer and producer might be two different VPC networks within the same company\nGoogle APIs, such as Cloud Storage or BigQuery\n\nUnfortunately your airflow Rest API is not published as a service in the list, so you can not use it \nThis is also one of the reasons why you should reject A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "d11379b\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Why not C:\nThe reference here (https://cloud.google.com/vpc/docs/private-service-connect#published-services) limits the available use cases:\nPrivate Service Connect supports access to the following types of managed services:\nPublished VPC-hosted services, which include the following:\n\tGoogle published services, such as Apigee or the GKE control plane\n\tThird-party published services provided by Private Service Connect partners\n\tIntra-organization published services, where the consumer and producer might be two different VPC networks within the same company\nGoogle APIs, such as Cloud Storage or BigQuery\n\nUnfortunately your airflow Rest API is not published as a service in the list, so you can not use it \nThis is also one of the reasons why you should reject A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not C:\nThe reference here (https://cloud.google.com/vpc/docs/private-service-connect#published-services) limits the available use cases:\nPrivate Service Connect supports access to the following types of managed services:\nPublished VPC-hosted services, which include the following:\n\tGoogle published services, such as Apigee or the GKE control plane\n\tThird-party published services provided by Private Service Connect partners\n\tIntra-organization published services, where the consumer and producer might be two different VPC networks within the same company\nGoogle APIs, such as Cloud Storage or BigQuery\n\nUnfortunately your airflow Rest API is not published as a service in the list, so you can not use it \nThis is also one of the reasons why you should reject A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "B is not appropriate while Cloud Composer API can really execute Airflow command\uff0cbut It\u2019s not via web server Url to run a DAG in this case, and I doubt if it is really possible",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "B is not appropriate while Cloud Composer API can really execute Airflow command\uff0cbut It\u2019s not via web server Url to run a DAG in this case, and I doubt if it is really possible",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "d11379b\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B is not appropriate while Cloud Composer API can really execute Airflow command\uff0cbut It\u2019s not via web server Url to run a DAG in this case, and I doubt if it is really possible",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B is not appropriate while Cloud Composer API can really execute Airflow command\uff0cbut It\u2019s not via web server Url to run a DAG in this case, and I doubt if it is really possible",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option C, raaad explained well why",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C, raaad explained well why",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C, raaad explained well why",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "C. \n1. Enable the Airflow REST API, and set up Cloud Storage notifications to trigger a Cloud Function instance.\n2. Create a Private Service Connect (PSC) endpoint.\n3. Write a Cloud Function that connects to the Cloud Composer cluster through the PSC endpoint.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. \n1. Enable the Airflow REST API, and set up Cloud Storage notifications to trigger a Cloud Function instance.\n2. Create a Private Service Connect (PSC) endpoint.\n3. Write a Cloud Function that connects to the Cloud Composer cluster through the PSC endpoint.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. \n1. Enable the Airflow REST API, and set up Cloud Storage notifications to trigger a Cloud Function instance.\n2. Create a Private Service Connect (PSC) endpoint.\n3. Write a Cloud Function that connects to the Cloud Composer cluster through the PSC endpoint.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+COMMENT #109 FOR QUESTION 88
+============================================================
+Author: Unknown
+Date: 1 year, 10 months ago
+Votes: 0
+----------------------------------------
+D
+Side output is a great manner to branch the processing. Let's take the example of an input data source that contains both valid and invalid values. Valid values must be written in place #1 and the invalid ones in place#2. A naive solution suggests to use a filter and write 2 distinct processing pipelines. However this approach has one main drawback - the input dataset is read twice. If for the mentioned problem we use side outputs, we can still have 1 ParDo transform that internally dispatches valid and invalid values to appropriate places (#1 or #2, depending on value's validity).
+
+
+https://www.waitingforcode.com/apache-beam/side-output-apache-beam/read#:~:text=simple%20test%20cases.-,Side%20output%20defined,-%C2%B6
+============================================================

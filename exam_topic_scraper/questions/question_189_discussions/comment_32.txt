@@ -1,0 +1,12 @@
+COMMENT #32 FOR QUESTION 189
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Cloud Interconnect provides a dedicated private connection between on-prem and Google Cloud for high bandwidth (up to 100 Gbps) and low latency. This facilitates large, fast data transfers.
+Storage Transfer Service supports parallel data transfers over Cloud Interconnect. It can transfer petabyte-scale datasets faster by transferring objects in parallel.
+Storage Transfer Service uses HTTPS encryption in transit and at rest by default for secure data transfers.
+It follows Google-recommended practices for large data migrations vs ad hoc methods like gsutil or scp.
+The other options would take too long for a 1 PB transfer (VPN capped at 3 Gbps, manual transfers) or introduce extra steps like batching and checksums. Cloud Interconnect + Storage Transfer is the recommended Google solution.
+============================================================

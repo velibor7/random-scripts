@@ -1,0 +1,694 @@
+ALL COMMENTS FOR QUESTION 273
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 273 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 273
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are creating the CI/CD cycle for the code of the directed acyclic graphs (DAGs) running in Cloud Composer. Your team has two Cloud Composer instances: one instance for development and another instance for production. Your team is using a Git repository to maintain and develop the code of the DAGs. You want to deploy the DAGs automatically to Cloud Composer when a certain tag is pushed to the Git repository. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Use Cloud Build to copy the code of the DAG to the Cloud Storage bucket of the development instance for DAG testing.2. If the tests pass, use Cloud Build to copy the code to the bucket of the production instance.
+										
+
+
+													B.
+												
+											
+											1. Use Cloud Build to build a container with the code of the DAG and the KubernetesPodOperator to deploy the code to the Google Kubernetes Engine (GKE) cluster of the development instance for testing.2. If the tests pass, use the KubernetesPodOperator to deploy the container to the GKE cluster of the production instance.
+										
+
+
+													C.
+												
+											
+											1. Use Cloud Build to build a container and the KubernetesPodOperator to deploy the code of the DAG to the Google Kubernetes Engine (GKE) cluster of the development instance for testing.2. If the tests pass, copy the code to the Cloud Storage bucket of the production instance.
+										
+
+
+													D.
+												
+											
+											1. Use Cloud Build to copy the code of the DAG to the Cloud Storage bucket of the development instance for DAG testing.2. If the tests pass, use Cloud Build to build a container with the code of the DAG and the KubernetesPodOperator to deploy the container to the Google Kubernetes Engine (GKE) cluster of the production instance.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								Smakyel79
+							
+							
+							at 
+							Jan. 7, 2024, 5:11 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 273
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								Smakyel79
+							
+							
+							at 
+							Jan. 7, 2024, 5:11 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The Answer is A. Given that there are two instances (development and production) already available, and the goal is to deploy DAGs to Cloud Composer not entire composer infra build. 
+
+Explanation:
+- This approach leverages Cloud Build to manage the deployment process.
+- It first deploys the code to the Cloud Storage bucket of the development instance for testing purposes.
+- If the tests are successful in the development environment, the same Cloud Build process is used to copy the code to the Cloud Storage bucket of the production instance.
+ 
+B. GKE-based approach is not standard for Cloud Composer. C. GKE used for testing is unconventional for DAG deployments. D. Involves unnecessary GKE deployment for production. Testing DAGs should use Composer instances directly, not Kubernetes containers in GKE.
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The Answer is A. Given that there are two instances (development and production) already available, and the goal is to deploy DAGs to Cloud Composer not entire composer infra build. 
+
+Explanation:
+- This approach leverages Cloud Build to manage the deployment process.
+- It first deploys the code to the Cloud Storage bucket of the development instance for testing purposes.
+- If the tests are successful in the development environment, the same Cloud Build process is used to copy the code to the Cloud Storage bucket of the production instance.
+ 
+B. GKE-based approach is not standard for Cloud Composer. C. GKE used for testing is unconventional for DAG deployments. D. Involves unnecessary GKE deployment for production. Testing DAGs should use Composer instances directly, not Kubernetes containers in GKE.
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The Answer is A. Given that there are two instances (development and production) already available, and the goal is to deploy DAGs to Cloud Composer not entire composer infra build. 
+
+Explanation:
+- This approach leverages Cloud Build to manage the deployment process.
+- It first deploys the code to the Cloud Storage bucket of the development instance for testing purposes.
+- If the tests are successful in the development environment, the same Cloud Build process is used to copy the code to the Cloud Storage bucket of the production instance.
+ 
+B. GKE-based approach is not standard for Cloud Composer. C. GKE used for testing is unconventional for DAG deployments. D. Involves unnecessary GKE deployment for production. Testing DAGs should use Composer instances directly, not Kubernetes containers in GKE.
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The Answer is A. Given that there are two instances (development and production) already available, and the goal is to deploy DAGs to Cloud Composer not entire composer infra build. 
+
+Explanation:
+- This approach leverages Cloud Build to manage the deployment process.
+- It first deploys the code to the Cloud Storage bucket of the development instance for testing purposes.
+- If the tests are successful in the development environment, the same Cloud Build process is used to copy the code to the Cloud Storage bucket of the production instance.
+ 
+B. GKE-based approach is not standard for Cloud Composer. C. GKE used for testing is unconventional for DAG deployments. D. Involves unnecessary GKE deployment for production. Testing DAGs should use Composer instances directly, not Kubernetes containers in GKE.
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The Answer is A. Given that there are two instances (development and production) already available, and the goal is to deploy DAGs to Cloud Composer not entire composer infra build. 
+
+Explanation:
+- This approach leverages Cloud Build to manage the deployment process.
+- It first deploys the code to the Cloud Storage bucket of the development instance for testing purposes.
+- If the tests are successful in the development environment, the same Cloud Build process is used to copy the code to the Cloud Storage bucket of the production instance.
+ 
+B. GKE-based approach is not standard for Cloud Composer. C. GKE used for testing is unconventional for DAG deployments. D. Involves unnecessary GKE deployment for production. Testing DAGs should use Composer instances directly, not Kubernetes containers in GKE.
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+BIGQUERY_ALT_ALT
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The Answer is A. Given that there are two instances (development and production) already available, and the goal is to deploy DAGs to Cloud Composer not entire composer infra build. 
+
+Explanation:
+- This approach leverages Cloud Build to manage the deployment process.
+- It first deploys the code to the Cloud Storage bucket of the development instance for testing purposes.
+- If the tests are successful in the development environment, the same Cloud Build process is used to copy the code to the Cloud Storage bucket of the production instance.
+ 
+B. GKE-based approach is not standard for Cloud Composer. C. GKE used for testing is unconventional for DAG deployments. D. Involves unnecessary GKE deployment for production. Testing DAGs should use Composer instances directly, not Kubernetes containers in GKE.
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The Answer is A. Given that there are two instances (development and production) already available, and the goal is to deploy DAGs to Cloud Composer not entire composer infra build. 
+
+Explanation:
+- This approach leverages Cloud Build to manage the deployment process.
+- It first deploys the code to the Cloud Storage bucket of the development instance for testing purposes.
+- If the tests are successful in the development environment, the same Cloud Build process is used to copy the code to the Cloud Storage bucket of the production instance.
+ 
+B. GKE-based approach is not standard for Cloud Composer. C. GKE used for testing is unconventional for DAG deployments. D. Involves unnecessary GKE deployment for production. Testing DAGs should use Composer instances directly, not Kubernetes containers in GKE.
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 8 months ago | Votes: 0
+Most confusing question to confuse us why GKE needed its already mentioned they have 2 composer environment
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date: 8 months ago | Votes: 0
+meh_33
+			
+
+
+				Most Recent 
+
+
+			8 months ago
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Most confusing question to confuse us why GKE needed its already mentioned they have 2 composer environment
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Most confusing question to confuse us why GKE needed its already mentioned they have 2 composer environment
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Option A
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+JyoGCP
+			
+
+
+			1 year, 1 month ago
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option A, DAGs are routinely stored in cloud storage buckets, Cloud Build act as a trigger for both the deployment process to test env and the test itslef
+https://cloud.google.com/composer/docs/dag-cicd-integration-guide
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Matt_108
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A, DAGs are routinely stored in cloud storage buckets, Cloud Build act as a trigger for both the deployment process to test env and the test itslef
+https://cloud.google.com/composer/docs/dag-cicd-integration-guide
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A, DAGs are routinely stored in cloud storage buckets, Cloud Build act as a trigger for both the deployment process to test env and the test itslef
+https://cloud.google.com/composer/docs/dag-cicd-integration-guide
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+I vote fore A
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Sofiia98
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I vote fore A
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I vote fore A
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C. 
+It looks the correct choice, first build, test and verify everything on dev enviornment and then just copy the files on prod bucket.
+https://cloud.google.com/composer/docs/dag-cicd-integration-guide
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+GCP001
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C. 
+It looks the correct choice, first build, test and verify everything on dev enviornment and then just copy the files on prod bucket.
+https://cloud.google.com/composer/docs/dag-cicd-integration-guide
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C. 
+It looks the correct choice, first build, test and verify everything on dev enviornment and then just copy the files on prod bucket.
+https://cloud.google.com/composer/docs/dag-cicd-integration-guide
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+But why do we need the Google Kubernetes Engine (GKE) cluster for this?
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+But why do we need the Google Kubernetes Engine (GKE) cluster for this?
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Sofiia98
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+But why do we need the Google Kubernetes Engine (GKE) cluster for this?
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+But why do we need the Google Kubernetes Engine (GKE) cluster for this?
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Yea, it should be A
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Yea, it should be A
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+GCP001
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Yea, it should be A
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Yea, it should be A
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+This approach is straightforward and leverages Cloud Build to automate the deployment process. It doesn't require containerization, making it simpler and possibly quicker.
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Smakyel79
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+This approach is straightforward and leverages Cloud Build to automate the deployment process. It doesn't require containerization, making it simpler and possibly quicker.
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+This approach is straightforward and leverages Cloud Build to automate the deployment process. It doesn't require containerization, making it simpler and possibly quicker.
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

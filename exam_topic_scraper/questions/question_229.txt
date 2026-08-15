@@ -1,0 +1,634 @@
+================================================================================
+QUESTION:
+You currently use a SQL-based tool to visualize your data stored in BigQuery. The data visualizations require the use of outer joins and analytic functions. Visualizations must be based on data that is no less than 4 hours old. Business users are complaining that the visualizations are too slow to generate. You want to improve the performance of the visualization queries while minimizing the maintenance overhead of the data preparation pipeline. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create materialized views with the allow_non_incremental_definition option set to true for the visualization queries. Specify the max_staleness parameter to 4 hours and the enable_refresh parameter to true. Reference the materialized views in the data visualization tool.
+										
+
+
+													B.
+												
+											
+											Create views for the visualization queries. Reference the views in the data visualization tool.
+										
+
+
+													C.
+												
+											
+											Create a Cloud Function instance to export the visualization query results as parquet files to a Cloud Storage bucket. Use Cloud Scheduler to trigger the Cloud Function every 4 hours. Reference the parquet files in the data visualization tool.
+										
+
+
+													D.
+												
+											
+											Create materialized views for the visualization queries. Use the incremental updates capability of BigQuery materialized views to handle changed data automatically. Reference the materialized views in the data visualization tool.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (93 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 229 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 229
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You currently use a SQL-based tool to visualize your data stored in BigQuery. The data visualizations require the use of outer joins and analytic functions. Visualizations must be based on data that is no less than 4 hours old. Business users are complaining that the visualizations are too slow to generate. You want to improve the performance of the visualization queries while minimizing the maintenance overhead of the data preparation pipeline. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create materialized views with the allow_non_incremental_definition option set to true for the visualization queries. Specify the max_staleness parameter to 4 hours and the enable_refresh parameter to true. Reference the materialized views in the data visualization tool.
+										
+
+
+													B.
+												
+											
+											Create views for the visualization queries. Reference the views in the data visualization tool.
+										
+
+
+													C.
+												
+											
+											Create a Cloud Function instance to export the visualization query results as parquet files to a Cloud Storage bucket. Use Cloud Scheduler to trigger the Cloud Function every 4 hours. Reference the parquet files in the data visualization tool.
+										
+
+
+													D.
+												
+											
+											Create materialized views for the visualization queries. Use the incremental updates capability of BigQuery materialized views to handle changed data automatically. Reference the materialized views in the data visualization tool.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:55 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 229
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:55 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 6 months, 1 week ago | Votes: 0
+Just a note, the question saying "data no less than 4 hours old" presumably means "no more than 4 hours old"
+
+--- Comment #6 ---
+Author: Unknown | Date: 6 months, 1 week ago | Votes: 0
+Just a note, the question saying "data no less than 4 hours old" presumably means "no more than 4 hours old"
+
+--- Comment #7 ---
+Author: Unknown | Date: 6 months, 1 week ago | Votes: 0
+Just a note, the question saying "data no less than 4 hours old" presumably means "no more than 4 hours old"
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 6 months, 1 week ago | Votes: 0
+Just a note, the question saying "data no less than 4 hours old" presumably means "no more than 4 hours old"
+
+--- Comment #13 ---
+Author: Unknown | Date: 6 months, 1 week ago | Votes: 0
+Just a note, the question saying "data no less than 4 hours old" presumably means "no more than 4 hours old"
+
+--- Comment #14 ---
+Author: Unknown | Date: 6 months, 1 week ago | Votes: 0
+baimus
+			
+
+
+			6 months, 1 week ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+Just a note, the question saying "data no less than 4 hours old" presumably means "no more than 4 hours old"
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+Just a note, the question saying "data no less than 4 hours old" presumably means "no more than 4 hours old"
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 7 months, 4 weeks ago | Votes: 0
+Unfortunately the correct answer is B due to the limitations of materialized views, doesn't support any other join than inner and no analytical function is supported
+
+--- Comment #23 ---
+Author: Unknown | Date: 7 months, 4 weeks ago | Votes: 0
+JamesKarianis
+			
+
+
+			7 months, 4 weeks ago
+
+--- Comment #24 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+Unfortunately the correct answer is B due to the limitations of materialized views, doesn't support any other join than inner and no analytical function is supported
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+Unfortunately the correct answer is B due to the limitations of materialized views, doesn't support any other join than inner and no analytical function is supported
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+Yes, they do if they are non-incremental.
+
+--- Comment #30 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+Yes, they do if they are non-incremental.
+
+--- Comment #31 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+AWSandeep
+			
+
+
+			3 months, 2 weeks ago
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Yes, they do if they are non-incremental.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Yes, they do if they are non-incremental.
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #39 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+A
+
+https://cloud.google.com/bigquery/docs/materialized-views-create#non-incremental 
+
+In scenarios where data staleness is acceptable, for example for batch data processing or reporting, non-incremental materialized views can improve query performance and reduce cost.
+
+allow_non_incremental_definition option. This option must be accompanied by the max_staleness option. To ensure a periodic refresh of the materialized view, you should also configure a refresh policy.
+
+--- Comment #40 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+ricardovazz
+			
+
+
+			1 year ago
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+A
+
+https://cloud.google.com/bigquery/docs/materialized-views-create#non-incremental 
+
+In scenarios where data staleness is acceptable, for example for batch data processing or reporting, non-incremental materialized views can improve query performance and reduce cost.
+
+allow_non_incremental_definition option. This option must be accompanied by the max_staleness option. To ensure a periodic refresh of the materialized view, you should also configure a refresh policy.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+A
+
+https://cloud.google.com/bigquery/docs/materialized-views-create#non-incremental 
+
+In scenarios where data staleness is acceptable, for example for batch data processing or reporting, non-incremental materialized views can improve query performance and reduce cost.
+
+allow_non_incremental_definition option. This option must be accompanied by the max_staleness option. To ensure a periodic refresh of the materialized view, you should also configure a refresh policy.
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #48 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option A is better than D, since it accounts for data staleness and is better suited for heavy querying, thanks to the allow_non_incremental_definition
+
+--- Comment #49 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Matt_108
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Option A is better than D, since it accounts for data staleness and is better suited for heavy querying, thanks to the allow_non_incremental_definition
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+Option A is better than D, since it accounts for data staleness and is better suited for heavy querying, thanks to the allow_non_incremental_definition
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #57 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+A seems right but whats wrong with option D, can anybody please explain?
+
+--- Comment #58 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Jordan18
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #59 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+A seems right but whats wrong with option D, can anybody please explain?
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+A seems right but whats wrong with option D, can anybody please explain?
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Seems like materialiazed views can use incremental updates only if data was not delated or updated in original table. Here the data changes so I think thats the reason why its not correct answer
+https://cloud.google.com/bigquery/docs/materialized-views-use#incremental_updates
+"BigQuery combines the cached view's data with new data to provide consistent query results while still using the materialized view. For single-table materialized views, this is possible if the base table is unchanged since the last refresh, or if only new data was added. For multi-table views, no more than one table can have appended data. If more than one of a multi-table view's base tables has changed, then the view cannot be incrementally updated."
+
+--- Comment #64 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Seems like materialiazed views can use incremental updates only if data was not delated or updated in original table. Here the data changes so I think thats the reason why its not correct answer
+https://cloud.google.com/bigquery/docs/materialized-views-use#incremental_updates
+"BigQuery combines the cached view's data with new data to provide consistent query results while still using the materialized view. For single-table materialized views, this is possible if the base table is unchanged since the last refresh, or if only new data was added. For multi-table views, no more than one table can have appended data. If more than one of a multi-table view's base tables has changed, then the view cannot be incrementally updated."
+
+--- Comment #65 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+datapassionate
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+Seems like materialiazed views can use incremental updates only if data was not delated or updated in original table. Here the data changes so I think thats the reason why its not correct answer
+https://cloud.google.com/bigquery/docs/materialized-views-use#incremental_updates
+"BigQuery combines the cached view's data with new data to provide consistent query results while still using the materialized view. For single-table materialized views, this is possible if the base table is unchanged since the last refresh, or if only new data was added. For multi-table views, no more than one table can have appended data. If more than one of a multi-table view's base tables has changed, then the view cannot be incrementally updated."
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+Seems like materialiazed views can use incremental updates only if data was not delated or updated in original table. Here the data changes so I think thats the reason why its not correct answer
+https://cloud.google.com/bigquery/docs/materialized-views-use#incremental_updates
+"BigQuery combines the cached view's data with new data to provide consistent query results while still using the materialized view. For single-table materialized views, this is possible if the base table is unchanged since the last refresh, or if only new data was added. For multi-table views, no more than one table can have appended data. If more than one of a multi-table view's base tables has changed, then the view cannot be incrementally updated."
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Materialized views in BigQuery precompute and store the result of a base query, which can speed up data retrieval for complex queries used in visualizations. 
+- The max_staleness parameter allows us to specify how old the data can be, ensuring that the visualizations are based on data no less than 4 hours old. 
+- The enable_refresh parameter ensures that the materialized view is periodically refreshed.
+- The allow_non_incremental_definition is used for enabling the creation of non-incrementally refreshable materialized views.
+
+--- Comment #74 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+raaad
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+- Materialized views in BigQuery precompute and store the result of a base query, which can speed up data retrieval for complex queries used in visualizations. 
+- The max_staleness parameter allows us to specify how old the data can be, ensuring that the visualizations are based on data no less than 4 hours old. 
+- The enable_refresh parameter ensures that the materialized view is periodically refreshed.
+- The allow_non_incremental_definition is used for enabling the creation of non-incrementally refreshable materialized views.
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+- Materialized views in BigQuery precompute and store the result of a base query, which can speed up data retrieval for complex queries used in visualizations. 
+- The max_staleness parameter allows us to specify how old the data can be, ensuring that the visualizations are based on data no less than 4 hours old. 
+- The enable_refresh parameter ensures that the materialized view is periodically refreshed.
+- The allow_non_incremental_definition is used for enabling the creation of non-incrementally refreshable materialized views.
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #82 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Precomputed Results: Materialized views store precomputed results of complex queries, significantly accelerating subsequent query performance, addressing the slow visualization issue.
+Allow Non-Incremental Views: Using allow_non_incremental_definition circumvents the limitation of incremental updates for outer joins and analytic functions, ensuring views can be created for the specified queries.
+Near-Real-Time Data: Setting max_staleness to 4 hours guarantees data freshness within the acceptable latency for visualizations.
+Automatic Refresh: Enabling refresh with enable_refresh maintains view consistency with minimal maintenance overhead.
+Minimal Overhead: Materialized views automatically update as underlying data changes, reducing maintenance compared to manual exports or view definitions.
+
+--- Comment #83 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+e70ea9e
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Precomputed Results: Materialized views store precomputed results of complex queries, significantly accelerating subsequent query performance, addressing the slow visualization issue.
+Allow Non-Incremental Views: Using allow_non_incremental_definition circumvents the limitation of incremental updates for outer joins and analytic functions, ensuring views can be created for the specified queries.
+Near-Real-Time Data: Setting max_staleness to 4 hours guarantees data freshness within the acceptable latency for visualizations.
+Automatic Refresh: Enabling refresh with enable_refresh maintains view consistency with minimal maintenance overhead.
+Minimal Overhead: Materialized views automatically update as underlying data changes, reducing maintenance compared to manual exports or view definitions.
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+Precomputed Results: Materialized views store precomputed results of complex queries, significantly accelerating subsequent query performance, addressing the slow visualization issue.
+Allow Non-Incremental Views: Using allow_non_incremental_definition circumvents the limitation of incremental updates for outer joins and analytic functions, ensuring views can be created for the specified queries.
+Near-Real-Time Data: Setting max_staleness to 4 hours guarantees data freshness within the acceptable latency for visualizations.
+Automatic Refresh: Enabling refresh with enable_refresh maintains view consistency with minimal maintenance overhead.
+Minimal Overhead: Materialized views automatically update as underlying data changes, reducing maintenance compared to manual exports or view definitions.
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

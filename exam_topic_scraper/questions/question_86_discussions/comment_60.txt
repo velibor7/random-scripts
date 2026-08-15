@@ -1,0 +1,10 @@
+COMMENT #60 FOR QUESTION 86
+============================================================
+Author: Unknown
+Date: 8 months, 1 week ago
+Votes: 0
+----------------------------------------
+Option D: Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Sink connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+
+This option involves deploying the Pub/Sub Kafka connector on the on-prem cluster, but configuring it as a sink connector. In this case, the data from the on-prem Kafka cluster would be sent directly to Pub/Sub, which would act as the final destination for the data. A Dataflow job would then be used to read the data from Pub/Sub and write it to Cloud Storage for analysis in BigQuery. This option would result in the data being stored in both the on-prem cluster and Pub/Sub, making it less desirable compared to option C, where the data is only stored in Pub/Sub as an intermediary between the on-prem cluster and Google Cloud.
+============================================================

@@ -1,0 +1,14 @@
+COMMENT #38 FOR QUESTION 102
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Here's why the other options are less suitable:
+
+A. Leverage BigQuery UPDATE statements: While technically possible, this approach is inefficient for frequent updates as it requires individual record scans and updates, affecting performance and potentially causing data race conditions.
+
+B. Partition the inventory balance table: Partitioning helps with query performance for large datasets, but it doesn't address the need for near real-time updates.
+
+D. Use the BigQuery bulk loader: Bulk loading daily changes is helpful for historical data ingestion, but it won't provide near real-time updates necessary for the dashboard.
+============================================================

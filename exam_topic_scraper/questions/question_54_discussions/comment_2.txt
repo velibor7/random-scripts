@@ -1,0 +1,79 @@
+COMMENT #2 FOR QUESTION 54
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 54
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your globally distributed auction application allows users to bid on items. Occasionally, users place identical bids at nearly identical times, and different application servers process those bids. Each bid event contains the item, amount, user, and timestamp. You want to collate those bid events into a single location in real time to determine which user bid first. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a file on a shared file and have the application servers write all bid events to that file. Process the file with Apache Hadoop to identify which user bid first.
+										
+
+
+													B.
+												
+											
+											Have each application server write the bid events to Cloud Pub/Sub as they occur. Push the events from Cloud Pub/Sub to a custom endpoint that writes the bid event information into Cloud SQL.
+										
+
+
+													C.
+												
+											
+											Set up a MySQL database for each application server to write bid events into. Periodically query each of those distributed MySQL databases and update a master MySQL database with bid event information.
+										
+
+
+													D.
+												
+											
+											Have each application server write the bid events to Google Cloud Pub/Sub as they occur. Use a pull subscription to pull the bid events using Google Cloud Dataflow. Give the bid for each item to the user in the bid event that is processed first.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 15, 2020, 4:17 p.m.
+============================================================

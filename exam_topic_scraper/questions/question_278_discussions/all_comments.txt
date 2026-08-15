@@ -1,0 +1,784 @@
+ALL COMMENTS FOR QUESTION 278
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 278 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 278
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your car factory is pushing machine measurements as messages into a Pub/Sub topic in your Google Cloud project. A Dataflow streaming job, that you wrote with the Apache Beam SDK, reads these messages, sends acknowledgment to Pub/Sub, applies some custom business logic in a DoFn instance, and writes the result to BigQuery. You want to ensure that if your business logic fails on a message, the message will be sent to a Pub/Sub topic that you want to monitor for alerting purposes. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Enable retaining of acknowledged messages in your Pub/Sub pull subscription. Use Cloud Monitoring to monitor the subscription/num_retained_acked_messages metric on this subscription.
+										
+
+
+													B.
+												
+											
+											Use an exception handling block in your Dataflow’s DoFn code to push the messages that failed to be transformed through a side output and to a new Pub/Sub topic. Use Cloud Monitoring to monitor the topic/num_unacked_messages_by_region metric on this new topic.
+										
+
+
+													C.
+												
+											
+											Enable dead lettering in your Pub/Sub pull subscription, and specify a new Pub/Sub topic as the dead letter topic. Use Cloud Monitoring to monitor the subscription/dead_letter_message_count metric on your pull subscription.
+										
+
+
+													D.
+												
+											
+											Create a snapshot of your Pub/Sub pull subscription. Use Cloud Monitoring to monitor the snapshot/num_messages metric on this snapshot.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 4, 2024, 5:24 a.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 278
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 4, 2024, 5:24 a.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Exception Handling in DoFn: Implementing an exception handling block within DoFn in Dataflow to catch failures during processing is a direct way to manage errors.
+- Side Output to New Topic: Using a side output to redirect failed messages to a new Pub/Sub topic is an effective way to isolate and manage these messages.
+- Monitoring: Monitoring the num_unacked_messages_by_region on the new topic can alert you to the presence of failed messages.
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Exception Handling in DoFn: Implementing an exception handling block within DoFn in Dataflow to catch failures during processing is a direct way to manage errors.
+- Side Output to New Topic: Using a side output to redirect failed messages to a new Pub/Sub topic is an effective way to isolate and manage these messages.
+- Monitoring: Monitoring the num_unacked_messages_by_region on the new topic can alert you to the presence of failed messages.
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Exception Handling in DoFn: Implementing an exception handling block within DoFn in Dataflow to catch failures during processing is a direct way to manage errors.
+- Side Output to New Topic: Using a side output to redirect failed messages to a new Pub/Sub topic is an effective way to isolate and manage these messages.
+- Monitoring: Monitoring the num_unacked_messages_by_region on the new topic can alert you to the presence of failed messages.
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Exception Handling in DoFn: Implementing an exception handling block within DoFn in Dataflow to catch failures during processing is a direct way to manage errors.
+- Side Output to New Topic: Using a side output to redirect failed messages to a new Pub/Sub topic is an effective way to isolate and manage these messages.
+- Monitoring: Monitoring the num_unacked_messages_by_region on the new topic can alert you to the presence of failed messages.
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Exception Handling in DoFn: Implementing an exception handling block within DoFn in Dataflow to catch failures during processing is a direct way to manage errors.
+- Side Output to New Topic: Using a side output to redirect failed messages to a new Pub/Sub topic is an effective way to isolate and manage these messages.
+- Monitoring: Monitoring the num_unacked_messages_by_region on the new topic can alert you to the presence of failed messages.
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+- Exception Handling in DoFn: Implementing an exception handling block within DoFn in Dataflow to catch failures during processing is a direct way to manage errors.
+- Side Output to New Topic: Using a side output to redirect failed messages to a new Pub/Sub topic is an effective way to isolate and manage these messages.
+- Monitoring: Monitoring the num_unacked_messages_by_region on the new topic can alert you to the presence of failed messages.
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+- Exception Handling in DoFn: Implementing an exception handling block within DoFn in Dataflow to catch failures during processing is a direct way to manage errors.
+- Side Output to New Topic: Using a side output to redirect failed messages to a new Pub/Sub topic is an effective way to isolate and manage these messages.
+- Monitoring: Monitoring the num_unacked_messages_by_region on the new topic can alert you to the presence of failed messages.
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 14 times
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Option C - dead letter topic is built in and requires no changes https://cloud.google.com/pubsub/docs/handling-failures
+
+Enable dead lettering in your Pub/Sub pull subscription, and specify a new Pub/Sub topic as the dead letter topic. Use Cloud Monitoring to monitor the subscription/dead_letter_message_count metric on your pull subscription.
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+chrissamharris
+			
+
+
+				Most Recent 
+
+
+			6 months, 2 weeks ago
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Option C - dead letter topic is built in and requires no changes https://cloud.google.com/pubsub/docs/handling-failures
+
+Enable dead lettering in your Pub/Sub pull subscription, and specify a new Pub/Sub topic as the dead letter topic. Use Cloud Monitoring to monitor the subscription/dead_letter_message_count metric on your pull subscription.
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option C - dead letter topic is built in and requires no changes https://cloud.google.com/pubsub/docs/handling-failures
+
+Enable dead lettering in your Pub/Sub pull subscription, and specify a new Pub/Sub topic as the dead letter topic. Use Cloud Monitoring to monitor the subscription/dead_letter_message_count metric on your pull subscription.
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Dead lettering is used to handle messages that have not been acknowledged, but that's unrelated to the processing that Dataflow does, which takes place later in the chain. A message could still be acknowledged and fail processing for whatever reason, so it would not be sent to the dead letter topic.
+
+Also, Google advises against using dead lettering with Dataflow anyway: https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#dead-letter-topics
+
+Correct answer is B. The error handling has to be written into the Dataflow pipeline itself.
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Dead lettering is used to handle messages that have not been acknowledged, but that's unrelated to the processing that Dataflow does, which takes place later in the chain. A message could still be acknowledged and fail processing for whatever reason, so it would not be sent to the dead letter topic.
+
+Also, Google advises against using dead lettering with Dataflow anyway: https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#dead-letter-topics
+
+Correct answer is B. The error handling has to be written into the Dataflow pipeline itself.
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Positron75
+			
+
+
+			4 months, 2 weeks ago
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Dead lettering is used to handle messages that have not been acknowledged, but that's unrelated to the processing that Dataflow does, which takes place later in the chain. A message could still be acknowledged and fail processing for whatever reason, so it would not be sent to the dead letter topic.
+
+Also, Google advises against using dead lettering with Dataflow anyway: https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#dead-letter-topics
+
+Correct answer is B. The error handling has to be written into the Dataflow pipeline itself.
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Dead lettering is used to handle messages that have not been acknowledged, but that's unrelated to the processing that Dataflow does, which takes place later in the chain. A message could still be acknowledged and fail processing for whatever reason, so it would not be sent to the dead letter topic.
+
+Also, Google advises against using dead lettering with Dataflow anyway: https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#dead-letter-topics
+
+Correct answer is B. The error handling has to be written into the Dataflow pipeline itself.
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date: 6 months, 4 weeks ago | Votes: 0
+See here:
+https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#unsupported-features
+It's not recommended to use Pub/Sub dead-letter topics with Dataflow (...) Instead, implement the dead-letter pattern explicitly in the pipeline
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date: 6 months, 4 weeks ago | Votes: 0
+7787de3
+			
+
+
+			6 months, 4 weeks ago
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+See here:
+https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#unsupported-features
+It's not recommended to use Pub/Sub dead-letter topics with Dataflow (...) Instead, implement the dead-letter pattern explicitly in the pipeline
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+See here:
+https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#unsupported-features
+It's not recommended to use Pub/Sub dead-letter topics with Dataflow (...) Instead, implement the dead-letter pattern explicitly in the pipeline
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date: 8 months, 2 weeks ago | Votes: 0
+Option B.
+
+ Here's why:
+
+    Side Output for Failed Messages: Dataflow allows you to use side outputs to handle messages that fail processing. In your DoFn , you can catch exceptions and write the failed messages to a separate PCollection . This PCollection can then be written to a new Pub/Sub topic.
+    New Pub/Sub Topic for Monitoring: Creating a dedicated Pub/Sub topic for failed messages allows you to monitor it specifically for alerting purposes. This provides a clear view of any issues with your business logic.
+    topic/num_unacked_messages_by_region Metric: This Cloud Monitoring metric tracks the number of unacknowledged messages in a Pub/Sub topic. By monitoring this metric on your new topic, you can identify when messages are failing to be processed correctly.
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date: 8 months, 2 weeks ago | Votes: 0
+Jeyaraj
+			
+
+
+			8 months, 2 weeks ago
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B.
+
+ Here's why:
+
+    Side Output for Failed Messages: Dataflow allows you to use side outputs to handle messages that fail processing. In your DoFn , you can catch exceptions and write the failed messages to a separate PCollection . This PCollection can then be written to a new Pub/Sub topic.
+    New Pub/Sub Topic for Monitoring: Creating a dedicated Pub/Sub topic for failed messages allows you to monitor it specifically for alerting purposes. This provides a clear view of any issues with your business logic.
+    topic/num_unacked_messages_by_region Metric: This Cloud Monitoring metric tracks the number of unacknowledged messages in a Pub/Sub topic. By monitoring this metric on your new topic, you can identify when messages are failing to be processed correctly.
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B.
+
+ Here's why:
+
+    Side Output for Failed Messages: Dataflow allows you to use side outputs to handle messages that fail processing. In your DoFn , you can catch exceptions and write the failed messages to a separate PCollection . This PCollection can then be written to a new Pub/Sub topic.
+    New Pub/Sub Topic for Monitoring: Creating a dedicated Pub/Sub topic for failed messages allows you to monitor it specifically for alerting purposes. This provides a clear view of any issues with your business logic.
+    topic/num_unacked_messages_by_region Metric: This Cloud Monitoring metric tracks the number of unacknowledged messages in a Pub/Sub topic. By monitoring this metric on your new topic, you can identify when messages are failing to be processed correctly.
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+I would like to know why isn't anyone considering the option C.
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+joao_01
+			
+
+
+			1 year ago
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+I would like to know why isn't anyone considering the option C.
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I would like to know why isn't anyone considering the option C.
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+I think that C is not right anyways: In order to use dead_letter feature, the message CANNOT be acknowledge (somehow) by the subscriber. In this question it says that the messages are first acknowledge and then applied the business logic. So, if there are error in the business logic we cannot use the feature dead_letter, beacuse the message was already acknowledge. Thus, option B is the right one.
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+I think that C is not right anyways: In order to use dead_letter feature, the message CANNOT be acknowledge (somehow) by the subscriber. In this question it says that the messages are first acknowledge and then applied the business logic. So, if there are error in the business logic we cannot use the feature dead_letter, beacuse the message was already acknowledge. Thus, option B is the right one.
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+joao_01
+			
+
+
+			1 year ago
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I think that C is not right anyways: In order to use dead_letter feature, the message CANNOT be acknowledge (somehow) by the subscriber. In this question it says that the messages are first acknowledge and then applied the business logic. So, if there are error in the business logic we cannot use the feature dead_letter, beacuse the message was already acknowledge. Thus, option B is the right one.
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I think that C is not right anyways: In order to use dead_letter feature, the message CANNOT be acknowledge (somehow) by the subscriber. In this question it says that the messages are first acknowledge and then applied the business logic. So, if there are error in the business logic we cannot use the feature dead_letter, beacuse the message was already acknowledge. Thus, option B is the right one.
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+option B
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+hanoverquay
+			
+
+
+			1 year ago
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+option B
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+option B
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Option B
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+JyoGCP
+			
+
+
+			1 year, 1 month ago
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option B - Raaad explanation is complete
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Matt_108
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B - Raaad explanation is complete
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B - Raaad explanation is complete
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+B. Use an exception handling block in your Dataflow’s DoFn code to push the messages that failed to be transformed through a side output and to a new Pub/Sub topic. Use Cloud Monitoring to monitor the topic/num_unacked_messages_by_region metric on this new topic.
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+scaenruy
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Use an exception handling block in your Dataflow’s DoFn code to push the messages that failed to be transformed through a side output and to a new Pub/Sub topic. Use Cloud Monitoring to monitor the topic/num_unacked_messages_by_region metric on this new topic.
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Use an exception handling block in your Dataflow’s DoFn code to push the messages that failed to be transformed through a side output and to a new Pub/Sub topic. Use Cloud Monitoring to monitor the topic/num_unacked_messages_by_region metric on this new topic.
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

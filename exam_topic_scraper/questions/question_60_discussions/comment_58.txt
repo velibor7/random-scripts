@@ -1,0 +1,15 @@
+COMMENT #58 FOR QUESTION 60
+============================================================
+Author: Unknown
+Date: 2 years, 6 months ago
+Votes: 0
+----------------------------------------
+you are right.
+
+Partitioning versus sharding
+Table sharding is the practice of storing data in multiple tables, using a naming prefix such as [PREFIX]_YYYYMMDD.
+
+Partitioning is recommended over table sharding, because partitioned tables perform better. With sharded tables, BigQuery must maintain a copy of the schema and metadata for each table. BigQuery might also need to verify permissions for each queried table. This practice also adds to query overhead and affects query performance.
+
+If you previously created date-sharded tables, you can convert them into an ingestion-time partitioned table.
+============================================================

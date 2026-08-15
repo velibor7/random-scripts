@@ -1,0 +1,16 @@
+COMMENT #12 FOR QUESTION 170
+============================================================
+Author: Unknown
+Date: 2 years, 1 month ago
+Votes: 0
+----------------------------------------
+B. Create a Pub/Sub snapshot before deploying new subscriber code. Use a Seek operation to re-deliver messages that became available after the snapshot was created.
+
+According to the second reference in the list below, a concern with deploying new subscriber code is that the new executable may erroneously acknowledge messages, leading to message loss. Incorporating snapshots into your deployment process gives you a way to recover from bugs in new subscriber code.
+
+Answer cannot be C because To seek to a timestamp, you must first configure the subscription to retain acknowledged messages using retain-acked-messages. If retain-acked-messages is set, Pub/Sub retains acknowledged messages for 7 days.
+
+References: 
+https://cloud.google.com/pubsub/docs/replay-message
+https://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases
+============================================================

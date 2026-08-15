@@ -1,0 +1,16 @@
+COMMENT #26 FOR QUESTION 88
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Based on the given scenario, option D would be the best approach to improve the reliability of the pipeline.
+
+Adding a try-catch block to the DoFn that transforms the data would allow you to catch and handle errors within the pipeline. However, storing erroneous rows in Pub/Sub directly from the DoFn (Option C) could potentially create a bottleneck in the pipeline, as it adds additional I/O operations to the data processing.
+
+Option A of filtering the erroneous data would not allow the pipeline to reprocess the failing data, which could result in data loss.
+
+Option D of using a sideOutput to create a PCollection of erroneous data would allow for reprocessing of the failed data and would not create a bottleneck in the pipeline. Storing the erroneous data in a separate PCollection would also make it easier to debug and analyze the failed data.
+
+Therefore, adding a try-catch block to the DoFn that transforms the data and using a sideOutput to create a PCollection of erroneous data that can be stored to Pub/Sub later would be the best approach to improve the reliability of the pipeline.
+============================================================

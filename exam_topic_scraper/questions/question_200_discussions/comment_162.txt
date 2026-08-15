@@ -1,0 +1,12 @@
+COMMENT #162 FOR QUESTION 200
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+I could be wrong but I think the wording in D caused this confusion, so it is an English problem. -- "Use multiple service accounts attached to IAM groups to grant the appropriate access to each group"
+I believe what D really means is that you can create a group for a bunch of people who only need access to resource A, so attach a Service account to the group and service account only have access to A.
+Then you create another group for another bunch of people who only need access to resource B, so attach a service account to this group. this service account can only access to B.
+So each group/service account has a very specific access target, and purpose of the group is very narrowly defined which is allowed by best practice. However, wording in option D merged all these into one sentence causing confusions.
+Option A is an administrative nightmare to manage IAM for a larger user population which is actually also against GCP best practices.
+============================================================

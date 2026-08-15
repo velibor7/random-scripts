@@ -1,0 +1,12 @@
+COMMENT #67 FOR QUESTION 268
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+- Draining the old pipeline ensures that it finishes processing all in-flight data before stopping, which prevents data loss and inconsistencies.
+- After draining, you can start the new pipeline, which will begin processing new data from where the old pipeline left off.
+- This approach maintains a smooth transition between the old and new versions, minimizing latency increases and avoiding data gaps or overlaps.
+
+==> Other options, such as updating, snapshotting, or canceling, might not provide the same level of consistency and could lead to data loss or increased latency beyond the acceptable 10-minute window. Draining is the safest method to ensure a seamless transition.
+============================================================

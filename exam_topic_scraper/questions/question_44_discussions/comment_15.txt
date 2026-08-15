@@ -1,0 +1,20 @@
+COMMENT #15 FOR QUESTION 44
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Correct answer is A 
+Read in reference : https://cloud.google.com/datastore/docs/concepts/indexes#index_limits
+n this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:
+indexes:
+- kind: Task
+  properties:
+  - name: tags
+  - name: created
+- kind: Task
+  properties:
+  - name: collaborators
+  - name: created
+This reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9
+============================================================

@@ -1,0 +1,362 @@
+================================================================================
+QUESTION:
+You are administering a BigQuery on-demand environment. Your business intelligence tool is submitting hundreds of queries each day that aggregate a large (50 TB) sales history fact table at the day and month levels. These queries have a slow response time and are exceeding cost expectations. You need to decrease response time, lower query costs, and minimize maintenance. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Build authorized views on top of the sales table to aggregate data at the day and month level.
+										
+
+
+													B.
+												
+											
+											Enable BI Engine and add your sales table as a preferred table.
+										
+
+
+													C.
+												
+											
+											Build materialized views on top of the sales table to aggregate data at the day and month level.
+										
+
+
+													D.
+												
+											
+											Create a scheduled query to build sales day and sales month aggregate tables on an hourly basis.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (33 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 316 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 316
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are administering a BigQuery on-demand environment. Your business intelligence tool is submitting hundreds of queries each day that aggregate a large (50 TB) sales history fact table at the day and month levels. These queries have a slow response time and are exceeding cost expectations. You need to decrease response time, lower query costs, and minimize maintenance. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Build authorized views on top of the sales table to aggregate data at the day and month level.
+										
+
+
+													B.
+												
+											
+											Enable BI Engine and add your sales table as a preferred table.
+										
+
+
+													C.
+												
+											
+											Build materialized views on top of the sales table to aggregate data at the day and month level.
+										
+
+
+													D.
+												
+											
+											Create a scheduled query to build sales day and sales month aggregate tables on an hourly basis.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								joelcaro
+							
+							
+							at 
+							Dec. 19, 2024, 12:12 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 316
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								joelcaro
+							
+							
+							at 
+							Dec. 19, 2024, 12:12 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+C. Build materialized views on top of the sales table to aggregate data at the day and month level.
+
+Materialized views are precomputed views that cache the results of a query, which can significantly improve query performance and reduce costs by avoiding repeated computation. They automatically update with changes to the base table, ensuring data freshness without additional maintenance.
+
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #6 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+C. Build materialized views on top of the sales table to aggregate data at the day and month level.
+
+Materialized views are precomputed views that cache the results of a query, which can significantly improve query performance and reduce costs by avoiding repeated computation. They automatically update with changes to the base table, ensuring data freshness without additional maintenance.
+
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #7 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+C. Build materialized views on top of the sales table to aggregate data at the day and month level.
+
+Materialized views are precomputed views that cache the results of a query, which can significantly improve query performance and reduce costs by avoiding repeated computation. They automatically update with changes to the base table, ensuring data freshness without additional maintenance.
+
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+C. Build materialized views on top of the sales table to aggregate data at the day and month level.
+
+Materialized views are precomputed views that cache the results of a query, which can significantly improve query performance and reduce costs by avoiding repeated computation. They automatically update with changes to the base table, ensuring data freshness without additional maintenance.
+
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #13 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+C. Build materialized views on top of the sales table to aggregate data at the day and month level.
+
+Materialized views are precomputed views that cache the results of a query, which can significantly improve query performance and reduce costs by avoiding repeated computation. They automatically update with changes to the base table, ensuring data freshness without additional maintenance.
+
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #14 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+Pime13
+			
+
+
+			3 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+C. Build materialized views on top of the sales table to aggregate data at the day and month level.
+
+Materialized views are precomputed views that cache the results of a query, which can significantly improve query performance and reduce costs by avoiding repeated computation. They automatically update with changes to the base table, ensuring data freshness without additional maintenance.
+
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+C. Build materialized views on top of the sales table to aggregate data at the day and month level.
+
+Materialized views are precomputed views that cache the results of a query, which can significantly improve query performance and reduce costs by avoiding repeated computation. They automatically update with changes to the base table, ensuring data freshness without additional maintenance.
+
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+C is the answer.
+Materialized Views:
+
+Materialized views in BigQuery are precomputed views that store the results of a query, allowing for much faster query execution because BigQuery doesn’t need to recompute the results each time the query is run. The results are stored in a persistent table, which significantly improves performance for repeated queries that aggregate the same data.
+In this case, you can create materialized views that aggregate the sales data at the day and month levels. This will reduce the amount of data that needs to be processed for each query and speed up the response time.
+Materialized views also lower costs because BigQuery only scans the precomputed data in the materialized view, rather than the full 50 TB sales history table.
+
+--- Comment #23 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+hussain.sain
+			
+
+
+			3 months, 2 weeks ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+C is the answer.
+Materialized Views:
+
+Materialized views in BigQuery are precomputed views that store the results of a query, allowing for much faster query execution because BigQuery doesn’t need to recompute the results each time the query is run. The results are stored in a persistent table, which significantly improves performance for repeated queries that aggregate the same data.
+In this case, you can create materialized views that aggregate the sales data at the day and month levels. This will reduce the amount of data that needs to be processed for each query and speed up the response time.
+Materialized views also lower costs because BigQuery only scans the precomputed data in the materialized view, rather than the full 50 TB sales history table.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+C is the answer.
+Materialized Views:
+
+Materialized views in BigQuery are precomputed views that store the results of a query, allowing for much faster query execution because BigQuery doesn’t need to recompute the results each time the query is run. The results are stored in a persistent table, which significantly improves performance for repeated queries that aggregate the same data.
+In this case, you can create materialized views that aggregate the sales data at the day and month levels. This will reduce the amount of data that needs to be processed for each query and speed up the response time.
+Materialized views also lower costs because BigQuery only scans the precomputed data in the materialized view, rather than the full 50 TB sales history table.
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

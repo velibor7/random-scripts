@@ -1,0 +1,13 @@
+COMMENT #90 FOR QUESTION 21
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Answer - D
+Key statement is  "Transmitted data includes a payload of several fields and the timestamp of the transmission." 
+
+So the timestamp is appended to message while sending, in other words that field is subject to change if message is retransmitted. However, adding a GUID doesn't help much because if message is transmitted twice you will have different GUID for both messages but they will be the same/duplicate data.
+
+You can simply calculate a hash based on not all data but from a select of columns (with the payload of several fields AND definitely by excluding the timestamp). By doing so, you can assure a different hash for each message.
+============================================================

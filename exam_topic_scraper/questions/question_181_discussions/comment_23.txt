@@ -1,0 +1,14 @@
+COMMENT #23 FOR QUESTION 181
+============================================================
+Author: Unknown
+Date: 1 year, 10 months ago
+Votes: 0
+----------------------------------------
+Thanks for sharing, you found exactly the same problem!
+The document defitely proposes batching for this scenario.
+
+I'm quoting another part from the same example that would be useful for a similar question with different conditions:
+- If you're using a client in the DoFn that has heavy instantiation steps, rather than create that object in each DoFn call:
+    * If the client is thread-safe and serializable, create it statically in the class definition of the DoFn.
+    * If it's not thread-safe, create a new object in the startBundle method of DoFn. By doing so, the client will be reused across all elements of a bundle, saving initialization time.
+============================================================

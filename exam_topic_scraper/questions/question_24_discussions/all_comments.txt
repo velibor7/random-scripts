@@ -1,0 +1,1293 @@
+ALL COMMENTS FOR QUESTION 24
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 24 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 24
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have spent a few days loading data from comma-separated values (CSV) files into the Google BigQuery table CLICK_STREAM. The column DT stores the epoch time of click events. For convenience, you chose a simple schema where every field is treated as the STRING type. Now, you want to compute web session durations of users who visit your site, and you want to change its data type to the TIMESTAMP. You want to minimize the migration effort without making future queries computationally expensive. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Delete the table CLICK_STREAM, and then re-create it such that the column DT is of the TIMESTAMP type. Reload the data.
+										
+
+
+													B.
+												
+											
+											Add a column TS of the TIMESTAMP type to the table CLICK_STREAM, and populate the numeric values from the column TS for each row. Reference the column TS instead of the column DT from now on.
+										
+
+
+													C.
+												
+											
+											Create a view CLICK_STREAM_V, where strings from the column DT are cast into TIMESTAMP values. Reference the view CLICK_STREAM_V instead of the table CLICK_STREAM from now on.
+										
+
+
+													D.
+												
+											
+											Add two columns to the table CLICK STREAM: TS of the TIMESTAMP type and IS_NEW of the BOOLEAN type. Reload all data in append mode. For each appended row, set the value of IS_NEW to true. For future queries, reference the column TS instead of the column DT, with the WHERE clause ensuring that the value of IS_NEW must be true.
+										
+
+
+													E.
+												
+											
+											Construct a query to return every row of the table CLICK_STREAM, while using the built-in function to cast strings from the column DT into TIMESTAMP values. Run the query into a destination table NEW_CLICK_STREAM, in which the column TS is the TIMESTAMP type. Reference the table NEW_CLICK_STREAM instead of the table CLICK_STREAM from now on. In the future, new data is loaded into the table NEW_CLICK_STREAM.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+E
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 11, 2020, 7:13 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 24
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 11, 2020, 7:13 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+"E" looks better. For D, the database will be double in size (which increases the storage price) and the user has to spend some more days reloading all the data.
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+"E" looks better. For D, the database will be double in size (which increases the storage price) and the user has to spend some more days reloading all the data.
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+"E" looks better. For D, the database will be double in size (which increases the storage price) and the user has to spend some more days reloading all the data.
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+"E" looks better. For D, the database will be double in size (which increases the storage price) and the user has to spend some more days reloading all the data.
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+"E" looks better. For D, the database will be double in size (which increases the storage price) and the user has to spend some more days reloading all the data.
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+jvg637
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+"E" looks better. For D, the database will be double in size (which increases the storage price) and the user has to spend some more days reloading all the data.
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+"E" looks better. For D, the database will be double in size (which increases the storage price) and the user has to spend some more days reloading all the data.
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 31 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Also D doesn't make sense since we're filtering IS_NEW to true to only consider future data, which disregards our previously loaded data
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Also D doesn't make sense since we're filtering IS_NEW to true to only consider future data, which disregards our previously loaded data
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+jkhong
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Also D doesn't make sense since we're filtering IS_NEW to true to only consider future data, which disregards our previously loaded data
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Also D doesn't make sense since we're filtering IS_NEW to true to only consider future data, which disregards our previously loaded data
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+"You want to minimize the migration effort without making future queries computationally expensive." Nothing about storage price.
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+assU2
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+"You want to minimize the migration effort without making future queries computationally expensive." Nothing about storage price.
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+"You want to minimize the migration effort without making future queries computationally expensive." Nothing about storage price.
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+E - more simple and reasonable. Also recommended if not concerned about cost but simplicity. 
+https://cloud.google.com/bigquery/docs/manually-changing-schemas#changing_a_columns_data_type
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+E - more simple and reasonable. Also recommended if not concerned about cost but simplicity. 
+https://cloud.google.com/bigquery/docs/manually-changing-schemas#changing_a_columns_data_type
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+E - more simple and reasonable. Also recommended if not concerned about cost but simplicity. 
+https://cloud.google.com/bigquery/docs/manually-changing-schemas#changing_a_columns_data_type
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 22 times
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Due to the hard limitations of bq, Not E is the simple answer by the way!
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Due to the hard limitations of bq, Not E is the simple answer by the way!
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Tanzu
+			
+
+
+			3 years, 2 months ago
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Due to the hard limitations of bq, Not E is the simple answer by the way!
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Due to the hard limitations of bq, Not E is the simple answer by the way!
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date: 3 weeks, 4 days ago | Votes: 0
+Changing DT to TIMESTAMP. Create a view casting the string. Answer C.
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date: 3 weeks, 4 days ago | Votes: 0
+Parandhaman_Margan
+			
+
+
+				Most Recent 
+
+
+			3 weeks, 4 days ago
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Changing DT to TIMESTAMP. Create a view casting the string. Answer C.
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Changing DT to TIMESTAMP. Create a view casting the string. Answer C.
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date: 1 month ago | Votes: 0
+I was hesitating between C and E, but E seems to be the good one
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date: 1 month ago | Votes: 0
+Abizi
+			
+
+
+			1 month ago
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I was hesitating between C and E, but E seems to be the good one
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: E
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I was hesitating between C and E, but E seems to be the good one
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+Both options C (creating a view) and E (creating a new table) avoid reloading the original data. However, C is the better choice for minimizing effort and maintaining performance. Views don't store any data themselves. They simply act as a layer on top of the existing table. This means you avoid the cost of storing duplicate data, which can be significant for large tables.
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+LP_PDE
+			
+
+
+			2 months, 2 weeks ago
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Both options C (creating a view) and E (creating a new table) avoid reloading the original data. However, C is the better choice for minimizing effort and maintaining performance. Views don't store any data themselves. They simply act as a layer on top of the existing table. This means you avoid the cost of storing duplicate data, which can be significant for large tables.
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Both options C (creating a view) and E (creating a new table) avoid reloading the original data. However, C is the better choice for minimizing effort and maintaining performance. Views don't store any data themselves. They simply act as a layer on top of the existing table. This means you avoid the cost of storing duplicate data, which can be significant for large tables.
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date: 8 months ago | Votes: 0
+Create a view no data migration easy to do but computational efficient queries not sure (?)
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date: 8 months ago | Votes: 0
+Nittin
+			
+
+
+			8 months ago
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Create a view no data migration easy to do but computational efficient queries not sure (?)
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Create a view no data migration easy to do but computational efficient queries not sure (?)
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date: 10 months, 4 weeks ago | Votes: 0
+E. It recreates the table one time and everything is fixed. Next time you load, load to the new table, you can delete the previous one.
+Definitely not C. The question says I have to minimize future query effort, which literally means "don't create a view that converts from STR to TIMESTAMP for every row."
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date: 10 months, 4 weeks ago | Votes: 0
+mark1223jkh
+			
+
+
+			10 months, 4 weeks ago
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+E. It recreates the table one time and everything is fixed. Next time you load, load to the new table, you can delete the previous one.
+Definitely not C. The question says I have to minimize future query effort, which literally means "don't create a view that converts from STR to TIMESTAMP for every row."
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+E. It recreates the table one time and everything is fixed. Next time you load, load to the new table, you can delete the previous one.
+Definitely not C. The question says I have to minimize future query effort, which literally means "don't create a view that converts from STR to TIMESTAMP for every row."
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date: 10 months, 4 weeks ago | Votes: 0
+Option E is correct.
+The question is asking to consider the Query cost for future.
+This is a one time job to fix the Timestamp column. no views were created.
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date: 10 months, 4 weeks ago | Votes: 0
+suwalsageen12
+			
+
+
+			10 months, 4 weeks ago
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option E is correct.
+The question is asking to consider the Query cost for future.
+This is a one time job to fix the Timestamp column. no views were created.
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: E
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option E is correct.
+The question is asking to consider the Query cost for future.
+This is a one time job to fix the Timestamp column. no views were created.
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date: 11 months, 3 weeks ago | Votes: 0
+Why Option E is the best choice:
+
+It modifies the schema with minimal data movement.
+The original table remains untouched for potential future needs.
+Future data loads can directly go to the new table with the desired schema.
+Queries referencing the new table (NEW_CLICK_STREAM) will benefit from the optimized data type for timestamp operations.
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date: 11 months, 3 weeks ago | Votes: 0
+teka112233
+			
+
+
+			11 months, 3 weeks ago
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Why Option E is the best choice:
+
+It modifies the schema with minimal data movement.
+The original table remains untouched for potential future needs.
+Future data loads can directly go to the new table with the desired schema.
+Queries referencing the new table (NEW_CLICK_STREAM) will benefit from the optimized data type for timestamp operations.
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: E
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Why Option E is the best choice:
+
+It modifies the schema with minimal data movement.
+The original table remains untouched for potential future needs.
+Future data loads can directly go to the new table with the desired schema.
+Queries referencing the new table (NEW_CLICK_STREAM) will benefit from the optimized data type for timestamp operations.
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+minimizing effort is key.
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+GYORK
+			
+
+
+			1 year ago
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+minimizing effort is key.
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+minimizing effort is key.
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+A view in Google BigQuery is a virtual table defined by a SQL query. By creating a view that casts the DT column as a TIMESTAMP, you can transform the data format without altering the underlying data in the CLICK_STREAM table. This means you don't have to reload any data, thereby minimizing migration effort.
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+TVH_Data_Engineer
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date: 4 months ago | Votes: 0
+A view in Google BigQuery is a virtual table defined by a SQL query. By creating a view that casts the DT column as a TIMESTAMP, you can transform the data format without altering the underlying data in the CLICK_STREAM table. This means you don't have to reload any data, thereby minimizing migration effort.
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A view in Google BigQuery is a virtual table defined by a SQL query. By creating a view that casts the DT column as a TIMESTAMP, you can transform the data format without altering the underlying data in the CLICK_STREAM table. This means you don't have to reload any data, thereby minimizing migration effort.
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date: 4 months ago | Votes: 0
+Depends. If you create a materialized view, that tracks. If it's not a materialized view, the underlying query will run every time there's a query against the view.
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date: 4 months ago | Votes: 0
+Depends. If you create a materialized view, that tracks. If it's not a materialized view, the underlying query will run every time there's a query against the view.
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date: 4 months ago | Votes: 0
+apoio.certificacoes.closer
+			
+
+
+			4 months ago
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Depends. If you create a materialized view, that tracks. If it's not a materialized view, the underlying query will run every time there's a query against the view.
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Depends. If you create a materialized view, that tracks. If it's not a materialized view, the underlying query will run every time there's a query against the view.
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Good point about the logical views and the desire to reduce costs. I would vote for E
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+axantroff
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Good point about the logical views and the desire to reduce costs. I would vote for E
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: E
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Good point about the logical views and the desire to reduce costs. I would vote for E
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+The best way to minimize the migration effort without making future queries computationally expensive is to create a view and reference it instead of the table. This is because views are materialized when they are queried, so they do not incur any additional overhead.
+So the answer is (C).
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+mk_choudhary
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+The best way to minimize the migration effort without making future queries computationally expensive is to create a view and reference it instead of the table. This is because views are materialized when they are queried, so they do not incur any additional overhead.
+So the answer is (C).
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The best way to minimize the migration effort without making future queries computationally expensive is to create a view and reference it instead of the table. This is because views are materialized when they are queried, so they do not incur any additional overhead.
+So the answer is (C).
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+C doesn't say materialized view, there's a difference with a regular view so it'll be slower and more expensive on every call to that view.
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+C doesn't say materialized view, there's a difference with a regular view so it'll be slower and more expensive on every call to that view.
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+brokeasspanda
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C doesn't say materialized view, there's a difference with a regular view so it'll be slower and more expensive on every call to that view.
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C doesn't say materialized view, there's a difference with a regular view so it'll be slower and more expensive on every call to that view.
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Option "E"
+It avoids the need to delete and recreate the entire CLICK_STREAM table, which is time-consuming and requires reloading all data.
+
+It allows you to use a simple query to cast the existing DT column as TIMESTAMP values and store the results in a new table, NEW_CLICK_STREAM.
+
+You can gradually migrate to the new data format, and your future queries will be able to utilize the TIMESTAMP data type for more efficient processing.
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+rtcpost
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option "E"
+It avoids the need to delete and recreate the entire CLICK_STREAM table, which is time-consuming and requires reloading all data.
+
+It allows you to use a simple query to cast the existing DT column as TIMESTAMP values and store the results in a new table, NEW_CLICK_STREAM.
+
+You can gradually migrate to the new data format, and your future queries will be able to utilize the TIMESTAMP data type for more efficient processing.
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: E
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option "E"
+It avoids the need to delete and recreate the entire CLICK_STREAM table, which is time-consuming and requires reloading all data.
+
+It allows you to use a simple query to cast the existing DT column as TIMESTAMP values and store the results in a new table, NEW_CLICK_STREAM.
+
+You can gradually migrate to the new data format, and your future queries will be able to utilize the TIMESTAMP data type for more efficient processing.
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Option D duplicates, not a good solution
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+sergiomujica
+			
+
+
+			1 year, 7 months ago
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option D duplicates, not a good solution
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option D duplicates, not a good solution
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+E.     E. You can use a special command to change the time on the old cards to the better type "TIMESTAMP" and create a new box called "NEW_CLICK_STREAM." From now on, you'll look at the new box whenever you want to know the time. It's like having a new and better box to keep things tidy and organized.
+
+So, the best way to change the time on the little cards to the better type "TIMESTAMP" is option E. It's like using magic to create a new box and making sure everything is still easy to find and work with. It's a clever way to keep track of time and make your website even better!
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+NeoNitin
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+E.     E. You can use a special command to change the time on the old cards to the better type "TIMESTAMP" and create a new box called "NEW_CLICK_STREAM." From now on, you'll look at the new box whenever you want to know the time. It's like having a new and better box to keep things tidy and organized.
+
+So, the best way to change the time on the little cards to the better type "TIMESTAMP" is option E. It's like using magic to create a new box and making sure everything is still easy to find and work with. It's a clever way to keep track of time and make your website even better!
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+E.     E. You can use a special command to change the time on the old cards to the better type "TIMESTAMP" and create a new box called "NEW_CLICK_STREAM." From now on, you'll look at the new box whenever you want to know the time. It's like having a new and better box to keep things tidy and organized.
+
+So, the best way to change the time on the little cards to the better type "TIMESTAMP" is option E. It's like using magic to create a new box and making sure everything is still easy to find and work with. It's a clever way to keep track of time and make your website even better!
+
+COMMENT #187
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #188
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #189
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #190
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #191
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+they asked to "change its data type"
+
+COMMENT #192
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+tal_
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #193
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+they asked to "change its data type"
+
+COMMENT #194
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: E
+
+COMMENT #195
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+they asked to "change its data type"
+
+COMMENT #196
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #197
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #198
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #199
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #200
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #201
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #202
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

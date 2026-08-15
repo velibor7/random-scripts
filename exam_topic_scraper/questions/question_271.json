@@ -1,0 +1,457 @@
+{
+  "question": "You are monitoring your organization\u2019s data lake hosted on BigQuery. The ingestion pipelines read data from Pub/Sub and write the data into tables on BigQuery. After a new version of the ingestion pipelines is deployed, the daily stored data increased by 50%. The volumes of data in Pub/Sub remained the same and only some tables had their daily partition data size doubled. You need to investigate and fix the cause of the data increase. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Check for duplicate rows in the BigQuery tables that have the daily partition data size doubled.2. Schedule daily SQL jobs to deduplicate the affected tables.3. Share the deduplication script with the other operational teams to reuse if this occurs to other tables.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Check for code errors in the deployed pipelines.2. Check for multiple writing to pipeline BigQuery sink.3. Check for errors in Cloud Logging during the day of the release of the new pipelines.4. If no errors, restore the BigQuery tables to their content before the last release by using time travel.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Check for duplicate rows in the BigQuery tables that have the daily partition data size doubled.2. Check the BigQuery Audit logs to find job IDs.3. Use Cloud Monitoring to determine when the identified Dataflow jobs started and the pipeline code version.4. When more than one pipeline ingests data into a table, stop all versions except the latest one.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Roll back the last deployment.2. Restore the BigQuery tables to their content before the last release by using time travel.3. Restart the Dataflow jobs and replay the messages by seeking the subscription to the timestamp of the release.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 271 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 271\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are monitoring your organization\u2019s data lake hosted on BigQuery. The ingestion pipelines read data from Pub/Sub and write the data into tables on BigQuery. After a new version of the ingestion pipelines is deployed, the daily stored data increased by 50%. The volumes of data in Pub/Sub remained the same and only some tables had their daily partition data size doubled. You need to investigate and fix the cause of the data increase. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Check for duplicate rows in the BigQuery tables that have the daily partition data size doubled.2. Schedule daily SQL jobs to deduplicate the affected tables.3. Share the deduplication script with the other operational teams to reuse if this occurs to other tables.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Check for code errors in the deployed pipelines.2. Check for multiple writing to pipeline BigQuery sink.3. Check for errors in Cloud Logging during the day of the release of the new pipelines.4. If no errors, restore the BigQuery tables to their content before the last release by using time travel.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Check for duplicate rows in the BigQuery tables that have the daily partition data size doubled.2. Check the BigQuery Audit logs to find job IDs.3. Use Cloud Monitoring to determine when the identified Dataflow jobs started and the pipeline code version.4. When more than one pipeline ingests data into a table, stop all versions except the latest one.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t1. Roll back the last deployment.2. Restore the BigQuery tables to their content before the last release by using time travel.3. Restart the Dataflow jobs and replay the messages by seeking the subscription to the timestamp of the release.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\traaad\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 5, 2024, 6:29 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 271\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\traaad\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 5, 2024, 6:29 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.\n- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.\n- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.\n- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.\n\n\n=======\nWhy not B\nWhile it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.\n- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.\n- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.\n- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.\n\n\n=======\nWhy not B\nWhile it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.\n- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.\n- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.\n- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.\n\n\n=======\nWhy not B\nWhile it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.\n- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.\n- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.\n- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.\n\n\n=======\nWhy not B\nWhile it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.\n- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.\n- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.\n- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.\n\n\n=======\nWhy not B\nWhile it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.\n- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.\n- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.\n- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.\n\n\n=======\nWhy not B\nWhile it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.\n- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.\n- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.\n- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.\n\n\n=======\nWhy not B\nWhile it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 12 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 1\u00a0week ago",
+      "content": "Why not D?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 1\u00a0week ago",
+      "content": "mi_yulai\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t5\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not D?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not D?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 1\u00a0week ago",
+      "content": "No idea which one to choose. Option C miss a step - to restore the tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 1\u00a0week ago",
+      "content": "SamuelTsch\n\t\t\t\n\n\n\t\t\t5\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 2\u00a0weeks ago",
+      "content": "No idea which one to choose. Option C miss a step - to restore the tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "No idea which one to choose. Option C miss a step - to restore the tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 2\u00a0weeks ago",
+      "content": "\" You need to investigate and fix the cause of the data increase. \" - fixing the target tables was not required.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 2\u00a0weeks ago",
+      "content": "\" You need to investigate and fix the cause of the data increase. \" - fixing the target tables was not required.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0months, 2\u00a0weeks ago",
+      "content": "Ryannn23\n\t\t\t\n\n\n\t\t\t2\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\" You need to investigate and fix the cause of the data increase. \" - fixing the target tables was not required.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\" You need to investigate and fix the cause of the data increase. \" - fixing the target tables was not required.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option C - agree with Raaad on the reasons",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C - agree with Raaad on the reasons",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C - agree with Raaad on the reasons",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "B. Check for code errors in the deployed pipelines, multiple writing to pipeline BigQuery sink, errors in Cloud Logging, and if necessary, restore tables using time travel.\nCheck for code errors\nCheck for multiple writes\nCheck Cloud Logging\nRestore tables if necessary:",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "task_7\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "B. Check for code errors in the deployed pipelines, multiple writing to pipeline BigQuery sink, errors in Cloud Logging, and if necessary, restore tables using time travel.\nCheck for code errors\nCheck for multiple writes\nCheck Cloud Logging\nRestore tables if necessary:",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Check for code errors in the deployed pipelines, multiple writing to pipeline BigQuery sink, errors in Cloud Logging, and if necessary, restore tables using time travel.\nCheck for code errors\nCheck for multiple writes\nCheck Cloud Logging\nRestore tables if necessary:",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "This does not fix the error, it basically assumes that the error is not really there.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "This does not fix the error, it basically assumes that the error is not really there.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "RenePetersen\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This does not fix the error, it basically assumes that the error is not really there.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This does not fix the error, it basically assumes that the error is not really there.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+COMMENT #32 FOR QUESTION 20
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+D
+Why are there too many duplicate messages?
+
+Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.
+============================================================

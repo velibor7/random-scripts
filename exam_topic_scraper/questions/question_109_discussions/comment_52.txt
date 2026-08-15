@@ -1,0 +1,16 @@
+COMMENT #52 FOR QUESTION 109
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+D. The subscriber code cannot keep up with the messages.
+
+If the processing rate of the subscriber (Cloud Functions) is lower than the incoming message rate, it can lead to a backlog of messages. This would result in higher-than-expected message rates, as messages accumulate while waiting to be processed.
+
+E. The subscriber code does not acknowledge the messages that it pulls.
+
+If messages are not acknowledged properly, Pub/Sub will keep retrying to deliver them, which can lead to the same messages being sent repeatedly. This could also contribute to the perception that the message processing rate is very high.
+
+Both of these issues can lead to unanticipated behavior in your message processing pipeline without generating errors that would be logged in Cloud Logging.
+============================================================

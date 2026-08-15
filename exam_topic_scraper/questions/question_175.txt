@@ -1,0 +1,709 @@
+================================================================================
+QUESTION:
+Your organization has recently begun an initiative to replatform their legacy applications onto Google Kubernetes Engine. You need to decompose a monolithic application into microservices. Multiple instances have read and write access to a configuration file, which is stored on a shared file system. You want to minimize the effort required to manage this transition, and you want to avoid rewriting the application code. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a new Cloud Storage bucket, and mount it via FUSE in the container.
+										
+
+
+													B.
+												
+											
+											Create a new persistent disk, and mount the volume as a shared PersistentVolume.
+										
+
+
+													C.
+												
+											
+											Create a new Filestore instance, and mount the volume as an NFS PersistentVolume.
+										
+
+
+													D.
+												
+											
+											Create a new ConfigMap and volumeMount to store the contents of the configuration file.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (102 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Cloud Developer topic 1 question 175 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Cloud Developer
+
+							Question #: 175
+							Topic #: 1
+						
+[All Professional Cloud Developer Questions]
+
+
+
+							
+								Your organization has recently begun an initiative to replatform their legacy applications onto Google Kubernetes Engine. You need to decompose a monolithic application into microservices. Multiple instances have read and write access to a configuration file, which is stored on a shared file system. You want to minimize the effort required to manage this transition, and you want to avoid rewriting the application code. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a new Cloud Storage bucket, and mount it via FUSE in the container.
+										
+
+
+													B.
+												
+											
+											Create a new persistent disk, and mount the volume as a shared PersistentVolume.
+										
+
+
+													C.
+												
+											
+											Create a new Filestore instance, and mount the volume as an NFS PersistentVolume.
+										
+
+
+													D.
+												
+											
+											Create a new ConfigMap and volumeMount to store the contents of the configuration file.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								zellck
+							
+							
+							at 
+							Dec. 15, 2022, 1:51 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Cloud Developer
+
+							Question #: 175
+							Topic #: 1
+						
+[All Professional Cloud Developer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								zellck
+							
+							
+							at 
+							Dec. 15, 2022, 1:51 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+A is incorrect, because Cloud Storage FUSE does not support concurrency and file locking.
+B is incorrect, because a persistent disk PersistentVolume is not read-write-many. It can only be read-write once or read-many.
+C is correct, because it’s the only managed, supported read-write-many storage option available for file-system access in Google Kubernetes Engine.
+D is incorrect, because the ConfigMap cannot be written to from the Pods.
+
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
+https://cloud.google.com/filestore/docs/accessing-fileshares
+https://cloud.google.com/storage/docs/gcs-fuse
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+A is incorrect, because Cloud Storage FUSE does not support concurrency and file locking.
+B is incorrect, because a persistent disk PersistentVolume is not read-write-many. It can only be read-write once or read-many.
+C is correct, because it’s the only managed, supported read-write-many storage option available for file-system access in Google Kubernetes Engine.
+D is incorrect, because the ConfigMap cannot be written to from the Pods.
+
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
+https://cloud.google.com/filestore/docs/accessing-fileshares
+https://cloud.google.com/storage/docs/gcs-fuse
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+A is incorrect, because Cloud Storage FUSE does not support concurrency and file locking.
+B is incorrect, because a persistent disk PersistentVolume is not read-write-many. It can only be read-write once or read-many.
+C is correct, because it’s the only managed, supported read-write-many storage option available for file-system access in Google Kubernetes Engine.
+D is incorrect, because the ConfigMap cannot be written to from the Pods.
+
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
+https://cloud.google.com/filestore/docs/accessing-fileshares
+https://cloud.google.com/storage/docs/gcs-fuse
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+A is incorrect, because Cloud Storage FUSE does not support concurrency and file locking.
+B is incorrect, because a persistent disk PersistentVolume is not read-write-many. It can only be read-write once or read-many.
+C is correct, because it’s the only managed, supported read-write-many storage option available for file-system access in Google Kubernetes Engine.
+D is incorrect, because the ConfigMap cannot be written to from the Pods.
+
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
+https://cloud.google.com/filestore/docs/accessing-fileshares
+https://cloud.google.com/storage/docs/gcs-fuse
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+A is incorrect, because Cloud Storage FUSE does not support concurrency and file locking.
+B is incorrect, because a persistent disk PersistentVolume is not read-write-many. It can only be read-write once or read-many.
+C is correct, because it’s the only managed, supported read-write-many storage option available for file-system access in Google Kubernetes Engine.
+D is incorrect, because the ConfigMap cannot be written to from the Pods.
+
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
+https://cloud.google.com/filestore/docs/accessing-fileshares
+https://cloud.google.com/storage/docs/gcs-fuse
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+x_cath
+			
+
+
+				Highly Voted 
+
+
+			1 year, 9 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 2 months, 1 week ago | Votes: 0
+A is incorrect, because Cloud Storage FUSE does not support concurrency and file locking.
+B is incorrect, because a persistent disk PersistentVolume is not read-write-many. It can only be read-write once or read-many.
+C is correct, because it’s the only managed, supported read-write-many storage option available for file-system access in Google Kubernetes Engine.
+D is incorrect, because the ConfigMap cannot be written to from the Pods.
+
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
+https://cloud.google.com/filestore/docs/accessing-fileshares
+https://cloud.google.com/storage/docs/gcs-fuse
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+A is incorrect, because Cloud Storage FUSE does not support concurrency and file locking.
+B is incorrect, because a persistent disk PersistentVolume is not read-write-many. It can only be read-write once or read-many.
+C is correct, because it’s the only managed, supported read-write-many storage option available for file-system access in Google Kubernetes Engine.
+D is incorrect, because the ConfigMap cannot be written to from the Pods.
+
+https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes
+https://cloud.google.com/filestore/docs/accessing-fileshares
+https://cloud.google.com/storage/docs/gcs-fuse
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date: 2 months, 1 week ago | Votes: 0
+That's correct. Configmap can not be written by application so D is not a correct solution.
+
+--- Comment #21 ---
+Author: Unknown | Date: 2 months, 1 week ago | Votes: 0
+That's correct. Configmap can not be written by application so D is not a correct solution.
+
+--- Comment #22 ---
+Author: Unknown | Date: 2 months, 1 week ago | Votes: 0
+root_1234
+			
+
+
+			2 months, 1 week ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+That's correct. Configmap can not be written by application so D is not a correct solution.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+That's correct. Configmap can not be written by application so D is not a correct solution.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+ConfigMaps are Kubernetes objects that allow you to store configuration data in a key-value format. ConfigMaps are immutable, which means that they cannot be changed once they are created. This makes them ideal for storing configuration data that needs to be shared between multiple Pods.
+
+--- Comment #31 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+__rajan__
+			
+
+
+				Most Recent 
+
+
+			1 year ago
+
+--- Comment #32 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+ConfigMaps are Kubernetes objects that allow you to store configuration data in a key-value format. ConfigMaps are immutable, which means that they cannot be changed once they are created. This makes them ideal for storing configuration data that needs to be shared between multiple Pods.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+ConfigMaps are Kubernetes objects that allow you to store configuration data in a key-value format. ConfigMaps are immutable, which means that they cannot be changed once they are created. This makes them ideal for storing configuration data that needs to be shared between multiple Pods.
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+In this case the configuration file will be both read and written by the instances, so D is not the answer
+
+--- Comment #38 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+In this case the configuration file will be both read and written by the instances, so D is not the answer
+
+--- Comment #39 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+pico
+			
+
+
+			4 months ago
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+In this case the configuration file will be both read and written by the instances, so D is not the answer
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+In this case the configuration file will be both read and written by the instances, so D is not the answer
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #47 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+ConfigMap is the usual way to store application configurations those runs under the cluster.  I donot understand why many of you are saying C.  The question is asking us to how we are going to manage configuration data in a GKE environment.
+
+--- Comment #48 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+purushi
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+ConfigMap is the usual way to store application configurations those runs under the cluster.  I donot understand why many of you are saying C.  The question is asking us to how we are going to manage configuration data in a GKE environment.
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+ConfigMap is the usual way to store application configurations those runs under the cluster.  I donot understand why many of you are saying C.  The question is asking us to how we are going to manage configuration data in a GKE environment.
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #56 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+C is the correct answer instead.
+
+https://kubernetes.io/docs/concepts/storage/volumes/#nfs
+An nfs volume allows an existing NFS (Network File System) share to be mounted into a Pod. Unlike emptyDir, which is erased when a Pod is removed, the contents of an nfs volume are preserved and the volume is merely unmounted. This means that an NFS volume can be pre-populated with data, and that data can be shared between pods. NFS can be mounted by multiple writers simultaneously.
+
+--- Comment #57 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+zellck
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+C is the correct answer instead.
+
+https://kubernetes.io/docs/concepts/storage/volumes/#nfs
+An nfs volume allows an existing NFS (Network File System) share to be mounted into a Pod. Unlike emptyDir, which is erased when a Pod is removed, the contents of an nfs volume are preserved and the volume is merely unmounted. This means that an NFS volume can be pre-populated with data, and that data can be shared between pods. NFS can be mounted by multiple writers simultaneously.
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+C is the correct answer instead.
+
+https://kubernetes.io/docs/concepts/storage/volumes/#nfs
+An nfs volume allows an existing NFS (Network File System) share to be mounted into a Pod. Unlike emptyDir, which is erased when a Pod is removed, the contents of an nfs volume are preserved and the volume is merely unmounted. This means that an NFS volume can be pre-populated with data, and that data can be shared between pods. NFS can be mounted by multiple writers simultaneously.
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #65 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Answer C 
+An nfs volume allows an existing NFS (Network File System) share to be mounted into a Pod. Unlike emptyDir, which is erased when a Pod is removed, the contents of an nfs volume are preserved and the volume is merely unmounted. This means that an NFS volume can be pre-populated with data, and that data can be shared between pods
+
+--- Comment #66 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+TNT87
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C 
+An nfs volume allows an existing NFS (Network File System) share to be mounted into a Pod. Unlike emptyDir, which is erased when a Pod is removed, the contents of an nfs volume are preserved and the volume is merely unmounted. This means that an NFS volume can be pre-populated with data, and that data can be shared between pods
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C 
+An nfs volume allows an existing NFS (Network File System) share to be mounted into a Pod. Unlike emptyDir, which is erased when a Pod is removed, the contents of an nfs volume are preserved and the volume is merely unmounted. This means that an NFS volume can be pre-populated with data, and that data can be shared between pods
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #74 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Generally ConfigMaps (D) are the right choice to store pod config-files, but: They are read-only, which does not match what is asked for here. If, as stated in the question, the application-parts need to be able to also write to that Configfile that should be on a shared file system, the only valid choice is a NFS PV.
+
+--- Comment #75 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Underverse
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #76 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Generally ConfigMaps (D) are the right choice to store pod config-files, but: They are read-only, which does not match what is asked for here. If, as stated in the question, the application-parts need to be able to also write to that Configfile that should be on a shared file system, the only valid choice is a NFS PV.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+Generally ConfigMaps (D) are the right choice to store pod config-files, but: They are read-only, which does not match what is asked for here. If, as stated in the question, the application-parts need to be able to also write to that Configfile that should be on a shared file system, the only valid choice is a NFS PV.
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Agree with C that a NFS will be required.
+
+--- Comment #82 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Agree with C that a NFS will be required.
+
+--- Comment #83 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+zellck
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Agree with C that a NFS will be required.
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+Agree with C that a NFS will be required.
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #91 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D is the answer.
+
+https://cloud.google.com/kubernetes-engine/docs/concepts/configmap
+ConfigMaps bind non-sensitive configuration artifacts such as configuration files, command-line arguments, and environment variables to your Pod containers and system components at runtime.
+
+A ConfigMap separates your configurations from your Pod and components, which helps keep your workloads portable. This makes their configurations easier to change and manage, and prevents hardcoding configuration data to Pod specifications.
+
+--- Comment #92 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+zellck
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+D is the answer.
+
+https://cloud.google.com/kubernetes-engine/docs/concepts/configmap
+ConfigMaps bind non-sensitive configuration artifacts such as configuration files, command-line arguments, and environment variables to your Pod containers and system components at runtime.
+
+A ConfigMap separates your configurations from your Pod and components, which helps keep your workloads portable. This makes their configurations easier to change and manage, and prevents hardcoding configuration data to Pod specifications.
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+D is the answer.
+
+https://cloud.google.com/kubernetes-engine/docs/concepts/configmap
+ConfigMaps bind non-sensitive configuration artifacts such as configuration files, command-line arguments, and environment variables to your Pod containers and system components at runtime.
+
+A ConfigMap separates your configurations from your Pod and components, which helps keep your workloads portable. This makes their configurations easier to change and manage, and prevents hardcoding configuration data to Pod specifications.
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

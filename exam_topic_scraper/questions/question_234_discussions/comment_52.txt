@@ -1,0 +1,15 @@
+COMMENT #52 FOR QUESTION 234
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Why A? Because:
+
+Materialized View for API: A materialized view in BigQuery pre-computes the last known state of each product. This ensures that your API can quickly retrieve the latest product information without needing to query the entire historical dataset.   
+BigQuery for API Serving: BigQuery can handle high query volumes with low latency, meeting your requirement of 1000 QPS with sub-second latency.
+Cost-Effectiveness: This solution avoids the need for a separate database like Cloud SQL, minimizing costs and management overhead.
+
+Why not D:
+While Cloud SQL is a good option for transactional workloads, it's not as cost-effective or scalable as BigQuery for analytical queries on 10 PB of data. It might also not be the ideal choice for serving high-volume API requests with low latency.
+============================================================

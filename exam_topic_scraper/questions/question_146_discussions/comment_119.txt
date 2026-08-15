@@ -1,0 +1,13 @@
+COMMENT #119 FOR QUESTION 146
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Answers are;
+B. Run the gsutil utility to transfer all ORC files from the Cloud Storage bucket to any node of the Dataproc cluster. Mount the Hive tables locally.
+C. Run the gsutil utility to transfer all ORC files from the Cloud Storage bucket to the master node of the Dataproc cluster. Then run the Hadoop utility to copy them do HDFS. Mount the Hive tables from HDFS.
+
+You need to replicate some data to the cluster's local Hadoop Distributed File System (HDFS) to maximize performance. HDFS lies on datanode, data on masternode needs to be copied on datanode.
+B for managed hive table option, C for external hive table
+============================================================

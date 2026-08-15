@@ -1,0 +1,20 @@
+COMMENT #22 FOR QUESTION 92727
+============================================================
+Author: Unknown
+Date: 1 year, 3 months ago
+Votes: 0
+----------------------------------------
+From this link (https://cloud.google.com/database-migration/docs/postgres/known-limitations), correct answers should be B and D.
+
+Excerpts supporting these choices:
+
+"For tables that don't have primary keys, Database Migration Service supports migration of the initial snapshot and INSERT statements during the change data capture (CDC) phase. You should migrate UPDATE and DELETE statements manually."
+
+"If encrypted databases require customer-managed encryption keys to decrypt the databases, and if Database Migration Service doesn't have access to the keys, then the databases can't be migrated.
+However, if customer data is encrypted by the pgcrypto extension, then the data can be migrated with Database Migration Service (because Cloud SQL supports the extension)."
+
+Therefore, for the migration to be executable:
+
+* Only tables with a primary key can be migrated;
+* Only data encrypted by the pgcrypto extension can be migrated.
+============================================================

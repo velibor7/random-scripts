@@ -1,0 +1,1381 @@
+{
+  "question": "A data ingestion task requires a one-TB JSON dataset to be written out to Parquet with a target part-file size of 512 MB. Because Parquet is being used instead of Delta Lake, built-in file-sizing features such as Auto-Optimize & Auto-Compaction cannot be used.Which strategy will yield the best performance without shuffling data?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet spark.sql.files.maxPartitionBytes to 512 MB, ingest the data, execute the narrow transformations, and then write to parquet.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet spark.sql.shuffle.partitions to 2,048 partitions (1TB*1024*1024/512), ingest the data, execute the narrow transformations, optimize the data by sorting it (which automatically repartitions the data), and then write to parquet.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet spark.sql.adaptive.advisoryPartitionSizeInBytes to 512 MB bytes, ingest the data, execute the narrow transformations, coalesce to 2,048 partitions (1TB*1024*1024/512), and then write to parquet.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tIngest the data, execute the narrow transformations, repartition to 2,048 partitions (1TB* 1024*1024/512), and then write to parquet.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet spark.sql.shuffle.partitions to 512, ingest the data, execute the narrow transformations, and then write to parquet.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Certified Data Engineer Professional topic 1 question 70 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tDatabricks's\n\t\t\t\t\t\tCertified Data Engineer Professional\n\n\t\t\t\t\t\t\tQuestion #: 70\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Certified Data Engineer Professional Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tA data ingestion task requires a one-TB JSON dataset to be written out to Parquet with a target part-file size of 512 MB. Because Parquet is being used instead of Delta Lake, built-in file-sizing features such as Auto-Optimize & Auto-Compaction cannot be used.Which strategy will yield the best performance without shuffling data?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet spark.sql.files.maxPartitionBytes to 512 MB, ingest the data, execute the narrow transformations, and then write to parquet.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet spark.sql.shuffle.partitions to 2,048 partitions (1TB*1024*1024/512), ingest the data, execute the narrow transformations, optimize the data by sorting it (which automatically repartitions the data), and then write to parquet.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet spark.sql.adaptive.advisoryPartitionSizeInBytes to 512 MB bytes, ingest the data, execute the narrow transformations, coalesce to 2,048 partitions (1TB*1024*1024/512), and then write to parquet.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tIngest the data, execute the narrow transformations, repartition to 2,048 partitions (1TB* 1024*1024/512), and then write to parquet.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet spark.sql.shuffle.partitions to 512, ingest the data, execute the narrow transformations, and then write to parquet.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tsturcu\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tOct. 24, 2023, 6:02 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tDatabricks's\n\t\t\t\t\t\tCertified Data Engineer Professional\n\n\t\t\t\t\t\t\tQuestion #: 70\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Certified Data Engineer Professional Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tsturcu\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tOct. 24, 2023, 6:02 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "aragorn_brego\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 10 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "D is the only one that does the trick.\n\nNote, we can not do shuffling.\n\nWrong answers:\n\nA: spark.sql.files.maxPartitionBytes is about reading, not writing.(The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC. )\n\nB: spark.sql.adaptive.advisoryPartitionSizeInBytes takes effect while shuffling and sorting does not make sense (The advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.)\n\nC: Would work but spark.sql.adaptive.advisoryPartitionSizeInBytes would need shuffling.\n\nE. spark.sql.shuffle.partitions (Configures the number of partitions to use when shuffling data for joins or aggregations.) is not about writing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Def21\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "D is the only one that does the trick.\n\nNote, we can not do shuffling.\n\nWrong answers:\n\nA: spark.sql.files.maxPartitionBytes is about reading, not writing.(The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC. )\n\nB: spark.sql.adaptive.advisoryPartitionSizeInBytes takes effect while shuffling and sorting does not make sense (The advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.)\n\nC: Would work but spark.sql.adaptive.advisoryPartitionSizeInBytes would need shuffling.\n\nE. spark.sql.shuffle.partitions (Configures the number of partitions to use when shuffling data for joins or aggregations.) is not about writing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is the only one that does the trick.\n\nNote, we can not do shuffling.\n\nWrong answers:\n\nA: spark.sql.files.maxPartitionBytes is about reading, not writing.(The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC. )\n\nB: spark.sql.adaptive.advisoryPartitionSizeInBytes takes effect while shuffling and sorting does not make sense (The advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.)\n\nC: Would work but spark.sql.adaptive.advisoryPartitionSizeInBytes would need shuffling.\n\nE. spark.sql.shuffle.partitions (Configures the number of partitions to use when shuffling data for joins or aggregations.) is not about writing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "D does repartition, which the question says we should try to avoid.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "D does repartition, which the question says we should try to avoid.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "arekm\n\t\t\t\n\n\n\t\t\t3\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D does repartition, which the question says we should try to avoid.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D does repartition, which the question says we should try to avoid.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months ago",
+      "content": "spark.sql.files.maxPartitionBytes is not just for reading files",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months ago",
+      "content": "carlosmps\n\t\t\t\n\n\n\t\t\t4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "spark.sql.files.maxPartitionBytes is not just for reading files",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "spark.sql.files.maxPartitionBytes is not just for reading files",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months ago",
+      "content": "Answer D is wrong -> repartition does perform shuffling in Spark. When you use repartition, Spark redistributes the data across the specified number of partitions, which requires moving data between nodes to achieve the new partitioning. Answer A should be correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months ago",
+      "content": "azurefan777\n\t\t\t\n\n\n\t\t\t5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer D is wrong -> repartition does perform shuffling in Spark. When you use repartition, Spark redistributes the data across the specified number of partitions, which requires moving data between nodes to achieve the new partitioning. Answer A should be correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer D is wrong -> repartition does perform shuffling in Spark. When you use repartition, Spark redistributes the data across the specified number of partitions, which requires moving data between nodes to achieve the new partitioning. Answer A should be correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "Answer D. Explicitly repartitioning to 2,048 partitions ensures that the output files are close to the desired size of 512 MB, provided the data distribution is relatively even.\nRepartitioning directly addresses the problem by controlling the number of partitions, which directly affects the output file size\nWhy not option A ? Misinterpretation of spark.sql.files.maxPartitionBytes in Option A:\nThe assessment incorrectly states that this configuration controls the maximum size of files when writing to Parquet. This setting controls the size of partitions when reading data, not during writing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "AlejandroU\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t3\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "Answer D. Explicitly repartitioning to 2,048 partitions ensures that the output files are close to the desired size of 512 MB, provided the data distribution is relatively even.\nRepartitioning directly addresses the problem by controlling the number of partitions, which directly affects the output file size\nWhy not option A ? Misinterpretation of spark.sql.files.maxPartitionBytes in Option A:\nThe assessment incorrectly states that this configuration controls the maximum size of files when writing to Parquet. This setting controls the size of partitions when reading data, not during writing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer D. Explicitly repartitioning to 2,048 partitions ensures that the output files are close to the desired size of 512 MB, provided the data distribution is relatively even.\nRepartitioning directly addresses the problem by controlling the number of partitions, which directly affects the output file size\nWhy not option A ? Misinterpretation of spark.sql.files.maxPartitionBytes in Option A:\nThe assessment incorrectly states that this configuration controls the maximum size of files when writing to Parquet. This setting controls the size of partitions when reading data, not during writing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "Given the requirement to avoid shuffling, Option A is the most suitable choice. By setting spark.sql.files.maxPartitionBytes to 512 MB, you influence the partitioning during the read phase, which can help in achieving the desired file sizes during the write operation. However, it's important to note that this approach may not guarantee exact file sizes, and some variability may occur. If achieving precise file sizes is critical and shuffling is permissible, Option D would be the preferred strategy.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "Given the requirement to avoid shuffling, Option A is the most suitable choice. By setting spark.sql.files.maxPartitionBytes to 512 MB, you influence the partitioning during the read phase, which can help in achieving the desired file sizes during the write operation. However, it's important to note that this approach may not guarantee exact file sizes, and some variability may occur. If achieving precise file sizes is critical and shuffling is permissible, Option D would be the preferred strategy.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "AlejandroU\n\t\t\t\n\n\n\t\t\t3\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Given the requirement to avoid shuffling, Option A is the most suitable choice. By setting spark.sql.files.maxPartitionBytes to 512 MB, you influence the partitioning during the read phase, which can help in achieving the desired file sizes during the write operation. However, it's important to note that this approach may not guarantee exact file sizes, and some variability may occur. If achieving precise file sizes is critical and shuffling is permissible, Option D would be the preferred strategy.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Given the requirement to avoid shuffling, Option A is the most suitable choice. By setting spark.sql.files.maxPartitionBytes to 512 MB, you influence the partitioning during the read phase, which can help in achieving the desired file sizes during the write operation. However, it's important to note that this approach may not guarantee exact file sizes, and some variability may occur. If achieving precise file sizes is critical and shuffling is permissible, Option D would be the preferred strategy.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months ago",
+      "content": "spark.sql.adaptive.advisoryPartitionSizeInBytes - \nThe advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.\nAnd then we do coalesce - without shuffle - so have to work!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months ago",
+      "content": "temple1305\n\t\t\t\n\n\n\t\t\t4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "spark.sql.adaptive.advisoryPartitionSizeInBytes - \nThe advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.\nAnd then we do coalesce - without shuffle - so have to work!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "spark.sql.adaptive.advisoryPartitionSizeInBytes - \nThe advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.\nAnd then we do coalesce - without shuffle - so have to work!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 2\u00a0weeks ago",
+      "content": "I though D, but default num of partitions is 200, so you cant do coalesce (2048) (you cant increase numb of partitions through coalesce), so its not possible to do it without repartitioning and shuffle. Only A can be done without Shuffle",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 2\u00a0weeks ago",
+      "content": "nedlo\n\t\t\t\n\n\n\t\t\t5\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I though D, but default num of partitions is 200, so you cant do coalesce (2048) (you cant increase numb of partitions through coalesce), so its not possible to do it without repartitioning and shuffle. Only A can be done without Shuffle",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I though D, but default num of partitions is 200, so you cant do coalesce (2048) (you cant increase numb of partitions through coalesce), so its not possible to do it without repartitioning and shuffle. Only A can be done without Shuffle",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "Option A\nspark.sql.files.maxPartitionBytes controls the maximum size of partitions during reading on the Spark cluster, and that reducing this value could lead to more partitions and thus potentially more output files. The key point is that it works best when no shuffles occur, which aligns with the scenario of having narrow transformations only.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "sdas1\n\t\t\t\n\n\n\t\t\t6\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "Option A\nspark.sql.files.maxPartitionBytes controls the maximum size of partitions during reading on the Spark cluster, and that reducing this value could lead to more partitions and thus potentially more output files. The key point is that it works best when no shuffles occur, which aligns with the scenario of having narrow transformations only.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A\nspark.sql.files.maxPartitionBytes controls the maximum size of partitions during reading on the Spark cluster, and that reducing this value could lead to more partitions and thus potentially more output files. The key point is that it works best when no shuffles occur, which aligns with the scenario of having narrow transformations only.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "Given that no shuffle occurs and you're aiming to control the file sizes during output, adjusting spark.sql.files.maxPartitionBytes could help indirectly by determining the partition size for reading. Since the number of input partitions can influence the size of the output files when no shuffle occurs, the partition size may closely match the size of the files being written out.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "Given that no shuffle occurs and you're aiming to control the file sizes during output, adjusting spark.sql.files.maxPartitionBytes could help indirectly by determining the partition size for reading. Since the number of input partitions can influence the size of the output files when no shuffle occurs, the partition size may closely match the size of the files being written out.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "sdas1\n\t\t\t\n\n\n\t\t\t6\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "Given that no shuffle occurs and you're aiming to control the file sizes during output, adjusting spark.sql.files.maxPartitionBytes could help indirectly by determining the partition size for reading. Since the number of input partitions can influence the size of the output files when no shuffle occurs, the partition size may closely match the size of the files being written out.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Given that no shuffle occurs and you're aiming to control the file sizes during output, adjusting spark.sql.files.maxPartitionBytes could help indirectly by determining the partition size for reading. Since the number of input partitions can influence the size of the output files when no shuffle occurs, the partition size may closely match the size of the files being written out.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "If the transformations remain narrow, then Spark won't repartition the data unless explicitly instructed to do so (e.g., through a repartition or coalesce operation). In this case, using spark.sql.files.maxPartitionBytes to adjust the read partition size to 512 MB could indirectly control the number of output files and ensure they align with the target file size.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "If the transformations remain narrow, then Spark won't repartition the data unless explicitly instructed to do so (e.g., through a repartition or coalesce operation). In this case, using spark.sql.files.maxPartitionBytes to adjust the read partition size to 512 MB could indirectly control the number of output files and ensure they align with the target file size.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "sdas1\n\t\t\t\n\n\n\t\t\t6\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "If the transformations remain narrow, then Spark won't repartition the data unless explicitly instructed to do so (e.g., through a repartition or coalesce operation). In this case, using spark.sql.files.maxPartitionBytes to adjust the read partition size to 512 MB could indirectly control the number of output files and ensure they align with the target file size.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If the transformations remain narrow, then Spark won't repartition the data unless explicitly instructed to do so (e.g., through a repartition or coalesce operation). In this case, using spark.sql.files.maxPartitionBytes to adjust the read partition size to 512 MB could indirectly control the number of output files and ensure they align with the target file size.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "Thus, Option A is also a valid strategy:\n\nSet spark.sql.files.maxPartitionBytes to 512 MB, process the data with narrow transformations, and write to Parquet.\nBy reducing the value of spark.sql.files.maxPartitionBytes, you ensure more partitions are created during the read phase, leading to output files closer to the desired size, assuming the transformations are narrow and no shuffling occurs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "Thus, Option A is also a valid strategy:\n\nSet spark.sql.files.maxPartitionBytes to 512 MB, process the data with narrow transformations, and write to Parquet.\nBy reducing the value of spark.sql.files.maxPartitionBytes, you ensure more partitions are created during the read phase, leading to output files closer to the desired size, assuming the transformations are narrow and no shuffling occurs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 3\u00a0weeks ago",
+      "content": "sdas1\n\t\t\t\n\n\n\t\t\t6\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Thus, Option A is also a valid strategy:\n\nSet spark.sql.files.maxPartitionBytes to 512 MB, process the data with narrow transformations, and write to Parquet.\nBy reducing the value of spark.sql.files.maxPartitionBytes, you ensure more partitions are created during the read phase, leading to output files closer to the desired size, assuming the transformations are narrow and no shuffling occurs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Thus, Option A is also a valid strategy:\n\nSet spark.sql.files.maxPartitionBytes to 512 MB, process the data with narrow transformations, and write to Parquet.\nBy reducing the value of spark.sql.files.maxPartitionBytes, you ensure more partitions are created during the read phase, leading to output files closer to the desired size, assuming the transformations are narrow and no shuffling occurs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "D is not correct as it will create 2048 target files of 0.5 MB each\nOnly A will do the job as it will read this file in 2  partition ( 1 TB = 512*2 MB) and as we are not doing any shuffling(not mentioned in option) it will create those many partition file i.e 2 part files",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "vikram12apr\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "D is not correct as it will create 2048 target files of 0.5 MB each\nOnly A will do the job as it will read this file in 2  partition ( 1 TB = 512*2 MB) and as we are not doing any shuffling(not mentioned in option) it will create those many partition file i.e 2 part files",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is not correct as it will create 2048 target files of 0.5 MB each\nOnly A will do the job as it will read this file in 2  partition ( 1 TB = 512*2 MB) and as we are not doing any shuffling(not mentioned in option) it will create those many partition file i.e 2 part files",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "hey, 1TB=1000GB=1^6MB.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "hey, 1TB=1000GB=1^6MB.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "hal2401me\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "hey, 1TB=1000GB=1^6MB.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "hey, 1TB=1000GB=1^6MB.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "ChatGPT says D: This strategy directly addresses the desired part-file size by repartitioning the data. It avoids shuffling during narrow transformations.\nRecommended for achieving the desired part-file size without unnecessary shuffling.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "hal2401me\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "ChatGPT says D: This strategy directly addresses the desired part-file size by repartitioning the data. It avoids shuffling during narrow transformations.\nRecommended for achieving the desired part-file size without unnecessary shuffling.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "ChatGPT says D: This strategy directly addresses the desired part-file size by repartitioning the data. It avoids shuffling during narrow transformations.\nRecommended for achieving the desired part-file size without unnecessary shuffling.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "D is mot suitable.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Curious76\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is mot suitable.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is mot suitable.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "This approach ensures that each partition will be approximately the target part-file size, which can improve the efficiency of the data write. It also avoids the need for a shuffle operation, which can be expensive in terms of performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "vctrhugo\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This approach ensures that each partition will be approximately the target part-file size, which can improve the efficiency of the data write. It also avoids the need for a shuffle operation, which can be expensive in terms of performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This approach ensures that each partition will be approximately the target part-file size, which can improve the efficiency of the data write. It also avoids the need for a shuffle operation, which can be expensive in terms of performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "\u0421 is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "adenis\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\u0421 is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\u0421 is correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Rest of the answers trigger shuffles",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "spaceexplorer\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Rest of the answers trigger shuffles",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Rest of the answers trigger shuffles",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "A is correct. \nThe question states Which strategy will yield the best performance without shuffling data.\nThe other options involve shuffling either manually or through AQE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "divingbell17\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is correct. \nThe question states Which strategy will yield the best performance without shuffling data.\nThe other options involve shuffling either manually or through AQE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is correct. \nThe question states Which strategy will yield the best performance without shuffling data.\nThe other options involve shuffling either manually or through AQE",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "C is correct answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "911land\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is correct answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is correct answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- spark.sql.files.maxPartitionBytes: 128MB (The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC.)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "alexvno\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- spark.sql.files.maxPartitionBytes: 128MB (The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC.)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- spark.sql.files.maxPartitionBytes: 128MB (The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC.)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "Here's a breakdown of the reasons:\n\nspark.sql.adaptive.advisoryPartitionSizeInBytes: This configuration parameter is designed to provide advisory partition sizes for the adaptive query execution framework. It can help in controlling the partition sizes without triggering unnecessary shuffling.\n\ncoalesce(2048): Coalescing to a specific number of partitions after the narrow transformations allows you to control the number of output files without triggering a shuffle. This helps achieve the target part-file size without incurring the overhead of a full shuffle.\n\nSetting a specific target: The strategy outlines the goal of achieving a target part-file size of 512 MB, which aligns with the requirement.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "petrv\n\t\t\t\n\n\n\t\t\t1\u00a0year, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Here's a breakdown of the reasons:\n\nspark.sql.adaptive.advisoryPartitionSizeInBytes: This configuration parameter is designed to provide advisory partition sizes for the adaptive query execution framework. It can help in controlling the partition sizes without triggering unnecessary shuffling.\n\ncoalesce(2048): Coalescing to a specific number of partitions after the narrow transformations allows you to control the number of output files without triggering a shuffle. This helps achieve the target part-file size without incurring the overhead of a full shuffle.\n\nSetting a specific target: The strategy outlines the goal of achieving a target part-file size of 512 MB, which aligns with the requirement.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Here's a breakdown of the reasons:\n\nspark.sql.adaptive.advisoryPartitionSizeInBytes: This configuration parameter is designed to provide advisory partition sizes for the adaptive query execution framework. It can help in controlling the partition sizes without triggering unnecessary shuffling.\n\ncoalesce(2048): Coalescing to a specific number of partitions after the narrow transformations allows you to control the number of output files without triggering a shuffle. This helps achieve the target part-file size without incurring the overhead of a full shuffle.\n\nSetting a specific target: The strategy outlines the goal of achieving a target part-file size of 512 MB, which aligns with the requirement.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "obviously D. It allows you to control both the number of partitions and the final part-file size, which aligns with the requirements. Option B shuffles partitions, which is not allowed.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "ocaj90\n\t\t\t\n\n\n\t\t\t1\u00a0year, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "obviously D. It allows you to control both the number of partitions and the final part-file size, which aligns with the requirements. Option B shuffles partitions, which is not allowed.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "obviously D. It allows you to control both the number of partitions and the final part-file size, which aligns with the requirements. Option B shuffles partitions, which is not allowed.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

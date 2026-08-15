@@ -1,0 +1,1112 @@
+================================================================================
+QUESTION:
+You need to choose a database to store time series CPU and memory usage for millions of computers. You need to store this data in one-second interval samples. Analysts will be performing real-time, ad hoc analytics against the database. You want to avoid being charged for every query executed and ensure that the schema design will allow for future growth of the dataset. Which database and data model should you choose?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a table in BigQuery, and append the new samples for CPU and memory to the table
+										
+
+
+													B.
+												
+											
+											Create a wide table in BigQuery, create a column for the sample value at each second, and update the row with the interval for each second
+										
+
+
+													C.
+												
+											
+											Create a narrow table in Bigtable with a row key that combines the Computer Engine computer identifier with the sample time at each second
+										
+
+
+													D.
+												
+											
+											Create a wide table in Bigtable with a row key that combines the computer identifier with the sample time at each minute, and combine the values for each second as column data.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (183 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 161 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 161
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You need to choose a database to store time series CPU and memory usage for millions of computers. You need to store this data in one-second interval samples. Analysts will be performing real-time, ad hoc analytics against the database. You want to avoid being charged for every query executed and ensure that the schema design will allow for future growth of the dataset. Which database and data model should you choose?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a table in BigQuery, and append the new samples for CPU and memory to the table
+										
+
+
+													B.
+												
+											
+											Create a wide table in BigQuery, create a column for the sample value at each second, and update the row with the interval for each second
+										
+
+
+													C.
+												
+											
+											Create a narrow table in Bigtable with a row key that combines the Computer Engine computer identifier with the sample time at each second
+										
+
+
+													D.
+												
+											
+											Create a wide table in Bigtable with a row key that combines the computer identifier with the sample time at each minute, and combine the values for each second as column data.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								madhu1171
+							
+							
+							at 
+							March 15, 2020, 7:41 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 161
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								madhu1171
+							
+							
+							at 
+							March 15, 2020, 7:41 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+Answer C
+
+A tall and narrow table has a small number of events per row, which could be just one event, whereas a short and wide table has a large number of events per row. As explained in a moment, tall and narrow tables are best suited for time-series data.
+
+For time series, you should generally use tall and narrow tables. This is for two reasons: Storing one event per row makes it easier to run queries against your data. Storing many events per row makes it more likely that the total row size will exceed the recommended maximum (see Rows can be big but are not infinite).
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series#patterns_for_row_key_design
+
+--- Comment #6 ---
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+Answer C
+
+A tall and narrow table has a small number of events per row, which could be just one event, whereas a short and wide table has a large number of events per row. As explained in a moment, tall and narrow tables are best suited for time-series data.
+
+For time series, you should generally use tall and narrow tables. This is for two reasons: Storing one event per row makes it easier to run queries against your data. Storing many events per row makes it more likely that the total row size will exceed the recommended maximum (see Rows can be big but are not infinite).
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series#patterns_for_row_key_design
+
+--- Comment #7 ---
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+Answer C
+
+A tall and narrow table has a small number of events per row, which could be just one event, whereas a short and wide table has a large number of events per row. As explained in a moment, tall and narrow tables are best suited for time-series data.
+
+For time series, you should generally use tall and narrow tables. This is for two reasons: Storing one event per row makes it easier to run queries against your data. Storing many events per row makes it more likely that the total row size will exceed the recommended maximum (see Rows can be big but are not infinite).
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series#patterns_for_row_key_design
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+Answer C
+
+A tall and narrow table has a small number of events per row, which could be just one event, whereas a short and wide table has a large number of events per row. As explained in a moment, tall and narrow tables are best suited for time-series data.
+
+For time series, you should generally use tall and narrow tables. This is for two reasons: Storing one event per row makes it easier to run queries against your data. Storing many events per row makes it more likely that the total row size will exceed the recommended maximum (see Rows can be big but are not infinite).
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series#patterns_for_row_key_design
+
+--- Comment #13 ---
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+Answer C
+
+A tall and narrow table has a small number of events per row, which could be just one event, whereas a short and wide table has a large number of events per row. As explained in a moment, tall and narrow tables are best suited for time-series data.
+
+For time series, you should generally use tall and narrow tables. This is for two reasons: Storing one event per row makes it easier to run queries against your data. Storing many events per row makes it more likely that the total row size will exceed the recommended maximum (see Rows can be big but are not infinite).
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series#patterns_for_row_key_design
+
+--- Comment #14 ---
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+psu
+			
+
+
+				Highly Voted 
+
+
+			4 years, 11 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Answer C
+
+A tall and narrow table has a small number of events per row, which could be just one event, whereas a short and wide table has a large number of events per row. As explained in a moment, tall and narrow tables are best suited for time-series data.
+
+For time series, you should generally use tall and narrow tables. This is for two reasons: Storing one event per row makes it easier to run queries against your data. Storing many events per row makes it more likely that the total row size will exceed the recommended maximum (see Rows can be big but are not infinite).
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series#patterns_for_row_key_design
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Answer C
+
+A tall and narrow table has a small number of events per row, which could be just one event, whereas a short and wide table has a large number of events per row. As explained in a moment, tall and narrow tables are best suited for time-series data.
+
+For time series, you should generally use tall and narrow tables. This is for two reasons: Storing one event per row makes it easier to run queries against your data. Storing many events per row makes it more likely that the total row size will exceed the recommended maximum (see Rows can be big but are not infinite).
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series#patterns_for_row_key_design
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 35 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+C. Create a narrow table in Bigtable with a row key that combines the Computer Engine computer identifier with the sample time at each second
+
+--- Comment #20 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+C. Create a narrow table in Bigtable with a row key that combines the Computer Engine computer identifier with the sample time at each second
+
+--- Comment #21 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+AzureDP900
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #22 ---
+Author: Unknown | Date:  | Votes: 0
+C. Create a narrow table in Bigtable with a row key that combines the Computer Engine computer identifier with the sample time at each second
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+C. Create a narrow table in Bigtable with a row key that combines the Computer Engine computer identifier with the sample time at each second
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #28 ---
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+there is a limit of 60 columns per row according to question. in addition in D the cost will be a lower which is a requirement. so D seems more suitable.
+
+--- Comment #29 ---
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+nadavw
+			
+
+
+			2 years, 10 months ago
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+there is a limit of 60 columns per row according to question. in addition in D the cost will be a lower which is a requirement. so D seems more suitable.
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+there is a limit of 60 columns per row according to question. in addition in D the cost will be a lower which is a requirement. so D seems more suitable.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+C correct answer
+
+--- Comment #38 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+madhu1171
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+C correct answer
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+C correct answer
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 19 times
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #45 ---
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+Even though I am sure the answer is C, but I am not sure why it will help avoid being charged for every query?
+
+--- Comment #46 ---
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+shangning007
+			
+
+
+				Most Recent 
+
+
+			3 months, 3 weeks ago
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+Even though I am sure the answer is C, but I am not sure why it will help avoid being charged for every query?
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+Even though I am sure the answer is C, but I am not sure why it will help avoid being charged for every query?
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #54 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+just like psu said. Additionally for a time-series data, it it usually the best practice to combine the identifier + time, not the values.
+
+--- Comment #55 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+SamuelTsch
+			
+
+
+			5 months, 2 weeks ago
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+just like psu said. Additionally for a time-series data, it it usually the best practice to combine the identifier + time, not the values.
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+just like psu said. Additionally for a time-series data, it it usually the best practice to combine the identifier + time, not the values.
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #63 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Option C is correct answer. Narrow table is good for time series data.
+
+--- Comment #64 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+mothkuri
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+Option C is correct answer. Narrow table is good for time series data.
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+Option C is correct answer. Narrow table is good for time series data.
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+Scalability: Bigtable can handle large-scale data efficiently, making it suitable for storing time series data for millions of computers.
+
+Low Latency: Bigtable provides low-latency access to data, which is crucial for real-time analytics.
+
+Flexible Schema: The narrow table design allows you to efficiently store and query time series data without specifying all possible columns in advance, providing flexibility for future growth.
+
+Column Families: Bigtable supports column families, allowing you to organize data logically.
+
+Row Key Design: Combining the computer identifier with the sample time at each second in the row key allows for efficient retrieval of data for specific computers and time intervals.
+
+Analytics: While Bigtable does not support SQL directly, it allows for efficient data retrieval and can be integrated with other tools for analytics.
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+barnac1es
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+Scalability: Bigtable can handle large-scale data efficiently, making it suitable for storing time series data for millions of computers.
+
+Low Latency: Bigtable provides low-latency access to data, which is crucial for real-time analytics.
+
+Flexible Schema: The narrow table design allows you to efficiently store and query time series data without specifying all possible columns in advance, providing flexibility for future growth.
+
+Column Families: Bigtable supports column families, allowing you to organize data logically.
+
+Row Key Design: Combining the computer identifier with the sample time at each second in the row key allows for efficient retrieval of data for specific computers and time intervals.
+
+Analytics: While Bigtable does not support SQL directly, it allows for efficient data retrieval and can be integrated with other tools for analytics.
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+Scalability: Bigtable can handle large-scale data efficiently, making it suitable for storing time series data for millions of computers.
+
+Low Latency: Bigtable provides low-latency access to data, which is crucial for real-time analytics.
+
+Flexible Schema: The narrow table design allows you to efficiently store and query time series data without specifying all possible columns in advance, providing flexibility for future growth.
+
+Column Families: Bigtable supports column families, allowing you to organize data logically.
+
+Row Key Design: Combining the computer identifier with the sample time at each second in the row key allows for efficient retrieval of data for specific computers and time intervals.
+
+Analytics: While Bigtable does not support SQL directly, it allows for efficient data retrieval and can be integrated with other tools for analytics.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #81 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+"..and ensure that the schema design will allow for future growth of the dataset":
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series#time-buckets
+
+"Data stored in this way is compressed more efficiently than data in tall, narrow tables."
+
+I read the "future growth" as a sign to be effective in storage, and go for the Time-Buckets.
+
+--- Comment #82 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+WillemHendr
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+"..and ensure that the schema design will allow for future growth of the dataset":
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series#time-buckets
+
+"Data stored in this way is compressed more efficiently than data in tall, narrow tables."
+
+I read the "future growth" as a sign to be effective in storage, and go for the Time-Buckets.
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+"..and ensure that the schema design will allow for future growth of the dataset":
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series#time-buckets
+
+"Data stored in this way is compressed more efficiently than data in tall, narrow tables."
+
+I read the "future growth" as a sign to be effective in storage, and go for the Time-Buckets.
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #90 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+C is the answer.
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series
+
+--- Comment #91 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+zellck
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+C is the answer.
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+C is the answer.
+
+https://cloud.google.com/bigtable/docs/schema-design-time-series
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #99 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+time series = narrow table
+
+--- Comment #100 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Remi2021
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+time series = narrow table
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+time series = narrow table
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #108 ---
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+What about "avoid being charged for every query executed"? Nothing on this topic in here https://cloud.google.com/bigtable/docs/schema-design-time-series   can anyone comment?
+
+--- Comment #109 ---
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+_8008_
+			
+
+
+			2 years, 11 months ago
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+What about "avoid being charged for every query executed"? Nothing on this topic in here https://cloud.google.com/bigtable/docs/schema-design-time-series   can anyone comment?
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+What about "avoid being charged for every query executed"? Nothing on this topic in here https://cloud.google.com/bigtable/docs/schema-design-time-series   can anyone comment?
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #116 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Narrow and tall table for a single event and good for time-series data
+Short and Wide table for data over a month, multiple events
+
+--- Comment #117 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+medeis_jar
+			
+
+
+			3 years, 3 months ago
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+Narrow and tall table for a single event and good for time-series data
+Short and Wide table for data over a month, multiple events
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+Narrow and tall table for a single event and good for time-series data
+Short and Wide table for data over a month, multiple events
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #125 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+Correct: C
+
+--- Comment #126 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+JG123
+			
+
+
+			3 years, 4 months ago
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+Correct: C
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+Correct: C
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #133 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+Answer is C.
+Bigtable is best suited to the following scenarios: time-series data (e.g. CPU and memory usage over time for multiple servers), financial data (e.g. transaction histories, stock prices, and currency exchange rates), and IoT (Internet of Things) use cases.
+https://www.xplenty.com/blog/bigtable-vs-bigquery/
+
+--- Comment #134 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+squishy_fishy
+			
+
+
+			3 years, 5 months ago
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is C.
+Bigtable is best suited to the following scenarios: time-series data (e.g. CPU and memory usage over time for multiple servers), financial data (e.g. transaction histories, stock prices, and currency exchange rates), and IoT (Internet of Things) use cases.
+https://www.xplenty.com/blog/bigtable-vs-bigquery/
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is C.
+Bigtable is best suited to the following scenarios: time-series data (e.g. CPU and memory usage over time for multiple servers), financial data (e.g. transaction histories, stock prices, and currency exchange rates), and IoT (Internet of Things) use cases.
+https://www.xplenty.com/blog/bigtable-vs-bigquery/
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #141 ---
+Author: Unknown | Date: 3 years, 8 months ago | Votes: 0
+C is the correct answer. If you consider wide table, then 60 columns for cpu usage and 60 columns for memory usage. in future, if you need to add a new kpi to the table, then the schema changes. you will have to add 60 more columns for the new feature. this is not so future proof.. so D is out of the picture.
+
+--- Comment #142 ---
+Author: Unknown | Date: 3 years, 8 months ago | Votes: 0
+safiyu
+			
+
+
+			3 years, 8 months ago
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+C is the correct answer. If you consider wide table, then 60 columns for cpu usage and 60 columns for memory usage. in future, if you need to add a new kpi to the table, then the schema changes. you will have to add 60 more columns for the new feature. this is not so future proof.. so D is out of the picture.
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+C is the correct answer. If you consider wide table, then 60 columns for cpu usage and 60 columns for memory usage. in future, if you need to add a new kpi to the table, then the schema changes. you will have to add 60 more columns for the new feature. this is not so future proof.. so D is out of the picture.
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #149 ---
+Author: Unknown | Date: 3 years, 8 months ago | Votes: 0
+BQ is optimized for large-scale, ad-hoc SQL-based analysis. i Think it should be A
+
+--- Comment #150 ---
+Author: Unknown | Date: 3 years, 8 months ago | Votes: 0
+DeepakS227
+			
+
+
+			3 years, 8 months ago
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+BQ is optimized for large-scale, ad-hoc SQL-based analysis. i Think it should be A
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+BQ is optimized for large-scale, ad-hoc SQL-based analysis. i Think it should be A
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #157 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+First C & D won't cause hotspoting as computer_identifier is first part of row key
+I prefer D because "ensure that the schema design will allow for future growth of the dataset."
+C is too tall and narrow I cannot see schema design grow in the future
+
+--- Comment #158 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+koupayio
+			
+
+
+			3 years, 10 months ago
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+First C & D won't cause hotspoting as computer_identifier is first part of row key
+I prefer D because "ensure that the schema design will allow for future growth of the dataset."
+C is too tall and narrow I cannot see schema design grow in the future
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+First C & D won't cause hotspoting as computer_identifier is first part of row key
+I prefer D because "ensure that the schema design will allow for future growth of the dataset."
+C is too tall and narrow I cannot see schema design grow in the future
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #165 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+D, Better overall, harder to implement (but that is not stated as a constraint)
+https://cloud.google.com/bigtable/docs/schema-design-time-series#time-buckets
+
+--- Comment #166 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+crslake
+			
+
+
+			3 years, 10 months ago
+
+--- Comment #167 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+D, Better overall, harder to implement (but that is not stated as a constraint)
+https://cloud.google.com/bigtable/docs/schema-design-time-series#time-buckets
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+D, Better overall, harder to implement (but that is not stated as a constraint)
+https://cloud.google.com/bigtable/docs/schema-design-time-series#time-buckets
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #171 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+How do you store both CPU and memory usage though? Two sets of 60 columns per row? I am wondering if that goes along with "the schema design will allow for future growth"...what if by future growth they mean monitoring N more metrics. That would imply N*60 columns, right?
+
+--- Comment #172 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+How do you store both CPU and memory usage though? Two sets of 60 columns per row? I am wondering if that goes along with "the schema design will allow for future growth"...what if by future growth they mean monitoring N more metrics. That would imply N*60 columns, right?
+
+--- Comment #173 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+lollo1234
+			
+
+
+			3 years, 10 months ago
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+How do you store both CPU and memory usage though? Two sets of 60 columns per row? I am wondering if that goes along with "the schema design will allow for future growth"...what if by future growth they mean monitoring N more metrics. That would imply N*60 columns, right?
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+How do you store both CPU and memory usage though? Two sets of 60 columns per row? I am wondering if that goes along with "the schema design will allow for future growth"...what if by future growth they mean monitoring N more metrics. That would imply N*60 columns, right?
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #180 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

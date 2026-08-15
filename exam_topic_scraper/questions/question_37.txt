@@ -1,0 +1,1208 @@
+================================================================================
+QUESTION:
+Flowlogistic Case Study -Company Overview -Flowlogistic is a leading logistics and supply chain provider. They help businesses throughout the world manage their resources and transport them to their final destination. The company has grown rapidly, expanding their offerings to include rail, truck, aircraft, and oceanic shipping.Company Background -The company started as a regional trucking company, and then expanded into other logistics market. Because they have not updated their infrastructure, managing and tracking orders and shipments has become a bottleneck. To improve operations, Flowlogistic developed proprietary technology for tracking shipments in real time at the parcel level. However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume. In addition, Flowlogistic wants to further analyze their orders and shipments to determine how best to deploy their resources.Solution Concept -Flowlogistic wants to implement two concepts using the cloud:✑ Use their proprietary technology in a real-time inventory-tracking system that indicates the location of their loads✑ Perform analytics on all their orders and shipment logs, which contain both structured and unstructured data, to determine how best to deploy resources, which markets to expand info. They also want to use predictive analytics to learn earlier when a shipment will be delayed.Existing Technical Environment -Flowlogistic architecture resides in a single data center:✑ Databases8 physical servers in 2 clusters- SQL Server `" user data, inventory, static data3 physical servers- Cassandra `" metadata, tracking messages10 Kafka servers `" tracking message aggregation and batch insert✑ Application servers `" customer front end, middleware for order/customs60 virtual machines across 20 physical servers- Tomcat `" Java services- Nginx `" static content- Batch servers✑ Storage appliances- iSCSI for virtual machine (VM) hosts- Fibre Channel storage area network (FC SAN) `" SQL server storage- Network-attached storage (NAS) image storage, logs, backups✑ 10 Apache Hadoop /Spark servers- Core Data Lake- Data analysis workloads✑ 20 miscellaneous servers- Jenkins, monitoring, bastion hosts,Business Requirements -✑ Build a reliable and reproducible environment with scaled panty of production.✑ Aggregate data in a centralized Data Lake for analysis✑ Use historical data to perform predictive analytics on future shipments✑ Accurately track every shipment worldwide using proprietary technology✑ Improve business agility and speed of innovation through rapid provisioning of new resources✑ Analyze and optimize architecture for performance in the cloud✑ Migrate fully to the cloud if all other requirements are metTechnical Requirements -✑ Handle both streaming and batch data✑ Migrate existing Hadoop workloads✑ Ensure architecture is scalable and elastic to meet the changing demands of the company.✑ Use managed services whenever possible✑ Encrypt data flight and at rest✑ Connect a VPN between the production data center and cloud environmentSEO Statement -We have grown so quickly that our inability to upgrade our infrastructure is really hampering further growth and efficiency. We are efficient at moving shipments around the world, but we are inefficient at moving data around.We need to organize our information so we can more easily understand where our customers are and what they are shipping.CTO Statement -IT has never been a priority for us, so as our data has grown, we have not invested enough in our technology. I have a good staff to manage IT, but they are so busy managing our infrastructure that I cannot get them to do the things that really matter, such as organizing our data, building the analytics, and figuring out how to implement the CFO' s tracking technology.CFO Statement -Part of our competitive advantage is that we penalize ourselves for late shipments and deliveries. Knowing where out shipments are at all times has a direct correlation to our bottom line and profitability. Additionally, I don't want to commit capital to building out a server environment.Flowlogistic is rolling out their real-time inventory tracking system. The tracking devices will all send package-tracking messages, which will now go to a singleGoogle Cloud Pub/Sub topic instead of the Apache Kafka cluster. A subscriber application will then process the messages for real-time reporting and store them inGoogle BigQuery for historical analysis. You want to ensure the package data can be analyzed over time.Which approach should you take?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Attach the timestamp on each message in the Cloud Pub/Sub subscriber application as they are received.
+										
+
+
+													B.
+												
+											
+											Attach the timestamp and Package ID on the outbound message from each publisher device as they are sent to Clod Pub/Sub.
+										
+
+
+													C.
+												
+											
+											Use the NOW () function in BigQuery to record the event's time.
+										
+
+
+													D.
+												
+											
+											Use the automatically generated timestamp from Cloud Pub/Sub to order the data.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (198 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 37 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 37
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Flowlogistic Case Study -Company Overview -Flowlogistic is a leading logistics and supply chain provider. They help businesses throughout the world manage their resources and transport them to their final destination. The company has grown rapidly, expanding their offerings to include rail, truck, aircraft, and oceanic shipping.Company Background -The company started as a regional trucking company, and then expanded into other logistics market. Because they have not updated their infrastructure, managing and tracking orders and shipments has become a bottleneck. To improve operations, Flowlogistic developed proprietary technology for tracking shipments in real time at the parcel level. However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume. In addition, Flowlogistic wants to further analyze their orders and shipments to determine how best to deploy their resources.Solution Concept -Flowlogistic wants to implement two concepts using the cloud:✑ Use their proprietary technology in a real-time inventory-tracking system that indicates the location of their loads✑ Perform analytics on all their orders and shipment logs, which contain both structured and unstructured data, to determine how best to deploy resources, which markets to expand info. They also want to use predictive analytics to learn earlier when a shipment will be delayed.Existing Technical Environment -Flowlogistic architecture resides in a single data center:✑ Databases8 physical servers in 2 clusters- SQL Server `" user data, inventory, static data3 physical servers- Cassandra `" metadata, tracking messages10 Kafka servers `" tracking message aggregation and batch insert✑ Application servers `" customer front end, middleware for order/customs60 virtual machines across 20 physical servers- Tomcat `" Java services- Nginx `" static content- Batch servers✑ Storage appliances- iSCSI for virtual machine (VM) hosts- Fibre Channel storage area network (FC SAN) `" SQL server storage- Network-attached storage (NAS) image storage, logs, backups✑ 10 Apache Hadoop /Spark servers- Core Data Lake- Data analysis workloads✑ 20 miscellaneous servers- Jenkins, monitoring, bastion hosts,Business Requirements -✑ Build a reliable and reproducible environment with scaled panty of production.✑ Aggregate data in a centralized Data Lake for analysis✑ Use historical data to perform predictive analytics on future shipments✑ Accurately track every shipment worldwide using proprietary technology✑ Improve business agility and speed of innovation through rapid provisioning of new resources✑ Analyze and optimize architecture for performance in the cloud✑ Migrate fully to the cloud if all other requirements are metTechnical Requirements -✑ Handle both streaming and batch data✑ Migrate existing Hadoop workloads✑ Ensure architecture is scalable and elastic to meet the changing demands of the company.✑ Use managed services whenever possible✑ Encrypt data flight and at rest✑ Connect a VPN between the production data center and cloud environmentSEO Statement -We have grown so quickly that our inability to upgrade our infrastructure is really hampering further growth and efficiency. We are efficient at moving shipments around the world, but we are inefficient at moving data around.We need to organize our information so we can more easily understand where our customers are and what they are shipping.CTO Statement -IT has never been a priority for us, so as our data has grown, we have not invested enough in our technology. I have a good staff to manage IT, but they are so busy managing our infrastructure that I cannot get them to do the things that really matter, such as organizing our data, building the analytics, and figuring out how to implement the CFO' s tracking technology.CFO Statement -Part of our competitive advantage is that we penalize ourselves for late shipments and deliveries. Knowing where out shipments are at all times has a direct correlation to our bottom line and profitability. Additionally, I don't want to commit capital to building out a server environment.Flowlogistic is rolling out their real-time inventory tracking system. The tracking devices will all send package-tracking messages, which will now go to a singleGoogle Cloud Pub/Sub topic instead of the Apache Kafka cluster. A subscriber application will then process the messages for real-time reporting and store them inGoogle BigQuery for historical analysis. You want to ensure the package data can be analyzed over time.Which approach should you take?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Attach the timestamp on each message in the Cloud Pub/Sub subscriber application as they are received.
+										
+
+
+													B.
+												
+											
+											Attach the timestamp and Package ID on the outbound message from each publisher device as they are sent to Clod Pub/Sub.
+										
+
+
+													C.
+												
+											
+											Use the NOW () function in BigQuery to record the event's time.
+										
+
+
+													D.
+												
+											
+											Use the automatically generated timestamp from Cloud Pub/Sub to order the data.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 20, 2020, 4:42 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 37
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 20, 2020, 4:42 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 2 years, 12 months ago | Votes: 0
+"However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume."  
+
+Sure man, Kafka is not performing, let's use PubSub instead hahaha...
+
+--- Comment #6 ---
+Author: Unknown | Date: 2 years, 12 months ago | Votes: 0
+"However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume."  
+
+Sure man, Kafka is not performing, let's use PubSub instead hahaha...
+
+--- Comment #7 ---
+Author: Unknown | Date: 2 years, 12 months ago | Votes: 0
+"However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume."  
+
+Sure man, Kafka is not performing, let's use PubSub instead hahaha...
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 2 years, 12 months ago | Votes: 0
+"However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume."  
+
+Sure man, Kafka is not performing, let's use PubSub instead hahaha...
+
+--- Comment #13 ---
+Author: Unknown | Date: 2 years, 12 months ago | Votes: 0
+"However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume."  
+
+Sure man, Kafka is not performing, let's use PubSub instead hahaha...
+
+--- Comment #14 ---
+Author: Unknown | Date: 2 years, 12 months ago | Votes: 0
+Manue
+			
+
+
+				Highly Voted 
+
+
+			2 years, 12 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+"However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume."  
+
+Sure man, Kafka is not performing, let's use PubSub instead hahaha...
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+"However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume."  
+
+Sure man, Kafka is not performing, let's use PubSub instead hahaha...
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 37 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+google send via pub sub web indexes
+twice a day a whole internet is being sent via pub sub
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+google send via pub sub web indexes
+twice a day a whole internet is being sent via pub sub
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+sfsdeniso
+			
+
+
+			1 year, 4 months ago
+
+--- Comment #22 ---
+Author: Unknown | Date:  | Votes: 0
+google send via pub sub web indexes
+twice a day a whole internet is being sent via pub sub
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+google send via pub sub web indexes
+twice a day a whole internet is being sent via pub sub
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #28 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+lol this is a vendor exam...
+
+--- Comment #29 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+ralf_cc
+			
+
+
+			2 years, 9 months ago
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+lol this is a vendor exam...
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+lol this is a vendor exam...
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: B
+
+--- Comment #38 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			4 years ago
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 23 times
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #45 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+B. Attach the timestamp and Package ID on the outbound message from each publisher device as they are sent to Cloud Pub/Sub.
+
+Here's why this approach is the most suitable:
+
+By attaching a timestamp and Package ID at the point of origin (publisher device), you ensure that each message has a clear and consistent timestamp associated with it from the moment it is generated. This provides a reliable and accurate record of when each package-tracking message was created, which is crucial for analyzing the data over time.
+
+This approach allows you to maintain the chronological order of events as they occurred at the source, which is important for real-time reporting and historical analysis.
+
+Option A suggests attaching the timestamp in the Cloud Pub/Sub subscriber application. While this can work, it introduces a potential delay and the risk of timestamps not being accurate if there are issues with message processing.
+
+Option C, using the NOW() function in BigQuery, records the time when the data is ingested into BigQuery, which may not reflect the actual time of the event.
+
+--- Comment #46 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+rtcpost
+			
+
+
+				Most Recent 
+
+
+			5 months, 2 weeks ago
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+B. Attach the timestamp and Package ID on the outbound message from each publisher device as they are sent to Cloud Pub/Sub.
+
+Here's why this approach is the most suitable:
+
+By attaching a timestamp and Package ID at the point of origin (publisher device), you ensure that each message has a clear and consistent timestamp associated with it from the moment it is generated. This provides a reliable and accurate record of when each package-tracking message was created, which is crucial for analyzing the data over time.
+
+This approach allows you to maintain the chronological order of events as they occurred at the source, which is important for real-time reporting and historical analysis.
+
+Option A suggests attaching the timestamp in the Cloud Pub/Sub subscriber application. While this can work, it introduces a potential delay and the risk of timestamps not being accurate if there are issues with message processing.
+
+Option C, using the NOW() function in BigQuery, records the time when the data is ingested into BigQuery, which may not reflect the actual time of the event.
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+B. Attach the timestamp and Package ID on the outbound message from each publisher device as they are sent to Cloud Pub/Sub.
+
+Here's why this approach is the most suitable:
+
+By attaching a timestamp and Package ID at the point of origin (publisher device), you ensure that each message has a clear and consistent timestamp associated with it from the moment it is generated. This provides a reliable and accurate record of when each package-tracking message was created, which is crucial for analyzing the data over time.
+
+This approach allows you to maintain the chronological order of events as they occurred at the source, which is important for real-time reporting and historical analysis.
+
+Option A suggests attaching the timestamp in the Cloud Pub/Sub subscriber application. While this can work, it introduces a potential delay and the risk of timestamps not being accurate if there are issues with message processing.
+
+Option C, using the NOW() function in BigQuery, records the time when the data is ingested into BigQuery, which may not reflect the actual time of the event.
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #54 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Answer is B, attach the timestamp and ID is necessary to analyze data easily.
+
+--- Comment #55 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+JJJJim
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is B, attach the timestamp and ID is necessary to analyze data easily.
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is B, attach the timestamp and ID is necessary to analyze data easily.
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #63 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Answer: B
+
+--- Comment #64 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+nidmed
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+we need package ID + Timestamp so B
+
+--- Comment #73 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Arkon88
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+we need package ID + Timestamp so B
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+we need package ID + Timestamp so B
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #81 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+Answer: B
+
+--- Comment #82 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+davidqianwen
+			
+
+
+			2 years, 2 months ago
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #90 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+agree with humza
+
+--- Comment #91 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+exnaniantwort
+			
+
+
+			2 years, 2 months ago
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+agree with humza
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+agree with humza
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #99 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+https://cloud.google.com/pubsub/docs/reference/rest/v1/PubsubMessage
+
+--- Comment #100 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+sraakesh95
+			
+
+
+			2 years, 2 months ago
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/pubsub/docs/reference/rest/v1/PubsubMessage
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/pubsub/docs/reference/rest/v1/PubsubMessage
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #108 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+D is enough.. we have publish timestamp which is enough for this requirement
+
+--- Comment #109 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+[Removed]
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #110 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+D is enough.. we have publish timestamp which is enough for this requirement
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+D is enough.. we have publish timestamp which is enough for this requirement
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #114 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+there are 2 requirements
+1- is about ordering due to historical data analysis 
+2- what it means  to write a single topic and its impact.. why some sentence added here.
+
+1st is primary, 2nd is secondary req. in this context.
+
+So, 
+- in pub/sub, processTime is filled by server, not publisher. but that does not guarantee the ordering due to latency, pub/sub handling, sensors or any other reasons..
+- you need to populate orderingKey field too, so that subscribers can get in ordered.
+
+--- Comment #115 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+there are 2 requirements
+1- is about ordering due to historical data analysis 
+2- what it means  to write a single topic and its impact.. why some sentence added here.
+
+1st is primary, 2nd is secondary req. in this context.
+
+So, 
+- in pub/sub, processTime is filled by server, not publisher. but that does not guarantee the ordering due to latency, pub/sub handling, sensors or any other reasons..
+- you need to populate orderingKey field too, so that subscribers can get in ordered.
+
+--- Comment #116 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+Tanzu
+			
+
+
+			2 years, 2 months ago
+
+--- Comment #117 ---
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+there are 2 requirements
+1- is about ordering due to historical data analysis 
+2- what it means  to write a single topic and its impact.. why some sentence added here.
+
+1st is primary, 2nd is secondary req. in this context.
+
+So, 
+- in pub/sub, processTime is filled by server, not publisher. but that does not guarantee the ordering due to latency, pub/sub handling, sensors or any other reasons..
+- you need to populate orderingKey field too, so that subscribers can get in ordered.
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+there are 2 requirements
+1- is about ordering due to historical data analysis 
+2- what it means  to write a single topic and its impact.. why some sentence added here.
+
+1st is primary, 2nd is secondary req. in this context.
+
+So, 
+- in pub/sub, processTime is filled by server, not publisher. but that does not guarantee the ordering due to latency, pub/sub handling, sensors or any other reasons..
+- you need to populate orderingKey field too, so that subscribers can get in ordered.
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #121 ---
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+Also, since this is a International company, adding timestamp on message receiving would  help catch local time.
+
+--- Comment #122 ---
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+Also, since this is a International company, adding timestamp on message receiving would  help catch local time.
+
+--- Comment #123 ---
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+Pinko1497
+			
+
+
+			1 year, 12 months ago
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+Also, since this is a International company, adding timestamp on message receiving would  help catch local time.
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+Also, since this is a International company, adding timestamp on message receiving would  help catch local time.
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #132 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+It is about processing time and event time.. Answer is B.
+
+--- Comment #133 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Chelseajcole
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #134 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+It is about processing time and event time.. Answer is B.
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+It is about processing time and event time.. Answer is B.
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+not just timing, but also package-id .. cause they are sending 1 topic in gcp instead of to many in kafka. that means there must be added some additional critical data too.
+
+--- Comment #139 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+not just timing, but also package-id .. cause they are sending 1 topic in gcp instead of to many in kafka. that means there must be added some additional critical data too.
+
+--- Comment #140 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+Tanzu
+			
+
+
+			2 years, 2 months ago
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+not just timing, but also package-id .. cause they are sending 1 topic in gcp instead of to many in kafka. that means there must be added some additional critical data too.
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+not just timing, but also package-id .. cause they are sending 1 topic in gcp instead of to many in kafka. that means there must be added some additional critical data too.
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #148 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Ans: B
+A: Adding timestamp as they received is not a better option, messages may not arrive in order at the receiver/ subscriber, could be due to connectivity or network.
+B: Timestamp should be added here.
+C: Doesn't make sense at all.
+D: Ordering should be based on the order how messages are generated at the publisher but not as per order they reach the pub/sub.
+
+--- Comment #149 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+anji007
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+Ans: B
+A: Adding timestamp as they received is not a better option, messages may not arrive in order at the receiver/ subscriber, could be due to connectivity or network.
+B: Timestamp should be added here.
+C: Doesn't make sense at all.
+D: Ordering should be based on the order how messages are generated at the publisher but not as per order they reach the pub/sub.
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+Ans: B
+A: Adding timestamp as they received is not a better option, messages may not arrive in order at the receiver/ subscriber, could be due to connectivity or network.
+B: Timestamp should be added here.
+C: Doesn't make sense at all.
+D: Ordering should be based on the order how messages are generated at the publisher but not as per order they reach the pub/sub.
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #156 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+Answer: B
+A. There is no indication that the application can do this. Moreover, due to networking problems, it is possible that Pub/Sub doesn't receive messages in order. This will analysis difficult.
+B. This makes sure that you have access to publishing timestamp which provides you with the correct ordering of messages.
+C. If timestamps are already messed up, BigQuery will get wrong results anyways.
+D. The timestamp we are interested in is when the data was produced by the publisher, not when it was received by Pub/Sub.
+
+--- Comment #157 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+humza
+			
+
+
+			2 years, 9 months ago
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+A. There is no indication that the application can do this. Moreover, due to networking problems, it is possible that Pub/Sub doesn't receive messages in order. This will analysis difficult.
+B. This makes sure that you have access to publishing timestamp which provides you with the correct ordering of messages.
+C. If timestamps are already messed up, BigQuery will get wrong results anyways.
+D. The timestamp we are interested in is when the data was produced by the publisher, not when it was received by Pub/Sub.
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+A. There is no indication that the application can do this. Moreover, due to networking problems, it is possible that Pub/Sub doesn't receive messages in order. This will analysis difficult.
+B. This makes sure that you have access to publishing timestamp which provides you with the correct ordering of messages.
+C. If timestamps are already messed up, BigQuery will get wrong results anyways.
+D. The timestamp we are interested in is when the data was produced by the publisher, not when it was received by Pub/Sub.
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #164 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+Vote for B
+
+--- Comment #165 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+sumanshu
+			
+
+
+			2 years, 9 months ago
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+Vote for B
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+Vote for B
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #172 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Better if the publisher attached the package ID and Timestamp as packages can come in an Asynchronous fashion.
+
+--- Comment #173 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+funtoosh
+			
+
+
+			3 years, 1 month ago
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+Better if the publisher attached the package ID and Timestamp as packages can come in an Asynchronous fashion.
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+Better if the publisher attached the package ID and Timestamp as packages can come in an Asynchronous fashion.
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #180 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Correct B
+
+--- Comment #181 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+naga
+			
+
+
+			3 years, 2 months ago
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+Correct B
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+Correct B
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #188 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+The answer is B. 
+
+JSON representation
+{
+  "data": string,
+  "attributes": {
+    string: string,
+    ...
+  },
+  "messageId": string,
+  "publishTime": string,
+  "orderingKey": string
+}
+
+In the attribute, we can have package id and timestamp.
+
+--- Comment #189 ---
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+Radhika7983
+			
+
+
+			3 years, 4 months ago
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is B. 
+
+JSON representation
+{
+  "data": string,
+  "attributes": {
+    string: string,
+    ...
+  },
+  "messageId": string,
+  "publishTime": string,
+  "orderingKey": string
+}
+
+In the attribute, we can have package id and timestamp.
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is B. 
+
+JSON representation
+{
+  "data": string,
+  "attributes": {
+    string: string,
+    ...
+  },
+  "messageId": string,
+  "publishTime": string,
+  "orderingKey": string
+}
+
+In the attribute, we can have package id and timestamp.
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #193 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #194 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #196 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #197 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

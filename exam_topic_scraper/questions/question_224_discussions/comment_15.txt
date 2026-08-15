@@ -1,0 +1,10 @@
+COMMENT #15 FOR QUESTION 224
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+System Lag vs. Data Freshness: System lag is low (5 seconds), indicating that individual messages are processed quickly. However, data freshness is high (40 seconds), suggesting a backlog in the pipeline.
+Not Advertising's Fault: The issue is upstream of their consumption, as they're already receiving delayed messages.
+Not Web Server's Fault: The lag between eventTimestamp and publishTime is minimal (1 second), meaning the server is publishing messages promptly.
+============================================================

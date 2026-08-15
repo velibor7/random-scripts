@@ -1,0 +1,14 @@
+COMMENT #117 FOR QUESTION 295
+============================================================
+Author: Unknown
+Date: 8 months, 2 weeks ago
+Votes: 0
+----------------------------------------
+The correct answer is B. Assign the compute.networkUser role to the service account that executes the Dataflow pipeline.
+
+Here's why:
+
+    Shared VPC and Network Access: When using a Shared VPC, you need to grant specific permissions to service accounts in the service project (where your Dataflow pipeline runs) to access resources in the host project's network.
+    compute.networkUser Role: This role grants the necessary permissions for a service account to use the network resources in the Shared VPC. This includes accessing subnets, creating instances, and communicating with other services within the network.
+    Service Account for Pipeline Execution: The service account that executes your Dataflow pipeline is the one that needs these network permissions. This is because the Dataflow service uses this account to create and manage worker instances within the Shared VPC network.
+============================================================

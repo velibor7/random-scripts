@@ -1,0 +1,1258 @@
+================================================================================
+QUESTION:
+An aerospace company uses a proprietary data format to store its flight data. You need to connect this new data source to BigQuery and stream the data intoBigQuery. You want to efficiently import the data into BigQuery while consuming as few resources as possible. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Write a shell script that triggers a Cloud Function that performs periodic ETL batch jobs on the new data source.
+										
+
+
+													B.
+												
+											
+											Use a standard Dataflow pipeline to store the raw data in BigQuery, and then transform the format later when the data is used.
+										
+
+
+													C.
+												
+											
+											Use Apache Hive to write a Dataproc job that streams the data into BigQuery in CSV format.
+										
+
+
+													D.
+												
+											
+											Use an Apache Beam custom connector to write a Dataflow pipeline that streams the data into BigQuery in Avro format.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (224 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 193 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 193
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								An aerospace company uses a proprietary data format to store its flight data. You need to connect this new data source to BigQuery and stream the data intoBigQuery. You want to efficiently import the data into BigQuery while consuming as few resources as possible. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Write a shell script that triggers a Cloud Function that performs periodic ETL batch jobs on the new data source.
+										
+
+
+													B.
+												
+											
+											Use a standard Dataflow pipeline to store the raw data in BigQuery, and then transform the format later when the data is used.
+										
+
+
+													C.
+												
+											
+											Use Apache Hive to write a Dataproc job that streams the data into BigQuery in CSV format.
+										
+
+
+													D.
+												
+											
+											Use an Apache Beam custom connector to write a Dataflow pipeline that streams the data into BigQuery in Avro format.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								ducc
+							
+							
+							at 
+							Sept. 3, 2022, 3:52 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 193
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								ducc
+							
+							
+							at 
+							Sept. 3, 2022, 3:52 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+This has to be D. How could it even be B? The source is a proprietary format. Dataflow wouldn't have a built-in template to  ead the file. You will have to create something custom.
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+This has to be D. How could it even be B? The source is a proprietary format. Dataflow wouldn't have a built-in template to  ead the file. You will have to create something custom.
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+This has to be D. How could it even be B? The source is a proprietary format. Dataflow wouldn't have a built-in template to  ead the file. You will have to create something custom.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+This has to be D. How could it even be B? The source is a proprietary format. Dataflow wouldn't have a built-in template to  ead the file. You will have to create something custom.
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+This has to be D. How could it even be B? The source is a proprietary format. Dataflow wouldn't have a built-in template to  ead the file. You will have to create something custom.
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+beanz00
+			
+
+
+				Highly Voted 
+
+
+			1 year, 11 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+This has to be D. How could it even be B? The source is a proprietary format. Dataflow wouldn't have a built-in template to  ead the file. You will have to create something custom.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+This has to be D. How could it even be B? The source is a proprietary format. Dataflow wouldn't have a built-in template to  ead the file. You will have to create something custom.
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 17 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+For me it's clearly D
+It's between B and D, but read B, store raw data in Big Query? Use a Dataflow pipeline just to store raw data into Big Query, and transform later? You'd need to do another pipeline for that, and is not efficient.
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+devaid
+			
+
+
+				Highly Voted 
+
+
+			1 year, 11 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+For me it's clearly D
+It's between B and D, but read B, store raw data in Big Query? Use a Dataflow pipeline just to store raw data into Big Query, and transform later? You'd need to do another pipeline for that, and is not efficient.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+For me it's clearly D
+It's between B and D, but read B, store raw data in Big Query? Use a Dataflow pipeline just to store raw data into Big Query, and transform later? You'd need to do another pipeline for that, and is not efficient.
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Option D is the best approach given the constraints - use an Apache Beam custom connector to write a Dataflow pipeline that streams the data into BigQuery in Avro format.
+The key reasons:
+•	Dataflow provides managed resource scaling for efficient stream processing
+•	Avro format has schema evolution capabilities and efficient serialization for flight telemetry data
+•	Apache Beam connectors avoid having to write much code to integrate proprietary data sources
+•	Streaming inserts data efficiently compared to periodic batch jobs
+In contrast, option A uses Cloud Functions which lack native streaming capabilities. Option B stores data in less efficient JSON format. Option C uses Dataproc which requires manual cluster management.
+So leveraging Dataflow + Avro + Beam provides the most efficient way to stream proprietary flight data into BigQuery while using minimal resources.
+
+--- Comment #31 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+				Most Recent 
+
+
+			9 months, 3 weeks ago
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Option D is the best approach given the constraints - use an Apache Beam custom connector to write a Dataflow pipeline that streams the data into BigQuery in Avro format.
+The key reasons:
+•	Dataflow provides managed resource scaling for efficient stream processing
+•	Avro format has schema evolution capabilities and efficient serialization for flight telemetry data
+•	Apache Beam connectors avoid having to write much code to integrate proprietary data sources
+•	Streaming inserts data efficiently compared to periodic batch jobs
+In contrast, option A uses Cloud Functions which lack native streaming capabilities. Option B stores data in less efficient JSON format. Option C uses Dataproc which requires manual cluster management.
+So leveraging Dataflow + Avro + Beam provides the most efficient way to stream proprietary flight data into BigQuery while using minimal resources.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Option D is the best approach given the constraints - use an Apache Beam custom connector to write a Dataflow pipeline that streams the data into BigQuery in Avro format.
+The key reasons:
+•	Dataflow provides managed resource scaling for efficient stream processing
+•	Avro format has schema evolution capabilities and efficient serialization for flight telemetry data
+•	Apache Beam connectors avoid having to write much code to integrate proprietary data sources
+•	Streaming inserts data efficiently compared to periodic batch jobs
+In contrast, option A uses Cloud Functions which lack native streaming capabilities. Option B stores data in less efficient JSON format. Option C uses Dataproc which requires manual cluster management.
+So leveraging Dataflow + Avro + Beam provides the most efficient way to stream proprietary flight data into BigQuery while using minimal resources.
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #39 ---
+Author: Unknown | Date: 10 months ago | Votes: 0
+Its talking about streaming? none of the options talk about triggering a load to begin. We need a trigger or schedule to run first.
+
+--- Comment #40 ---
+Author: Unknown | Date: 10 months ago | Votes: 0
+Aman47
+			
+
+
+			10 months ago
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+Its talking about streaming? none of the options talk about triggering a load to begin. We need a trigger or schedule to run first.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Its talking about streaming? none of the options talk about triggering a load to begin. We need a trigger or schedule to run first.
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #47 ---
+Author: Unknown | Date: 12 months ago | Votes: 0
+Option D allows you to use a custom connector to read the proprietary data format and write the data to BigQuery in Avro format.
+
+--- Comment #48 ---
+Author: Unknown | Date: 12 months ago | Votes: 0
+AjoseO
+			
+
+
+			12 months ago
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+Option D allows you to use a custom connector to read the proprietary data format and write the data to BigQuery in Avro format.
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Option D allows you to use a custom connector to read the proprietary data format and write the data to BigQuery in Avro format.
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #56 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+the keyword is streaming
+
+--- Comment #57 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+sergiomujica
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+the keyword is streaming
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+the keyword is streaming
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #65 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Between B and D. Firstly transformation is not mentioned in the question, So B is less probable. Then Efficient import is mentioned in the question, Converting to Avro will consume less space. I am going with D
+
+--- Comment #66 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+knith66
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+Between B and D. Firstly transformation is not mentioned in the question, So B is less probable. Then Efficient import is mentioned in the question, Converting to Avro will consume less space. I am going with D
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+Between B and D. Firstly transformation is not mentioned in the question, So B is less probable. Then Efficient import is mentioned in the question, Converting to Avro will consume less space. I am going with D
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Answer is D , 
+Why not B, changing data format before uploading to bigquery is good approach.
+
+--- Comment #74 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+musumusu
+			
+
+
+			1 year, 7 months ago
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is D , 
+Why not B, changing data format before uploading to bigquery is good approach.
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+Answer is D , 
+Why not B, changing data format before uploading to bigquery is good approach.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #81 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+I believe keyword here is "An aerospace company uses a proprietary data format"
+So if we list the connectors available in Apache Beam, we are listed with these options;
+https://beam.apache.org/documentation/io/connectors/
+
+So I believe, we have to create our own custom connector to read from the proprietary data format hence the answer should be B
+
+--- Comment #82 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+cetanx
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #83 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+I believe keyword here is "An aerospace company uses a proprietary data format"
+So if we list the connectors available in Apache Beam, we are listed with these options;
+https://beam.apache.org/documentation/io/connectors/
+
+So I believe, we have to create our own custom connector to read from the proprietary data format hence the answer should be B
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+I believe keyword here is "An aerospace company uses a proprietary data format"
+So if we list the connectors available in Apache Beam, we are listed with these options;
+https://beam.apache.org/documentation/io/connectors/
+
+So I believe, we have to create our own custom connector to read from the proprietary data format hence the answer should be B
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+sorry the answer should be D
+
+--- Comment #89 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+sorry the answer should be D
+
+--- Comment #90 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+cetanx
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+sorry the answer should be D
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+sorry the answer should be D
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #98 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D is right
+
+--- Comment #99 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+AzureDP900
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+D is right
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+D is right
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #106 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+D is the answer.
+
+--- Comment #107 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+zellck
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #108 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D is the answer.
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+D is the answer.
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #113 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+There is dataflow connector and D isnt cost effective
+
+--- Comment #114 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+There is dataflow connector and D isnt cost effective
+
+--- Comment #115 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+TNT87
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+There is dataflow connector and D isnt cost effective
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+There is dataflow connector and D isnt cost effective
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #123 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the most efficient
+
+--- Comment #124 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+hauhau
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+B is the most efficient
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+B is the most efficient
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #132 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+https://cloud.google.com/spanner/docs/change-streams/use-dataflow#core-concepts
+
+--- Comment #133 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/spanner/docs/change-streams/use-dataflow#core-concepts
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/spanner/docs/change-streams/use-dataflow#core-concepts
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #140 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Ans B
+https://cloud.google.com/architecture/streaming-avro-records-into-bigquery-using-dataflow
+Is there a reason to use apache beam connector yet there is dataflow which is a standard solution for that scenario?
+
+--- Comment #141 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #142 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Ans B
+https://cloud.google.com/architecture/streaming-avro-records-into-bigquery-using-dataflow
+Is there a reason to use apache beam connector yet there is dataflow which is a standard solution for that scenario?
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+Ans B
+https://cloud.google.com/architecture/streaming-avro-records-into-bigquery-using-dataflow
+Is there a reason to use apache beam connector yet there is dataflow which is a standard solution for that scenario?
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+https://cloud.google.com/blog/topics/developers-practitioners/bigquery-explained-data-ingestion
+
+--- Comment #147 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+https://cloud.google.com/blog/topics/developers-practitioners/bigquery-explained-data-ingestion
+
+--- Comment #148 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #149 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+https://cloud.google.com/blog/topics/developers-practitioners/bigquery-explained-data-ingestion
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/blog/topics/developers-practitioners/bigquery-explained-data-ingestion
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #153 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Can standard dataflow be used to ingest any proprietary format of file ?
+shouldn't we use custom apache beam connector ? 
+So I think it is D ,though it isn't simple ,But in this scenario they have asked to use less resources to import data
+
+--- Comment #154 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Can standard dataflow be used to ingest any proprietary format of file ?
+shouldn't we use custom apache beam connector ? 
+So I think it is D ,though it isn't simple ,But in this scenario they have asked to use less resources to import data
+
+--- Comment #155 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+learner2610
+			
+
+
+			2 years ago
+
+--- Comment #156 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Can standard dataflow be used to ingest any proprietary format of file ?
+shouldn't we use custom apache beam connector ? 
+So I think it is D ,though it isn't simple ,But in this scenario they have asked to use less resources to import data
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+Can standard dataflow be used to ingest any proprietary format of file ?
+shouldn't we use custom apache beam connector ? 
+So I think it is D ,though it isn't simple ,But in this scenario they have asked to use less resources to import data
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #160 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Do you mind reading the links i provided and revisiting the question, then you will understand why D isnt the best. Why use Apache beam yet there is Dataflow
+
+--- Comment #161 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Do you mind reading the links i provided and revisiting the question, then you will understand why D isnt the best. Why use Apache beam yet there is Dataflow
+
+--- Comment #162 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #163 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Do you mind reading the links i provided and revisiting the question, then you will understand why D isnt the best. Why use Apache beam yet there is Dataflow
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+Do you mind reading the links i provided and revisiting the question, then you will understand why D isnt the best. Why use Apache beam yet there is Dataflow
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #167 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D: just have your team develop custom connector. 
+https://cloud.google.com/architecture/bigquery-data-warehouse#storage_management
+Internally, BigQuery stores data in a proprietary columnar format called Capacitor, which has a number of benefits for data warehouse workloads. BigQuery uses a proprietary format
+
+I suppose this matter , it mean BQ use proprietary format by itself to work internally
+but the question  means    data as proprietary format as  input for ingesting into BQ.
+
+--- Comment #168 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D: just have your team develop custom connector. 
+https://cloud.google.com/architecture/bigquery-data-warehouse#storage_management
+Internally, BigQuery stores data in a proprietary columnar format called Capacitor, which has a number of benefits for data warehouse workloads. BigQuery uses a proprietary format
+
+I suppose this matter , it mean BQ use proprietary format by itself to work internally
+but the question  means    data as proprietary format as  input for ingesting into BQ.
+
+--- Comment #169 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years ago
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+D: just have your team develop custom connector. 
+https://cloud.google.com/architecture/bigquery-data-warehouse#storage_management
+Internally, BigQuery stores data in a proprietary columnar format called Capacitor, which has a number of benefits for data warehouse workloads. BigQuery uses a proprietary format
+
+I suppose this matter , it mean BQ use proprietary format by itself to work internally
+but the question  means    data as proprietary format as  input for ingesting into BQ.
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+D: just have your team develop custom connector. 
+https://cloud.google.com/architecture/bigquery-data-warehouse#storage_management
+Internally, BigQuery stores data in a proprietary columnar format called Capacitor, which has a number of benefits for data warehouse workloads. BigQuery uses a proprietary format
+
+I suppose this matter , it mean BQ use proprietary format by itself to work internally
+but the question  means    data as proprietary format as  input for ingesting into BQ.
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #177 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Option D streams, thats not cost effective. We need something that is cost effectictive, hence B is the option
+
+--- Comment #178 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #179 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Option D streams, thats not cost effective. We need something that is cost effectictive, hence B is the option
+
+--- Comment #180 ---
+Author: Unknown | Date:  | Votes: 0
+Option D streams, thats not cost effective. We need something that is cost effectictive, hence B is the option
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #183 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+I mean that consumes fewer resources
+
+--- Comment #184 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+I mean that consumes fewer resources
+
+--- Comment #185 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+I mean that consumes fewer resources
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+I mean that consumes fewer resources
+
+--- Comment #188 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #193 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #194 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #196 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+D. Use an Apache Beam custom connector to write a Dataflow pipeline that streams the data into BigQuery in Avro format.
+Reveal Solution
+
+--- Comment #197 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+AWSandeep
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+D. Use an Apache Beam custom connector to write a Dataflow pipeline that streams the data into BigQuery in Avro format.
+Reveal Solution
+
+--- Comment #199 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #200 ---
+Author: Unknown | Date:  | Votes: 0
+D. Use an Apache Beam custom connector to write a Dataflow pipeline that streams the data into BigQuery in Avro format.
+Reveal Solution
+
+--- Comment #201 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #202 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #203 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #204 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #205 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B is the most efficient for me.
+
+--- Comment #206 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+ducc
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #207 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B is the most efficient for me.
+
+--- Comment #208 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #209 ---
+Author: Unknown | Date:  | Votes: 0
+B is the most efficient for me.
+
+--- Comment #210 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #211 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #212 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Sorry, D is correct
+
+--- Comment #213 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Sorry, D is correct
+
+--- Comment #214 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+ducc
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #215 ---
+Author: Unknown | Date:  | Votes: 0
+Sorry, D is correct
+
+--- Comment #216 ---
+Author: Unknown | Date:  | Votes: 0
+Sorry, D is correct
+
+--- Comment #217 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #218 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #219 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #220 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #221 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #222 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #223 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #224 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

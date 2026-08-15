@@ -1,0 +1,12 @@
+COMMENT #112 FOR QUESTION 103
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Minimized Cost with Regional Storage: Regional datasets are less costly than multi-regional datasets in BigQuery. Since there is no requirement here for multi-regional availability, regional storage meets the high availability need while keeping costs lower.
+
+RPO Compliance with Scheduled Backups: A scheduled query that periodically creates copies of the data (e.g., daily or weekly, depending on the requirements) allows for recovery within the 30-day RPO, meeting the requirement for data retention and recovery.
+
+Point-in-Time Recovery Not Native in BigQuery: Although BigQuery provides a limited "table snapshot" feature, it’s not a true point-in-time recovery option for the last 30 days. Creating periodic backups through scheduled queries gives you control over retention, enabling you to keep backups for 30 days and reducing dependency on more costly or limited snapshot capabilities.
+============================================================

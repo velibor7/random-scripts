@@ -1,0 +1,1270 @@
+ALL COMMENTS FOR QUESTION 28
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 28 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 28
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your company is performing data preprocessing for a learning algorithm in Google Cloud Dataflow. Numerous data logs are being are being generated during this step, and the team wants to analyze them. Due to the dynamic nature of the campaign, the data is growing exponentially every hour.The data scientists have written the following code to read the data for a new key features in the logs.You want to improve the performance of this data read. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Specify the TableReference object in the code.
+										
+
+
+													B.
+												
+											
+											Use .fromQuery operation to read specific fields from the table.
+										
+
+
+													C.
+												
+											
+											Use of both the Google BigQuery TableSchema and TableFieldSchema classes.
+										
+
+
+													D.
+												
+											
+											Call a transform that returns TableRow objects, where each element in the PCollection represents a single row in the table.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								arthur2385
+							
+							
+							at 
+							Sept. 2, 2022, 1:45 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 28
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								arthur2385
+							
+							
+							at 
+							Sept. 2, 2022, 1:45 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+arthur2385
+			
+
+
+				Highly Voted 
+
+
+			2 years, 1 month ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+Since we want to be able to analyze data from a new ML feature (column) we only need to check values from that column. By doing a fromQuery(SELECT featueColum FROM table)
+we are optimizing costs and performance since we are not checking all columns.
+
+https://cloud.google.com/bigquery/docs/best-practices-costs#avoid_select_
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+maxdataengineer
+			
+
+
+				Highly Voted 
+
+
+			2 years ago
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+Since we want to be able to analyze data from a new ML feature (column) we only need to check values from that column. By doing a fromQuery(SELECT featueColum FROM table)
+we are optimizing costs and performance since we are not checking all columns.
+
+https://cloud.google.com/bigquery/docs/best-practices-costs#avoid_select_
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Since we want to be able to analyze data from a new ML feature (column) we only need to check values from that column. By doing a fromQuery(SELECT featueColum FROM table)
+we are optimizing costs and performance since we are not checking all columns.
+
+https://cloud.google.com/bigquery/docs/best-practices-costs#avoid_select_
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+The answer is B
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+The answer is B
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+maxdataengineer
+			
+
+
+			2 years ago
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+The answer is B
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The answer is B
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+According to Chat GPT, it is also B
+In general, if your "primary goal is to reduce the amount of data read and transferred", and the downstream processing mainly focuses on a subset of fields, using .fromQuery to select specific fields would be a good choice. 
+
+On the other hand, if you need to simplify downstream processing and optimize resource utilization, transforming data into TableRow objects might be more suitable.
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+According to Chat GPT, it is also B
+In general, if your "primary goal is to reduce the amount of data read and transferred", and the downstream processing mainly focuses on a subset of fields, using .fromQuery to select specific fields would be a good choice. 
+
+On the other hand, if you need to simplify downstream processing and optimize resource utilization, transforming data into TableRow objects might be more suitable.
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+cetanx
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+According to Chat GPT, it is also B
+In general, if your "primary goal is to reduce the amount of data read and transferred", and the downstream processing mainly focuses on a subset of fields, using .fromQuery to select specific fields would be a good choice. 
+
+On the other hand, if you need to simplify downstream processing and optimize resource utilization, transforming data into TableRow objects might be more suitable.
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+According to Chat GPT, it is also B
+In general, if your "primary goal is to reduce the amount of data read and transferred", and the downstream processing mainly focuses on a subset of fields, using .fromQuery to select specific fields would be a good choice. 
+
+On the other hand, if you need to simplify downstream processing and optimize resource utilization, transforming data into TableRow objects might be more suitable.
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date: 9 months, 4 weeks ago | Votes: 0
+B as BigQueryIO.read.from() directly reads the whole table from BigQuery. 
+This function exports the whole table to temporary files in Google Cloud Storage, where it will later be read from. 
+This requires almost no computation, as it only performs an export job, and later Dataflow reads from GCS (not from BigQuery).
+BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+https://stackoverflow.com/questions/54413681/bigqueryio-read-vs-fromquery
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date: 9 months, 4 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+				Most Recent 
+
+
+			9 months, 4 weeks ago
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B as BigQueryIO.read.from() directly reads the whole table from BigQuery. 
+This function exports the whole table to temporary files in Google Cloud Storage, where it will later be read from. 
+This requires almost no computation, as it only performs an export job, and later Dataflow reads from GCS (not from BigQuery).
+BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+https://stackoverflow.com/questions/54413681/bigqueryio-read-vs-fromquery
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B as BigQueryIO.read.from() directly reads the whole table from BigQuery. 
+This function exports the whole table to temporary files in Google Cloud Storage, where it will later be read from. 
+This requires almost no computation, as it only performs an export job, and later Dataflow reads from GCS (not from BigQuery).
+BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+https://stackoverflow.com/questions/54413681/bigqueryio-read-vs-fromquery
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+B works for me
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+axantroff
+			
+
+
+			10 months, 3 weeks ago
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B works for me
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B works for me
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+We are trying to optimize reading each row is not optimal, we want columns
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+pue_dev_anon
+			
+
+
+			10 months, 3 weeks ago
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+We are trying to optimize reading each row is not optimal, we want columns
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+We are trying to optimize reading each row is not optimal, we want columns
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date: 11 months, 3 weeks ago | Votes: 0
+B. Use the .fromQuery operation to read specific fields from the table.
+
+Using the .fromQuery operation allows you to specify the exact fields you need to read from the table, which can significantly improve performance by reducing the amount of data that needs to be processed. This is particularly important when dealing with large and growing datasets.
+
+Option A (specifying the TableReference object) provides information about the table but doesn't inherently improve the performance of reading specific fields.
+
+Option C (using Google BigQuery TableSchema and TableFieldSchema classes) is related to specifying the schema of the data but doesn't directly address improving the performance of reading specific fields.
+
+Option D (calling a transform that returns TableRow objects) is more about how the data is processed after it's read, not how it's initially read from BigQuery.
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date: 11 months, 3 weeks ago | Votes: 0
+rtcpost
+			
+
+
+			11 months, 3 weeks ago
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Use the .fromQuery operation to read specific fields from the table.
+
+Using the .fromQuery operation allows you to specify the exact fields you need to read from the table, which can significantly improve performance by reducing the amount of data that needs to be processed. This is particularly important when dealing with large and growing datasets.
+
+Option A (specifying the TableReference object) provides information about the table but doesn't inherently improve the performance of reading specific fields.
+
+Option C (using Google BigQuery TableSchema and TableFieldSchema classes) is related to specifying the schema of the data but doesn't directly address improving the performance of reading specific fields.
+
+Option D (calling a transform that returns TableRow objects) is more about how the data is processed after it's read, not how it's initially read from BigQuery.
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Use the .fromQuery operation to read specific fields from the table.
+
+Using the .fromQuery operation allows you to specify the exact fields you need to read from the table, which can significantly improve performance by reducing the amount of data that needs to be processed. This is particularly important when dealing with large and growing datasets.
+
+Option A (specifying the TableReference object) provides information about the table but doesn't inherently improve the performance of reading specific fields.
+
+Option C (using Google BigQuery TableSchema and TableFieldSchema classes) is related to specifying the schema of the data but doesn't directly address improving the performance of reading specific fields.
+
+Option D (calling a transform that returns TableRow objects) is more about how the data is processed after it's read, not how it's initially read from BigQuery.
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+When I have a different answer then the "Correct Answer", I run it through AI and it keeps saying ExamTopics is wrong. Is there any way to know if I am going to pass or fail this exam?
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+emmylou
+			
+
+
+			1 year ago
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+When I have a different answer then the "Correct Answer", I run it through AI and it keeps saying ExamTopics is wrong. Is there any way to know if I am going to pass or fail this exam?
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+When I have a different answer then the "Correct Answer", I run it through AI and it keeps saying ExamTopics is wrong. Is there any way to know if I am going to pass or fail this exam?
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+AI is just a LLM model, not a silver bullet at all
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+AI is just a LLM model, not a silver bullet at all
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+axantroff
+			
+
+
+			10 months, 3 weeks ago
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AI is just a LLM model, not a silver bullet at all
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AI is just a LLM model, not a silver bullet at all
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+Since the requirement is to read the data for a *new* key features in the logs, it makes sense to select limited columns, which are required rather than using .from() method which exports the entire BigQuery table.
+B makes sense here.
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date: 1 year ago | Votes: 0
+suku2
+			
+
+
+			1 year ago
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Since the requirement is to read the data for a *new* key features in the logs, it makes sense to select limited columns, which are required rather than using .from() method which exports the entire BigQuery table.
+B makes sense here.
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Since the requirement is to read the data for a *new* key features in the logs, it makes sense to select limited columns, which are required rather than using .from() method which exports the entire BigQuery table.
+B makes sense here.
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+SHOULD be B.
+Not quite sure how D is the correct answer (Red herring....?) when you want to improve the query, which is .fromQuery and NOT transform and PCollection....
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+gudguy1a
+			
+
+
+			1 year, 1 month ago
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+SHOULD be B.
+Not quite sure how D is the correct answer (Red herring....?) when you want to improve the query, which is .fromQuery and NOT transform and PCollection....
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+SHOULD be B.
+Not quite sure how D is the correct answer (Red herring....?) when you want to improve the query, which is .fromQuery and NOT transform and PCollection....
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Answer Is D, imagine that you dont have permission on BQ AND you cant see the table info or anything else about the table you only aré working whit dataflow the only way Is transform the data using apache beam
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+odiez3
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer Is D, imagine that you dont have permission on BQ AND you cant see the table info or anything else about the table you only aré working whit dataflow the only way Is transform the data using apache beam
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer Is D, imagine that you dont have permission on BQ AND you cant see the table info or anything else about the table you only aré working whit dataflow the only way Is transform the data using apache beam
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+I have seen people explain why B is not right because it doesn't optimize performance but only cost, which is not true, or because fromQuery is still not performant.
+
+I think it's B because no other option is more performant, even if you claim it's not good. 
+
+As for option D, the transform given by the description is already a transform that provides as output a PCollection of TableRow objects. So how would that be any different?
+
+https://beam.apache.org/releases/javadoc/2.1.0/org/apache/beam/sdk/io/gcp/bigquery/BigQueryIO.html
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Mathew106
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I have seen people explain why B is not right because it doesn't optimize performance but only cost, which is not true, or because fromQuery is still not performant.
+
+I think it's B because no other option is more performant, even if you claim it's not good. 
+
+As for option D, the transform given by the description is already a transform that provides as output a PCollection of TableRow objects. So how would that be any different?
+
+https://beam.apache.org/releases/javadoc/2.1.0/org/apache/beam/sdk/io/gcp/bigquery/BigQueryIO.html
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I have seen people explain why B is not right because it doesn't optimize performance but only cost, which is not true, or because fromQuery is still not performant.
+
+I think it's B because no other option is more performant, even if you claim it's not good. 
+
+As for option D, the transform given by the description is already a transform that provides as output a PCollection of TableRow objects. So how would that be any different?
+
+https://beam.apache.org/releases/javadoc/2.1.0/org/apache/beam/sdk/io/gcp/bigquery/BigQueryIO.html
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Why should it be D? 
+"fromQuery()" allows us to read only the columns we want, I see no point in using a Transform for each row of a "SELECT *", which, moreover, is a bad BQ Practice.
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+theseawillclaim
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Why should it be D? 
+"fromQuery()" allows us to read only the columns we want, I see no point in using a Transform for each row of a "SELECT *", which, moreover, is a bad BQ Practice.
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Why should it be D? 
+"fromQuery()" allows us to read only the columns we want, I see no point in using a Transform for each row of a "SELECT *", which, moreover, is a bad BQ Practice.
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Correct answer should be B. BigQuery is a columnar storage, so reducing the number of fields being selected should improve performance.
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+avg_uchiha
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct answer should be B. BigQuery is a columnar storage, so reducing the number of fields being selected should improve performance.
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct answer should be B. BigQuery is a columnar storage, so reducing the number of fields being selected should improve performance.
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Does BigQuery have a pCollections? I thought it's unique to Apache Beam i.e. Cloud Dataflow
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+jkh_goh
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Does BigQuery have a pCollections? I thought it's unique to Apache Beam i.e. Cloud Dataflow
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Does BigQuery have a pCollections? I thought it's unique to Apache Beam i.e. Cloud Dataflow
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Guys, how is B the answer? Like all the justifications given here, BigQueryIO.read.fromQuery() is time consuming and the question asked for a better performance solution.
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+kelvintoys93
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Guys, how is B the answer? Like all the justifications given here, BigQueryIO.read.fromQuery() is time consuming and the question asked for a better performance solution.
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Guys, how is B the answer? Like all the justifications given here, BigQueryIO.read.fromQuery() is time consuming and the question asked for a better performance solution.
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+That part is the docs trying to explain the side effects of using it, however, the part that is important to us is the fact that it reads from a query. "Read" reads the whole table. If we specify a query we can say select col1 only, which makes it all more efficient.
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+That part is the docs trying to explain the side effects of using it, however, the part that is important to us is the fact that it reads from a query. "Read" reads the whole table. If we specify a query we can say select col1 only, which makes it all more efficient.
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Lestrang
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+That part is the docs trying to explain the side effects of using it, however, the part that is important to us is the fact that it reads from a query. "Read" reads the whole table. If we specify a query we can say select col1 only, which makes it all more efficient.
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+That part is the docs trying to explain the side effects of using it, however, the part that is important to us is the fact that it reads from a query. "Read" reads the whole table. If we specify a query we can say select col1 only, which makes it all more efficient.
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+reading only relevant cols
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+gcm7
+			
+
+
+			1 year, 12 months ago
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+reading only relevant cols
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+reading only relevant cols
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+Answer is D, apparently.
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+devaid
+			
+
+
+			2 years ago
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is D, apparently.
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is D, apparently.
+
+COMMENT #187
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #188
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #189
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #190
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #191
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #192
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #193
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

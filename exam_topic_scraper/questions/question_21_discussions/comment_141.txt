@@ -1,0 +1,17 @@
+COMMENT #141 FOR QUESTION 21
+============================================================
+Author: Unknown
+Date: 1 week ago
+Votes: 0
+----------------------------------------
+The most efficient way to deduplicate your inventory data would be:
+D. Maintain a database table to store the hash value and other metadata for each data entry.
+This approach is optimal because:
+
+It creates a lightweight reference table that stores just the hash values and essential metadata (like timestamps) rather than the full payload data
+Hash values can be quickly compared to identify duplicates without expensive full-data comparisons
+The metadata can help with auditing and troubleshooting transmission issues
+This solution scales well as your data volume grows
+
+Option A (using GUIDs) doesn't address the retransmission scenario well, as new GUIDs might be generated each time. Option B requires comparing against all historical data, which becomes increasingly inefficient over time. Option C creates unnecessary storage overhead by using entire data entries as primary keys when only a hash value is needed for comparison.
+============================================================

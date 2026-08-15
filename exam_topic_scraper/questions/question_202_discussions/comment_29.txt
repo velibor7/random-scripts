@@ -1,0 +1,16 @@
+COMMENT #29 FOR QUESTION 202
+============================================================
+Author: Unknown
+Date: 1 year, 9 months ago
+Votes: 0
+----------------------------------------
+"Your on-premises environment cannot be accessed from the public internet" statement suggests that inbound traffic from internet is NOT allowed however, it doesn't mean that outbound internet connectivity from on-prem resources is not possible. Any on-prem system with outbound internet access can copy/transfer the CSV files.
+
+CSV files are located on a filesystem, therefore you cannot copy them with BQ Transfer Service.
+
+Leaving only possible option;
+first copy CSVs to cloud storage
+then run BQ Transfer Service
+
+pls refer to https://cloud.google.com/bigquery/docs/dts-introduction#supported_data_sources
+============================================================

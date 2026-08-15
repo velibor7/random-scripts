@@ -1,0 +1,1147 @@
+{
+  "question": "You are building a streaming Dataflow pipeline that ingests noise level data from hundreds of sensors placed near construction sites across a city. The sensors measure noise level every ten seconds, and send that data to the pipeline when levels reach above 70 dBA. You need to detect the average noise level from a sensor when data is received for a duration of more than 30 minutes, but the window ends when no data has been received for 15 minutes. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse session windows with a 15-minute gap duration.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse session windows with a 30-minute gap duration.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse hopping windows with a 15-minute window, and a thirty-minute period.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse tumbling windows with a 15-minute window and a fifteen-minute .withAllowedLateness operator.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 266 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 266\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are building a streaming Dataflow pipeline that ingests noise level data from hundreds of sensors placed near construction sites across a city. The sensors measure noise level every ten seconds, and send that data to the pipeline when levels reach above 70 dBA. You need to detect the average noise level from a sensor when data is received for a duration of more than 30 minutes, but the window ends when no data has been received for 15 minutes. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse session windows with a 15-minute gap duration.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse session windows with a 30-minute gap duration.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse hopping windows with a 15-minute window, and a thirty-minute period.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse tumbling windows with a 15-minute window and a fifteen-minute .withAllowedLateness operator.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 6:23 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 266\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 3, 2024, 6:23 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "to detect average noise levels from sensors, the best approach is to use session windows with a 15-minute gap duration (Option A). Session windows are ideal for cases like this where the events (sensor data) are sporadic. They group events that occur within a certain time interval (15 minutes in your case) and a new window is started if no data is received for the duration of the gap. This matches your requirement to end the window when no data is received for 15 minutes, ensuring that the average noise level is calculated over periods of continuous data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "to detect average noise levels from sensors, the best approach is to use session windows with a 15-minute gap duration (Option A). Session windows are ideal for cases like this where the events (sensor data) are sporadic. They group events that occur within a certain time interval (15 minutes in your case) and a new window is started if no data is received for the duration of the gap. This matches your requirement to end the window when no data is received for 15 minutes, ensuring that the average noise level is calculated over periods of continuous data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "to detect average noise levels from sensors, the best approach is to use session windows with a 15-minute gap duration (Option A). Session windows are ideal for cases like this where the events (sensor data) are sporadic. They group events that occur within a certain time interval (15 minutes in your case) and a new window is started if no data is received for the duration of the gap. This matches your requirement to end the window when no data is received for 15 minutes, ensuring that the average noise level is calculated over periods of continuous data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "to detect average noise levels from sensors, the best approach is to use session windows with a 15-minute gap duration (Option A). Session windows are ideal for cases like this where the events (sensor data) are sporadic. They group events that occur within a certain time interval (15 minutes in your case) and a new window is started if no data is received for the duration of the gap. This matches your requirement to end the window when no data is received for 15 minutes, ensuring that the average noise level is calculated over periods of continuous data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "to detect average noise levels from sensors, the best approach is to use session windows with a 15-minute gap duration (Option A). Session windows are ideal for cases like this where the events (sensor data) are sporadic. They group events that occur within a certain time interval (15 minutes in your case) and a new window is started if no data is received for the duration of the gap. This matches your requirement to end the window when no data is received for 15 minutes, ensuring that the average noise level is calculated over periods of continuous data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "datapassionate\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "to detect average noise levels from sensors, the best approach is to use session windows with a 15-minute gap duration (Option A). Session windows are ideal for cases like this where the events (sensor data) are sporadic. They group events that occur within a certain time interval (15 minutes in your case) and a new window is started if no data is received for the duration of the gap. This matches your requirement to end the window when no data is received for 15 minutes, ensuring that the average noise level is calculated over periods of continuous data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "to detect average noise levels from sensors, the best approach is to use session windows with a 15-minute gap duration (Option A). Session windows are ideal for cases like this where the events (sensor data) are sporadic. They group events that occur within a certain time interval (15 minutes in your case) and a new window is started if no data is received for the duration of the gap. This matches your requirement to end the window when no data is received for 15 minutes, ensuring that the average noise level is calculated over periods of continuous data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 11 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "But you are not fulfilling this requirement \"You need to detect the average noise level from a sensor when data is received for a duration of more than 30 minutes\". I would say C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "But you are not fulfilling this requirement \"You need to detect the average noise level from a sensor when data is received for a duration of more than 30 minutes\". I would say C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "ashdam\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "But you are not fulfilling this requirement \"You need to detect the average noise level from a sensor when data is received for a duration of more than 30 minutes\". I would say C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "But you are not fulfilling this requirement \"You need to detect the average noise level from a sensor when data is received for a duration of more than 30 minutes\". I would say C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "You need a window that start when data for a sensor arrives and end when there's a gap in data. That would rule out hopping and tumbling windows. \n\n- > Windows need to stay open as long as there's data arriving - 30+ mins\n-> Window Should close when no data has been received for 15 mins -> Gap 15 mins",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "saschak94\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You need a window that start when data for a sensor arrives and end when there's a gap in data. That would rule out hopping and tumbling windows. \n\n- > Windows need to stay open as long as there's data arriving - 30+ mins\n-> Window Should close when no data has been received for 15 mins -> Gap 15 mins",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You need a window that start when data for a sensor arrives and end when there's a gap in data. That would rule out hopping and tumbling windows. \n\n- > Windows need to stay open as long as there's data arriving - 30+ mins\n-> Window Should close when no data has been received for 15 mins -> Gap 15 mins",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 10 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "D for me, clearly stated on example: https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#hopping-windows",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Pime13\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D for me, clearly stated on example: https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#hopping-windows",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D for me, clearly stated on example: https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#hopping-windows",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 2\u00a0weeks ago",
+      "content": "The problem requires detecting average noise levels when data is received for more than 30 minutes, but the window should end when no data has been received for 15 minutes.\nSession windows are ideal for this scenario because:\nThey are designed to capture bursts of activity followed by periods of inactivity.\nThey dynamically size based on the data received, which fits well with the variable duration of noise events.\nThe gap duration can be set to define when a session ends.\nThe 15-minute gap duration aligns perfectly with the requirement to end the window when no data has been received for 15 minutes.\nSession windows will naturally extend beyond 30 minutes if data keeps coming in, satisfying the requirement to detect levels for durations of more than 30 minutes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 2\u00a0weeks ago",
+      "content": "shanks_t\n\t\t\t\n\n\n\t\t\t7\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The problem requires detecting average noise levels when data is received for more than 30 minutes, but the window should end when no data has been received for 15 minutes.\nSession windows are ideal for this scenario because:\nThey are designed to capture bursts of activity followed by periods of inactivity.\nThey dynamically size based on the data received, which fits well with the variable duration of noise events.\nThe gap duration can be set to define when a session ends.\nThe 15-minute gap duration aligns perfectly with the requirement to end the window when no data has been received for 15 minutes.\nSession windows will naturally extend beyond 30 minutes if data keeps coming in, satisfying the requirement to detect levels for durations of more than 30 minutes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The problem requires detecting average noise levels when data is received for more than 30 minutes, but the window should end when no data has been received for 15 minutes.\nSession windows are ideal for this scenario because:\nThey are designed to capture bursts of activity followed by periods of inactivity.\nThey dynamically size based on the data received, which fits well with the variable duration of noise events.\nThe gap duration can be set to define when a session ends.\nThe 15-minute gap duration aligns perfectly with the requirement to end the window when no data has been received for 15 minutes.\nSession windows will naturally extend beyond 30 minutes if data keeps coming in, satisfying the requirement to detect levels for durations of more than 30 minutes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "D. Using a 15-minute window with a 15-minute tumbling window withAllowedLateness is the most suitable option for the following reasons:\n\nFlexibility: By allowing a 15-minute delay, it can accommodate various situations such as network latency or sensor failures.\nProcessing efficiency: Using a fixed window improves processing efficiency.\nCompliance with conditions: The window ends if no data is received for 15 minutes, meeting the specified condition.\nImplementation points:\n\n.withAllowedLateness: This operator allows delayed events to be included in the current window.\nTrigger: When 30 minutes of data is collected, a trigger event is generated, and the average value is calculated based on this event.\nWatermark: By setting a watermark, processing of old data can be terminated.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "viciousjpjp\n\t\t\t\n\n\n\t\t\t7\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Using a 15-minute window with a 15-minute tumbling window withAllowedLateness is the most suitable option for the following reasons:\n\nFlexibility: By allowing a 15-minute delay, it can accommodate various situations such as network latency or sensor failures.\nProcessing efficiency: Using a fixed window improves processing efficiency.\nCompliance with conditions: The window ends if no data is received for 15 minutes, meeting the specified condition.\nImplementation points:\n\n.withAllowedLateness: This operator allows delayed events to be included in the current window.\nTrigger: When 30 minutes of data is collected, a trigger event is generated, and the average value is calculated based on this event.\nWatermark: By setting a watermark, processing of old data can be terminated.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Using a 15-minute window with a 15-minute tumbling window withAllowedLateness is the most suitable option for the following reasons:\n\nFlexibility: By allowing a 15-minute delay, it can accommodate various situations such as network latency or sensor failures.\nProcessing efficiency: Using a fixed window improves processing efficiency.\nCompliance with conditions: The window ends if no data is received for 15 minutes, meeting the specified condition.\nImplementation points:\n\n.withAllowedLateness: This operator allows delayed events to be included in the current window.\nTrigger: When 30 minutes of data is collected, a trigger event is generated, and the average value is calculated based on this event.\nWatermark: By setting a watermark, processing of old data can be terminated.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 1\u00a0week ago",
+      "content": "Without a doubt A: https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#session-windows",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 1\u00a0week ago",
+      "content": "JamesKarianis\n\t\t\t\n\n\n\t\t\t8\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Without a doubt A: https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#session-windows",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Without a doubt A: https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#session-windows",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 1\u00a0week ago",
+      "content": "The requirements are\n- recieve data for a duration of MORE than 30 minutes\n- end the window based on inactivity",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 1\u00a0week ago",
+      "content": "iooj\n\t\t\t\n\n\n\t\t\t8\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The requirements are\n- recieve data for a duration of MORE than 30 minutes\n- end the window based on inactivity",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The requirements are\n- recieve data for a duration of MORE than 30 minutes\n- end the window based on inactivity",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 3\u00a0weeks ago",
+      "content": "Correct answer: A.\nUse a session Window to cature data and create an aggregation when the Session is larger than 30 minutes. \nhttps://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#session-windows\nhttps://beam.apache.org/releases/javadoc/2.6.0/org/apache/beam/sdk/transforms/windowing/Sessions.html",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 3\u00a0weeks ago",
+      "content": "josech\n\t\t\t\n\n\n\t\t\t10\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Correct answer: A.\nUse a session Window to cature data and create an aggregation when the Session is larger than 30 minutes. \nhttps://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#session-windows\nhttps://beam.apache.org/releases/javadoc/2.6.0/org/apache/beam/sdk/transforms/windowing/Sessions.html",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Correct answer: A.\nUse a session Window to cature data and create an aggregation when the Session is larger than 30 minutes. \nhttps://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#session-windows\nhttps://beam.apache.org/releases/javadoc/2.6.0/org/apache/beam/sdk/transforms/windowing/Sessions.html",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 3\u00a0weeks ago",
+      "content": "C- Running average: https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#hopping-windows",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 3\u00a0weeks ago",
+      "content": "f74ca0c\n\t\t\t\n\n\n\t\t\t10\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C- Running average: https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#hopping-windows",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C- Running average: https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#hopping-windows",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Guys, I think its B. I was considering C, but C is calculating every 30 min, the 15min window gap data.Thats not what the questions wants. The questions wants a solution to get the average data of a 30 min window. So Its B.\n\nLook at this relating to C:\n\"Use hopping windows with a 15-minute window, and a thirty-minute period\" --> Wrong\n(IS DIFFERENT THEN)\n\"Use hopping windows with a 30-minute window, and a 15-minute period\" --> Right.\n\nThats why I think the B is the right answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "joao_01\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 3\u00a0weeks ago",
+      "content": "Guys, I think its B. I was considering C, but C is calculating every 30 min, the 15min window gap data.Thats not what the questions wants. The questions wants a solution to get the average data of a 30 min window. So Its B.\n\nLook at this relating to C:\n\"Use hopping windows with a 15-minute window, and a thirty-minute period\" --> Wrong\n(IS DIFFERENT THEN)\n\"Use hopping windows with a 30-minute window, and a 15-minute period\" --> Right.\n\nThats why I think the B is the right answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Guys, I think its B. I was considering C, but C is calculating every 30 min, the 15min window gap data.Thats not what the questions wants. The questions wants a solution to get the average data of a 30 min window. So Its B.\n\nLook at this relating to C:\n\"Use hopping windows with a 15-minute window, and a thirty-minute period\" --> Wrong\n(IS DIFFERENT THEN)\n\"Use hopping windows with a 30-minute window, and a 15-minute period\" --> Right.\n\nThats why I think the B is the right answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 3\u00a0weeks ago",
+      "content": "Actually I think with B, the window will never be closed because the probability of having a period of inactivity of 30 minutes is very low. In that case I think the option A is the more correct one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 3\u00a0weeks ago",
+      "content": "Actually I think with B, the window will never be closed because the probability of having a period of inactivity of 30 minutes is very low. In that case I think the option A is the more correct one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 3\u00a0weeks ago",
+      "content": "joao_01\n\t\t\t\n\n\n\t\t\t11\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actually I think with B, the window will never be closed because the probability of having a period of inactivity of 30 minutes is very low. In that case I think the option A is the more correct one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actually I think with B, the window will never be closed because the probability of having a period of inactivity of 30 minutes is very low. In that case I think the option A is the more correct one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "To take running averages of data, use hopping windows. You can use one-minute hopping windows with a thirty-second period to compute a one-minute running average every thirty seconds.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "342f1c6\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To take running averages of data, use hopping windows. You can use one-minute hopping windows with a thirty-second period to compute a one-minute running average every thirty seconds.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To take running averages of data, use hopping windows. You can use one-minute hopping windows with a thirty-second period to compute a one-minute running average every thirty seconds.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#session-windows\nA session window contains elements within a gap duration of another element. The gap duration is an interval between new data in a data stream. If data arrives after the gap duration, the data is assigned to a new window.\nSo, we need",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "kck6ra4214wm\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#session-windows\nA session window contains elements within a gap duration of another element. The gap duration is an interval between new data in a data stream. If data arrives after the gap duration, the data is assigned to a new window.\nSo, we need",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#session-windows\nA session window contains elements within a gap duration of another element. The gap duration is an interval between new data in a data stream. If data arrives after the gap duration, the data is assigned to a new window.\nSo, we need",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#hopping-windows   To take running averages of data, use hopping windows. You can use one-minute hopping windows with a thirty-second period to compute a one-minute running average every thirty seconds.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "imiu\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#hopping-windows   To take running averages of data, use hopping windows. You can use one-minute hopping windows with a thirty-second period to compute a one-minute running average every thirty seconds.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines#hopping-windows   To take running averages of data, use hopping windows. You can use one-minute hopping windows with a thirty-second period to compute a one-minute running average every thirty seconds.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option D to me, It aligns with the specified criteria for detecting the average noise level within a 30-minute duration and handling the end of the window when no data is received for 15 minutes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option D to me, It aligns with the specified criteria for detecting the average noise level within a 30-minute duration and handling the end of the window when no data is received for 15 minutes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option D to me, It aligns with the specified criteria for detecting the average noise level within a 30-minute duration and handling the end of the window when no data is received for 15 minutes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Agree D.\nData comes -> 30 mts duration.\nData didn't come in 15 mts -> 15 mts duration",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Agree D.\nData comes -> 30 mts duration.\nData didn't come in 15 mts -> 15 mts duration",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "AllenChen123\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agree D.\nData comes -> 30 mts duration.\nData didn't come in 15 mts -> 15 mts duration",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agree D.\nData comes -> 30 mts duration.\nData didn't come in 15 mts -> 15 mts duration",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "OPTION D is correct for the specific scenario where we want to detect the average noise level for a duration of more than 30 minutes but end the window when no data has been received for 15 minutes.\n\nExplanation:\n\n- Tumbling windows are non-overlapping windows, and in this case, you want to capture data continuously for 30-minute intervals.\n\n- Using a tumbling window with a 15-minute window size aligns with your requirement to detect the average noise level for a duration of more than 30 minutes.\n\n- Adding a .withAllowedLateness operator with a duration of fifteen minutes ensures that the window will still consider late-arriving data within that time frame. After fifteen minutes of no data, the window will be closed, and any late-arriving data will not be considered.\n\nOption A and B invalid as they capture fixed logic with 15 or 30 mins. Option C captures only 15 min average with 30 min trigger hence not suitable.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "BIGQUERY_ALT_ALT\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "OPTION D is correct for the specific scenario where we want to detect the average noise level for a duration of more than 30 minutes but end the window when no data has been received for 15 minutes.\n\nExplanation:\n\n- Tumbling windows are non-overlapping windows, and in this case, you want to capture data continuously for 30-minute intervals.\n\n- Using a tumbling window with a 15-minute window size aligns with your requirement to detect the average noise level for a duration of more than 30 minutes.\n\n- Adding a .withAllowedLateness operator with a duration of fifteen minutes ensures that the window will still consider late-arriving data within that time frame. After fifteen minutes of no data, the window will be closed, and any late-arriving data will not be considered.\n\nOption A and B invalid as they capture fixed logic with 15 or 30 mins. Option C captures only 15 min average with 30 min trigger hence not suitable.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "OPTION D is correct for the specific scenario where we want to detect the average noise level for a duration of more than 30 minutes but end the window when no data has been received for 15 minutes.\n\nExplanation:\n\n- Tumbling windows are non-overlapping windows, and in this case, you want to capture data continuously for 30-minute intervals.\n\n- Using a tumbling window with a 15-minute window size aligns with your requirement to detect the average noise level for a duration of more than 30 minutes.\n\n- Adding a .withAllowedLateness operator with a duration of fifteen minutes ensures that the window will still consider late-arriving data within that time frame. After fifteen minutes of no data, the window will be closed, and any late-arriving data will not be considered.\n\nOption A and B invalid as they capture fixed logic with 15 or 30 mins. Option C captures only 15 min average with 30 min trigger hence not suitable.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Hopping windows (called sliding windows in Apache Beam).\nTo take running averages of data, use hopping windows.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Sofiia98\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Hopping windows (called sliding windows in Apache Beam).\nTo take running averages of data, use hopping windows.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Hopping windows (called sliding windows in Apache Beam).\nTo take running averages of data, use hopping windows.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "C. Use hopping windows with a 15-minute window, and a thirty-minute period.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Use hopping windows with a 15-minute window, and a thirty-minute period.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Use hopping windows with a 15-minute window, and a thirty-minute period.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+COMMENT #95 FOR QUESTION 60
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Sharded tables, like LOGS_yyyymmdd, are useful for managing data, but querying across a long date range with table wildcards can lead to inefficiencies and exceed the 1,000 table limit in BigQuery. Instead of using multiple sharded tables, you should consider converting these into a partitioned table.
+
+A partitioned table allows you to store all the log data in a single table, but logically divides the data into partitions (e.g., by date). This way, you can efficiently query data across long date ranges without hitting the 1,000 table limit.
+============================================================

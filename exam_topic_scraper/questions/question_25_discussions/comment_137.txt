@@ -1,0 +1,16 @@
+COMMENT #137 FOR QUESTION 25
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+correct answer -> Using the Stackdriver API, create a project sink with advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+Option C is also most likely right answer but it doesn't have the filter. We don't want all the tables. We only want one. So the correct answer is D.
+
+Logging sink - Using a Logging sink, you can direct specific log entries to your business logic. In this example, you can use Cloud Audit logs for Compute Engine which use the resource type gce_firewall_rule to filter for the logs of interest. You can also add an event type GCE_OPERATION_DONE to the filter to capture only the completed log events. Here is the Logging filter used to identify the logs. You can try out the query in the Logs Viewer.
+
+Pub/Sub topic – In Pub/Sub, you can create a topic to which to direct the log sink and use the Pub/Sub message to trigger a cloud function. 
+
+Reference: https://cloud.google.com/blog/products/management-tools/automate-your-response-to-a-cloud-logging-event
+============================================================

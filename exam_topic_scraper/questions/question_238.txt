@@ -1,0 +1,392 @@
+================================================================================
+QUESTION:
+You want to encrypt the customer data stored in BigQuery. You need to implement per-user crypto-deletion on data stored in your tables. You want to adopt native features in Google Cloud to avoid custom solutions. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Implement Authenticated Encryption with Associated Data (AEAD) BigQuery functions while storing your data in BigQuery.
+										
+
+
+													B.
+												
+											
+											Create a customer-managed encryption key (CMEK) in Cloud KMS. Associate the key to the table while creating the table.
+										
+
+
+													C.
+												
+											
+											Create a customer-managed encryption key (CMEK) in Cloud KMS. Use the key to encrypt data before storing in BigQuery.
+										
+
+
+													D.
+												
+											
+											Encrypt your data during ingestion by using a cryptographic library supported by your ETL pipeline.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (42 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 238 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 238
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You want to encrypt the customer data stored in BigQuery. You need to implement per-user crypto-deletion on data stored in your tables. You want to adopt native features in Google Cloud to avoid custom solutions. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Implement Authenticated Encryption with Associated Data (AEAD) BigQuery functions while storing your data in BigQuery.
+										
+
+
+													B.
+												
+											
+											Create a customer-managed encryption key (CMEK) in Cloud KMS. Associate the key to the table while creating the table.
+										
+
+
+													C.
+												
+											
+											Create a customer-managed encryption key (CMEK) in Cloud KMS. Use the key to encrypt data before storing in BigQuery.
+										
+
+
+													D.
+												
+											
+											Encrypt your data during ingestion by using a cryptographic library supported by your ETL pipeline.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 1:46 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 238
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 1:46 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- AEAD cryptographic functions in BigQuery allow for encryption and decryption of data at the column level. 
+- You can encrypt specific data fields using a unique key per user and manage these keys outside of BigQuery (for example, in your application or using a key management system). 
+- By "deleting" or revoking access to the key for a specific user, you effectively make their data unreadable, achieving crypto-deletion. 
+- This method provides fine-grained encryption control but requires careful key management and integration with your applications.
+
+--- Comment #6 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- AEAD cryptographic functions in BigQuery allow for encryption and decryption of data at the column level. 
+- You can encrypt specific data fields using a unique key per user and manage these keys outside of BigQuery (for example, in your application or using a key management system). 
+- By "deleting" or revoking access to the key for a specific user, you effectively make their data unreadable, achieving crypto-deletion. 
+- This method provides fine-grained encryption control but requires careful key management and integration with your applications.
+
+--- Comment #7 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- AEAD cryptographic functions in BigQuery allow for encryption and decryption of data at the column level. 
+- You can encrypt specific data fields using a unique key per user and manage these keys outside of BigQuery (for example, in your application or using a key management system). 
+- By "deleting" or revoking access to the key for a specific user, you effectively make their data unreadable, achieving crypto-deletion. 
+- This method provides fine-grained encryption control but requires careful key management and integration with your applications.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- AEAD cryptographic functions in BigQuery allow for encryption and decryption of data at the column level. 
+- You can encrypt specific data fields using a unique key per user and manage these keys outside of BigQuery (for example, in your application or using a key management system). 
+- By "deleting" or revoking access to the key for a specific user, you effectively make their data unreadable, achieving crypto-deletion. 
+- This method provides fine-grained encryption control but requires careful key management and integration with your applications.
+
+--- Comment #13 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- AEAD cryptographic functions in BigQuery allow for encryption and decryption of data at the column level. 
+- You can encrypt specific data fields using a unique key per user and manage these keys outside of BigQuery (for example, in your application or using a key management system). 
+- By "deleting" or revoking access to the key for a specific user, you effectively make their data unreadable, achieving crypto-deletion. 
+- This method provides fine-grained encryption control but requires careful key management and integration with your applications.
+
+--- Comment #14 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			9 months, 1 week ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+- AEAD cryptographic functions in BigQuery allow for encryption and decryption of data at the column level. 
+- You can encrypt specific data fields using a unique key per user and manage these keys outside of BigQuery (for example, in your application or using a key management system). 
+- By "deleting" or revoking access to the key for a specific user, you effectively make their data unreadable, achieving crypto-deletion. 
+- This method provides fine-grained encryption control but requires careful key management and integration with your applications.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+- AEAD cryptographic functions in BigQuery allow for encryption and decryption of data at the column level. 
+- You can encrypt specific data fields using a unique key per user and manage these keys outside of BigQuery (for example, in your application or using a key management system). 
+- By "deleting" or revoking access to the key for a specific user, you effectively make their data unreadable, achieving crypto-deletion. 
+- This method provides fine-grained encryption control but requires careful key management and integration with your applications.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 9 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+https://cloud.google.com/bigquery/docs/aead-encryption-concepts
+https://cloud.google.com/bigquery/docs/reference/standard-sql/aead_encryption_functions
+
+--- Comment #23 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+JyoGCP
+			
+
+
+				Most Recent 
+
+
+			7 months, 3 weeks ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/bigquery/docs/aead-encryption-concepts
+https://cloud.google.com/bigquery/docs/reference/standard-sql/aead_encryption_functions
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/bigquery/docs/aead-encryption-concepts
+https://cloud.google.com/bigquery/docs/reference/standard-sql/aead_encryption_functions
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #31 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+A. 
+Implement Authenticated Encryption with Associated Data (AEAD) BigQuery functions while storing your data in BigQuery.
+
+--- Comment #32 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+scaenruy
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+A. 
+Implement Authenticated Encryption with Associated Data (AEAD) BigQuery functions while storing your data in BigQuery.
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+A. 
+Implement Authenticated Encryption with Associated Data (AEAD) BigQuery functions while storing your data in BigQuery.
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

@@ -1,0 +1,1759 @@
+================================================================================
+QUESTION:
+You work for a large fast food restaurant chain with over 400,000 employees. You store employee information in Google BigQuery in a Users table consisting of a FirstName field and a LastName field. A member of IT is building an application and asks you to modify the schema and data in BigQuery so the application can query a FullName field consisting of the value of the FirstName field concatenated with a space, followed by the value of the LastName field for each employee. How can you make that data available while minimizing cost?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a view in BigQuery that concatenates the FirstName and LastName field values to produce the FullName.
+										
+
+
+													B.
+												
+											
+											Add a new column called FullName to the Users table. Run an UPDATE statement that updates the FullName column for each user with the concatenation of the FirstName and LastName values.
+										
+
+
+													C.
+												
+											
+											Create a Google Cloud Dataflow job that queries BigQuery for the entire Users table, concatenates the FirstName value and LastName value for each user, and loads the proper values for FirstName, LastName, and FullName into a new table in BigQuery.
+										
+
+
+													D.
+												
+											
+											Use BigQuery to export the data for the table to a CSV file. Create a Google Cloud Dataproc job to process the CSV file and output a new CSV file containing the proper values for FirstName, LastName and FullName. Run a BigQuery load job to load the new CSV file into BigQuery.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (337 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 43 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 43
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You work for a large fast food restaurant chain with over 400,000 employees. You store employee information in Google BigQuery in a Users table consisting of a FirstName field and a LastName field. A member of IT is building an application and asks you to modify the schema and data in BigQuery so the application can query a FullName field consisting of the value of the FirstName field concatenated with a space, followed by the value of the LastName field for each employee. How can you make that data available while minimizing cost?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a view in BigQuery that concatenates the FirstName and LastName field values to produce the FullName.
+										
+
+
+													B.
+												
+											
+											Add a new column called FullName to the Users table. Run an UPDATE statement that updates the FullName column for each user with the concatenation of the FirstName and LastName values.
+										
+
+
+													C.
+												
+											
+											Create a Google Cloud Dataflow job that queries BigQuery for the entire Users table, concatenates the FirstName value and LastName value for each user, and loads the proper values for FirstName, LastName, and FullName into a new table in BigQuery.
+										
+
+
+													D.
+												
+											
+											Use BigQuery to export the data for the table to a CSV file. Create a Google Cloud Dataproc job to process the CSV file and output a new CSV file containing the proper values for FirstName, LastName and FullName. Run a BigQuery load job to load the new CSV file into BigQuery.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 17, 2020, 4:39 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 43
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 17, 2020, 4:39 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer will be A because when you create View it does not store extra space and its a logical representation, for rest of the option you need to write large code and extra processing for dataflow/dataproc
+
+--- Comment #6 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer will be A because when you create View it does not store extra space and its a logical representation, for rest of the option you need to write large code and extra processing for dataflow/dataproc
+
+--- Comment #7 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer will be A because when you create View it does not store extra space and its a logical representation, for rest of the option you need to write large code and extra processing for dataflow/dataproc
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer will be A because when you create View it does not store extra space and its a logical representation, for rest of the option you need to write large code and extra processing for dataflow/dataproc
+
+--- Comment #13 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer will be A because when you create View it does not store extra space and its a logical representation, for rest of the option you need to write large code and extra processing for dataflow/dataproc
+
+--- Comment #14 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer will be A because when you create View it does not store extra space and its a logical representation, for rest of the option you need to write large code and extra processing for dataflow/dataproc
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Answer will be A because when you create View it does not store extra space and its a logical representation, for rest of the option you need to write large code and extra processing for dataflow/dataproc
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 68 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+Because views are not materialized, the query that defines the view is run each time the view is queried. Queries are billed according to the total amount of data in all table fields referenced directly or indirectly by the top-level query
+
+--- Comment #20 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+Because views are not materialized, the query that defines the view is run each time the view is queried. Queries are billed according to the total amount of data in all table fields referenced directly or indirectly by the top-level query
+
+--- Comment #21 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+[Removed]
+			
+
+
+			5 years ago
+
+--- Comment #22 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+Because views are not materialized, the query that defines the view is run each time the view is queried. Queries are billed according to the total amount of data in all table fields referenced directly or indirectly by the top-level query
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+Because views are not materialized, the query that defines the view is run each time the view is queried. Queries are billed according to the total amount of data in all table fields referenced directly or indirectly by the top-level query
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+This was try in Oracle era, BQ prunes the query before running, so having a view as an intermediate layer does not have any impact, unless there is a heavy filtering happening within the view definition.
+
+--- Comment #27 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+This was try in Oracle era, BQ prunes the query before running, so having a view as an intermediate layer does not have any impact, unless there is a heavy filtering happening within the view definition.
+
+--- Comment #28 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+cloud_rider
+			
+
+
+			4 months, 1 week ago
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+This was try in Oracle era, BQ prunes the query before running, so having a view as an intermediate layer does not have any impact, unless there is a heavy filtering happening within the view definition.
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+This was try in Oracle era, BQ prunes the query before running, so having a view as an intermediate layer does not have any impact, unless there is a heavy filtering happening within the view definition.
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #35 ---
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+Wouldn´t "total amount of data in all table fields referenced directly or indirectly by the top-level query" be FirstName and LastName?
+
+--- Comment #36 ---
+Author: Unknown | Date: 4 years, 8 months ago | Votes: 0
+lgdantas
+			
+
+
+			4 years, 8 months ago
+
+--- Comment #37 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+Wouldn´t "total amount of data in all table fields referenced directly or indirectly by the top-level query" be FirstName and LastName?
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+Wouldn´t "total amount of data in all table fields referenced directly or indirectly by the top-level query" be FirstName and LastName?
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #41 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+You're right, BigQuery bills on number of bytes processed, regardless of them being materialized. If you don't create a new column and use a view instead, you will probably have a small performance hit but query costs would be the same and storage cost wouldn't increase (unlike storing a new column)
+
+--- Comment #42 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+You're right, BigQuery bills on number of bytes processed, regardless of them being materialized. If you don't create a new column and use a view instead, you will probably have a small performance hit but query costs would be the same and storage cost wouldn't increase (unlike storing a new column)
+
+--- Comment #43 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+lollo1234
+			
+
+
+			3 years, 10 months ago
+
+--- Comment #44 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+You're right, BigQuery bills on number of bytes processed, regardless of them being materialized. If you don't create a new column and use a view instead, you will probably have a small performance hit but query costs would be the same and storage cost wouldn't increase (unlike storing a new column)
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+You're right, BigQuery bills on number of bytes processed, regardless of them being materialized. If you don't create a new column and use a view instead, you will probably have a small performance hit but query costs would be the same and storage cost wouldn't increase (unlike storing a new column)
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #48 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+You are asked to modify the schema and data. By using a view, the underlined table remains intact.
+
+--- Comment #49 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+You are asked to modify the schema and data. By using a view, the underlined table remains intact.
+
+--- Comment #50 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+yoshik
+			
+
+
+			3 years, 6 months ago
+
+--- Comment #51 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+You are asked to modify the schema and data. By using a view, the underlined table remains intact.
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+You are asked to modify the schema and data. By using a view, the underlined table remains intact.
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+good catch, yoshik.
+
+--- Comment #56 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+good catch, yoshik.
+
+--- Comment #57 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+HarshKothari21
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+good catch, yoshik.
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+good catch, yoshik.
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #67 ---
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+Views are cached the same as regular tables are, so I don't get the point of billing. It will cost the same as query to a regular table.
+
+--- Comment #68 ---
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+alecuba16
+			
+
+
+			2 years, 11 months ago
+
+--- Comment #69 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Views are cached the same as regular tables are, so I don't get the point of billing. It will cost the same as query to a regular table.
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+Views are cached the same as regular tables are, so I don't get the point of billing. It will cost the same as query to a regular table.
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #73 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+the point of billing is extra storage costs for a new concatenated column
+
+--- Comment #74 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+the point of billing is extra storage costs for a new concatenated column
+
+--- Comment #75 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+ovokpus
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+the point of billing is extra storage costs for a new concatenated column
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+the point of billing is extra storage costs for a new concatenated column
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #84 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+Can't be A
+
+--- Comment #85 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+[Removed]
+			
+
+
+			5 years ago
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+Can't be A
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+Can't be A
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #92 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+I agree that A is correct. Also, I think B is wrong as the UPDATE statement is used to update values in existing columns, not to create a new column.
+
+--- Comment #93 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+beowulf_kat
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #94 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+I agree that A is correct. Also, I think B is wrong as the UPDATE statement is used to update values in existing columns, not to create a new column.
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+I agree that A is correct. Also, I think B is wrong as the UPDATE statement is used to update values in existing columns, not to create a new column.
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Of course, you use UPDATE after creating the new column, that is what the option said
+
+--- Comment #99 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Of course, you use UPDATE after creating the new column, that is what the option said
+
+--- Comment #100 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+ovokpus
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #101 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Of course, you use UPDATE after creating the new column, that is what the option said
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+Of course, you use UPDATE after creating the new column, that is what the option said
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #105 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+What happen if there are new employees joining the company, update every single time?
+
+--- Comment #106 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+What happen if there are new employees joining the company, update every single time?
+
+--- Comment #107 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+[Removed]
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+What happen if there are new employees joining the company, update every single time?
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+What happen if there are new employees joining the company, update every single time?
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #116 ---
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+cannot be 'A'as it clearly says that you need to change the schema and data.
+
+--- Comment #117 ---
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+funtoosh
+			
+
+
+			4 years, 1 month ago
+
+--- Comment #118 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+cannot be 'A'as it clearly says that you need to change the schema and data.
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+cannot be 'A'as it clearly says that you need to change the schema and data.
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 17 times
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #122 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Your primary task is to "make data available".
+Changing the schema is just the request from the member "A member of IT is building an application and ***asks you to modify the schema and data*** in BigQuery". You don't have to follow it if it does not make sense.
+
+--- Comment #123 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Your primary task is to "make data available".
+Changing the schema is just the request from the member "A member of IT is building an application and ***asks you to modify the schema and data*** in BigQuery". You don't have to follow it if it does not make sense.
+
+--- Comment #124 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+exnaniantwort
+			
+
+
+			3 years, 2 months ago
+
+--- Comment #125 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Your primary task is to "make data available".
+Changing the schema is just the request from the member "A member of IT is building an application and ***asks you to modify the schema and data*** in BigQuery". You don't have to follow it if it does not make sense.
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+Your primary task is to "make data available".
+Changing the schema is just the request from the member "A member of IT is building an application and ***asks you to modify the schema and data*** in BigQuery". You don't have to follow it if it does not make sense.
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 15 times
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+A yes, That make a lot of sense and also if you update the table only once with UPDATE if there is a new employee it will not be up to date with the new column, if the app use a view it will be up to date every time it query.
+But in any case the cost will not be minimized.
+
+--- Comment #130 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+A yes, That make a lot of sense and also if you update the table only once with UPDATE if there is a new employee it will not be up to date with the new column, if the app use a view it will be up to date every time it query.
+But in any case the cost will not be minimized.
+
+--- Comment #131 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+YorelNation
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+A yes, That make a lot of sense and also if you update the table only once with UPDATE if there is a new employee it will not be up to date with the new column, if the app use a view it will be up to date every time it query.
+But in any case the cost will not be minimized.
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+A yes, That make a lot of sense and also if you update the table only once with UPDATE if there is a new employee it will not be up to date with the new column, if the app use a view it will be up to date every time it query.
+But in any case the cost will not be minimized.
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #138 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+There is always different application requirement to use different format. That way you will just creating more and more redundant columns in different formats. That is tedious.
+
+--- Comment #139 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+exnaniantwort
+			
+
+
+			3 years, 2 months ago
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+There is always different application requirement to use different format. That way you will just creating more and more redundant columns in different formats. That is tedious.
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+There is always different application requirement to use different format. That way you will just creating more and more redundant columns in different formats. That is tedious.
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #149 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Correct: B
+BigQuery has no quota on the DML statements. (Search Google - does bigquery have quota for update).
+Why not C: This is a one time activity and SQL is the easiest way to program it. DataFlow is way overkill for this. You will need to find an engineer who can develop DataFlow pipelines. Whereas, SQL is so much more widely known and easier. One of the great features about BigQuery is its SQL interface. Even for BigQueryML services.
+
+--- Comment #150 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+BhupiSG
+			
+
+
+				Highly Voted 
+
+
+			4 years ago
+
+--- Comment #151 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+Correct: B
+BigQuery has no quota on the DML statements. (Search Google - does bigquery have quota for update).
+Why not C: This is a one time activity and SQL is the easiest way to program it. DataFlow is way overkill for this. You will need to find an engineer who can develop DataFlow pipelines. Whereas, SQL is so much more widely known and easier. One of the great features about BigQuery is its SQL interface. Even for BigQueryML services.
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+Correct: B
+BigQuery has no quota on the DML statements. (Search Google - does bigquery have quota for update).
+Why not C: This is a one time activity and SQL is the easiest way to program it. DataFlow is way overkill for this. You will need to find an engineer who can develop DataFlow pipelines. Whereas, SQL is so much more widely known and easier. One of the great features about BigQuery is its SQL interface. Even for BigQueryML services.
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 47 times
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+DML statements don't increase costs, but storing a new column does. I see A is correct (also see my comment above)
+
+--- Comment #156 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+DML statements don't increase costs, but storing a new column does. I see A is correct (also see my comment above)
+
+--- Comment #157 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+lollo1234
+			
+
+
+			3 years, 10 months ago
+
+--- Comment #158 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+DML statements don't increase costs, but storing a new column does. I see A is correct (also see my comment above)
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+DML statements don't increase costs, but storing a new column does. I see A is correct (also see my comment above)
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #162 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Exactly. Cost is the reason to reject B.
+How come so many people vote for this wrong option?
+
+--- Comment #163 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Exactly. Cost is the reason to reject B.
+How come so many people vote for this wrong option?
+
+--- Comment #164 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+exnaniantwort
+			
+
+
+			3 years, 2 months ago
+
+--- Comment #165 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Exactly. Cost is the reason to reject B.
+How come so many people vote for this wrong option?
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+Exactly. Cost is the reason to reject B.
+How come so many people vote for this wrong option?
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #169 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Storage is cheap compared to computation
+
+--- Comment #170 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Storage is cheap compared to computation
+
+--- Comment #171 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+ler_mp
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+Storage is cheap compared to computation
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+Storage is cheap compared to computation
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #180 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+But you need to maintain table means regularly you have to execute the update query whenever new data comes.
+
+--- Comment #181 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+DGames
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+But you need to maintain table means regularly you have to execute the update query whenever new data comes.
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+But you need to maintain table means regularly you have to execute the update query whenever new data comes.
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #188 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+I will also add that B would imply changing upstream workloads to write the new field every time a records gets added
+
+--- Comment #189 ---
+Author: Unknown | Date: 3 years, 10 months ago | Votes: 0
+lollo1234
+			
+
+
+			3 years, 10 months ago
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+I will also add that B would imply changing upstream workloads to write the new field every time a records gets added
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+I will also add that B would imply changing upstream workloads to write the new field every time a records gets added
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #193 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #194 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #196 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #197 ---
+Author: Unknown | Date: 3 weeks ago | Votes: 0
+Minimal cost: no extra space, no cost to set up, no need to write code, rest of applications see no change, no need to offload/reprocess/reload (although batch load is free).
+
+--- Comment #198 ---
+Author: Unknown | Date: 3 weeks ago | Votes: 0
+willyunger
+			
+
+
+				Most Recent 
+
+
+			3 weeks ago
+
+--- Comment #199 ---
+Author: Unknown | Date:  | Votes: 0
+Minimal cost: no extra space, no cost to set up, no need to write code, rest of applications see no change, no need to offload/reprocess/reload (although batch load is free).
+
+--- Comment #200 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #201 ---
+Author: Unknown | Date:  | Votes: 0
+Minimal cost: no extra space, no cost to set up, no need to write code, rest of applications see no change, no need to offload/reprocess/reload (although batch load is free).
+
+--- Comment #202 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #203 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #204 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #205 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #206 ---
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+I would say A but since it specifically says "modify" then the answer is B.
+
+--- Comment #207 ---
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+LP_PDE
+			
+
+
+			2 months, 2 weeks ago
+
+--- Comment #208 ---
+Author: Unknown | Date:  | Votes: 0
+I would say A but since it specifically says "modify" then the answer is B.
+
+--- Comment #209 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #210 ---
+Author: Unknown | Date:  | Votes: 0
+I would say A but since it specifically says "modify" then the answer is B.
+
+--- Comment #211 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #212 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #213 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #214 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #215 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+E. Say to the IT specialist to take care of it on the app side...
+B would work for historical data if we had an underlying change made to automate the concatenation for new records. It is not clear, so I would say A is a quick solution.
+
+--- Comment #216 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+iooj
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #217 ---
+Author: Unknown | Date:  | Votes: 0
+E. Say to the IT specialist to take care of it on the app side...
+B would work for historical data if we had an underlying change made to automate the concatenation for new records. It is not clear, so I would say A is a quick solution.
+
+--- Comment #218 ---
+Author: Unknown | Date:  | Votes: 0
+E. Say to the IT specialist to take care of it on the app side...
+B would work for historical data if we had an underlying change made to automate the concatenation for new records. It is not clear, so I would say A is a quick solution.
+
+--- Comment #219 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #220 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #221 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #222 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #223 ---
+Author: Unknown | Date: 11 months, 2 weeks ago | Votes: 0
+Requirement is to be able to filter on full name. So, you would be querying all data unless you have materialized full name column.
+
+--- Comment #224 ---
+Author: Unknown | Date: 11 months, 2 weeks ago | Votes: 0
+Ramanaiah
+			
+
+
+			11 months, 2 weeks ago
+
+--- Comment #225 ---
+Author: Unknown | Date:  | Votes: 0
+Requirement is to be able to filter on full name. So, you would be querying all data unless you have materialized full name column.
+
+--- Comment #226 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #227 ---
+Author: Unknown | Date:  | Votes: 0
+Requirement is to be able to filter on full name. So, you would be querying all data unless you have materialized full name column.
+
+--- Comment #228 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #229 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #230 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #231 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #232 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Definitely A
+
+--- Comment #233 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+philli1011
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #234 ---
+Author: Unknown | Date:  | Votes: 0
+Definitely A
+
+--- Comment #235 ---
+Author: Unknown | Date:  | Votes: 0
+Definitely A
+
+--- Comment #236 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #237 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #238 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #239 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #240 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+The question might be outdated, but I would like to offer my perspective:
+
+1. Ideally, I would opt for a materialized view to avoid updating pipelines
+2. In 2023, I see no concerns regarding the costs involved in storing denormalized data for analytical needs
+3. Regarding this question I would choose option A, although the concern about extra costs due to recalculations is valid for me
+
+--- Comment #241 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+axantroff
+			
+
+
+			1 year, 4 months ago
+
+--- Comment #242 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The question might be outdated, but I would like to offer my perspective:
+
+1. Ideally, I would opt for a materialized view to avoid updating pipelines
+2. In 2023, I see no concerns regarding the costs involved in storing denormalized data for analytical needs
+3. Regarding this question I would choose option A, although the concern about extra costs due to recalculations is valid for me
+
+--- Comment #243 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #244 ---
+Author: Unknown | Date:  | Votes: 0
+The question might be outdated, but I would like to offer my perspective:
+
+1. Ideally, I would opt for a materialized view to avoid updating pipelines
+2. In 2023, I see no concerns regarding the costs involved in storing denormalized data for analytical needs
+3. Regarding this question I would choose option A, although the concern about extra costs due to recalculations is valid for me
+
+--- Comment #245 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #246 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #247 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Did u pass the exam ?
+
+--- Comment #248 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Did u pass the exam ?
+
+--- Comment #249 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+LaxmanTiwari
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #250 ---
+Author: Unknown | Date:  | Votes: 0
+Did u pass the exam ?
+
+--- Comment #251 ---
+Author: Unknown | Date:  | Votes: 0
+Did u pass the exam ?
+
+--- Comment #252 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #253 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #254 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #255 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #256 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #257 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Answer should be A 'cos the First request is: make that data available.
+
+--- Comment #258 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+steghe
+			
+
+
+			1 year, 5 months ago
+
+--- Comment #259 ---
+Author: Unknown | Date:  | Votes: 0
+Answer should be A 'cos the First request is: make that data available.
+
+--- Comment #260 ---
+Author: Unknown | Date:  | Votes: 0
+Answer should be A 'cos the First request is: make that data available.
+
+--- Comment #261 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #262 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #263 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #264 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #265 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Its A ..... "asked to change schema" is a trick to test your skills. Better to make use of MV's if anyhow the application is gonna query repeatedly. MV's will rebuild itself, if query invalidates from cache results
+
+--- Comment #266 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+alihabib
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #267 ---
+Author: Unknown | Date:  | Votes: 0
+Its A ..... "asked to change schema" is a trick to test your skills. Better to make use of MV's if anyhow the application is gonna query repeatedly. MV's will rebuild itself, if query invalidates from cache results
+
+--- Comment #268 ---
+Author: Unknown | Date:  | Votes: 0
+Its A ..... "asked to change schema" is a trick to test your skills. Better to make use of MV's if anyhow the application is gonna query repeatedly. MV's will rebuild itself, if query invalidates from cache results
+
+--- Comment #269 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #270 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #271 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #272 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #273 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+In the case of B, the data pipeline that adds new employee information must also be modified, which is not the correct answer in terms of cost minimization.
+
+--- Comment #274 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+nescafe7
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #275 ---
+Author: Unknown | Date:  | Votes: 0
+In the case of B, the data pipeline that adds new employee information must also be modified, which is not the correct answer in terms of cost minimization.
+
+--- Comment #276 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #277 ---
+Author: Unknown | Date:  | Votes: 0
+In the case of B, the data pipeline that adds new employee information must also be modified, which is not the correct answer in terms of cost minimization.
+
+--- Comment #278 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #279 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #280 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #281 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #282 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+It's A. If you add a column to the table, you will be billed every time you query that new column. The same way you would be billed with the view created by A. 
+
+B,C and D create a new column. A does not create a new column. It just provides the interface for the application to access the data. B,C and D will have to be rerun to compute the column value of new customers. 
+
+A is done only once, costs 0 for storage, and is charged about the same as all the others when it comes to compute because even if you choose B C and D you would have to query the data in the end anyway.
+
+--- Comment #283 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Mathew106
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #284 ---
+Author: Unknown | Date:  | Votes: 0
+It's A. If you add a column to the table, you will be billed every time you query that new column. The same way you would be billed with the view created by A. 
+
+B,C and D create a new column. A does not create a new column. It just provides the interface for the application to access the data. B,C and D will have to be rerun to compute the column value of new customers. 
+
+A is done only once, costs 0 for storage, and is charged about the same as all the others when it comes to compute because even if you choose B C and D you would have to query the data in the end anyway.
+
+--- Comment #285 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #286 ---
+Author: Unknown | Date:  | Votes: 0
+It's A. If you add a column to the table, you will be billed every time you query that new column. The same way you would be billed with the view created by A. 
+
+B,C and D create a new column. A does not create a new column. It just provides the interface for the application to access the data. B,C and D will have to be rerun to compute the column value of new customers. 
+
+A is done only once, costs 0 for storage, and is charged about the same as all the others when it comes to compute because even if you choose B C and D you would have to query the data in the end anyway.
+
+--- Comment #287 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #288 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #289 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #290 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #291 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+modify the schema
+
+--- Comment #292 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+autumn2005
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #293 ---
+Author: Unknown | Date:  | Votes: 0
+modify the schema
+
+--- Comment #294 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #295 ---
+Author: Unknown | Date:  | Votes: 0
+modify the schema
+
+--- Comment #296 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #297 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #298 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #299 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #300 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Can you code a script for a BQ Column? I don't think it's "B", it is pretty tricky
+
+--- Comment #301 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+theseawillclaim
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #302 ---
+Author: Unknown | Date:  | Votes: 0
+Can you code a script for a BQ Column? I don't think it's "B", it is pretty tricky
+
+--- Comment #303 ---
+Author: Unknown | Date:  | Votes: 0
+Can you code a script for a BQ Column? I don't think it's "B", it is pretty tricky
+
+--- Comment #304 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #305 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #306 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #307 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #308 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Everything but A) new view is wrong.
+
+B) sounds okay, but introduces a new column which means more storage, thus increasing cost.
+C) Dataflow is obvious overkill for a simple task such as concatenating two strings.
+D) Starting up a Dataproc cluster just for string concatenation is super overkill.
+
+--- Comment #309 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+KC_go_reply
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #310 ---
+Author: Unknown | Date:  | Votes: 0
+Everything but A) new view is wrong.
+
+B) sounds okay, but introduces a new column which means more storage, thus increasing cost.
+C) Dataflow is obvious overkill for a simple task such as concatenating two strings.
+D) Starting up a Dataproc cluster just for string concatenation is super overkill.
+
+--- Comment #311 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #312 ---
+Author: Unknown | Date:  | Votes: 0
+Everything but A) new view is wrong.
+
+B) sounds okay, but introduces a new column which means more storage, thus increasing cost.
+C) Dataflow is obvious overkill for a simple task such as concatenating two strings.
+D) Starting up a Dataproc cluster just for string concatenation is super overkill.
+
+--- Comment #313 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #314 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #315 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #316 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #317 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+if a new field is only necessary for one project, and it is only the concatenation of two existing fields, it is ok to create a view that gets used for a specific task.
+
+--- Comment #318 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+vaga1
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #319 ---
+Author: Unknown | Date:  | Votes: 0
+if a new field is only necessary for one project, and it is only the concatenation of two existing fields, it is ok to create a view that gets used for a specific task.
+
+--- Comment #320 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #321 ---
+Author: Unknown | Date:  | Votes: 0
+if a new field is only necessary for one project, and it is only the concatenation of two existing fields, it is ok to create a view that gets used for a specific task.
+
+--- Comment #322 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #323 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #324 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #325 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #326 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+I'd go for A.
+The main issue with answers B,C,D is that they are just temporary solution. Whenever a new employee comes in (there are 400.000 of them at the moment, so we can expect every day a few new guys) we need to update the fullname table/field again. Additionally each of these answers need twice as much capacity (BigQuery stores data in a columnar format, so optimizing is not possible). Although the price for the needed capacity will be far below 0.01$/month.
+The main argument against A is that compute power costs more than capacity. Please look how BQ is priced: https://cloud.google.com/bigquery/pricing#query_pricing
+In the default On-demand compute pricing it is charged for "the number of bytes processed by each query" so there will be no any difference in computing costs for any option.
+Yeah, there is also this argument about modyfing schema in the requirements. Lets be professional - it is not a requirement for OUR schema. If you can resolve the issue with 0 change to YOUR schema then you are more than ok. And anyway, from requestor point of view, the schema HE uses in his app will be modifed as he needed.
+
+--- Comment #327 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Jarek7
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #328 ---
+Author: Unknown | Date:  | Votes: 0
+I'd go for A.
+The main issue with answers B,C,D is that they are just temporary solution. Whenever a new employee comes in (there are 400.000 of them at the moment, so we can expect every day a few new guys) we need to update the fullname table/field again. Additionally each of these answers need twice as much capacity (BigQuery stores data in a columnar format, so optimizing is not possible). Although the price for the needed capacity will be far below 0.01$/month.
+The main argument against A is that compute power costs more than capacity. Please look how BQ is priced: https://cloud.google.com/bigquery/pricing#query_pricing
+In the default On-demand compute pricing it is charged for "the number of bytes processed by each query" so there will be no any difference in computing costs for any option.
+Yeah, there is also this argument about modyfing schema in the requirements. Lets be professional - it is not a requirement for OUR schema. If you can resolve the issue with 0 change to YOUR schema then you are more than ok. And anyway, from requestor point of view, the schema HE uses in his app will be modifed as he needed.
+
+--- Comment #329 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #330 ---
+Author: Unknown | Date:  | Votes: 0
+I'd go for A.
+The main issue with answers B,C,D is that they are just temporary solution. Whenever a new employee comes in (there are 400.000 of them at the moment, so we can expect every day a few new guys) we need to update the fullname table/field again. Additionally each of these answers need twice as much capacity (BigQuery stores data in a columnar format, so optimizing is not possible). Although the price for the needed capacity will be far below 0.01$/month.
+The main argument against A is that compute power costs more than capacity. Please look how BQ is priced: https://cloud.google.com/bigquery/pricing#query_pricing
+In the default On-demand compute pricing it is charged for "the number of bytes processed by each query" so there will be no any difference in computing costs for any option.
+Yeah, there is also this argument about modyfing schema in the requirements. Lets be professional - it is not a requirement for OUR schema. If you can resolve the issue with 0 change to YOUR schema then you are more than ok. And anyway, from requestor point of view, the schema HE uses in his app will be modifed as he needed.
+
+--- Comment #331 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #332 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #333 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #334 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #335 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #336 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #337 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

@@ -1,0 +1,14 @@
+COMMENT #68 FOR QUESTION 124599
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Here's why the other options may not ensure the requirement is met:
+D. Delta Lake does not use the EXTERNAL keyword in the same way as some other SQL-based systems. In Delta Lake, whether a table is external is determined by where the data files are stored, not by a keyword in the CREATE TABLE statement.
+
+%sql
+CREATE TABLE f1_demo.results_external
+USING DELTA
+LOCATION '/mnt/formula1dl/demo/results_external'
+============================================================

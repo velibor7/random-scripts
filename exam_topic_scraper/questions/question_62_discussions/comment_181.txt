@@ -1,0 +1,10 @@
+COMMENT #181 FOR QUESTION 62
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+C is, I think, the correct answer: Watermark is different from late data. Watermark in implementation is a monotonically increasing timestamp. When Beam/Dataflow see a record with an event timestamp that is earlier than the watermark, the record is treated as late data.
+I’ll try to explain: Late data is inherent to Beam’s model for out-of-order processing. What does it mean for data to be late? The definition and its properties are intertwined with watermarks that track the progress of each computation across the event time domain. The simple intuition behind handling lateness is this: only late input should result in late data anywhere in the pipeline.
+So, is not easy to decide between C and D. If you ask me I’d say C since for D we ought to make some suppositions.
+============================================================

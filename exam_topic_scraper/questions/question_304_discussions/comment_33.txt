@@ -1,0 +1,10 @@
+COMMENT #33 FOR QUESTION 304
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Option B, creating a materialized view and configuring a partition expiration on the base table to retain only the last one year of partitions, would not meet the requirement of retaining full historical data in the base tables. Partition expiration would delete older data, which is not desirable if you need to keep the full historical data.
+
+Option A, on the other hand, allows you to create a materialized view that aggregates the data for the past year without deleting any historical data from the base table. This ensures that you always have access to the latest data while retaining the full history.
+============================================================

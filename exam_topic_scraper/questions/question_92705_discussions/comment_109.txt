@@ -1,0 +1,12 @@
+COMMENT #109 FOR QUESTION 92705
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+As stated in the documentation (https://cloud.google.com/sql/docs/mysql/replication/cross-region-replicas) the cross region read replica promotion is a manual activity and it destroys all the previous replica flow. The pre-test configuration is having a primary instance on region 1 with 2 read replicas on region 2 and 3; the only way to do that is to create a replica of DB2 in region 1 (DB4), promote it as a primary instance and then create DB4 read replicas on region 2 and 3. 
+- Answer D is the only one in that direction
+- Answer A is wrong because the replica flow between DB1 and DB2 has been destroyed with the promotion
+- Answer B is partially correct but not enough
+- Answer C is wrong because we are talking about read replica, not high availability, and the replica flow between DB1 and DB2 has been destroyed by the promotion
+============================================================

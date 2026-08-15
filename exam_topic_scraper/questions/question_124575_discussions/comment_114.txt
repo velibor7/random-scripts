@@ -1,0 +1,11 @@
+COMMENT #114 FOR QUESTION 124575
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Thus, Option A is also a valid strategy:
+
+Set spark.sql.files.maxPartitionBytes to 512 MB, process the data with narrow transformations, and write to Parquet.
+By reducing the value of spark.sql.files.maxPartitionBytes, you ensure more partitions are created during the read phase, leading to output files closer to the desired size, assuming the transformations are narrow and no shuffling occurs.
+============================================================

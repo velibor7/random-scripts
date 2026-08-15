@@ -1,0 +1,321 @@
+================================================================================
+QUESTION:
+A Databricks job has been configured with three tasks, each of which is a Databricks notebook. Task A does not depend on other tasks. Tasks B and C run in parallel, with each having a serial dependency on task A.What will be the resulting state if tasks A and B complete successfully but task C fails during a scheduled run?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											All logic expressed in the notebook associated with tasks A and B will have been successfully completed; some operations in task C may have completed successfully.
+										
+
+
+													B.
+												
+											
+											Unless all tasks complete successfully, no changes will be committed to the Lakehouse; because task C failed, all commits will be rolled back automatically.
+										
+
+
+													C.
+												
+											
+											Because all tasks are managed as a dependency graph, no changes will be committed to the Lakehouse until all tasks have successfully been completed.
+										
+
+
+													D.
+												
+											
+											All logic expressed in the notebook associated with tasks A and B will have been successfully completed; any changes made in task C will be rolled back due to task failure.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (32 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Certified Data Engineer Professional topic 1 question 179 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Databricks's
+						Certified Data Engineer Professional
+
+							Question #: 179
+							Topic #: 1
+						
+[All Certified Data Engineer Professional Questions]
+
+
+
+							
+								A Databricks job has been configured with three tasks, each of which is a Databricks notebook. Task A does not depend on other tasks. Tasks B and C run in parallel, with each having a serial dependency on task A.What will be the resulting state if tasks A and B complete successfully but task C fails during a scheduled run?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											All logic expressed in the notebook associated with tasks A and B will have been successfully completed; some operations in task C may have completed successfully.
+										
+
+
+													B.
+												
+											
+											Unless all tasks complete successfully, no changes will be committed to the Lakehouse; because task C failed, all commits will be rolled back automatically.
+										
+
+
+													C.
+												
+											
+											Because all tasks are managed as a dependency graph, no changes will be committed to the Lakehouse until all tasks have successfully been completed.
+										
+
+
+													D.
+												
+											
+											All logic expressed in the notebook associated with tasks A and B will have been successfully completed; any changes made in task C will be rolled back due to task failure.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								imatheushenrique
+							
+							
+							at 
+							May 31, 2024, 11:34 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Databricks's
+						Certified Data Engineer Professional
+
+							Question #: 179
+							Topic #: 1
+						
+[All Certified Data Engineer Professional Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								imatheushenrique
+							
+							
+							at 
+							May 31, 2024, 11:34 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 5 months, 3 weeks ago | Votes: 0
+Each Notebook or Task consists of multiple commands and actions performed by them. Each action may be on the data in the Delta Lake where ACID transactions take place and fully rollback certain data manipulations if some of them fail but the Notebooks/Tasks in the Job themselves will not completely fail or rollback. Therefore Answer A correctly describes the result considering the dependencies configures between the Notebooks/Tasks as described in the question.
+
+--- Comment #6 ---
+Author: Unknown | Date: 5 months, 3 weeks ago | Votes: 0
+Each Notebook or Task consists of multiple commands and actions performed by them. Each action may be on the data in the Delta Lake where ACID transactions take place and fully rollback certain data manipulations if some of them fail but the Notebooks/Tasks in the Job themselves will not completely fail or rollback. Therefore Answer A correctly describes the result considering the dependencies configures between the Notebooks/Tasks as described in the question.
+
+--- Comment #7 ---
+Author: Unknown | Date: 5 months, 3 weeks ago | Votes: 0
+Each Notebook or Task consists of multiple commands and actions performed by them. Each action may be on the data in the Delta Lake where ACID transactions take place and fully rollback certain data manipulations if some of them fail but the Notebooks/Tasks in the Job themselves will not completely fail or rollback. Therefore Answer A correctly describes the result considering the dependencies configures between the Notebooks/Tasks as described in the question.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 5 months, 3 weeks ago | Votes: 0
+Each Notebook or Task consists of multiple commands and actions performed by them. Each action may be on the data in the Delta Lake where ACID transactions take place and fully rollback certain data manipulations if some of them fail but the Notebooks/Tasks in the Job themselves will not completely fail or rollback. Therefore Answer A correctly describes the result considering the dependencies configures between the Notebooks/Tasks as described in the question.
+
+--- Comment #13 ---
+Author: Unknown | Date: 5 months, 3 weeks ago | Votes: 0
+Each Notebook or Task consists of multiple commands and actions performed by them. Each action may be on the data in the Delta Lake where ACID transactions take place and fully rollback certain data manipulations if some of them fail but the Notebooks/Tasks in the Job themselves will not completely fail or rollback. Therefore Answer A correctly describes the result considering the dependencies configures between the Notebooks/Tasks as described in the question.
+
+--- Comment #14 ---
+Author: Unknown | Date: 5 months, 3 weeks ago | Votes: 0
+m79590530
+			
+
+
+			5 months, 3 weeks ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+Each Notebook or Task consists of multiple commands and actions performed by them. Each action may be on the data in the Delta Lake where ACID transactions take place and fully rollback certain data manipulations if some of them fail but the Notebooks/Tasks in the Job themselves will not completely fail or rollback. Therefore Answer A correctly describes the result considering the dependencies configures between the Notebooks/Tasks as described in the question.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+Each Notebook or Task consists of multiple commands and actions performed by them. Each action may be on the data in the Delta Lake where ACID transactions take place and fully rollback certain data manipulations if some of them fail but the Notebooks/Tasks in the Job themselves will not completely fail or rollback. Therefore Answer A correctly describes the result considering the dependencies configures between the Notebooks/Tasks as described in the question.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+A: A. All logic expressed in the notebook associated with tasks A and B will have been successfully completed; some operations in task C may have completed successfully.
+
+Because this type of orchestration indicates a Fan-Out.
+
+--- Comment #23 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+imatheushenrique
+			
+
+
+			10 months, 1 week ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+A: A. All logic expressed in the notebook associated with tasks A and B will have been successfully completed; some operations in task C may have completed successfully.
+
+Because this type of orchestration indicates a Fan-Out.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+A: A. All logic expressed in the notebook associated with tasks A and B will have been successfully completed; some operations in task C may have completed successfully.
+
+Because this type of orchestration indicates a Fan-Out.
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

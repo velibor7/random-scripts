@@ -1,0 +1,15 @@
+COMMENT #13 FOR QUESTION 234
+============================================================
+Author: Unknown
+Date: 1 year, 3 months ago
+Votes: 0
+----------------------------------------
+Serve the last state data directly from Cloud SQL to the API.
+Here's why this option is most suitable:
+
+BigQuery for Analytics: BigQuery is an excellent choice for storing and analyzing large datasets like your 10 PB of historical product data. It is designed for handling big data analytics efficiently and cost-effectively.
+
+Cloud SQL for Last State Data: Cloud SQL is a fully managed relational database that can effectively handle the storage of the last known state of products. Storing this subset of data (about 10 GB) in Cloud SQL allows for optimized and faster query performance for your API needs. Cloud SQL can comfortably handle the requirement of up to 1000 QPS with sub-second latency.
+
+Separation of Concerns: This approach separates the analytics workload (BigQuery) from the operational query workload (Cloud SQL). This separation ensures that analytics queries do not interfere with the operational performance of the API and vice versa.
+============================================================

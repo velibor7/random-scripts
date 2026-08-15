@@ -1,0 +1,14 @@
+COMMENT #41 FOR QUESTION 150
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Local HDFS storage is a good option if:
+-	You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes such as the following:
+spark.read().write.partitionBy(...).parquet("gs://")
+-	You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+-	Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+-	You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+-	You heavily use the append operation on HDFS files.
+============================================================

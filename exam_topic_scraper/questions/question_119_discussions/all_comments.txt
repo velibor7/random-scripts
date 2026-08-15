@@ -1,0 +1,1330 @@
+ALL COMMENTS FOR QUESTION 119
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 119 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 119
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You operate a database that stores stock trades and an application that retrieves average stock price for a given company over an adjustable window of time. The data is stored in Cloud Bigtable where the datetime of the stock trade is the beginning of the row key. Your application has thousands of concurrent users, and you notice that performance is starting to degrade as more stocks are added. What should you do to improve the performance of your application?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Change the row key syntax in your Cloud Bigtable table to begin with the stock symbol.
+										
+
+
+													B.
+												
+											
+											Change the row key syntax in your Cloud Bigtable table to begin with a random number per second.
+										
+
+
+													C.
+												
+											
+											Change the data pipeline to use BigQuery for storing stock trades, and update your application.
+										
+
+
+													D.
+												
+											
+											Use Cloud Dataflow to write a summary of each day's stock trades to an Avro file on Cloud Storage. Update your application to read from Cloud Storage and Cloud Bigtable to compute the responses.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 12:41 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 119
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 12:41 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer: A
+Description: Timestamp at starting of rowkey causes bottleneck issues
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer: A
+Description: Timestamp at starting of rowkey causes bottleneck issues
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer: A
+Description: Timestamp at starting of rowkey causes bottleneck issues
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer: A
+Description: Timestamp at starting of rowkey causes bottleneck issues
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer: A
+Description: Timestamp at starting of rowkey causes bottleneck issues
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+Description: Timestamp at starting of rowkey causes bottleneck issues
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+Description: Timestamp at starting of rowkey causes bottleneck issues
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 41 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 4 years, 12 months ago | Votes: 0
+Stock symbol will be similar for most of the records, so it's better to start with random number.. Answer should be B
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 4 years, 12 months ago | Votes: 0
+kichukonr
+			
+
+
+				Highly Voted 
+
+
+			4 years, 12 months ago
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+Stock symbol will be similar for most of the records, so it's better to start with random number.. Answer should be B
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Stock symbol will be similar for most of the records, so it's better to start with random number.. Answer should be B
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 13 times
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+You never use something called random number in bigtable rowkey because it gives you no use in querying possibilities, since we can't run sql querys in bigtable we should not randomise rowkeys in bigtable. 
+Don't confuse the above point with the hotspot logic, both are different if you think so.
+
+And another thing is, what you said can be good choice if we are using cloud spanner and trying to comeup with primary key situation, since there we can always run sql query.
+
+I think you got the point now.
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+You never use something called random number in bigtable rowkey because it gives you no use in querying possibilities, since we can't run sql querys in bigtable we should not randomise rowkeys in bigtable. 
+Don't confuse the above point with the hotspot logic, both are different if you think so.
+
+And another thing is, what you said can be good choice if we are using cloud spanner and trying to comeup with primary key situation, since there we can always run sql query.
+
+I think you got the point now.
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+Abhi16820
+			
+
+
+			3 years, 5 months ago
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You never use something called random number in bigtable rowkey because it gives you no use in querying possibilities, since we can't run sql querys in bigtable we should not randomise rowkeys in bigtable. 
+Don't confuse the above point with the hotspot logic, both are different if you think so.
+
+And another thing is, what you said can be good choice if we are using cloud spanner and trying to comeup with primary key situation, since there we can always run sql query.
+
+I think you got the point now.
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You never use something called random number in bigtable rowkey because it gives you no use in querying possibilities, since we can't run sql querys in bigtable we should not randomise rowkeys in bigtable. 
+Don't confuse the above point with the hotspot logic, both are different if you think so.
+
+And another thing is, what you said can be good choice if we are using cloud spanner and trying to comeup with primary key situation, since there we can always run sql query.
+
+I think you got the point now.
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 13 times
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+I agree with u
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date: 4 years, 11 months ago | Votes: 0
+taepyung
+			
+
+
+			4 years, 11 months ago
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I agree with u
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I agree with u
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+it can start with stock symbol concated with timestamp can be a good row key design
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+karthik89
+			
+
+
+			4 years, 1 month ago
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+it can start with stock symbol concated with timestamp can be a good row key design
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+it can start with stock symbol concated with timestamp can be a good row key design
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+for a given company, the data poits starts with the same stock symbol. The dataset is not distrubuted. It is not a good option.
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+for a given company, the data poits starts with the same stock symbol. The dataset is not distrubuted. It is not a good option.
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Yonghai
+			
+
+
+			3 years, 3 months ago
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+for a given company, the data poits starts with the same stock symbol. The dataset is not distrubuted. It is not a good option.
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+for a given company, the data poits starts with the same stock symbol. The dataset is not distrubuted. It is not a good option.
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+the most plausible option to pick here is B, A can introduce hot-spotting
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date: 3 months, 3 weeks ago | Votes: 0
+clouditis
+			
+
+
+				Most Recent 
+
+
+			3 months, 3 weeks ago
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+the most plausible option to pick here is B, A can introduce hot-spotting
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+the most plausible option to pick here is B, A can introduce hot-spotting
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+B is correct, By introducing a random number or a hash at the beginning of the row key, you distribute the writes and reads more evenly across the Bigtable cluster, thereby improving performance under heavy load.
+
+WHY NOT A?
+This might still cause hotspots if certain stocks are more popular than others. It could lead to uneven load distribution, which wouldn't solve the performance degradation problem.
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+Vineet_Mor
+			
+
+
+			7 months, 2 weeks ago
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is correct, By introducing a random number or a hash at the beginning of the row key, you distribute the writes and reads more evenly across the Bigtable cluster, thereby improving performance under heavy load.
+
+WHY NOT A?
+This might still cause hotspots if certain stocks are more popular than others. It could lead to uneven load distribution, which wouldn't solve the performance degradation problem.
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is correct, By introducing a random number or a hash at the beginning of the row key, you distribute the writes and reads more evenly across the Bigtable cluster, thereby improving performance under heavy load.
+
+WHY NOT A?
+This might still cause hotspots if certain stocks are more popular than others. It could lead to uneven load distribution, which wouldn't solve the performance degradation problem.
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Answer is A.
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Sofiia98
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is A.
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is A.
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Answer A:
+Trick to remember: Row-key adjustment always be like in decending order. 
+#<<Least value>>#<<Lesser value>>
+For example: 
+1. #<<Earth>>#<<continents>>#<<countries>>#<<cities>> and so on.. 
+2. #<<Stock>>#<<users>>#timestamp.. 
+in 99% cases timestamp will be in the end, as its smallest division...
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+musumusu
+			
+
+
+			2 years, 1 month ago
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Answer A:
+Trick to remember: Row-key adjustment always be like in decending order. 
+#<<Least value>>#<<Lesser value>>
+For example: 
+1. #<<Earth>>#<<continents>>#<<countries>>#<<cities>> and so on.. 
+2. #<<Stock>>#<<users>>#timestamp.. 
+in 99% cases timestamp will be in the end, as its smallest division...
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer A:
+Trick to remember: Row-key adjustment always be like in decending order. 
+#<<Least value>>#<<Lesser value>>
+For example: 
+1. #<<Earth>>#<<continents>>#<<countries>>#<<cities>> and so on.. 
+2. #<<Stock>>#<<users>>#timestamp.. 
+in 99% cases timestamp will be in the end, as its smallest division...
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Awesome!
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Awesome!
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+piyush7777
+			
+
+
+			1 year, 7 months ago
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Awesome!
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Awesome!
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+A is the answer.
+
+https://cloud.google.com/bigtable/docs/schema-design#row-keys
+It's important to create a row key that makes it possible to retrieve a well-defined range of rows. Otherwise, your query requires a table scan, which is much slower than retrieving specific rows.
+
+https://cloud.google.com/bigtable/docs/schema-design#row-keys-avoid
+Some types of row keys can make it difficult to query your data, and some result in poor performance. This section describes some types of row keys that you should avoid using in Bigtable.
+- Row keys that start with a timestamp. This pattern causes sequential writes to be pushed onto a single node, creating a hotspot. If you put a timestamp in a row key, precede it with a high-cardinality value like a user ID to avoid hotspots.
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+zellck
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+A is the answer.
+
+https://cloud.google.com/bigtable/docs/schema-design#row-keys
+It's important to create a row key that makes it possible to retrieve a well-defined range of rows. Otherwise, your query requires a table scan, which is much slower than retrieving specific rows.
+
+https://cloud.google.com/bigtable/docs/schema-design#row-keys-avoid
+Some types of row keys can make it difficult to query your data, and some result in poor performance. This section describes some types of row keys that you should avoid using in Bigtable.
+- Row keys that start with a timestamp. This pattern causes sequential writes to be pushed onto a single node, creating a hotspot. If you put a timestamp in a row key, precede it with a high-cardinality value like a user ID to avoid hotspots.
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A is the answer.
+
+https://cloud.google.com/bigtable/docs/schema-design#row-keys
+It's important to create a row key that makes it possible to retrieve a well-defined range of rows. Otherwise, your query requires a table scan, which is much slower than retrieving specific rows.
+
+https://cloud.google.com/bigtable/docs/schema-design#row-keys-avoid
+Some types of row keys can make it difficult to query your data, and some result in poor performance. This section describes some types of row keys that you should avoid using in Bigtable.
+- Row keys that start with a timestamp. This pattern causes sequential writes to be pushed onto a single node, creating a hotspot. If you put a timestamp in a row key, precede it with a high-cardinality value like a user ID to avoid hotspots.
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+I agree with you . A is right
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+I agree with you . A is right
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+AzureDP900
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I agree with you . A is right
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I agree with you . A is right
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+A: https://cloud.google.com/bigtable/docs/schema-design-time-series#prefer_rows_to_column_versions
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			3 years, 3 months ago
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A: https://cloud.google.com/bigtable/docs/schema-design-time-series#prefer_rows_to_column_versions
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A: https://cloud.google.com/bigtable/docs/schema-design-time-series#prefer_rows_to_column_versions
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+Correct: A
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+JG123
+			
+
+
+			3 years, 4 months ago
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct: A
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct: A
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+A and B would both work, since both would distribute the work. This question is not framed properly.
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+JayZeeLee
+			
+
+
+			3 years, 5 months ago
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A and B would both work, since both would distribute the work. This question is not framed properly.
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A and B would both work, since both would distribute the work. This question is not framed properly.
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+Vote for A
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+sumanshu
+			
+
+
+			3 years, 9 months ago
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Vote for A
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Vote for A
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+Option A.
+Below document explains 
+Having EXCHANGE and SYMBOL in the leading positions in the row key will naturally distribute activity.
+https://cloud.google.com/bigtable/docs/schema-design-time-series
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+Jay3244
+			
+
+
+			4 years, 1 month ago
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A.
+Below document explains 
+Having EXCHANGE and SYMBOL in the leading positions in the row key will naturally distribute activity.
+https://cloud.google.com/bigtable/docs/schema-design-time-series
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A.
+Below document explains 
+Having EXCHANGE and SYMBOL in the leading positions in the row key will naturally distribute activity.
+https://cloud.google.com/bigtable/docs/schema-design-time-series
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date: 4 years, 4 months ago | Votes: 0
+I think A
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date: 4 years, 4 months ago | Votes: 0
+arghya13
+			
+
+
+			4 years, 4 months ago
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I think A
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I think A
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date: 4 years, 4 months ago | Votes: 0
+Catch here is current Rowley starts with timestamp which should not be in the starting or end position so symbolmshould be prefixed before timestamp
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date: 4 years, 4 months ago | Votes: 0
+kavs
+			
+
+
+			4 years, 4 months ago
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Catch here is current Rowley starts with timestamp which should not be in the starting or end position so symbolmshould be prefixed before timestamp
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Catch here is current Rowley starts with timestamp which should not be in the starting or end position so symbolmshould be prefixed before timestamp
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+A is correct..A Good ROW KEY has to be an ID followed by timestamp. Stock symbol in this case works as an ID
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+Cloud_Enthusiast
+			
+
+
+			4 years, 5 months ago
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A is correct..A Good ROW KEY has to be an ID followed by timestamp. Stock symbol in this case works as an ID
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A is correct..A Good ROW KEY has to be an ID followed by timestamp. Stock symbol in this case works as an ID
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+A.
+You can find an example in Google's introductory guide.
+https://cloud.google.com/bigtable/docs/schema-design-time-series?hl=ja#financial_market_data
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+kino2020
+			
+
+
+			4 years, 6 months ago
+
+COMMENT #187
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A.
+You can find an example in Google's introductory guide.
+https://cloud.google.com/bigtable/docs/schema-design-time-series?hl=ja#financial_market_data
+
+COMMENT #188
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A.
+You can find an example in Google's introductory guide.
+https://cloud.google.com/bigtable/docs/schema-design-time-series?hl=ja#financial_market_data
+
+COMMENT #189
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #190
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #191
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #192
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #193
+----------------------------------------
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+I think A would be best practice. Adding random numbers as start of rowkey doesn't help with troubleshooting
+
+COMMENT #194
+----------------------------------------
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Diqtator
+			
+
+
+			4 years, 6 months ago
+
+COMMENT #195
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I think A would be best practice. Adding random numbers as start of rowkey doesn't help with troubleshooting
+
+COMMENT #196
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I think A would be best practice. Adding random numbers as start of rowkey doesn't help with troubleshooting
+
+COMMENT #197
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #198
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #199
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #200
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #201
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #202
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #203
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

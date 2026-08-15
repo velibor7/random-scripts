@@ -1,0 +1,13 @@
+COMMENT #166 FOR QUESTION 24
+============================================================
+Author: Unknown
+Date: 1 year, 5 months ago
+Votes: 0
+----------------------------------------
+Option "E"
+It avoids the need to delete and recreate the entire CLICK_STREAM table, which is time-consuming and requires reloading all data.
+
+It allows you to use a simple query to cast the existing DT column as TIMESTAMP values and store the results in a new table, NEW_CLICK_STREAM.
+
+You can gradually migrate to the new data format, and your future queries will be able to utilize the TIMESTAMP data type for more efficient processing.
+============================================================

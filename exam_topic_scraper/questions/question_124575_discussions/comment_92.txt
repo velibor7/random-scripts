@@ -1,0 +1,9 @@
+COMMENT #92 FOR QUESTION 124575
+============================================================
+Author: Unknown
+Date: 6 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+Option A
+spark.sql.files.maxPartitionBytes controls the maximum size of partitions during reading on the Spark cluster, and that reducing this value could lead to more partitions and thus potentially more output files. The key point is that it works best when no shuffles occur, which aligns with the scenario of having narrow transformations only.
+============================================================

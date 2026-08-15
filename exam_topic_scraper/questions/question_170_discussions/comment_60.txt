@@ -1,0 +1,11 @@
+COMMENT #60 FOR QUESTION 170
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Taking a snapshot allows redelivering messages that were published while any faulty subscriber logic was running. 
+The seek timestamp would come after deployment so even erroneously acknowledged messages could be recovered.
+https://cloud.google.com/pubsub/docs/replay-overview#seek_use_cases
+By creating a snapshot of the subscription before deploying new code, you can preserve the state of unacknowledged messages. If after deployment you find that the new subscriber code is erroneously acknowledging messages, you can use the Seek operation with the snapshot to reset the subscription's acknowledgment state to the time the snapshot was created. This would effectively re-deliver messages available since the snapshot, ensuring you can recover from errors. This approach does not require setting up a local emulator and directly addresses the concern of message loss due to erroneous acknowledgments.
+============================================================

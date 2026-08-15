@@ -1,0 +1,13 @@
+COMMENT #22 FOR QUESTION 178
+============================================================
+Author: Unknown
+Date: 1 year, 10 months ago
+Votes: 0
+----------------------------------------
+D is the answer.
+
+https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#choose_correctly_between_side_inputs_or_cogroupbykey_for_joins
+The CoGroupByKey transform is a core Beam transform that merges (flattens) multiple PCollection objects and groups elements that have a common key. Unlike a side input, which makes the entire side input data available to each worker, CoGroupByKey performs a shuffle (grouping) operation to distribute data across workers. CoGroupByKey is therefore ideal when the PCollection objects you want to join are very large and don't fit into worker memory.
+
+Use CoGroupByKey if you need to fetch a large proportion of a PCollection object that significantly exceeds worker memory.
+============================================================

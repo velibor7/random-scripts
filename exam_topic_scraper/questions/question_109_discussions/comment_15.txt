@@ -1,0 +1,9 @@
+COMMENT #15 FOR QUESTION 109
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Answer C E
+By not acknowleding the pulled message, this result in it be putted back in Cloud Pub/Sub, meaning the messages accumulate instead of being consumed and removed from Pub/Sub. The same thing can happen ig the subscriber maintains the lease on the message it receives in case of an error. This reduces the overall rate of processing because messages get stuck on the first subscriber. Also, errors in Cloud Function do not show up in Stackdriver Log Viewer if they are not correctly handled.
+============================================================

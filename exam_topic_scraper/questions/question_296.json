@@ -1,0 +1,1297 @@
+{
+  "question": "Your infrastructure team has set up an interconnect link between Google Cloud and the on-premises network. You are designing a high-throughput streaming pipeline to ingest data in streaming from an Apache Kafka cluster hosted on- premises. You want to store the data in BigQuery, with as minimal latency as possible. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSetup a Kafka Connect bridge between Kafka and Pub/Sub. Use a Google-provided Dataflow template to read the data from Pub/Sub, and write the data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse a proxy host in the VPC in Google Cloud connecting to Kafka. Write a Dataflow pipeline, read data from the proxy host, and write the data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSetup a Kafka Connect bridge between Kafka and Pub/Sub. Write a Dataflow pipeline, read the data from Pub/Sub, and write the data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 296 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 296\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYour infrastructure team has set up an interconnect link between Google Cloud and the on-premises network. You are designing a high-throughput streaming pipeline to ingest data in streaming from an Apache Kafka cluster hosted on- premises. You want to store the data in BigQuery, with as minimal latency as possible. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSetup a Kafka Connect bridge between Kafka and Pub/Sub. Use a Google-provided Dataflow template to read the data from Pub/Sub, and write the data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse a proxy host in the VPC in Google Cloud connecting to Kafka. Write a Dataflow pipeline, read data from the proxy host, and write the data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSetup a Kafka Connect bridge between Kafka and Pub/Sub. Write a Dataflow pipeline, read the data from Pub/Sub, and write the data to BigQuery.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\trahulvin\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tDec. 30, 2023, 9:07 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 296\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\trahulvin\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tDec. 30, 2023, 9:07 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "C. Use Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.\n\nThis approach allows you to directly connect Dataflow to your Kafka cluster, ensuring minimal latency by avoiding additional intermediaries like Pub/Sub. Dataflow is designed to handle high-throughput data processing and can efficiently ingest and process streaming data from Kafka, then write it to BigQuery. This setup leverages the interconnect link for a direct and efficient data flow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "C. Use Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.\n\nThis approach allows you to directly connect Dataflow to your Kafka cluster, ensuring minimal latency by avoiding additional intermediaries like Pub/Sub. Dataflow is designed to handle high-throughput data processing and can efficiently ingest and process streaming data from Kafka, then write it to BigQuery. This setup leverages the interconnect link for a direct and efficient data flow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "C. Use Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.\n\nThis approach allows you to directly connect Dataflow to your Kafka cluster, ensuring minimal latency by avoiding additional intermediaries like Pub/Sub. Dataflow is designed to handle high-throughput data processing and can efficiently ingest and process streaming data from Kafka, then write it to BigQuery. This setup leverages the interconnect link for a direct and efficient data flow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "C. Use Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.\n\nThis approach allows you to directly connect Dataflow to your Kafka cluster, ensuring minimal latency by avoiding additional intermediaries like Pub/Sub. Dataflow is designed to handle high-throughput data processing and can efficiently ingest and process streaming data from Kafka, then write it to BigQuery. This setup leverages the interconnect link for a direct and efficient data flow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "C. Use Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.\n\nThis approach allows you to directly connect Dataflow to your Kafka cluster, ensuring minimal latency by avoiding additional intermediaries like Pub/Sub. Dataflow is designed to handle high-throughput data processing and can efficiently ingest and process streaming data from Kafka, then write it to BigQuery. This setup leverages the interconnect link for a direct and efficient data flow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Pime13\n\t\t\t\n\n\n\t\t\t3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "C. Use Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.\n\nThis approach allows you to directly connect Dataflow to your Kafka cluster, ensuring minimal latency by avoiding additional intermediaries like Pub/Sub. Dataflow is designed to handle high-throughput data processing and can efficiently ingest and process streaming data from Kafka, then write it to BigQuery. This setup leverages the interconnect link for a direct and efficient data flow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Use Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.\n\nThis approach allows you to directly connect Dataflow to your Kafka cluster, ensuring minimal latency by avoiding additional intermediaries like Pub/Sub. Dataflow is designed to handle high-throughput data processing and can efficiently ingest and process streaming data from Kafka, then write it to BigQuery. This setup leverages the interconnect link for a direct and efficient data flow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "https://cloud.google.com/dataflow/docs/kafka-dataflow#deploy_kafka\nAlternatively, you might have an existing Kafka cluster that resides outside of Google Cloud. For example, you might have an existing workload that is deployed on-premises or in another public cloud.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "https://cloud.google.com/dataflow/docs/kafka-dataflow#deploy_kafka\nAlternatively, you might have an existing Kafka cluster that resides outside of Google Cloud. For example, you might have an existing workload that is deployed on-premises or in another public cloud.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months ago",
+      "content": "Pime13\n\t\t\t\n\n\n\t\t\t3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/dataflow/docs/kafka-dataflow#deploy_kafka\nAlternatively, you might have an existing Kafka cluster that resides outside of Google Cloud. For example, you might have an existing workload that is deployed on-premises or in another public cloud.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/dataflow/docs/kafka-dataflow#deploy_kafka\nAlternatively, you might have an existing Kafka cluster that resides outside of Google Cloud. For example, you might have an existing workload that is deployed on-premises or in another public cloud.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "Going with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "meh_33\n\t\t\t\n\n\n\t\t\t8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Going with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Going with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "Latency: Option C, with direct integration between Kafka and Dataflow, offers lower latency by eliminating intermediate steps.\nFlexibility: Custom Dataflow pipelines (Option C) provide more control over data processing and optimization compared to using a pre-built template.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 1\u00a0week ago",
+      "content": "Anudeep58\n\t\t\t\n\n\n\t\t\t9\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Latency: Option C, with direct integration between Kafka and Dataflow, offers lower latency by eliminating intermediate steps.\nFlexibility: Custom Dataflow pipelines (Option C) provide more control over data processing and optimization compared to using a pre-built template.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Latency: Option C, with direct integration between Kafka and Dataflow, offers lower latency by eliminating intermediate steps.\nFlexibility: Custom Dataflow pipelines (Option C) provide more control over data processing and optimization compared to using a pre-built template.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "12\u00a0months ago",
+      "content": "per the text below at https://cloud.google.com/dataflow/docs/kafka-dataflow -\n\n\"Alternatively, you might have an existing Kafka cluster that resides outside of Google Cloud. For example, you might have an existing workload that is deployed on-premises or in another public cloud.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "12\u00a0months ago",
+      "content": "anushree09\n\t\t\t\n\n\n\t\t\t12\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "per the text below at https://cloud.google.com/dataflow/docs/kafka-dataflow -\n\n\"Alternatively, you might have an existing Kafka cluster that resides outside of Google Cloud. For example, you might have an existing workload that is deployed on-premises or in another public cloud.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "per the text below at https://cloud.google.com/dataflow/docs/kafka-dataflow -\n\n\"Alternatively, you might have an existing Kafka cluster that resides outside of Google Cloud. For example, you might have an existing workload that is deployed on-premises or in another public cloud.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "From my point of view, the best option is C taking into account this doc: https://cloud.google.com/dataflow/docs/kafka-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Moss2011\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "From my point of view, the best option is C taking into account this doc: https://cloud.google.com/dataflow/docs/kafka-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "From my point of view, the best option is C taking into account this doc: https://cloud.google.com/dataflow/docs/kafka-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Based on the key requirements highlighted:\n\u2022\tInterconnect link between GCP and on-prem Kafka\n\u2022\tHigh throughput streaming pipeline\n\u2022\tMinimal latency\n\u2022\tData to be stored in BigQuery\nD - The key reasons this meets the requirements:\n\u2022\tKafka connect provides a reliable bridge to Pub/Sub over the interconnect\n\u2022\tReading from Pub/Sub minimizes latency vs reading directly from Kafka\n\u2022\tDataflow provides a high throughput streaming engine\n\u2022\tWriting to BigQuery gives scalable data storage\nBy leveraging these fully managed GCP services over the dedicated interconnect, a low latency streaming pipeline from on-prem Kafka into BigQuery can be implemented rapidly.\nOptions A/B/C have higher latencies or custom code requirements, so do not meet the minimal latency criteria as well as option D.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Based on the key requirements highlighted:\n\u2022\tInterconnect link between GCP and on-prem Kafka\n\u2022\tHigh throughput streaming pipeline\n\u2022\tMinimal latency\n\u2022\tData to be stored in BigQuery\nD - The key reasons this meets the requirements:\n\u2022\tKafka connect provides a reliable bridge to Pub/Sub over the interconnect\n\u2022\tReading from Pub/Sub minimizes latency vs reading directly from Kafka\n\u2022\tDataflow provides a high throughput streaming engine\n\u2022\tWriting to BigQuery gives scalable data storage\nBy leveraging these fully managed GCP services over the dedicated interconnect, a low latency streaming pipeline from on-prem Kafka into BigQuery can be implemented rapidly.\nOptions A/B/C have higher latencies or custom code requirements, so do not meet the minimal latency criteria as well as option D.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Based on the key requirements highlighted:\n\u2022\tInterconnect link between GCP and on-prem Kafka\n\u2022\tHigh throughput streaming pipeline\n\u2022\tMinimal latency\n\u2022\tData to be stored in BigQuery\nD - The key reasons this meets the requirements:\n\u2022\tKafka connect provides a reliable bridge to Pub/Sub over the interconnect\n\u2022\tReading from Pub/Sub minimizes latency vs reading directly from Kafka\n\u2022\tDataflow provides a high throughput streaming engine\n\u2022\tWriting to BigQuery gives scalable data storage\nBy leveraging these fully managed GCP services over the dedicated interconnect, a low latency streaming pipeline from on-prem Kafka into BigQuery can be implemented rapidly.\nOptions A/B/C have higher latencies or custom code requirements, so do not meet the minimal latency criteria as well as option D.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Why choose option D over A?\nThe key advantage with option D is that by writing a custom Dataflow pipeline rather than using a Google provided template, there is more flexibility to customize performance tuning and optimization for lowest latency.\n\u2022\tSome potential optimizations:\n\u2022\tFine tuning number of workers, machine types to meet specific throughput targets\n\u2022\tCustom data parsing/processing logic if applicable\n\u2022\tExperimenting with autoscaling parameters or triggers",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Why choose option D over A?\nThe key advantage with option D is that by writing a custom Dataflow pipeline rather than using a Google provided template, there is more flexibility to customize performance tuning and optimization for lowest latency.\n\u2022\tSome potential optimizations:\n\u2022\tFine tuning number of workers, machine types to meet specific throughput targets\n\u2022\tCustom data parsing/processing logic if applicable\n\u2022\tExperimenting with autoscaling parameters or triggers",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Why choose option D over A?\nThe key advantage with option D is that by writing a custom Dataflow pipeline rather than using a Google provided template, there is more flexibility to customize performance tuning and optimization for lowest latency.\n\u2022\tSome potential optimizations:\n\u2022\tFine tuning number of workers, machine types to meet specific throughput targets\n\u2022\tCustom data parsing/processing logic if applicable\n\u2022\tExperimenting with autoscaling parameters or triggers",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why choose option D over A?\nThe key advantage with option D is that by writing a custom Dataflow pipeline rather than using a Google provided template, there is more flexibility to customize performance tuning and optimization for lowest latency.\n\u2022\tSome potential optimizations:\n\u2022\tFine tuning number of workers, machine types to meet specific throughput targets\n\u2022\tCustom data parsing/processing logic if applicable\n\u2022\tExperimenting with autoscaling parameters or triggers",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "The Google template may be easier to set up initially, but a custom pipeline provides more control over optimizations specifically for low latency requirements stated in the question.\nThat being said, option A would still work reasonably well - but option D allows squeezing out that extra bit of performance if low millisecond latency is absolutely critical in the pipeline through precise tuning.\nSo in summary, option A is easier to implement but option D provides more optimization flexibility for ultra low latency streaming requirements.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "The Google template may be easier to set up initially, but a custom pipeline provides more control over optimizations specifically for low latency requirements stated in the question.\nThat being said, option A would still work reasonably well - but option D allows squeezing out that extra bit of performance if low millisecond latency is absolutely critical in the pipeline through precise tuning.\nSo in summary, option A is easier to implement but option D provides more optimization flexibility for ultra low latency streaming requirements.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The Google template may be easier to set up initially, but a custom pipeline provides more control over optimizations specifically for low latency requirements stated in the question.\nThat being said, option A would still work reasonably well - but option D allows squeezing out that extra bit of performance if low millisecond latency is absolutely critical in the pipeline through precise tuning.\nSo in summary, option A is easier to implement but option D provides more optimization flexibility for ultra low latency streaming requirements.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The Google template may be easier to set up initially, but a custom pipeline provides more control over optimizations specifically for low latency requirements stated in the question.\nThat being said, option A would still work reasonably well - but option D allows squeezing out that extra bit of performance if low millisecond latency is absolutely critical in the pipeline through precise tuning.\nSo in summary, option A is easier to implement but option D provides more optimization flexibility for ultra low latency streaming requirements.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Why not C:\nAt first option C (using a Dataflow pipeline to directly read from Kafka and write to BigQuery) seems reasonable.\nHowever, the key requirement stated in the question is to have minimal latency for the streaming pipeline.\nBy reading directly from Kafka within Dataflow, there can be additional latency and processing overhead compared to reading from Pub/Sub, for a few reasons:\n1.\tPub/Sub acts as a buffer and handles scaling/reliability of streaming data automatically. This reduces processing burden on the pipeline.\n2.\tNetwork latency can be lower by leveraging Pub/Sub instead of making constant pull requests for data from Kafka within the streaming pipeline.\n3.\tAny failures have to be handled within the pipeline code itself when reading directly from Kafka. With Pub/Sub, reliability is built-in.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Why not C:\nAt first option C (using a Dataflow pipeline to directly read from Kafka and write to BigQuery) seems reasonable.\nHowever, the key requirement stated in the question is to have minimal latency for the streaming pipeline.\nBy reading directly from Kafka within Dataflow, there can be additional latency and processing overhead compared to reading from Pub/Sub, for a few reasons:\n1.\tPub/Sub acts as a buffer and handles scaling/reliability of streaming data automatically. This reduces processing burden on the pipeline.\n2.\tNetwork latency can be lower by leveraging Pub/Sub instead of making constant pull requests for data from Kafka within the streaming pipeline.\n3.\tAny failures have to be handled within the pipeline code itself when reading directly from Kafka. With Pub/Sub, reliability is built-in.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not C:\nAt first option C (using a Dataflow pipeline to directly read from Kafka and write to BigQuery) seems reasonable.\nHowever, the key requirement stated in the question is to have minimal latency for the streaming pipeline.\nBy reading directly from Kafka within Dataflow, there can be additional latency and processing overhead compared to reading from Pub/Sub, for a few reasons:\n1.\tPub/Sub acts as a buffer and handles scaling/reliability of streaming data automatically. This reduces processing burden on the pipeline.\n2.\tNetwork latency can be lower by leveraging Pub/Sub instead of making constant pull requests for data from Kafka within the streaming pipeline.\n3.\tAny failures have to be handled within the pipeline code itself when reading directly from Kafka. With Pub/Sub, reliability is built-in.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "You are adding an intermediate hop in between on prem kafka and Dataflow ( pubsub ). Why won't this add additional latency.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "You are adding an intermediate hop in between on prem kafka and Dataflow ( pubsub ). Why won't this add additional latency.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "SanjeevRoy91\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You are adding an intermediate hop in between on prem kafka and Dataflow ( pubsub ). Why won't this add additional latency.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You are adding an intermediate hop in between on prem kafka and Dataflow ( pubsub ). Why won't this add additional latency.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "So in summary, while option C is technically possible, option D introduces Pub/Sub as a streaming buffer which reduces overall latency for the pipeline, allowing the key requirement of minimal latency to be better satisfied.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "So in summary, while option C is technically possible, option D introduces Pub/Sub as a streaming buffer which reduces overall latency for the pipeline, allowing the key requirement of minimal latency to be better satisfied.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "So in summary, while option C is technically possible, option D introduces Pub/Sub as a streaming buffer which reduces overall latency for the pipeline, allowing the key requirement of minimal latency to be better satisfied.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "A Vs C  -- Not sure which one would have low latency.\n\nPoints related to option C:\n\"Yes, Dataflow can read events from Kafka. Dataflow is a fully-managed, serverless streaming analytics service that supports both batch and stream processing. It can read events from Kafka, process them, and write the results to a BigQuery table for further analysis. \"\n\n\"Dataflow supports Kafka support, which was added to Apache Beam in 2016. Google provides a Dataflow template that configures a Kafka-to-BigQuery pipeline. The template uses the BigQueryIO connector provided in the Apache Beam SDK. \"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "JyoGCP\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "A Vs C  -- Not sure which one would have low latency.\n\nPoints related to option C:\n\"Yes, Dataflow can read events from Kafka. Dataflow is a fully-managed, serverless streaming analytics service that supports both batch and stream processing. It can read events from Kafka, process them, and write the results to a BigQuery table for further analysis. \"\n\n\"Dataflow supports Kafka support, which was added to Apache Beam in 2016. Google provides a Dataflow template that configures a Kafka-to-BigQuery pipeline. The template uses the BigQueryIO connector provided in the Apache Beam SDK. \"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A Vs C  -- Not sure which one would have low latency.\n\nPoints related to option C:\n\"Yes, Dataflow can read events from Kafka. Dataflow is a fully-managed, serverless streaming analytics service that supports both batch and stream processing. It can read events from Kafka, process them, and write the results to a BigQuery table for further analysis. \"\n\n\"Dataflow supports Kafka support, which was added to Apache Beam in 2016. Google provides a Dataflow template that configures a Kafka-to-BigQuery pipeline. The template uses the BigQueryIO connector provided in the Apache Beam SDK. \"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Going with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Going with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "JyoGCP\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Going with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Going with C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Final???",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Final???",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "DarkLord2104\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Final???",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Final???",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option C makes more sense to me because of the \"minimal latency as possible\".\nI would have chosen option A if it were \"less CODING as possible\".",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "T2Clubber\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C makes more sense to me because of the \"minimal latency as possible\".\nI would have chosen option A if it were \"less CODING as possible\".",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C makes more sense to me because of the \"minimal latency as possible\".\nI would have chosen option A if it were \"less CODING as possible\".",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option A, leverage dataflow template for Kafka https://cloud.google.com/dataflow/docs/kafka-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option A, leverage dataflow template for Kafka https://cloud.google.com/dataflow/docs/kafka-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A, leverage dataflow template for Kafka https://cloud.google.com/dataflow/docs/kafka-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Agree. \"Google provides a Dataflow template that configures a Kafka-to-BigQuery pipeline. The template uses the BigQueryIO connector provided in the Apache Beam SDK.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Agree. \"Google provides a Dataflow template that configures a Kafka-to-BigQuery pipeline. The template uses the BigQueryIO connector provided in the Apache Beam SDK.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "AllenChen123\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agree. \"Google provides a Dataflow template that configures a Kafka-to-BigQuery pipeline. The template uses the BigQueryIO connector provided in the Apache Beam SDK.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agree. \"Google provides a Dataflow template that configures a Kafka-to-BigQuery pipeline. The template uses the BigQueryIO connector provided in the Apache Beam SDK.\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "But it includes setting up a Kafka Connect bridge while an interconnect link has already been set up. https://cloud.google.com/dataflow/docs/kafka-dataflow#connect_to_an_external_cluster",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "ML6\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "But it includes setting up a Kafka Connect bridge while an interconnect link has already been set up. https://cloud.google.com/dataflow/docs/kafka-dataflow#connect_to_an_external_cluster",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "But it includes setting up a Kafka Connect bridge while an interconnect link has already been set up. https://cloud.google.com/dataflow/docs/kafka-dataflow#connect_to_an_external_cluster",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "C. Use Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Use Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Use Dataflow, write a pipeline that reads the data from Kafka, and writes the data to BigQuery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Dataflow has templates to read from Kafka. Other options are too complicated\nhttps://cloud.google.com/dataflow/docs/kafka-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "rahulvin\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Dataflow has templates to read from Kafka. Other options are too complicated\nhttps://cloud.google.com/dataflow/docs/kafka-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Dataflow has templates to read from Kafka. Other options are too complicated\nhttps://cloud.google.com/dataflow/docs/kafka-dataflow",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "so, this is the answer A, whe C?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "so, this is the answer A, whe C?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Sofiia98\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "so, this is the answer A, whe C?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "so, this is the answer A, whe C?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Yeah, the answer is A. C requires you to develop the pipeline yourself and ensure minimal latency, which means that you perform better than a pre-built template from Google...not really the case most of the times :)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Yeah, the answer is A. C requires you to develop the pipeline yourself and ensure minimal latency, which means that you perform better than a pre-built template from Google...not really the case most of the times :)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Yeah, the answer is A. C requires you to develop the pipeline yourself and ensure minimal latency, which means that you perform better than a pre-built template from Google...not really the case most of the times :)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Yeah, the answer is A. C requires you to develop the pipeline yourself and ensure minimal latency, which means that you perform better than a pre-built template from Google...not really the case most of the times :)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "but Option A introduces additional replication into Pub/Sub and the question states with minimal latency. In my opinion subscribing to Kafka via Dataflow has a lower latency than replicating the messages first to Pub/Sub and subscribing with Dataflow to it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "but Option A introduces additional replication into Pub/Sub and the question states with minimal latency. In my opinion subscribing to Kafka via Dataflow has a lower latency than replicating the messages first to Pub/Sub and subscribing with Dataflow to it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "saschak94\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "but Option A introduces additional replication into Pub/Sub and the question states with minimal latency. In my opinion subscribing to Kafka via Dataflow has a lower latency than replicating the messages first to Pub/Sub and subscribing with Dataflow to it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "but Option A introduces additional replication into Pub/Sub and the question states with minimal latency. In my opinion subscribing to Kafka via Dataflow has a lower latency than replicating the messages first to Pub/Sub and subscribing with Dataflow to it.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 7 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

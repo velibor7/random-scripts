@@ -1,0 +1,1260 @@
+ALL COMMENTS FOR QUESTION 162
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 162 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 162
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You want to archive data in Cloud Storage. Because some data is very sensitive, you want to use the `Trust No One` (TNO) approach to encrypt your data to prevent the cloud provider staff from decrypting your data. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Use gcloud kms keys create to create a symmetric key. Then use gcloud kms encrypt to encrypt each archival file with the key and unique additional authenticated data (AAD). Use gsutil cp to upload each encrypted file to the Cloud Storage bucket, and keep the AAD outside of Google Cloud.
+										
+
+
+													B.
+												
+											
+											Use gcloud kms keys create to create a symmetric key. Then use gcloud kms encrypt to encrypt each archival file with the key. Use gsutil cp to upload each encrypted file to the Cloud Storage bucket. Manually destroy the key previously used for encryption, and rotate the key once.
+										
+
+
+													C.
+												
+											
+											Specify customer-supplied encryption key (CSEK) in the .boto configuration file. Use gsutil cp to upload each archival file to the Cloud Storage bucket. Save the CSEK in Cloud Memorystore as permanent storage of the secret.
+										
+
+
+													D.
+												
+											
+											Specify customer-supplied encryption key (CSEK) in the .boto configuration file. Use gsutil cp to upload each archival file to the Cloud Storage bucket. Save the CSEK in a different project that only the security team can access.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 18, 2020, 2:11 a.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 162
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 18, 2020, 2:11 a.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+The correct answer must be D
+A and B can be eliminated immediately since kms generated keys are considered potentially accessible by CSP. 
+C is incorrect because memory store is essentially a cache service. 
+
+Additional authenticated data (AAD) acts as a "salt", it is not a cipher.
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+The correct answer must be D
+A and B can be eliminated immediately since kms generated keys are considered potentially accessible by CSP. 
+C is incorrect because memory store is essentially a cache service. 
+
+Additional authenticated data (AAD) acts as a "salt", it is not a cipher.
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+The correct answer must be D
+A and B can be eliminated immediately since kms generated keys are considered potentially accessible by CSP. 
+C is incorrect because memory store is essentially a cache service. 
+
+Additional authenticated data (AAD) acts as a "salt", it is not a cipher.
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+The correct answer must be D
+A and B can be eliminated immediately since kms generated keys are considered potentially accessible by CSP. 
+C is incorrect because memory store is essentially a cache service. 
+
+Additional authenticated data (AAD) acts as a "salt", it is not a cipher.
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+The correct answer must be D
+A and B can be eliminated immediately since kms generated keys are considered potentially accessible by CSP. 
+C is incorrect because memory store is essentially a cache service. 
+
+Additional authenticated data (AAD) acts as a "salt", it is not a cipher.
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+dhs227
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+The correct answer must be D
+A and B can be eliminated immediately since kms generated keys are considered potentially accessible by CSP. 
+C is incorrect because memory store is essentially a cache service. 
+
+Additional authenticated data (AAD) acts as a "salt", it is not a cipher.
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The correct answer must be D
+A and B can be eliminated immediately since kms generated keys are considered potentially accessible by CSP. 
+C is incorrect because memory store is essentially a cache service. 
+
+Additional authenticated data (AAD) acts as a "salt", it is not a cipher.
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 44 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+The trust no one design philosophy requires that the keys for encryption should always be, and stay, in the hands of the user that applies them. This implies that no external party can access the encrypted data (assumed that the encryption is strong enough).
+https://en.wikipedia.org/wiki/Trust_no_one_(Internet_security)
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+The trust no one design philosophy requires that the keys for encryption should always be, and stay, in the hands of the user that applies them. This implies that no external party can access the encrypted data (assumed that the encryption is strong enough).
+https://en.wikipedia.org/wiki/Trust_no_one_(Internet_security)
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+[Removed]
+			
+
+
+			3 years, 3 months ago
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The trust no one design philosophy requires that the keys for encryption should always be, and stay, in the hands of the user that applies them. This implies that no external party can access the encrypted data (assumed that the encryption is strong enough).
+https://en.wikipedia.org/wiki/Trust_no_one_(Internet_security)
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The trust no one design philosophy requires that the keys for encryption should always be, and stay, in the hands of the user that applies them. This implies that no external party can access the encrypted data (assumed that the encryption is strong enough).
+https://en.wikipedia.org/wiki/Trust_no_one_(Internet_security)
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 4 years, 7 months ago | Votes: 0
+AAD is bound to the encrypted data, because you cannot decrypt the ciphertext unless you know the AAD, but it is not stored as part of the ciphertext. AAD also does not increase the cryptographic strength of the ciphertext. Instead it is an additional check by Cloud KMS to authenticate a decryption request.
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 4 years, 7 months ago | Votes: 0
+mikey007
+			
+
+
+			4 years, 7 months ago
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AAD is bound to the encrypted data, because you cannot decrypt the ciphertext unless you know the AAD, but it is not stored as part of the ciphertext. AAD also does not increase the cryptographic strength of the ciphertext. Instead it is an additional check by Cloud KMS to authenticate a decryption request.
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AAD is bound to the encrypted data, because you cannot decrypt the ciphertext unless you know the AAD, but it is not stored as part of the ciphertext. AAD also does not increase the cryptographic strength of the ciphertext. Instead it is an additional check by Cloud KMS to authenticate a decryption request.
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+Answer: A
+Description: AAD is used to decrypt the data so better to keep it outside GCP for safety
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date: 5 years ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+Description: AAD is used to decrypt the data so better to keep it outside GCP for safety
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+Description: AAD is used to decrypt the data so better to keep it outside GCP for safety
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 15 times
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date: 10 months ago | Votes: 0
+Keep AAD Outside of Google Cloud:
+
+Keeping the AAD outside of Google Cloud ensures that Google cannot access the additional context required to decrypt the files, thus implementing the TNO approach.
+
+Option C:
+Customer-Supplied Encryption Key (CSEK) in .boto File:
+Storing the CSEK in Cloud Memorystore or any cloud service introduces a risk where the key could be potentially accessed by cloud provider staff.
+Option D:
+Customer-Supplied Encryption Key (CSEK) in a Different Project:
+While storing the CSEK in a different project adds some security, it still leaves the keys within the Google Cloud environment, which does not fully meet the TNO approach.
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date: 10 months ago | Votes: 0
+Anudeep58
+			
+
+
+				Most Recent 
+
+
+			10 months ago
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Keep AAD Outside of Google Cloud:
+
+Keeping the AAD outside of Google Cloud ensures that Google cannot access the additional context required to decrypt the files, thus implementing the TNO approach.
+
+Option C:
+Customer-Supplied Encryption Key (CSEK) in .boto File:
+Storing the CSEK in Cloud Memorystore or any cloud service introduces a risk where the key could be potentially accessed by cloud provider staff.
+Option D:
+Customer-Supplied Encryption Key (CSEK) in a Different Project:
+While storing the CSEK in a different project adds some security, it still leaves the keys within the Google Cloud environment, which does not fully meet the TNO approach.
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Keep AAD Outside of Google Cloud:
+
+Keeping the AAD outside of Google Cloud ensures that Google cannot access the additional context required to decrypt the files, thus implementing the TNO approach.
+
+Option C:
+Customer-Supplied Encryption Key (CSEK) in .boto File:
+Storing the CSEK in Cloud Memorystore or any cloud service introduces a risk where the key could be potentially accessed by cloud provider staff.
+Option D:
+Customer-Supplied Encryption Key (CSEK) in a Different Project:
+While storing the CSEK in a different project adds some security, it still leaves the keys within the Google Cloud environment, which does not fully meet the TNO approach.
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+I just cannot understand this question. If you can't trust the provider, in this case Google, then how can you use the KMS approach. In my mind you have to generate the key locally and upload but I'm clearly wrong and don't get why.
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+emmylou
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I just cannot understand this question. If you can't trust the provider, in this case Google, then how can you use the KMS approach. In my mind you have to generate the key locally and upload but I'm clearly wrong and don't get why.
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I just cannot understand this question. If you can't trust the provider, in this case Google, then how can you use the KMS approach. In my mind you have to generate the key locally and upload but I'm clearly wrong and don't get why.
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+IMO must be (D) : to reach TNO goal keys must be customer supplied.
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+shanwford
+			
+
+
+			1 year, 6 months ago
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+IMO must be (D) : to reach TNO goal keys must be customer supplied.
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+IMO must be (D) : to reach TNO goal keys must be customer supplied.
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+Customer-Supplied Encryption Key (CSEK): CSEK allows you to provide your encryption keys, ensuring that the cloud provider staff does not have access to the keys and cannot decrypt your data.
+
+Separate Project for Key Management: Saving the CSEK in a different project that only the security team can access adds an additional layer of security. It isolates the encryption keys from the project where the data is stored, ensuring that even within the same cloud provider, only authorized personnel can access the keys.
+
+Use of .boto Configuration: Specifying the CSEK in the .boto configuration file ensures that it is applied consistently when interacting with Cloud Storage through tools like gsutil. This way, every archival file is encrypted using your keys.
+
+Options A and B involve using Google Cloud Key Management Service (KMS) to manage keys, which does not align with the TNO approach because cloud provider staff could potentially access the keys stored in Google Cloud KMS.
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+barnac1es
+			
+
+
+			1 year, 6 months ago
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Customer-Supplied Encryption Key (CSEK): CSEK allows you to provide your encryption keys, ensuring that the cloud provider staff does not have access to the keys and cannot decrypt your data.
+
+Separate Project for Key Management: Saving the CSEK in a different project that only the security team can access adds an additional layer of security. It isolates the encryption keys from the project where the data is stored, ensuring that even within the same cloud provider, only authorized personnel can access the keys.
+
+Use of .boto Configuration: Specifying the CSEK in the .boto configuration file ensures that it is applied consistently when interacting with Cloud Storage through tools like gsutil. This way, every archival file is encrypted using your keys.
+
+Options A and B involve using Google Cloud Key Management Service (KMS) to manage keys, which does not align with the TNO approach because cloud provider staff could potentially access the keys stored in Google Cloud KMS.
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Customer-Supplied Encryption Key (CSEK): CSEK allows you to provide your encryption keys, ensuring that the cloud provider staff does not have access to the keys and cannot decrypt your data.
+
+Separate Project for Key Management: Saving the CSEK in a different project that only the security team can access adds an additional layer of security. It isolates the encryption keys from the project where the data is stored, ensuring that even within the same cloud provider, only authorized personnel can access the keys.
+
+Use of .boto Configuration: Specifying the CSEK in the .boto configuration file ensures that it is applied consistently when interacting with Cloud Storage through tools like gsutil. This way, every archival file is encrypted using your keys.
+
+Options A and B involve using Google Cloud Key Management Service (KMS) to manage keys, which does not align with the TNO approach because cloud provider staff could potentially access the keys stored in Google Cloud KMS.
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+The answer is A
+The question tells us that "prevent the cloud provider staff from decrypting", so we cannot keep anything that helps decrypt on GCP, not even in a different project. so the answer cannot be D.
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+[Removed]
+			
+
+
+			1 year, 7 months ago
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The answer is A
+The question tells us that "prevent the cloud provider staff from decrypting", so we cannot keep anything that helps decrypt on GCP, not even in a different project. so the answer cannot be D.
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The answer is A
+The question tells us that "prevent the cloud provider staff from decrypting", so we cannot keep anything that helps decrypt on GCP, not even in a different project. so the answer cannot be D.
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+CSEKs are used when an organization needs complete control over key management.
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+NewDE2023
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+CSEKs are used when an organization needs complete control over key management.
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+CSEKs are used when an organization needs complete control over key management.
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Option A is not the best choice for the "Trust No One" (TNO) approach because it involves using Google Cloud's Key Management Service (KMS) to create and manage encryption keys. This means that the cloud provider will have access to the keys, which could potentially enable their staff to decrypt the data.
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+tavva_prudhvi
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A is not the best choice for the "Trust No One" (TNO) approach because it involves using Google Cloud's Key Management Service (KMS) to create and manage encryption keys. This means that the cloud provider will have access to the keys, which could potentially enable their staff to decrypt the data.
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A is not the best choice for the "Trust No One" (TNO) approach because it involves using Google Cloud's Key Management Service (KMS) to create and manage encryption keys. This means that the cloud provider will have access to the keys, which could potentially enable their staff to decrypt the data.
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+D may work, but 'Trust No One' = do not trust GCP too.  So D cannot be the answer.
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+midgoo
+			
+
+
+			2 years ago
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D may work, but 'Trust No One' = do not trust GCP too.  So D cannot be the answer.
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D may work, but 'Trust No One' = do not trust GCP too.  So D cannot be the answer.
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+answer A: KMS + AAD is more secure than CSEK
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+musumusu
+			
+
+
+			2 years, 1 month ago
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+answer A: KMS + AAD is more secure than CSEK
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+answer A: KMS + AAD is more secure than CSEK
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+A is the answer.
+
+https://cloud.google.com/kms/docs/additional-authenticated-data
+Additional authenticated data (AAD) is any string that you pass to Cloud Key Management Service as part of an encrypt or decrypt request. AAD is used as an integrity check and can help protect your data from a confused deputy attack. The AAD string must be no larger than 64 KiB.
+
+Cloud KMS will not decrypt ciphertext unless the same AAD value is used for both encryption and decryption.
+
+AAD is bound to the encrypted data, because you cannot decrypt the ciphertext unless you know the AAD, but it is not stored as part of the ciphertext. AAD also does not increase the cryptographic strength of the ciphertext. Instead it is an additional check by Cloud KMS to authenticate a decryption request.
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+zellck
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+A is the answer.
+
+https://cloud.google.com/kms/docs/additional-authenticated-data
+Additional authenticated data (AAD) is any string that you pass to Cloud Key Management Service as part of an encrypt or decrypt request. AAD is used as an integrity check and can help protect your data from a confused deputy attack. The AAD string must be no larger than 64 KiB.
+
+Cloud KMS will not decrypt ciphertext unless the same AAD value is used for both encryption and decryption.
+
+AAD is bound to the encrypted data, because you cannot decrypt the ciphertext unless you know the AAD, but it is not stored as part of the ciphertext. AAD also does not increase the cryptographic strength of the ciphertext. Instead it is an additional check by Cloud KMS to authenticate a decryption request.
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A is the answer.
+
+https://cloud.google.com/kms/docs/additional-authenticated-data
+Additional authenticated data (AAD) is any string that you pass to Cloud Key Management Service as part of an encrypt or decrypt request. AAD is used as an integrity check and can help protect your data from a confused deputy attack. The AAD string must be no larger than 64 KiB.
+
+Cloud KMS will not decrypt ciphertext unless the same AAD value is used for both encryption and decryption.
+
+AAD is bound to the encrypted data, because you cannot decrypt the ciphertext unless you know the AAD, but it is not stored as part of the ciphertext. AAD also does not increase the cryptographic strength of the ciphertext. Instead it is an additional check by Cloud KMS to authenticate a decryption request.
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Agree with A
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Agree with A
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+AzureDP900
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Agree with A
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Agree with A
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+CSEK with only security team having access seems to be right approach. Not sure how A can be better.
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Jay_Krish
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+CSEK with only security team having access seems to be right approach. Not sure how A can be better.
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+CSEK with only security team having access seems to be right approach. Not sure how A can be better.
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+It’s A, because you cannot decrypt the ciphertext unless you know the AAD (https://cloud.google.com/kms/docs/additional-authenticated-data)
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+cloudmon
+			
+
+
+			2 years, 5 months ago
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It’s A, because you cannot decrypt the ciphertext unless you know the AAD (https://cloud.google.com/kms/docs/additional-authenticated-data)
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It’s A, because you cannot decrypt the ciphertext unless you know the AAD (https://cloud.google.com/kms/docs/additional-authenticated-data)
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Answer: A
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+devaid
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+D it is
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+clouditis
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D it is
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D it is
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+C can not be the answer since memorystore cant be used to save CSEK key.
+https://cloud.google.com/memorystore/docs/redis/cmek#when_does_memorystore_interact_with_cmek_keys
+
+A is the Answer.
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+DataEngineer_WideOps
+			
+
+
+			2 years, 8 months ago
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C can not be the answer since memorystore cant be used to save CSEK key.
+https://cloud.google.com/memorystore/docs/redis/cmek#when_does_memorystore_interact_with_cmek_keys
+
+A is the Answer.
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C can not be the answer since memorystore cant be used to save CSEK key.
+https://cloud.google.com/memorystore/docs/redis/cmek#when_does_memorystore_interact_with_cmek_keys
+
+A is the Answer.
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

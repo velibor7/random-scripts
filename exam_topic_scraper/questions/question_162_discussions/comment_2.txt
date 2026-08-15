@@ -1,0 +1,79 @@
+COMMENT #2 FOR QUESTION 162
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 162
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You want to archive data in Cloud Storage. Because some data is very sensitive, you want to use the `Trust No One` (TNO) approach to encrypt your data to prevent the cloud provider staff from decrypting your data. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Use gcloud kms keys create to create a symmetric key. Then use gcloud kms encrypt to encrypt each archival file with the key and unique additional authenticated data (AAD). Use gsutil cp to upload each encrypted file to the Cloud Storage bucket, and keep the AAD outside of Google Cloud.
+										
+
+
+													B.
+												
+											
+											Use gcloud kms keys create to create a symmetric key. Then use gcloud kms encrypt to encrypt each archival file with the key. Use gsutil cp to upload each encrypted file to the Cloud Storage bucket. Manually destroy the key previously used for encryption, and rotate the key once.
+										
+
+
+													C.
+												
+											
+											Specify customer-supplied encryption key (CSEK) in the .boto configuration file. Use gsutil cp to upload each archival file to the Cloud Storage bucket. Save the CSEK in Cloud Memorystore as permanent storage of the secret.
+										
+
+
+													D.
+												
+											
+											Specify customer-supplied encryption key (CSEK) in the .boto configuration file. Use gsutil cp to upload each archival file to the Cloud Storage bucket. Save the CSEK in a different project that only the security team can access.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 18, 2020, 2:11 a.m.
+============================================================

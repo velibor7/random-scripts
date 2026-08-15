@@ -1,0 +1,8 @@
+COMMENT #21 FOR QUESTION 124599
+============================================================
+Author: Unknown
+Date: 1 year, 2 months ago
+Votes: 0
+----------------------------------------
+In Delta Lake, an external (or unmanaged) table is a table created outside of the data lake but is still accessible from the data lake. The data for external tables is stored in a location specified by the user, not in the default directory of the data lake. When you save data to an external table, you need to specify the full file path where the data will be stored. This makes the table “external” because the data itself is not managed by Delta Lake, only the metadata is. This is why specifying a full file path alongside the Delta format when saving data to a table will ensure that the table is configured as an external Delta Lake table.
+============================================================

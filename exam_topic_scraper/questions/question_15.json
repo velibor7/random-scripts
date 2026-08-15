@@ -1,0 +1,1105 @@
+{
+  "question": "You need to store and analyze social media postings in Google BigQuery at a rate of 10,000 messages per minute in near real-time. Initially, design the application to use streaming inserts for individual postings. Your application also performs data aggregations right after the streaming inserts. You discover that the queries after streaming inserts do not exhibit strong consistency, and reports from the queries might miss in-flight data. How can you adjust your application design?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tRe-write the application to load accumulated data every 2 minutes.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tConvert the streaming insert code to batch load for individual messages.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tLoad the original message to Google Cloud SQL, and export the table every hour to BigQuery via streaming inserts.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tEstimate the average latency for data availability after streaming inserts, and always run queries after waiting twice as long.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nD\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 15 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 15\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou need to store and analyze social media postings in Google BigQuery at a rate of 10,000 messages per minute in near real-time. Initially, design the application to use streaming inserts for individual postings. Your application also performs data aggregations right after the streaming inserts. You discover that the queries after streaming inserts do not exhibit strong consistency, and reports from the queries might miss in-flight data. How can you adjust your application design?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tRe-write the application to load accumulated data every 2 minutes.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tConvert the streaming insert code to batch load for individual messages.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tLoad the original message to Google Cloud SQL, and export the table every hour to BigQuery via streaming inserts.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tEstimate the average latency for data availability after streaming inserts, and always run queries after waiting twice as long.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nD\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 16, 2020, 9:37 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 15\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 16, 2020, 9:37 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Answer: D. The only that describe a way to resolve the problem, with buffering the data. \n\n(the question is possible old, the best approach would be Pub/Sub + Dataflow Streaming + Bigquery for streaming data instead near-real time)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Answer: D. The only that describe a way to resolve the problem, with buffering the data. \n\n(the question is possible old, the best approach would be Pub/Sub + Dataflow Streaming + Bigquery for streaming data instead near-real time)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Answer: D. The only that describe a way to resolve the problem, with buffering the data. \n\n(the question is possible old, the best approach would be Pub/Sub + Dataflow Streaming + Bigquery for streaming data instead near-real time)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Answer: D. The only that describe a way to resolve the problem, with buffering the data. \n\n(the question is possible old, the best approach would be Pub/Sub + Dataflow Streaming + Bigquery for streaming data instead near-real time)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Answer: D. The only that describe a way to resolve the problem, with buffering the data. \n\n(the question is possible old, the best approach would be Pub/Sub + Dataflow Streaming + Bigquery for streaming data instead near-real time)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "noob_master\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: D. The only that describe a way to resolve the problem, with buffering the data. \n\n(the question is possible old, the best approach would be Pub/Sub + Dataflow Streaming + Bigquery for streaming data instead near-real time)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: D. The only that describe a way to resolve the problem, with buffering the data. \n\n(the question is possible old, the best approach would be Pub/Sub + Dataflow Streaming + Bigquery for streaming data instead near-real time)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 8 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "B. Streams data into BigQuery one record at a time without needing to run a load job: https://cloud.google.com/bigquery/docs/reference/rest/v2/tabledata/insertAll\nInstead of using a job to load data into BigQuery, you can choose to stream your data into BigQuery one record at a time by using the tabledata.insertAll method. This approach enables querying data without the delay of running a load job:\nhttps://cloud.google.com/bigquery/streaming-data-into-bigquery\nThe BigQuery Storage Write API is a unified data-ingestion API for BigQuery. It combines the functionality of streaming ingestion and batch loading into a single high-performance API. You can use the Storage Write API to stream records into BigQuery that become available for query as they are written, or to batch process an arbitrarily large number of records and commit them in a single atomic operation.\nCommitted mode. Records are available for reading immediately as you write them to the stream. Use this mode for streaming workloads that need minimal read latency.\nhttps://cloud.google.com/bigquery/docs/write-api",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t3\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "B. Streams data into BigQuery one record at a time without needing to run a load job: https://cloud.google.com/bigquery/docs/reference/rest/v2/tabledata/insertAll\nInstead of using a job to load data into BigQuery, you can choose to stream your data into BigQuery one record at a time by using the tabledata.insertAll method. This approach enables querying data without the delay of running a load job:\nhttps://cloud.google.com/bigquery/streaming-data-into-bigquery\nThe BigQuery Storage Write API is a unified data-ingestion API for BigQuery. It combines the functionality of streaming ingestion and batch loading into a single high-performance API. You can use the Storage Write API to stream records into BigQuery that become available for query as they are written, or to batch process an arbitrarily large number of records and commit them in a single atomic operation.\nCommitted mode. Records are available for reading immediately as you write them to the stream. Use this mode for streaming workloads that need minimal read latency.\nhttps://cloud.google.com/bigquery/docs/write-api",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Streams data into BigQuery one record at a time without needing to run a load job: https://cloud.google.com/bigquery/docs/reference/rest/v2/tabledata/insertAll\nInstead of using a job to load data into BigQuery, you can choose to stream your data into BigQuery one record at a time by using the tabledata.insertAll method. This approach enables querying data without the delay of running a load job:\nhttps://cloud.google.com/bigquery/streaming-data-into-bigquery\nThe BigQuery Storage Write API is a unified data-ingestion API for BigQuery. It combines the functionality of streaming ingestion and batch loading into a single high-performance API. You can use the Storage Write API to stream records into BigQuery that become available for query as they are written, or to batch process an arbitrarily large number of records and commit them in a single atomic operation.\nCommitted mode. Records are available for reading immediately as you write them to the stream. Use this mode for streaming workloads that need minimal read latency.\nhttps://cloud.google.com/bigquery/docs/write-api",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 7 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "IN THIS ALSO BIGQUERY HAS A BUFFER  WHICH IT TAKES SLOWLY ANS INSERTS INTO REAL THING, WHAT YOU SAID IS HELPFULL IN REMOVING THE APPLICATION PART",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "IN THIS ALSO BIGQUERY HAS A BUFFER  WHICH IT TAKES SLOWLY ANS INSERTS INTO REAL THING, WHAT YOU SAID IS HELPFULL IN REMOVING THE APPLICATION PART",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 4\u00a0months ago",
+      "content": "Abhi16820\n\t\t\t\n\n\n\t\t\t3\u00a0years, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "IN THIS ALSO BIGQUERY HAS A BUFFER  WHICH IT TAKES SLOWLY ANS INSERTS INTO REAL THING, WHAT YOU SAID IS HELPFULL IN REMOVING THE APPLICATION PART",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "IN THIS ALSO BIGQUERY HAS A BUFFER  WHICH IT TAKES SLOWLY ANS INSERTS INTO REAL THING, WHAT YOU SAID IS HELPFULL IN REMOVING THE APPLICATION PART",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "could you please argue?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "could you please argue?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "MarcoDipa\n\t\t\t\n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "could you please argue?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "could you please argue?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "To address the issue of strong consistency and ensure your reports do not miss in-flight data after streaming inserts, you should re-write the application to load accumulated data every 2 minutes (option A).\n\nHere's why:\n\nBy accumulating and loading data in 2-minute intervals, you can balance between real-time data processing and ensuring data consistency.\n\nThis approach allows you to process the data in manageable batches, reducing the likelihood of inconsistencies that might occur with individual streaming inserts.\n\nIt maintains a near real-time analysis capability while allowing enough time for all in-flight data to be captured and accurately represented in your reports.\n\nThis adjustment should help improve the reliability of your data analysis and reporting.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "Rav761\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t3\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To address the issue of strong consistency and ensure your reports do not miss in-flight data after streaming inserts, you should re-write the application to load accumulated data every 2 minutes (option A).\n\nHere's why:\n\nBy accumulating and loading data in 2-minute intervals, you can balance between real-time data processing and ensuring data consistency.\n\nThis approach allows you to process the data in manageable batches, reducing the likelihood of inconsistencies that might occur with individual streaming inserts.\n\nIt maintains a near real-time analysis capability while allowing enough time for all in-flight data to be captured and accurately represented in your reports.\n\nThis adjustment should help improve the reliability of your data analysis and reporting.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To address the issue of strong consistency and ensure your reports do not miss in-flight data after streaming inserts, you should re-write the application to load accumulated data every 2 minutes (option A).\n\nHere's why:\n\nBy accumulating and loading data in 2-minute intervals, you can balance between real-time data processing and ensuring data consistency.\n\nThis approach allows you to process the data in manageable batches, reducing the likelihood of inconsistencies that might occur with individual streaming inserts.\n\nIt maintains a near real-time analysis capability while allowing enough time for all in-flight data to be captured and accurately represented in your reports.\n\nThis adjustment should help improve the reliability of your data analysis and reporting.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 1\u00a0week ago",
+      "content": "Accumulating data and loading it periodically (e.g., every 2 minutes) via batch inserts ensures strong consistency for queries. Batch loads in BigQuery allow you to avoid the latency issues inherent to streaming inserts and guarantee data availability for queries.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months, 1\u00a0week ago",
+      "content": "imrane1995\n\t\t\t\n\n\n\t\t\t4\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Accumulating data and loading it periodically (e.g., every 2 minutes) via batch inserts ensures strong consistency for queries. Batch loads in BigQuery allow you to avoid the latency issues inherent to streaming inserts and guarantee data availability for queries.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Accumulating data and loading it periodically (e.g., every 2 minutes) via batch inserts ensures strong consistency for queries. Batch loads in BigQuery allow you to avoid the latency issues inherent to streaming inserts and guarantee data availability for queries.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 2\u00a0weeks ago",
+      "content": "For maintaining data consistency while handling high throughput streaming inserts and subsequent aggregations in Google BigQuery, the best approach is to re-write the application to load accumulated data every 2 minutes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 2\u00a0weeks ago",
+      "content": "GHill1982\n\t\t\t\n\n\n\t\t\t5\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "For maintaining data consistency while handling high throughput streaming inserts and subsequent aggregations in Google BigQuery, the best approach is to re-write the application to load accumulated data every 2 minutes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "For maintaining data consistency while handling high throughput streaming inserts and subsequent aggregations in Google BigQuery, the best approach is to re-write the application to load accumulated data every 2 minutes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "\"D\" seems to use the typical approximate terminology of a wrong answer. \"estimate the time\" (how do you do that? do you do that over different times of the day?) and \"wait twice as long\" (who tells you that there are not a lot of cases when lag is twice as long?). Instead, \"A\" seems good. You don't need to show the exact results, but an approximation thereof, but you still want consistency. So an aggregation of the data every 2 minutes is a viable thing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "fire558787\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\"D\" seems to use the typical approximate terminology of a wrong answer. \"estimate the time\" (how do you do that? do you do that over different times of the day?) and \"wait twice as long\" (who tells you that there are not a lot of cases when lag is twice as long?). Instead, \"A\" seems good. You don't need to show the exact results, but an approximation thereof, but you still want consistency. So an aggregation of the data every 2 minutes is a viable thing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\"D\" seems to use the typical approximate terminology of a wrong answer. \"estimate the time\" (how do you do that? do you do that over different times of the day?) and \"wait twice as long\" (who tells you that there are not a lot of cases when lag is twice as long?). Instead, \"A\" seems good. You don't need to show the exact results, but an approximation thereof, but you still want consistency. So an aggregation of the data every 2 minutes is a viable thing.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "D is correct. The problem requirement is doing analytics on real-time data. You cannot do batch processing because the business requires it to be real-time even if it makes your job simpler, so B is incorrect. Other options are not streaming.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Parth_P\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is correct. The problem requirement is doing analytics on real-time data. You cannot do batch processing because the business requires it to be real-time even if it makes your job simpler, so B is incorrect. Other options are not streaming.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is correct. The problem requirement is doing analytics on real-time data. You cannot do batch processing because the business requires it to be real-time even if it makes your job simpler, so B is incorrect. Other options are not streaming.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "There are assumptions over the quality of data acceptable. If slight variations of the analytics against actual can be accepted, then D would be a good choice.\n\nMany people chose B, but this also requires some form of waiting for the late data to arrive.\n\nI think a combination of D and B can be applied, but for an intial fix, delaying the aggregation queries with D seems to make more sense. If the variance is small and the some late data leakage is acceptable, and we can remain as D.\n\nIf problems arise, we can always proceed to attempt B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "jkhong\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "There are assumptions over the quality of data acceptable. If slight variations of the analytics against actual can be accepted, then D would be a good choice.\n\nMany people chose B, but this also requires some form of waiting for the late data to arrive.\n\nI think a combination of D and B can be applied, but for an intial fix, delaying the aggregation queries with D seems to make more sense. If the variance is small and the some late data leakage is acceptable, and we can remain as D.\n\nIf problems arise, we can always proceed to attempt B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "There are assumptions over the quality of data acceptable. If slight variations of the analytics against actual can be accepted, then D would be a good choice.\n\nMany people chose B, but this also requires some form of waiting for the late data to arrive.\n\nI think a combination of D and B can be applied, but for an intial fix, delaying the aggregation queries with D seems to make more sense. If the variance is small and the some late data leakage is acceptable, and we can remain as D.\n\nIf problems arise, we can always proceed to attempt B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "The streaming mode may be in pending mode or buffered mode where the streaming data is not immediately available before committing or flushing. Thus, we need to wait before the data will be available. Or else we need to switch to commited mode (which is not present in the choices).",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "korntewin\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The streaming mode may be in pending mode or buffered mode where the streaming data is not immediately available before committing or flushing. Thus, we need to wait before the data will be available. Or else we need to switch to commited mode (which is not present in the choices).",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The streaming mode may be in pending mode or buffered mode where the streaming data is not immediately available before committing or flushing. Thus, we need to wait before the data will be available. Or else we need to switch to commited mode (which is not present in the choices).",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "Answer: D\nWhat to learn or look for\n1. In-Flight data = (Real Time data, i.e still in streaming pipeline and not landed in BigQuery)\n2. Dataflow (assume in best case) streaming pipeline is running to send data to Bigquery. \nWhy not option B: change streaming to batch upload is not business requirement, we have to stuck to streaming and real time analysis. \n\nOption D: make bigquery run after waiting for sometime (twice here), How will you do it? \n- there is not setting in BQ to do it, right!. So, adjust it in your pipeline (dataflow)\n- For example, add Fixed window, and you want to execute aggregation query after 2 min. \nCode\n```pipeline.apply(...)\n   .apply(Window.<TableRow>into(FixedWindows.of(Duration.standardMinutes(2))))\n    .apply(BigQueryIO.writeTableRows()\n        .to(\"my_dataset.my_table\")\n```",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "musumusu\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: D\nWhat to learn or look for\n1. In-Flight data = (Real Time data, i.e still in streaming pipeline and not landed in BigQuery)\n2. Dataflow (assume in best case) streaming pipeline is running to send data to Bigquery. \nWhy not option B: change streaming to batch upload is not business requirement, we have to stuck to streaming and real time analysis. \n\nOption D: make bigquery run after waiting for sometime (twice here), How will you do it? \n- there is not setting in BQ to do it, right!. So, adjust it in your pipeline (dataflow)\n- For example, add Fixed window, and you want to execute aggregation query after 2 min. \nCode\n```pipeline.apply(...)\n   .apply(Window.<TableRow>into(FixedWindows.of(Duration.standardMinutes(2))))\n    .apply(BigQueryIO.writeTableRows()\n        .to(\"my_dataset.my_table\")\n```",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: D\nWhat to learn or look for\n1. In-Flight data = (Real Time data, i.e still in streaming pipeline and not landed in BigQuery)\n2. Dataflow (assume in best case) streaming pipeline is running to send data to Bigquery. \nWhy not option B: change streaming to batch upload is not business requirement, we have to stuck to streaming and real time analysis. \n\nOption D: make bigquery run after waiting for sometime (twice here), How will you do it? \n- there is not setting in BQ to do it, right!. So, adjust it in your pipeline (dataflow)\n- For example, add Fixed window, and you want to execute aggregation query after 2 min. \nCode\n```pipeline.apply(...)\n   .apply(Window.<TableRow>into(FixedWindows.of(Duration.standardMinutes(2))))\n    .apply(BigQueryIO.writeTableRows()\n        .to(\"my_dataset.my_table\")\n```",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Answer: D\nI agree with the first part of the D answer, but for the second part, I don't know how they came about the 2 mins, is it from a calculation?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "philli1011\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: D\nI agree with the first part of the D answer, but for the second part, I don't know how they came about the 2 mins, is it from a calculation?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: D\nI agree with the first part of the D answer, but for the second part, I don't know how they came about the 2 mins, is it from a calculation?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "A. Re-write the application to load accumulated data every 2 minutes.\n\nBy accumulating data and performing a batch load every 2 minutes, you can reduce the potential inconsistency caused by streaming inserts. While this introduces a slight delay, it provides a more consistent approach than streaming each individual message. This method can still meet the near real-time requirement, and the slight delay is often acceptable in scenarios where data consistency is paramount.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "imran79\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Re-write the application to load accumulated data every 2 minutes.\n\nBy accumulating data and performing a batch load every 2 minutes, you can reduce the potential inconsistency caused by streaming inserts. While this introduces a slight delay, it provides a more consistent approach than streaming each individual message. This method can still meet the near real-time requirement, and the slight delay is often acceptable in scenarios where data consistency is paramount.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Re-write the application to load accumulated data every 2 minutes.\n\nBy accumulating data and performing a batch load every 2 minutes, you can reduce the potential inconsistency caused by streaming inserts. While this introduces a slight delay, it provides a more consistent approach than streaming each individual message. This method can still meet the near real-time requirement, and the slight delay is often acceptable in scenarios where data consistency is paramount.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "BBBBB is the only option",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "Nirca\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "BBBBB is the only option",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "BBBBB is the only option",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "I'd argue that this question became outdated with the introduction of the BigQuery Storage Write API: https://cloud.google.com/bigquery/docs/write-api",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "ckanaar\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "I'd argue that this question became outdated with the introduction of the BigQuery Storage Write API: https://cloud.google.com/bigquery/docs/write-api",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I'd argue that this question became outdated with the introduction of the BigQuery Storage Write API: https://cloud.google.com/bigquery/docs/write-api",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "Good point",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "Good point",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "axantroff\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Good point",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Good point",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "Streaming inserts in BigQuery are not immediately available to be queried, which is causing the weak consistency you're observing. A better approach is to batch the data and load it at regular intervals. Loading the data every two minutes is still relatively real-time, and it should help solve the consistency problem.\nAnswer A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "klughund\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Streaming inserts in BigQuery are not immediately available to be queried, which is causing the weak consistency you're observing. A better approach is to batch the data and load it at regular intervals. Loading the data every two minutes is still relatively real-time, and it should help solve the consistency problem.\nAnswer A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Streaming inserts in BigQuery are not immediately available to be queried, which is causing the weak consistency you're observing. A better approach is to batch the data and load it at regular intervals. Loading the data every two minutes is still relatively real-time, and it should help solve the consistency problem.\nAnswer A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "All the options aim to address the challenge of strong consistency in the data and potential missing data that may occur with streaming inserts. Each approach has its pros and cons, so the best choice depends on the specific needs and requirements of the application. It's like having different strategies for keeping track of all the fun things the kids do and say on the playground, making sure nothing gets left behind!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "NeoNitin\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "All the options aim to address the challenge of strong consistency in the data and potential missing data that may occur with streaming inserts. Each approach has its pros and cons, so the best choice depends on the specific needs and requirements of the application. It's like having different strategies for keeping track of all the fun things the kids do and say on the playground, making sure nothing gets left behind!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "All the options aim to address the challenge of strong consistency in the data and potential missing data that may occur with streaming inserts. Each approach has its pros and cons, so the best choice depends on the specific needs and requirements of the application. It's like having different strategies for keeping track of all the fun things the kids do and say on the playground, making sure nothing gets left behind!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "Streaming Inserts is marked as Legacy now.\nhttps://cloud.google.com/bigquery/docs/streaming-data-into-bigquery#dataavailability\n\nThe documentation is hinting on it can take up to 90 minutes to process the buffered data. \nThis question is testing if you are aware of the possible long times the buffer can build up.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "WillemHendr\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Streaming Inserts is marked as Legacy now.\nhttps://cloud.google.com/bigquery/docs/streaming-data-into-bigquery#dataavailability\n\nThe documentation is hinting on it can take up to 90 minutes to process the buffered data. \nThis question is testing if you are aware of the possible long times the buffer can build up.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Streaming Inserts is marked as Legacy now.\nhttps://cloud.google.com/bigquery/docs/streaming-data-into-bigquery#dataavailability\n\nThe documentation is hinting on it can take up to 90 minutes to process the buffered data. \nThis question is testing if you are aware of the possible long times the buffer can build up.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

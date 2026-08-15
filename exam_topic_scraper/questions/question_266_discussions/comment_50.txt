@@ -1,0 +1,14 @@
+COMMENT #50 FOR QUESTION 266
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+The problem requires detecting average noise levels when data is received for more than 30 minutes, but the window should end when no data has been received for 15 minutes.
+Session windows are ideal for this scenario because:
+They are designed to capture bursts of activity followed by periods of inactivity.
+They dynamically size based on the data received, which fits well with the variable duration of noise events.
+The gap duration can be set to define when a session ends.
+The 15-minute gap duration aligns perfectly with the requirement to end the window when no data has been received for 15 minutes.
+Session windows will naturally extend beyond 30 minutes if data keeps coming in, satisfying the requirement to detect levels for durations of more than 30 minutes.
+============================================================

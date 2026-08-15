@@ -1,0 +1,11 @@
+COMMENT #57 FOR QUESTION 124575
+============================================================
+Author: Unknown
+Date: 3 months, 2 weeks ago
+Votes: 0
+----------------------------------------
+Answer D. Explicitly repartitioning to 2,048 partitions ensures that the output files are close to the desired size of 512 MB, provided the data distribution is relatively even.
+Repartitioning directly addresses the problem by controlling the number of partitions, which directly affects the output file size
+Why not option A ? Misinterpretation of spark.sql.files.maxPartitionBytes in Option A:
+The assessment incorrectly states that this configuration controls the maximum size of files when writing to Parquet. This setting controls the size of partitions when reading data, not during writing.
+============================================================

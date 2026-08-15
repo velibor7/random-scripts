@@ -1,0 +1,1057 @@
+ALL COMMENTS FOR QUESTION 197
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 197 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 197
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are designing a system that requires an ACID-compliant database. You must ensure that the system requires minimal human intervention in case of a failure.What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Configure a Cloud SQL for MySQL instance with point-in-time recovery enabled.
+										
+
+
+													B.
+												
+											
+											Configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+										
+
+
+													C.
+												
+											
+											Configure a Bigtable instance with more than one cluster.
+										
+
+
+													D.
+												
+											
+											Configure a BigQuery table with a multi-region configuration.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								ducc
+							
+							
+							at 
+							Sept. 3, 2022, 3:57 a.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 197
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								ducc
+							
+							
+							at 
+							Sept. 3, 2022, 3:57 a.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+We exclude [C[ as non ACID and [D] for being invalid (location is configured on Dataset level, not Table).
+Then, let's focus on "minimal human intervention in case of a failure" requirement in order to eliminate one answer among [A] and [B]. 
+Basically, we have to compare point-in-time recovery with high availability. It doesn't matter whether it's about MySQL or PostgreSQL since both databases support those features.
+- Point-in-time recovery logs are created automatically, but restoring an instance in case of failure requires manual steps (described here: https://cloud.google.com/sql/docs/mysql/backup-recovery/pitr#perform-pitr)
+- High availability, in case of failure requires no human intervention: "If an HA-configured instance becomes unresponsive, Cloud SQL automatically switches to serving data from the standby instance." (from https://cloud.google.com/sql/docs/postgres/high-availability#failover-overview)
+So answer [B] wins.
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+We exclude [C[ as non ACID and [D] for being invalid (location is configured on Dataset level, not Table).
+Then, let's focus on "minimal human intervention in case of a failure" requirement in order to eliminate one answer among [A] and [B]. 
+Basically, we have to compare point-in-time recovery with high availability. It doesn't matter whether it's about MySQL or PostgreSQL since both databases support those features.
+- Point-in-time recovery logs are created automatically, but restoring an instance in case of failure requires manual steps (described here: https://cloud.google.com/sql/docs/mysql/backup-recovery/pitr#perform-pitr)
+- High availability, in case of failure requires no human intervention: "If an HA-configured instance becomes unresponsive, Cloud SQL automatically switches to serving data from the standby instance." (from https://cloud.google.com/sql/docs/postgres/high-availability#failover-overview)
+So answer [B] wins.
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+We exclude [C[ as non ACID and [D] for being invalid (location is configured on Dataset level, not Table).
+Then, let's focus on "minimal human intervention in case of a failure" requirement in order to eliminate one answer among [A] and [B]. 
+Basically, we have to compare point-in-time recovery with high availability. It doesn't matter whether it's about MySQL or PostgreSQL since both databases support those features.
+- Point-in-time recovery logs are created automatically, but restoring an instance in case of failure requires manual steps (described here: https://cloud.google.com/sql/docs/mysql/backup-recovery/pitr#perform-pitr)
+- High availability, in case of failure requires no human intervention: "If an HA-configured instance becomes unresponsive, Cloud SQL automatically switches to serving data from the standby instance." (from https://cloud.google.com/sql/docs/postgres/high-availability#failover-overview)
+So answer [B] wins.
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+We exclude [C[ as non ACID and [D] for being invalid (location is configured on Dataset level, not Table).
+Then, let's focus on "minimal human intervention in case of a failure" requirement in order to eliminate one answer among [A] and [B]. 
+Basically, we have to compare point-in-time recovery with high availability. It doesn't matter whether it's about MySQL or PostgreSQL since both databases support those features.
+- Point-in-time recovery logs are created automatically, but restoring an instance in case of failure requires manual steps (described here: https://cloud.google.com/sql/docs/mysql/backup-recovery/pitr#perform-pitr)
+- High availability, in case of failure requires no human intervention: "If an HA-configured instance becomes unresponsive, Cloud SQL automatically switches to serving data from the standby instance." (from https://cloud.google.com/sql/docs/postgres/high-availability#failover-overview)
+So answer [B] wins.
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+We exclude [C[ as non ACID and [D] for being invalid (location is configured on Dataset level, not Table).
+Then, let's focus on "minimal human intervention in case of a failure" requirement in order to eliminate one answer among [A] and [B]. 
+Basically, we have to compare point-in-time recovery with high availability. It doesn't matter whether it's about MySQL or PostgreSQL since both databases support those features.
+- Point-in-time recovery logs are created automatically, but restoring an instance in case of failure requires manual steps (described here: https://cloud.google.com/sql/docs/mysql/backup-recovery/pitr#perform-pitr)
+- High availability, in case of failure requires no human intervention: "If an HA-configured instance becomes unresponsive, Cloud SQL automatically switches to serving data from the standby instance." (from https://cloud.google.com/sql/docs/postgres/high-availability#failover-overview)
+So answer [B] wins.
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+NicolasN
+			
+
+
+				Highly Voted 
+
+
+			2 years, 5 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+We exclude [C[ as non ACID and [D] for being invalid (location is configured on Dataset level, not Table).
+Then, let's focus on "minimal human intervention in case of a failure" requirement in order to eliminate one answer among [A] and [B]. 
+Basically, we have to compare point-in-time recovery with high availability. It doesn't matter whether it's about MySQL or PostgreSQL since both databases support those features.
+- Point-in-time recovery logs are created automatically, but restoring an instance in case of failure requires manual steps (described here: https://cloud.google.com/sql/docs/mysql/backup-recovery/pitr#perform-pitr)
+- High availability, in case of failure requires no human intervention: "If an HA-configured instance becomes unresponsive, Cloud SQL automatically switches to serving data from the standby instance." (from https://cloud.google.com/sql/docs/postgres/high-availability#failover-overview)
+So answer [B] wins.
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+We exclude [C[ as non ACID and [D] for being invalid (location is configured on Dataset level, not Table).
+Then, let's focus on "minimal human intervention in case of a failure" requirement in order to eliminate one answer among [A] and [B]. 
+Basically, we have to compare point-in-time recovery with high availability. It doesn't matter whether it's about MySQL or PostgreSQL since both databases support those features.
+- Point-in-time recovery logs are created automatically, but restoring an instance in case of failure requires manual steps (described here: https://cloud.google.com/sql/docs/mysql/backup-recovery/pitr#perform-pitr)
+- High availability, in case of failure requires no human intervention: "If an HA-configured instance becomes unresponsive, Cloud SQL automatically switches to serving data from the standby instance." (from https://cloud.google.com/sql/docs/postgres/high-availability#failover-overview)
+So answer [B] wins.
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 43 times
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Will you change your answer if the answer D says dataset instead of table?
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+Will you change your answer if the answer D says dataset instead of table?
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+squishy_fishy
+			
+
+
+			1 year, 5 months ago
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Will you change your answer if the answer D says dataset instead of table?
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Will you change your answer if the answer D says dataset instead of table?
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Your explanation is perfect, thanks
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Mcloudgirl
+			
+
+
+			2 years, 5 months ago
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Your explanation is perfect, thanks
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Your explanation is perfect, thanks
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+Its B because of HA
+cant be A because point in time recovery still requires human intervention
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date: 8 months, 3 weeks ago | Votes: 0
+edre
+			
+
+
+				Most Recent 
+
+
+			8 months, 3 weeks ago
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Its B because of HA
+cant be A because point in time recovery still requires human intervention
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Its B because of HA
+cant be A because point in time recovery still requires human intervention
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+The best option to meet the ACID compliance and minimal human intervention requirements is to configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+
+Key reasons:
+
+Cloud SQL for PostgreSQL provides full ACID compliance, unlike Bigtable which provides only atomicity and consistency guarantees.
+Enabling high availability removes the need for manual failover as Cloud SQL will automatically failover to a standby replica if the leader instance goes down.
+Point-in-time recovery in MySQL requires manual intervention to restore data if needed.
+BigQuery does not provide transactional guarantees required for an ACID database.
+Therefore, a Cloud SQL for PostgreSQL instance with high availability meets the ACID and minimal intervention requirements best. The automatic failover will ensure availability and uptime without administrative effort.
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The best option to meet the ACID compliance and minimal human intervention requirements is to configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+
+Key reasons:
+
+Cloud SQL for PostgreSQL provides full ACID compliance, unlike Bigtable which provides only atomicity and consistency guarantees.
+Enabling high availability removes the need for manual failover as Cloud SQL will automatically failover to a standby replica if the leader instance goes down.
+Point-in-time recovery in MySQL requires manual intervention to restore data if needed.
+BigQuery does not provide transactional guarantees required for an ACID database.
+Therefore, a Cloud SQL for PostgreSQL instance with high availability meets the ACID and minimal intervention requirements best. The automatic failover will ensure availability and uptime without administrative effort.
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The best option to meet the ACID compliance and minimal human intervention requirements is to configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+
+Key reasons:
+
+Cloud SQL for PostgreSQL provides full ACID compliance, unlike Bigtable which provides only atomicity and consistency guarantees.
+Enabling high availability removes the need for manual failover as Cloud SQL will automatically failover to a standby replica if the leader instance goes down.
+Point-in-time recovery in MySQL requires manual intervention to restore data if needed.
+BigQuery does not provide transactional guarantees required for an ACID database.
+Therefore, a Cloud SQL for PostgreSQL instance with high availability meets the ACID and minimal intervention requirements best. The automatic failover will ensure availability and uptime without administrative effort.
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+I vote for D - BigQuery with multi region configuration. 
+According to https://cloud.google.com/bigquery/docs/introduction , BigQuery support ACID and automatically replicated for high availability.
+"""BigQuery stores data using a columnar storage format that is optimized for analytical queries. BigQuery presents data in tables, rows, and columns and provides full support for database transaction semantics (ACID). BigQuery storage is automatically replicated across multiple locations to provide high availability."""
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+[Removed]
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I vote for D - BigQuery with multi region configuration. 
+According to https://cloud.google.com/bigquery/docs/introduction , BigQuery support ACID and automatically replicated for high availability.
+"""BigQuery stores data using a columnar storage format that is optimized for analytical queries. BigQuery presents data in tables, rows, and columns and provides full support for database transaction semantics (ACID). BigQuery storage is automatically replicated across multiple locations to provide high availability."""
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I vote for D - BigQuery with multi region configuration. 
+According to https://cloud.google.com/bigquery/docs/introduction , BigQuery support ACID and automatically replicated for high availability.
+"""BigQuery stores data using a columnar storage format that is optimized for analytical queries. BigQuery presents data in tables, rows, and columns and provides full support for database transaction semantics (ACID). BigQuery storage is automatically replicated across multiple locations to provide high availability."""
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Option B
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+vamgcp
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Answer B,
+ACID -compliant database are Spanner and CloudSQL
+Option A could be the answer if they setup a secondary or failure replicas and auto maintenance window that could trigger in non business hours. 
+Option B, does not explain about extra replica but in postgresql Highavailablity option means the same extra replicas instances are available for emergency.
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+musumusu
+			
+
+
+			2 years, 1 month ago
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer B,
+ACID -compliant database are Spanner and CloudSQL
+Option A could be the answer if they setup a secondary or failure replicas and auto maintenance window that could trigger in non business hours. 
+Option B, does not explain about extra replica but in postgresql Highavailablity option means the same extra replicas instances are available for emergency.
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer B,
+ACID -compliant database are Spanner and CloudSQL
+Option A could be the answer if they setup a secondary or failure replicas and auto maintenance window that could trigger in non business hours. 
+Option B, does not explain about extra replica but in postgresql Highavailablity option means the same extra replicas instances are available for emergency.
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+B. Configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+AzureDP900
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/sql/docs/postgres/high-availability#HA-configuration
+The purpose of an HA configuration is to reduce downtime when a zone or instance becomes unavailable. This might happen during a zonal outage, or when an instance runs out of memory. With HA, your data continues to be available to client applications.
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+zellck
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+https://cloud.google.com/sql/docs/postgres/high-availability#HA-configuration
+The purpose of an HA configuration is to reduce downtime when a zone or instance becomes unavailable. This might happen during a zonal outage, or when an instance runs out of memory. With HA, your data continues to be available to client applications.
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+https://cloud.google.com/sql/docs/postgres/high-availability#HA-configuration
+The purpose of an HA configuration is to reduce downtime when a zone or instance becomes unavailable. This might happen during a zonal outage, or when an instance runs out of memory. With HA, your data continues to be available to client applications.
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+I voted for B
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+samirzubair
+			
+
+
+			2 years, 4 months ago
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I voted for B
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I voted for B
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+B   it is exact anwer.
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B   it is exact anwer.
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B   it is exact anwer.
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Ans B
+Postgres is highly ACID compliant as compared to Mysql
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Ans B
+Postgres is highly ACID compliant as compared to Mysql
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Ans B
+Postgres is highly ACID compliant as compared to Mysql
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+cloud sql with high availability enabled is enough
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Remi2021
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+cloud sql with high availability enabled is enough
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+cloud sql with high availability enabled is enough
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+B. Configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+AWSandeep
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Configure a Cloud SQL for PostgreSQL instance with high availability enabled.
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+I voted for B
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+ducc
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I voted for B
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I voted for B
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

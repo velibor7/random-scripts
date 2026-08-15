@@ -1,0 +1,1160 @@
+ALL COMMENTS FOR QUESTION 88
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 88 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 88
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your team is responsible for developing and maintaining ETLs in your company. One of your Dataflow jobs is failing because of some errors in the input data, and you need to improve reliability of the pipeline (incl. being able to reprocess all failing data).What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Add a filtering step to skip these types of errors in the future, extract erroneous rows from logs.
+										
+
+
+													B.
+												
+											
+											Add a tryג€¦ catch block to your DoFn that transforms the data, extract erroneous rows from logs.
+										
+
+
+													C.
+												
+											
+											Add a tryג€¦ catch block to your DoFn that transforms the data, write erroneous rows to Pub/Sub PubSub directly from the DoFn.
+										
+
+
+													D.
+												
+											
+											Add a tryג€¦ catch block to your DoFn that transforms the data, use a sideOutput to create a PCollection that can be stored to Pub/Sub later.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 3, 2022, 1:58 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 88
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 3, 2022, 1:58 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+C is a big NO. Writing to PubSub in DoFn will cause bottleneck in the pipeline. For IO, we should always use those IO lib (e.g PubsubIO)
+Using sideOutput is the correct answer here. There is a Qwiklab about this. It is recommended to do that lab to understand more.
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+C is a big NO. Writing to PubSub in DoFn will cause bottleneck in the pipeline. For IO, we should always use those IO lib (e.g PubsubIO)
+Using sideOutput is the correct answer here. There is a Qwiklab about this. It is recommended to do that lab to understand more.
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+C is a big NO. Writing to PubSub in DoFn will cause bottleneck in the pipeline. For IO, we should always use those IO lib (e.g PubsubIO)
+Using sideOutput is the correct answer here. There is a Qwiklab about this. It is recommended to do that lab to understand more.
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+C is a big NO. Writing to PubSub in DoFn will cause bottleneck in the pipeline. For IO, we should always use those IO lib (e.g PubsubIO)
+Using sideOutput is the correct answer here. There is a Qwiklab about this. It is recommended to do that lab to understand more.
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+C is a big NO. Writing to PubSub in DoFn will cause bottleneck in the pipeline. For IO, we should always use those IO lib (e.g PubsubIO)
+Using sideOutput is the correct answer here. There is a Qwiklab about this. It is recommended to do that lab to understand more.
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+midgoo
+			
+
+
+				Highly Voted 
+
+
+			1 year, 7 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C is a big NO. Writing to PubSub in DoFn will cause bottleneck in the pipeline. For IO, we should always use those IO lib (e.g PubsubIO)
+Using sideOutput is the correct answer here. There is a Qwiklab about this. It is recommended to do that lab to understand more.
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C is a big NO. Writing to PubSub in DoFn will cause bottleneck in the pipeline. For IO, we should always use those IO lib (e.g PubsubIO)
+Using sideOutput is the correct answer here. There is a Qwiklab about this. It is recommended to do that lab to understand more.
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 13 times
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Based on the given scenario, option D would be the best approach to improve the reliability of the pipeline.
+
+Adding a try-catch block to the DoFn that transforms the data would allow you to catch and handle errors within the pipeline. However, storing erroneous rows in Pub/Sub directly from the DoFn (Option C) could potentially create a bottleneck in the pipeline, as it adds additional I/O operations to the data processing.
+
+Option A of filtering the erroneous data would not allow the pipeline to reprocess the failing data, which could result in data loss.
+
+Option D of using a sideOutput to create a PCollection of erroneous data would allow for reprocessing of the failed data and would not create a bottleneck in the pipeline. Storing the erroneous data in a separate PCollection would also make it easier to debug and analyze the failed data.
+
+Therefore, adding a try-catch block to the DoFn that transforms the data and using a sideOutput to create a PCollection of erroneous data that can be stored to Pub/Sub later would be the best approach to improve the reliability of the pipeline.
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+jonathanthezombieboy
+			
+
+
+				Highly Voted 
+
+
+			1 year, 7 months ago
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Based on the given scenario, option D would be the best approach to improve the reliability of the pipeline.
+
+Adding a try-catch block to the DoFn that transforms the data would allow you to catch and handle errors within the pipeline. However, storing erroneous rows in Pub/Sub directly from the DoFn (Option C) could potentially create a bottleneck in the pipeline, as it adds additional I/O operations to the data processing.
+
+Option A of filtering the erroneous data would not allow the pipeline to reprocess the failing data, which could result in data loss.
+
+Option D of using a sideOutput to create a PCollection of erroneous data would allow for reprocessing of the failed data and would not create a bottleneck in the pipeline. Storing the erroneous data in a separate PCollection would also make it easier to debug and analyze the failed data.
+
+Therefore, adding a try-catch block to the DoFn that transforms the data and using a sideOutput to create a PCollection of erroneous data that can be stored to Pub/Sub later would be the best approach to improve the reliability of the pipeline.
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Based on the given scenario, option D would be the best approach to improve the reliability of the pipeline.
+
+Adding a try-catch block to the DoFn that transforms the data would allow you to catch and handle errors within the pipeline. However, storing erroneous rows in Pub/Sub directly from the DoFn (Option C) could potentially create a bottleneck in the pipeline, as it adds additional I/O operations to the data processing.
+
+Option A of filtering the erroneous data would not allow the pipeline to reprocess the failing data, which could result in data loss.
+
+Option D of using a sideOutput to create a PCollection of erroneous data would allow for reprocessing of the failed data and would not create a bottleneck in the pipeline. Storing the erroneous data in a separate PCollection would also make it easier to debug and analyze the failed data.
+
+Therefore, adding a try-catch block to the DoFn that transforms the data and using a sideOutput to create a PCollection of erroneous data that can be stored to Pub/Sub later would be the best approach to improve the reliability of the pipeline.
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date: 6 months ago | Votes: 0
+I think it's D because here you can write data from Dataflow PCollection to pub/sub. https://cloud.google.com/dataflow/docs/guides/write-to-pubsub
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date: 6 months ago | Votes: 0
+Farah_007
+			
+
+
+				Most Recent 
+
+
+			6 months ago
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I think it's D because here you can write data from Dataflow PCollection to pub/sub. https://cloud.google.com/dataflow/docs/guides/write-to-pubsub
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I think it's D because here you can write data from Dataflow PCollection to pub/sub. https://cloud.google.com/dataflow/docs/guides/write-to-pubsub
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Answer is C. Here is the github repo and an example from the Qwiklab where they tag the output as 'parsed_rows' and 'unparsed_rows'  before they send the data to GCS. I don't see how GCS or PubSub would make a difference at this point. It seems like a more maintanable solution to just parse the data in the DoFn.
+
+1) If the function does more than that then it serves multiple purposes and it's not good software engineering. Unless there is a good reason, writing to PubSub should be separated from the DoFn.
+
+ii) It's faster to write in mini-batches or one batch than stream the errors. What's the need for streaming out errors 1 by 1? Literally no real advantage.
+
+https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/quests/dataflow_python/7_Advanced_Streaming_Analytics/solution/streaming_minute_traffic_pipeline.py
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Mathew106
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is C. Here is the github repo and an example from the Qwiklab where they tag the output as 'parsed_rows' and 'unparsed_rows'  before they send the data to GCS. I don't see how GCS or PubSub would make a difference at this point. It seems like a more maintanable solution to just parse the data in the DoFn.
+
+1) If the function does more than that then it serves multiple purposes and it's not good software engineering. Unless there is a good reason, writing to PubSub should be separated from the DoFn.
+
+ii) It's faster to write in mini-batches or one batch than stream the errors. What's the need for streaming out errors 1 by 1? Literally no real advantage.
+
+https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/quests/dataflow_python/7_Advanced_Streaming_Analytics/solution/streaming_minute_traffic_pipeline.py
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is C. Here is the github repo and an example from the Qwiklab where they tag the output as 'parsed_rows' and 'unparsed_rows'  before they send the data to GCS. I don't see how GCS or PubSub would make a difference at this point. It seems like a more maintanable solution to just parse the data in the DoFn.
+
+1) If the function does more than that then it serves multiple purposes and it's not good software engineering. Unless there is a good reason, writing to PubSub should be separated from the DoFn.
+
+ii) It's faster to write in mini-batches or one batch than stream the errors. What's the need for streaming out errors 1 by 1? Literally no real advantage.
+
+https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/quests/dataflow_python/7_Advanced_Streaming_Analytics/solution/streaming_minute_traffic_pipeline.py
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+Output errors to new PCollection – Send to collector for later analysis (Pub/Sub is a good target)
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+tibuenoc
+			
+
+
+			1 year, 6 months ago
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Output errors to new PCollection – Send to collector for later analysis (Pub/Sub is a good target)
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Output errors to new PCollection – Send to collector for later analysis (Pub/Sub is a good target)
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Option D is right approach to use to get errors as sideOutput. Apache beam has a special scripting docs not dynamic as python itself. So lets follow standard sideOutput(withoutputs in the code)
+syntax be like in pipeline:
+'ProcessData' >> beam.ParDo(DoFn).with_outputs
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+musumusu
+			
+
+
+			1 year, 7 months ago
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+Option D is right approach to use to get errors as sideOutput. Apache beam has a special scripting docs not dynamic as python itself. So lets follow standard sideOutput(withoutputs in the code)
+syntax be like in pipeline:
+'ProcessData' >> beam.ParDo(DoFn).with_outputs
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option D is right approach to use to get errors as sideOutput. Apache beam has a special scripting docs not dynamic as python itself. So lets follow standard sideOutput(withoutputs in the code)
+syntax be like in pipeline:
+'ProcessData' >> beam.ParDo(DoFn).with_outputs
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+After using you try: Catch: you can also send the erroneous records to dead letter sink into BQ
+``` outputTuple.get(deadLetterTag).apply(BigQuery.write(...)) ```
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+After using you try: Catch: you can also send the erroneous records to dead letter sink into BQ
+``` outputTuple.get(deadLetterTag).apply(BigQuery.write(...)) ```
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+musumusu
+			
+
+
+			1 year, 7 months ago
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+After using you try: Catch: you can also send the erroneous records to dead letter sink into BQ
+``` outputTuple.get(deadLetterTag).apply(BigQuery.write(...)) ```
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+After using you try: Catch: you can also send the erroneous records to dead letter sink into BQ
+``` outputTuple.get(deadLetterTag).apply(BigQuery.write(...)) ```
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+blahblahblahblahblahblahblahblah
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+abwey
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+blahblahblahblahblahblahblahblah
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+blahblahblahblahblahblahblahblah
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+It`s D.
+Use a try catch block to direct erroneous rows into a side output. The PCollection of the side output can be sent efficiently to the PubSub topic via Apache Beam PubSubIO.
+
+It's not C because C means to sent every single invalid row in a separate request to PubSub which is very inefficient when working with Dataflow as now batching is involved.
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+waiebdi
+			
+
+
+			1 year, 8 months ago
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It`s D.
+Use a try catch block to direct erroneous rows into a side output. The PCollection of the side output can be sent efficiently to the PubSub topic via Apache Beam PubSubIO.
+
+It's not C because C means to sent every single invalid row in a separate request to PubSub which is very inefficient when working with Dataflow as now batching is involved.
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It`s D.
+Use a try catch block to direct erroneous rows into a side output. The PCollection of the side output can be sent efficiently to the PubSub topic via Apache Beam PubSubIO.
+
+It's not C because C means to sent every single invalid row in a separate request to PubSub which is very inefficient when working with Dataflow as now batching is involved.
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+C is the answer.
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+zellck
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C is the answer.
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C is the answer.
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+C
+D: dataflow to pub/sub is weird
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+hauhau
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C
+D: dataflow to pub/sub is weird
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C
+D: dataflow to pub/sub is weird
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+D
+Side output is a great manner to branch the processing. Let's take the example of an input data source that contains both valid and invalid values. Valid values must be written in place #1 and the invalid ones in place#2. A naive solution suggests to use a filter and write 2 distinct processing pipelines. However this approach has one main drawback - the input dataset is read twice. If for the mentioned problem we use side outputs, we can still have 1 ParDo transform that internally dispatches valid and invalid values to appropriate places (#1 or #2, depending on value's validity).
+
+
+https://www.waitingforcode.com/apache-beam/side-output-apache-beam/read#:~:text=simple%20test%20cases.-,Side%20output%20defined,-%C2%B6
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Atnafu
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D
+Side output is a great manner to branch the processing. Let's take the example of an input data source that contains both valid and invalid values. Valid values must be written in place #1 and the invalid ones in place#2. A naive solution suggests to use a filter and write 2 distinct processing pipelines. However this approach has one main drawback - the input dataset is read twice. If for the mentioned problem we use side outputs, we can still have 1 ParDo transform that internally dispatches valid and invalid values to appropriate places (#1 or #2, depending on value's validity).
+
+
+https://www.waitingforcode.com/apache-beam/side-output-apache-beam/read#:~:text=simple%20test%20cases.-,Side%20output%20defined,-%C2%B6
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D
+Side output is a great manner to branch the processing. Let's take the example of an input data source that contains both valid and invalid values. Valid values must be written in place #1 and the invalid ones in place#2. A naive solution suggests to use a filter and write 2 distinct processing pipelines. However this approach has one main drawback - the input dataset is read twice. If for the mentioned problem we use side outputs, we can still have 1 ParDo transform that internally dispatches valid and invalid values to appropriate places (#1 or #2, depending on value's validity).
+
+
+https://www.waitingforcode.com/apache-beam/side-output-apache-beam/read#:~:text=simple%20test%20cases.-,Side%20output%20defined,-%C2%B6
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Answer is D
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+sfsdeniso
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is D
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is D
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+It's C.
+In D, "storing to PubSub later" doesn't really make sense.
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+cloudmon
+			
+
+
+			1 year, 11 months ago
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It's C.
+In D, "storing to PubSub later" doesn't really make sense.
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It's C.
+In D, "storing to PubSub later" doesn't really make sense.
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+Answer is C. You need to reprocess all the failling data, and yes, you can use PubSub as a sink, according to the documentation: https://beam.apache.org/documentation/io/connectors/
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+devaid
+			
+
+
+			1 year, 12 months ago
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is C. You need to reprocess all the failling data, and yes, you can use PubSub as a sink, according to the documentation: https://beam.apache.org/documentation/io/connectors/
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is C. You need to reprocess all the failling data, and yes, you can use PubSub as a sink, according to the documentation: https://beam.apache.org/documentation/io/connectors/
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+Answer C
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+nickyshil
+			
+
+
+			2 years ago
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer C
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer C
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+The error records are directly written to PubSub from the DoFn (it’s equivalent in python).
+You cannot directly write a PCollection to PubSub. You have to extract each record and write one at a time. Why do the additional work and why not write it using PubSubIO in the DoFn itself?
+You can write the whole PCollection to Bigquery though, as explained in
+
+Reference:
+https://medium.com/google-cloud/dead-letter-queues-simple-implementation-strategy-for-cloud-pub-sub-80adf4a4a800
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+nickyshil
+			
+
+
+			2 years ago
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The error records are directly written to PubSub from the DoFn (it’s equivalent in python).
+You cannot directly write a PCollection to PubSub. You have to extract each record and write one at a time. Why do the additional work and why not write it using PubSubIO in the DoFn itself?
+You can write the whole PCollection to Bigquery though, as explained in
+
+Reference:
+https://medium.com/google-cloud/dead-letter-queues-simple-implementation-strategy-for-cloud-pub-sub-80adf4a4a800
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The error records are directly written to PubSub from the DoFn (it’s equivalent in python).
+You cannot directly write a PCollection to PubSub. You have to extract each record and write one at a time. Why do the additional work and why not write it using PubSubIO in the DoFn itself?
+You can write the whole PCollection to Bigquery though, as explained in
+
+Reference:
+https://medium.com/google-cloud/dead-letter-queues-simple-implementation-strategy-for-cloud-pub-sub-80adf4a4a800
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+D. Add a try-catch block to your DoFn that transforms the data, use a sideOutput to create a PCollection that can be stored to Pub/Sub later.
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+AWSandeep
+			
+
+
+			2 years, 1 month ago
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Add a try-catch block to your DoFn that transforms the data, use a sideOutput to create a PCollection that can be stored to Pub/Sub later.
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Add a try-catch block to your DoFn that transforms the data, use a sideOutput to create a PCollection that can be stored to Pub/Sub later.
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

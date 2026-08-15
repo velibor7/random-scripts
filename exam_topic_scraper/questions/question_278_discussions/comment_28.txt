@@ -1,0 +1,12 @@
+COMMENT #28 FOR QUESTION 278
+============================================================
+Author: Unknown
+Date: 4 months, 2 weeks ago
+Votes: 0
+----------------------------------------
+Dead lettering is used to handle messages that have not been acknowledged, but that's unrelated to the processing that Dataflow does, which takes place later in the chain. A message could still be acknowledged and fail processing for whatever reason, so it would not be sent to the dead letter topic.
+
+Also, Google advises against using dead lettering with Dataflow anyway: https://cloud.google.com/dataflow/docs/concepts/streaming-with-cloud-pubsub#dead-letter-topics
+
+Correct answer is B. The error handling has to be written into the Dataflow pipeline itself.
+============================================================

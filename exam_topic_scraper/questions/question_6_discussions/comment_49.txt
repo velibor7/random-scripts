@@ -1,0 +1,14 @@
+COMMENT #49 FOR QUESTION 6
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Exponential backoff is a commonly used technique to handle temporary failures, such as a database server becoming temporarily unavailable. This approach retries the query, initially with a short delay and then with increasingly longer intervals between retries. Setting a cap of 15 minutes ensures that you don't excessively burden your system with constant retries.
+
+Option C (retrying the query every second) can be too aggressive and may lead to excessive load on the server when it comes back online.
+
+Option D (reducing the query frequency to once every hour) would result in significantly stale data and a poor user experience, which is generally not desirable for a weather app.
+
+Option A (issuing a command to restart the database servers) is not a suitable action for a frontend component and might not address the issue effectively. Database server restarts should be managed as a part of the infrastructure and not initiated by the frontend.
+============================================================

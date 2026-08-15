@@ -1,0 +1,8 @@
+COMMENT #103 FOR QUESTION 62
+============================================================
+Author: Unknown
+Date: 1 year, 5 months ago
+Votes: 0
+----------------------------------------
+Watermark doesn't solve the out-of-order data problem. It only solves the problem of late data. However, with D, you can use the timestamps to solve both problems (for instance, if you're storing incoming data in a table, you can easily insert any late data to its correct place a time-partionned table using the timestamp of the element)
+============================================================

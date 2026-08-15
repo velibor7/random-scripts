@@ -1,0 +1,12 @@
+COMMENT #251 FOR QUESTION 31
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Same Cloud Pub/Sub Subscription: By using the same Cloud Pub/Sub subscription for the new pipeline, you ensure that no messages are lost during the transition. Pub/Sub manages message delivery, ensuring that unacknowledged messages (those that haven't been processed by your old pipeline) will be available for the new pipeline to process.
+
+Creating a New Pipeline: Since the update makes the new pipeline incompatible with the current version, it's necessary to create a new pipeline. Attempting to update the current pipeline in place (options A and B) would not be feasible due to compatibility issues.
+
+Cancel the Old Pipeline: Once the new pipeline is up and running and processing messages, you can safely cancel the old pipeline. This ensures a smooth transition with no data loss.
+============================================================

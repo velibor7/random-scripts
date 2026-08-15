@@ -1,0 +1,1220 @@
+================================================================================
+QUESTION:
+You want to build a managed Hadoop system as your data lake. The data transformation process is composed of a series of Hadoop jobs executed in sequence.To accomplish the design of separating storage from compute, you decided to use the Cloud Storage connector to store all input data, output data, and intermediary data. However, you noticed that one Hadoop job runs very slowly with Cloud Dataproc, when compared with the on-premises bare-metal Hadoop environment (8-core nodes with 100-GB RAM). Analysis shows that this particular Hadoop job is disk I/O intensive. You want to resolve the issue. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Allocate sufficient memory to the Hadoop cluster, so that the intermediary data of that particular Hadoop job can be held in memory
+										
+
+
+													B.
+												
+											
+											Allocate sufficient persistent disk space to the Hadoop cluster, and store the intermediate data of that particular Hadoop job on native HDFS
+										
+
+
+													C.
+												
+											
+											Allocate more CPU cores of the virtual machine instances of the Hadoop cluster so that the networking bandwidth for each instance can scale up
+										
+
+
+													D.
+												
+											
+											Allocate additional network interface card (NIC), and configure link aggregation in the operating system to use the combined throughput when working with Cloud Storage
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (190 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 150 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 150
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You want to build a managed Hadoop system as your data lake. The data transformation process is composed of a series of Hadoop jobs executed in sequence.To accomplish the design of separating storage from compute, you decided to use the Cloud Storage connector to store all input data, output data, and intermediary data. However, you noticed that one Hadoop job runs very slowly with Cloud Dataproc, when compared with the on-premises bare-metal Hadoop environment (8-core nodes with 100-GB RAM). Analysis shows that this particular Hadoop job is disk I/O intensive. You want to resolve the issue. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Allocate sufficient memory to the Hadoop cluster, so that the intermediary data of that particular Hadoop job can be held in memory
+										
+
+
+													B.
+												
+											
+											Allocate sufficient persistent disk space to the Hadoop cluster, and store the intermediate data of that particular Hadoop job on native HDFS
+										
+
+
+													C.
+												
+											
+											Allocate more CPU cores of the virtual machine instances of the Hadoop cluster so that the networking bandwidth for each instance can scale up
+										
+
+
+													D.
+												
+											
+											Allocate additional network interface card (NIC), and configure link aggregation in the operating system to use the combined throughput when working with Cloud Storage
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 17, 2020, 2:58 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 150
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 17, 2020, 2:58 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Correct: B
+
+Local HDFS storage is a good option if:
+
+Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+You heavily use the append operation on HDFS files.
+You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes, such as the following:
+
+spark.read().write.partitionBy(...).parquet("gs://")
+
+You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+
+--- Comment #6 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Correct: B
+
+Local HDFS storage is a good option if:
+
+Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+You heavily use the append operation on HDFS files.
+You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes, such as the following:
+
+spark.read().write.partitionBy(...).parquet("gs://")
+
+You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+
+--- Comment #7 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Correct: B
+
+Local HDFS storage is a good option if:
+
+Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+You heavily use the append operation on HDFS files.
+You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes, such as the following:
+
+spark.read().write.partitionBy(...).parquet("gs://")
+
+You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Correct: B
+
+Local HDFS storage is a good option if:
+
+Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+You heavily use the append operation on HDFS files.
+You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes, such as the following:
+
+spark.read().write.partitionBy(...).parquet("gs://")
+
+You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+
+--- Comment #13 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Correct: B
+
+Local HDFS storage is a good option if:
+
+Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+You heavily use the append operation on HDFS files.
+You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes, such as the following:
+
+spark.read().write.partitionBy(...).parquet("gs://")
+
+You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+
+--- Comment #14 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			4 years, 6 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+Correct: B
+
+Local HDFS storage is a good option if:
+
+Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+You heavily use the append operation on HDFS files.
+You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes, such as the following:
+
+spark.read().write.partitionBy(...).parquet("gs://")
+
+You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Correct: B
+
+Local HDFS storage is a good option if:
+
+Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+You heavily use the append operation on HDFS files.
+You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes, such as the following:
+
+spark.read().write.partitionBy(...).parquet("gs://")
+
+You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 39 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #21 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Answer B
+Its google recommended approach to use LocalDisk/HDFS to store Intermediate result and use Cloud Storage for initial and final results.
+
+--- Comment #22 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Rajokkiyam
+			
+
+
+				Highly Voted 
+
+
+			4 years, 6 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date: 3 years ago | Votes: 0
+Answer B
+Its google recommended approach to use LocalDisk/HDFS to store Intermediate result and use Cloud Storage for initial and final results.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Answer B
+Its google recommended approach to use LocalDisk/HDFS to store Intermediate result and use Cloud Storage for initial and final results.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 15 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date: 3 years ago | Votes: 0
+Any link to support this recommended approach?
+
+--- Comment #28 ---
+Author: Unknown | Date: 3 years ago | Votes: 0
+Any link to support this recommended approach?
+
+--- Comment #29 ---
+Author: Unknown | Date: 3 years ago | Votes: 0
+Chelseajcole
+			
+
+
+			3 years ago
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+Any link to support this recommended approach?
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+Any link to support this recommended approach?
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Local HDFS storage is a good option if:
+-	You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes such as the following:
+spark.read().write.partitionBy(...).parquet("gs://")
+-	You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+-	Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+-	You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+-	You heavily use the append operation on HDFS files.
+
+--- Comment #38 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+				Most Recent 
+
+
+			9 months, 3 weeks ago
+
+--- Comment #39 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Local HDFS storage is a good option if:
+-	You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes such as the following:
+spark.read().write.partitionBy(...).parquet("gs://")
+-	You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+-	Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+-	You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+-	You heavily use the append operation on HDFS files.
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+Local HDFS storage is a good option if:
+-	You have workloads that involve heavy I/O. For example, you have a lot of partitioned writes such as the following:
+spark.read().write.partitionBy(...).parquet("gs://")
+-	You have I/O workloads that are especially sensitive to latency. For example, you require single-digit millisecond latency per storage operation.
+-	Your jobs require a lot of metadata operations—for example, you have thousands of partitions and directories, and each file size is relatively small.
+-	You modify the HDFS data frequently or you rename directories. (Cloud Storage objects are immutable, so renaming a directory is an expensive operation because it consists of copying all objects to a new key and deleting them afterwards.)
+-	You heavily use the append operation on HDFS files.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+We recommend using Cloud Storage as the initial and final source of data in a big-data pipeline. For example, if a workflow contains five Spark jobs in series, the first job retrieves the initial data from Cloud Storage and then writes shuffle data and intermediate job output to HDFS. The final Spark job writes its results to Cloud Storage.
+https://cloud.google.com/solutions/migration/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#choose_storage_options
+
+--- Comment #45 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+We recommend using Cloud Storage as the initial and final source of data in a big-data pipeline. For example, if a workflow contains five Spark jobs in series, the first job retrieves the initial data from Cloud Storage and then writes shuffle data and intermediate job output to HDFS. The final Spark job writes its results to Cloud Storage.
+https://cloud.google.com/solutions/migration/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#choose_storage_options
+
+--- Comment #46 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+We recommend using Cloud Storage as the initial and final source of data in a big-data pipeline. For example, if a workflow contains five Spark jobs in series, the first job retrieves the initial data from Cloud Storage and then writes shuffle data and intermediate job output to HDFS. The final Spark job writes its results to Cloud Storage.
+https://cloud.google.com/solutions/migration/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#choose_storage_options
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+We recommend using Cloud Storage as the initial and final source of data in a big-data pipeline. For example, if a workflow contains five Spark jobs in series, the first job retrieves the initial data from Cloud Storage and then writes shuffle data and intermediate job output to HDFS. The final Spark job writes its results to Cloud Storage.
+https://cloud.google.com/solutions/migration/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#choose_storage_options
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #54 ---
+Author: Unknown | Date: 11 months, 2 weeks ago | Votes: 0
+The correct answer is B.
+
+--- Comment #55 ---
+Author: Unknown | Date: 11 months, 2 weeks ago | Votes: 0
+squishy_fishy
+			
+
+
+			11 months, 2 weeks ago
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is B.
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is B.
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #62 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Disk I/O Performance: In a Cloud Dataproc cluster, the default setup uses local persistent disks for HDFS storage. These disks offer good disk I/O performance and are well-suited for storing intermediate data generated during Hadoop jobs.
+
+Data Locality: Storing intermediate data on native HDFS allows for better data locality. This means that the data is stored on the same nodes where computation occurs, reducing the need for data transfer over the network. This can significantly improve the performance of disk I/O-intensive jobs.
+
+Scalability: Cloud Dataproc clusters can be easily scaled up or down to meet the specific requirements of your jobs. You can allocate additional disk space as needed to accommodate the intermediate data generated by this particular Hadoop job.
+
+--- Comment #63 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+barnac1es
+			
+
+
+			1 year ago
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+Disk I/O Performance: In a Cloud Dataproc cluster, the default setup uses local persistent disks for HDFS storage. These disks offer good disk I/O performance and are well-suited for storing intermediate data generated during Hadoop jobs.
+
+Data Locality: Storing intermediate data on native HDFS allows for better data locality. This means that the data is stored on the same nodes where computation occurs, reducing the need for data transfer over the network. This can significantly improve the performance of disk I/O-intensive jobs.
+
+Scalability: Cloud Dataproc clusters can be easily scaled up or down to meet the specific requirements of your jobs. You can allocate additional disk space as needed to accommodate the intermediate data generated by this particular Hadoop job.
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+Disk I/O Performance: In a Cloud Dataproc cluster, the default setup uses local persistent disks for HDFS storage. These disks offer good disk I/O performance and are well-suited for storing intermediate data generated during Hadoop jobs.
+
+Data Locality: Storing intermediate data on native HDFS allows for better data locality. This means that the data is stored on the same nodes where computation occurs, reducing the need for data transfer over the network. This can significantly improve the performance of disk I/O-intensive jobs.
+
+Scalability: Cloud Dataproc clusters can be easily scaled up or down to meet the specific requirements of your jobs. You can allocate additional disk space as needed to accommodate the intermediate data generated by this particular Hadoop job.
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #71 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Correct: A
+I'd choose A as the doc states adding more SSDs are good for disk-intensive jobs especially those with many individual read and write operations
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-jobs
+
+--- Comment #72 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+DeepakVenkatachalam
+			
+
+
+			1 year ago
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Correct: A
+I'd choose A as the doc states adding more SSDs are good for disk-intensive jobs especially those with many individual read and write operations
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-jobs
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+Correct: A
+I'd choose A as the doc states adding more SSDs are good for disk-intensive jobs especially those with many individual read and write operations
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-jobs
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #77 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Typo Correct Answer is B. . Allocate sufficient persistent disk space to the Hadoop cluster, and store the intermediate data of that particular Hadoop job on native HDFS
+
+--- Comment #78 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Typo Correct Answer is B. . Allocate sufficient persistent disk space to the Hadoop cluster, and store the intermediate data of that particular Hadoop job on native HDFS
+
+--- Comment #79 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+DeepakVenkatachalam
+			
+
+
+			1 year ago
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+Typo Correct Answer is B. . Allocate sufficient persistent disk space to the Hadoop cluster, and store the intermediate data of that particular Hadoop job on native HDFS
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+Typo Correct Answer is B. . Allocate sufficient persistent disk space to the Hadoop cluster, and store the intermediate data of that particular Hadoop job on native HDFS
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #87 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+I would choose A.
+
+Google Storage is faster than HDFS in many cases.
+
+https://cloud.google.com/architecture/hadoop#:~:text=It%27s%20faster%20than%20HDFS%20in%20many%20cases. 
+
+The question mention '(8-core nodes with 100-GB RAM)' on-premises Hadoop.
+the problem may caused by insufficient memory,
+and does not mention cost would be an issue,
+so A 'memory' approach would be a better option.
+
+--- Comment #88 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+arien_chen
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+I would choose A.
+
+Google Storage is faster than HDFS in many cases.
+
+https://cloud.google.com/architecture/hadoop#:~:text=It%27s%20faster%20than%20HDFS%20in%20many%20cases. 
+
+The question mention '(8-core nodes with 100-GB RAM)' on-premises Hadoop.
+the problem may caused by insufficient memory,
+and does not mention cost would be an issue,
+so A 'memory' approach would be a better option.
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+I would choose A.
+
+Google Storage is faster than HDFS in many cases.
+
+https://cloud.google.com/architecture/hadoop#:~:text=It%27s%20faster%20than%20HDFS%20in%20many%20cases. 
+
+The question mention '(8-core nodes with 100-GB RAM)' on-premises Hadoop.
+the problem may caused by insufficient memory,
+and does not mention cost would be an issue,
+so A 'memory' approach would be a better option.
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #96 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Best option is B. However  allocating sufficient persistent disk space to the Hadoop cluster, and storing the intermediate data of that particular Hadoop job on native HDFS, would not improve the performance of the Hadoop job. In fact, it might even slow down the Hadoop job, as the data would have to be read and written to disk twice.
+
+--- Comment #97 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+vamgcp
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+Best option is B. However  allocating sufficient persistent disk space to the Hadoop cluster, and storing the intermediate data of that particular Hadoop job on native HDFS, would not improve the performance of the Hadoop job. In fact, it might even slow down the Hadoop job, as the data would have to be read and written to disk twice.
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+Best option is B. However  allocating sufficient persistent disk space to the Hadoop cluster, and storing the intermediate data of that particular Hadoop job on native HDFS, would not improve the performance of the Hadoop job. In fact, it might even slow down the Hadoop job, as the data would have to be read and written to disk twice.
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #105 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-jobs#choosing_primary_disk_options
+If your job is disk-intensive and is executing slowly on individual nodes, you can add more primary disk space. For particularly disk-intensive jobs, especially those with many individual read and write operations, you might be able to improve operation by adding local SSDs. Add enough SSDs to contain all of the space you need for local execution. Your local execution directories are spread across however many SSDs you add.
+
+--- Comment #106 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+zellck
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-jobs#choosing_primary_disk_options
+If your job is disk-intensive and is executing slowly on individual nodes, you can add more primary disk space. For particularly disk-intensive jobs, especially those with many individual read and write operations, you might be able to improve operation by adding local SSDs. Add enough SSDs to contain all of the space you need for local execution. Your local execution directories are spread across however many SSDs you add.
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-jobs#choosing_primary_disk_options
+If your job is disk-intensive and is executing slowly on individual nodes, you can add more primary disk space. For particularly disk-intensive jobs, especially those with many individual read and write operations, you might be able to improve operation by adding local SSDs. Add enough SSDs to contain all of the space you need for local execution. Your local execution directories are spread across however many SSDs you add.
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #114 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-jobs#choosing_primary_disk_options
+
+--- Comment #115 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years ago
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-jobs#choosing_primary_disk_options
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-jobs#choosing_primary_disk_options
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #123 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B is not the right answer. The problem says that for intermediate data cloud storage is to be used, while B option says:
+
+B ... the intermediate data of that particular Hadoop job on native HDFS
+
+A is the right answer. If you have enough memory then the shuffle wont spill on the disk.
+
+--- Comment #124 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+rrr000
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #125 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B is not the right answer. The problem says that for intermediate data cloud storage is to be used, while B option says:
+
+B ... the intermediate data of that particular Hadoop job on native HDFS
+
+A is the right answer. If you have enough memory then the shuffle wont spill on the disk.
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+B is not the right answer. The problem says that for intermediate data cloud storage is to be used, while B option says:
+
+B ... the intermediate data of that particular Hadoop job on native HDFS
+
+A is the right answer. If you have enough memory then the shuffle wont spill on the disk.
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Further the question states that original on prem machines has 100gb ram.
+8-core nodes with 100-GB RAM
+
+--- Comment #130 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Further the question states that original on prem machines has 100gb ram.
+8-core nodes with 100-GB RAM
+
+--- Comment #131 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+rrr000
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+Further the question states that original on prem machines has 100gb ram.
+8-core nodes with 100-GB RAM
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+Further the question states that original on prem machines has 100gb ram.
+8-core nodes with 100-GB RAM
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #139 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+B should be the right answer: https://cloud.google.com/compute/docs/disks/performance#optimize_disk_performance
+
+--- Comment #140 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+SoerenE
+			
+
+
+			2 years, 9 months ago
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+B should be the right answer: https://cloud.google.com/compute/docs/disks/performance#optimize_disk_performance
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+B should be the right answer: https://cloud.google.com/compute/docs/disks/performance#optimize_disk_performance
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #147 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+https://cloud.google.com/solutions/migration/hadoop/hadoop-gcp-migration-jobs
+
+--- Comment #148 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+medeis_jar
+			
+
+
+			2 years, 9 months ago
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/solutions/migration/hadoop/hadoop-gcp-migration-jobs
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/solutions/migration/hadoop/hadoop-gcp-migration-jobs
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #156 ---
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+Why there are so many wrong answers? Examtopics.com are you enjoying paid subscription by giving random answers from people?
+Ans: B
+
+--- Comment #157 ---
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+JG123
+			
+
+
+			2 years, 10 months ago
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+Why there are so many wrong answers? Examtopics.com are you enjoying paid subscription by giving random answers from people?
+Ans: B
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+Why there are so many wrong answers? Examtopics.com are you enjoying paid subscription by giving random answers from people?
+Ans: B
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #164 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+If your job is disk-intensive and is executing slowly on individual nodes, you can add more primary disk space. For particularly disk-intensive jobs, especially those with many individual read and write operations, you might be able to improve operation by adding local SSDs. Add enough SSDs to contain all of the space you need for local execution. Your local execution directories are spread across however many SSDs you add.
+Its B 
+https://cloud.google.com/solutions/migration/hadoop/hadoop-gcp-migration-jobs
+
+--- Comment #165 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+RT30
+			
+
+
+			3 years, 7 months ago
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+If your job is disk-intensive and is executing slowly on individual nodes, you can add more primary disk space. For particularly disk-intensive jobs, especially those with many individual read and write operations, you might be able to improve operation by adding local SSDs. Add enough SSDs to contain all of the space you need for local execution. Your local execution directories are spread across however many SSDs you add.
+Its B 
+https://cloud.google.com/solutions/migration/hadoop/hadoop-gcp-migration-jobs
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+If your job is disk-intensive and is executing slowly on individual nodes, you can add more primary disk space. For particularly disk-intensive jobs, especially those with many individual read and write operations, you might be able to improve operation by adding local SSDs. Add enough SSDs to contain all of the space you need for local execution. Your local execution directories are spread across however many SSDs you add.
+Its B 
+https://cloud.google.com/solutions/migration/hadoop/hadoop-gcp-migration-jobs
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #172 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+yes B is correct
+
+--- Comment #173 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+ashuchip
+			
+
+
+			3 years, 9 months ago
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+yes B is correct
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+yes B is correct
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #180 ---
+Author: Unknown | Date: 3 years, 11 months ago | Votes: 0
+Correct Answer is Option B - Adding persistent disk space, reasons:-
+- The question mentions that the particular job is "disk I/O intensive - so the word "disk" is explicitly mentioned. 
+- Option B also mentions about local HDFS storage, which is ideally a good option of general I/O intensive work. 
+-
+
+--- Comment #181 ---
+Author: Unknown | Date: 3 years, 11 months ago | Votes: 0
+Alasmindas
+			
+
+
+			3 years, 11 months ago
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+Correct Answer is Option B - Adding persistent disk space, reasons:-
+- The question mentions that the particular job is "disk I/O intensive - so the word "disk" is explicitly mentioned. 
+- Option B also mentions about local HDFS storage, which is ideally a good option of general I/O intensive work. 
+-
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+Correct Answer is Option B - Adding persistent disk space, reasons:-
+- The question mentions that the particular job is "disk I/O intensive - so the word "disk" is explicitly mentioned. 
+- Option B also mentions about local HDFS storage, which is ideally a good option of general I/O intensive work. 
+-
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #188 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

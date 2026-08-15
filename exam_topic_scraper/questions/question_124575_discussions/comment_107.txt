@@ -1,0 +1,8 @@
+COMMENT #107 FOR QUESTION 124575
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+If the transformations remain narrow, then Spark won't repartition the data unless explicitly instructed to do so (e.g., through a repartition or coalesce operation). In this case, using spark.sql.files.maxPartitionBytes to adjust the read partition size to 512 MB could indirectly control the number of output files and ensure they align with the target file size.
+============================================================

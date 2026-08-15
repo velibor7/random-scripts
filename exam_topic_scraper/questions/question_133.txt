@@ -1,0 +1,1101 @@
+================================================================================
+QUESTION:
+A data scientist has created a BigQuery ML model and asks you to create an ML pipeline to serve predictions. You have a REST API application with the requirement to serve predictions for an individual user ID with latency under 100 milliseconds. You use the following query to generate predictions: SELECT predicted_label, user_id FROM ML.PREDICT (MODEL 'dataset.model', table user_features). How should you create the ML pipeline?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Add a WHERE clause to the query, and grant the BigQuery Data Viewer role to the application service account.
+										
+
+
+													B.
+												
+											
+											Create an Authorized View with the provided query. Share the dataset that contains the view with the application service account.
+										
+
+
+													C.
+												
+											
+											Create a Dataflow pipeline using BigQueryIO to read results from the query. Grant the Dataflow Worker role to the application service account.
+										
+
+
+													D.
+												
+											
+											Create a Dataflow pipeline using BigQueryIO to read predictions for all users from the query. Write the results to Bigtable using BigtableIO. Grant the Bigtable Reader role to the application service account so that the application can read predictions for individual users from Bigtable.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (198 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 133 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 133
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								A data scientist has created a BigQuery ML model and asks you to create an ML pipeline to serve predictions. You have a REST API application with the requirement to serve predictions for an individual user ID with latency under 100 milliseconds. You use the following query to generate predictions: SELECT predicted_label, user_id FROM ML.PREDICT (MODEL 'dataset.model', table user_features). How should you create the ML pipeline?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Add a WHERE clause to the query, and grant the BigQuery Data Viewer role to the application service account.
+										
+
+
+													B.
+												
+											
+											Create an Authorized View with the provided query. Share the dataset that contains the view with the application service account.
+										
+
+
+													C.
+												
+											
+											Create a Dataflow pipeline using BigQueryIO to read results from the query. Grant the Dataflow Worker role to the application service account.
+										
+
+
+													D.
+												
+											
+											Create a Dataflow pipeline using BigQueryIO to read predictions for all users from the query. Write the results to Bigtable using BigtableIO. Grant the Bigtable Reader role to the application service account so that the application can read predictions for individual users from Bigtable.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 20, 2020, 3:49 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 133
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 20, 2020, 3:49 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+I think the key reason for pick D is the 100ms requirement.
+
+--- Comment #6 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+I think the key reason for pick D is the 100ms requirement.
+
+--- Comment #7 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+I think the key reason for pick D is the 100ms requirement.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+I think the key reason for pick D is the 100ms requirement.
+
+--- Comment #13 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+I think the key reason for pick D is the 100ms requirement.
+
+--- Comment #14 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+rickywck
+			
+
+
+				Highly Voted 
+
+
+			4 years, 6 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+I think the key reason for pick D is the 100ms requirement.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+I think the key reason for pick D is the 100ms requirement.
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 30 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D. Create a Dataflow pipeline using BigQueryIO to read predictions for all users from the query. Write the results to Bigtable using BigtableIO. Grant the Bigtable Reader role to the application service account so that the application can read predictions for individual users from Bigtable.
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D. Create a Dataflow pipeline using BigQueryIO to read predictions for all users from the query. Write the results to Bigtable using BigtableIO. Grant the Bigtable Reader role to the application service account so that the application can read predictions for individual users from Bigtable.
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+AzureDP900
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #22 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create a Dataflow pipeline using BigQueryIO to read predictions for all users from the query. Write the results to Bigtable using BigtableIO. Grant the Bigtable Reader role to the application service account so that the application can read predictions for individual users from Bigtable.
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create a Dataflow pipeline using BigQueryIO to read predictions for all users from the query. Write the results to Bigtable using BigtableIO. Grant the Bigtable Reader role to the application service account so that the application can read predictions for individual users from Bigtable.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Answer: D
+Description: Bigtable provides lowest latency
+
+--- Comment #30 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			4 years, 6 months ago
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: D
+Description: Bigtable provides lowest latency
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: D
+Description: Bigtable provides lowest latency
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 14 times
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+The key requirements are serving predictions for individual user IDs with low (sub-100ms) latency.
+Option D meets this by batch predicting for all users in BigQuery ML, writing predictions to Bigtable for fast reads, and allowing the application access to query Bigtable directly for low latency reads.
+Since the application needs to serve low-latency predictions for individual user IDs, using Dataflow to batch predict for all users and write to Bigtable allows low-latency reads. Granting the Bigtable Reader role allows the application to retrieve predictions for a specific user ID from Bigtable.
+
+--- Comment #38 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+				Most Recent 
+
+
+			9 months, 3 weeks ago
+
+--- Comment #39 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+The key requirements are serving predictions for individual user IDs with low (sub-100ms) latency.
+Option D meets this by batch predicting for all users in BigQuery ML, writing predictions to Bigtable for fast reads, and allowing the application access to query Bigtable directly for low latency reads.
+Since the application needs to serve low-latency predictions for individual user IDs, using Dataflow to batch predict for all users and write to Bigtable allows low-latency reads. Granting the Bigtable Reader role allows the application to retrieve predictions for a specific user ID from Bigtable.
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+The key requirements are serving predictions for individual user IDs with low (sub-100ms) latency.
+Option D meets this by batch predicting for all users in BigQuery ML, writing predictions to Bigtable for fast reads, and allowing the application access to query Bigtable directly for low latency reads.
+Since the application needs to serve low-latency predictions for individual user IDs, using Dataflow to batch predict for all users and write to Bigtable allows low-latency reads. Granting the Bigtable Reader role allows the application to retrieve predictions for a specific user ID from Bigtable.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+The other options either require changing the query for each user ID (higher latency, option A), reading directly from higher latency services like BigQuery (option B), or writing predictions somewhere without fast single row access (options A, B, C).
+Option A would not work well because the WHERE clause would need to be changed for each user ID, increasing latency.
+Option B using an Authorized View would still read from BigQuery which has higher latency than Bigtable for individual rows.
+Option C writes predictions to BigQuery which has higher read latency compared to Bigtable for individual rows.
+So option D provides the best pipeline by predicting for all users in BigQueryML, batch writing to Bigtable for low latency reads, and granting permissions for the application to retrieve predictions. This meets the requirements of sub-100ms latency for individual user predictions.
+https://cloud.google.com/dataflow/docs/concepts/access-control
+
+--- Comment #45 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+The other options either require changing the query for each user ID (higher latency, option A), reading directly from higher latency services like BigQuery (option B), or writing predictions somewhere without fast single row access (options A, B, C).
+Option A would not work well because the WHERE clause would need to be changed for each user ID, increasing latency.
+Option B using an Authorized View would still read from BigQuery which has higher latency than Bigtable for individual rows.
+Option C writes predictions to BigQuery which has higher read latency compared to Bigtable for individual rows.
+So option D provides the best pipeline by predicting for all users in BigQueryML, batch writing to Bigtable for low latency reads, and granting permissions for the application to retrieve predictions. This meets the requirements of sub-100ms latency for individual user predictions.
+https://cloud.google.com/dataflow/docs/concepts/access-control
+
+--- Comment #46 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+The other options either require changing the query for each user ID (higher latency, option A), reading directly from higher latency services like BigQuery (option B), or writing predictions somewhere without fast single row access (options A, B, C).
+Option A would not work well because the WHERE clause would need to be changed for each user ID, increasing latency.
+Option B using an Authorized View would still read from BigQuery which has higher latency than Bigtable for individual rows.
+Option C writes predictions to BigQuery which has higher read latency compared to Bigtable for individual rows.
+So option D provides the best pipeline by predicting for all users in BigQueryML, batch writing to Bigtable for low latency reads, and granting permissions for the application to retrieve predictions. This meets the requirements of sub-100ms latency for individual user predictions.
+https://cloud.google.com/dataflow/docs/concepts/access-control
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+The other options either require changing the query for each user ID (higher latency, option A), reading directly from higher latency services like BigQuery (option B), or writing predictions somewhere without fast single row access (options A, B, C).
+Option A would not work well because the WHERE clause would need to be changed for each user ID, increasing latency.
+Option B using an Authorized View would still read from BigQuery which has higher latency than Bigtable for individual rows.
+Option C writes predictions to BigQuery which has higher read latency compared to Bigtable for individual rows.
+So option D provides the best pipeline by predicting for all users in BigQueryML, batch writing to Bigtable for low latency reads, and granting permissions for the application to retrieve predictions. This meets the requirements of sub-100ms latency for individual user predictions.
+https://cloud.google.com/dataflow/docs/concepts/access-control
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #54 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+I think the key reason for pick D is the 100ms requirement/ me too
+
+--- Comment #55 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+Nirca
+			
+
+
+			1 year ago
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+I think the key reason for pick D is the 100ms requirement/ me too
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+I think the key reason for pick D is the 100ms requirement/ me too
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #63 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+To create an ML pipeline for serving predictions to individual user IDs with latency under 100 milliseconds using the given BigQuery ML query, the most suitable approach is:
+
+B. Create an Authorized View with the provided query. Share the dataset that contains the view with the application service account.
+
+--- Comment #64 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+barnac1es
+			
+
+
+			1 year ago
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+To create an ML pipeline for serving predictions to individual user IDs with latency under 100 milliseconds using the given BigQuery ML query, the most suitable approach is:
+
+B. Create an Authorized View with the provided query. Share the dataset that contains the view with the application service account.
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+To create an ML pipeline for serving predictions to individual user IDs with latency under 100 milliseconds using the given BigQuery ML query, the most suitable approach is:
+
+B. Create an Authorized View with the provided query. Share the dataset that contains the view with the application service account.
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Always use Bigtable as an endpoint for client-facing applications (Low latency - high throughput)
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Lanro
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+Always use Bigtable as an endpoint for client-facing applications (Low latency - high throughput)
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+Always use Bigtable as an endpoint for client-facing applications (Low latency - high throughput)
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #81 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+One of the way to improve the efficient of ML pipeline is to generate cache (store predictions). In this question, only D is doing that.
+
+--- Comment #82 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+midgoo
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+One of the way to improve the efficient of ML pipeline is to generate cache (store predictions). In this question, only D is doing that.
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+One of the way to improve the efficient of ML pipeline is to generate cache (store predictions). In this question, only D is doing that.
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #90 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+what is wrong with B ? View can be precomputed and cached and it can definitely satisfy the 100 miliseconds request. create a pipeline to send data to bigtable .. don't you think its too much to run a simple prediction query ?
+
+--- Comment #91 ---
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+musumusu
+			
+
+
+			1 year, 7 months ago
+
+--- Comment #92 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+what is wrong with B ? View can be precomputed and cached and it can definitely satisfy the 100 miliseconds request. create a pipeline to send data to bigtable .. don't you think its too much to run a simple prediction query ?
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+what is wrong with B ? View can be precomputed and cached and it can definitely satisfy the 100 miliseconds request. create a pipeline to send data to bigtable .. don't you think its too much to run a simple prediction query ?
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #96 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+I think if there is too many concurrent requests the 100ms latency will def not hold reading from bigquery
+
+--- Comment #97 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+I think if there is too many concurrent requests the 100ms latency will def not hold reading from bigquery
+
+--- Comment #98 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+cheos71
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+I think if there is too many concurrent requests the 100ms latency will def not hold reading from bigquery
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+I think if there is too many concurrent requests the 100ms latency will def not hold reading from bigquery
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #105 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+and the view has to make a query in real-time which adds potential latency
+
+--- Comment #106 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+vaga1
+			
+
+
+			1 year, 4 months ago
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+and the view has to make a query in real-time which adds potential latency
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+and the view has to make a query in real-time which adds potential latency
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #113 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+I would say that Bigtable is simply more suited to serve applications
+
+--- Comment #114 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+vaga1
+			
+
+
+			1 year, 4 months ago
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+I would say that Bigtable is simply more suited to serve applications
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+I would say that Bigtable is simply more suited to serve applications
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #122 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Vote for D
+
+--- Comment #123 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+hiromi
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+Vote for D
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+Vote for D
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #131 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Option D
+
+--- Comment #132 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+HarshKothari21
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+Option D
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+Option D
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #140 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Vote for D, requirement to serve predictions with in 100 ms
+
+--- Comment #141 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+sumanshu
+			
+
+
+			3 years, 3 months ago
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+Vote for D, requirement to serve predictions with in 100 ms
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+Vote for D, requirement to serve predictions with in 100 ms
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #148 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+D is correct , 100ms is most critical factor here.
+
+--- Comment #149 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Tanmoyk
+			
+
+
+			4 years ago
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct , 100ms is most critical factor here.
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct , 100ms is most critical factor here.
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #156 ---
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+writing it to BigTable and then allowing application access will introduce more delays. I think answer should be C
+
+--- Comment #157 ---
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+sh2020
+			
+
+
+			4 years, 1 month ago
+
+--- Comment #158 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+writing it to BigTable and then allowing application access will introduce more delays. I think answer should be C
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+writing it to BigTable and then allowing application access will introduce more delays. I think answer should be C
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #162 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+Predictions are computed in advance for all users and written to BigTable for low-latency serving.
+
+--- Comment #163 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+Predictions are computed in advance for all users and written to BigTable for low-latency serving.
+
+--- Comment #164 ---
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+f839
+			
+
+
+			3 years, 9 months ago
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+Predictions are computed in advance for all users and written to BigTable for low-latency serving.
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+Predictions are computed in advance for all users and written to BigTable for low-latency serving.
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #172 ---
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+D is correct
+
+--- Comment #173 ---
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+haroldbenites
+			
+
+
+			4 years, 1 month ago
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #180 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Answer D.
+
+--- Comment #181 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Rajokkiyam
+			
+
+
+			4 years, 6 months ago
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D.
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D.
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #188 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Should be D
+
+--- Comment #189 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+			4 years, 6 months ago
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+Should be D
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+Should be D
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+--- Comment #193 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #194 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #196 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #197 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

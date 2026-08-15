@@ -1,0 +1,16 @@
+COMMENT #105 FOR QUESTION 122
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+AB chatgpt
+A. Use managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class:
+
+Managed export is a feature provided by Cloud Datastore to export your data.
+Storing the data in a Cloud Storage bucket, especially using Nearline or Coldline storage classes, helps keep storage costs low while allowing you to retain the snapshots for a long time.
+B. Use managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export:
+
+This method allows you to create snapshots by exporting data from Cloud Datastore (using managed export) and then importing it into a separate project under a unique namespace.
+By importing into a separate project, you can keep a copy of the data in a different environment, which is useful for point-in-time recovery or creating clones of the data.
+============================================================

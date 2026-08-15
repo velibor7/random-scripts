@@ -1,0 +1,10 @@
+COMMENT #56 FOR QUESTION 214
+============================================================
+Author: Unknown
+Date: 5 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+D:
+"A standard tier Memorystore for Redis instance uses a replica node to back up the primary node. A normal failover occurs when the primary node becomes unhealthy, causing the replica to be designated as the new primary. A manual failover differs from a normal failover because you initiate it yourself."
+The limited-data-loss mode minimizes data loss by verifying that the difference in data between the primary and replica is below 30 MB before initiating the failover. The offset on the primary is incremented for each byte of data that must be synchronized to its replicas.
+============================================================

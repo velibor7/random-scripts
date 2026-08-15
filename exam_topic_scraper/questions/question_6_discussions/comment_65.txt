@@ -1,0 +1,14 @@
+COMMENT #65 FOR QUESTION 6
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Exponential backoff with a cap is a common technique used to handle temporary failures, such as database outages. In this approach, the frontend will retry the query with increasing intervals (e.g., 1s, 2s, 4s, 8s, etc.) up to a maximum interval (in this case, 15 minutes), this will help to avoid overwhelming the database servers with too many requests at once, and minimize the impact of the failure on the users.
+
+Option A, is not recommended because it's not guaranteed that restarting the database servers will fix the problem, it could be a network or a configuration problem and it could cause more downtime.
+
+Option C is not recommended because it could cause too many requests to be sent to the server, overwhelming the database and causing more downtime.
+
+Option D is not recommended because reducing the query frequency too much would result in stale data, and users will not receive the most up-to-date information.
+============================================================

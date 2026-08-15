@@ -1,0 +1,12 @@
+COMMENT #58 FOR QUESTION 187
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+"The grouping of GCP Project(s) and Service API(s) in the Service Perimeter result in restricting unauthorized access outside of the Service Perimeter to Service API endpoint(s) referencing resources inside of the Service Perimeter." 
+https://scalesec.com/blog/vpc-service-controls-in-plain-english/
+
+Development team: needs to access both Cloud Storage and BQ -> therefore we put the Development team inside a perimeter so it can access both the Cloud Storage and the BQ
+External team: allowed to access only BQ -> therefore we put Cloud Storage behind the restricted API and leave the external team outside of the perimeter, so it can access BQ, but is prohibited from accessing the Cloud Storage
+============================================================

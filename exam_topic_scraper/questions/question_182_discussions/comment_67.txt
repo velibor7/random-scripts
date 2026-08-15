@@ -1,0 +1,13 @@
+COMMENT #67 FOR QUESTION 182
+============================================================
+Author: Unknown
+Date: 9 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+Option C is the best choice given the large file sizes for the initial migration and the need for real-time updates after migration.
+
+Specifically:
+
+gsutil can transfer large files in parallel over multiple TCP connections to maximize bandwidth. This works well for the 90GB files during initial migration.
+Pub/Sub allows real-time messaging of updates that can then be streamed into Cloud Dataflow. Dataflow provides scalable stream processing to handle transforming and writing those updates into BigQuery or other sinks.
+============================================================

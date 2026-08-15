@@ -1,0 +1,12 @@
+COMMENT #174 FOR QUESTION 60
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+its B.
+A - Even if you have 100+ partitioned tables, you still have the limit of less than 1000 tables. So this doesn't work for this problem.
+C It's a no sense. Cache its 24h for every table that has been query in the last 24 and has no changes. Also, cache is not support with wildcard multiple tables.
+D Will not work because it's a recursive issue. You still will have 100+ tables, beam query
+B will work, you materialize in only one table, so will be working perfectly.
+============================================================

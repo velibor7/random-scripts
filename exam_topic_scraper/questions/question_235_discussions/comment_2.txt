@@ -1,0 +1,80 @@
+COMMENT #2 FOR QUESTION 235
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 235
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You want to schedule a number of sequential load and transformation jobs. Data files will be added to a Cloud Storage bucket by an upstream process. There is no fixed schedule for when the new data arrives. Next, a Dataproc job is triggered to perform some transformations and write the data to BigQuery. You then need to run additional transformation jobs in BigQuery. The transformation jobs are different for every table. These jobs might take hours to complete. You need to determine the most efficient and maintainable workflow to process hundreds of tables and provide the freshest data to your end users. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Cloud Storage, Dataproc, and BigQuery operators.2. Use a single shared DAG for all tables that need to go through the pipeline.3. Schedule the DAG to run hourly.
+										
+
+
+													B.
+												
+											
+											1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Cloud Storage, Dataproc, and BigQuery operators.2. Create a separate DAG for each table that needs to go through the pipeline.3. Schedule the DAGs to run hourly.
+										
+
+
+													C.
+												
+											
+											1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Dataproc and BigQuery operators.2. Use a single shared DAG for all tables that need to go through the pipeline.3. Use a Cloud Storage object trigger to launch a Cloud Function that triggers the DAG.
+										
+
+
+													D.
+												
+											
+											1. Create an Apache Airflow directed acyclic graph (DAG) in Cloud Composer with sequential tasks by using the Dataproc and BigQuery operators.2. Create a separate DAG for each table that needs to go through the pipeline.3. Use a Cloud Storage object trigger to launch a Cloud Function that triggers the DAG.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 3, 2024, 1:24 p.m.
+============================================================

@@ -1,0 +1,12 @@
+COMMENT #82 FOR QUESTION 5
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Google Cloud Dataflow allows you to create a data pipeline that can preprocess and transform data before loading it into BigQuery. This approach will enable you to handle problematic rows, push them to a dead-letter table for later analysis, and load the valid data into BigQuery.
+
+Option A (using federated data sources and checking data in the SQL query) can be used but doesn't directly address the issue of handling corrupted or incorrectly formatted rows.
+
+Options B and C are not the best choices for handling data quality and error issues. Enabling monitoring and setting max_bad_records to 0 in BigQuery may help identify errors but won't store the problematic rows for further analysis, and it might prevent loading any data with issues, which may not be ideal.
+============================================================

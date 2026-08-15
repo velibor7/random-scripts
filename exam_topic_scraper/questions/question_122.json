@@ -1,0 +1,1543 @@
+{
+  "question": "You decided to use Cloud Datastore to ingest vehicle telemetry data in real time. You want to build a storage system that will account for the long-term data growth, while keeping the costs low. You also want to create snapshots of the data periodically, so that you can make a point-in-time (PIT) recovery, or clone a copy of the data for Cloud Datastore in a different environment. You want to archive these snapshots for a long time. Which two methods can accomplish this?(Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse managed export, and then import the data into a BigQuery table created just for that export, and delete temporary export files.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tWrite an application that uses Cloud Datastore client libraries to read all the entities. Treat each entity as a BigQuery table row via BigQuery streaming insert. Assign an export timestamp for each export, and attach it as an extra column for each row. Make sure that the BigQuery table is partitioned using the export timestamp column.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tWrite an application that uses Cloud Datastore client libraries to read all the entities. Format the exported data into a JSON file. Apply compression before storing the data in Cloud Source Repositories.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nAB\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 122 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 122\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou decided to use Cloud Datastore to ingest vehicle telemetry data in real time. You want to build a storage system that will account for the long-term data growth, while keeping the costs low. You also want to create snapshots of the data periodically, so that you can make a point-in-time (PIT) recovery, or clone a copy of the data for Cloud Datastore in a different environment. You want to archive these snapshots for a long time. Which two methods can accomplish this?(Choose two.)\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse managed export, and then import the data into a BigQuery table created just for that export, and delete temporary export files.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tWrite an application that uses Cloud Datastore client libraries to read all the entities. Treat each entity as a BigQuery table row via BigQuery streaming insert. Assign an export timestamp for each export, and attach it as an extra column for each row. Make sure that the BigQuery table is partitioned using the export timestamp column.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tE.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tWrite an application that uses Cloud Datastore client libraries to read all the entities. Format the exported data into a JSON file. Apply compression before storing the data in Cloud Source Repositories.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nAB\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\trickywck\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 17, 2020, 12:49 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 122\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\trickywck\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 17, 2020, 12:49 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 5\u00a0months ago",
+      "content": "A,B\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 5\u00a0months ago",
+      "content": "A,B\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 5\u00a0months ago",
+      "content": "A,B\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 5\u00a0months ago",
+      "content": "A,B\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 5\u00a0months ago",
+      "content": "A,B\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 5\u00a0months ago",
+      "content": "Ganshank\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "A,B\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A,B\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 38 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "\"while keeping the costs\"\n\nshould be A,D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "\"while keeping the costs\"\n\nshould be A,D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 5\u00a0months ago",
+      "content": "salsabilsf\n\t\t\t\n\n\n\t\t\t3\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "\"while keeping the costs\"\n\nshould be A,D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\"while keeping the costs\"\n\nshould be A,D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "Big query streaming inserts ARE NOT cheap",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "Big query streaming inserts ARE NOT cheap",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "MrCastro\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "Big query streaming inserts ARE NOT cheap",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Big query streaming inserts ARE NOT cheap",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 9 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "If you use B , not D , how can we do \"point in time\" recovery? is it possible?\nPoint in time recovery needs export along with timestamp, so that we can recover for a particular timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "If you use B , not D , how can we do \"point in time\" recovery? is it possible?\nPoint in time recovery needs export along with timestamp, so that we can recover for a particular timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "hellofrnds\n\t\t\t\n\n\n\t\t\t3\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If you use B , not D , how can we do \"point in time\" recovery? is it possible?\nPoint in time recovery needs export along with timestamp, so that we can recover for a particular timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If you use B , not D , how can we do \"point in time\" recovery? is it possible?\nPoint in time recovery needs export along with timestamp, so that we can recover for a particular timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 1\u00a0month ago",
+      "content": "AC\nhttps://cloud.google.com/datastore/docs/export-import-entities\nC: To import only a subset of entities or to import data into BigQuery, you must specify an entity filter in your export.\nB: Not correct since you want to store in a different environment than Datastore. Tho this statment is true:  Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project.\nA is correct\nBilling and pricing for managed exports and imports in Datastore\nOutput files stored in Cloud Storage count towards your Cloud Storage data storage costs.\nSteps to Export all the entities\n1. Go to the Datastore Entities Export page in the Google Cloud Console.\n2. Go to the Datastore Export page\n2. Set the Namespace field to All Namespaces, and set the Kind field to All Kinds.\n3. Below Destination, enter the name of your \"Cloud Storage bucket\".\n4. Click Export.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 1\u00a0month ago",
+      "content": "atnafu2020\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 11\u00a0months ago",
+      "content": "AC\nhttps://cloud.google.com/datastore/docs/export-import-entities\nC: To import only a subset of entities or to import data into BigQuery, you must specify an entity filter in your export.\nB: Not correct since you want to store in a different environment than Datastore. Tho this statment is true:  Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project.\nA is correct\nBilling and pricing for managed exports and imports in Datastore\nOutput files stored in Cloud Storage count towards your Cloud Storage data storage costs.\nSteps to Export all the entities\n1. Go to the Datastore Entities Export page in the Google Cloud Console.\n2. Go to the Datastore Export page\n2. Set the Namespace field to All Namespaces, and set the Kind field to All Kinds.\n3. Below Destination, enter the name of your \"Cloud Storage bucket\".\n4. Click Export.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AC\nhttps://cloud.google.com/datastore/docs/export-import-entities\nC: To import only a subset of entities or to import data into BigQuery, you must specify an entity filter in your export.\nB: Not correct since you want to store in a different environment than Datastore. Tho this statment is true:  Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project.\nA is correct\nBilling and pricing for managed exports and imports in Datastore\nOutput files stored in Cloud Storage count towards your Cloud Storage data storage costs.\nSteps to Export all the entities\n1. Go to the Datastore Entities Export page in the Google Cloud Console.\n2. Go to the Datastore Export page\n2. Set the Namespace field to All Namespaces, and set the Kind field to All Kinds.\n3. Below Destination, enter the name of your \"Cloud Storage bucket\".\n4. Click Export.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 23 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 11\u00a0months ago",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\nData exported without specifying an entity filter cannot be loaded into BigQuery. This is not mentioned explicitly. Safe to assume there is no filter on the exports. So options are AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 11\u00a0months ago",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\nData exported without specifying an entity filter cannot be loaded into BigQuery. This is not mentioned explicitly. Safe to assume there is no filter on the exports. So options are AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 11\u00a0months ago",
+      "content": "aparna4387\n\t\t\t\n\n\n\t\t\t2\u00a0years, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\nData exported without specifying an entity filter cannot be loaded into BigQuery. This is not mentioned explicitly. Safe to assume there is no filter on the exports. So options are AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\nData exported without specifying an entity filter cannot be loaded into BigQuery. This is not mentioned explicitly. Safe to assume there is no filter on the exports. So options are AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "A, B is perfect",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "AzureDP900\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A, B is perfect",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A, B is perfect",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "As you've mentioned in B, does the environment meant to be a project or a resource? As, we can clone a copy of the data in a datastore even in another project!? Then, it's B. \n\nAlso, in point C they didn't mention any entity filter hence we eliminate C how can you support your own statement with a different answer?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "tavva_prudhvi\n\t\t\t\n\n\n\t\t\t2\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "As you've mentioned in B, does the environment meant to be a project or a resource? As, we can clone a copy of the data in a datastore even in another project!? Then, it's B. \n\nAlso, in point C they didn't mention any entity filter hence we eliminate C how can you support your own statement with a different answer?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "As you've mentioned in B, does the environment meant to be a project or a resource? As, we can clone a copy of the data in a datastore even in another project!? Then, it's B. \n\nAlso, in point C they didn't mention any entity filter hence we eliminate C how can you support your own statement with a different answer?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "C is valid because of table snapshots. Else standard time travel is valid only for 7 days\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#table_snapshots\nhttps://cloud.google.com/bigquery/docs/time-travel#limitation",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "Yiouk\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "C is valid because of table snapshots. Else standard time travel is valid only for 7 days\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#table_snapshots\nhttps://cloud.google.com/bigquery/docs/time-travel#limitation",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is valid because of table snapshots. Else standard time travel is valid only for 7 days\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#table_snapshots\nhttps://cloud.google.com/bigquery/docs/time-travel#limitation",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "you wanna say invalid?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "you wanna say invalid?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "Chelseajcole\n\t\t\t\n\n\n\t\t\t3\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "you wanna say invalid?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "you wanna say invalid?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 1\u00a0week ago",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 1\u00a0week ago",
+      "content": "CGS22\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t6\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "AB chatgpt\nA. Use managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class:\n\nManaged export is a feature provided by Cloud Datastore to export your data.\nStoring the data in a Cloud Storage bucket, especially using Nearline or Coldline storage classes, helps keep storage costs low while allowing you to retain the snapshots for a long time.\nB. Use managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export:\n\nThis method allows you to create snapshots by exporting data from Cloud Datastore (using managed export) and then importing it into a separate project under a unique namespace.\nBy importing into a separate project, you can keep a copy of the data in a different environment, which is useful for point-in-time recovery or creating clones of the data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "kskssk\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AB chatgpt\nA. Use managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class:\n\nManaged export is a feature provided by Cloud Datastore to export your data.\nStoring the data in a Cloud Storage bucket, especially using Nearline or Coldline storage classes, helps keep storage costs low while allowing you to retain the snapshots for a long time.\nB. Use managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export:\n\nThis method allows you to create snapshots by exporting data from Cloud Datastore (using managed export) and then importing it into a separate project under a unique namespace.\nBy importing into a separate project, you can keep a copy of the data in a different environment, which is useful for point-in-time recovery or creating clones of the data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AB chatgpt\nA. Use managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class:\n\nManaged export is a feature provided by Cloud Datastore to export your data.\nStoring the data in a Cloud Storage bucket, especially using Nearline or Coldline storage classes, helps keep storage costs low while allowing you to retain the snapshots for a long time.\nB. Use managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export:\n\nThis method allows you to create snapshots by exporting data from Cloud Datastore (using managed export) and then importing it into a separate project under a unique namespace.\nBy importing into a separate project, you can keep a copy of the data in a different environment, which is useful for point-in-time recovery or creating clones of the data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "AB is the answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "zellck\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AB is the answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AB is the answer.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "A rather complicated question, of a kind I wish I won't face in the exam. My opinion:\n\u2705 [A] A valid and cost-effective solution satisfying the requirement for PIT recovery\n\u2705 [B] A valid solution but far from ideal for archiving. It satisfies the requirement part \"you can \u2026 clone a copy of the data for Cloud Datastore in a different environment\" (an objection to the word \"namespace\", I think it should be just \"name\")",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "NicolasN\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "A rather complicated question, of a kind I wish I won't face in the exam. My opinion:\n\u2705 [A] A valid and cost-effective solution satisfying the requirement for PIT recovery\n\u2705 [B] A valid solution but far from ideal for archiving. It satisfies the requirement part \"you can \u2026 clone a copy of the data for Cloud Datastore in a different environment\" (an objection to the word \"namespace\", I think it should be just \"name\")",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A rather complicated question, of a kind I wish I won't face in the exam. My opinion:\n\u2705 [A] A valid and cost-effective solution satisfying the requirement for PIT recovery\n\u2705 [B] A valid solution but far from ideal for archiving. It satisfies the requirement part \"you can \u2026 clone a copy of the data for Cloud Datastore in a different environment\" (an objection to the word \"namespace\", I think it should be just \"name\")",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 11 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "\u274c[C] There is the limitation \"Data exported without specifying an entity filter cannot be loaded into BigQuery\". The entity filter for this case should contain all the kinds of entities but there is another limitation of \"100 entity filter combinations\". We have no knowledge of the kinds or the namespaces of the entities.\nSources:\n\ud83d\udd17 https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\n\ud83d\udd17 https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces\n\u274c [D] seems a detailed candidate solution but it violates the limitation \"You cannot append Datastore export data to an existing table.\"\n\ud83d\udd17 https://cloud.google.com/bigquery/docs/loading-data-cloud-datastore#appending_to_or_overwriting_a_table_with_cloud_datastore_data\n\u274c [E] Cloud Source Repositories are for source code and not a suitable storage for this case.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "\u274c[C] There is the limitation \"Data exported without specifying an entity filter cannot be loaded into BigQuery\". The entity filter for this case should contain all the kinds of entities but there is another limitation of \"100 entity filter combinations\". We have no knowledge of the kinds or the namespaces of the entities.\nSources:\n\ud83d\udd17 https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\n\ud83d\udd17 https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces\n\u274c [D] seems a detailed candidate solution but it violates the limitation \"You cannot append Datastore export data to an existing table.\"\n\ud83d\udd17 https://cloud.google.com/bigquery/docs/loading-data-cloud-datastore#appending_to_or_overwriting_a_table_with_cloud_datastore_data\n\u274c [E] Cloud Source Repositories are for source code and not a suitable storage for this case.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "NicolasN\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\u274c[C] There is the limitation \"Data exported without specifying an entity filter cannot be loaded into BigQuery\". The entity filter for this case should contain all the kinds of entities but there is another limitation of \"100 entity filter combinations\". We have no knowledge of the kinds or the namespaces of the entities.\nSources:\n\ud83d\udd17 https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\n\ud83d\udd17 https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces\n\u274c [D] seems a detailed candidate solution but it violates the limitation \"You cannot append Datastore export data to an existing table.\"\n\ud83d\udd17 https://cloud.google.com/bigquery/docs/loading-data-cloud-datastore#appending_to_or_overwriting_a_table_with_cloud_datastore_data\n\u274c [E] Cloud Source Repositories are for source code and not a suitable storage for this case.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\u274c[C] There is the limitation \"Data exported without specifying an entity filter cannot be loaded into BigQuery\". The entity filter for this case should contain all the kinds of entities but there is another limitation of \"100 entity filter combinations\". We have no knowledge of the kinds or the namespaces of the entities.\nSources:\n\ud83d\udd17 https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\n\ud83d\udd17 https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces\n\u274c [D] seems a detailed candidate solution but it violates the limitation \"You cannot append Datastore export data to an existing table.\"\n\ud83d\udd17 https://cloud.google.com/bigquery/docs/loading-data-cloud-datastore#appending_to_or_overwriting_a_table_with_cloud_datastore_data\n\u274c [E] Cloud Source Repositories are for source code and not a suitable storage for this case.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 11 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "John_Pongthorn\n\t\t\t\n\n\n\t\t\t2\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "John_Pongthorn\n\t\t\t\n\n\n\t\t\t2\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "The answer is nothing to do with bigquery , so you can skip what  mention to bigquery.\n\nA B is the final answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "John_Pongthorn\n\t\t\t\n\n\n\t\t\t2\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The answer is nothing to do with bigquery , so you can skip what  mention to bigquery.\n\nA B is the final answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The answer is nothing to do with bigquery , so you can skip what  mention to bigquery.\n\nA B is the final answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "A,B\n\nFor those who say using BQ as archival, How can we achieve that while datastore are NO-SQL whereas BQ are SQL , will that work? also BQ are not created for achieving purposes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "DataEngineer_WideOps\n\t\t\t\n\n\n\t\t\t2\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A,B\n\nFor those who say using BQ as archival, How can we achieve that while datastore are NO-SQL whereas BQ are SQL , will that work? also BQ are not created for achieving purposes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A,B\n\nFor those who say using BQ as archival, How can we achieve that while datastore are NO-SQL whereas BQ are SQL , will that work? also BQ are not created for achieving purposes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "Option B is 36 times more expensive than C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "AmirN\n\t\t\t\n\n\n\t\t\t2\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B is 36 times more expensive than C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B is 36 times more expensive than C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 8\u00a0months ago",
+      "content": "AB. for sure streaming to BQ its quite expensive!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 8\u00a0months ago",
+      "content": "Nico1310\n\t\t\t\n\n\n\t\t\t2\u00a0years, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AB. for sure streaming to BQ its quite expensive!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "AB. for sure streaming to BQ its quite expensive!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 9\u00a0months ago",
+      "content": "A - Cloud Storage (long-term data + costs low)\nD - BigQuery (timestamp for point-in-time (PIT) recovery)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 9\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t2\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 5\u00a0months ago",
+      "content": "A - Cloud Storage (long-term data + costs low)\nD - BigQuery (timestamp for point-in-time (PIT) recovery)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AD",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A - Cloud Storage (long-term data + costs low)\nD - BigQuery (timestamp for point-in-time (PIT) recovery)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 5\u00a0months ago",
+      "content": "D is wrong, BQ Streaming inserts costs are high!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 5\u00a0months ago",
+      "content": "D is wrong, BQ Streaming inserts costs are high!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 5\u00a0months ago",
+      "content": "tavva_prudhvi\n\t\t\t\n\n\n\t\t\t2\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "D is wrong, BQ Streaming inserts costs are high!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D is wrong, BQ Streaming inserts costs are high!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "Agreed, AB\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "Agreed, AB\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t9\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agreed, AB\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Agreed, AB\nhttps://cloud.google.com/datastore/docs/export-import-entities",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 9\u00a0months ago",
+      "content": "Option A; Cheap storage and it is a supported method https://cloud.google.com/datastore/docs/export-import-entities\nOption B; Rationale - \"Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project.\" <https://cloud.google.com/datastore/docs/export-import-entities>",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 9\u00a0months ago",
+      "content": "medeis_jar\n\t\t\t\n\n\n\t\t\t2\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A; Cheap storage and it is a supported method https://cloud.google.com/datastore/docs/export-import-entities\nOption B; Rationale - \"Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project.\" <https://cloud.google.com/datastore/docs/export-import-entities>",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: AB",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A; Cheap storage and it is a supported method https://cloud.google.com/datastore/docs/export-import-entities\nOption B; Rationale - \"Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project.\" <https://cloud.google.com/datastore/docs/export-import-entities>",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 11\u00a0months ago",
+      "content": "Answer is A, B. \nhttps://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 11\u00a0months ago",
+      "content": "squishy_fishy\n\t\t\t\n\n\n\t\t\t2\u00a0years, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is A, B. \nhttps://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is A, B. \nhttps://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "A, D\nA: Option for storage system that will account for the long-term data growth\nD: Option for snapshots, PIT recovery, copy of the data for Cloud Datastore in a different environment and, above all, archive snapshots for a long time \nB: not a good solution for archiving snapshots for a long time\nC: to import data into BigQuery, you must specify an entity filter \nE: Cloud Source Repositories is for code\nOne note: E --> would be my second choice if there was Cloud Storage instead of Source Repositories (typo?)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "sergio6\n\t\t\t\n\n\n\t\t\t3\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A, D\nA: Option for storage system that will account for the long-term data growth\nD: Option for snapshots, PIT recovery, copy of the data for Cloud Datastore in a different environment and, above all, archive snapshots for a long time \nB: not a good solution for archiving snapshots for a long time\nC: to import data into BigQuery, you must specify an entity filter \nE: Cloud Source Repositories is for code\nOne note: E --> would be my second choice if there was Cloud Storage instead of Source Repositories (typo?)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A, D\nA: Option for storage system that will account for the long-term data growth\nD: Option for snapshots, PIT recovery, copy of the data for Cloud Datastore in a different environment and, above all, archive snapshots for a long time \nB: not a good solution for archiving snapshots for a long time\nC: to import data into BigQuery, you must specify an entity filter \nE: Cloud Source Repositories is for code\nOne note: E --> would be my second choice if there was Cloud Storage instead of Source Repositories (typo?)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "Vote A B .  What\u2019s the purpose load into bigquery?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "Chelseajcole\n\t\t\t\n\n\n\t\t\t3\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "Vote A B .  What\u2019s the purpose load into bigquery?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Vote A B .  What\u2019s the purpose load into bigquery?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\nImporting into BigQuery\nTo import data from a managed export into BigQuery, see Loading Datastore export service data.\n\nData exported without specifying an entity filter cannot be loaded into BigQuery. If you want to import data into BigQuery, your export request must include one or more kind names in the entity filter.\n\nYou have to specify an entity fliter before you can load from datastore to BQ. It didn't mention that at all. So C is incorrect",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\nImporting into BigQuery\nTo import data from a managed export into BigQuery, see Loading Datastore export service data.\n\nData exported without specifying an entity filter cannot be loaded into BigQuery. If you want to import data into BigQuery, your export request must include one or more kind names in the entity filter.\n\nYou have to specify an entity fliter before you can load from datastore to BQ. It didn't mention that at all. So C is incorrect",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years ago",
+      "content": "Chelseajcole\n\t\t\t\n\n\n\t\t\t3\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\nImporting into BigQuery\nTo import data from a managed export into BigQuery, see Loading Datastore export service data.\n\nData exported without specifying an entity filter cannot be loaded into BigQuery. If you want to import data into BigQuery, your export request must include one or more kind names in the entity filter.\n\nYou have to specify an entity fliter before you can load from datastore to BQ. It didn't mention that at all. So C is incorrect",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery\nImporting into BigQuery\nTo import data from a managed export into BigQuery, see Loading Datastore export service data.\n\nData exported without specifying an entity filter cannot be loaded into BigQuery. If you want to import data into BigQuery, your export request must include one or more kind names in the entity filter.\n\nYou have to specify an entity fliter before you can load from datastore to BQ. It didn't mention that at all. So C is incorrect",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

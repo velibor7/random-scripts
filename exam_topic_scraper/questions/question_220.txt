@@ -1,0 +1,473 @@
+================================================================================
+QUESTION:
+You are migrating your on-premises data warehouse to BigQuery. One of the upstream data sources resides on a MySQL. database that runs in your on-premises data center with no public IP addresses. You want to ensure that the data ingestion into BigQuery is done securely and does not go through the public internet. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Update your existing on-premises ETL tool to write to BigQuery by using the BigQuery Open Database Connectivity (ODBC) driver. Set up the proxy parameter in the simba.googlebigqueryodbc.ini file to point to your data center’s NAT gateway.
+										
+
+
+													B.
+												
+											
+											Use Datastream to replicate data from your on-premises MySQL database to BigQuery. Set up Cloud Interconnect between your on-premises data center and Google Cloud. Use Private connectivity as the connectivity method and allocate an IP address range within your VPC network to the Datastream connectivity configuration. Use Server-only as the encryption type when setting up the connection profile in Datastream.
+										
+
+
+													C.
+												
+											
+											Use Datastream to replicate data from your on-premises MySQL database to BigQuery. Use Forward-SSH tunnel as the connectivity method to establish a secure tunnel between Datastream and your on-premises MySQL database through a tunnel server in your on-premises data center. Use None as the encryption type when setting up the connection profile in Datastream.
+										
+
+
+													D.
+												
+											
+											Use Datastream to replicate data from your on-premises MySQL database to BigQuery. Gather Datastream public IP addresses of the Google Cloud region that will be used to set up the stream. Add those IP addresses to the firewall allowlist of your on-premises data center. Use IP Allowlisting as the connectivity method and Server-only as the encryption type when setting up the connection profile in Datastream.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (59 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 220 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 220
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are migrating your on-premises data warehouse to BigQuery. One of the upstream data sources resides on a MySQL. database that runs in your on-premises data center with no public IP addresses. You want to ensure that the data ingestion into BigQuery is done securely and does not go through the public internet. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Update your existing on-premises ETL tool to write to BigQuery by using the BigQuery Open Database Connectivity (ODBC) driver. Set up the proxy parameter in the simba.googlebigqueryodbc.ini file to point to your data center’s NAT gateway.
+										
+
+
+													B.
+												
+											
+											Use Datastream to replicate data from your on-premises MySQL database to BigQuery. Set up Cloud Interconnect between your on-premises data center and Google Cloud. Use Private connectivity as the connectivity method and allocate an IP address range within your VPC network to the Datastream connectivity configuration. Use Server-only as the encryption type when setting up the connection profile in Datastream.
+										
+
+
+													C.
+												
+											
+											Use Datastream to replicate data from your on-premises MySQL database to BigQuery. Use Forward-SSH tunnel as the connectivity method to establish a secure tunnel between Datastream and your on-premises MySQL database through a tunnel server in your on-premises data center. Use None as the encryption type when setting up the connection profile in Datastream.
+										
+
+
+													D.
+												
+											
+											Use Datastream to replicate data from your on-premises MySQL database to BigQuery. Gather Datastream public IP addresses of the Google Cloud region that will be used to set up the stream. Add those IP addresses to the firewall allowlist of your on-premises data center. Use IP Allowlisting as the connectivity method and Server-only as the encryption type when setting up the connection profile in Datastream.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:46 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 220
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:46 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Datastream is a serverless change data capture and replication service, which can be used to replicate data changes from MySQL to BigQuery. 
+- Using Cloud Interconnect provides a private, secure connection between your on-premises environment and Google Cloud ==> This method ensures that data doesn't go through the public internet and is a recommended approach for secure, large-scale data migrations. 
+- Setting up private connectivity with Datastream allows for secure and direct data transfer.
+
+--- Comment #6 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Datastream is a serverless change data capture and replication service, which can be used to replicate data changes from MySQL to BigQuery. 
+- Using Cloud Interconnect provides a private, secure connection between your on-premises environment and Google Cloud ==> This method ensures that data doesn't go through the public internet and is a recommended approach for secure, large-scale data migrations. 
+- Setting up private connectivity with Datastream allows for secure and direct data transfer.
+
+--- Comment #7 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Datastream is a serverless change data capture and replication service, which can be used to replicate data changes from MySQL to BigQuery. 
+- Using Cloud Interconnect provides a private, secure connection between your on-premises environment and Google Cloud ==> This method ensures that data doesn't go through the public internet and is a recommended approach for secure, large-scale data migrations. 
+- Setting up private connectivity with Datastream allows for secure and direct data transfer.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Datastream is a serverless change data capture and replication service, which can be used to replicate data changes from MySQL to BigQuery. 
+- Using Cloud Interconnect provides a private, secure connection between your on-premises environment and Google Cloud ==> This method ensures that data doesn't go through the public internet and is a recommended approach for secure, large-scale data migrations. 
+- Setting up private connectivity with Datastream allows for secure and direct data transfer.
+
+--- Comment #13 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Datastream is a serverless change data capture and replication service, which can be used to replicate data changes from MySQL to BigQuery. 
+- Using Cloud Interconnect provides a private, secure connection between your on-premises environment and Google Cloud ==> This method ensures that data doesn't go through the public internet and is a recommended approach for secure, large-scale data migrations. 
+- Setting up private connectivity with Datastream allows for secure and direct data transfer.
+
+--- Comment #14 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			9 months, 1 week ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+- Datastream is a serverless change data capture and replication service, which can be used to replicate data changes from MySQL to BigQuery. 
+- Using Cloud Interconnect provides a private, secure connection between your on-premises environment and Google Cloud ==> This method ensures that data doesn't go through the public internet and is a recommended approach for secure, large-scale data migrations. 
+- Setting up private connectivity with Datastream allows for secure and direct data transfer.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+- Datastream is a serverless change data capture and replication service, which can be used to replicate data changes from MySQL to BigQuery. 
+- Using Cloud Interconnect provides a private, secure connection between your on-premises environment and Google Cloud ==> This method ensures that data doesn't go through the public internet and is a recommended approach for secure, large-scale data migrations. 
+- Setting up private connectivity with Datastream allows for secure and direct data transfer.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 4 months, 3 weeks ago | Votes: 0
+https://cloud.google.com/datastream/docs/network-connectivity-options
+
+--- Comment #23 ---
+Author: Unknown | Date: 4 months, 3 weeks ago | Votes: 0
+josech
+			
+
+
+				Most Recent 
+
+
+			4 months, 3 weeks ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastream/docs/network-connectivity-options
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastream/docs/network-connectivity-options
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #31 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+Datastream is a seamless replication from relational databases directly to BigQuery. The source database can be hosted on-premises, on Google Cloud services such as Cloud SQL or Bare Metal Solution for Oracle, or anywhere else on any cloud.
+https://cloud.google.com/datastream-for-bigquery#benefits
+
+--- Comment #32 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+datapassionate
+			
+
+
+			8 months, 4 weeks ago
+
+--- Comment #33 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+Datastream is a seamless replication from relational databases directly to BigQuery. The source database can be hosted on-premises, on Google Cloud services such as Cloud SQL or Bare Metal Solution for Oracle, or anywhere else on any cloud.
+https://cloud.google.com/datastream-for-bigquery#benefits
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+Datastream is a seamless replication from relational databases directly to BigQuery. The source database can be hosted on-premises, on Google Cloud services such as Cloud SQL or Bare Metal Solution for Oracle, or anywhere else on any cloud.
+https://cloud.google.com/datastream-for-bigquery#benefits
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+It is required that the data ingestion into BigQuery is done securely and does not go through the public internet. It can be done by Interconnect.
+
+--- Comment #39 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+It is required that the data ingestion into BigQuery is done securely and does not go through the public internet. It can be done by Interconnect.
+
+--- Comment #40 ---
+Author: Unknown | Date: 8 months, 4 weeks ago | Votes: 0
+datapassionate
+			
+
+
+			8 months, 4 weeks ago
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+It is required that the data ingestion into BigQuery is done securely and does not go through the public internet. It can be done by Interconnect.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+It is required that the data ingestion into BigQuery is done securely and does not go through the public internet. It can be done by Interconnect.
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #48 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+Secure Private Connection:
+
+Cloud Interconnect establishes a direct, private connection between your on-premises network and Google Cloud, bypassing the public internet and ensuring data confidentiality.
+Datastream Integration:
+
+Datastream seamlessly replicates data from your MySQL database to BigQuery, handling the complexities of data transfer and synchronization.
+
+--- Comment #49 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+e70ea9e
+			
+
+
+			9 months, 2 weeks ago
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Secure Private Connection:
+
+Cloud Interconnect establishes a direct, private connection between your on-premises network and Google Cloud, bypassing the public internet and ensuring data confidentiality.
+Datastream Integration:
+
+Datastream seamlessly replicates data from your MySQL database to BigQuery, handling the complexities of data transfer and synchronization.
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+Secure Private Connection:
+
+Cloud Interconnect establishes a direct, private connection between your on-premises network and Google Cloud, bypassing the public internet and ensuring data confidentiality.
+Datastream Integration:
+
+Datastream seamlessly replicates data from your MySQL database to BigQuery, handling the complexities of data transfer and synchronization.
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

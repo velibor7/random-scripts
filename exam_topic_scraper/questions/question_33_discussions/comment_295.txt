@@ -1,0 +1,8 @@
+COMMENT #295 FOR QUESTION 33
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Pull will lead to latency as new data will not be streamed upon arrival, but instead will only be passed on when Dataflow makes a pull request. So if data comes in at time 0:01 but pull requests are only happening every 10 seconds, we have 9 second delay. Push will automatically push the data to any subscribers as soon as the data comes, and thus is closer to real-time.
+============================================================

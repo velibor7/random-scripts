@@ -1,0 +1,14 @@
+COMMENT #86 FOR QUESTION 10
+============================================================
+Author: Unknown
+Date: 6 months, 2 weeks ago
+Votes: 0
+----------------------------------------
+I disagree with [F]. It's too late for a "highly regulated industry" to detect access violations by audit logs.
+[E] is a more reasonable answer, since it is a kind of row-level security, especially the times when BigQuery row-level security wasn't available.
+It is a practice still recommended (even with row-level sec. available) for the extreme scenario that:
+(Through repeated observation of query duration when querying tables with row-level access policies,) "a user could infer the values of rows that otherwise might be protected by row-level access policies"
+"If you are sensitive to this level of protection, we recommend using separate tables to isolate rows with different access control requirements, instead."
+Source: 
+https://cloud.google.com/bigquery/docs/best-practices-row-level-security#limit-side-channel-attacks
+============================================================

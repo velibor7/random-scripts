@@ -1,0 +1,14 @@
+COMMENT #45 FOR QUESTION 67
+============================================================
+Author: Unknown
+Date: 8 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+I don't even know if MLLib has out-of-the-box Computer Vision models. Developing this in Dataproc would be a nightmare.
+
+Using the computer vision API on the other hand makes perfect sense.
+
+The fact that the filtering must happen very fast and that this is a customer facing application points to BigTable so that there is very little latency and high availability. BigTable is eventually consistent but that doesn't really matter for this application.
+
+CloudSQL will ensure strong consistency which we don't really need but it is slower and supports max 64 TB. The description mentions multiple TBs. Not really sure what several means here, but Cloud SQL doesn't have a high cap.
+============================================================

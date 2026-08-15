@@ -1,0 +1,1312 @@
+================================================================================
+QUESTION:
+You have an Apache Kafka cluster on-prem with topics containing web application logs. You need to replicate the data to Google Cloud for analysis in BigQuery and Cloud Storage. The preferred replication method is mirroring to avoid deployment of Kafka Connect plugins.What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Deploy a Kafka cluster on GCE VM Instances. Configure your on-prem cluster to mirror your topics to the cluster running in GCE. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+										
+
+
+													B.
+												
+											
+											Deploy a Kafka cluster on GCE VM Instances with the Pub/Sub Kafka connector configured as a Sink connector. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+										
+
+
+													C.
+												
+											
+											Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Source connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+										
+
+
+													D.
+												
+											
+											Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Sink connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (234 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 86 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 86
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have an Apache Kafka cluster on-prem with topics containing web application logs. You need to replicate the data to Google Cloud for analysis in BigQuery and Cloud Storage. The preferred replication method is mirroring to avoid deployment of Kafka Connect plugins.What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Deploy a Kafka cluster on GCE VM Instances. Configure your on-prem cluster to mirror your topics to the cluster running in GCE. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+										
+
+
+													B.
+												
+											
+											Deploy a Kafka cluster on GCE VM Instances with the Pub/Sub Kafka connector configured as a Sink connector. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+										
+
+
+													C.
+												
+											
+											Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Source connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+										
+
+
+													D.
+												
+											
+											Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Sink connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								Rajokkiyam
+							
+							
+							at 
+							March 22, 2020, 4:20 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 86
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								Rajokkiyam
+							
+							
+							at 
+							March 22, 2020, 4:20 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+A.
+https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=27846330
+The solution specifically mentions mirroring and minimizing the use of Kafka Connect plugin.
+D would be the more Google Cloud-native way of implementing the same, but the requirement is better met by A.
+
+--- Comment #6 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+A.
+https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=27846330
+The solution specifically mentions mirroring and minimizing the use of Kafka Connect plugin.
+D would be the more Google Cloud-native way of implementing the same, but the requirement is better met by A.
+
+--- Comment #7 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+A.
+https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=27846330
+The solution specifically mentions mirroring and minimizing the use of Kafka Connect plugin.
+D would be the more Google Cloud-native way of implementing the same, but the requirement is better met by A.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+A.
+https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=27846330
+The solution specifically mentions mirroring and minimizing the use of Kafka Connect plugin.
+D would be the more Google Cloud-native way of implementing the same, but the requirement is better met by A.
+
+--- Comment #13 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+A.
+https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=27846330
+The solution specifically mentions mirroring and minimizing the use of Kafka Connect plugin.
+D would be the more Google Cloud-native way of implementing the same, but the requirement is better met by A.
+
+--- Comment #14 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Ganshank
+			
+
+
+				Highly Voted 
+
+
+			3 years, 6 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+A.
+https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=27846330
+The solution specifically mentions mirroring and minimizing the use of Kafka Connect plugin.
+D would be the more Google Cloud-native way of implementing the same, but the requirement is better met by A.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+A.
+https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=27846330
+The solution specifically mentions mirroring and minimizing the use of Kafka Connect plugin.
+D would be the more Google Cloud-native way of implementing the same, but the requirement is better met by A.
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 34 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #21 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Answer: A
+Description: Question says mirroring and avoid kafka connect plugins
+
+--- Comment #22 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			3 years, 6 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+Description: Question says mirroring and avoid kafka connect plugins
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+Description: Question says mirroring and avoid kafka connect plugins
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+Pub/Sub Kafka connector requires Kafka Connect, as described here https://cloud.google.com/pubsub/docs/connect_kafka
+Deployment of Kafka Connect is explicitly excluded by the requirements. So the only option available is A
+
+--- Comment #30 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+Qix
+			
+
+
+				Most Recent 
+
+
+			4 months ago
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+Pub/Sub Kafka connector requires Kafka Connect, as described here https://cloud.google.com/pubsub/docs/connect_kafka
+Deployment of Kafka Connect is explicitly excluded by the requirements. So the only option available is A
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Pub/Sub Kafka connector requires Kafka Connect, as described here https://cloud.google.com/pubsub/docs/connect_kafka
+Deployment of Kafka Connect is explicitly excluded by the requirements. So the only option available is A
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Option A: Deploy a Kafka cluster on GCE VM Instances. Configure your on-prem cluster to mirror your topics to the cluster running in GCE. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+
+This option involves setting up a separate Kafka cluster in Google Cloud, and then configuring the on-prem cluster to mirror the topics to this cluster. The data from the Google Cloud Kafka cluster can then be read using either a Dataproc cluster or a Dataflow job and written to Cloud Storage for analysis in BigQuery.
+
+--- Comment #38 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+samdhimal
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #39 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Option A: Deploy a Kafka cluster on GCE VM Instances. Configure your on-prem cluster to mirror your topics to the cluster running in GCE. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+
+This option involves setting up a separate Kafka cluster in Google Cloud, and then configuring the on-prem cluster to mirror the topics to this cluster. The data from the Google Cloud Kafka cluster can then be read using either a Dataproc cluster or a Dataflow job and written to Cloud Storage for analysis in BigQuery.
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+Option A: Deploy a Kafka cluster on GCE VM Instances. Configure your on-prem cluster to mirror your topics to the cluster running in GCE. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+
+This option involves setting up a separate Kafka cluster in Google Cloud, and then configuring the on-prem cluster to mirror the topics to this cluster. The data from the Google Cloud Kafka cluster can then be read using either a Dataproc cluster or a Dataflow job and written to Cloud Storage for analysis in BigQuery.
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #43 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Option B: Deploy a Kafka cluster on GCE VM Instances with the Pub/Sub Kafka connector configured as a Sink connector. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+
+This option is similar to Option A, but involves using the Pub/Sub Kafka connector as a sink connector instead of mirroring the topics from the on-prem cluster. This option would result in the same duplication of data and additional resources required as Option A, making it less desirable.
+
+--- Comment #44 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Option B: Deploy a Kafka cluster on GCE VM Instances with the Pub/Sub Kafka connector configured as a Sink connector. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+
+This option is similar to Option A, but involves using the Pub/Sub Kafka connector as a sink connector instead of mirroring the topics from the on-prem cluster. This option would result in the same duplication of data and additional resources required as Option A, making it less desirable.
+
+--- Comment #45 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+samdhimal
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #46 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Option B: Deploy a Kafka cluster on GCE VM Instances with the Pub/Sub Kafka connector configured as a Sink connector. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+
+This option is similar to Option A, but involves using the Pub/Sub Kafka connector as a sink connector instead of mirroring the topics from the on-prem cluster. This option would result in the same duplication of data and additional resources required as Option A, making it less desirable.
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+Option B: Deploy a Kafka cluster on GCE VM Instances with the Pub/Sub Kafka connector configured as a Sink connector. Use a Dataproc cluster or Dataflow job to read from Kafka and write to GCS.
+
+This option is similar to Option A, but involves using the Pub/Sub Kafka connector as a sink connector instead of mirroring the topics from the on-prem cluster. This option would result in the same duplication of data and additional resources required as Option A, making it less desirable.
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #50 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Sorry. I messed up. The answer is probably A. My badd....
+
+--- Comment #51 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Sorry. I messed up. The answer is probably A. My badd....
+
+--- Comment #52 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+samdhimal
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+Sorry. I messed up. The answer is probably A. My badd....
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+Sorry. I messed up. The answer is probably A. My badd....
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #60 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Option D: Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Sink connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+
+This option involves deploying the Pub/Sub Kafka connector on the on-prem cluster, but configuring it as a sink connector. In this case, the data from the on-prem Kafka cluster would be sent directly to Pub/Sub, which would act as the final destination for the data. A Dataflow job would then be used to read the data from Pub/Sub and write it to Cloud Storage for analysis in BigQuery. This option would result in the data being stored in both the on-prem cluster and Pub/Sub, making it less desirable compared to option C, where the data is only stored in Pub/Sub as an intermediary between the on-prem cluster and Google Cloud.
+
+--- Comment #61 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+samdhimal
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #62 ---
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+Option D: Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Sink connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+
+This option involves deploying the Pub/Sub Kafka connector on the on-prem cluster, but configuring it as a sink connector. In this case, the data from the on-prem Kafka cluster would be sent directly to Pub/Sub, which would act as the final destination for the data. A Dataflow job would then be used to read the data from Pub/Sub and write it to Cloud Storage for analysis in BigQuery. This option would result in the data being stored in both the on-prem cluster and Pub/Sub, making it less desirable compared to option C, where the data is only stored in Pub/Sub as an intermediary between the on-prem cluster and Google Cloud.
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+Option D: Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Sink connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+
+This option involves deploying the Pub/Sub Kafka connector on the on-prem cluster, but configuring it as a sink connector. In this case, the data from the on-prem Kafka cluster would be sent directly to Pub/Sub, which would act as the final destination for the data. A Dataflow job would then be used to read the data from Pub/Sub and write it to Cloud Storage for analysis in BigQuery. This option would result in the data being stored in both the on-prem cluster and Pub/Sub, making it less desirable compared to option C, where the data is only stored in Pub/Sub as an intermediary between the on-prem cluster and Google Cloud.
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #66 ---
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+you use chatgpt replies, if you instruct chat gpt that you don't need to use plugins as per question say, it will answer A
+
+--- Comment #67 ---
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+you use chatgpt replies, if you instruct chat gpt that you don't need to use plugins as per question say, it will answer A
+
+--- Comment #68 ---
+Author: Unknown | Date: 7 months, 2 weeks ago | Votes: 0
+musumusu
+			
+
+
+			7 months, 2 weeks ago
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+you use chatgpt replies, if you instruct chat gpt that you don't need to use plugins as per question say, it will answer A
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+you use chatgpt replies, if you instruct chat gpt that you don't need to use plugins as per question say, it will answer A
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #76 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+Option C: Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Source connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+
+This option involves deploying the Pub/Sub Kafka connector directly on the on-prem cluster, and configuring it as a source connector. The data from the on-prem Kafka cluster is then sent directly to Pub/Sub, which acts as an intermediary between the on-prem cluster and the data stored in Google Cloud. A Dataflow job is then used to read the data from Pub/Sub and write it to Cloud Storage for analysis in BigQuery. This option avoids the duplication of data and additional resources required by the other options, making it the preferred option.
+
+--- Comment #77 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+samdhimal
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+Option C: Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Source connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+
+This option involves deploying the Pub/Sub Kafka connector directly on the on-prem cluster, and configuring it as a source connector. The data from the on-prem Kafka cluster is then sent directly to Pub/Sub, which acts as an intermediary between the on-prem cluster and the data stored in Google Cloud. A Dataflow job is then used to read the data from Pub/Sub and write it to Cloud Storage for analysis in BigQuery. This option avoids the duplication of data and additional resources required by the other options, making it the preferred option.
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+Option C: Deploy the Pub/Sub Kafka connector to your on-prem Kafka cluster and configure Pub/Sub as a Source connector. Use a Dataflow job to read from Pub/Sub and write to GCS.
+
+This option involves deploying the Pub/Sub Kafka connector directly on the on-prem cluster, and configuring it as a source connector. The data from the on-prem Kafka cluster is then sent directly to Pub/Sub, which acts as an intermediary between the on-prem cluster and the data stored in Google Cloud. A Dataflow job is then used to read the data from Pub/Sub and write it to Cloud Storage for analysis in BigQuery. This option avoids the duplication of data and additional resources required by the other options, making it the preferred option.
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #85 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+A is the answer.
+
+--- Comment #86 ---
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+zellck
+			
+
+
+			10 months, 1 week ago
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+A is the answer.
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+A is the answer.
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #94 ---
+Author: Unknown | Date: 11 months, 3 weeks ago | Votes: 0
+"The preferred replication method is mirroring to avoid deployment of Kafka Connect plugins."
+
+--- Comment #95 ---
+Author: Unknown | Date: 11 months, 3 weeks ago | Votes: 0
+Afonya
+			
+
+
+			11 months, 3 weeks ago
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+"The preferred replication method is mirroring to avoid deployment of Kafka Connect plugins."
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+"The preferred replication method is mirroring to avoid deployment of Kafka Connect plugins."
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #103 ---
+Author: Unknown | Date: 12 months ago | Votes: 0
+D is the right answer
+
+--- Comment #104 ---
+Author: Unknown | Date: 12 months ago | Votes: 0
+somnathmaddi
+			
+
+
+			12 months ago
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+D is the right answer
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+D is the right answer
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #111 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+D is the right answer
+
+--- Comment #112 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+clouditis
+			
+
+
+			1 year ago
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+D is the right answer
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+D is the right answer
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #119 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+"A" is the answer which complies with the requirements (specifically, "The preferred replication method is mirroring to avoid deployment of Kafka Connect plugins"). Indeed, one of the uses of what is called "Geo-Replication" (or Cross-Cluster Data Mirroring) in Kafka is precisely cloud migrations: https://kafka.apache.org/documentation/#georeplication
+
+However I agree with Ganshank, and the optimal "Google way" way would be "D", installing the Pub/Sub Kafka connector to move the data from on-prem to GCP.
+
+--- Comment #120 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+hendrixlives
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+"A" is the answer which complies with the requirements (specifically, "The preferred replication method is mirroring to avoid deployment of Kafka Connect plugins"). Indeed, one of the uses of what is called "Geo-Replication" (or Cross-Cluster Data Mirroring) in Kafka is precisely cloud migrations: https://kafka.apache.org/documentation/#georeplication
+
+However I agree with Ganshank, and the optimal "Google way" way would be "D", installing the Pub/Sub Kafka connector to move the data from on-prem to GCP.
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+"A" is the answer which complies with the requirements (specifically, "The preferred replication method is mirroring to avoid deployment of Kafka Connect plugins"). Indeed, one of the uses of what is called "Geo-Replication" (or Cross-Cluster Data Mirroring) in Kafka is precisely cloud migrations: https://kafka.apache.org/documentation/#georeplication
+
+However I agree with Ganshank, and the optimal "Google way" way would be "D", installing the Pub/Sub Kafka connector to move the data from on-prem to GCP.
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #128 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Going with "D"
+
+Refer: https://stackoverflow.com/questions/55277188/kafka-to-google-pub-sub-using-sink-connector
+
+--- Comment #129 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+gcp_k
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #130 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Going with "D"
+
+Refer: https://stackoverflow.com/questions/55277188/kafka-to-google-pub-sub-using-sink-connector
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+Going with "D"
+
+Refer: https://stackoverflow.com/questions/55277188/kafka-to-google-pub-sub-using-sink-connector
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #134 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+"avoid deployment of Kafka Connect plugins"
+
+--- Comment #135 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+"avoid deployment of Kafka Connect plugins"
+
+--- Comment #136 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+baubaumiaomiao
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+"avoid deployment of Kafka Connect plugins"
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+"avoid deployment of Kafka Connect plugins"
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #144 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Vote for A
+
+--- Comment #145 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+sumanshu
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+Vote for A
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+Vote for A
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #152 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Answer: A
+Description: Question says mirroring to avoid kafka connect plugins
+
+--- Comment #153 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+daghayeghi
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+Description: Question says mirroring to avoid kafka connect plugins
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+Answer: A
+Description: Question says mirroring to avoid kafka connect plugins
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #160 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+Correct is D
+
+--- Comment #161 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+Allan222
+			
+
+
+			2 years, 8 months ago
+
+--- Comment #162 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Correct is D
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+Correct is D
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #166 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+As per question - "avoid deployment of Kafka Connect plugins."
+
+--- Comment #167 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+As per question - "avoid deployment of Kafka Connect plugins."
+
+--- Comment #168 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+sumanshu
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+As per question - "avoid deployment of Kafka Connect plugins."
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+As per question - "avoid deployment of Kafka Connect plugins."
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #176 ---
+Author: Unknown | Date: 3 years ago | Votes: 0
+A. 
+the best solution would be D but given the restriction here to use mirroring and avoid connectors, A would be the natural choice
+
+--- Comment #177 ---
+Author: Unknown | Date: 3 years ago | Votes: 0
+vakati
+			
+
+
+			3 years ago
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+A. 
+the best solution would be D but given the restriction here to use mirroring and avoid connectors, A would be the natural choice
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+A. 
+the best solution would be D but given the restriction here to use mirroring and avoid connectors, A would be the natural choice
+
+--- Comment #180 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #184 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+D should be the correct answer. Configure pub/sub as sink
+
+--- Comment #185 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Tanmoyk
+			
+
+
+			3 years, 1 month ago
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+D should be the correct answer. Configure pub/sub as sink
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+D should be the correct answer. Configure pub/sub as sink
+
+--- Comment #188 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #192 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+C is correct.
+https://docs.confluent.io/current/connect/kafka-connect-gcp-pubsub/index.html
+
+--- Comment #193 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+haroldbenites
+			
+
+
+			3 years, 1 month ago
+
+--- Comment #194 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+C is correct.
+https://docs.confluent.io/current/connect/kafka-connect-gcp-pubsub/index.html
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+C is correct.
+https://docs.confluent.io/current/connect/kafka-connect-gcp-pubsub/index.html
+
+--- Comment #196 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #197 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #198 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Correct Answer: D
+Why is this correct?
+You can connect Kafka to GCP by using a connector. The 'downstream' service (Pub/Sub) will use a sink connector.
+
+--- Comment #199 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Correct Answer: D
+Why is this correct?
+You can connect Kafka to GCP by using a connector. The 'downstream' service (Pub/Sub) will use a sink connector.
+
+--- Comment #200 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+haroldbenites
+			
+
+
+			3 years, 1 month ago
+
+--- Comment #201 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Correct Answer: D
+Why is this correct?
+You can connect Kafka to GCP by using a connector. The 'downstream' service (Pub/Sub) will use a sink connector.
+
+--- Comment #202 ---
+Author: Unknown | Date:  | Votes: 0
+Correct Answer: D
+Why is this correct?
+You can connect Kafka to GCP by using a connector. The 'downstream' service (Pub/Sub) will use a sink connector.
+
+--- Comment #203 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #204 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #205 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Question says : avoid deployment of Kafka Connect plugins.
+
+--- Comment #206 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Question says : avoid deployment of Kafka Connect plugins.
+
+--- Comment #207 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+sumanshu
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #208 ---
+Author: Unknown | Date:  | Votes: 0
+Question says : avoid deployment of Kafka Connect plugins.
+
+--- Comment #209 ---
+Author: Unknown | Date:  | Votes: 0
+Question says : avoid deployment of Kafka Connect plugins.
+
+--- Comment #210 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #211 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #212 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #213 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #214 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #215 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #216 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+its D, why would google prefer Kafka in their own cert questions! :)
+
+--- Comment #217 ---
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+clouditis
+			
+
+
+			3 years, 2 months ago
+
+--- Comment #218 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+its D, why would google prefer Kafka in their own cert questions! :)
+
+--- Comment #219 ---
+Author: Unknown | Date:  | Votes: 0
+its D, why would google prefer Kafka in their own cert questions! :)
+
+--- Comment #220 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #221 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #222 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Because the questions mentions to avoid deployment of Kafka connect plugins
+
+--- Comment #223 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Because the questions mentions to avoid deployment of Kafka connect plugins
+
+--- Comment #224 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Ral17
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #225 ---
+Author: Unknown | Date:  | Votes: 0
+Because the questions mentions to avoid deployment of Kafka connect plugins
+
+--- Comment #226 ---
+Author: Unknown | Date:  | Votes: 0
+Because the questions mentions to avoid deployment of Kafka connect plugins
+
+--- Comment #227 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #228 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #229 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #230 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #231 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #232 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #233 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #234 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

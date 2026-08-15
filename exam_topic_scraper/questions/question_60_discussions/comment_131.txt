@@ -1,0 +1,10 @@
+COMMENT #131 FOR QUESTION 60
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Why not A?
+By converting all daily log tables into date-partitioned tables, you can take advantage of partition pruning to limit the number of tables that need to be scanned during a query. Partition pruning allows BigQuery to skip scanning partitions that are not within the date range specified in the query, thus reducing the number of tables that need to be scanned and can help to avoid reaching the 1,000 table limit.
+A Seems like the correct answer but I can be wrong...
+============================================================

@@ -1,0 +1,21 @@
+COMMENT #35 FOR QUESTION 124597
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Reference: https://docs.databricks.com/en/ingestion/auto-loader/schema.html
+
+writeStream: Ensures real-time streaming write capabilities, which is essential f
+or near real-time workloads.
+checkpointLocation: Necessary for fault tolerance and tracking progress.
+mergeSchema: Ensures automatic schema evolution, allowing new columns to be detected and added to the target table.
+
+Why Option 'C ' is incorrect?
+Uses write instead of writeStream, which is for batch processing, making it inappropriate for real-time streaming.
+
+Why Option 'B ' is incorrect?
+Although it includes checkpointLocation and mergeSchema, the addition of trigger(once=True) is not necessary in this context, and it is better suited for batch-like processing.
+
+Reference: https://docs.databricks.com/en/ingestion/auto-loader/schema.html
+============================================================

@@ -1,0 +1,87 @@
+COMMENT #2 FOR QUESTION 124575
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Actual exam question from
+						
+						Databricks's
+						Certified Data Engineer Professional
+
+							Question #: 70
+							Topic #: 1
+						
+[All Certified Data Engineer Professional Questions]
+
+
+
+							
+								A data ingestion task requires a one-TB JSON dataset to be written out to Parquet with a target part-file size of 512 MB. Because Parquet is being used instead of Delta Lake, built-in file-sizing features such as Auto-Optimize & Auto-Compaction cannot be used.Which strategy will yield the best performance without shuffling data?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Set spark.sql.files.maxPartitionBytes to 512 MB, ingest the data, execute the narrow transformations, and then write to parquet.
+										
+
+
+													B.
+												
+											
+											Set spark.sql.shuffle.partitions to 2,048 partitions (1TB*1024*1024/512), ingest the data, execute the narrow transformations, optimize the data by sorting it (which automatically repartitions the data), and then write to parquet.
+										
+
+
+													C.
+												
+											
+											Set spark.sql.adaptive.advisoryPartitionSizeInBytes to 512 MB bytes, ingest the data, execute the narrow transformations, coalesce to 2,048 partitions (1TB*1024*1024/512), and then write to parquet.
+										
+
+
+													D.
+												
+											
+											Ingest the data, execute the narrow transformations, repartition to 2,048 partitions (1TB* 1024*1024/512), and then write to parquet.
+										
+
+
+													E.
+												
+											
+											Set spark.sql.shuffle.partitions to 512, ingest the data, execute the narrow transformations, and then write to parquet.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								sturcu
+							
+							
+							at 
+							Oct. 24, 2023, 6:02 p.m.
+============================================================

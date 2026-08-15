@@ -1,0 +1,1585 @@
+{
+  "question": "You need to create a near real-time inventory dashboard that reads the main inventory tables in your BigQuery data warehouse. Historical inventory data is stored as inventory balances by item and location. You have several thousand updates to inventory every hour. You want to maximize performance of the dashboard and ensure that the data is accurate. What should you do?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tLeverage BigQuery UPDATE statements to update the inventory balances as they are changing.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tPartition the inventory balance table by item to reduce the amount of data scanned with each inventory update.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse the BigQuery streaming the stream changes into a daily inventory movement table. Calculate balances in a view that joins it to the historical inventory balance table. Update the inventory balance table nightly.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse the BigQuery bulk loader to batch load inventory changes into a daily inventory movement table. Calculate balances in a view that joins it to the historical inventory balance table. Update the inventory balance table nightly.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 102 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 102\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou need to create a near real-time inventory dashboard that reads the main inventory tables in your BigQuery data warehouse. Historical inventory data is stored as inventory balances by item and location. You have several thousand updates to inventory every hour. You want to maximize performance of the dashboard and ensure that the data is accurate. What should you do?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tLeverage BigQuery UPDATE statements to update the inventory balances as they are changing.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tPartition the inventory balance table by item to reduce the amount of data scanned with each inventory update.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse the BigQuery streaming the stream changes into a daily inventory movement table. Calculate balances in a view that joins it to the historical inventory balance table. Update the inventory balance table nightly.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tUse the BigQuery bulk loader to batch load inventory changes into a daily inventory movement table. Calculate balances in a view that joins it to the historical inventory balance table. Update the inventory balance table nightly.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tRajokkiyam\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 22, 2020, 6:37 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 102\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tRajokkiyam\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 22, 2020, 6:37 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "A - New correct answer\nC - Old correct answer (for 2019)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "A - New correct answer\nC - Old correct answer (for 2019)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "A - New correct answer\nC - Old correct answer (for 2019)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "A - New correct answer\nC - Old correct answer (for 2019)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "A - New correct answer\nC - Old correct answer (for 2019)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "A - New correct answer\nC - Old correct answer (for 2019)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A - New correct answer\nC - Old correct answer (for 2019)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 33 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "C is better\n\nThe best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "C is better\n\nThe best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "C is better\n\nThe best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is better\n\nThe best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "The key reasons this is better than the other options:\n\nUsing BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.\nPartitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.\nUsing the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.\nSo option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "The key reasons this is better than the other options:\n\nUsing BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.\nPartitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.\nUsing the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.\nSo option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "The key reasons this is better than the other options:\n\nUsing BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.\nPartitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.\nUsing the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.\nSo option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The key reasons this is better than the other options:\n\nUsing BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.\nPartitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.\nUsing the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.\nSo option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Here's why the other options are less suitable:\n\nA. Leverage BigQuery UPDATE statements: While technically possible, this approach is inefficient for frequent updates as it requires individual record scans and updates, affecting performance and potentially causing data race conditions.\n\nB. Partition the inventory balance table: Partitioning helps with query performance for large datasets, but it doesn't address the need for near real-time updates.\n\nD. Use the BigQuery bulk loader: Bulk loading daily changes is helpful for historical data ingestion, but it won't provide near real-time updates necessary for the dashboard.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Here's why the other options are less suitable:\n\nA. Leverage BigQuery UPDATE statements: While technically possible, this approach is inefficient for frequent updates as it requires individual record scans and updates, affecting performance and potentially causing data race conditions.\n\nB. Partition the inventory balance table: Partitioning helps with query performance for large datasets, but it doesn't address the need for near real-time updates.\n\nD. Use the BigQuery bulk loader: Bulk loading daily changes is helpful for historical data ingestion, but it won't provide near real-time updates necessary for the dashboard.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Here's why the other options are less suitable:\n\nA. Leverage BigQuery UPDATE statements: While technically possible, this approach is inefficient for frequent updates as it requires individual record scans and updates, affecting performance and potentially causing data race conditions.\n\nB. Partition the inventory balance table: Partitioning helps with query performance for large datasets, but it doesn't address the need for near real-time updates.\n\nD. Use the BigQuery bulk loader: Bulk loading daily changes is helpful for historical data ingestion, but it won't provide near real-time updates necessary for the dashboard.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Here's why the other options are less suitable:\n\nA. Leverage BigQuery UPDATE statements: While technically possible, this approach is inefficient for frequent updates as it requires individual record scans and updates, affecting performance and potentially causing data race conditions.\n\nB. Partition the inventory balance table: Partitioning helps with query performance for large datasets, but it doesn't address the need for near real-time updates.\n\nD. Use the BigQuery bulk loader: Bulk loading daily changes is helpful for historical data ingestion, but it won't provide near real-time updates necessary for the dashboard.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option C offers the following advantages:\n\nStreams inventory changes near real-time: BigQuery streaming ingests data immediately, keeping the inventory movement table constantly updated.\nDaily balance calculation: Joining the movement table with the historical balance table provides an accurate view of current inventory levels without affecting the actual balance table.\nNightly update for historical data: Updating the main inventory balance table nightly ensures long-term data consistency while maintaining near real-time insights through the view.\nThis approach balances near real-time updates with efficiency and data accuracy, making it the optimal solution for the given scenario.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option C offers the following advantages:\n\nStreams inventory changes near real-time: BigQuery streaming ingests data immediately, keeping the inventory movement table constantly updated.\nDaily balance calculation: Joining the movement table with the historical balance table provides an accurate view of current inventory levels without affecting the actual balance table.\nNightly update for historical data: Updating the main inventory balance table nightly ensures long-term data consistency while maintaining near real-time insights through the view.\nThis approach balances near real-time updates with efficiency and data accuracy, making it the optimal solution for the given scenario.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C offers the following advantages:\n\nStreams inventory changes near real-time: BigQuery streaming ingests data immediately, keeping the inventory movement table constantly updated.\nDaily balance calculation: Joining the movement table with the historical balance table provides an accurate view of current inventory levels without affecting the actual balance table.\nNightly update for historical data: Updating the main inventory balance table nightly ensures long-term data consistency while maintaining near real-time insights through the view.\nThis approach balances near real-time updates with efficiency and data accuracy, making it the optimal solution for the given scenario.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C offers the following advantages:\n\nStreams inventory changes near real-time: BigQuery streaming ingests data immediately, keeping the inventory movement table constantly updated.\nDaily balance calculation: Joining the movement table with the historical balance table provides an accurate view of current inventory levels without affecting the actual balance table.\nNightly update for historical data: Updating the main inventory balance table nightly ensures long-term data consistency while maintaining near real-time insights through the view.\nThis approach balances near real-time updates with efficiency and data accuracy, making it the optimal solution for the given scenario.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "There are still limitations on DML statements (2023) e.g. only 2 concurrent UPDATES and up to 20 queued hence not appropriate for this scenario:\nhttps://cloud.google.com/bigquery/quotas#data-manipulation-language-statements",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "Yiouk\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "There are still limitations on DML statements (2023) e.g. only 2 concurrent UPDATES and up to 20 queued hence not appropriate for this scenario:\nhttps://cloud.google.com/bigquery/quotas#data-manipulation-language-statements",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "There are still limitations on DML statements (2023) e.g. only 2 concurrent UPDATES and up to 20 queued hence not appropriate for this scenario:\nhttps://cloud.google.com/bigquery/quotas#data-manipulation-language-statements",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "NeoNitin\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "In question it mentioned several thousands of updates every hour, several thousands could be 20-30 thousands as well. Where it is mentioned for only 1000 updates?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "In question it mentioned several thousands of updates every hour, several thousands could be 20-30 thousands as well. Where it is mentioned for only 1000 updates?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Nandababy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "In question it mentioned several thousands of updates every hour, several thousands could be 20-30 thousands as well. Where it is mentioned for only 1000 updates?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "In question it mentioned several thousands of updates every hour, several thousands could be 20-30 thousands as well. Where it is mentioned for only 1000 updates?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 7\u00a0months ago",
+      "content": "C is correct.\nIt says \u201cupdate Every hour\u201d\nAnd need \u201c accuracy\u201d",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 7\u00a0months ago",
+      "content": "haroldbenites\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "C is correct.\nIt says \u201cupdate Every hour\u201d\nAnd need \u201c accuracy\u201d",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is correct.\nIt says \u201cupdate Every hour\u201d\nAnd need \u201c accuracy\u201d",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 25 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "NeoNitin\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 2\u00a0weeks ago",
+      "content": "BigQuery is not optimized for updating statement. So, go to C.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 2\u00a0weeks ago",
+      "content": "SamuelTsch\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t5\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "BigQuery is not optimized for updating statement. So, go to C.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "BigQuery is not optimized for updating statement. So, go to C.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 3\u00a0weeks ago",
+      "content": "The answer is C because the requirement is near real-time",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 3\u00a0weeks ago",
+      "content": "edre\n\t\t\t\n\n\n\t\t\t8\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The answer is C because the requirement is near real-time",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The answer is C because the requirement is near real-time",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "The best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "The best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The best approach is to use BigQuery streaming to stream the inventory changes into a daily inventory movement table. Then calculate balances in a view that joins the inventory movement table to the historical inventory balance table. Finally, update the inventory balance table nightly (option C).",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "The key reasons this is better than the other options:\n\nUsing BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.\n\nPartitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.\n\nUsing the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.\n\nSo option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "The key reasons this is better than the other options:\n\nUsing BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.\n\nPartitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.\n\nUsing the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.\n\nSo option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The key reasons this is better than the other options:\n\nUsing BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.\n\nPartitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.\n\nUsing the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.\n\nSo option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The key reasons this is better than the other options:\n\nUsing BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.\n\nPartitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.\n\nUsing the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.\n\nSo option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "Option C.\n\nUsing the BigQuery streaming to stream changes into a daily inventory movement table and calculating balances in a view that joins it to the historical inventory balance table can help you achieve the desired performance and accuracy. You can then update the inventory balance table nightly. This approach can help you avoid the overhead of scanning large amounts of data with each inventory update, which can be time-consuming and resource-intensive.\nLeveraging BigQuery UPDATE statements to update the inventory balances as they are changing (option A) can be resource-intensive and may not be the most efficient way to achieve the desired performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "rocky48\n\t\t\t\n\n\n\t\t\t1\u00a0year, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C.\n\nUsing the BigQuery streaming to stream changes into a daily inventory movement table and calculating balances in a view that joins it to the historical inventory balance table can help you achieve the desired performance and accuracy. You can then update the inventory balance table nightly. This approach can help you avoid the overhead of scanning large amounts of data with each inventory update, which can be time-consuming and resource-intensive.\nLeveraging BigQuery UPDATE statements to update the inventory balances as they are changing (option A) can be resource-intensive and may not be the most efficient way to achieve the desired performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C.\n\nUsing the BigQuery streaming to stream changes into a daily inventory movement table and calculating balances in a view that joins it to the historical inventory balance table can help you achieve the desired performance and accuracy. You can then update the inventory balance table nightly. This approach can help you avoid the overhead of scanning large amounts of data with each inventory update, which can be time-consuming and resource-intensive.\nLeveraging BigQuery UPDATE statements to update the inventory balances as they are changing (option A) can be resource-intensive and may not be the most efficient way to achieve the desired performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "As per other answers C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "AnonymousPanda\n\t\t\t\n\n\n\t\t\t1\u00a0year, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "As per other answers C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "As per other answers C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "Simple and will work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "Nirca\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Simple and will work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Simple and will work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "Answer is C. Why because \u201cUpdate\u201d limits is 1500/per day, and the question say: You have several thousand updates to inventory every hour. So is impossible to use updates all the time.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "odacir\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is C. Why because \u201cUpdate\u201d limits is 1500/per day, and the question say: You have several thousand updates to inventory every hour. So is impossible to use updates all the time.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is C. Why because \u201cUpdate\u201d limits is 1500/per day, and the question say: You have several thousand updates to inventory every hour. So is impossible to use updates all the time.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "A. Leverage BigQuery UPDATE statements to update the inventory balances as they are changing - is so simple and RIGHT!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "Nirca\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Leverage BigQuery UPDATE statements to update the inventory balances as they are changing - is so simple and RIGHT!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Leverage BigQuery UPDATE statements to update the inventory balances as they are changing - is so simple and RIGHT!",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "C is more universal and sustainable",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "brookpetit\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is more universal and sustainable",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is more universal and sustainable",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "UPDATE is too expensive. Joining main and delta tables is the right wat to capture data change.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "ZZHZZH\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "UPDATE is too expensive. Joining main and delta tables is the right wat to capture data change.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "UPDATE is too expensive. Joining main and delta tables is the right wat to capture data change.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "I think the answer is C. The question is about maximizing performance and accuracy, it's ok if we need expensive JOINs. BigQuery has a daily quota of 1500 UPDATEs, and the question talks about several thousand updates every hour.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "euro202\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "I think the answer is C. The question is about maximizing performance and accuracy, it's ok if we need expensive JOINs. BigQuery has a daily quota of 1500 UPDATEs, and the question talks about several thousand updates every hour.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I think the answer is C. The question is about maximizing performance and accuracy, it's ok if we need expensive JOINs. BigQuery has a daily quota of 1500 UPDATEs, and the question talks about several thousand updates every hour.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "DML statements do not count toward the number of table modifications per day.\nhttps://cloud.google.com/bigquery/quotas#data-manipulation-language-statements\n\nSo I would go with A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "DML statements do not count toward the number of table modifications per day.\nhttps://cloud.google.com/bigquery/quotas#data-manipulation-language-statements\n\nSo I would go with A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "jackdbd\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "DML statements do not count toward the number of table modifications per day.\nhttps://cloud.google.com/bigquery/quotas#data-manipulation-language-statements\n\nSo I would go with A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "DML statements do not count toward the number of table modifications per day.\nhttps://cloud.google.com/bigquery/quotas#data-manipulation-language-statements\n\nSo I would go with A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "Sorry, wrong link. Here is the correct one: https://cloud.google.com/bigquery/quotas#standard_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "Sorry, wrong link. Here is the correct one: https://cloud.google.com/bigquery/quotas#standard_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "jackdbd\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Sorry, wrong link. Here is the correct one: https://cloud.google.com/bigquery/quotas#standard_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Sorry, wrong link. Here is the correct one: https://cloud.google.com/bigquery/quotas#standard_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "C create a view that joins to a table seems dumb to me",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "vaga1\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C create a view that joins to a table seems dumb to me",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C create a view that joins to a table seems dumb to me",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "Too frequent updates are way too expensive in an OLAP solution. This is much more likely to stream changes to the table(s) and aggregate these changes in the view.\n\nhttps://stackoverflow.com/questions/74657435/bigquery-frequent-updates-to-a-record",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "forepick\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Too frequent updates are way too expensive in an OLAP solution. This is much more likely to stream changes to the table(s) and aggregate these changes in the view.\n\nhttps://stackoverflow.com/questions/74657435/bigquery-frequent-updates-to-a-record",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Too frequent updates are way too expensive in an OLAP solution. This is much more likely to stream changes to the table(s) and aggregate these changes in the view.\n\nhttps://stackoverflow.com/questions/74657435/bigquery-frequent-updates-to-a-record",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "Has to be C. \nDML has hard limit of 1500 operations per table per day: https://cloud.google.com/bigquery/quotas#standard_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "streeeber\n\t\t\t\n\n\n\t\t\t2\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Has to be C. \nDML has hard limit of 1500 operations per table per day: https://cloud.google.com/bigquery/quotas#standard_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Has to be C. \nDML has hard limit of 1500 operations per table per day: https://cloud.google.com/bigquery/quotas#standard_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "Update action is not efficient",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years ago",
+      "content": "lucaluca1982\n\t\t\t\n\n\n\t\t\t2\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "Update action is not efficient",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Update action is not efficient",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "NeoNitin\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "option A:what limitation here 1500/perday okay in question we will get max 24 jobs hourly updated okay,\nnow speed 5 operation /10 sec , 1 operation 2sec , and we are getting new update in 1 hour so we have time 3600 sec and we need to update around 1000 update according to speed take 2000sec still we have 1600 sec rest to getting new update so .\nthats why I thing DML is best option for this work",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

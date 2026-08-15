@@ -1,0 +1,9 @@
+COMMENT #227 FOR QUESTION 31
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Option: C
+using draining will stop the subscription totally while allowing the existing data to complete processing. While the pipeline is stopped, will lose streaming data. The best option is to create a new pipeline that is connected to the same subscription, then we can apply drain to the old pipeline and end it. That way we will capture all the streaming data.
+============================================================

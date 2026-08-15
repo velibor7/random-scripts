@@ -1,0 +1,1405 @@
+{
+  "question": "You launched a new gaming app almost three years ago. You have been uploading log files from the previous day to a separate Google BigQuery table with the table name format LOGS_yyyymmdd. You have been using table wildcard functions to generate daily and monthly reports for all time ranges. Recently, you discovered that some queries that cover long date ranges are exceeding the limit of 1,000 tables and failing. How can you resolve this issue?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tConvert all daily log tables into date-partitioned tables\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tConvert the sharded tables into a single partitioned table\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tEnable query caching so you can cache data from previous months\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate separate views to cover each month, and query from these views\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 60 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 60\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou launched a new gaming app almost three years ago. You have been uploading log files from the previous day to a separate Google BigQuery table with the table name format LOGS_yyyymmdd. You have been using table wildcard functions to generate daily and monthly reports for all time ranges. Recently, you discovered that some queries that cover long date ranges are exceeding the limit of 1,000 tables and failing. How can you resolve this issue?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tConvert all daily log tables into date-partitioned tables\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tConvert the sharded tables into a single partitioned table\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tEnable query caching so you can cache data from previous months\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate separate views to cover each month, and query from these views\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 21, 2020, 1:28 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 60\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 21, 2020, 1:28 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "should be B\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#converting_date-sharded_tables_into_ingestion-time_partitioned_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "should be B\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#converting_date-sharded_tables_into_ingestion-time_partitioned_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "should be B\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#converting_date-sharded_tables_into_ingestion-time_partitioned_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "should be B\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#converting_date-sharded_tables_into_ingestion-time_partitioned_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "should be B\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#converting_date-sharded_tables_into_ingestion-time_partitioned_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "[Removed]\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "should be B\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#converting_date-sharded_tables_into_ingestion-time_partitioned_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "should be B\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#converting_date-sharded_tables_into_ingestion-time_partitioned_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 38 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "is it already partitioned? there is a table [table]_yyyymmdd it seems to partitioned by date from log files. but I confuse why D. is not a answer? if there is only reason to fail from query that exceeding 1,000 tables then I think creating views could be solution because querying views containing under 1,000 tables by a view could be queried.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "is it already partitioned? there is a table [table]_yyyymmdd it seems to partitioned by date from log files. but I confuse why D. is not a answer? if there is only reason to fail from query that exceeding 1,000 tables then I think creating views could be solution because querying views containing under 1,000 tables by a view could be queried.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "jin0\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "is it already partitioned? there is a table [table]_yyyymmdd it seems to partitioned by date from log files. but I confuse why D. is not a answer? if there is only reason to fail from query that exceeding 1,000 tables then I think creating views could be solution because querying views containing under 1,000 tables by a view could be queried.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "is it already partitioned? there is a table [table]_yyyymmdd it seems to partitioned by date from log files. but I confuse why D. is not a answer? if there is only reason to fail from query that exceeding 1,000 tables then I think creating views could be solution because querying views containing under 1,000 tables by a view could be queried.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 9\u00a0months ago",
+      "content": "The above link does mention about shard ing benefits but only about partition tables.\nA is correct.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 9\u00a0months ago",
+      "content": "Rajuuu\n\t\t\t\n\n\n\t\t\t3\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "The above link does mention about shard ing benefits but only about partition tables.\nA is correct.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The above link does mention about shard ing benefits but only about partition tables.\nA is correct.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables provides that info you are looking for. Shortly, partitioning performs better than sharding (PREFIX_yymmdd). and it is easy and supported that you can convert sharded tables into ingestion-time partitioned table.\nSo, B is only option and better one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables provides that info you are looking for. Shortly, partitioning performs better than sharding (PREFIX_yymmdd). and it is easy and supported that you can convert sharded tables into ingestion-time partitioned table.\nSo, B is only option and better one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 1\u00a0month ago",
+      "content": "Tanzu\n\t\t\t\n\n\n\t\t\t2\u00a0years, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables provides that info you are looking for. Shortly, partitioning performs better than sharding (PREFIX_yymmdd). and it is easy and supported that you can convert sharded tables into ingestion-time partitioned table.\nSo, B is only option and better one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables provides that info you are looking for. Shortly, partitioning performs better than sharding (PREFIX_yymmdd). and it is easy and supported that you can convert sharded tables into ingestion-time partitioned table.\nSo, B is only option and better one.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "The question mentions tables are sharded. So B is more appropriate answer I think.\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#convert-date-sharded-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "vholti\n\t\t\t\n\n\n\t\t\t2\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The question mentions tables are sharded. So B is more appropriate answer I think.\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#convert-date-sharded-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The question mentions tables are sharded. So B is more appropriate answer I think.\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#convert-date-sharded-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "keyword is single",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "g2000\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "keyword is single",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "keyword is single",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 6 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "you are right.\n\nPartitioning versus sharding\nTable sharding is the practice of storing data in multiple tables, using a naming prefix such as [PREFIX]_YYYYMMDD.\n\nPartitioning is recommended over table sharding, because partitioned tables perform better. With sharded tables, BigQuery must maintain a copy of the schema and metadata for each table. BigQuery might also need to verify permissions for each queried table. This practice also adds to query overhead and affects query performance.\n\nIf you previously created date-sharded tables, you can convert them into an ingestion-time partitioned table.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "you are right.\n\nPartitioning versus sharding\nTable sharding is the practice of storing data in multiple tables, using a naming prefix such as [PREFIX]_YYYYMMDD.\n\nPartitioning is recommended over table sharding, because partitioned tables perform better. With sharded tables, BigQuery must maintain a copy of the schema and metadata for each table. BigQuery might also need to verify permissions for each queried table. This practice also adds to query overhead and affects query performance.\n\nIf you previously created date-sharded tables, you can convert them into an ingestion-time partitioned table.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 6\u00a0months ago",
+      "content": "Chelseajcole\n\t\t\t\n\n\n\t\t\t2\u00a0years, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "you are right.\n\nPartitioning versus sharding\nTable sharding is the practice of storing data in multiple tables, using a naming prefix such as [PREFIX]_YYYYMMDD.\n\nPartitioning is recommended over table sharding, because partitioned tables perform better. With sharded tables, BigQuery must maintain a copy of the schema and metadata for each table. BigQuery might also need to verify permissions for each queried table. This practice also adds to query overhead and affects query performance.\n\nIf you previously created date-sharded tables, you can convert them into an ingestion-time partitioned table.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "you are right.\n\nPartitioning versus sharding\nTable sharding is the practice of storing data in multiple tables, using a naming prefix such as [PREFIX]_YYYYMMDD.\n\nPartitioning is recommended over table sharding, because partitioned tables perform better. With sharded tables, BigQuery must maintain a copy of the schema and metadata for each table. BigQuery might also need to verify permissions for each queried table. This practice also adds to query overhead and affects query performance.\n\nIf you previously created date-sharded tables, you can convert them into an ingestion-time partitioned table.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 12 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "Answer: B\nDescription: Google says that when you have multiple wildcard tables, best option is to shard it into single partitioned table. Time and cost efficient",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years ago",
+      "content": "[Removed]\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 7\u00a0months ago",
+      "content": "Answer: B\nDescription: Google says that when you have multiple wildcard tables, best option is to shard it into single partitioned table. Time and cost efficient",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: B\nDescription: Google says that when you have multiple wildcard tables, best option is to shard it into single partitioned table. Time and cost efficient",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 26 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 7\u00a0months ago",
+      "content": "Can you please share the reference?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 7\u00a0months ago",
+      "content": "Can you please share the reference?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 7\u00a0months ago",
+      "content": "lgdantas\n\t\t\t\n\n\n\t\t\t3\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "Can you please share the reference?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Can you please share the reference?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 7\u00a0months ago",
+      "content": "Tumri\n\t\t\t\n\n\n\t\t\t2\u00a0years, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 7 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months ago",
+      "content": "Sharded tables, like LOGS_yyyymmdd, are useful for managing data, but querying across a long date range with table wildcards can lead to inefficiencies and exceed the 1,000 table limit in BigQuery. Instead of using multiple sharded tables, you should consider converting these into a partitioned table.\n\nA partitioned table allows you to store all the log data in a single table, but logically divides the data into partitions (e.g., by date). This way, you can efficiently query data across long date ranges without hitting the 1,000 table limit.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0months ago",
+      "content": "jatinbhatia2055\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Sharded tables, like LOGS_yyyymmdd, are useful for managing data, but querying across a long date range with table wildcards can lead to inefficiencies and exceed the 1,000 table limit in BigQuery. Instead of using multiple sharded tables, you should consider converting these into a partitioned table.\n\nA partitioned table allows you to store all the log data in a single table, but logically divides the data into partitions (e.g., by date). This way, you can efficiently query data across long date ranges without hitting the 1,000 table limit.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Sharded tables, like LOGS_yyyymmdd, are useful for managing data, but querying across a long date range with table wildcards can lead to inefficiencies and exceed the 1,000 table limit in BigQuery. Instead of using multiple sharded tables, you should consider converting these into a partitioned table.\n\nA partitioned table allows you to store all the log data in a single table, but logically divides the data into partitions (e.g., by date). This way, you can efficiently query data across long date ranges without hitting the 1,000 table limit.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 2\u00a0weeks ago",
+      "content": "gpt: Thank you for your feedback and additional information. You are correct that partitioned tables have a limit of 4,000 partitions, so partitioning tables by date could potentially run into this limit in the future. In this case, option B, converting sharded tables into a single partitioned table, could be a reasonable solution to avoid exceeding the maximum number of tables in BigQuery.\n\nAs you mentioned, sharded tables require additional metadata and permissions verification, which can impact query performance. Converting sharded tables into a single partitioned table can improve performance and reduce query overhead.\n\nTherefore, based on the information provided, option B seems to be the most appropriate solution for avoiding the limit of 1,000 tables in BigQuery and optimizing query performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 2\u00a0weeks ago",
+      "content": "Oleksandr0501\n\t\t\t\n\n\n\t\t\t11\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "gpt: Thank you for your feedback and additional information. You are correct that partitioned tables have a limit of 4,000 partitions, so partitioning tables by date could potentially run into this limit in the future. In this case, option B, converting sharded tables into a single partitioned table, could be a reasonable solution to avoid exceeding the maximum number of tables in BigQuery.\n\nAs you mentioned, sharded tables require additional metadata and permissions verification, which can impact query performance. Converting sharded tables into a single partitioned table can improve performance and reduce query overhead.\n\nTherefore, based on the information provided, option B seems to be the most appropriate solution for avoiding the limit of 1,000 tables in BigQuery and optimizing query performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "gpt: Thank you for your feedback and additional information. You are correct that partitioned tables have a limit of 4,000 partitions, so partitioning tables by date could potentially run into this limit in the future. In this case, option B, converting sharded tables into a single partitioned table, could be a reasonable solution to avoid exceeding the maximum number of tables in BigQuery.\n\nAs you mentioned, sharded tables require additional metadata and permissions verification, which can impact query performance. Converting sharded tables into a single partitioned table can improve performance and reduce query overhead.\n\nTherefore, based on the information provided, option B seems to be the most appropriate solution for avoiding the limit of 1,000 tables in BigQuery and optimizing query performance.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "The question seems pretty badly written. One important thing to remember is that partitioned tables also have a limit of 4000 partitions (https://cloud.google.com/bigquery/docs/partitioned-tables#ingestion_time), so moving everything to one table would just delay the problem. However, option A is not clear on how it will be done. One table per year with daily partitions? Best solution as no limit will be reached. One table per day? Then we have the same 1000 tables problem.\nAll things considered I'll stick to B, simply because the problem will definitely be solved for the next few years, so I'd say it's a reasonable solution.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "luks_skywalker\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The question seems pretty badly written. One important thing to remember is that partitioned tables also have a limit of 4000 partitions (https://cloud.google.com/bigquery/docs/partitioned-tables#ingestion_time), so moving everything to one table would just delay the problem. However, option A is not clear on how it will be done. One table per year with daily partitions? Best solution as no limit will be reached. One table per day? Then we have the same 1000 tables problem.\nAll things considered I'll stick to B, simply because the problem will definitely be solved for the next few years, so I'd say it's a reasonable solution.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The question seems pretty badly written. One important thing to remember is that partitioned tables also have a limit of 4000 partitions (https://cloud.google.com/bigquery/docs/partitioned-tables#ingestion_time), so moving everything to one table would just delay the problem. However, option A is not clear on how it will be done. One table per year with daily partitions? Best solution as no limit will be reached. One table per day? Then we have the same 1000 tables problem.\nAll things considered I'll stick to B, simply because the problem will definitely be solved for the next few years, so I'd say it's a reasonable solution.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Answer is B.\nTable sharding is the practice of storing data in multiple tables, using a naming prefix such as [PREFIX]_YYYYMMDD.\nPartitioning is recommended over table sharding, because partitioned tables perform better. With sharded tables, BigQuery must maintain a copy of the schema and metadata for each table. BigQuery might also need to verify permissions for each queried table. This practice also adds to query overhead and affects query performance.\nIn answer A. we still are creating tableS (even though partioned). So we still facing the issue of max 1000 tables. In B. we have only ONE table (partioned)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "PolyMoe\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is B.\nTable sharding is the practice of storing data in multiple tables, using a naming prefix such as [PREFIX]_YYYYMMDD.\nPartitioning is recommended over table sharding, because partitioned tables perform better. With sharded tables, BigQuery must maintain a copy of the schema and metadata for each table. BigQuery might also need to verify permissions for each queried table. This practice also adds to query overhead and affects query performance.\nIn answer A. we still are creating tableS (even though partioned). So we still facing the issue of max 1000 tables. In B. we have only ONE table (partioned)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is B.\nTable sharding is the practice of storing data in multiple tables, using a naming prefix such as [PREFIX]_YYYYMMDD.\nPartitioning is recommended over table sharding, because partitioned tables perform better. With sharded tables, BigQuery must maintain a copy of the schema and metadata for each table. BigQuery might also need to verify permissions for each queried table. This practice also adds to query overhead and affects query performance.\nIn answer A. we still are creating tableS (even though partioned). So we still facing the issue of max 1000 tables. In B. we have only ONE table (partioned)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Why not A?\nBy converting all daily log tables into date-partitioned tables, you can take advantage of partition pruning to limit the number of tables that need to be scanned during a query. Partition pruning allows BigQuery to skip scanning partitions that are not within the date range specified in the query, thus reducing the number of tables that need to be scanned and can help to avoid reaching the 1,000 table limit.\nA Seems like the correct answer but I can be wrong...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "samdhimal\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not A?\nBy converting all daily log tables into date-partitioned tables, you can take advantage of partition pruning to limit the number of tables that need to be scanned during a query. Partition pruning allows BigQuery to skip scanning partitions that are not within the date range specified in the query, thus reducing the number of tables that need to be scanned and can help to avoid reaching the 1,000 table limit.\nA Seems like the correct answer but I can be wrong...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not A?\nBy converting all daily log tables into date-partitioned tables, you can take advantage of partition pruning to limit the number of tables that need to be scanned during a query. Partition pruning allows BigQuery to skip scanning partitions that are not within the date range specified in the query, thus reducing the number of tables that need to be scanned and can help to avoid reaching the 1,000 table limit.\nA Seems like the correct answer but I can be wrong...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "B. Convert the sharded tables into a single partitioned table\nIt was a sharded Table (format is the HINT here); converting to partition table is the option.\nAlso as per GCP its recommended to use Partition over Sharding",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "RoshanAshraf\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Convert the sharded tables into a single partitioned table\nIt was a sharded Table (format is the HINT here); converting to partition table is the option.\nAlso as per GCP its recommended to use Partition over Sharding",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Convert the sharded tables into a single partitioned table\nIt was a sharded Table (format is the HINT here); converting to partition table is the option.\nAlso as per GCP its recommended to use Partition over Sharding",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "I chose option A. From all the comments I have seen, there are various things that are misunderstood.\n1. Option A is a single table with multiple shards! Google does recommend to use partition rather than shard as it has a better performance (https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard)\n2. Option B is a single table with single partition! Single partition is a no for large table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "korntewin\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I chose option A. From all the comments I have seen, there are various things that are misunderstood.\n1. Option A is a single table with multiple shards! Google does recommend to use partition rather than shard as it has a better performance (https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard)\n2. Option B is a single table with single partition! Single partition is a no for large table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I chose option A. From all the comments I have seen, there are various things that are misunderstood.\n1. Option A is a single table with multiple shards! Google does recommend to use partition rather than shard as it has a better performance (https://cloud.google.com/bigquery/docs/partitioned-tables#dt_partition_shard)\n2. Option B is a single table with single partition! Single partition is a no for large table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "DipT\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/bigquery/docs/partitioned-tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option A - already doing same loading data in separate table daily and reached 1000 table limit. \nOption B - Use wild card to query the data\nOption C & D - make no sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "DGames\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A - already doing same loading data in separate table daily and reached 1000 table limit. \nOption B - Use wild card to query the data\nOption C & D - make no sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A - already doing same loading data in separate table daily and reached 1000 table limit. \nOption B - Use wild card to query the data\nOption C & D - make no sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "its B.\nA - Even if you have 100+ partitioned tables, you still have the limit of less than 1000 tables. So this doesn't work for this problem.\nC It's a no sense. Cache its 24h for every table that has been query in the last 24 and has no changes. Also, cache is not support with wildcard multiple tables.\nD Will not work because it's a recursive issue. You still will have 100+ tables, beam query\nB will work, you materialize in only one table, so will be working perfectly.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "odacir\n\t\t\t\n\n\n\t\t\t1\u00a0year, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "its B.\nA - Even if you have 100+ partitioned tables, you still have the limit of less than 1000 tables. So this doesn't work for this problem.\nC It's a no sense. Cache its 24h for every table that has been query in the last 24 and has no changes. Also, cache is not support with wildcard multiple tables.\nD Will not work because it's a recursive issue. You still will have 100+ tables, beam query\nB will work, you materialize in only one table, so will be working perfectly.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "its B.\nA - Even if you have 100+ partitioned tables, you still have the limit of less than 1000 tables. So this doesn't work for this problem.\nC It's a no sense. Cache its 24h for every table that has been query in the last 24 and has no changes. Also, cache is not support with wildcard multiple tables.\nD Will not work because it's a recursive issue. You still will have 100+ tables, beam query\nB will work, you materialize in only one table, so will be working perfectly.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "Convert MANY sharded tables into a single ONE  (partitioned) table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "Nirca\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Convert MANY sharded tables into a single ONE  (partitioned) table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Convert MANY sharded tables into a single ONE  (partitioned) table",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "selecting for daily/monthly data from one single partition will be very expensive. I think A is the best answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "rrr000\n\t\t\t\n\n\n\t\t\t1\u00a0year, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "selecting for daily/monthly data from one single partition will be very expensive. I think A is the best answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "selecting for daily/monthly data from one single partition will be very expensive. I think A is the best answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "C'mon, how much time are you going to take to partition every single table you have? second point and the most important, you have a table for every SINGLE DAY \"LOGS_YYYYMMDD\" partitioning every table will end on scanning all the records of each table when you query them by date ranges using the wildcards, there will be no difference on time-partitioning each table versus consuming them as described.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 9\u00a0months ago",
+      "content": "Preemptible_cerebrus\n\t\t\t\n\n\n\t\t\t1\u00a0year, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C'mon, how much time are you going to take to partition every single table you have? second point and the most important, you have a table for every SINGLE DAY \"LOGS_YYYYMMDD\" partitioning every table will end on scanning all the records of each table when you query them by date ranges using the wildcards, there will be no difference on time-partitioning each table versus consuming them as described.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C'mon, how much time are you going to take to partition every single table you have? second point and the most important, you have a table for every SINGLE DAY \"LOGS_YYYYMMDD\" partitioning every table will end on scanning all the records of each table when you query them by date ranges using the wildcards, there will be no difference on time-partitioning each table versus consuming them as described.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "If you follow option A, you will end up with the same amount of tables, e.g 1500 tables, though they will all be partitioned, which is not helpful.\nOption B takes all the sharded tables and makes one large partitioned table.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 10\u00a0months ago",
+      "content": "AmirN\n\t\t\t\n\n\n\t\t\t1\u00a0year, 10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "If you follow option A, you will end up with the same amount of tables, e.g 1500 tables, though they will all be partitioned, which is not helpful.\nOption B takes all the sharded tables and makes one large partitioned table.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If you follow option A, you will end up with the same amount of tables, e.g 1500 tables, though they will all be partitioned, which is not helpful.\nOption B takes all the sharded tables and makes one large partitioned table.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Partitions are not tables. The issue is not performance. It is the limit imposed by bq regarding how many tables you can query.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "Partitions are not tables. The issue is not performance. It is the limit imposed by bq regarding how many tables you can query.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "rrr000\n\t\t\t\n\n\n\t\t\t1\u00a0year, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Partitions are not tables. The issue is not performance. It is the limit imposed by bq regarding how many tables you can query.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Partitions are not tables. The issue is not performance. It is the limit imposed by bq regarding how many tables you can query.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "It's B\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#converting_date-sharded_tables_into_ingestion-time_partitioned_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "mihaioff\n\t\t\t\n\n\n\t\t\t1\u00a0year, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It's B\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#converting_date-sharded_tables_into_ingestion-time_partitioned_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "It's B\nhttps://cloud.google.com/bigquery/docs/creating-partitioned-tables#converting_date-sharded_tables_into_ingestion-time_partitioned_tables",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

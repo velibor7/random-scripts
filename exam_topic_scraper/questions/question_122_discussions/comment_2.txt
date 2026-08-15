@@ -1,0 +1,86 @@
+COMMENT #2 FOR QUESTION 122
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 122
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You decided to use Cloud Datastore to ingest vehicle telemetry data in real time. You want to build a storage system that will account for the long-term data growth, while keeping the costs low. You also want to create snapshots of the data periodically, so that you can make a point-in-time (PIT) recovery, or clone a copy of the data for Cloud Datastore in a different environment. You want to archive these snapshots for a long time. Which two methods can accomplish this?(Choose two.)
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Use managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class.
+										
+
+
+													B.
+												
+											
+											Use managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export.
+										
+
+
+													C.
+												
+											
+											Use managed export, and then import the data into a BigQuery table created just for that export, and delete temporary export files.
+										
+
+
+													D.
+												
+											
+											Write an application that uses Cloud Datastore client libraries to read all the entities. Treat each entity as a BigQuery table row via BigQuery streaming insert. Assign an export timestamp for each export, and attach it as an extra column for each row. Make sure that the BigQuery table is partitioned using the export timestamp column.
+										
+
+
+													E.
+												
+											
+											Write an application that uses Cloud Datastore client libraries to read all the entities. Format the exported data into a JSON file. Apply compression before storing the data in Cloud Source Repositories.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+AB
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 17, 2020, 12:49 p.m.
+============================================================

@@ -1,0 +1,517 @@
+{
+  "question": "A DLT pipeline includes the following streaming tables:\u2022\traw_iot ingests raw device measurement data from a heart rate tracking device.\u2022\tbpm_stats incrementally computes user statistics based on BPM measurements from raw_iot.How can the data engineer configure this pipeline to be able to retain manually deleted or updated records in the raw_iot table, while recomputing the downstream table bpm_stats table when a pipeline update is run?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the pipelines.reset.allowed property to false on raw_iot\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the skipChangeCommits flag to true on raw_iot\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the pipelines.reset.allowed property to false on bpm_stats\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the skipChangeCommits flag to true on bpm_stats\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Certified Data Engineer Professional topic 1 question 148 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tDatabricks's\n\t\t\t\t\t\tCertified Data Engineer Professional\n\n\t\t\t\t\t\t\tQuestion #: 148\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Certified Data Engineer Professional Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tA DLT pipeline includes the following streaming tables:\u2022\traw_iot ingests raw device measurement data from a heart rate tracking device.\u2022\tbpm_stats incrementally computes user statistics based on BPM measurements from raw_iot.How can the data engineer configure this pipeline to be able to retain manually deleted or updated records in the raw_iot table, while recomputing the downstream table bpm_stats table when a pipeline update is run?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the pipelines.reset.allowed property to false on raw_iot\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the skipChangeCommits flag to true on raw_iot\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the pipelines.reset.allowed property to false on bpm_stats\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the skipChangeCommits flag to true on bpm_stats\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nB\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tMDWPartners\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMay 29, 2024, 7:42 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tDatabricks's\n\t\t\t\t\t\tCertified Data Engineer Professional\n\n\t\t\t\t\t\t\tQuestion #: 148\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Certified Data Engineer Professional Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tMDWPartners\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMay 29, 2024, 7:42 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0day, 7\u00a0hours ago",
+      "content": "The purpuse of it is to take into account changees made manually in the raw_iot table and propagate them to the downstream tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0day, 7\u00a0hours ago",
+      "content": "The purpuse of it is to take into account changees made manually in the raw_iot table and propagate them to the downstream tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0day, 7\u00a0hours ago",
+      "content": "The purpuse of it is to take into account changees made manually in the raw_iot table and propagate them to the downstream tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0day, 7\u00a0hours ago",
+      "content": "The purpuse of it is to take into account changees made manually in the raw_iot table and propagate them to the downstream tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0day, 7\u00a0hours ago",
+      "content": "The purpuse of it is to take into account changees made manually in the raw_iot table and propagate them to the downstream tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0day, 7\u00a0hours ago",
+      "content": "teowis\n\t\t\t\n\n\n\t\t\t1\u00a0day, 7\u00a0hours ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The purpuse of it is to take into account changees made manually in the raw_iot table and propagate them to the downstream tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The purpuse of it is to take into account changees made manually in the raw_iot table and propagate them to the downstream tables.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "Answer is B.\n\nIgnore updates and deletes - https://docs.databricks.com/en/structured-streaming/delta-lake.html#ignore-updates-and-deletes\n\nStructured Streaming does not handle input that is not an append and throws an exception if any modifications occur on the table being used as a source. There are two main strategies for dealing with changes that cannot be automatically propagated downstream:\n\nYou can delete the output and checkpoint and restart the stream from the beginning.\n\nYou can set either of these two options:\n\nignoreDeletes: ignore transactions that delete data at partition boundaries.\n\nskipChangeCommits: ignore transactions that delete or modify existing records. skipChangeCommits subsumes ignoreDeletes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 1\u00a0week ago",
+      "content": "Sriramiyer92\n\t\t\t\n\n\n\t\t\t3\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is B.\n\nIgnore updates and deletes - https://docs.databricks.com/en/structured-streaming/delta-lake.html#ignore-updates-and-deletes\n\nStructured Streaming does not handle input that is not an append and throws an exception if any modifications occur on the table being used as a source. There are two main strategies for dealing with changes that cannot be automatically propagated downstream:\n\nYou can delete the output and checkpoint and restart the stream from the beginning.\n\nYou can set either of these two options:\n\nignoreDeletes: ignore transactions that delete data at partition boundaries.\n\nskipChangeCommits: ignore transactions that delete or modify existing records. skipChangeCommits subsumes ignoreDeletes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is B.\n\nIgnore updates and deletes - https://docs.databricks.com/en/structured-streaming/delta-lake.html#ignore-updates-and-deletes\n\nStructured Streaming does not handle input that is not an append and throws an exception if any modifications occur on the table being used as a source. There are two main strategies for dealing with changes that cannot be automatically propagated downstream:\n\nYou can delete the output and checkpoint and restart the stream from the beginning.\n\nYou can set either of these two options:\n\nignoreDeletes: ignore transactions that delete data at partition boundaries.\n\nskipChangeCommits: ignore transactions that delete or modify existing records. skipChangeCommits subsumes ignoreDeletes.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 3\u00a0weeks ago",
+      "content": "Setting pipelines.reset.allowed property to false on raw_iot prevents its full refresh/reset being done from its source, meaning it preserves all other modifications done for it additionally outside of its source streaming process. If we set skipChangeCommits for it or  the target table transactions that delete or modify records on the table are ignored",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 3\u00a0weeks ago",
+      "content": "m79590530\n\t\t\t\n\n\n\t\t\t5\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Setting pipelines.reset.allowed property to false on raw_iot prevents its full refresh/reset being done from its source, meaning it preserves all other modifications done for it additionally outside of its source streaming process. If we set skipChangeCommits for it or  the target table transactions that delete or modify records on the table are ignored",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Setting pipelines.reset.allowed property to false on raw_iot prevents its full refresh/reset being done from its source, meaning it preserves all other modifications done for it additionally outside of its source streaming process. If we set skipChangeCommits for it or  the target table transactions that delete or modify records on the table are ignored",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "B. Set the skipChangeCommits flag to true on raw_iot\n\nLet's break down the requirements and explain why this is the best solution:\n\nRetain manually deleted or updated records in raw_iot: The skipChangeCommits flag, when set to true, tells Delta Live Tables (DLT) to ignore any manual changes (updates or deletes) made to the table outside of the pipeline. This means that even if records are manually deleted or updated in the raw_iot table, these changes won't be reflected in the table when the pipeline runs again.\nRecompute downstream bpm_stats table: By default, DLT will recompute downstream tables when their upstream dependencies change. Since bpm_stats is based on raw_iot, it will naturally be recomputed when the pipeline updates, without any special configuration.\nWhy the other options are not correct:\n\nA. Setting pipelines.reset.allowed to false on raw_iot would prevent the table from being reset, but it wouldn't address the requirement to retain manually deleted or updated records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "pk07\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Set the skipChangeCommits flag to true on raw_iot\n\nLet's break down the requirements and explain why this is the best solution:\n\nRetain manually deleted or updated records in raw_iot: The skipChangeCommits flag, when set to true, tells Delta Live Tables (DLT) to ignore any manual changes (updates or deletes) made to the table outside of the pipeline. This means that even if records are manually deleted or updated in the raw_iot table, these changes won't be reflected in the table when the pipeline runs again.\nRecompute downstream bpm_stats table: By default, DLT will recompute downstream tables when their upstream dependencies change. Since bpm_stats is based on raw_iot, it will naturally be recomputed when the pipeline updates, without any special configuration.\nWhy the other options are not correct:\n\nA. Setting pipelines.reset.allowed to false on raw_iot would prevent the table from being reset, but it wouldn't address the requirement to retain manually deleted or updated records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Set the skipChangeCommits flag to true on raw_iot\n\nLet's break down the requirements and explain why this is the best solution:\n\nRetain manually deleted or updated records in raw_iot: The skipChangeCommits flag, when set to true, tells Delta Live Tables (DLT) to ignore any manual changes (updates or deletes) made to the table outside of the pipeline. This means that even if records are manually deleted or updated in the raw_iot table, these changes won't be reflected in the table when the pipeline runs again.\nRecompute downstream bpm_stats table: By default, DLT will recompute downstream tables when their upstream dependencies change. Since bpm_stats is based on raw_iot, it will naturally be recomputed when the pipeline updates, without any special configuration.\nWhy the other options are not correct:\n\nA. Setting pipelines.reset.allowed to false on raw_iot would prevent the table from being reset, but it wouldn't address the requirement to retain manually deleted or updated records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "B. Set the skipChangeCommits flag to true on raw_iot\n\nLet's break down the requirements and explain why this is the best solution:\n\nRetain manually deleted or updated records in raw_iot: The skipChangeCommits flag, when set to true, tells Delta Live Tables (DLT) to ignore any manual changes (updates or deletes) made to the table outside of the pipeline. This means that even if records are manually deleted or updated in the raw_iot table, these changes won't be reflected in the table when the pipeline runs again.\nRecompute downstream bpm_stats table: By default, DLT will recompute downstream tables when their upstream dependencies change. Since bpm_stats is based on raw_iot, it will naturally be recomputed when the pipeline updates, without any special configuration.\nWhy the other options are not correct:\n\nA. Setting pipelines.reset.allowed to false on raw_iot would prevent the table from being reset, but it wouldn't address the requirement to retain manually deleted or updated records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "6\u00a0months, 2\u00a0weeks ago",
+      "content": "pk07\n\t\t\t\n\n\n\t\t\t6\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Set the skipChangeCommits flag to true on raw_iot\n\nLet's break down the requirements and explain why this is the best solution:\n\nRetain manually deleted or updated records in raw_iot: The skipChangeCommits flag, when set to true, tells Delta Live Tables (DLT) to ignore any manual changes (updates or deletes) made to the table outside of the pipeline. This means that even if records are manually deleted or updated in the raw_iot table, these changes won't be reflected in the table when the pipeline runs again.\nRecompute downstream bpm_stats table: By default, DLT will recompute downstream tables when their upstream dependencies change. Since bpm_stats is based on raw_iot, it will naturally be recomputed when the pipeline updates, without any special configuration.\nWhy the other options are not correct:\n\nA. Setting pipelines.reset.allowed to false on raw_iot would prevent the table from being reset, but it wouldn't address the requirement to retain manually deleted or updated records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Set the skipChangeCommits flag to true on raw_iot\n\nLet's break down the requirements and explain why this is the best solution:\n\nRetain manually deleted or updated records in raw_iot: The skipChangeCommits flag, when set to true, tells Delta Live Tables (DLT) to ignore any manual changes (updates or deletes) made to the table outside of the pipeline. This means that even if records are manually deleted or updated in the raw_iot table, these changes won't be reflected in the table when the pipeline runs again.\nRecompute downstream bpm_stats table: By default, DLT will recompute downstream tables when their upstream dependencies change. Since bpm_stats is based on raw_iot, it will naturally be recomputed when the pipeline updates, without any special configuration.\nWhy the other options are not correct:\n\nA. Setting pipelines.reset.allowed to false on raw_iot would prevent the table from being reset, but it wouldn't address the requirement to retain manually deleted or updated records.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "answer A\nThis property, when set to false, ensures that the table will not be reset during pipeline updates, thus preserving manually deleted or updated records. This is crucial for the raw_iot table to retain the manual modifications.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "nikoliko\n\t\t\t\n\n\n\t\t\t9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "answer A\nThis property, when set to false, ensures that the table will not be reset during pipeline updates, thus preserving manually deleted or updated records. This is crucial for the raw_iot table to retain the manual modifications.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "answer A\nThis property, when set to false, ensures that the table will not be reset during pipeline updates, thus preserving manually deleted or updated records. This is crucial for the raw_iot table to retain the manual modifications.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "Set the pipelines.reset.allowed property to false on raw_iot",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months ago",
+      "content": "c00ccb7\n\t\t\t\n\n\n\t\t\t9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Set the pipelines.reset.allowed property to false on raw_iot",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Set the pipelines.reset.allowed property to false on raw_iot",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 1\u00a0week ago",
+      "content": "Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 1\u00a0week ago",
+      "content": "Deb9753\n\t\t\t\n\n\n\t\t\t10\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: B",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

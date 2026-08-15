@@ -1,0 +1,9 @@
+COMMENT #85 FOR QUESTION 263
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+From the Dataflow documentation: "There are a few cases in your pipeline where you may want to prevent the Dataflow service from performing fusion optimizations. These are cases in which the Dataflow service might incorrectly guess the optimal way to fuse operations in the pipeline, which could limit the Dataflow service's ability to make use of all available workers.
+You can insert a Reshuffle step. Reshuffle prevents fusion, checkpoints the data, and performs deduplication of records. Reshuffle is supported by Dataflow even though it is marked deprecated in the Apache Beam documentation."
+============================================================

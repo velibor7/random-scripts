@@ -1,0 +1,8 @@
+COMMENT #62 FOR QUESTION 124575
+============================================================
+Author: Unknown
+Date: 3 months, 2 weeks ago
+Votes: 0
+----------------------------------------
+Given the requirement to avoid shuffling, Option A is the most suitable choice. By setting spark.sql.files.maxPartitionBytes to 512 MB, you influence the partitioning during the read phase, which can help in achieving the desired file sizes during the write operation. However, it's important to note that this approach may not guarantee exact file sizes, and some variability may occur. If achieving precise file sizes is critical and shuffling is permissible, Option D would be the preferred strategy.
+============================================================

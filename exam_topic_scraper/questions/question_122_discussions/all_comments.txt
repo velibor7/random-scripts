@@ -1,0 +1,1732 @@
+ALL COMMENTS FOR QUESTION 122
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 122 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 122
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You decided to use Cloud Datastore to ingest vehicle telemetry data in real time. You want to build a storage system that will account for the long-term data growth, while keeping the costs low. You also want to create snapshots of the data periodically, so that you can make a point-in-time (PIT) recovery, or clone a copy of the data for Cloud Datastore in a different environment. You want to archive these snapshots for a long time. Which two methods can accomplish this?(Choose two.)
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Use managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class.
+										
+
+
+													B.
+												
+											
+											Use managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export.
+										
+
+
+													C.
+												
+											
+											Use managed export, and then import the data into a BigQuery table created just for that export, and delete temporary export files.
+										
+
+
+													D.
+												
+											
+											Write an application that uses Cloud Datastore client libraries to read all the entities. Treat each entity as a BigQuery table row via BigQuery streaming insert. Assign an export timestamp for each export, and attach it as an extra column for each row. Make sure that the BigQuery table is partitioned using the export timestamp column.
+										
+
+
+													E.
+												
+											
+											Write an application that uses Cloud Datastore client libraries to read all the entities. Format the exported data into a JSON file. Apply compression before storing the data in Cloud Source Repositories.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+AB
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 17, 2020, 12:49 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 122
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 17, 2020, 12:49 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+A,B
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+A,B
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+A,B
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+A,B
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+A,B
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+Ganshank
+			
+
+
+				Highly Voted 
+
+
+			4 years, 5 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+A,B
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A,B
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 38 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+"while keeping the costs"
+
+should be A,D
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+"while keeping the costs"
+
+should be A,D
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+salsabilsf
+			
+
+
+			3 years, 5 months ago
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+"while keeping the costs"
+
+should be A,D
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+"while keeping the costs"
+
+should be A,D
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Big query streaming inserts ARE NOT cheap
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Big query streaming inserts ARE NOT cheap
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+MrCastro
+			
+
+
+			3 years, 2 months ago
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Big query streaming inserts ARE NOT cheap
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Big query streaming inserts ARE NOT cheap
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 9 times
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+If you use B , not D , how can we do "point in time" recovery? is it possible?
+Point in time recovery needs export along with timestamp, so that we can recover for a particular timestamp.
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+If you use B , not D , how can we do "point in time" recovery? is it possible?
+Point in time recovery needs export along with timestamp, so that we can recover for a particular timestamp.
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+hellofrnds
+			
+
+
+			3 years ago
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+If you use B , not D , how can we do "point in time" recovery? is it possible?
+Point in time recovery needs export along with timestamp, so that we can recover for a particular timestamp.
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+If you use B , not D , how can we do "point in time" recovery? is it possible?
+Point in time recovery needs export along with timestamp, so that we can recover for a particular timestamp.
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+AC
+https://cloud.google.com/datastore/docs/export-import-entities
+C: To import only a subset of entities or to import data into BigQuery, you must specify an entity filter in your export.
+B: Not correct since you want to store in a different environment than Datastore. Tho this statment is true:  Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project.
+A is correct
+Billing and pricing for managed exports and imports in Datastore
+Output files stored in Cloud Storage count towards your Cloud Storage data storage costs.
+Steps to Export all the entities
+1. Go to the Datastore Entities Export page in the Google Cloud Console.
+2. Go to the Datastore Export page
+2. Set the Namespace field to All Namespaces, and set the Kind field to All Kinds.
+3. Below Destination, enter the name of your "Cloud Storage bucket".
+4. Click Export.
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+atnafu2020
+			
+
+
+				Highly Voted 
+
+
+			4 years, 1 month ago
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+AC
+https://cloud.google.com/datastore/docs/export-import-entities
+C: To import only a subset of entities or to import data into BigQuery, you must specify an entity filter in your export.
+B: Not correct since you want to store in a different environment than Datastore. Tho this statment is true:  Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project.
+A is correct
+Billing and pricing for managed exports and imports in Datastore
+Output files stored in Cloud Storage count towards your Cloud Storage data storage costs.
+Steps to Export all the entities
+1. Go to the Datastore Entities Export page in the Google Cloud Console.
+2. Go to the Datastore Export page
+2. Set the Namespace field to All Namespaces, and set the Kind field to All Kinds.
+3. Below Destination, enter the name of your "Cloud Storage bucket".
+4. Click Export.
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AC
+https://cloud.google.com/datastore/docs/export-import-entities
+C: To import only a subset of entities or to import data into BigQuery, you must specify an entity filter in your export.
+B: Not correct since you want to store in a different environment than Datastore. Tho this statment is true:  Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project.
+A is correct
+Billing and pricing for managed exports and imports in Datastore
+Output files stored in Cloud Storage count towards your Cloud Storage data storage costs.
+Steps to Export all the entities
+1. Go to the Datastore Entities Export page in the Google Cloud Console.
+2. Go to the Datastore Export page
+2. Set the Namespace field to All Namespaces, and set the Kind field to All Kinds.
+3. Below Destination, enter the name of your "Cloud Storage bucket".
+4. Click Export.
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 23 times
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+Data exported without specifying an entity filter cannot be loaded into BigQuery. This is not mentioned explicitly. Safe to assume there is no filter on the exports. So options are AB
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+Data exported without specifying an entity filter cannot be loaded into BigQuery. This is not mentioned explicitly. Safe to assume there is no filter on the exports. So options are AB
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+aparna4387
+			
+
+
+			2 years, 11 months ago
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+Data exported without specifying an entity filter cannot be loaded into BigQuery. This is not mentioned explicitly. Safe to assume there is no filter on the exports. So options are AB
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+Data exported without specifying an entity filter cannot be loaded into BigQuery. This is not mentioned explicitly. Safe to assume there is no filter on the exports. So options are AB
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+A, B is perfect
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+AzureDP900
+			
+
+
+			1 year, 9 months ago
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A, B is perfect
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A, B is perfect
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+As you've mentioned in B, does the environment meant to be a project or a resource? As, we can clone a copy of the data in a datastore even in another project!? Then, it's B. 
+
+Also, in point C they didn't mention any entity filter hence we eliminate C how can you support your own statement with a different answer?
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+tavva_prudhvi
+			
+
+
+			2 years, 6 months ago
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+As you've mentioned in B, does the environment meant to be a project or a resource? As, we can clone a copy of the data in a datastore even in another project!? Then, it's B. 
+
+Also, in point C they didn't mention any entity filter hence we eliminate C how can you support your own statement with a different answer?
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+As you've mentioned in B, does the environment meant to be a project or a resource? As, we can clone a copy of the data in a datastore even in another project!? Then, it's B. 
+
+Also, in point C they didn't mention any entity filter hence we eliminate C how can you support your own statement with a different answer?
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+C is valid because of table snapshots. Else standard time travel is valid only for 7 days
+https://cloud.google.com/bigquery/docs/table-snapshots-intro#table_snapshots
+https://cloud.google.com/bigquery/docs/time-travel#limitation
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Yiouk
+			
+
+
+			3 years, 2 months ago
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+C is valid because of table snapshots. Else standard time travel is valid only for 7 days
+https://cloud.google.com/bigquery/docs/table-snapshots-intro#table_snapshots
+https://cloud.google.com/bigquery/docs/time-travel#limitation
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C is valid because of table snapshots. Else standard time travel is valid only for 7 days
+https://cloud.google.com/bigquery/docs/table-snapshots-intro#table_snapshots
+https://cloud.google.com/bigquery/docs/time-travel#limitation
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+you wanna say invalid?
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+you wanna say invalid?
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Chelseajcole
+			
+
+
+			3 years ago
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+you wanna say invalid?
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+you wanna say invalid?
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date: 6 months, 1 week ago | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date: 6 months, 1 week ago | Votes: 0
+CGS22
+			
+
+
+				Most Recent 
+
+
+			6 months, 1 week ago
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: AB
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+AB chatgpt
+A. Use managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class:
+
+Managed export is a feature provided by Cloud Datastore to export your data.
+Storing the data in a Cloud Storage bucket, especially using Nearline or Coldline storage classes, helps keep storage costs low while allowing you to retain the snapshots for a long time.
+B. Use managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export:
+
+This method allows you to create snapshots by exporting data from Cloud Datastore (using managed export) and then importing it into a separate project under a unique namespace.
+By importing into a separate project, you can keep a copy of the data in a different environment, which is useful for point-in-time recovery or creating clones of the data.
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+kskssk
+			
+
+
+			1 year, 1 month ago
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AB chatgpt
+A. Use managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class:
+
+Managed export is a feature provided by Cloud Datastore to export your data.
+Storing the data in a Cloud Storage bucket, especially using Nearline or Coldline storage classes, helps keep storage costs low while allowing you to retain the snapshots for a long time.
+B. Use managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export:
+
+This method allows you to create snapshots by exporting data from Cloud Datastore (using managed export) and then importing it into a separate project under a unique namespace.
+By importing into a separate project, you can keep a copy of the data in a different environment, which is useful for point-in-time recovery or creating clones of the data.
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AB chatgpt
+A. Use managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class:
+
+Managed export is a feature provided by Cloud Datastore to export your data.
+Storing the data in a Cloud Storage bucket, especially using Nearline or Coldline storage classes, helps keep storage costs low while allowing you to retain the snapshots for a long time.
+B. Use managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export:
+
+This method allows you to create snapshots by exporting data from Cloud Datastore (using managed export) and then importing it into a separate project under a unique namespace.
+By importing into a separate project, you can keep a copy of the data in a different environment, which is useful for point-in-time recovery or creating clones of the data.
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+AB is the answer.
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+zellck
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AB is the answer.
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: AB
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AB is the answer.
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+A rather complicated question, of a kind I wish I won't face in the exam. My opinion:
+✅ [A] A valid and cost-effective solution satisfying the requirement for PIT recovery
+✅ [B] A valid solution but far from ideal for archiving. It satisfies the requirement part "you can … clone a copy of the data for Cloud Datastore in a different environment" (an objection to the word "namespace", I think it should be just "name")
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+NicolasN
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+A rather complicated question, of a kind I wish I won't face in the exam. My opinion:
+✅ [A] A valid and cost-effective solution satisfying the requirement for PIT recovery
+✅ [B] A valid solution but far from ideal for archiving. It satisfies the requirement part "you can … clone a copy of the data for Cloud Datastore in a different environment" (an objection to the word "namespace", I think it should be just "name")
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: AB
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A rather complicated question, of a kind I wish I won't face in the exam. My opinion:
+✅ [A] A valid and cost-effective solution satisfying the requirement for PIT recovery
+✅ [B] A valid solution but far from ideal for archiving. It satisfies the requirement part "you can … clone a copy of the data for Cloud Datastore in a different environment" (an objection to the word "namespace", I think it should be just "name")
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+❌[C] There is the limitation "Data exported without specifying an entity filter cannot be loaded into BigQuery". The entity filter for this case should contain all the kinds of entities but there is another limitation of "100 entity filter combinations". We have no knowledge of the kinds or the namespaces of the entities.
+Sources:
+🔗 https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+🔗 https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces
+❌ [D] seems a detailed candidate solution but it violates the limitation "You cannot append Datastore export data to an existing table."
+🔗 https://cloud.google.com/bigquery/docs/loading-data-cloud-datastore#appending_to_or_overwriting_a_table_with_cloud_datastore_data
+❌ [E] Cloud Source Repositories are for source code and not a suitable storage for this case.
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+❌[C] There is the limitation "Data exported without specifying an entity filter cannot be loaded into BigQuery". The entity filter for this case should contain all the kinds of entities but there is another limitation of "100 entity filter combinations". We have no knowledge of the kinds or the namespaces of the entities.
+Sources:
+🔗 https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+🔗 https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces
+❌ [D] seems a detailed candidate solution but it violates the limitation "You cannot append Datastore export data to an existing table."
+🔗 https://cloud.google.com/bigquery/docs/loading-data-cloud-datastore#appending_to_or_overwriting_a_table_with_cloud_datastore_data
+❌ [E] Cloud Source Repositories are for source code and not a suitable storage for this case.
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+NicolasN
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+❌[C] There is the limitation "Data exported without specifying an entity filter cannot be loaded into BigQuery". The entity filter for this case should contain all the kinds of entities but there is another limitation of "100 entity filter combinations". We have no knowledge of the kinds or the namespaces of the entities.
+Sources:
+🔗 https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+🔗 https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces
+❌ [D] seems a detailed candidate solution but it violates the limitation "You cannot append Datastore export data to an existing table."
+🔗 https://cloud.google.com/bigquery/docs/loading-data-cloud-datastore#appending_to_or_overwriting_a_table_with_cloud_datastore_data
+❌ [E] Cloud Source Repositories are for source code and not a suitable storage for this case.
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+❌[C] There is the limitation "Data exported without specifying an entity filter cannot be loaded into BigQuery". The entity filter for this case should contain all the kinds of entities but there is another limitation of "100 entity filter combinations". We have no knowledge of the kinds or the namespaces of the entities.
+Sources:
+🔗 https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+🔗 https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces
+❌ [D] seems a detailed candidate solution but it violates the limitation "You cannot append Datastore export data to an existing table."
+🔗 https://cloud.google.com/bigquery/docs/loading-data-cloud-datastore#appending_to_or_overwriting_a_table_with_cloud_datastore_data
+❌ [E] Cloud Source Repositories are for source code and not a suitable storage for this case.
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years ago
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: AB
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years ago
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: AB
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+The answer is nothing to do with bigquery , so you can skip what  mention to bigquery.
+
+A B is the final answer
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years ago
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The answer is nothing to do with bigquery , so you can skip what  mention to bigquery.
+
+A B is the final answer
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: AB
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The answer is nothing to do with bigquery , so you can skip what  mention to bigquery.
+
+A B is the final answer
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+A,B
+
+For those who say using BQ as archival, How can we achieve that while datastore are NO-SQL whereas BQ are SQL , will that work? also BQ are not created for achieving purposes.
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+DataEngineer_WideOps
+			
+
+
+			2 years, 2 months ago
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A,B
+
+For those who say using BQ as archival, How can we achieve that while datastore are NO-SQL whereas BQ are SQL , will that work? also BQ are not created for achieving purposes.
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A,B
+
+For those who say using BQ as archival, How can we achieve that while datastore are NO-SQL whereas BQ are SQL , will that work? also BQ are not created for achieving purposes.
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Option B is 36 times more expensive than C
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+AmirN
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B is 36 times more expensive than C
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option B is 36 times more expensive than C
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+AB. for sure streaming to BQ its quite expensive!
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+Nico1310
+			
+
+
+			2 years, 8 months ago
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AB. for sure streaming to BQ its quite expensive!
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: AB
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+AB. for sure streaming to BQ its quite expensive!
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #187
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #188
+----------------------------------------
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+A - Cloud Storage (long-term data + costs low)
+D - BigQuery (timestamp for point-in-time (PIT) recovery)
+
+COMMENT #189
+----------------------------------------
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+MaxNRG
+			
+
+
+			2 years, 9 months ago
+
+COMMENT #190
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+A - Cloud Storage (long-term data + costs low)
+D - BigQuery (timestamp for point-in-time (PIT) recovery)
+
+COMMENT #191
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: AD
+
+COMMENT #192
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A - Cloud Storage (long-term data + costs low)
+D - BigQuery (timestamp for point-in-time (PIT) recovery)
+
+COMMENT #193
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #194
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #195
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+D is wrong, BQ Streaming inserts costs are high!
+
+COMMENT #196
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+D is wrong, BQ Streaming inserts costs are high!
+
+COMMENT #197
+----------------------------------------
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+tavva_prudhvi
+			
+
+
+			2 years, 5 months ago
+
+COMMENT #198
+----------------------------------------
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+D is wrong, BQ Streaming inserts costs are high!
+
+COMMENT #199
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D is wrong, BQ Streaming inserts costs are high!
+
+COMMENT #200
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #201
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #202
+----------------------------------------
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Agreed, AB
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #203
+----------------------------------------
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Agreed, AB
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #204
+----------------------------------------
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+COMMENT #205
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Agreed, AB
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #206
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Agreed, AB
+https://cloud.google.com/datastore/docs/export-import-entities
+
+COMMENT #207
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #208
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #209
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #210
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #211
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #212
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #213
+----------------------------------------
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+Option A; Cheap storage and it is a supported method https://cloud.google.com/datastore/docs/export-import-entities
+Option B; Rationale - "Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project." <https://cloud.google.com/datastore/docs/export-import-entities>
+
+COMMENT #214
+----------------------------------------
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+medeis_jar
+			
+
+
+			2 years, 9 months ago
+
+COMMENT #215
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A; Cheap storage and it is a supported method https://cloud.google.com/datastore/docs/export-import-entities
+Option B; Rationale - "Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project." <https://cloud.google.com/datastore/docs/export-import-entities>
+
+COMMENT #216
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: AB
+
+COMMENT #217
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Option A; Cheap storage and it is a supported method https://cloud.google.com/datastore/docs/export-import-entities
+Option B; Rationale - "Data exported from one Datastore mode database can be imported into another Datastore mode database, even one in another project." <https://cloud.google.com/datastore/docs/export-import-entities>
+
+COMMENT #218
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #219
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #220
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #221
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #222
+----------------------------------------
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+Answer is A, B. 
+https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces
+
+COMMENT #223
+----------------------------------------
+Author: Unknown | Date: 2 years, 11 months ago | Votes: 0
+squishy_fishy
+			
+
+
+			2 years, 11 months ago
+
+COMMENT #224
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is A, B. 
+https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces
+
+COMMENT #225
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is A, B. 
+https://cloud.google.com/datastore/docs/export-import-entities#exporting_specific_kinds_or_namespaces
+
+COMMENT #226
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #227
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #228
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #229
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #230
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+A, D
+A: Option for storage system that will account for the long-term data growth
+D: Option for snapshots, PIT recovery, copy of the data for Cloud Datastore in a different environment and, above all, archive snapshots for a long time 
+B: not a good solution for archiving snapshots for a long time
+C: to import data into BigQuery, you must specify an entity filter 
+E: Cloud Source Repositories is for code
+One note: E --> would be my second choice if there was Cloud Storage instead of Source Repositories (typo?)
+
+COMMENT #231
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+sergio6
+			
+
+
+			3 years ago
+
+COMMENT #232
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A, D
+A: Option for storage system that will account for the long-term data growth
+D: Option for snapshots, PIT recovery, copy of the data for Cloud Datastore in a different environment and, above all, archive snapshots for a long time 
+B: not a good solution for archiving snapshots for a long time
+C: to import data into BigQuery, you must specify an entity filter 
+E: Cloud Source Repositories is for code
+One note: E --> would be my second choice if there was Cloud Storage instead of Source Repositories (typo?)
+
+COMMENT #233
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A, D
+A: Option for storage system that will account for the long-term data growth
+D: Option for snapshots, PIT recovery, copy of the data for Cloud Datastore in a different environment and, above all, archive snapshots for a long time 
+B: not a good solution for archiving snapshots for a long time
+C: to import data into BigQuery, you must specify an entity filter 
+E: Cloud Source Repositories is for code
+One note: E --> would be my second choice if there was Cloud Storage instead of Source Repositories (typo?)
+
+COMMENT #234
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #235
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #236
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #237
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #238
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Vote A B .  What’s the purpose load into bigquery?
+
+COMMENT #239
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Chelseajcole
+			
+
+
+			3 years ago
+
+COMMENT #240
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Vote A B .  What’s the purpose load into bigquery?
+
+COMMENT #241
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Vote A B .  What’s the purpose load into bigquery?
+
+COMMENT #242
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #243
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #244
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+Importing into BigQuery
+To import data from a managed export into BigQuery, see Loading Datastore export service data.
+
+Data exported without specifying an entity filter cannot be loaded into BigQuery. If you want to import data into BigQuery, your export request must include one or more kind names in the entity filter.
+
+You have to specify an entity fliter before you can load from datastore to BQ. It didn't mention that at all. So C is incorrect
+
+COMMENT #245
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+Importing into BigQuery
+To import data from a managed export into BigQuery, see Loading Datastore export service data.
+
+Data exported without specifying an entity filter cannot be loaded into BigQuery. If you want to import data into BigQuery, your export request must include one or more kind names in the entity filter.
+
+You have to specify an entity fliter before you can load from datastore to BQ. It didn't mention that at all. So C is incorrect
+
+COMMENT #246
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Chelseajcole
+			
+
+
+			3 years ago
+
+COMMENT #247
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+Importing into BigQuery
+To import data from a managed export into BigQuery, see Loading Datastore export service data.
+
+Data exported without specifying an entity filter cannot be loaded into BigQuery. If you want to import data into BigQuery, your export request must include one or more kind names in the entity filter.
+
+You have to specify an entity fliter before you can load from datastore to BQ. It didn't mention that at all. So C is incorrect
+
+COMMENT #248
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/datastore/docs/export-import-entities#import-into-bigquery
+Importing into BigQuery
+To import data from a managed export into BigQuery, see Loading Datastore export service data.
+
+Data exported without specifying an entity filter cannot be loaded into BigQuery. If you want to import data into BigQuery, your export request must include one or more kind names in the entity filter.
+
+You have to specify an entity fliter before you can load from datastore to BQ. It didn't mention that at all. So C is incorrect
+
+COMMENT #249
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #250
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #251
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #252
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #253
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #254
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #255
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #256
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

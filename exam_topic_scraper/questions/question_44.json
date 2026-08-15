@@ -1,0 +1,661 @@
+{
+  "question": "You are deploying a new storage system for your mobile application, which is a media streaming service. You decide the best fit is Google Cloud Datastore. You have entities with multiple properties, some of which can take on multiple values. For example, in the entity 'Movie' the property 'actors' and the property'tags' have multiple values but the property 'date released' does not. A typical query would ask for all movies with actor=<actorname> ordered by date_released or all movies with tag=Comedy ordered by date_released. How should you avoid a combinatorial explosion in the number of indexes?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tManually configure the index in your index config as follows: \n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tManually configure the index in your index config as follows: \n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the following in your entity options: exclude_from_indexes = 'actors, tags'\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the following in your entity options: exclude_from_indexes = 'date_published'\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 44 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 44\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are deploying a new storage system for your mobile application, which is a media streaming service. You decide the best fit is Google Cloud Datastore. You have entities with multiple properties, some of which can take on multiple values. For example, in the entity 'Movie' the property 'actors' and the property'tags' have multiple values but the property 'date released' does not. A typical query would ask for all movies with actor=<actorname> ordered by date_released or all movies with tag=Comedy ordered by date_released. How should you avoid a combinatorial explosion in the number of indexes?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tManually configure the index in your index config as follows: \n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tManually configure the index in your index config as follows: \n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the following in your entity options: exclude_from_indexes = 'actors, tags'\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSet the following in your entity options: exclude_from_indexes = 'date_published'\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAWSandeep\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 3, 2022, 1:26 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 44\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tAWSandeep\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tSept. 3, 2022, 1:26 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Correct answer is A \nRead in reference : https://cloud.google.com/datastore/docs/concepts/indexes#index_limits\nn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\n  properties:\n  - name: tags\n  - name: created\n- kind: Task\n  properties:\n  - name: collaborators\n  - name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Correct answer is A \nRead in reference : https://cloud.google.com/datastore/docs/concepts/indexes#index_limits\nn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\n  properties:\n  - name: tags\n  - name: created\n- kind: Task\n  properties:\n  - name: collaborators\n  - name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Correct answer is A \nRead in reference : https://cloud.google.com/datastore/docs/concepts/indexes#index_limits\nn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\n  properties:\n  - name: tags\n  - name: created\n- kind: Task\n  properties:\n  - name: collaborators\n  - name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Correct answer is A \nRead in reference : https://cloud.google.com/datastore/docs/concepts/indexes#index_limits\nn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\n  properties:\n  - name: tags\n  - name: created\n- kind: Task\n  properties:\n  - name: collaborators\n  - name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Correct answer is A \nRead in reference : https://cloud.google.com/datastore/docs/concepts/indexes#index_limits\nn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\n  properties:\n  - name: tags\n  - name: created\n- kind: Task\n  properties:\n  - name: collaborators\n  - name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Wasss123\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Correct answer is A \nRead in reference : https://cloud.google.com/datastore/docs/concepts/indexes#index_limits\nn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\n  properties:\n  - name: tags\n  - name: created\n- kind: Task\n  properties:\n  - name: collaborators\n  - name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Correct answer is A \nRead in reference : https://cloud.google.com/datastore/docs/concepts/indexes#index_limits\nn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\n  properties:\n  - name: tags\n  - name: created\n- kind: Task\n  properties:\n  - name: collaborators\n  - name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 7 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "you can circumvent the exploding index by manually configuring an index in your index configuration file:\n\nhttps://cloud.google.com/datastore/docs/concepts/indexes#index_limits",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "jkhong\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t9\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "you can circumvent the exploding index by manually configuring an index in your index configuration file:\n\nhttps://cloud.google.com/datastore/docs/concepts/indexes#index_limits",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "you can circumvent the exploding index by manually configuring an index in your index configuration file:\n\nhttps://cloud.google.com/datastore/docs/concepts/indexes#index_limits",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "Tempted to go with D as the syntax in Option A seems incorrect. D is still a possible answer because one of the ways to get rid of index errors is to remove the entities that are causing the index to explode. In this case its date_released and hence D appears right to me",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "Krish6488\n\t\t\t\n\n\n\t\t\t9\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Tempted to go with D as the syntax in Option A seems incorrect. D is still a possible answer because one of the ways to get rid of index errors is to remove the entities that are causing the index to explode. In this case its date_released and hence D appears right to me",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Tempted to go with D as the syntax in Option A seems incorrect. D is still a possible answer because one of the ways to get rid of index errors is to remove the entities that are causing the index to explode. In this case its date_released and hence D appears right to me",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months ago",
+      "content": "Option B & D reject because mention date_publised in question date_released is column\nOption C also not correct, I would go with option A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months ago",
+      "content": "DGames\n\t\t\t\n\n\n\t\t\t10\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B & D reject because mention date_publised in question date_released is column\nOption C also not correct, I would go with option A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option B & D reject because mention date_publised in question date_released is column\nOption C also not correct, I would go with option A.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Correct Answer D:\n\nThis is the way the DB is typically queried:\n- movies with actor=<actorname> ordered by date_released \n- movies with tag=Comedy ordered by date_released\n\nso it seems that we need indices in actor,tag and date_released for sorting. \n\n\u274c A: this would be the correct answer, however, the format is incorrect, the correct format would be '- name: date_released' correctly indented.\n\n\u274c B: This seems to be unnecessary, since typically actor and tag are not queried together. also, there is a clear indentation issue\n\n\u274c C: We don't want to ignore actor and tag, we need those indices.\n\n\u2705 D: If we leave datastore to automatically create the indices and if we specify that the 'date_released' property needs to be excluded from indices, then we would have less indices (but maybe slower queries when ordering them, but hey, how many 'comedies' there could be in the world)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Ender_H\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Correct Answer D:\n\nThis is the way the DB is typically queried:\n- movies with actor=<actorname> ordered by date_released \n- movies with tag=Comedy ordered by date_released\n\nso it seems that we need indices in actor,tag and date_released for sorting. \n\n\u274c A: this would be the correct answer, however, the format is incorrect, the correct format would be '- name: date_released' correctly indented.\n\n\u274c B: This seems to be unnecessary, since typically actor and tag are not queried together. also, there is a clear indentation issue\n\n\u274c C: We don't want to ignore actor and tag, we need those indices.\n\n\u2705 D: If we leave datastore to automatically create the indices and if we specify that the 'date_released' property needs to be excluded from indices, then we would have less indices (but maybe slower queries when ordering them, but hey, how many 'comedies' there could be in the world)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Correct Answer D:\n\nThis is the way the DB is typically queried:\n- movies with actor=<actorname> ordered by date_released \n- movies with tag=Comedy ordered by date_released\n\nso it seems that we need indices in actor,tag and date_released for sorting. \n\n\u274c A: this would be the correct answer, however, the format is incorrect, the correct format would be '- name: date_released' correctly indented.\n\n\u274c B: This seems to be unnecessary, since typically actor and tag are not queried together. also, there is a clear indentation issue\n\n\u274c C: We don't want to ignore actor and tag, we need those indices.\n\n\u2705 D: If we leave datastore to automatically create the indices and if we specify that the 'date_released' property needs to be excluded from indices, then we would have less indices (but maybe slower queries when ordering them, but hey, how many 'comedies' there could be in the world)",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "And here is the correct way to configure indices:\nhttps://cloud.google.com/datastore/docs/tools/indexconfig\n\nso this would be the best answer:\nindexes:\n- kind: Movie\n  properties:\n  - name: actors\n  - name: date_released\n    direction: asc. <This could be left out, it defaults to direction: asc if excluded>\n\n- kind: Movie\n  properties:\n  - name: tag\n  - name: date_released\n    direction: asc. <This could be left out, it defaults to direction: asc if excluded>",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "And here is the correct way to configure indices:\nhttps://cloud.google.com/datastore/docs/tools/indexconfig\n\nso this would be the best answer:\nindexes:\n- kind: Movie\n  properties:\n  - name: actors\n  - name: date_released\n    direction: asc. <This could be left out, it defaults to direction: asc if excluded>\n\n- kind: Movie\n  properties:\n  - name: tag\n  - name: date_released\n    direction: asc. <This could be left out, it defaults to direction: asc if excluded>",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Ender_H\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "And here is the correct way to configure indices:\nhttps://cloud.google.com/datastore/docs/tools/indexconfig\n\nso this would be the best answer:\nindexes:\n- kind: Movie\n  properties:\n  - name: actors\n  - name: date_released\n    direction: asc. <This could be left out, it defaults to direction: asc if excluded>\n\n- kind: Movie\n  properties:\n  - name: tag\n  - name: date_released\n    direction: asc. <This could be left out, it defaults to direction: asc if excluded>",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "And here is the correct way to configure indices:\nhttps://cloud.google.com/datastore/docs/tools/indexconfig\n\nso this would be the best answer:\nindexes:\n- kind: Movie\n  properties:\n  - name: actors\n  - name: date_released\n    direction: asc. <This could be left out, it defaults to direction: asc if excluded>\n\n- kind: Movie\n  properties:\n  - name: tag\n  - name: date_released\n    direction: asc. <This could be left out, it defaults to direction: asc if excluded>",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "*Findings for this answer*:\nIndices, if not defined, will be automatically created:\n\"By default, a Datastore mode database automatically predefines an index for each property of each entity kind. These single property indexes are suitable for simple types of queries.\"\nsource: https://cloud.google.com/datastore/docs/concepts/indexes\n\nIn the index limits section we see this:\n\"a Datastore mode database creates an entry in a predefined index for every property of every entity except those you have explicitly declared as excluded from your indexes.\"\nsource: https://cloud.google.com/datastore/docs/concepts/indexes#index_limits",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Ender_H\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "*Findings for this answer*:\nIndices, if not defined, will be automatically created:\n\"By default, a Datastore mode database automatically predefines an index for each property of each entity kind. These single property indexes are suitable for simple types of queries.\"\nsource: https://cloud.google.com/datastore/docs/concepts/indexes\n\nIn the index limits section we see this:\n\"a Datastore mode database creates an entry in a predefined index for every property of every entity except those you have explicitly declared as excluded from your indexes.\"\nsource: https://cloud.google.com/datastore/docs/concepts/indexes#index_limits",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "*Findings for this answer*:\nIndices, if not defined, will be automatically created:\n\"By default, a Datastore mode database automatically predefines an index for each property of each entity kind. These single property indexes are suitable for simple types of queries.\"\nsource: https://cloud.google.com/datastore/docs/concepts/indexes\n\nIn the index limits section we see this:\n\"a Datastore mode database creates an entry in a predefined index for every property of every entity except those you have explicitly declared as excluded from your indexes.\"\nsource: https://cloud.google.com/datastore/docs/concepts/indexes#index_limits",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "What do people think about C? The question is asking how to avoid a  combinatorial explosion in the number of indexes. It says \"You have entities with multiple properties, some of which can take on multiple values\". Put this with the below text from the documentation for Datastore indexes, it seems they're looking for \"exclude the properties that will cause combinatorial explosion\" which would be C.\n\n\"The situation becomes worse in the case of entities with multiple properties, each of which can take on multiple values. To accommodate such an entity, the index must include an entry for every possible combination of property values. Custom indexes that refer to multiple properties, each with multiple values, can \"explode\" combinatorially, requiring large numbers of entries for an entity with only a relatively small number of possible property values.\"[1]\n[1] https://cloud.google.com/datastore/docs/concepts/indexes#index_limits",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Hm92730\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "What do people think about C? The question is asking how to avoid a  combinatorial explosion in the number of indexes. It says \"You have entities with multiple properties, some of which can take on multiple values\". Put this with the below text from the documentation for Datastore indexes, it seems they're looking for \"exclude the properties that will cause combinatorial explosion\" which would be C.\n\n\"The situation becomes worse in the case of entities with multiple properties, each of which can take on multiple values. To accommodate such an entity, the index must include an entry for every possible combination of property values. Custom indexes that refer to multiple properties, each with multiple values, can \"explode\" combinatorially, requiring large numbers of entries for an entity with only a relatively small number of possible property values.\"[1]\n[1] https://cloud.google.com/datastore/docs/concepts/indexes#index_limits",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "What do people think about C? The question is asking how to avoid a  combinatorial explosion in the number of indexes. It says \"You have entities with multiple properties, some of which can take on multiple values\". Put this with the below text from the documentation for Datastore indexes, it seems they're looking for \"exclude the properties that will cause combinatorial explosion\" which would be C.\n\n\"The situation becomes worse in the case of entities with multiple properties, each of which can take on multiple values. To accommodate such an entity, the index must include an entry for every possible combination of property values. Custom indexes that refer to multiple properties, each with multiple values, can \"explode\" combinatorially, requiring large numbers of entries for an entity with only a relatively small number of possible property values.\"[1]\n[1] https://cloud.google.com/datastore/docs/concepts/indexes#index_limits",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "B. is correct\nTo avoid combinatoric explosion of indexes.\n\"Two queries of the same form but with different filter values use the same index.\"\nhttps://cloud.google.com/datastore/docs/concepts/indexes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "soichirokawa\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "B. is correct\nTo avoid combinatoric explosion of indexes.\n\"Two queries of the same form but with different filter values use the same index.\"\nhttps://cloud.google.com/datastore/docs/concepts/indexes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. is correct\nTo avoid combinatoric explosion of indexes.\n\"Two queries of the same form but with different filter values use the same index.\"\nhttps://cloud.google.com/datastore/docs/concepts/indexes",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Correct answer is A \nIn the same reference you provided \nIn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\nproperties:\n- name: tags\n- name: created\n- kind: Task\nproperties:\n- name: collaborators\n- name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Correct answer is A \nIn the same reference you provided \nIn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\nproperties:\n- name: tags\n- name: created\n- kind: Task\nproperties:\n- name: collaborators\n- name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Wasss123\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Correct answer is A \nIn the same reference you provided \nIn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\nproperties:\n- name: tags\n- name: created\n- kind: Task\nproperties:\n- name: collaborators\n- name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Correct answer is A \nIn the same reference you provided \nIn this case, you can circumvent the exploding index by manually configuring an index in your index configuration file:\nindexes:\n- kind: Task\nproperties:\n- name: tags\n- name: created\n- kind: Task\nproperties:\n- name: collaborators\n- name: created\nThis reduces the number of entries needed to only (|tags| * |created| + |collaborators| * |created|), or 6 entries instead of 9",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "A. Manually configure the index in your index config as follows:",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "AWSandeep\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Manually configure the index in your index config as follows:",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Manually configure the index in your index config as follows:",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

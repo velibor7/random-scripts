@@ -1,0 +1,15 @@
+COMMENT #5 FOR QUESTION 273
+============================================================
+Author: Unknown
+Date: 1 year, 3 months ago
+Votes: 0
+----------------------------------------
+The Answer is A. Given that there are two instances (development and production) already available, and the goal is to deploy DAGs to Cloud Composer not entire composer infra build. 
+
+Explanation:
+- This approach leverages Cloud Build to manage the deployment process.
+- It first deploys the code to the Cloud Storage bucket of the development instance for testing purposes.
+- If the tests are successful in the development environment, the same Cloud Build process is used to copy the code to the Cloud Storage bucket of the production instance.
+ 
+B. GKE-based approach is not standard for Cloud Composer. C. GKE used for testing is unconventional for DAG deployments. D. Involves unnecessary GKE deployment for production. Testing DAGs should use Composer instances directly, not Kubernetes containers in GKE.
+============================================================

@@ -1,0 +1,15 @@
+COMMENT #13 FOR QUESTION 214
+============================================================
+Author: Unknown
+Date: 1 year, 3 months ago
+Votes: 0
+----------------------------------------
+The best option is B - Create a Standard Tier Memorystore for Redis instance in a development environment. Initiate a manual failover by using the force-data-loss data protection mode.
+The key points are:
+•	The failover should be tested in a separate development environment, not production, to avoid impacting real data.
+•	The force-data-loss mode will simulate a full failover and restart, which is the most accurate test of disaster recovery.
+•	Limited-data-loss mode only fails over reads which does not fully test write capabilities.
+•	Increasing replicas in production and failing over (C) risks losing real production data.
+•	Failing over production (D) also risks impacting real data and traffic.
+So option B isolates the test from production and uses the most rigorous failover mode to fully validate disaster recovery capabilities.
+============================================================

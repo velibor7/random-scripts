@@ -1,0 +1,12 @@
+COMMENT #158 FOR QUESTION 287
+============================================================
+Author: Unknown
+Date: 5 months, 1 week ago
+Votes: 0
+----------------------------------------
+Answer is B. Custom quotas are a powerful feature that allow you to set hard limits on specific resource usage. In the case of BigQuery, quotas allow you to control query usage (number of bytes processed) at a project- or user-level. Project-level custom quotas limit the aggregate usage of all users in that project, while user-level custom quotas are separately applied to each user or service account within a project.
+
+Custom quotas are relevant when you are using BigQuery’s on-demand pricing model, which charges for the number of bytes processed by each query. When you are using the capacity pricing model, you are charged for compute capacity (measured in slots) used to run queries, so limiting the number of bytes processed is less useful.
+
+By setting custom quotas, you can control the amount of query usage by different teams, applications, or users within your organization, preventing unexpected spikes in usage and costs.
+============================================================

@@ -1,0 +1,15 @@
+COMMENT #74 FOR QUESTION 67
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Answer is C
+ Build an application that calls the Cloud Video Intelligence API to generate labels. Store data in Cloud Bigtable, and filter the predicted labels to match the user's viewing history to generate preferences.
+
+1. Rather than building a new model - it is better to use Google provide APIs, here - Google Video Intelligence. So option A and B rules out
+2. Between SQL and Bigtable - Bigtable is the better option as Bigtable support row-key filtering. Joining the filters is not required.
+
+Reference:
+https://cloud.google.com/video-intelligence/docs/feature-label-detection
+============================================================

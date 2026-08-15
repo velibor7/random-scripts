@@ -1,0 +1,1314 @@
+================================================================================
+QUESTION:
+A data ingestion task requires a one-TB JSON dataset to be written out to Parquet with a target part-file size of 512 MB. Because Parquet is being used instead of Delta Lake, built-in file-sizing features such as Auto-Optimize & Auto-Compaction cannot be used.Which strategy will yield the best performance without shuffling data?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Set spark.sql.files.maxPartitionBytes to 512 MB, ingest the data, execute the narrow transformations, and then write to parquet.
+										
+
+
+													B.
+												
+											
+											Set spark.sql.shuffle.partitions to 2,048 partitions (1TB*1024*1024/512), ingest the data, execute the narrow transformations, optimize the data by sorting it (which automatically repartitions the data), and then write to parquet.
+										
+
+
+													C.
+												
+											
+											Set spark.sql.adaptive.advisoryPartitionSizeInBytes to 512 MB bytes, ingest the data, execute the narrow transformations, coalesce to 2,048 partitions (1TB*1024*1024/512), and then write to parquet.
+										
+
+
+													D.
+												
+											
+											Ingest the data, execute the narrow transformations, repartition to 2,048 partitions (1TB* 1024*1024/512), and then write to parquet.
+										
+
+
+													E.
+												
+											
+											Set spark.sql.shuffle.partitions to 512, ingest the data, execute the narrow transformations, and then write to parquet.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (229 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Certified Data Engineer Professional topic 1 question 70 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Databricks's
+						Certified Data Engineer Professional
+
+							Question #: 70
+							Topic #: 1
+						
+[All Certified Data Engineer Professional Questions]
+
+
+
+							
+								A data ingestion task requires a one-TB JSON dataset to be written out to Parquet with a target part-file size of 512 MB. Because Parquet is being used instead of Delta Lake, built-in file-sizing features such as Auto-Optimize & Auto-Compaction cannot be used.Which strategy will yield the best performance without shuffling data?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Set spark.sql.files.maxPartitionBytes to 512 MB, ingest the data, execute the narrow transformations, and then write to parquet.
+										
+
+
+													B.
+												
+											
+											Set spark.sql.shuffle.partitions to 2,048 partitions (1TB*1024*1024/512), ingest the data, execute the narrow transformations, optimize the data by sorting it (which automatically repartitions the data), and then write to parquet.
+										
+
+
+													C.
+												
+											
+											Set spark.sql.adaptive.advisoryPartitionSizeInBytes to 512 MB bytes, ingest the data, execute the narrow transformations, coalesce to 2,048 partitions (1TB*1024*1024/512), and then write to parquet.
+										
+
+
+													D.
+												
+											
+											Ingest the data, execute the narrow transformations, repartition to 2,048 partitions (1TB* 1024*1024/512), and then write to parquet.
+										
+
+
+													E.
+												
+											
+											Set spark.sql.shuffle.partitions to 512, ingest the data, execute the narrow transformations, and then write to parquet.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								sturcu
+							
+							
+							at 
+							Oct. 24, 2023, 6:02 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Databricks's
+						Certified Data Engineer Professional
+
+							Question #: 70
+							Topic #: 1
+						
+[All Certified Data Engineer Professional Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								sturcu
+							
+							
+							at 
+							Oct. 24, 2023, 6:02 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+aragorn_brego
+			
+
+
+				Highly Voted 
+
+
+			1 year, 4 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+This strategy aims to control the size of the output Parquet files without shuffling the data. The spark.sql.files.maxPartitionBytes parameter sets the maximum size of a partition that Spark will read. By setting it to 512 MB, you are aligning the read partition size with the desired output file size. Since the transformations are narrow (meaning they do not require shuffling), the number of partitions should roughly correspond to the number of output files when writing out to Parquet, assuming the data is evenly distributed and there is no data expansion during processing.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 10 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+D is the only one that does the trick.
+
+Note, we can not do shuffling.
+
+Wrong answers:
+
+A: spark.sql.files.maxPartitionBytes is about reading, not writing.(The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC. )
+
+B: spark.sql.adaptive.advisoryPartitionSizeInBytes takes effect while shuffling and sorting does not make sense (The advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.)
+
+C: Would work but spark.sql.adaptive.advisoryPartitionSizeInBytes would need shuffling.
+
+E. spark.sql.shuffle.partitions (Configures the number of partitions to use when shuffling data for joins or aggregations.) is not about writing.
+
+--- Comment #23 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Def21
+			
+
+
+				Highly Voted 
+
+
+			1 year, 2 months ago
+
+--- Comment #24 ---
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+D is the only one that does the trick.
+
+Note, we can not do shuffling.
+
+Wrong answers:
+
+A: spark.sql.files.maxPartitionBytes is about reading, not writing.(The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC. )
+
+B: spark.sql.adaptive.advisoryPartitionSizeInBytes takes effect while shuffling and sorting does not make sense (The advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.)
+
+C: Would work but spark.sql.adaptive.advisoryPartitionSizeInBytes would need shuffling.
+
+E. spark.sql.shuffle.partitions (Configures the number of partitions to use when shuffling data for joins or aggregations.) is not about writing.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+D is the only one that does the trick.
+
+Note, we can not do shuffling.
+
+Wrong answers:
+
+A: spark.sql.files.maxPartitionBytes is about reading, not writing.(The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC. )
+
+B: spark.sql.adaptive.advisoryPartitionSizeInBytes takes effect while shuffling and sorting does not make sense (The advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.)
+
+C: Would work but spark.sql.adaptive.advisoryPartitionSizeInBytes would need shuffling.
+
+E. spark.sql.shuffle.partitions (Configures the number of partitions to use when shuffling data for joins or aggregations.) is not about writing.
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+D does repartition, which the question says we should try to avoid.
+
+--- Comment #30 ---
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+D does repartition, which the question says we should try to avoid.
+
+--- Comment #31 ---
+Author: Unknown | Date: 3 months, 1 week ago | Votes: 0
+arekm
+			
+
+
+			3 months, 1 week ago
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+D does repartition, which the question says we should try to avoid.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+D does repartition, which the question says we should try to avoid.
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #38 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+spark.sql.files.maxPartitionBytes is not just for reading files
+
+--- Comment #39 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+carlosmps
+			
+
+
+			4 months ago
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+spark.sql.files.maxPartitionBytes is not just for reading files
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+spark.sql.files.maxPartitionBytes is not just for reading files
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date: 5 months ago | Votes: 0
+Answer D is wrong -> repartition does perform shuffling in Spark. When you use repartition, Spark redistributes the data across the specified number of partitions, which requires moving data between nodes to achieve the new partitioning. Answer A should be correct
+
+--- Comment #47 ---
+Author: Unknown | Date: 5 months ago | Votes: 0
+azurefan777
+			
+
+
+			5 months ago
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D is wrong -> repartition does perform shuffling in Spark. When you use repartition, Spark redistributes the data across the specified number of partitions, which requires moving data between nodes to achieve the new partitioning. Answer A should be correct
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D is wrong -> repartition does perform shuffling in Spark. When you use repartition, Spark redistributes the data across the specified number of partitions, which requires moving data between nodes to achieve the new partitioning. Answer A should be correct
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #55 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+Answer D. Explicitly repartitioning to 2,048 partitions ensures that the output files are close to the desired size of 512 MB, provided the data distribution is relatively even.
+Repartitioning directly addresses the problem by controlling the number of partitions, which directly affects the output file size
+Why not option A ? Misinterpretation of spark.sql.files.maxPartitionBytes in Option A:
+The assessment incorrectly states that this configuration controls the maximum size of files when writing to Parquet. This setting controls the size of partitions when reading data, not during writing.
+
+--- Comment #56 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+AlejandroU
+			
+
+
+				Most Recent 
+
+
+			3 months, 2 weeks ago
+
+--- Comment #57 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+Answer D. Explicitly repartitioning to 2,048 partitions ensures that the output files are close to the desired size of 512 MB, provided the data distribution is relatively even.
+Repartitioning directly addresses the problem by controlling the number of partitions, which directly affects the output file size
+Why not option A ? Misinterpretation of spark.sql.files.maxPartitionBytes in Option A:
+The assessment incorrectly states that this configuration controls the maximum size of files when writing to Parquet. This setting controls the size of partitions when reading data, not during writing.
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D. Explicitly repartitioning to 2,048 partitions ensures that the output files are close to the desired size of 512 MB, provided the data distribution is relatively even.
+Repartitioning directly addresses the problem by controlling the number of partitions, which directly affects the output file size
+Why not option A ? Misinterpretation of spark.sql.files.maxPartitionBytes in Option A:
+The assessment incorrectly states that this configuration controls the maximum size of files when writing to Parquet. This setting controls the size of partitions when reading data, not during writing.
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+Given the requirement to avoid shuffling, Option A is the most suitable choice. By setting spark.sql.files.maxPartitionBytes to 512 MB, you influence the partitioning during the read phase, which can help in achieving the desired file sizes during the write operation. However, it's important to note that this approach may not guarantee exact file sizes, and some variability may occur. If achieving precise file sizes is critical and shuffling is permissible, Option D would be the preferred strategy.
+
+--- Comment #63 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+Given the requirement to avoid shuffling, Option A is the most suitable choice. By setting spark.sql.files.maxPartitionBytes to 512 MB, you influence the partitioning during the read phase, which can help in achieving the desired file sizes during the write operation. However, it's important to note that this approach may not guarantee exact file sizes, and some variability may occur. If achieving precise file sizes is critical and shuffling is permissible, Option D would be the preferred strategy.
+
+--- Comment #64 ---
+Author: Unknown | Date: 3 months, 2 weeks ago | Votes: 0
+AlejandroU
+			
+
+
+			3 months, 2 weeks ago
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+Given the requirement to avoid shuffling, Option A is the most suitable choice. By setting spark.sql.files.maxPartitionBytes to 512 MB, you influence the partitioning during the read phase, which can help in achieving the desired file sizes during the write operation. However, it's important to note that this approach may not guarantee exact file sizes, and some variability may occur. If achieving precise file sizes is critical and shuffling is permissible, Option D would be the preferred strategy.
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+Given the requirement to avoid shuffling, Option A is the most suitable choice. By setting spark.sql.files.maxPartitionBytes to 512 MB, you influence the partitioning during the read phase, which can help in achieving the desired file sizes during the write operation. However, it's important to note that this approach may not guarantee exact file sizes, and some variability may occur. If achieving precise file sizes is critical and shuffling is permissible, Option D would be the preferred strategy.
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+spark.sql.adaptive.advisoryPartitionSizeInBytes - 
+The advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.
+And then we do coalesce - without shuffle - so have to work!
+
+--- Comment #73 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+temple1305
+			
+
+
+			4 months ago
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+spark.sql.adaptive.advisoryPartitionSizeInBytes - 
+The advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.
+And then we do coalesce - without shuffle - so have to work!
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+spark.sql.adaptive.advisoryPartitionSizeInBytes - 
+The advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.
+And then we do coalesce - without shuffle - so have to work!
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #81 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+I though D, but default num of partitions is 200, so you cant do coalesce (2048) (you cant increase numb of partitions through coalesce), so its not possible to do it without repartitioning and shuffle. Only A can be done without Shuffle
+
+--- Comment #82 ---
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+nedlo
+			
+
+
+			5 months, 2 weeks ago
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+I though D, but default num of partitions is 200, so you cant do coalesce (2048) (you cant increase numb of partitions through coalesce), so its not possible to do it without repartitioning and shuffle. Only A can be done without Shuffle
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+I though D, but default num of partitions is 200, so you cant do coalesce (2048) (you cant increase numb of partitions through coalesce), so its not possible to do it without repartitioning and shuffle. Only A can be done without Shuffle
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #90 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+Option A
+spark.sql.files.maxPartitionBytes controls the maximum size of partitions during reading on the Spark cluster, and that reducing this value could lead to more partitions and thus potentially more output files. The key point is that it works best when no shuffles occur, which aligns with the scenario of having narrow transformations only.
+
+--- Comment #91 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+sdas1
+			
+
+
+			6 months, 3 weeks ago
+
+--- Comment #92 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+Option A
+spark.sql.files.maxPartitionBytes controls the maximum size of partitions during reading on the Spark cluster, and that reducing this value could lead to more partitions and thus potentially more output files. The key point is that it works best when no shuffles occur, which aligns with the scenario of having narrow transformations only.
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+Option A
+spark.sql.files.maxPartitionBytes controls the maximum size of partitions during reading on the Spark cluster, and that reducing this value could lead to more partitions and thus potentially more output files. The key point is that it works best when no shuffles occur, which aligns with the scenario of having narrow transformations only.
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #96 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+Given that no shuffle occurs and you're aiming to control the file sizes during output, adjusting spark.sql.files.maxPartitionBytes could help indirectly by determining the partition size for reading. Since the number of input partitions can influence the size of the output files when no shuffle occurs, the partition size may closely match the size of the files being written out.
+
+--- Comment #97 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+Given that no shuffle occurs and you're aiming to control the file sizes during output, adjusting spark.sql.files.maxPartitionBytes could help indirectly by determining the partition size for reading. Since the number of input partitions can influence the size of the output files when no shuffle occurs, the partition size may closely match the size of the files being written out.
+
+--- Comment #98 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+sdas1
+			
+
+
+			6 months, 3 weeks ago
+
+--- Comment #99 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+Given that no shuffle occurs and you're aiming to control the file sizes during output, adjusting spark.sql.files.maxPartitionBytes could help indirectly by determining the partition size for reading. Since the number of input partitions can influence the size of the output files when no shuffle occurs, the partition size may closely match the size of the files being written out.
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+Given that no shuffle occurs and you're aiming to control the file sizes during output, adjusting spark.sql.files.maxPartitionBytes could help indirectly by determining the partition size for reading. Since the number of input partitions can influence the size of the output files when no shuffle occurs, the partition size may closely match the size of the files being written out.
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #103 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+If the transformations remain narrow, then Spark won't repartition the data unless explicitly instructed to do so (e.g., through a repartition or coalesce operation). In this case, using spark.sql.files.maxPartitionBytes to adjust the read partition size to 512 MB could indirectly control the number of output files and ensure they align with the target file size.
+
+--- Comment #104 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+If the transformations remain narrow, then Spark won't repartition the data unless explicitly instructed to do so (e.g., through a repartition or coalesce operation). In this case, using spark.sql.files.maxPartitionBytes to adjust the read partition size to 512 MB could indirectly control the number of output files and ensure they align with the target file size.
+
+--- Comment #105 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+sdas1
+			
+
+
+			6 months, 3 weeks ago
+
+--- Comment #106 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+If the transformations remain narrow, then Spark won't repartition the data unless explicitly instructed to do so (e.g., through a repartition or coalesce operation). In this case, using spark.sql.files.maxPartitionBytes to adjust the read partition size to 512 MB could indirectly control the number of output files and ensure they align with the target file size.
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+If the transformations remain narrow, then Spark won't repartition the data unless explicitly instructed to do so (e.g., through a repartition or coalesce operation). In this case, using spark.sql.files.maxPartitionBytes to adjust the read partition size to 512 MB could indirectly control the number of output files and ensure they align with the target file size.
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #110 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+Thus, Option A is also a valid strategy:
+
+Set spark.sql.files.maxPartitionBytes to 512 MB, process the data with narrow transformations, and write to Parquet.
+By reducing the value of spark.sql.files.maxPartitionBytes, you ensure more partitions are created during the read phase, leading to output files closer to the desired size, assuming the transformations are narrow and no shuffling occurs.
+
+--- Comment #111 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+Thus, Option A is also a valid strategy:
+
+Set spark.sql.files.maxPartitionBytes to 512 MB, process the data with narrow transformations, and write to Parquet.
+By reducing the value of spark.sql.files.maxPartitionBytes, you ensure more partitions are created during the read phase, leading to output files closer to the desired size, assuming the transformations are narrow and no shuffling occurs.
+
+--- Comment #112 ---
+Author: Unknown | Date: 6 months, 3 weeks ago | Votes: 0
+sdas1
+			
+
+
+			6 months, 3 weeks ago
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+Thus, Option A is also a valid strategy:
+
+Set spark.sql.files.maxPartitionBytes to 512 MB, process the data with narrow transformations, and write to Parquet.
+By reducing the value of spark.sql.files.maxPartitionBytes, you ensure more partitions are created during the read phase, leading to output files closer to the desired size, assuming the transformations are narrow and no shuffling occurs.
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+Thus, Option A is also a valid strategy:
+
+Set spark.sql.files.maxPartitionBytes to 512 MB, process the data with narrow transformations, and write to Parquet.
+By reducing the value of spark.sql.files.maxPartitionBytes, you ensure more partitions are created during the read phase, leading to output files closer to the desired size, assuming the transformations are narrow and no shuffling occurs.
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #122 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+D is not correct as it will create 2048 target files of 0.5 MB each
+Only A will do the job as it will read this file in 2  partition ( 1 TB = 512*2 MB) and as we are not doing any shuffling(not mentioned in option) it will create those many partition file i.e 2 part files
+
+--- Comment #123 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+vikram12apr
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #124 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+D is not correct as it will create 2048 target files of 0.5 MB each
+Only A will do the job as it will read this file in 2  partition ( 1 TB = 512*2 MB) and as we are not doing any shuffling(not mentioned in option) it will create those many partition file i.e 2 part files
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+D is not correct as it will create 2048 target files of 0.5 MB each
+Only A will do the job as it will read this file in 2  partition ( 1 TB = 512*2 MB) and as we are not doing any shuffling(not mentioned in option) it will create those many partition file i.e 2 part files
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+hey, 1TB=1000GB=1^6MB.
+
+--- Comment #130 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+hey, 1TB=1000GB=1^6MB.
+
+--- Comment #131 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+hal2401me
+			
+
+
+			1 year ago
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+hey, 1TB=1000GB=1^6MB.
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+hey, 1TB=1000GB=1^6MB.
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #139 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+ChatGPT says D: This strategy directly addresses the desired part-file size by repartitioning the data. It avoids shuffling during narrow transformations.
+Recommended for achieving the desired part-file size without unnecessary shuffling.
+
+--- Comment #140 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+hal2401me
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+ChatGPT says D: This strategy directly addresses the desired part-file size by repartitioning the data. It avoids shuffling during narrow transformations.
+Recommended for achieving the desired part-file size without unnecessary shuffling.
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+ChatGPT says D: This strategy directly addresses the desired part-file size by repartitioning the data. It avoids shuffling during narrow transformations.
+Recommended for achieving the desired part-file size without unnecessary shuffling.
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #148 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+D is mot suitable.
+
+--- Comment #149 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+Curious76
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+D is mot suitable.
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+D is mot suitable.
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #157 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+This approach ensures that each partition will be approximately the target part-file size, which can improve the efficiency of the data write. It also avoids the need for a shuffle operation, which can be expensive in terms of performance.
+
+--- Comment #158 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+vctrhugo
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+This approach ensures that each partition will be approximately the target part-file size, which can improve the efficiency of the data write. It also avoids the need for a shuffle operation, which can be expensive in terms of performance.
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+This approach ensures that each partition will be approximately the target part-file size, which can improve the efficiency of the data write. It also avoids the need for a shuffle operation, which can be expensive in terms of performance.
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #166 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+С is correct
+
+--- Comment #167 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+adenis
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+С is correct
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+С is correct
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #175 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Rest of the answers trigger shuffles
+
+--- Comment #176 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+spaceexplorer
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+Rest of the answers trigger shuffles
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+Rest of the answers trigger shuffles
+
+--- Comment #180 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #184 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+A is correct. 
+The question states Which strategy will yield the best performance without shuffling data.
+The other options involve shuffling either manually or through AQE
+
+--- Comment #185 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+divingbell17
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+A is correct. 
+The question states Which strategy will yield the best performance without shuffling data.
+The other options involve shuffling either manually or through AQE
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #188 ---
+Author: Unknown | Date:  | Votes: 0
+A is correct. 
+The question states Which strategy will yield the best performance without shuffling data.
+The other options involve shuffling either manually or through AQE
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #193 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+C is correct answer
+
+--- Comment #194 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+911land
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+C is correct answer
+
+--- Comment #196 ---
+Author: Unknown | Date:  | Votes: 0
+C is correct answer
+
+--- Comment #197 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #199 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #200 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #201 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- spark.sql.files.maxPartitionBytes: 128MB (The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC.)
+
+--- Comment #202 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+alexvno
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #203 ---
+Author: Unknown | Date:  | Votes: 0
+- spark.sql.files.maxPartitionBytes: 128MB (The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC.)
+
+--- Comment #204 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #205 ---
+Author: Unknown | Date:  | Votes: 0
+- spark.sql.files.maxPartitionBytes: 128MB (The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC.)
+
+--- Comment #206 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #207 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #208 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #209 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #210 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Here's a breakdown of the reasons:
+
+spark.sql.adaptive.advisoryPartitionSizeInBytes: This configuration parameter is designed to provide advisory partition sizes for the adaptive query execution framework. It can help in controlling the partition sizes without triggering unnecessary shuffling.
+
+coalesce(2048): Coalescing to a specific number of partitions after the narrow transformations allows you to control the number of output files without triggering a shuffle. This helps achieve the target part-file size without incurring the overhead of a full shuffle.
+
+Setting a specific target: The strategy outlines the goal of achieving a target part-file size of 512 MB, which aligns with the requirement.
+
+--- Comment #211 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+petrv
+			
+
+
+			1 year, 4 months ago
+
+--- Comment #212 ---
+Author: Unknown | Date:  | Votes: 0
+Here's a breakdown of the reasons:
+
+spark.sql.adaptive.advisoryPartitionSizeInBytes: This configuration parameter is designed to provide advisory partition sizes for the adaptive query execution framework. It can help in controlling the partition sizes without triggering unnecessary shuffling.
+
+coalesce(2048): Coalescing to a specific number of partitions after the narrow transformations allows you to control the number of output files without triggering a shuffle. This helps achieve the target part-file size without incurring the overhead of a full shuffle.
+
+Setting a specific target: The strategy outlines the goal of achieving a target part-file size of 512 MB, which aligns with the requirement.
+
+--- Comment #213 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #214 ---
+Author: Unknown | Date:  | Votes: 0
+Here's a breakdown of the reasons:
+
+spark.sql.adaptive.advisoryPartitionSizeInBytes: This configuration parameter is designed to provide advisory partition sizes for the adaptive query execution framework. It can help in controlling the partition sizes without triggering unnecessary shuffling.
+
+coalesce(2048): Coalescing to a specific number of partitions after the narrow transformations allows you to control the number of output files without triggering a shuffle. This helps achieve the target part-file size without incurring the overhead of a full shuffle.
+
+Setting a specific target: The strategy outlines the goal of achieving a target part-file size of 512 MB, which aligns with the requirement.
+
+--- Comment #215 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #216 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #217 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #218 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #219 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+obviously D. It allows you to control both the number of partitions and the final part-file size, which aligns with the requirements. Option B shuffles partitions, which is not allowed.
+
+--- Comment #220 ---
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+ocaj90
+			
+
+
+			1 year, 4 months ago
+
+--- Comment #221 ---
+Author: Unknown | Date:  | Votes: 0
+obviously D. It allows you to control both the number of partitions and the final part-file size, which aligns with the requirements. Option B shuffles partitions, which is not allowed.
+
+--- Comment #222 ---
+Author: Unknown | Date:  | Votes: 0
+obviously D. It allows you to control both the number of partitions and the final part-file size, which aligns with the requirements. Option B shuffles partitions, which is not allowed.
+
+--- Comment #223 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #224 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #225 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #226 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #227 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #228 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #229 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

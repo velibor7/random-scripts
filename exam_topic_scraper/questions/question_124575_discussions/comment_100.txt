@@ -1,0 +1,8 @@
+COMMENT #100 FOR QUESTION 124575
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Given that no shuffle occurs and you're aiming to control the file sizes during output, adjusting spark.sql.files.maxPartitionBytes could help indirectly by determining the partition size for reading. Since the number of input partitions can influence the size of the output files when no shuffle occurs, the partition size may closely match the size of the files being written out.
+============================================================

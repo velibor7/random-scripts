@@ -1,0 +1,11 @@
+COMMENT #182 FOR QUESTION 13
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+D is correct: Datastore (currently Firestore in native or datastore mode). It is a fully managed and serverless solution that allows for transactions and will autoscale (storage and compute) without the need to manage any infrastructure. 
+A is wrong: Cloud SQL is fully a managed transactional DB, but only the storage grows automatically. As your user base increases, you will need to increase the CPU/memory of the instance, and to do that you must edit the instance manually (and the questions specifically says "you do not want to manage infrastructure scaling")
+B is wrong: Bigquery is OLAP (for analytics). NoOps, fully managed, autoscales and allows transactions, but it is not designed for this use case.
+C is wrong: Bigtable is a NoSQL database for massive writes, and to scale (storage and CPU) you must add nodes, so it is completely out of this use case.
+============================================================

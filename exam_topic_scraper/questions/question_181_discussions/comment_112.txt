@@ -1,0 +1,14 @@
+COMMENT #112 FOR QUESTION 181
+============================================================
+Author: Unknown
+Date: 1 year, 5 months ago
+Votes: 0
+----------------------------------------
+Option C is not correct because it does not address the issue of backpressure. Creating a new object in the startBundle method of DoFn will not help to reduce the number of calls that are made to the service, which can lead to backpressure.
+
+Here are some reasons why C is not correct:
+
+Creating a new object in the startBundle method of DoFn is not a scalable solution. As the number of messages increases, the number of objects that need to be created will also increase. This can lead to performance problems and memory usage issues.
+Creating a new object in the startBundle method of DoFn does not address the issue of backpressure. The service may still experience backpressure if the number of messages exceeds the service's capacity.
+A better solution would be to use batching to reduce the number of calls that are made to the service. This can help to improve performance and reduce backpressure.
+============================================================

@@ -1,0 +1,15 @@
+COMMENT #243 FOR QUESTION 31
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+While other options might work in some cases, they have drawbacks:
+
+B. Transform mapping JSON: This option is mainly for schema changes and doesn't guarantee data completion before shutdown.
+C. New pipeline, same subscription: This risks duplicate processing of data if both pipelines run concurrently.
+D. New pipeline, new subscription: This loses the current pipeline's state and potentially data, making it impractical for incompatible changes.
+Therefore, the most reliable and data-safe approach is to update the current pipeline with the drain flag for seamless transition and data integrity.
+
+Remember, always test updates in a staging environment before deploying to production.
+============================================================

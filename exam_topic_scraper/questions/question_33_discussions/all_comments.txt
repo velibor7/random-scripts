@@ -1,0 +1,2103 @@
+ALL COMMENTS FOR QUESTION 33
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 33 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 33
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your software uses a simple JSON format for all messages. These messages are published to Google Cloud Pub/Sub, then processed with Google CloudDataflow to create a real-time dashboard for the CFO. During testing, you notice that some messages are missing in the dashboard. You check the logs, and all messages are being published to Cloud Pub/Sub successfully. What should you do next?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Check the dashboard application to see if it is not displaying correctly.
+										
+
+
+													B.
+												
+											
+											Run a fixed dataset through the Cloud Dataflow pipeline and analyze the output.
+										
+
+
+													C.
+												
+											
+											Use Google Stackdriver Monitoring on Cloud Pub/Sub to find the missing messages.
+										
+
+
+													D.
+												
+											
+											Switch Cloud Dataflow to pull messages from Cloud Pub/Sub instead of Cloud Pub/Sub pushing messages to Cloud Dataflow.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 20, 2020, 3:42 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 33
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 20, 2020, 3:42 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+Description: Stackdriver can be used to check the error like number of unack messages, publisher pushing messages faster
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+Description: Stackdriver can be used to check the error like number of unack messages, publisher pushing messages faster
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+Description: Stackdriver can be used to check the error like number of unack messages, publisher pushing messages faster
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+Description: Stackdriver can be used to check the error like number of unack messages, publisher pushing messages faster
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer: C
+Description: Stackdriver can be used to check the error like number of unack messages, publisher pushing messages faster
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			4 years ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+Answer: C
+Description: Stackdriver can be used to check the error like number of unack messages, publisher pushing messages faster
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer: C
+Description: Stackdriver can be used to check the error like number of unack messages, publisher pushing messages faster
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 35 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+All messages are being published to Cloud Pub/Sub successfully. so Stackdriver might not help.
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+All messages are being published to Cloud Pub/Sub successfully. so Stackdriver might not help.
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 3 years, 4 months ago | Votes: 0
+snamburi3
+			
+
+
+			3 years, 4 months ago
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+All messages are being published to Cloud Pub/Sub successfully. so Stackdriver might not help.
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+All messages are being published to Cloud Pub/Sub successfully. so Stackdriver might not help.
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 10 times
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+messages sent successfully to Topic, but not Subscription.
+in this case, if Dataflow cannot handle messages correctly it might not return acknowledgments to the Pub/Sub, and these errors can be seen from Monitoring.
+https://cloud.google.com/pubsub/docs/monitoring#monitoring_exp
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+messages sent successfully to Topic, but not Subscription.
+in this case, if Dataflow cannot handle messages correctly it might not return acknowledgments to the Pub/Sub, and these errors can be seen from Monitoring.
+https://cloud.google.com/pubsub/docs/monitoring#monitoring_exp
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+kubosuke
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+messages sent successfully to Topic, but not Subscription.
+in this case, if Dataflow cannot handle messages correctly it might not return acknowledgments to the Pub/Sub, and these errors can be seen from Monitoring.
+https://cloud.google.com/pubsub/docs/monitoring#monitoring_exp
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+messages sent successfully to Topic, but not Subscription.
+in this case, if Dataflow cannot handle messages correctly it might not return acknowledgments to the Pub/Sub, and these errors can be seen from Monitoring.
+https://cloud.google.com/pubsub/docs/monitoring#monitoring_exp
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+to be more precise,  first to publisher, 
+- then forwards to topic, and persistance for a while
+- then forwards to subscribe, 
+- then to subscription..
+- then acknowledgement happens
+
+so in every steps, there is possibly for errors.
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+to be more precise,  first to publisher, 
+- then forwards to topic, and persistance for a while
+- then forwards to subscribe, 
+- then to subscription..
+- then acknowledgement happens
+
+so in every steps, there is possibly for errors.
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+Tanzu
+			
+
+
+			2 years, 2 months ago
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+to be more precise,  first to publisher, 
+- then forwards to topic, and persistance for a while
+- then forwards to subscribe, 
+- then to subscription..
+- then acknowledgement happens
+
+so in every steps, there is possibly for errors.
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+to be more precise,  first to publisher, 
+- then forwards to topic, and persistance for a while
+- then forwards to subscribe, 
+- then to subscription..
+- then acknowledgement happens
+
+so in every steps, there is possibly for errors.
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+PubSub doesn't forward from subscriber to subscription. A topic sends it over to subscription first, then to subscriber
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+PubSub doesn't forward from subscriber to subscription. A topic sends it over to subscription first, then to subscriber
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+jkhong
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+PubSub doesn't forward from subscriber to subscription. A topic sends it over to subscription first, then to subscriber
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+PubSub doesn't forward from subscriber to subscription. A topic sends it over to subscription first, then to subscriber
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+this will help us understand the reason, when we know that the data is not reaching subscriber then there is no point in checking it with dummy data
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+[Removed]
+			
+
+
+			4 years ago
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+this will help us understand the reason, when we know that the data is not reaching subscriber then there is no point in checking it with dummy data
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+this will help us understand the reason, when we know that the data is not reaching subscriber then there is no point in checking it with dummy data
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+B.
+Stack driver monitoring is for performance, not logging of missing data.
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date: 3 years, 9 months ago | Votes: 0
+tprashanth
+			
+
+
+			3 years, 9 months ago
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+B.
+Stack driver monitoring is for performance, not logging of missing data.
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B.
+Stack driver monitoring is for performance, not logging of missing data.
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 25 times
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Please refer to this PubSub specific Monitoring metrics https://cloud.google.com/pubsub/docs/monitoring#monitoring_the_backlog
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Please refer to this PubSub specific Monitoring metrics https://cloud.google.com/pubsub/docs/monitoring#monitoring_the_backlog
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+jkhong
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Please refer to this PubSub specific Monitoring metrics https://cloud.google.com/pubsub/docs/monitoring#monitoring_the_backlog
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Please refer to this PubSub specific Monitoring metrics https://cloud.google.com/pubsub/docs/monitoring#monitoring_the_backlog
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date: 3 years, 8 months ago | Votes: 0
+https://cloud.google.com/pubsub/docs/monitoring
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date: 3 years, 8 months ago | Votes: 0
+mikey007
+			
+
+
+			3 years, 8 months ago
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+https://cloud.google.com/pubsub/docs/monitoring
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/pubsub/docs/monitoring
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Exactly!
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Exactly!
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+ritinhabb
+			
+
+
+			1 year, 9 months ago
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exactly!
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exactly!
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+Should be B
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			4 years ago
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+Should be B
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Should be B
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 25 times
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+confused with D as well.
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+confused with D as well.
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+[Removed]
+			
+
+
+			4 years ago
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+confused with D as well.
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+confused with D as well.
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+push or pull is about how target will handle the messages.  pull mode gives flexibility when to get messages , so considering if target (or client) is slow, then it can make predictable choices.
+
+dataflow is serverless. so if you need to awake it when necessary, you should use push mechanism. or leverage cloud composer/airflow and listen to pub/sub  to trigger the dataflow.
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+push or pull is about how target will handle the messages.  pull mode gives flexibility when to get messages , so considering if target (or client) is slow, then it can make predictable choices.
+
+dataflow is serverless. so if you need to awake it when necessary, you should use push mechanism. or leverage cloud composer/airflow and listen to pub/sub  to trigger the dataflow.
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+Tanzu
+			
+
+
+			2 years, 2 months ago
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+push or pull is about how target will handle the messages.  pull mode gives flexibility when to get messages , so considering if target (or client) is slow, then it can make predictable choices.
+
+dataflow is serverless. so if you need to awake it when necessary, you should use push mechanism. or leverage cloud composer/airflow and listen to pub/sub  to trigger the dataflow.
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+push or pull is about how target will handle the messages.  pull mode gives flexibility when to get messages , so considering if target (or client) is slow, then it can make predictable choices.
+
+dataflow is serverless. so if you need to awake it when necessary, you should use push mechanism. or leverage cloud composer/airflow and listen to pub/sub  to trigger the dataflow.
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+pushing is only for a https endpoint. So Dataflow just can pull messages
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+jvg637
+			
+
+
+			4 years ago
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+pushing is only for a https endpoint. So Dataflow just can pull messages
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+pushing is only for a https endpoint. So Dataflow just can pull messages
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+Push or Pull guarantees the message to be delivered at-least once. So it doesn't make any difference.
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date: 4 years ago | Votes: 0
+Rajokkiyam
+			
+
+
+			4 years ago
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Push or Pull guarantees the message to be delivered at-least once. So it doesn't make any difference.
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Push or Pull guarantees the message to be delivered at-least once. So it doesn't make any difference.
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Push needs Https endpoint
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Push needs Https endpoint
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+gopinath_k
+			
+
+
+			3 years ago
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Push needs Https endpoint
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Push needs Https endpoint
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+B. Run a fixed dataset through the Cloud Dataflow pipeline and analyze the output.
+* By running a fixed dataset through the Cloud Dataflow pipeline, you can determine if the problem lies within the data processing stage. This allows you to identify any issues with data transformation, filtering, or processing in your pipeline.
+* Analyzing the output from this fixed dataset will help you isolate the problem and confirm whether it's related to data processing or the dashboard application.
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date: 5 months, 2 weeks ago | Votes: 0
+rtcpost
+			
+
+
+				Most Recent 
+
+
+			5 months, 2 weeks ago
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+B. Run a fixed dataset through the Cloud Dataflow pipeline and analyze the output.
+* By running a fixed dataset through the Cloud Dataflow pipeline, you can determine if the problem lies within the data processing stage. This allows you to identify any issues with data transformation, filtering, or processing in your pipeline.
+* Analyzing the output from this fixed dataset will help you isolate the problem and confirm whether it's related to data processing or the dashboard application.
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Run a fixed dataset through the Cloud Dataflow pipeline and analyze the output.
+* By running a fixed dataset through the Cloud Dataflow pipeline, you can determine if the problem lies within the data processing stage. This allows you to identify any issues with data transformation, filtering, or processing in your pipeline.
+* Analyzing the output from this fixed dataset will help you isolate the problem and confirm whether it's related to data processing or the dashboard application.
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+You must know what kind of data causes errors. I think, the first step is to get erroneous data and then test with sample of it.
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+You must know what kind of data causes errors. I think, the first step is to get erroneous data and then test with sample of it.
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+ruben82
+			
+
+
+			5 months, 1 week ago
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You must know what kind of data causes errors. I think, the first step is to get erroneous data and then test with sample of it.
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+You must know what kind of data causes errors. I think, the first step is to get erroneous data and then test with sample of it.
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date: 6 months ago | Votes: 0
+B. Run a fixed dataset through the Cloud Dataflow pipeline and analyze the output. If this results in the expected output, then the problem might be with the dashboard application (Option A), and that should be checked next.
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date: 6 months ago | Votes: 0
+imran79
+			
+
+
+			6 months ago
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Run a fixed dataset through the Cloud Dataflow pipeline and analyze the output. If this results in the expected output, then the problem might be with the dashboard application (Option A), and that should be checked next.
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Run a fixed dataset through the Cloud Dataflow pipeline and analyze the output. If this results in the expected output, then the problem might be with the dashboard application (Option A), and that should be checked next.
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date: 10 months ago | Votes: 0
+"...to find the missing messages"
+Up to that remark, Monitoring was a valid option as well. But missing messages cannot be found with monitoring.
+It is simply not possible to find the exact missing message. I read this remark as a test if you know what is, and what isn't possible with monitoring.
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date: 10 months ago | Votes: 0
+WillemHendr
+			
+
+
+			10 months ago
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+"...to find the missing messages"
+Up to that remark, Monitoring was a valid option as well. But missing messages cannot be found with monitoring.
+It is simply not possible to find the exact missing message. I read this remark as a test if you know what is, and what isn't possible with monitoring.
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+"...to find the missing messages"
+Up to that remark, Monitoring was a valid option as well. But missing messages cannot be found with monitoring.
+It is simply not possible to find the exact missing message. I read this remark as a test if you know what is, and what isn't possible with monitoring.
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date: 12 months ago | Votes: 0
+here is to determine next step. Not better way to optimize the workload. So B is the correct next step
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date: 12 months ago | Votes: 0
+izekc
+			
+
+
+			12 months ago
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+here is to determine next step. Not better way to optimize the workload. So B is the correct next step
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+here is to determine next step. Not better way to optimize the workload. So B is the correct next step
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+B is not the next step. The next step is between pub/sub ands dataflow(C). B will not help with it at all. However it could show the issue if it is the pipeline or the view. But also it could not show it - you have no idea why some messages are not shown, so most probably it wouldnt get you any info. Definitely next step is to chek if the issue is between pubsub and dataflow. Then you coud go with B.
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+B is not the next step. The next step is between pub/sub ands dataflow(C). B will not help with it at all. However it could show the issue if it is the pipeline or the view. But also it could not show it - you have no idea why some messages are not shown, so most probably it wouldnt get you any info. Definitely next step is to chek if the issue is between pubsub and dataflow. Then you coud go with B.
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+Jarek7
+			
+
+
+			11 months, 1 week ago
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is not the next step. The next step is between pub/sub ands dataflow(C). B will not help with it at all. However it could show the issue if it is the pipeline or the view. But also it could not show it - you have no idea why some messages are not shown, so most probably it wouldnt get you any info. Definitely next step is to chek if the issue is between pubsub and dataflow. Then you coud go with B.
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is not the next step. The next step is between pub/sub ands dataflow(C). B will not help with it at all. However it could show the issue if it is the pipeline or the view. But also it could not show it - you have no idea why some messages are not shown, so most probably it wouldnt get you any info. Definitely next step is to chek if the issue is between pubsub and dataflow. Then you coud go with B.
+
+COMMENT #187
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #188
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #189
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #190
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #191
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #192
+----------------------------------------
+Author: Unknown | Date: 12 months ago | Votes: 0
+Pull subscription is the correct one. Push subscription means Dataflow cannot keep up with the topic.
+
+COMMENT #193
+----------------------------------------
+Author: Unknown | Date: 12 months ago | Votes: 0
+Adswerve
+			
+
+
+			12 months ago
+
+COMMENT #194
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+Pull subscription is the correct one. Push subscription means Dataflow cannot keep up with the topic.
+
+COMMENT #195
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #196
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Pull subscription is the correct one. Push subscription means Dataflow cannot keep up with the topic.
+
+COMMENT #197
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #198
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #199
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+It could be the issue. But C would reveal it if this is the real issue - if you will not check stackdriver, you cannot be sure if you really resolved the issue, as even if it seems to be working properly after switch to pull you cannot be sure if it is because of some other temporal factor.
+
+COMMENT #200
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+It could be the issue. But C would reveal it if this is the real issue - if you will not check stackdriver, you cannot be sure if you really resolved the issue, as even if it seems to be working properly after switch to pull you cannot be sure if it is because of some other temporal factor.
+
+COMMENT #201
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+Jarek7
+			
+
+
+			11 months, 1 week ago
+
+COMMENT #202
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It could be the issue. But C would reveal it if this is the real issue - if you will not check stackdriver, you cannot be sure if you really resolved the issue, as even if it seems to be working properly after switch to pull you cannot be sure if it is because of some other temporal factor.
+
+COMMENT #203
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It could be the issue. But C would reveal it if this is the real issue - if you will not check stackdriver, you cannot be sure if you really resolved the issue, as even if it seems to be working properly after switch to pull you cannot be sure if it is because of some other temporal factor.
+
+COMMENT #204
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #205
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #206
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #207
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #208
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #209
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+If the Dataflow does not have the expected output, it is either wrong at the input or at the pipelines. The chance that the issue is at the input (PubSub) is very low. For this case, it is likely the pipelines got some mistakes (e.g. JSON parsing failed). So we should follow B to debug the pipelines (using snapshot as test dataset for example)
+
+COMMENT #210
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+midgoo
+			
+
+
+			1 year, 1 month ago
+
+COMMENT #211
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+If the Dataflow does not have the expected output, it is either wrong at the input or at the pipelines. The chance that the issue is at the input (PubSub) is very low. For this case, it is likely the pipelines got some mistakes (e.g. JSON parsing failed). So we should follow B to debug the pipelines (using snapshot as test dataset for example)
+
+COMMENT #212
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #213
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+If the Dataflow does not have the expected output, it is either wrong at the input or at the pipelines. The chance that the issue is at the input (PubSub) is very low. For this case, it is likely the pipelines got some mistakes (e.g. JSON parsing failed). So we should follow B to debug the pipelines (using snapshot as test dataset for example)
+
+COMMENT #214
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #215
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #216
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #217
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #218
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+The most efficient solution would be to run a fixed dataset through the Cloud Dataflow pipeline and analyze the output (Option B). This will allow you to determine if the issue is with the pipeline or with the dashboard application. By analyzing the output, you can see if the messages are being processed correctly and determine if there are any discrepancies or missing messages. If the issue is with the pipeline, you can then debug and make any necessary updates to ensure that all messages are processed correctly. If the issue is with the dashboard application, you can then focus on resolving that issue. This approach allows you to isolate and identify the root cause of the missing messages in a controlled and efficient manner.
+
+COMMENT #219
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+ploer
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #220
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The most efficient solution would be to run a fixed dataset through the Cloud Dataflow pipeline and analyze the output (Option B). This will allow you to determine if the issue is with the pipeline or with the dashboard application. By analyzing the output, you can see if the messages are being processed correctly and determine if there are any discrepancies or missing messages. If the issue is with the pipeline, you can then debug and make any necessary updates to ensure that all messages are processed correctly. If the issue is with the dashboard application, you can then focus on resolving that issue. This approach allows you to isolate and identify the root cause of the missing messages in a controlled and efficient manner.
+
+COMMENT #221
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #222
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The most efficient solution would be to run a fixed dataset through the Cloud Dataflow pipeline and analyze the output (Option B). This will allow you to determine if the issue is with the pipeline or with the dashboard application. By analyzing the output, you can see if the messages are being processed correctly and determine if there are any discrepancies or missing messages. If the issue is with the pipeline, you can then debug and make any necessary updates to ensure that all messages are processed correctly. If the issue is with the dashboard application, you can then focus on resolving that issue. This approach allows you to isolate and identify the root cause of the missing messages in a controlled and efficient manner.
+
+COMMENT #223
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+COMMENT #224
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #225
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #226
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #227
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+I've just skimmed over the Stackdriver docs, yes guys, it helps you check the number and age of messages that were not received/acknowledged, excellent, hurray.
+
+So first off, c will not give us the missing messages, it will give us the count and age.
+that means that c is inherently incorrect. 
+
+Additionally, will knowledge of the number of messages make resolving the problem any easier? No, it is just confirming what we already know.
+
+Meanwhile, approach B, will allow us to see HOW and WHY it is missing some messages, which is the step that proceeds the fix.
+
+COMMENT #228
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Lestrang
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #229
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I've just skimmed over the Stackdriver docs, yes guys, it helps you check the number and age of messages that were not received/acknowledged, excellent, hurray.
+
+So first off, c will not give us the missing messages, it will give us the count and age.
+that means that c is inherently incorrect. 
+
+Additionally, will knowledge of the number of messages make resolving the problem any easier? No, it is just confirming what we already know.
+
+Meanwhile, approach B, will allow us to see HOW and WHY it is missing some messages, which is the step that proceeds the fix.
+
+COMMENT #230
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #231
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I've just skimmed over the Stackdriver docs, yes guys, it helps you check the number and age of messages that were not received/acknowledged, excellent, hurray.
+
+So first off, c will not give us the missing messages, it will give us the count and age.
+that means that c is inherently incorrect. 
+
+Additionally, will knowledge of the number of messages make resolving the problem any easier? No, it is just confirming what we already know.
+
+Meanwhile, approach B, will allow us to see HOW and WHY it is missing some messages, which is the step that proceeds the fix.
+
+COMMENT #232
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+COMMENT #233
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #234
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #235
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #236
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Here is ChatGPT answer : 
+It's always a good practice to start by checking the logs and monitoring tools to see if there is any indication of an issue with the messages being published to Cloud Pub/Sub. In this case, you should use Google Stackdriver Monitoring to investigate if the missing messages have been published or not. You can also run a fixed dataset through the Cloud Dataflow pipeline to see if the pipeline is processing the messages correctly. If there is no issue found on the Cloud Pub/Sub and Cloud Dataflow, then you can check the dashboard application to see if it is not displaying the messages correctly. As a last resort, you can switch Cloud Dataflow to pull messages from Cloud Pub/Sub instead of Cloud Pub/Sub pushing messages to Cloud Dataflow.
+
+COMMENT #237
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+PolyMoe
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #238
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+Here is ChatGPT answer : 
+It's always a good practice to start by checking the logs and monitoring tools to see if there is any indication of an issue with the messages being published to Cloud Pub/Sub. In this case, you should use Google Stackdriver Monitoring to investigate if the missing messages have been published or not. You can also run a fixed dataset through the Cloud Dataflow pipeline to see if the pipeline is processing the messages correctly. If there is no issue found on the Cloud Pub/Sub and Cloud Dataflow, then you can check the dashboard application to see if it is not displaying the messages correctly. As a last resort, you can switch Cloud Dataflow to pull messages from Cloud Pub/Sub instead of Cloud Pub/Sub pushing messages to Cloud Dataflow.
+
+COMMENT #239
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+COMMENT #240
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Here is ChatGPT answer : 
+It's always a good practice to start by checking the logs and monitoring tools to see if there is any indication of an issue with the messages being published to Cloud Pub/Sub. In this case, you should use Google Stackdriver Monitoring to investigate if the missing messages have been published or not. You can also run a fixed dataset through the Cloud Dataflow pipeline to see if the pipeline is processing the messages correctly. If there is no issue found on the Cloud Pub/Sub and Cloud Dataflow, then you can check the dashboard application to see if it is not displaying the messages correctly. As a last resort, you can switch Cloud Dataflow to pull messages from Cloud Pub/Sub instead of Cloud Pub/Sub pushing messages to Cloud Dataflow.
+
+COMMENT #241
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #242
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #243
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+I'm tired with these responses about what chatGPT says. Most probably you've used the free 3.5 version which is absolute disaster regarding being all knowing oracle. BTW in this case I wouldn't believe even GPT4. It is a difficult question that needs a specific knowledge and experience which might be not available in the GPT training data. You cannot use any GPT up to 4 as an argument in such cases.
+
+COMMENT #244
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+I'm tired with these responses about what chatGPT says. Most probably you've used the free 3.5 version which is absolute disaster regarding being all knowing oracle. BTW in this case I wouldn't believe even GPT4. It is a difficult question that needs a specific knowledge and experience which might be not available in the GPT training data. You cannot use any GPT up to 4 as an argument in such cases.
+
+COMMENT #245
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+Jarek7
+			
+
+
+			11 months, 1 week ago
+
+COMMENT #246
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+I'm tired with these responses about what chatGPT says. Most probably you've used the free 3.5 version which is absolute disaster regarding being all knowing oracle. BTW in this case I wouldn't believe even GPT4. It is a difficult question that needs a specific knowledge and experience which might be not available in the GPT training data. You cannot use any GPT up to 4 as an argument in such cases.
+
+COMMENT #247
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I'm tired with these responses about what chatGPT says. Most probably you've used the free 3.5 version which is absolute disaster regarding being all knowing oracle. BTW in this case I wouldn't believe even GPT4. It is a difficult question that needs a specific knowledge and experience which might be not available in the GPT training data. You cannot use any GPT up to 4 as an argument in such cases.
+
+COMMENT #248
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #249
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #250
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Exactly. Sometimes it is total garbage
+
+COMMENT #251
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+Exactly. Sometimes it is total garbage
+
+COMMENT #252
+----------------------------------------
+Author: Unknown | Date: 4 months, 2 weeks ago | Votes: 0
+axantroff
+			
+
+
+			4 months, 2 weeks ago
+
+COMMENT #253
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exactly. Sometimes it is total garbage
+
+COMMENT #254
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exactly. Sometimes it is total garbage
+
+COMMENT #255
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #256
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #257
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #258
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #259
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #260
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+I provided it with the question as input but added the metrics available in Stackdriver, here is the response:
+
+B. Run a fixed dataset through the Cloud Dataflow pipeline and analyze the output.
+
+If messages are being published successfully to Cloud Pub/Sub but are missing in the dashboard, the issue is likely to be with the Cloud Dataflow pipeline that processes the messages. To find the root cause of the problem, you should run a fixed dataset through the pipeline and analyze the output. This will allow you to see if the pipeline is correctly processing all messages, and identify any processing errors that might be causing messages to be lost. The output can be compared to the expected results to identify any discrepancies and resolve the issue.
+
+COMMENT #261
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Lestrang
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #262
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I provided it with the question as input but added the metrics available in Stackdriver, here is the response:
+
+B. Run a fixed dataset through the Cloud Dataflow pipeline and analyze the output.
+
+If messages are being published successfully to Cloud Pub/Sub but are missing in the dashboard, the issue is likely to be with the Cloud Dataflow pipeline that processes the messages. To find the root cause of the problem, you should run a fixed dataset through the pipeline and analyze the output. This will allow you to see if the pipeline is correctly processing all messages, and identify any processing errors that might be causing messages to be lost. The output can be compared to the expected results to identify any discrepancies and resolve the issue.
+
+COMMENT #263
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I provided it with the question as input but added the metrics available in Stackdriver, here is the response:
+
+B. Run a fixed dataset through the Cloud Dataflow pipeline and analyze the output.
+
+If messages are being published successfully to Cloud Pub/Sub but are missing in the dashboard, the issue is likely to be with the Cloud Dataflow pipeline that processes the messages. To find the root cause of the problem, you should run a fixed dataset through the pipeline and analyze the output. This will allow you to see if the pipeline is correctly processing all messages, and identify any processing errors that might be causing messages to be lost. The output can be compared to the expected results to identify any discrepancies and resolve the issue.
+
+COMMENT #264
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #265
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #266
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #267
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #268
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #269
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+The question is really not asking for a solution to the problem, per se - but more of what would the next step in the situation to triage the issue.... 
+
+Answer would be B over D.  Answer D would be the recommended solution IF the question asked to rectify/fixed the issue.
+
+Thoughts?
+
+COMMENT #270
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+desertlotus1211
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #271
+----------------------------------------
+Author: Unknown | Date: 12 months ago | Votes: 0
+The question is really not asking for a solution to the problem, per se - but more of what would the next step in the situation to triage the issue.... 
+
+Answer would be B over D.  Answer D would be the recommended solution IF the question asked to rectify/fixed the issue.
+
+Thoughts?
+
+COMMENT #272
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+The question is really not asking for a solution to the problem, per se - but more of what would the next step in the situation to triage the issue.... 
+
+Answer would be B over D.  Answer D would be the recommended solution IF the question asked to rectify/fixed the issue.
+
+Thoughts?
+
+COMMENT #273
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #274
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #275
+----------------------------------------
+Author: Unknown | Date: 12 months ago | Votes: 0
+Agree with u
+
+COMMENT #276
+----------------------------------------
+Author: Unknown | Date: 12 months ago | Votes: 0
+Agree with u
+
+COMMENT #277
+----------------------------------------
+Author: Unknown | Date: 12 months ago | Votes: 0
+izekc
+			
+
+
+			12 months ago
+
+COMMENT #278
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Agree with u
+
+COMMENT #279
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Agree with u
+
+COMMENT #280
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #281
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #282
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #283
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #284
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #285
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+D. Dataflow must PULL the data to process it in real-time. Missing messages in the dashboard, means that the Pub/Sub to Dataflow was misconfigured as PUSH.
+
+COMMENT #286
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Prakzz
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #287
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+D. Dataflow must PULL the data to process it in real-time. Missing messages in the dashboard, means that the Pub/Sub to Dataflow was misconfigured as PUSH.
+
+COMMENT #288
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+COMMENT #289
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+D. Dataflow must PULL the data to process it in real-time. Missing messages in the dashboard, means that the Pub/Sub to Dataflow was misconfigured as PUSH.
+
+COMMENT #290
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #291
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #292
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Pull will lead to latency as new data will not be streamed upon arrival, but instead will only be passed on when Dataflow makes a pull request. So if data comes in at time 0:01 but pull requests are only happening every 10 seconds, we have 9 second delay. Push will automatically push the data to any subscribers as soon as the data comes, and thus is closer to real-time.
+
+COMMENT #293
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Pull will lead to latency as new data will not be streamed upon arrival, but instead will only be passed on when Dataflow makes a pull request. So if data comes in at time 0:01 but pull requests are only happening every 10 seconds, we have 9 second delay. Push will automatically push the data to any subscribers as soon as the data comes, and thus is closer to real-time.
+
+COMMENT #294
+----------------------------------------
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+hasoweh
+			
+
+
+			1 year, 2 months ago
+
+COMMENT #295
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Pull will lead to latency as new data will not be streamed upon arrival, but instead will only be passed on when Dataflow makes a pull request. So if data comes in at time 0:01 but pull requests are only happening every 10 seconds, we have 9 second delay. Push will automatically push the data to any subscribers as soon as the data comes, and thus is closer to real-time.
+
+COMMENT #296
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Pull will lead to latency as new data will not be streamed upon arrival, but instead will only be passed on when Dataflow makes a pull request. So if data comes in at time 0:01 but pull requests are only happening every 10 seconds, we have 9 second delay. Push will automatically push the data to any subscribers as soon as the data comes, and thus is closer to real-time.
+
+COMMENT #297
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #298
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #299
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #300
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #301
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #302
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+To me, B sounds more logical for the below reason.
+Option C would have been ideal because any debugging starts with checking the logs, however the option says, check stackdriver for missing messages. Had it been, check stackdriver to figure out the number of undelivered messages, C would have been more suitable. Given the slight bit of dodginess in option c, I would go with B
+
+COMMENT #303
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Krish6488
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #304
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+To me, B sounds more logical for the below reason.
+Option C would have been ideal because any debugging starts with checking the logs, however the option says, check stackdriver for missing messages. Had it been, check stackdriver to figure out the number of undelivered messages, C would have been more suitable. Given the slight bit of dodginess in option c, I would go with B
+
+COMMENT #305
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #306
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+To me, B sounds more logical for the below reason.
+Option C would have been ideal because any debugging starts with checking the logs, however the option says, check stackdriver for missing messages. Had it been, check stackdriver to figure out the number of undelivered messages, C would have been more suitable. Given the slight bit of dodginess in option c, I would go with B
+
+COMMENT #307
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #308
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #309
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #310
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #311
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Why checking Pub/Sub again when this is already verified to be fine according to the question. Shouldn't you be checking the next stage in the flow which is Dataflow? 
+Option - B
+
+COMMENT #312
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Nirca
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #313
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Why checking Pub/Sub again when this is already verified to be fine according to the question. Shouldn't you be checking the next stage in the flow which is Dataflow? 
+Option - B
+
+COMMENT #314
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #315
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Why checking Pub/Sub again when this is already verified to be fine according to the question. Shouldn't you be checking the next stage in the flow which is Dataflow? 
+Option - B
+
+COMMENT #316
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #317
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #318
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #319
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #320
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Answer - B. Because already we know message is missing so better to test with fixed dataset and check code .
+
+COMMENT #321
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+DGames
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #322
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer - B. Because already we know message is missing so better to test with fixed dataset and check code .
+
+COMMENT #323
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #324
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer - B. Because already we know message is missing so better to test with fixed dataset and check code .
+
+COMMENT #325
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #326
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #327
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #328
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #329
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+C
+https://cloud.google.com/pubsub/docs/monitoring#:~:text=the%20specific%20metrics.-,Monitor%20message%20backlog,information%20about%20this%20metric%2C%20see%20the%20relevant%20section%20of%20this%20document.,-Create%20alerting%20policies
+
+COMMENT #330
+----------------------------------------
+Author: Unknown | Date: 1 year, 4 months ago | Votes: 0
+Atnafu
+			
+
+
+			1 year, 4 months ago
+
+COMMENT #331
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C
+https://cloud.google.com/pubsub/docs/monitoring#:~:text=the%20specific%20metrics.-,Monitor%20message%20backlog,information%20about%20this%20metric%2C%20see%20the%20relevant%20section%20of%20this%20document.,-Create%20alerting%20policies
+
+COMMENT #332
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+C
+https://cloud.google.com/pubsub/docs/monitoring#:~:text=the%20specific%20metrics.-,Monitor%20message%20backlog,information%20about%20this%20metric%2C%20see%20the%20relevant%20section%20of%20this%20document.,-Create%20alerting%20policies
+
+COMMENT #333
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #334
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #335
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #336
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #337
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #338
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #339
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

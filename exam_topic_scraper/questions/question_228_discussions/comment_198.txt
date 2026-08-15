@@ -1,0 +1,14 @@
+COMMENT #198 FOR QUESTION 228
+============================================================
+Author: Unknown
+Date: 1 year, 2 months ago
+Votes: 0
+----------------------------------------
+- Pub/Sub Snapshots allow you to capture the state of a subscription's unacknowledged messages at a particular point in time. 
+- By creating a snapshot two days before deploying the updated pipeline, you can later use this snapshot to replay the messages from that point. 
+=============
+Option E:
+- Pub/Sub Seek allows us to alter the acknowledgment state of messages in bulk. 
+- So we can rewind a subscription to a point in time or a snapshot. 
+- Using Seek with a timestamp corresponding to two days ago would allow the updated pipeline to reprocess messages from that time.
+============================================================

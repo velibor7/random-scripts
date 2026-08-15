@@ -1,0 +1,1134 @@
+================================================================================
+QUESTION:
+Your company is migrating their 30-node Apache Hadoop cluster to the cloud. They want to re-use Hadoop jobs they have already created and minimize the management of the cluster as much as possible. They also want to be able to persist data beyond the life of the cluster. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a Google Cloud Dataflow job to process the data.
+										
+
+
+													B.
+												
+											
+											Create a Google Cloud Dataproc cluster that uses persistent disks for HDFS.
+										
+
+
+													C.
+												
+											
+											Create a Hadoop cluster on Google Compute Engine that uses persistent disks.
+										
+
+
+													D.
+												
+											
+											Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+										
+
+
+													E.
+												
+											
+											Create a Hadoop cluster on Google Compute Engine that uses Local SSD disks.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (192 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 17 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 17
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your company is migrating their 30-node Apache Hadoop cluster to the cloud. They want to re-use Hadoop jobs they have already created and minimize the management of the cluster as much as possible. They also want to be able to persist data beyond the life of the cluster. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a Google Cloud Dataflow job to process the data.
+										
+
+
+													B.
+												
+											
+											Create a Google Cloud Dataproc cluster that uses persistent disks for HDFS.
+										
+
+
+													C.
+												
+											
+											Create a Hadoop cluster on Google Compute Engine that uses persistent disks.
+										
+
+
+													D.
+												
+											
+											Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+										
+
+
+													E.
+												
+											
+											Create a Hadoop cluster on Google Compute Engine that uses Local SSD disks.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 16, 2020, 11:26 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 17
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 16, 2020, 11:26 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+D is correct because it uses managed services, and also allows for the data to persist on GCS beyond the life of the cluster.
+A is not correct because the goal is to re-use their Hadoop jobs and MapReduce and/or Spark jobs cannot simply be moved to Dataflow.
+B is not correct because the goal is to persist the data beyond the life of the ephemeral clusters, and if HDFS is used as the primary attached storage mechanism, it will also disappear at the end of the cluster’s life.
+C is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+E is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+
+--- Comment #6 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+D is correct because it uses managed services, and also allows for the data to persist on GCS beyond the life of the cluster.
+A is not correct because the goal is to re-use their Hadoop jobs and MapReduce and/or Spark jobs cannot simply be moved to Dataflow.
+B is not correct because the goal is to persist the data beyond the life of the ephemeral clusters, and if HDFS is used as the primary attached storage mechanism, it will also disappear at the end of the cluster’s life.
+C is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+E is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+
+--- Comment #7 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+D is correct because it uses managed services, and also allows for the data to persist on GCS beyond the life of the cluster.
+A is not correct because the goal is to re-use their Hadoop jobs and MapReduce and/or Spark jobs cannot simply be moved to Dataflow.
+B is not correct because the goal is to persist the data beyond the life of the ephemeral clusters, and if HDFS is used as the primary attached storage mechanism, it will also disappear at the end of the cluster’s life.
+C is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+E is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+D is correct because it uses managed services, and also allows for the data to persist on GCS beyond the life of the cluster.
+A is not correct because the goal is to re-use their Hadoop jobs and MapReduce and/or Spark jobs cannot simply be moved to Dataflow.
+B is not correct because the goal is to persist the data beyond the life of the ephemeral clusters, and if HDFS is used as the primary attached storage mechanism, it will also disappear at the end of the cluster’s life.
+C is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+E is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+
+--- Comment #13 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+D is correct because it uses managed services, and also allows for the data to persist on GCS beyond the life of the cluster.
+A is not correct because the goal is to re-use their Hadoop jobs and MapReduce and/or Spark jobs cannot simply be moved to Dataflow.
+B is not correct because the goal is to persist the data beyond the life of the ephemeral clusters, and if HDFS is used as the primary attached storage mechanism, it will also disappear at the end of the cluster’s life.
+C is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+E is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+
+--- Comment #14 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+MaxNRG
+			
+
+
+				Highly Voted 
+
+
+			3 years, 5 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+D is correct because it uses managed services, and also allows for the data to persist on GCS beyond the life of the cluster.
+A is not correct because the goal is to re-use their Hadoop jobs and MapReduce and/or Spark jobs cannot simply be moved to Dataflow.
+B is not correct because the goal is to persist the data beyond the life of the ephemeral clusters, and if HDFS is used as the primary attached storage mechanism, it will also disappear at the end of the cluster’s life.
+C is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+E is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct because it uses managed services, and also allows for the data to persist on GCS beyond the life of the cluster.
+A is not correct because the goal is to re-use their Hadoop jobs and MapReduce and/or Spark jobs cannot simply be moved to Dataflow.
+B is not correct because the goal is to persist the data beyond the life of the ephemeral clusters, and if HDFS is used as the primary attached storage mechanism, it will also disappear at the end of the cluster’s life.
+C is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+E is not correct because the goal is to use managed services as much as possible, and this is the opposite.
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+B is incorrect bcoz, it did not say 'off cluster' persistent HDFS discs???
+
+--- Comment #20 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+B is incorrect bcoz, it did not say 'off cluster' persistent HDFS discs???
+
+--- Comment #21 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+certs4pk
+			
+
+
+			4 months, 1 week ago
+
+--- Comment #22 ---
+Author: Unknown | Date:  | Votes: 0
+B is incorrect bcoz, it did not say 'off cluster' persistent HDFS discs???
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+B is incorrect bcoz, it did not say 'off cluster' persistent HDFS discs???
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+The correct answer is D. Here is the explanation to why Data proc and why not Data flow. 
+When a company wants to move their existing Hadoop jobs  on premise to cloud, we can simply move the jobs in cloud data prod and replace hdfs with gs:// which is google storage. This way you are keeping compute and storage separately. Hence the correct answer is D. However, if the company wants to complete create a new jobs and don’t want to use the existing Hadoop jobs running on premise, the option is to create new data flow jobs.
+
+--- Comment #30 ---
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+Radhika7983
+			
+
+
+				Highly Voted 
+
+
+			4 years, 5 months ago
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is D. Here is the explanation to why Data proc and why not Data flow. 
+When a company wants to move their existing Hadoop jobs  on premise to cloud, we can simply move the jobs in cloud data prod and replace hdfs with gs:// which is google storage. This way you are keeping compute and storage separately. Hence the correct answer is D. However, if the company wants to complete create a new jobs and don’t want to use the existing Hadoop jobs running on premise, the option is to create new data flow jobs.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is D. Here is the explanation to why Data proc and why not Data flow. 
+When a company wants to move their existing Hadoop jobs  on premise to cloud, we can simply move the jobs in cloud data prod and replace hdfs with gs:// which is google storage. This way you are keeping compute and storage separately. Hence the correct answer is D. However, if the company wants to complete create a new jobs and don’t want to use the existing Hadoop jobs running on premise, the option is to create new data flow jobs.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+Dataproc clusters can be created to lift and shift existing Hadoop jobs
+Data stored in Google Cloud Storage extends beyond the life of a Dataproc cluster.
+
+--- Comment #38 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+suku2
+			
+
+
+				Most Recent 
+
+
+			6 months, 2 weeks ago
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+Dataproc clusters can be created to lift and shift existing Hadoop jobs
+Data stored in Google Cloud Storage extends beyond the life of a Dataproc cluster.
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+Dataproc clusters can be created to lift and shift existing Hadoop jobs
+Data stored in Google Cloud Storage extends beyond the life of a Dataproc cluster.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+
+Here's why:
+
+    Cloud Dataproc allows you to run Apache Hadoop jobs with minimal management. It is a managed Hadoop service.
+
+    Using the Google Cloud Storage (GCS) connector, Dataproc can access data stored in GCS, which allows data persistence beyond the life of the cluster. This means that even if the cluster is deleted, the data in GCS remains intact. Moreover, using GCS is often cheaper and more durable than using HDFS on persistent disks.
+
+--- Comment #47 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+imran79
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #48 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+
+Here's why:
+
+    Cloud Dataproc allows you to run Apache Hadoop jobs with minimal management. It is a managed Hadoop service.
+
+    Using the Google Cloud Storage (GCS) connector, Dataproc can access data stored in GCS, which allows data persistence beyond the life of the cluster. This means that even if the cluster is deleted, the data in GCS remains intact. Moreover, using GCS is often cheaper and more durable than using HDFS on persistent disks.
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+
+Here's why:
+
+    Cloud Dataproc allows you to run Apache Hadoop jobs with minimal management. It is a managed Hadoop service.
+
+    Using the Google Cloud Storage (GCS) connector, Dataproc can access data stored in GCS, which allows data persistence beyond the life of the cluster. This means that even if the cluster is deleted, the data in GCS remains intact. Moreover, using GCS is often cheaper and more durable than using HDFS on persistent disks.
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+what if option B said, 'off cluster' persistent HDFS disks?
+
+--- Comment #53 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+what if option B said, 'off cluster' persistent HDFS disks?
+
+--- Comment #54 ---
+Author: Unknown | Date: 4 months, 1 week ago | Votes: 0
+certs4pk
+			
+
+
+			4 months, 1 week ago
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+what if option B said, 'off cluster' persistent HDFS disks?
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+what if option B said, 'off cluster' persistent HDFS disks?
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #62 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+
+Google Cloud Dataproc is a managed Hadoop and Spark service that allows you to easily create and manage Hadoop clusters in the cloud. By using the Google Cloud Storage connector, you can persist data in Google Cloud Storage, which provides durable storage beyond the cluster's lifecycle. This approach ensures data is retained even if the cluster is terminated, and it allows you to reuse your existing Hadoop jobs.
+
+Option B (Creating a Dataproc cluster that uses persistent disks for HDFS) is another valid choice. However, using Google Cloud Storage for data storage and processing is often more cost-effective and scalable, especially when migrating to the cloud.
+
+Options A, C, and E do not take full advantage of Google Cloud's services and the benefits of cloud-native data storage and processing with Google Cloud Storage and Dataproc.
+
+--- Comment #63 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+rtcpost
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+
+Google Cloud Dataproc is a managed Hadoop and Spark service that allows you to easily create and manage Hadoop clusters in the cloud. By using the Google Cloud Storage connector, you can persist data in Google Cloud Storage, which provides durable storage beyond the cluster's lifecycle. This approach ensures data is retained even if the cluster is terminated, and it allows you to reuse your existing Hadoop jobs.
+
+Option B (Creating a Dataproc cluster that uses persistent disks for HDFS) is another valid choice. However, using Google Cloud Storage for data storage and processing is often more cost-effective and scalable, especially when migrating to the cloud.
+
+Options A, C, and E do not take full advantage of Google Cloud's services and the benefits of cloud-native data storage and processing with Google Cloud Storage and Dataproc.
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+
+Google Cloud Dataproc is a managed Hadoop and Spark service that allows you to easily create and manage Hadoop clusters in the cloud. By using the Google Cloud Storage connector, you can persist data in Google Cloud Storage, which provides durable storage beyond the cluster's lifecycle. This approach ensures data is retained even if the cluster is terminated, and it allows you to reuse your existing Hadoop jobs.
+
+Option B (Creating a Dataproc cluster that uses persistent disks for HDFS) is another valid choice. However, using Google Cloud Storage for data storage and processing is often more cost-effective and scalable, especially when migrating to the cloud.
+
+Options A, C, and E do not take full advantage of Google Cloud's services and the benefits of cloud-native data storage and processing with Google Cloud Storage and Dataproc.
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #71 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+Option D is incorrect, as it would not provide persistent HDFS storage within cluster itself. Rather B should be the correct answer.
+
+--- Comment #72 ---
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+fahadminhas
+			
+
+
+			9 months, 2 weeks ago
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+Option D is incorrect, as it would not provide persistent HDFS storage within cluster itself. Rather B should be the correct answer.
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+Option D is incorrect, as it would not provide persistent HDFS storage within cluster itself. Rather B should be the correct answer.
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #79 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+Correct D
+
+--- Comment #80 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+kshehadyx
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+Correct D
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+Correct D
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #87 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Hadoop --> Dataproc   Persistent storage after the processing --> GCS
+
+--- Comment #88 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+bha11111
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+Hadoop --> Dataproc   Persistent storage after the processing --> GCS
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+Hadoop --> Dataproc   Persistent storage after the processing --> GCS
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #96 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+D Seems right. Cloud storage can be used to achieve data storage even after the life of cluster.
+
+--- Comment #97 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+samdhimal
+			
+
+
+			2 years, 2 months ago
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+D Seems right. Cloud storage can be used to achieve data storage even after the life of cluster.
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+D Seems right. Cloud storage can be used to achieve data storage even after the life of cluster.
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #105 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+The answer is D! Dataproc have no need for use to manage the infra and cloudstorage also no need for us to manage too!
+
+--- Comment #106 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+korntewin
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is D! Dataproc have no need for use to manage the infra and cloudstorage also no need for us to manage too!
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is D! Dataproc have no need for use to manage the infra and cloudstorage also no need for us to manage too!
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #114 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+
+--- Comment #115 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Nirca
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+D. Create a Cloud Dataproc cluster that uses the Google Cloud Storage connector.
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #123 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Seems like it is D. https://cloud.google.com/dataproc/docs/concepts/dataproc-hdfs
+Never saw they mentioned persistent disks, although they are not deleted with the clusters...
+
+--- Comment #124 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+assU2
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #125 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Seems like it is D. https://cloud.google.com/dataproc/docs/concepts/dataproc-hdfs
+Never saw they mentioned persistent disks, although they are not deleted with the clusters...
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+Seems like it is D. https://cloud.google.com/dataproc/docs/concepts/dataproc-hdfs
+Never saw they mentioned persistent disks, although they are not deleted with the clusters...
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+although:
+By default, when no local SSDs are provided, HDFS data and intermediate shuffle data is stored on VM boot disks, which are Persistent Disks.
+
+--- Comment #130 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+although:
+By default, when no local SSDs are provided, HDFS data and intermediate shuffle data is stored on VM boot disks, which are Persistent Disks.
+
+--- Comment #131 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+assU2
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #132 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+although:
+By default, when no local SSDs are provided, HDFS data and intermediate shuffle data is stored on VM boot disks, which are Persistent Disks.
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+although:
+By default, when no local SSDs are provided, HDFS data and intermediate shuffle data is stored on VM boot disks, which are Persistent Disks.
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #136 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+and it says that only VM Boot disks are deleted when the cluster is deleted.
+
+--- Comment #137 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+and it says that only VM Boot disks are deleted when the cluster is deleted.
+
+--- Comment #138 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+assU2
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+and it says that only VM Boot disks are deleted when the cluster is deleted.
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+and it says that only VM Boot disks are deleted when the cluster is deleted.
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #147 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Correct Answer : D
+
+--- Comment #148 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+achafill
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+Correct Answer : D
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+Correct Answer : D
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #156 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+Dataproc cluster set up will be ephemeral to run HDFS Jobs and can be killed after Job execution killing persistent storage with cluster
+
+--- Comment #157 ---
+Author: Unknown | Date: 2 years, 6 months ago | Votes: 0
+nkunwar
+			
+
+
+			2 years, 6 months ago
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+Dataproc cluster set up will be ephemeral to run HDFS Jobs and can be killed after Job execution killing persistent storage with cluster
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+Dataproc cluster set up will be ephemeral to run HDFS Jobs and can be killed after Job execution killing persistent storage with cluster
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #165 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Anwer: D
+
+--- Comment #166 ---
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+crisimenjivar
+			
+
+
+			2 years, 7 months ago
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+Anwer: D
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+Anwer: D
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #173 ---
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+Isn't it A and D both dataflow for reusable jobs and gcs for data peraistance?
+
+--- Comment #174 ---
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+Asheesh1909
+			
+
+
+			2 years, 10 months ago
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+Isn't it A and D both dataflow for reusable jobs and gcs for data peraistance?
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+Isn't it A and D both dataflow for reusable jobs and gcs for data peraistance?
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #180 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #181 ---
+Author: Unknown | Date: 2 years, 12 months ago | Votes: 0
+Two key points:
+Managed hadoop cluster - dataproc
+Persistent storage:  GCS (dataproc uses gcs connector to connect to gcs)
+
+--- Comment #182 ---
+Author: Unknown | Date: 2 years, 12 months ago | Votes: 0
+kmaiti
+			
+
+
+			2 years, 12 months ago
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+Two key points:
+Managed hadoop cluster - dataproc
+Persistent storage:  GCS (dataproc uses gcs connector to connect to gcs)
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+Two key points:
+Managed hadoop cluster - dataproc
+Persistent storage:  GCS (dataproc uses gcs connector to connect to gcs)
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #188 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #190 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #191 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

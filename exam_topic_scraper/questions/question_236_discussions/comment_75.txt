@@ -1,0 +1,11 @@
+COMMENT #75 FOR QUESTION 236
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Why not others: 
+Approach A: This approach requires you to restore a backup from a different region, which could take some time. This could result in a significant RPO (Recovery Point Objective) for the database. Additionally, the restored instance may not be physically located in the same region as the readers, which could impact performance.
+Approach C: This approach requires you to promote the read replica in region B, which could result in a temporary interruption to the readers while the promotion is taking place. Additionally, the read replica in region B may not be able to handle the same level of read traffic as the primary instance in region A.
+Approach D: This approach does not provide the same level of scalability as the other approaches, as you are limited to read replicas in the same region. Additionally, failover to the standby instance could result in a temporary interruption to the readers.
+============================================================

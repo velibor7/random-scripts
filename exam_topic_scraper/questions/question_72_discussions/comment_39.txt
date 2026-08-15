@@ -1,0 +1,10 @@
+COMMENT #39 FOR QUESTION 72
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+For the ones saying BigTable is cheaper, BigTable in eu-north1 costs $0.748/hour per node. So if you were to run the node 24/7 you would pay more than 500$ per month. Querying 1TB of data in BigQuery is 7.5$. With smart querying and good database design you can minimize the bytes processed by BQ. So even though BigTable does not directly charge for querying, it charges for running the cluster and the overall price does not make sense. And as far as I know, it's not possible to spin up and shut down BigTable automatically. 
+
+Also, since the table is an external table to BigQuery, we incur no cost for storing that data in BigQuery and paying 300$ per month for storage.
+============================================================

@@ -1,0 +1,1203 @@
+ALL COMMENTS FOR QUESTION 110
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 110 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 110
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are creating a new pipeline in Google Cloud to stream IoT data from Cloud Pub/Sub through Cloud Dataflow to BigQuery. While previewing the data, you notice that roughly 2% of the data appears to be corrupt. You need to modify the Cloud Dataflow pipeline to filter out this corrupt data. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Add a SideInput that returns a Boolean if the element is corrupt.
+										
+
+
+													B.
+												
+											
+											Add a ParDo transform in Cloud Dataflow to discard corrupt elements.
+										
+
+
+													C.
+												
+											
+											Add a Partition transform in Cloud Dataflow to separate valid data from corrupt data.
+										
+
+
+													D.
+												
+											
+											Add a GroupByKey transform in Cloud Dataflow to group all of the valid data together and discard the rest.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 2:51 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 110
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 2:51 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Correct - B
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Correct - B
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Correct - B
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Correct - B
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Correct - B
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			3 years, 6 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct - B
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct - B
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 16 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Answer: B
+Description: ParDo is used to do transformation and create side output
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			3 years, 6 months ago
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+Description: ParDo is used to do transformation and create side output
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer: B
+Description: ParDo is used to do transformation and create side output
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date: 6 months, 4 weeks ago | Votes: 0
+A - SideInput is often used to validate data, however, we need to create the SideInput first. When using SideInput to filter data, it is actually another ParDo call.
+C, D - This is common way to filter too, but we will need the key in order to partition or GroupByKey
+B - ParDo is the most basic method, it can do anything to the PCollection
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date: 6 months, 4 weeks ago | Votes: 0
+midgoo
+			
+
+
+				Most Recent 
+
+
+			6 months, 4 weeks ago
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A - SideInput is often used to validate data, however, we need to create the SideInput first. When using SideInput to filter data, it is actually another ParDo call.
+C, D - This is common way to filter too, but we will need the key in order to partition or GroupByKey
+B - ParDo is the most basic method, it can do anything to the PCollection
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A - SideInput is often used to validate data, however, we need to create the SideInput first. When using SideInput to filter data, it is actually another ParDo call.
+C, D - This is common way to filter too, but we will need the key in order to partition or GroupByKey
+B - ParDo is the most basic method, it can do anything to the PCollection
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+B. Add a ParDo transform in Cloud Dataflow to discard corrupt elements.
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+AzureDP900
+			
+
+
+			9 months, 1 week ago
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Add a ParDo transform in Cloud Dataflow to discard corrupt elements.
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B. Add a ParDo transform in Cloud Dataflow to discard corrupt elements.
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/dataflow/docs/concepts/beam-programming-model#concepts
+ParDo is the core parallel processing operation in the Apache Beam SDKs, invoking a user-specified function on each of the elements of the input PCollection. ParDo collects the zero or more output elements into an output PCollection. The ParDo transform processes elements independently and possibly in parallel.
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date: 10 months, 1 week ago | Votes: 0
+zellck
+			
+
+
+			10 months, 1 week ago
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+https://cloud.google.com/dataflow/docs/concepts/beam-programming-model#concepts
+ParDo is the core parallel processing operation in the Apache Beam SDKs, invoking a user-specified function on each of the elements of the input PCollection. ParDo collects the zero or more output elements into an output PCollection. The ParDo transform processes elements independently and possibly in parallel.
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+https://cloud.google.com/dataflow/docs/concepts/beam-programming-model#concepts
+ParDo is the core parallel processing operation in the Apache Beam SDKs, invoking a user-specified function on each of the elements of the input PCollection. ParDo collects the zero or more output elements into an output PCollection. The ParDo transform processes elements independently and possibly in parallel.
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+vote B :https://beam.apache.org/documentation/programming-guide/#pardo 
+
+Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection or discard it.
+Formatting or type-converting each element in a data set. If your input PCollection contains elements that are of a different type or format than you want, you can use ParDo to perform a conversion on each element and output the result to a new PCollection.
+Extracting parts of each element in a data set. If you have a PCollection of records with multiple fields, for example, you can use a ParDo to parse out just the fields you want to consider into a new PCollection.
+Performing computations on each element in a data set. You can use ParDo to perform simple or complex computations on every element, or certain elements, of a PCollection and output the results as a new PCollection.
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Pime13
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+vote B :https://beam.apache.org/documentation/programming-guide/#pardo 
+
+Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection or discard it.
+Formatting or type-converting each element in a data set. If your input PCollection contains elements that are of a different type or format than you want, you can use ParDo to perform a conversion on each element and output the result to a new PCollection.
+Extracting parts of each element in a data set. If you have a PCollection of records with multiple fields, for example, you can use a ParDo to parse out just the fields you want to consider into a new PCollection.
+Performing computations on each element in a data set. You can use ParDo to perform simple or complex computations on every element, or certain elements, of a PCollection and output the results as a new PCollection.
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+vote B :https://beam.apache.org/documentation/programming-guide/#pardo 
+
+Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection or discard it.
+Formatting or type-converting each element in a data set. If your input PCollection contains elements that are of a different type or format than you want, you can use ParDo to perform a conversion on each element and output the result to a new PCollection.
+Extracting parts of each element in a data set. If you have a PCollection of records with multiple fields, for example, you can use a ParDo to parse out just the fields you want to consider into a new PCollection.
+Performing computations on each element in a data set. You can use ParDo to perform simple or complex computations on every element, or certain elements, of a PCollection and output the results as a new PCollection.
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Filtering with ParDo. ParDo is a Beam transform for generic parallel processing. ParDo is useful for common data processing operations/
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+medeis_jar
+			
+
+
+			1 year, 9 months ago
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+Filtering with ParDo. ParDo is a Beam transform for generic parallel processing. ParDo is useful for common data processing operations/
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Filtering with ParDo. ParDo is a Beam transform for generic parallel processing. ParDo is useful for common data processing operations/
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+I agree with B
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+I agree with B
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+AzureDP900
+			
+
+
+			9 months, 1 week ago
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I agree with B
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+I agree with B
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+B: ParDo is a Beam transform for generic parallel processing. ParDo is useful for common data processing operations, including:
+a. Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection, or discard it.
+b. Formatting or type-converting each element in a data set.
+c. Extracting parts of each element in a data set.
+d. Performing computations on each element in a data set.
+A does not help
+C Partition is a Beam transform for PCollection objects that store the same data type. Partition splits a single PCollection into a fixed number of smaller collections. Again, does not help
+D GroupByKey is a Beam transform for processing collections of key/value pairs. GroupByKey is a good way to aggregate data that has something in common
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 9 months ago
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B: ParDo is a Beam transform for generic parallel processing. ParDo is useful for common data processing operations, including:
+a. Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection, or discard it.
+b. Formatting or type-converting each element in a data set.
+c. Extracting parts of each element in a data set.
+d. Performing computations on each element in a data set.
+A does not help
+C Partition is a Beam transform for PCollection objects that store the same data type. Partition splits a single PCollection into a fixed number of smaller collections. Again, does not help
+D GroupByKey is a Beam transform for processing collections of key/value pairs. GroupByKey is a good way to aggregate data that has something in common
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B: ParDo is a Beam transform for generic parallel processing. ParDo is useful for common data processing operations, including:
+a. Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection, or discard it.
+b. Formatting or type-converting each element in a data set.
+c. Extracting parts of each element in a data set.
+d. Performing computations on each element in a data set.
+A does not help
+C Partition is a Beam transform for PCollection objects that store the same data type. Partition splits a single PCollection into a fixed number of smaller collections. Again, does not help
+D GroupByKey is a Beam transform for processing collections of key/value pairs. GroupByKey is a good way to aggregate data that has something in common
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+vote for 'B', ParDo can discard the elements.
+
+https://beam.apache.org/documentation/programming-guide/
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+sumanshu
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+vote for 'B', ParDo can discard the elements.
+
+https://beam.apache.org/documentation/programming-guide/
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+vote for 'B', ParDo can discard the elements.
+
+https://beam.apache.org/documentation/programming-guide/
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+B - seems to be better option since we need to filter out, question does not specify that we do need to store it into different  Pcollection.
+https://beam.apache.org/documentation/transforms/python/overview/ 
+ParDo is general purpose whereas partition splits the elements into do different pcollections.
+https://beam.apache.org/documentation/transforms/python/elementwise/partition/
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+DeepakKhattar
+			
+
+
+			2 years, 9 months ago
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B - seems to be better option since we need to filter out, question does not specify that we do need to store it into different  Pcollection.
+https://beam.apache.org/documentation/transforms/python/overview/ 
+ParDo is general purpose whereas partition splits the elements into do different pcollections.
+https://beam.apache.org/documentation/transforms/python/elementwise/partition/
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B - seems to be better option since we need to filter out, question does not specify that we do need to store it into different  Pcollection.
+https://beam.apache.org/documentation/transforms/python/overview/ 
+ParDo is general purpose whereas partition splits the elements into do different pcollections.
+https://beam.apache.org/documentation/transforms/python/elementwise/partition/
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+B is correct
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+arghya13
+			
+
+
+			2 years, 10 months ago
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is correct
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is correct
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Should be B. The Partition transform would require the element identifying the valid/invalid records for partitioning the pcollection that means there is some logic to be executed before the Partition transformation is invoked. That logic can be implemented in a ParDO transform and which can both identify valid/invalid records and also generate two PCollections one with valid records and other with invalid records.
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+SteelWarrior
+			
+
+
+			3 years ago
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Should be B. The Partition transform would require the element identifying the valid/invalid records for partitioning the pcollection that means there is some logic to be executed before the Partition transformation is invoked. That logic can be implemented in a ParDO transform and which can both identify valid/invalid records and also generate two PCollections one with valid records and other with invalid records.
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Should be B. The Partition transform would require the element identifying the valid/invalid records for partitioning the pcollection that means there is some logic to be executed before the Partition transformation is invoked. That logic can be implemented in a ParDO transform and which can both identify valid/invalid records and also generate two PCollections one with valid records and other with invalid records.
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 7 times
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+B is correct
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+haroldbenites
+			
+
+
+			3 years, 1 month ago
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is correct
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B is correct
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+B, ParDo is useful for a variety of common data processing operations, including:
+
+Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection or discard it.
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Archy
+			
+
+
+			3 years, 2 months ago
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B, ParDo is useful for a variety of common data processing operations, including:
+
+Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection or discard it.
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+B, ParDo is useful for a variety of common data processing operations, including:
+
+Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection or discard it.
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+Looks like C it is
+https://beam.apache.org/documentation/programming-guide/
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date: 3 years, 2 months ago | Votes: 0
+tprashanth
+			
+
+
+			3 years, 2 months ago
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Looks like C it is
+https://beam.apache.org/documentation/programming-guide/
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Looks like C it is
+https://beam.apache.org/documentation/programming-guide/
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+according this link its 
+Pardo
+* Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection or discard it.
+* But Partition just splitting which is is a Beam transform for PCollection objects that store the same data type. Partition splits a single PCollection into a fixed number of smaller collections.
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+according this link its 
+Pardo
+* Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection or discard it.
+* But Partition just splitting which is is a Beam transform for PCollection objects that store the same data type. Partition splits a single PCollection into a fixed number of smaller collections.
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+atnafu2020
+			
+
+
+			3 years, 1 month ago
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+according this link its 
+Pardo
+* Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection or discard it.
+* But Partition just splitting which is is a Beam transform for PCollection objects that store the same data type. Partition splits a single PCollection into a fixed number of smaller collections.
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+according this link its 
+Pardo
+* Filtering a data set. You can use ParDo to consider each element in a PCollection and either output that element to a new collection or discard it.
+* But Partition just splitting which is is a Beam transform for PCollection objects that store the same data type. Partition splits a single PCollection into a fixed number of smaller collections.
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+Seems like two answers may be correct. With ParDo you can discard corrupt data. With Partition you can split the data into two PCollections: corrupt and ok. You stream ok data further to BigQuery and corrupt data to some other storage for analysis. If one is not interested in analysis, then ParDo is enough.
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+Seems like two answers may be correct. With ParDo you can discard corrupt data. With Partition you can split the data into two PCollections: corrupt and ok. You stream ok data further to BigQuery and corrupt data to some other storage for analysis. If one is not interested in analysis, then ParDo is enough.
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date: 2 years, 10 months ago | Votes: 0
+xrun
+			
+
+
+			2 years, 10 months ago
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Seems like two answers may be correct. With ParDo you can discard corrupt data. With Partition you can split the data into two PCollections: corrupt and ok. You stream ok data further to BigQuery and corrupt data to some other storage for analysis. If one is not interested in analysis, then ParDo is enough.
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Seems like two answers may be correct. With ParDo you can discard corrupt data. With Partition you can split the data into two PCollections: corrupt and ok. You stream ok data further to BigQuery and corrupt data to some other storage for analysis. If one is not interested in analysis, then ParDo is enough.
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Correct answer should be "C". A Pardo transform will allow the processing to happening in parallel using multiple workers. Partition transform will allow data to be partitions in two different Pcollections according to some logic. Using partition transform once can split the  corrupted data and finally discard it.
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+dg63
+			
+
+
+			3 years, 3 months ago
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct answer should be "C". A Pardo transform will allow the processing to happening in parallel using multiple workers. Partition transform will allow data to be partitions in two different Pcollections according to some logic. Using partition transform once can split the  corrupted data and finally discard it.
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct answer should be "C". A Pardo transform will allow the processing to happening in parallel using multiple workers. Partition transform will allow data to be partitions in two different Pcollections according to some logic. Using partition transform once can split the  corrupted data and finally discard it.
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Correct B.
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Rajuuu
+			
+
+
+			3 years, 3 months ago
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct B.
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct B.
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

@@ -1,0 +1,15 @@
+COMMENT #32 FOR QUESTION 193
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Option D is the best approach given the constraints - use an Apache Beam custom connector to write a Dataflow pipeline that streams the data into BigQuery in Avro format.
+The key reasons:
+•	Dataflow provides managed resource scaling for efficient stream processing
+•	Avro format has schema evolution capabilities and efficient serialization for flight telemetry data
+•	Apache Beam connectors avoid having to write much code to integrate proprietary data sources
+•	Streaming inserts data efficiently compared to periodic batch jobs
+In contrast, option A uses Cloud Functions which lack native streaming capabilities. Option B stores data in less efficient JSON format. Option C uses Dataproc which requires manual cluster management.
+So leveraging Dataflow + Avro + Beam provides the most efficient way to stream proprietary flight data into BigQuery while using minimal resources.
+============================================================

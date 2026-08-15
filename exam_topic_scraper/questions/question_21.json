@@ -1,0 +1,1741 @@
+{
+  "question": "Your company uses a proprietary system to send inventory data every 6 hours to a data ingestion service in the cloud. Transmitted data includes a payload of several fields and the timestamp of the transmission. If there are any concerns about a transmission, the system re-transmits the data. How should you deduplicate the data most efficiency?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAssign global unique identifiers (GUID) to each data entry.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCompute the hash value of each data entry, and compare it with all historical data.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tStore each data entry as the primary key in a separate database and apply an index.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tMaintain a database table to store the hash value and other metadata for each data entry.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 21 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 21\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYour company uses a proprietary system to send inventory data every 6 hours to a data ingestion service in the cloud. Transmitted data includes a payload of several fields and the timestamp of the transmission. If there are any concerns about a transmission, the system re-transmits the data. How should you deduplicate the data most efficiency?\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tAssign global unique identifiers (GUID) to each data entry.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCompute the hash value of each data entry, and compare it with all historical data.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tStore each data entry as the primary key in a separate database and apply an index.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tMaintain a database table to store the hash value and other metadata for each data entry.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 18, 2020, 4:13 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 21\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t[deleted]\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tMarch 18, 2020, 4:13 p.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 9\u00a0months ago",
+      "content": "The best answer is \"A\". \nAnswer \"D\" is not as efficient or error-proof due to two reasons\n1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.\n2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash. \nif timestamp is used as message creation timestamp than that can also be used as a UUID.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 9\u00a0months ago",
+      "content": "The best answer is \"A\". \nAnswer \"D\" is not as efficient or error-proof due to two reasons\n1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.\n2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash. \nif timestamp is used as message creation timestamp than that can also be used as a UUID.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 9\u00a0months ago",
+      "content": "The best answer is \"A\". \nAnswer \"D\" is not as efficient or error-proof due to two reasons\n1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.\n2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash. \nif timestamp is used as message creation timestamp than that can also be used as a UUID.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 9\u00a0months ago",
+      "content": "The best answer is \"A\". \nAnswer \"D\" is not as efficient or error-proof due to two reasons\n1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.\n2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash. \nif timestamp is used as message creation timestamp than that can also be used as a UUID.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 9\u00a0months ago",
+      "content": "The best answer is \"A\". \nAnswer \"D\" is not as efficient or error-proof due to two reasons\n1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.\n2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash. \nif timestamp is used as message creation timestamp than that can also be used as a UUID.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 9\u00a0months ago",
+      "content": "dg63\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t4\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "The best answer is \"A\". \nAnswer \"D\" is not as efficient or error-proof due to two reasons\n1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.\n2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash. \nif timestamp is used as message creation timestamp than that can also be used as a UUID.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The best answer is \"A\". \nAnswer \"D\" is not as efficient or error-proof due to two reasons\n1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.\n2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash. \nif timestamp is used as message creation timestamp than that can also be used as a UUID.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 67 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "If you add a unique ID aren't you by definition not getting a duplicate record. Honestly I hate  all these answers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "If you add a unique ID aren't you by definition not getting a duplicate record. Honestly I hate  all these answers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 6\u00a0months ago",
+      "content": "emmylou\n\t\t\t\n\n\n\t\t\t1\u00a0year, 6\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 4\u00a0weeks ago",
+      "content": "If you add a unique ID aren't you by definition not getting a duplicate record. Honestly I hate  all these answers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If you add a unique ID aren't you by definition not getting a duplicate record. Honestly I hate  all these answers.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 4\u00a0weeks ago",
+      "content": "You can add a function or condition that verifies if the global unique id already exists or just do a deduplication later",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 4\u00a0weeks ago",
+      "content": "You can add a function or condition that verifies if the global unique id already exists or just do a deduplication later",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 4\u00a0weeks ago",
+      "content": "billalltf\n\t\t\t\n\n\n\t\t\t10\u00a0months, 4\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You can add a function or condition that verifies if the global unique id already exists or just do a deduplication later",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "You can add a function or condition that verifies if the global unique id already exists or just do a deduplication later",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 5\u00a0months ago",
+      "content": "If the goal is to ensure at least ONE of each pair of entries is inserted into the db, then how is assigning a GUID to each entry resolving the duplicates?  Keep in mind if the 1st entry fails, then hopefully the 2nd (duplicate) is successful.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "4\u00a0years, 5\u00a0months ago",
+      "content": "retax\n\t\t\t\n\n\n\t\t\t4\u00a0years, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 9\u00a0months ago",
+      "content": "If the goal is to ensure at least ONE of each pair of entries is inserted into the db, then how is assigning a GUID to each entry resolving the duplicates?  Keep in mind if the 1st entry fails, then hopefully the 2nd (duplicate) is successful.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "If the goal is to ensure at least ONE of each pair of entries is inserted into the db, then how is assigning a GUID to each entry resolving the duplicates?  Keep in mind if the 1st entry fails, then hopefully the 2nd (duplicate) is successful.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 13 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 9\u00a0months ago",
+      "content": "A - In D, same message with different timestamp will have different hash, though the message content is the same.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 9\u00a0months ago",
+      "content": "A - In D, same message with different timestamp will have different hash, though the message content is the same.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 9\u00a0months ago",
+      "content": "ralf_cc\n\t\t\t\n\n\n\t\t\t3\u00a0years, 9\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "A - In D, same message with different timestamp will have different hash, though the message content is the same.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A - In D, same message with different timestamp will have different hash, though the message content is the same.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 12 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "agreed, the key here is \"payload of several fields and the timestamp\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "agreed, the key here is \"payload of several fields and the timestamp\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "agreed, the key here is \"payload of several fields and the timestamp\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "agreed, the key here is \"payload of several fields and the timestamp\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "\"payload of several fields and the timestamp of the transmission\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "\"payload of several fields and the timestamp of the transmission\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "\"payload of several fields and the timestamp of the transmission\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\"payload of several fields and the timestamp of the transmission\"",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "Hi Max, I also think that the hash value would be worng because the timestamp is part of payload and is not written that the hash value is generated without the ts; but it also not written if GUID is linked or not with sending. Often this is a point where the answer is vague. Because don't specify if the GUID is related to the data or to the send.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "Hi Max, I also think that the hash value would be worng because the timestamp is part of payload and is not written that the hash value is generated without the ts; but it also not written if GUID is linked or not with sending. Often this is a point where the answer is vague. Because don't specify if the GUID is related to the data or to the send.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "BigDataBB\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Hi Max, I also think that the hash value would be worng because the timestamp is part of payload and is not written that the hash value is generated without the ts; but it also not written if GUID is linked or not with sending. Often this is a point where the answer is vague. Because don't specify if the GUID is related to the data or to the send.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Hi Max, I also think that the hash value would be worng because the timestamp is part of payload and is not written that the hash value is generated without the ts; but it also not written if GUID is linked or not with sending. Often this is a point where the answer is vague. Because don't specify if the GUID is related to the data or to the send.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 8\u00a0months ago",
+      "content": "Strong Answer is A - in another question on the gcp sample questions: the correct answer to that particular question was \"You are building a new real-time data warehouse for your company and will use BigQuery streaming inserts. There is no guarantee that data will only be sent in once but you do have a unique ID for each row of data and an event timestamp. You want to ensure that duplicates are not included while interactively querying data. Which query type should you use?\"\nThis means you need a \"uniqueid\" and timestamps to properly dedupe a data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 8\u00a0months ago",
+      "content": "omakin\n\t\t\t\n\n\n\t\t\t3\u00a0years, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "Strong Answer is A - in another question on the gcp sample questions: the correct answer to that particular question was \"You are building a new real-time data warehouse for your company and will use BigQuery streaming inserts. There is no guarantee that data will only be sent in once but you do have a unique ID for each row of data and an event timestamp. You want to ensure that duplicates are not included while interactively querying data. Which query type should you use?\"\nThis means you need a \"uniqueid\" and timestamps to properly dedupe a data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Strong Answer is A - in another question on the gcp sample questions: the correct answer to that particular question was \"You are building a new real-time data warehouse for your company and will use BigQuery streaming inserts. There is no guarantee that data will only be sent in once but you do have a unique ID for each row of data and an event timestamp. You want to ensure that duplicates are not included while interactively querying data. Which query type should you use?\"\nThis means you need a \"uniqueid\" and timestamps to properly dedupe a data.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 8 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "U need a uniqueid but in this scenario, there is none. So u have to calculate by hashing w/ some of the fields in the dataset. \n\nA is assigning guid in processing side will not solve the issue. Cause u will assign diff. ids...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "U need a uniqueid but in this scenario, there is none. So u have to calculate by hashing w/ some of the fields in the dataset. \n\nA is assigning guid in processing side will not solve the issue. Cause u will assign diff. ids...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 2\u00a0months ago",
+      "content": "Tanzu\n\t\t\t\n\n\n\t\t\t3\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "U need a uniqueid but in this scenario, there is none. So u have to calculate by hashing w/ some of the fields in the dataset. \n\nA is assigning guid in processing side will not solve the issue. Cause u will assign diff. ids...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "U need a uniqueid but in this scenario, there is none. So u have to calculate by hashing w/ some of the fields in the dataset. \n\nA is assigning guid in processing side will not solve the issue. Cause u will assign diff. ids...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "Answer - D\nKey statement is  \"Transmitted data includes a payload of several fields and the timestamp of the transmission.\" \n\nSo the timestamp is appended to message while sending, in other words that field is subject to change if message is retransmitted. However, adding a GUID doesn't help much because if message is transmitted twice you will have different GUID for both messages but they will be the same/duplicate data.\n\nYou can simply calculate a hash based on not all data but from a select of columns (with the payload of several fields AND definitely by excluding the timestamp). By doing so, you can assure a different hash for each message.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "Answer - D\nKey statement is  \"Transmitted data includes a payload of several fields and the timestamp of the transmission.\" \n\nSo the timestamp is appended to message while sending, in other words that field is subject to change if message is retransmitted. However, adding a GUID doesn't help much because if message is transmitted twice you will have different GUID for both messages but they will be the same/duplicate data.\n\nYou can simply calculate a hash based on not all data but from a select of columns (with the payload of several fields AND definitely by excluding the timestamp). By doing so, you can assure a different hash for each message.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 2\u00a0months ago",
+      "content": "cetanx\n\t\t\t\n\n\n\t\t\t2\u00a0years, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer - D\nKey statement is  \"Transmitted data includes a payload of several fields and the timestamp of the transmission.\" \n\nSo the timestamp is appended to message while sending, in other words that field is subject to change if message is retransmitted. However, adding a GUID doesn't help much because if message is transmitted twice you will have different GUID for both messages but they will be the same/duplicate data.\n\nYou can simply calculate a hash based on not all data but from a select of columns (with the payload of several fields AND definitely by excluding the timestamp). By doing so, you can assure a different hash for each message.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer - D\nKey statement is  \"Transmitted data includes a payload of several fields and the timestamp of the transmission.\" \n\nSo the timestamp is appended to message while sending, in other words that field is subject to change if message is retransmitted. However, adding a GUID doesn't help much because if message is transmitted twice you will have different GUID for both messages but they will be the same/duplicate data.\n\nYou can simply calculate a hash based on not all data but from a select of columns (with the payload of several fields AND definitely by excluding the timestamp). By doing so, you can assure a different hash for each message.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "Answer is D. Using Hash values we can remove duplicate values from a database. Hash values will be same for duplicate data and thus can be easily rejected. Obviously you won't check hash for timestmp.\nD is better thatn B because maintaning a different table will reduce cost for hash computation for all historical data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0years, 3\u00a0months ago",
+      "content": "MarcoDipa\n\t\t\t\n\n\n\t\t\t3\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "Answer is D. Using Hash values we can remove duplicate values from a database. Hash values will be same for duplicate data and thus can be easily rejected. Obviously you won't check hash for timestmp.\nD is better thatn B because maintaning a different table will reduce cost for hash computation for all historical data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is D. Using Hash values we can remove duplicate values from a database. Hash values will be same for duplicate data and thus can be easily rejected. Obviously you won't check hash for timestmp.\nD is better thatn B because maintaning a different table will reduce cost for hash computation for all historical data",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "Why can't it be A, where the GUID is a hash value? Why do we need to store the hash with the metadata in a separate database to do the deduplication?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "Why can't it be A, where the GUID is a hash value? Why do we need to store the hash with the metadata in a separate database to do the deduplication?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "Mathew106\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why can't it be A, where the GUID is a hash value? Why do we need to store the hash with the metadata in a separate database to do the deduplication?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why can't it be A, where the GUID is a hash value? Why do we need to store the hash with the metadata in a separate database to do the deduplication?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "Answer: D\nDescription: Using Hash values we can remove duplicate values from a database. Hashvalues will be same for duplicate data and thus can be easily rejected.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0years ago",
+      "content": "[Removed]\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t5\u00a0years ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 11\u00a0months ago",
+      "content": "Answer: D\nDescription: Using Hash values we can remove duplicate values from a database. Hashvalues will be same for duplicate data and thus can be easily rejected.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer: D\nDescription: Using Hash values we can remove duplicate values from a database. Hashvalues will be same for duplicate data and thus can be easily rejected.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 24 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 11\u00a0months ago",
+      "content": "Hash values for same data will be the same, but in this case data contains also the timestamp",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 11\u00a0months ago",
+      "content": "Hash values for same data will be the same, but in this case data contains also the timestamp",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 11\u00a0months ago",
+      "content": "stefanop\n\t\t\t\n\n\n\t\t\t2\u00a0years, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "Hash values for same data will be the same, but in this case data contains also the timestamp",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Hash values for same data will be the same, but in this case data contains also the timestamp",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "While calculating Hash value we exclude the timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "While calculating Hash value we exclude the timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0years, 3\u00a0months ago",
+      "content": "DGames\n\t\t\t\n\n\n\t\t\t2\u00a0years, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "While calculating Hash value we exclude the timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "While calculating Hash value we exclude the timestamp.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0week ago",
+      "content": "The most efficient way to deduplicate your inventory data would be:\nD. Maintain a database table to store the hash value and other metadata for each data entry.\nThis approach is optimal because:\n\nIt creates a lightweight reference table that stores just the hash values and essential metadata (like timestamps) rather than the full payload data\nHash values can be quickly compared to identify duplicates without expensive full-data comparisons\nThe metadata can help with auditing and troubleshooting transmission issues\nThis solution scales well as your data volume grows\n\nOption A (using GUIDs) doesn't address the retransmission scenario well, as new GUIDs might be generated each time. Option B requires comparing against all historical data, which becomes increasingly inefficient over time. Option C creates unnecessary storage overhead by using entire data entries as primary keys when only a hash value is needed for comparison.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0week ago",
+      "content": "Mo5454545454\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The most efficient way to deduplicate your inventory data would be:\nD. Maintain a database table to store the hash value and other metadata for each data entry.\nThis approach is optimal because:\n\nIt creates a lightweight reference table that stores just the hash values and essential metadata (like timestamps) rather than the full payload data\nHash values can be quickly compared to identify duplicates without expensive full-data comparisons\nThe metadata can help with auditing and troubleshooting transmission issues\nThis solution scales well as your data volume grows\n\nOption A (using GUIDs) doesn't address the retransmission scenario well, as new GUIDs might be generated each time. Option B requires comparing against all historical data, which becomes increasingly inefficient over time. Option C creates unnecessary storage overhead by using entire data entries as primary keys when only a hash value is needed for comparison.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The most efficient way to deduplicate your inventory data would be:\nD. Maintain a database table to store the hash value and other metadata for each data entry.\nThis approach is optimal because:\n\nIt creates a lightweight reference table that stores just the hash values and essential metadata (like timestamps) rather than the full payload data\nHash values can be quickly compared to identify duplicates without expensive full-data comparisons\nThe metadata can help with auditing and troubleshooting transmission issues\nThis solution scales well as your data volume grows\n\nOption A (using GUIDs) doesn't address the retransmission scenario well, as new GUIDs might be generated each time. Option B requires comparing against all historical data, which becomes increasingly inefficient over time. Option C creates unnecessary storage overhead by using entire data entries as primary keys when only a hash value is needed for comparison.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0weeks, 4\u00a0days ago",
+      "content": "Deduplicate data with retransmissions. Use a database table with hash",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0weeks, 4\u00a0days ago",
+      "content": "Parandhaman_Margan\n\t\t\t\n\n\n\t\t\t3\u00a0weeks, 4\u00a0days ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Deduplicate data with retransmissions. Use a database table with hash",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Deduplicate data with retransmissions. Use a database table with hash",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0month ago",
+      "content": "most obvious answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0month ago",
+      "content": "Abizi\n\t\t\t\n\n\n\t\t\t1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "most obvious answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "most obvious answer",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "Option D: Maintain a database table to store the hash value and other metadata for each data entry.\n\nThis approach is efficient and scalable. By storing a computed hash value (as a compact representation of the data) along with metadata, deduplication can be performed by comparing new entries with the stored hashes. This minimizes storage requirements and improves lookup efficiency.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "3\u00a0months, 2\u00a0weeks ago",
+      "content": "Rav761\n\t\t\t\n\n\n\t\t\t3\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option D: Maintain a database table to store the hash value and other metadata for each data entry.\n\nThis approach is efficient and scalable. By storing a computed hash value (as a compact representation of the data) along with metadata, deduplication can be performed by comparing new entries with the stored hashes. This minimizes storage requirements and improves lookup efficiency.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option D: Maintain a database table to store the hash value and other metadata for each data entry.\n\nThis approach is efficient and scalable. By storing a computed hash value (as a compact representation of the data) along with metadata, deduplication can be performed by comparing new entries with the stored hashes. This minimizes storage requirements and improves lookup efficiency.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "1. My original vote was 'B'. I chose it over 'D' because option 'D' does not explicitly say anything about how that table will be used for deduplication. In hindsight, explicit usage of table should not be given much weightage so after review and seeing other comments, I thought of 'D' as the correct answer.\n\n2. Now looking more clearly at option 'D' (and 'B' also), it's a little ambiguous of what keys will be used to create the hash. So, if you use the payload PLUS the timestamp, the hash is of no use. This is a little confusing\n\n3. Finally, although I never thought this is the right option, 'A' seems to be the correct option. The GUID is created at Data entry, NOT at the transmission stage. So, the GUID should be representative of the payload only and NOT the timestamp which will make it unique per payload, not per transmission of the same payload. So, in the end, I feel like 'A' is the correct choice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "9\u00a0months, 3\u00a0weeks ago",
+      "content": "vbrege\n\t\t\t\n\n\n\t\t\t9\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "1. My original vote was 'B'. I chose it over 'D' because option 'D' does not explicitly say anything about how that table will be used for deduplication. In hindsight, explicit usage of table should not be given much weightage so after review and seeing other comments, I thought of 'D' as the correct answer.\n\n2. Now looking more clearly at option 'D' (and 'B' also), it's a little ambiguous of what keys will be used to create the hash. So, if you use the payload PLUS the timestamp, the hash is of no use. This is a little confusing\n\n3. Finally, although I never thought this is the right option, 'A' seems to be the correct option. The GUID is created at Data entry, NOT at the transmission stage. So, the GUID should be representative of the payload only and NOT the timestamp which will make it unique per payload, not per transmission of the same payload. So, in the end, I feel like 'A' is the correct choice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "1. My original vote was 'B'. I chose it over 'D' because option 'D' does not explicitly say anything about how that table will be used for deduplication. In hindsight, explicit usage of table should not be given much weightage so after review and seeing other comments, I thought of 'D' as the correct answer.\n\n2. Now looking more clearly at option 'D' (and 'B' also), it's a little ambiguous of what keys will be used to create the hash. So, if you use the payload PLUS the timestamp, the hash is of no use. This is a little confusing\n\n3. Finally, although I never thought this is the right option, 'A' seems to be the correct option. The GUID is created at Data entry, NOT at the transmission stage. So, the GUID should be representative of the payload only and NOT the timestamp which will make it unique per payload, not per transmission of the same payload. So, in the end, I feel like 'A' is the correct choice.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "To deduplicate the data most efficiently, especially in a cloud environment where the data is sent periodically and re-transmissions can occur, the recommended approach would be:\n\nD. Maintain a database table to store the hash value and other metadata for each data entry.\n\nThis approach allows you to quickly check if an incoming data entry is a duplicate by comparing hash values, which is much faster than comparing all fields of a data entry. The metadata, which includes the timestamp and possibly other relevant information, can help resolve any ambiguities that may arise if the hash function ever produces collisions.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "TVH_Data_Engineer\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To deduplicate the data most efficiently, especially in a cloud environment where the data is sent periodically and re-transmissions can occur, the recommended approach would be:\n\nD. Maintain a database table to store the hash value and other metadata for each data entry.\n\nThis approach allows you to quickly check if an incoming data entry is a duplicate by comparing hash values, which is much faster than comparing all fields of a data entry. The metadata, which includes the timestamp and possibly other relevant information, can help resolve any ambiguities that may arise if the hash function ever produces collisions.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To deduplicate the data most efficiently, especially in a cloud environment where the data is sent periodically and re-transmissions can occur, the recommended approach would be:\n\nD. Maintain a database table to store the hash value and other metadata for each data entry.\n\nThis approach allows you to quickly check if an incoming data entry is a duplicate by comparing hash values, which is much faster than comparing all fields of a data entry. The metadata, which includes the timestamp and possibly other relevant information, can help resolve any ambiguities that may arise if the hash function ever produces collisions.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "B. Compute the hash value of each data entry, and compare it with all historical data.\n\nExplanation:\n\nEfficiency: Hashing is a fast and efficient operation, and comparing hash values is generally quicker than comparing the entire payload or using other methods.\n\nSpace Efficiency: Storing hash values requires less storage space compared to storing entire payloads or using global unique identifiers (GUIDs).\n\nDeduplication: By computing the hash value of each data entry and comparing it with historical data, you can easily identify duplicate transmissions. If the hash value matches an existing one, it indicates that the payload is the same.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 4\u00a0months ago",
+      "content": "JustQ\n\t\t\t\n\n\n\t\t\t1\u00a0year, 4\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Compute the hash value of each data entry, and compare it with all historical data.\n\nExplanation:\n\nEfficiency: Hashing is a fast and efficient operation, and comparing hash values is generally quicker than comparing the entire payload or using other methods.\n\nSpace Efficiency: Storing hash values requires less storage space compared to storing entire payloads or using global unique identifiers (GUIDs).\n\nDeduplication: By computing the hash value of each data entry and comparing it with historical data, you can easily identify duplicate transmissions. If the hash value matches an existing one, it indicates that the payload is the same.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "B. Compute the hash value of each data entry, and compare it with all historical data.\n\nExplanation:\n\nEfficiency: Hashing is a fast and efficient operation, and comparing hash values is generally quicker than comparing the entire payload or using other methods.\n\nSpace Efficiency: Storing hash values requires less storage space compared to storing entire payloads or using global unique identifiers (GUIDs).\n\nDeduplication: By computing the hash value of each data entry and comparing it with historical data, you can easily identify duplicate transmissions. If the hash value matches an existing one, it indicates that the payload is the same.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "I though the answer was A 'cos it's more efficient. But I read the answer with more attention: GUID is given \"at each data entry\". It's not said that GUID was given from publisher. If GUID is given in data entry (subscriber), two equal messages can have different GUID.\n D is not complete 'cos it's not so precise about hash field that are used.\nI'm in doubt on this answer :-(",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "steghe\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "I though the answer was A 'cos it's more efficient. But I read the answer with more attention: GUID is given \"at each data entry\". It's not said that GUID was given from publisher. If GUID is given in data entry (subscriber), two equal messages can have different GUID.\n D is not complete 'cos it's not so precise about hash field that are used.\nI'm in doubt on this answer :-(",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I though the answer was A 'cos it's more efficient. But I read the answer with more attention: GUID is given \"at each data entry\". It's not said that GUID was given from publisher. If GUID is given in data entry (subscriber), two equal messages can have different GUID.\n D is not complete 'cos it's not so precise about hash field that are used.\nI'm in doubt on this answer :-(",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Data entry means record, it is not an action. that means that each record will have a unique id. so assuming our sink will not accept duplicates based on a key, the GUID will work.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Data entry means record, it is not an action. that means that each record will have a unique id. so assuming our sink will not accept duplicates based on a key, the GUID will work.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Lestrang\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Data entry means record, it is not an action. that means that each record will have a unique id. so assuming our sink will not accept duplicates based on a key, the GUID will work.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Data entry means record, it is not an action. that means that each record will have a unique id. so assuming our sink will not accept duplicates based on a key, the GUID will work.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "Answer : A\n\"D\" is not as efficient or error-proof due to two reasons\n1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.\n2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash.\nif timestamp is used as message creation timestamp than that can also be used as a UUID.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "rocky48\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer : A\n\"D\" is not as efficient or error-proof due to two reasons\n1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.\n2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash.\nif timestamp is used as message creation timestamp than that can also be used as a UUID.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer : A\n\"D\" is not as efficient or error-proof due to two reasons\n1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.\n2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash.\nif timestamp is used as message creation timestamp than that can also be used as a UUID.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "D. Maintain a database table to store the hash value and other metadata for each data entry.\n\nStoring a database table with hash values and metadata is an efficient way to deduplicate data. When new data is transmitted, you can calculate the hash of the payload and check whether it already exists in the database. This approach allows for efficient duplicate detection without the need to compare the new data with all historical data. It's a common and scalable technique used to ensure data consistency and avoid processing the same data multiple times.\n\nOptions A (assigning GUIDs to each data entry) and C (storing each data entry as the primary key) can work, but they might be less efficient than using hash values when dealing with a large volume of data. Option B (computing the hash value of each data entry and comparing it with all historical data) can be computationally expensive and slow, especially if there's a significant amount of historical data to compare against. Storing hash values in a table allows for fast and efficient deduplication.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 5\u00a0months ago",
+      "content": "rtcpost\n\t\t\t\n\n\n\t\t\t1\u00a0year, 5\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Maintain a database table to store the hash value and other metadata for each data entry.\n\nStoring a database table with hash values and metadata is an efficient way to deduplicate data. When new data is transmitted, you can calculate the hash of the payload and check whether it already exists in the database. This approach allows for efficient duplicate detection without the need to compare the new data with all historical data. It's a common and scalable technique used to ensure data consistency and avoid processing the same data multiple times.\n\nOptions A (assigning GUIDs to each data entry) and C (storing each data entry as the primary key) can work, but they might be less efficient than using hash values when dealing with a large volume of data. Option B (computing the hash value of each data entry and comparing it with all historical data) can be computationally expensive and slow, especially if there's a significant amount of historical data to compare against. Storing hash values in a table allows for fast and efficient deduplication.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "D. Maintain a database table to store the hash value and other metadata for each data entry.\n\nStoring a database table with hash values and metadata is an efficient way to deduplicate data. When new data is transmitted, you can calculate the hash of the payload and check whether it already exists in the database. This approach allows for efficient duplicate detection without the need to compare the new data with all historical data. It's a common and scalable technique used to ensure data consistency and avoid processing the same data multiple times.\n\nOptions A (assigning GUIDs to each data entry) and C (storing each data entry as the primary key) can work, but they might be less efficient than using hash values when dealing with a large volume of data. Option B (computing the hash value of each data entry and comparing it with all historical data) can be computationally expensive and slow, especially if there's a significant amount of historical data to compare against. Storing hash values in a table allows for fast and efficient deduplication.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "Why not D ? Generate a Hash for payload entry and maintain the value as metadata. Do the validation check on Dataflow..... A GUID will generate 2 different entries for same payload entry, it will not tackle duplication check",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "alihabib\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not D ? Generate a Hash for payload entry and maintain the value as metadata. Do the validation check on Dataflow..... A GUID will generate 2 different entries for same payload entry, it will not tackle duplication check",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not D ? Generate a Hash for payload entry and maintain the value as metadata. Do the validation check on Dataflow..... A GUID will generate 2 different entries for same payload entry, it will not tackle duplication check",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "Answer is B - although the time stamp is diff for each transmission - the hash value is computed for the payload, not for the timestamp - which is just an added field for transmission. So, has val remains the same for all transmissions of the same data - which is what we can use for comparision.\n\nSo, much more efficient to just directly compare the hash values with the historical data - to check and remove duplicates - instead of again wasting space storing stuff - in option D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "Hungry_guy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is B - although the time stamp is diff for each transmission - the hash value is computed for the payload, not for the timestamp - which is just an added field for transmission. So, has val remains the same for all transmissions of the same data - which is what we can use for comparision.\n\nSo, much more efficient to just directly compare the hash values with the historical data - to check and remove duplicates - instead of again wasting space storing stuff - in option D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Answer is B - although the time stamp is diff for each transmission - the hash value is computed for the payload, not for the timestamp - which is just an added field for transmission. So, has val remains the same for all transmissions of the same data - which is what we can use for comparision.\n\nSo, much more efficient to just directly compare the hash values with the historical data - to check and remove duplicates - instead of again wasting space storing stuff - in option D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "This question is formulated very badly.\nFrom the way that A is formulated, you would not deduplicate but rather the duplicates would have the same GUID.\nThen we have D, which is storing the information (assuming the hash is created without the timestamp). B is doing it right away. D only alludes to the actual deduplication. But it would be more efficient.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 8\u00a0months ago",
+      "content": "Mark_86\n\t\t\t\n\n\n\t\t\t1\u00a0year, 8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This question is formulated very badly.\nFrom the way that A is formulated, you would not deduplicate but rather the duplicates would have the same GUID.\nThen we have D, which is storing the information (assuming the hash is created without the timestamp). B is doing it right away. D only alludes to the actual deduplication. But it would be more efficient.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "This question is formulated very badly.\nFrom the way that A is formulated, you would not deduplicate but rather the duplicates would have the same GUID.\nThen we have D, which is storing the information (assuming the hash is created without the timestamp). B is doing it right away. D only alludes to the actual deduplication. But it would be more efficient.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "A is best choice. D doesn't make sense.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "boca_2022\n\t\t\t\n\n\n\t\t\t1\u00a0year, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "A is best choice. D doesn't make sense.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is best choice. D doesn't make sense.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "A is incorrect. how can you find duplicates if you assign a unique id to every record? The answer is either B or D. I first selected B, but reading through the answers D may be better.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "A is incorrect. how can you find duplicates if you assign a unique id to every record? The answer is either B or D. I first selected B, but reading through the answers D may be better.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 7\u00a0months ago",
+      "content": "FP77\n\t\t\t\n\n\n\t\t\t1\u00a0year, 7\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is incorrect. how can you find duplicates if you assign a unique id to every record? The answer is either B or D. I first selected B, but reading through the answers D may be better.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A is incorrect. how can you find duplicates if you assign a unique id to every record? The answer is either B or D. I first selected B, but reading through the answers D may be better.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "you cannot deduplicate data adding a random guid, with guid row is distinct than others",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 11\u00a0months ago",
+      "content": "Melampos\n\t\t\t\n\n\n\t\t\t1\u00a0year, 11\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "you cannot deduplicate data adding a random guid, with guid row is distinct than others",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "you cannot deduplicate data adding a random guid, with guid row is distinct than others",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

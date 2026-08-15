@@ -1,0 +1,22 @@
+COMMENT #51 FOR QUESTION 44
+============================================================
+Author: Unknown
+Date: 1 year ago
+Votes: 0
+----------------------------------------
+Correct Answer D:
+
+This is the way the DB is typically queried:
+- movies with actor=<actorname> ordered by date_released 
+- movies with tag=Comedy ordered by date_released
+
+so it seems that we need indices in actor,tag and date_released for sorting. 
+
+❌ A: this would be the correct answer, however, the format is incorrect, the correct format would be '- name: date_released' correctly indented.
+
+❌ B: This seems to be unnecessary, since typically actor and tag are not queried together. also, there is a clear indentation issue
+
+❌ C: We don't want to ignore actor and tag, we need those indices.
+
+✅ D: If we leave datastore to automatically create the indices and if we specify that the 'date_released' property needs to be excluded from indices, then we would have less indices (but maybe slower queries when ordering them, but hey, how many 'comedies' there could be in the world)
+============================================================

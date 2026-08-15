@@ -1,0 +1,80 @@
+COMMENT #2 FOR QUESTION 224
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 224
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								A web server sends click events to a Pub/Sub topic as messages. The web server includes an eventTimestamp attribute in the messages, which is the time when the click occurred. You have a Dataflow streaming job that reads from this Pub/Sub topic through a subscription, applies some transformations, and writes the result to another Pub/Sub topic for use by the advertising department. The advertising department needs to receive each message within 30 seconds of the corresponding click occurrence, but they report receiving the messages late. Your Dataflow job's system lag is about 5 seconds, and the data freshness is about 40 seconds. Inspecting a few messages show no more than 1 second lag between their eventTimestamp and publishTime. What is the problem and what should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											The advertising department is causing delays when consuming the messages. Work with the advertising department to fix this.
+										
+
+
+													B.
+												
+											
+											Messages in your Dataflow job are taking more than 30 seconds to process. Optimize your job or increase the number of workers to fix this.
+										
+
+
+													G.
+												
+											
+											Messages in your Dataflow job are processed in less than 30 seconds, but your job cannot keep up with the backlog in the Pub/Sub subscription. Optimize your job or increase the number of workers to fix this.
+										
+
+
+													D.
+												
+											
+											The web server is not pushing messages fast enough to Pub/Sub. Work with the web server team to fix this.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+G
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								e70ea9e
+							
+							
+							at 
+							Dec. 30, 2023, 9:50 a.m.
+============================================================

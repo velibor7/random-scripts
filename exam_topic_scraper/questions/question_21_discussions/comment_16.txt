@@ -1,0 +1,12 @@
+COMMENT #16 FOR QUESTION 21
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+The best answer is "A". 
+Answer "D" is not as efficient or error-proof due to two reasons
+1. You need to calculate hash at sender as well as at receiver end to do the comparison. Waste of computing power.
+2. Even if we discount the computing power, we should note that the system is sending inventory information. Two messages sent at different can denote same inventory level (and thus have same hash). Adding sender time stamp to hash will defeat the purpose of using hash as now retried messages will have different timestamp and a different hash. 
+if timestamp is used as message creation timestamp than that can also be used as a UUID.
+============================================================

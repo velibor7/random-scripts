@@ -1,0 +1,11 @@
+COMMENT #76 FOR QUESTION 44
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+What do people think about C? The question is asking how to avoid a  combinatorial explosion in the number of indexes. It says "You have entities with multiple properties, some of which can take on multiple values". Put this with the below text from the documentation for Datastore indexes, it seems they're looking for "exclude the properties that will cause combinatorial explosion" which would be C.
+
+"The situation becomes worse in the case of entities with multiple properties, each of which can take on multiple values. To accommodate such an entity, the index must include an entry for every possible combination of property values. Custom indexes that refer to multiple properties, each with multiple values, can "explode" combinatorially, requiring large numbers of entries for an entity with only a relatively small number of possible property values."[1]
+[1] https://cloud.google.com/datastore/docs/concepts/indexes#index_limits
+============================================================

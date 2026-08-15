@@ -1,0 +1,619 @@
+{
+  "question": "You have terabytes of customer behavioral data streaming from Google Analytics into BigQuery daily. Your customers\u2019 information, such as their preferences, is hosted on a Cloud SQL for MySQL database. Your CRM database is hosted on a Cloud SQL for PostgreSQL instance. The marketing team wants to use your customers\u2019 information from the two databases and the customer behavioral data to create marketing campaigns for yearly active customers. You need to ensure that the marketing team can run the campaigns over 100 times a day on typical days and up to 300 during sales. At the same time, you want to keep the load on the Cloud SQL databases to a minimum. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate BigQuery connections to both Cloud SQL databases. Use BigQuery federated queries on the two databases and the Google Analytics data on BigQuery to run these queries.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a job on Apache Spark with Dataproc Serverless to query both Cloud SQL databases and the Google Analytics data on BigQuery for these queries.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate streams in Datastream to replicate the required tables from both Cloud SQL databases to BigQuery for these queries.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a Dataproc cluster with Trino to establish connections to both Cloud SQL databases and BigQuery, to execute the queries.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 292 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 292\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou have terabytes of customer behavioral data streaming from Google Analytics into BigQuery daily. Your customers\u2019 information, such as their preferences, is hosted on a Cloud SQL for MySQL database. Your CRM database is hosted on a Cloud SQL for PostgreSQL instance. The marketing team wants to use your customers\u2019 information from the two databases and the customer behavioral data to create marketing campaigns for yearly active customers. You need to ensure that the marketing team can run the campaigns over 100 times a day on typical days and up to 300 during sales. At the same time, you want to keep the load on the Cloud SQL databases to a minimum. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate BigQuery connections to both Cloud SQL databases. Use BigQuery federated queries on the two databases and the Google Analytics data on BigQuery to run these queries.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a job on Apache Spark with Dataproc Serverless to query both Cloud SQL databases and the Google Analytics data on BigQuery for these queries.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate streams in Datastream to replicate the required tables from both Cloud SQL databases to BigQuery for these queries.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tCreate a Dataproc cluster with Trino to establish connections to both Cloud SQL databases and BigQuery, to execute the queries.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nC\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 4, 2024, 11:33 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 292\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tscaenruy\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tJan. 4, 2024, 11:33 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Datastream: It's a fully managed, serverless service for real-time data replication. It allows to stream data from various sources, including Cloud SQL, into BigQuery.\n- Reduced Load on Cloud SQL: By replicating the required tables from both Cloud SQL databases into BigQuery, you minimize the load on the Cloud SQL instances. The marketing team's queries will be run against BigQuery, which is designed to handle high-volume analytics workloads.\n- Frequency of Queries: BigQuery can easily handle the high frequency of queries (100 times daily, up to 300 during sales events) due to its powerful data processing capabilities.\n- Combining Data Sources: Once the data is in BigQuery, you can efficiently combine it with the Google Analytics data for comprehensive analysis and campaign planning.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Datastream: It's a fully managed, serverless service for real-time data replication. It allows to stream data from various sources, including Cloud SQL, into BigQuery.\n- Reduced Load on Cloud SQL: By replicating the required tables from both Cloud SQL databases into BigQuery, you minimize the load on the Cloud SQL instances. The marketing team's queries will be run against BigQuery, which is designed to handle high-volume analytics workloads.\n- Frequency of Queries: BigQuery can easily handle the high frequency of queries (100 times daily, up to 300 during sales events) due to its powerful data processing capabilities.\n- Combining Data Sources: Once the data is in BigQuery, you can efficiently combine it with the Google Analytics data for comprehensive analysis and campaign planning.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Datastream: It's a fully managed, serverless service for real-time data replication. It allows to stream data from various sources, including Cloud SQL, into BigQuery.\n- Reduced Load on Cloud SQL: By replicating the required tables from both Cloud SQL databases into BigQuery, you minimize the load on the Cloud SQL instances. The marketing team's queries will be run against BigQuery, which is designed to handle high-volume analytics workloads.\n- Frequency of Queries: BigQuery can easily handle the high frequency of queries (100 times daily, up to 300 during sales events) due to its powerful data processing capabilities.\n- Combining Data Sources: Once the data is in BigQuery, you can efficiently combine it with the Google Analytics data for comprehensive analysis and campaign planning.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Datastream: It's a fully managed, serverless service for real-time data replication. It allows to stream data from various sources, including Cloud SQL, into BigQuery.\n- Reduced Load on Cloud SQL: By replicating the required tables from both Cloud SQL databases into BigQuery, you minimize the load on the Cloud SQL instances. The marketing team's queries will be run against BigQuery, which is designed to handle high-volume analytics workloads.\n- Frequency of Queries: BigQuery can easily handle the high frequency of queries (100 times daily, up to 300 during sales events) due to its powerful data processing capabilities.\n- Combining Data Sources: Once the data is in BigQuery, you can efficiently combine it with the Google Analytics data for comprehensive analysis and campaign planning.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "- Datastream: It's a fully managed, serverless service for real-time data replication. It allows to stream data from various sources, including Cloud SQL, into BigQuery.\n- Reduced Load on Cloud SQL: By replicating the required tables from both Cloud SQL databases into BigQuery, you minimize the load on the Cloud SQL instances. The marketing team's queries will be run against BigQuery, which is designed to handle high-volume analytics workloads.\n- Frequency of Queries: BigQuery can easily handle the high frequency of queries (100 times daily, up to 300 during sales events) due to its powerful data processing capabilities.\n- Combining Data Sources: Once the data is in BigQuery, you can efficiently combine it with the Google Analytics data for comprehensive analysis and campaign planning.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "- Datastream: It's a fully managed, serverless service for real-time data replication. It allows to stream data from various sources, including Cloud SQL, into BigQuery.\n- Reduced Load on Cloud SQL: By replicating the required tables from both Cloud SQL databases into BigQuery, you minimize the load on the Cloud SQL instances. The marketing team's queries will be run against BigQuery, which is designed to handle high-volume analytics workloads.\n- Frequency of Queries: BigQuery can easily handle the high frequency of queries (100 times daily, up to 300 during sales events) due to its powerful data processing capabilities.\n- Combining Data Sources: Once the data is in BigQuery, you can efficiently combine it with the Google Analytics data for comprehensive analysis and campaign planning.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "- Datastream: It's a fully managed, serverless service for real-time data replication. It allows to stream data from various sources, including Cloud SQL, into BigQuery.\n- Reduced Load on Cloud SQL: By replicating the required tables from both Cloud SQL databases into BigQuery, you minimize the load on the Cloud SQL instances. The marketing team's queries will be run against BigQuery, which is designed to handle high-volume analytics workloads.\n- Frequency of Queries: BigQuery can easily handle the high frequency of queries (100 times daily, up to 300 during sales events) due to its powerful data processing capabilities.\n- Combining Data Sources: Once the data is in BigQuery, you can efficiently combine it with the Google Analytics data for comprehensive analysis and campaign planning.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 11 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Why not A ? Federrated queries will downgrade Cloud SQL perf?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Why not A ? Federrated queries will downgrade Cloud SQL perf?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "SanjeevRoy91\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not A ? Federrated queries will downgrade Cloud SQL perf?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not A ? Federrated queries will downgrade Cloud SQL perf?",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0month ago",
+      "content": "To Replication data, use datastream",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0month ago",
+      "content": "Blackstile\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To Replication data, use datastream",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "To Replication data, use datastream",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 3\u00a0weeks ago",
+      "content": "Initially I said A, but this question was how I learned about Datastream, which I think would be the better solution in this scenario. So my answer is C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months, 3\u00a0weeks ago",
+      "content": "987af6b\n\t\t\t\n\n\n\t\t\t8\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Initially I said A, but this question was how I learned about Datastream, which I think would be the better solution in this scenario. So my answer is C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Initially I said A, but this question was how I learned about Datastream, which I think would be the better solution in this scenario. So my answer is C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 1\u00a0week ago",
+      "content": "C, noting that federated queries on read replicas would be the ideal solution",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "10\u00a0months, 1\u00a0week ago",
+      "content": "AlizCert\n\t\t\t\n\n\n\t\t\t10\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C, noting that federated queries on read replicas would be the ideal solution",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C, noting that federated queries on read replicas would be the ideal solution",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "12\u00a0months ago",
+      "content": "Its option C.\n\n\"Performance. A federated query is likely to not be as fast as querying only BigQuery storage. BigQuery needs to wait for the source database to execute the external query and temporarily move data from the external data source to BigQuery. Also, the source database might not be optimized for complex analytical queries.\"\n\nSo, it will load the Cloud SQL external sources with the queries, impacting performance on those.\n\nLink: https://cloud.google.com/bigquery/docs/federated-queries-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "12\u00a0months ago",
+      "content": "joao_01\n\t\t\t\n\n\n\t\t\t12\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Its option C.\n\n\"Performance. A federated query is likely to not be as fast as querying only BigQuery storage. BigQuery needs to wait for the source database to execute the external query and temporarily move data from the external data source to BigQuery. Also, the source database might not be optimized for complex analytical queries.\"\n\nSo, it will load the Cloud SQL external sources with the queries, impacting performance on those.\n\nLink: https://cloud.google.com/bigquery/docs/federated-queries-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Its option C.\n\n\"Performance. A federated query is likely to not be as fast as querying only BigQuery storage. BigQuery needs to wait for the source database to execute the external query and temporarily move data from the external data source to BigQuery. Also, the source database might not be optimized for complex analytical queries.\"\n\nSo, it will load the Cloud SQL external sources with the queries, impacting performance on those.\n\nLink: https://cloud.google.com/bigquery/docs/federated-queries-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "C is make sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "datasmg\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is make sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C is make sense",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "Option C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "JyoGCP\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "C. Create streams in Datastream to replicate the required tables from both Cloud SQL databases to BigQuery for these queries.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "scaenruy\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "C. Create streams in Datastream to replicate the required tables from both Cloud SQL databases to BigQuery for these queries.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Create streams in Datastream to replicate the required tables from both Cloud SQL databases to BigQuery for these queries.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Datastream is a serverless, easy-to-use change data capture (CDC) and replication service. By replicating the necessary tables from the Cloud SQL databases to BigQuery, you can offload the query load from the Cloud SQL databases. The marketing team can then run their queries directly on BigQuery, which is designed for large-scale data analytics. This approach seems to balance both efficiency and performance, minimizing load on the Cloud SQL instances.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Datastream is a serverless, easy-to-use change data capture (CDC) and replication service. By replicating the necessary tables from the Cloud SQL databases to BigQuery, you can offload the query load from the Cloud SQL databases. The marketing team can then run their queries directly on BigQuery, which is designed for large-scale data analytics. This approach seems to balance both efficiency and performance, minimizing load on the Cloud SQL instances.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Smakyel79\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Datastream is a serverless, easy-to-use change data capture (CDC) and replication service. By replicating the necessary tables from the Cloud SQL databases to BigQuery, you can offload the query load from the Cloud SQL databases. The marketing team can then run their queries directly on BigQuery, which is designed for large-scale data analytics. This approach seems to balance both efficiency and performance, minimizing load on the Cloud SQL instances.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Datastream is a serverless, easy-to-use change data capture (CDC) and replication service. By replicating the necessary tables from the Cloud SQL databases to BigQuery, you can offload the query load from the Cloud SQL databases. The marketing team can then run their queries directly on BigQuery, which is designed for large-scale data analytics. This approach seems to balance both efficiency and performance, minimizing load on the Cloud SQL instances.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

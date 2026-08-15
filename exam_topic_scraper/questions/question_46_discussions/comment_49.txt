@@ -1,0 +1,10 @@
+COMMENT #49 FOR QUESTION 46
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+BigQuery is a powerful data warehouse designed for analyzing large datasets efficiently. Partitioning tables allows you to manage large datasets by splitting them into segments based on a key, such as time.
+By creating a partitioned table and updating it every 30 minutes, you can load the new price data directly into the correct partitions. BigQuery’s partitioned tables optimize both the storage and querying cost because BigQuery only scans the relevant partitions when querying, minimizing the amount of data read and hence reducing costs.
+Partitioning by time (e.g., timestamp or date columns) is particularly effective for datasets with periodic updates (like price data) since each batch of data will be loaded into the corresponding partition.
+============================================================

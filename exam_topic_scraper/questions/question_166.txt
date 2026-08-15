@@ -1,0 +1,989 @@
+================================================================================
+QUESTION:
+A shipping company has live package-tracking data that is sent to an Apache Kafka stream in real time. This is then loaded into BigQuery. Analysts in your company want to query the tracking data in BigQuery to analyze geospatial trends in the lifecycle of a package. The table was originally created with ingest-date partitioning. Over time, the query processing time has increased. You need to implement a change that would improve query performance in BigQuery. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Implement clustering in BigQuery on the ingest date column.
+										
+
+
+													B.
+												
+											
+											Implement clustering in BigQuery on the package-tracking ID column.
+										
+
+
+													C.
+												
+											
+											Tier older data onto Cloud Storage files and create a BigQuery table using Cloud Storage as an external data source.
+										
+
+
+													D.
+												
+											
+											Re-create the table using data partitioning on the package delivery date.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (160 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 166 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 166
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								A shipping company has live package-tracking data that is sent to an Apache Kafka stream in real time. This is then loaded into BigQuery. Analysts in your company want to query the tracking data in BigQuery to analyze geospatial trends in the lifecycle of a package. The table was originally created with ingest-date partitioning. Over time, the query processing time has increased. You need to implement a change that would improve query performance in BigQuery. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Implement clustering in BigQuery on the ingest date column.
+										
+
+
+													B.
+												
+											
+											Implement clustering in BigQuery on the package-tracking ID column.
+										
+
+
+													C.
+												
+											
+											Tier older data onto Cloud Storage files and create a BigQuery table using Cloud Storage as an external data source.
+										
+
+
+													D.
+												
+											
+											Re-create the table using data partitioning on the package delivery date.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 4, 2022, 10:50 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 166
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 4, 2022, 10:50 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/bigquery/docs/clustered-tables
+Clustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.
+
+In BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/bigquery/docs/clustered-tables
+Clustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.
+
+In BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/bigquery/docs/clustered-tables
+Clustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.
+
+In BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/bigquery/docs/clustered-tables
+Clustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.
+
+In BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/bigquery/docs/clustered-tables
+Clustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.
+
+In BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+zellck
+			
+
+
+				Highly Voted 
+
+
+			1 year, 10 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/bigquery/docs/clustered-tables
+Clustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.
+
+In BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+https://cloud.google.com/bigquery/docs/clustered-tables
+Clustered tables in BigQuery are tables that have a user-defined column sort order using clustered columns. Clustered tables can improve query performance and reduce query costs.
+
+In BigQuery, a clustered column is a user-defined table property that sorts storage blocks based on the values in the clustered columns. The storage blocks are adaptively sized based on the size of the table. A clustered table maintains the sort properties in the context of each operation that modifies it. Queries that filter or aggregate by the clustered columns only scan the relevant blocks based on the clustered columns instead of the entire table or table partition.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 10 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Yes it is B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Yes it is B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+AzureDP900
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+Yes it is B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Yes it is B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+Though I almost fell for D, but the delivery date information is only available on the event(s) that happen after the delivery, but not on the ones before where it will be NULL I guess. The only other option that can make some sense is B, though high cardinality is not recommended for clustering.
+
+--- Comment #31 ---
+Author: Unknown | Date: 4 months ago | Votes: 0
+AlizCert
+			
+
+
+				Most Recent 
+
+
+			4 months ago
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Though I almost fell for D, but the delivery date information is only available on the event(s) that happen after the delivery, but not on the ones before where it will be NULL I guess. The only other option that can make some sense is B, though high cardinality is not recommended for clustering.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Though I almost fell for D, but the delivery date information is only available on the event(s) that happen after the delivery, but not on the ones before where it will be NULL I guess. The only other option that can make some sense is B, though high cardinality is not recommended for clustering.
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #39 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+B as Clustering the data on the package Id can greatly improve the performance.
+Refer GCP documentation - BigQuery Clustered Table:https://cloud.google.com/bigquery/docs/clustered-tables
+
+--- Comment #40 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #41 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+B as Clustering the data on the package Id can greatly improve the performance.
+Refer GCP documentation - BigQuery Clustered Table:https://cloud.google.com/bigquery/docs/clustered-tables
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+B as Clustering the data on the package Id can greatly improve the performance.
+Refer GCP documentation - BigQuery Clustered Table:https://cloud.google.com/bigquery/docs/clustered-tables
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Clustering can improve the performance of certain types of queries such as queries that use filter clauses and queries that aggregate data. When data is written to a clustered table by a query job or a load job, BigQuery sorts the data using the values in the clustering columns. These values are used to organize the data into multiple blocks in BigQuery storage. When you submit a query containing a clause that filters data based on the clustering columns, BigQuery uses the sorted blocks to eliminate scans of unnecessary data.
+Currently, BigQuery allows clustering over a partitioned table. Use clustering over a partitioned table when:
+-	Your data is already partitioned on a date, timestamp, or integer column.
+-	You commonly use filters or aggregation against particular columns in your queries.
+Table clustering is possible for tables partitioned by:
+-	ingestion time
+-	date/timestamp
+-	integer range
+
+--- Comment #47 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Clustering can improve the performance of certain types of queries such as queries that use filter clauses and queries that aggregate data. When data is written to a clustered table by a query job or a load job, BigQuery sorts the data using the values in the clustering columns. These values are used to organize the data into multiple blocks in BigQuery storage. When you submit a query containing a clause that filters data based on the clustering columns, BigQuery uses the sorted blocks to eliminate scans of unnecessary data.
+Currently, BigQuery allows clustering over a partitioned table. Use clustering over a partitioned table when:
+-	Your data is already partitioned on a date, timestamp, or integer column.
+-	You commonly use filters or aggregation against particular columns in your queries.
+Table clustering is possible for tables partitioned by:
+-	ingestion time
+-	date/timestamp
+-	integer range
+
+--- Comment #48 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #49 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Clustering can improve the performance of certain types of queries such as queries that use filter clauses and queries that aggregate data. When data is written to a clustered table by a query job or a load job, BigQuery sorts the data using the values in the clustering columns. These values are used to organize the data into multiple blocks in BigQuery storage. When you submit a query containing a clause that filters data based on the clustering columns, BigQuery uses the sorted blocks to eliminate scans of unnecessary data.
+Currently, BigQuery allows clustering over a partitioned table. Use clustering over a partitioned table when:
+-	Your data is already partitioned on a date, timestamp, or integer column.
+-	You commonly use filters or aggregation against particular columns in your queries.
+Table clustering is possible for tables partitioned by:
+-	ingestion time
+-	date/timestamp
+-	integer range
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Clustering can improve the performance of certain types of queries such as queries that use filter clauses and queries that aggregate data. When data is written to a clustered table by a query job or a load job, BigQuery sorts the data using the values in the clustering columns. These values are used to organize the data into multiple blocks in BigQuery storage. When you submit a query containing a clause that filters data based on the clustering columns, BigQuery uses the sorted blocks to eliminate scans of unnecessary data.
+Currently, BigQuery allows clustering over a partitioned table. Use clustering over a partitioned table when:
+-	Your data is already partitioned on a date, timestamp, or integer column.
+-	You commonly use filters or aggregation against particular columns in your queries.
+Table clustering is possible for tables partitioned by:
+-	ingestion time
+-	date/timestamp
+-	integer range
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+In a table partitioned by a date or timestamp column, each partition contains a single day of data. When the data is stored, BigQuery ensures that all the data in a block belongs to a single partition. A partitioned table maintains these properties across all operations that modify it: query jobs, Data Manipulation Language (DML) statements, Data Definition Language (DDL) statements, load jobs, and copy jobs. This requires BigQuery to maintain more metadata than a non-partitioned table. As the number of partitions increases, the amount of metadata overhead increases.
+
+--- Comment #54 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+In a table partitioned by a date or timestamp column, each partition contains a single day of data. When the data is stored, BigQuery ensures that all the data in a block belongs to a single partition. A partitioned table maintains these properties across all operations that modify it: query jobs, Data Manipulation Language (DML) statements, Data Definition Language (DDL) statements, load jobs, and copy jobs. This requires BigQuery to maintain more metadata than a non-partitioned table. As the number of partitions increases, the amount of metadata overhead increases.
+
+--- Comment #55 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #56 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+In a table partitioned by a date or timestamp column, each partition contains a single day of data. When the data is stored, BigQuery ensures that all the data in a block belongs to a single partition. A partitioned table maintains these properties across all operations that modify it: query jobs, Data Manipulation Language (DML) statements, Data Definition Language (DDL) statements, load jobs, and copy jobs. This requires BigQuery to maintain more metadata than a non-partitioned table. As the number of partitions increases, the amount of metadata overhead increases.
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+In a table partitioned by a date or timestamp column, each partition contains a single day of data. When the data is stored, BigQuery ensures that all the data in a block belongs to a single partition. A partitioned table maintains these properties across all operations that modify it: query jobs, Data Manipulation Language (DML) statements, Data Definition Language (DDL) statements, load jobs, and copy jobs. This requires BigQuery to maintain more metadata than a non-partitioned table. As the number of partitions increases, the amount of metadata overhead increases.
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #60 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Although more metadata must be maintained, by ensuring that data is partitioned globally, BigQuery can more accurately estimate the bytes processed by a query before you run it. This cost calculation provides an upper bound on the final cost of the query.
+In a clustered table, BigQuery automatically sorts the data based on the values in the clustering columns and organizes them in optimally sized storage blocks. You can achieve more finely grained sorting by creating a table that is clustered and partitioned. A clustered table maintains the sort properties in the context of each operation that modifies it. As a result, BigQuery may not be able to accurately estimate the bytes processed by the query or the query costs. When blocks of data are eliminated during query execution, BigQuery provides a best effort reduction of the query costs.
+
+--- Comment #61 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Although more metadata must be maintained, by ensuring that data is partitioned globally, BigQuery can more accurately estimate the bytes processed by a query before you run it. This cost calculation provides an upper bound on the final cost of the query.
+In a clustered table, BigQuery automatically sorts the data based on the values in the clustering columns and organizes them in optimally sized storage blocks. You can achieve more finely grained sorting by creating a table that is clustered and partitioned. A clustered table maintains the sort properties in the context of each operation that modifies it. As a result, BigQuery may not be able to accurately estimate the bytes processed by the query or the query costs. When blocks of data are eliminated during query execution, BigQuery provides a best effort reduction of the query costs.
+
+--- Comment #62 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+Although more metadata must be maintained, by ensuring that data is partitioned globally, BigQuery can more accurately estimate the bytes processed by a query before you run it. This cost calculation provides an upper bound on the final cost of the query.
+In a clustered table, BigQuery automatically sorts the data based on the values in the clustering columns and organizes them in optimally sized storage blocks. You can achieve more finely grained sorting by creating a table that is clustered and partitioned. A clustered table maintains the sort properties in the context of each operation that modifies it. As a result, BigQuery may not be able to accurately estimate the bytes processed by the query or the query costs. When blocks of data are eliminated during query execution, BigQuery provides a best effort reduction of the query costs.
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+Although more metadata must be maintained, by ensuring that data is partitioned globally, BigQuery can more accurately estimate the bytes processed by a query before you run it. This cost calculation provides an upper bound on the final cost of the query.
+In a clustered table, BigQuery automatically sorts the data based on the values in the clustering columns and organizes them in optimally sized storage blocks. You can achieve more finely grained sorting by creating a table that is clustered and partitioned. A clustered table maintains the sort properties in the context of each operation that modifies it. As a result, BigQuery may not be able to accurately estimate the bytes processed by the query or the query costs. When blocks of data are eliminated during query execution, BigQuery provides a best effort reduction of the query costs.
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date: 10 months ago | Votes: 0
+Package Tracking mostly contains, geospatial prefixes, Like HK0011, US0022, etc, this can help in clustering.
+
+--- Comment #73 ---
+Author: Unknown | Date: 10 months ago | Votes: 0
+Aman47
+			
+
+
+			10 months ago
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+Package Tracking mostly contains, geospatial prefixes, Like HK0011, US0022, etc, this can help in clustering.
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+Package Tracking mostly contains, geospatial prefixes, Like HK0011, US0022, etc, this can help in clustering.
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #81 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+D is the correct answer
+
+requirements: analyze geospatial trends in the lifecycle of a package
+
+cuz the data of the lifecycle of the package would span across ingest-date-based partition table, it would degrade the performance.
+
+hence, re-partitoning by package delivery date, which is the package initially delivered, would improve the performance when querying such table.
+
+--- Comment #82 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+kcl10
+			
+
+
+			1 year ago
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+D is the correct answer
+
+requirements: analyze geospatial trends in the lifecycle of a package
+
+cuz the data of the lifecycle of the package would span across ingest-date-based partition table, it would degrade the performance.
+
+hence, re-partitoning by package delivery date, which is the package initially delivered, would improve the performance when querying such table.
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+D is the correct answer
+
+requirements: analyze geospatial trends in the lifecycle of a package
+
+cuz the data of the lifecycle of the package would span across ingest-date-based partition table, it would degrade the performance.
+
+hence, re-partitoning by package delivery date, which is the package initially delivered, would improve the performance when querying such table.
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #90 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+I vote D
+Queries to analyze the package lifecycle will cross partitions when using ingest date. Changing this to delivery date will allow a query to full a package's full lifecycle in a single partition.
+
+--- Comment #91 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+sdi_studiers
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+I vote D
+Queries to analyze the package lifecycle will cross partitions when using ingest date. Changing this to delivery date will allow a query to full a package's full lifecycle in a single partition.
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+I vote D
+Queries to analyze the package lifecycle will cross partitions when using ingest date. Changing this to delivery date will allow a query to full a package's full lifecycle in a single partition.
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #99 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+B. https://cloud.google.com/bigquery/docs/clustered-tables
+
+--- Comment #100 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+cloudmon
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+B. https://cloud.google.com/bigquery/docs/clustered-tables
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+B. https://cloud.google.com/bigquery/docs/clustered-tables
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #108 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+D is not correct becsuse This Is problem Is The Real Time  so  ingested date is the same as delivery date.
+
+--- Comment #109 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+D is not correct becsuse This Is problem Is The Real Time  so  ingested date is the same as delivery date.
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+D is not correct becsuse This Is problem Is The Real Time  so  ingested date is the same as delivery date.
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #116 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+why not D ?
+
+--- Comment #117 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+kenanars
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #118 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+why not D ?
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+why not D ?
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #122 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+There are several rows that represent movement of life cycle  of 1  package-tracking ID 
+package delivery date = ingestion date   , i suppose
+
+--- Comment #123 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+There are several rows that represent movement of life cycle  of 1  package-tracking ID 
+package delivery date = ingestion date   , i suppose
+
+--- Comment #124 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years ago
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+There are several rows that represent movement of life cycle  of 1  package-tracking ID 
+package delivery date = ingestion date   , i suppose
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+There are several rows that represent movement of life cycle  of 1  package-tracking ID 
+package delivery date = ingestion date   , i suppose
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #131 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+The table has already been partitioned
+
+--- Comment #132 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+jkhong
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+The table has already been partitioned
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+The table has already been partitioned
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #140 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B;
+As the table has already created with ingest-date partitioning.
+
+--- Comment #141 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+pluiedust
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+B;
+As the table has already created with ingest-date partitioning.
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+B;
+As the table has already created with ingest-date partitioning.
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #149 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #150 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+AWSandeep
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+B. Implement clustering in BigQuery on the package-tracking ID column.
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

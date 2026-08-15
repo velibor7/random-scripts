@@ -1,0 +1,1471 @@
+{
+  "question": "You are using BigQuery with a multi-region dataset that includes a table with the daily sales volumes. This table is updated multiple times per day. You need to protect your sales table in case of regional failures with a recovery point objective (RPO) of less than 24 hours, while keeping costs to a minimum. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSchedule a daily export of the table to a Cloud Storage dual or multi-region bucket.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSchedule a daily copy of the dataset to a backup region.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSchedule a daily BigQuery snapshot of the table.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tModify ETL job to load the data into both the current and another backup region.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f",
+  "answers": [],
+  "correct_answer": null,
+  "discussions": [
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Exam Professional Data Engineer topic 1 question 211 discussion",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 211\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]\n\n\n\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tYou are using BigQuery with a multi-region dataset that includes a table with the daily sales volumes. This table is updated multiple times per day. You need to protect your sales table in case of regional failures with a recovery point objective (RPO) of less than 24 hours, while keeping costs to a minimum. What should you do?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tA.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSchedule a daily export of the table to a Cloud Storage dual or multi-region bucket.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tB.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSchedule a daily copy of the dataset to a backup region.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tC.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tSchedule a daily BigQuery snapshot of the table.\n\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tD.\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\tModify ETL job to load the data into both the current and another backup region.\n\t\t\t\t\t\t\t\t\t\t\n\n\nShow Suggested Answer\nHide Answer\n\nSuggested Answer:\nA\n\ud83d\uddf3\ufe0f\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\tby\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\te70ea9e\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tDec. 30, 2023, 9:34 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Actual exam question from\n\t\t\t\t\t\t\n\t\t\t\t\t\tGoogle's\n\t\t\t\t\t\tProfessional Data Engineer\n\n\t\t\t\t\t\t\tQuestion #: 211\n\t\t\t\t\t\t\tTopic #: 1\n\t\t\t\t\t\t\n[All Professional Data Engineer Questions]",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "by\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\te70ea9e\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\tat \n\t\t\t\t\t\t\tDec. 30, 2023, 9:34 a.m.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Why not C:\n\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Why not C:\n\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Why not C:\n\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Chosen Answer:\n\n\n\n\n\t\t\t\t\t\tThis is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.\n\t\t\t\t\t\n\n\n\n\t\t\t\t\t\tSwitch to a voting comment\nNew\n\n\n\n\n\nSubmit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Switch to a voting comment\nNew",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Submit\nCancel",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Why not C:\n\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Why not C:\n\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Why not C:\n\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not C:\n\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 15 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Based on the information provided and the need to avoid data loss in the case of a hard regional failure in BigQuery, which could result in the destruction of all data in that region, the focus should be on creating backups in a geographically distinct region. Considering this scenario, the most suitable option would be Option A\n\nHere's why this option is the most appropriate:",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Based on the information provided and the need to avoid data loss in the case of a hard regional failure in BigQuery, which could result in the destruction of all data in that region, the focus should be on creating backups in a geographically distinct region. Considering this scenario, the most suitable option would be Option A\n\nHere's why this option is the most appropriate:",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Based on the information provided and the need to avoid data loss in the case of a hard regional failure in BigQuery, which could result in the destruction of all data in that region, the focus should be on creating backups in a geographically distinct region. Considering this scenario, the most suitable option would be Option A\n\nHere's why this option is the most appropriate:",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Based on the information provided and the need to avoid data loss in the case of a hard regional failure in BigQuery, which could result in the destruction of all data in that region, the focus should be on creating backups in a geographically distinct region. Considering this scenario, the most suitable option would be Option A\n\nHere's why this option is the most appropriate:",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "\u2022\tCross-Region Backup: Exporting the data to a Google Cloud Storage bucket that is either dual or multi-regional ensures that your backups are stored in a different geographic location. This is critical for protecting against hard regional failures.\n\u2022\tData Durability: Cloud Storage provides high durability for stored data, making it a reliable option for backups in the case of regional disasters.\n\u2022\tCost-Effectiveness: While there are costs associated with storage and data transfer, this method can be more cost-effective compared to maintaining active replicas of the data in multiple regions, especially if the data is large.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "\u2022\tCross-Region Backup: Exporting the data to a Google Cloud Storage bucket that is either dual or multi-regional ensures that your backups are stored in a different geographic location. This is critical for protecting against hard regional failures.\n\u2022\tData Durability: Cloud Storage provides high durability for stored data, making it a reliable option for backups in the case of regional disasters.\n\u2022\tCost-Effectiveness: While there are costs associated with storage and data transfer, this method can be more cost-effective compared to maintaining active replicas of the data in multiple regions, especially if the data is large.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "\u2022\tCross-Region Backup: Exporting the data to a Google Cloud Storage bucket that is either dual or multi-regional ensures that your backups are stored in a different geographic location. This is critical for protecting against hard regional failures.\n\u2022\tData Durability: Cloud Storage provides high durability for stored data, making it a reliable option for backups in the case of regional disasters.\n\u2022\tCost-Effectiveness: While there are costs associated with storage and data transfer, this method can be more cost-effective compared to maintaining active replicas of the data in multiple regions, especially if the data is large.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\u2022\tCross-Region Backup: Exporting the data to a Google Cloud Storage bucket that is either dual or multi-regional ensures that your backups are stored in a different geographic location. This is critical for protecting against hard regional failures.\n\u2022\tData Durability: Cloud Storage provides high durability for stored data, making it a reliable option for backups in the case of regional disasters.\n\u2022\tCost-Effectiveness: While there are costs associated with storage and data transfer, this method can be more cost-effective compared to maintaining active replicas of the data in multiple regions, especially if the data is large.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "\u2022\tFlexibility and Automation: The export process can be automated and scheduled to occur daily, aligning with your RPO of less than 24 hours. This ensures that the most recent data is always backed up.\n\u2022\tRecovery Process: In the event of a hard regional failure, the data can be restored from the Cloud Storage backup to another operational BigQuery region, ensuring continuity of operations.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "\u2022\tFlexibility and Automation: The export process can be automated and scheduled to occur daily, aligning with your RPO of less than 24 hours. This ensures that the most recent data is always backed up.\n\u2022\tRecovery Process: In the event of a hard regional failure, the data can be restored from the Cloud Storage backup to another operational BigQuery region, ensuring continuity of operations.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "\u2022\tFlexibility and Automation: The export process can be automated and scheduled to occur daily, aligning with your RPO of less than 24 hours. This ensures that the most recent data is always backed up.\n\u2022\tRecovery Process: In the event of a hard regional failure, the data can be restored from the Cloud Storage backup to another operational BigQuery region, ensuring continuity of operations.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\u2022\tFlexibility and Automation: The export process can be automated and scheduled to occur daily, aligning with your RPO of less than 24 hours. This ensures that the most recent data is always backed up.\n\u2022\tRecovery Process: In the event of a hard regional failure, the data can be restored from the Cloud Storage backup to another operational BigQuery region, ensuring continuity of operations.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "The other options, while viable in certain scenarios, do not provide the same level of protection against a hard regional failure:\n\u2022\tOption B (Copy to Backup Region) and Option D (Modify ETL to Load into Backup Region) do not address the possibility of a hard regional failure adequately, as they do not necessarily imply storing data in a geographically distinct region.\n\u2022\tOption C (BigQuery Snapshot) is useful for point-in-time recovery but does not inherently protect against hard regional failures since the snapshots are within the same BigQuery service.\nFocusing on a robust disaster recovery strategy is crucial. Option A provides a balance between ensuring data availability in the event of a regional disaster and managing costs, aligning with best practices for data management in the cloud.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "The other options, while viable in certain scenarios, do not provide the same level of protection against a hard regional failure:\n\u2022\tOption B (Copy to Backup Region) and Option D (Modify ETL to Load into Backup Region) do not address the possibility of a hard regional failure adequately, as they do not necessarily imply storing data in a geographically distinct region.\n\u2022\tOption C (BigQuery Snapshot) is useful for point-in-time recovery but does not inherently protect against hard regional failures since the snapshots are within the same BigQuery service.\nFocusing on a robust disaster recovery strategy is crucial. Option A provides a balance between ensuring data availability in the event of a regional disaster and managing costs, aligning with best practices for data management in the cloud.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The other options, while viable in certain scenarios, do not provide the same level of protection against a hard regional failure:\n\u2022\tOption B (Copy to Backup Region) and Option D (Modify ETL to Load into Backup Region) do not address the possibility of a hard regional failure adequately, as they do not necessarily imply storing data in a geographically distinct region.\n\u2022\tOption C (BigQuery Snapshot) is useful for point-in-time recovery but does not inherently protect against hard regional failures since the snapshots are within the same BigQuery service.\nFocusing on a robust disaster recovery strategy is crucial. Option A provides a balance between ensuring data availability in the event of a regional disaster and managing costs, aligning with best practices for data management in the cloud.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "The other options, while viable in certain scenarios, do not provide the same level of protection against a hard regional failure:\n\u2022\tOption B (Copy to Backup Region) and Option D (Modify ETL to Load into Backup Region) do not address the possibility of a hard regional failure adequately, as they do not necessarily imply storing data in a geographically distinct region.\n\u2022\tOption C (BigQuery Snapshot) is useful for point-in-time recovery but does not inherently protect against hard regional failures since the snapshots are within the same BigQuery service.\nFocusing on a robust disaster recovery strategy is crucial. Option A provides a balance between ensuring data availability in the event of a regional disaster and managing costs, aligning with best practices for data management in the cloud.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option C provides cost-effective way. \n- BigQuery table snapshots are a feature that allows you to capture the state of a table at a particular point in time. \n- Snapshots are incremental, so they only store the data that has changed, making them more cost-effective than full table copies. \n- In the event of a regional failure, you can quickly restore the table from a snapshot.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t\tHighly Voted \n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C provides cost-effective way. \n- BigQuery table snapshots are a feature that allows you to capture the state of a table at a particular point in time. \n- Snapshots are incremental, so they only store the data that has changed, making them more cost-effective than full table copies. \n- In the event of a regional failure, you can quickly restore the table from a snapshot.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option C provides cost-effective way. \n- BigQuery table snapshots are a feature that allows you to capture the state of a table at a particular point in time. \n- Snapshots are incremental, so they only store the data that has changed, making them more cost-effective than full table copies. \n- In the event of a regional failure, you can quickly restore the table from a snapshot.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 7 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 1\u00a0week ago",
+      "content": "Why other options are not as suitable:\n\nB (Copy of the dataset): Copying the entire dataset daily is more expensive and less efficient than exporting just the table data.\nC (BigQuery snapshot): snapshots are within the same region and won't protect against a regional outage.\nD (Modify ETL job): This adds complexity to your ETL process and might not be the most efficient or cost-effective way to achieve your RPO.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "5\u00a0months, 1\u00a0week ago",
+      "content": "ToiToi\n\t\t\t\n\n\n\t\t\t\tMost Recent \n\n\n\t\t\t5\u00a0months, 1\u00a0week ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0weeks, 5\u00a0days ago",
+      "content": "Why other options are not as suitable:\n\nB (Copy of the dataset): Copying the entire dataset daily is more expensive and less efficient than exporting just the table data.\nC (BigQuery snapshot): snapshots are within the same region and won't protect against a regional outage.\nD (Modify ETL job): This adds complexity to your ETL process and might not be the most efficient or cost-effective way to achieve your RPO.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why other options are not as suitable:\n\nB (Copy of the dataset): Copying the entire dataset daily is more expensive and less efficient than exporting just the table data.\nC (BigQuery snapshot): snapshots are within the same region and won't protect against a regional outage.\nD (Modify ETL job): This adds complexity to your ETL process and might not be the most efficient or cost-effective way to achieve your RPO.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0weeks, 5\u00a0days ago",
+      "content": "What about the cost inplications?\n\nBigQuery exports are full-table exports, so you pay for every row scanned and written.\nStorage in multi-region buckets is a bit more expensive than single-region.\n\nAnswer C is better suited",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0weeks, 5\u00a0days ago",
+      "content": "What about the cost inplications?\n\nBigQuery exports are full-table exports, so you pay for every row scanned and written.\nStorage in multi-region buckets is a bit more expensive than single-region.\n\nAnswer C is better suited",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "2\u00a0weeks, 5\u00a0days ago",
+      "content": "desertlotus1211\n\t\t\t\n\n\n\t\t\t2\u00a0weeks, 5\u00a0days ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "What about the cost inplications?\n\nBigQuery exports are full-table exports, so you pay for every row scanned and written.\nStorage in multi-region buckets is a bit more expensive than single-region.\n\nAnswer C is better suited",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "What about the cost inplications?\n\nBigQuery exports are full-table exports, so you pay for every row scanned and written.\nStorage in multi-region buckets is a bit more expensive than single-region.\n\nAnswer C is better suited",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 2\u00a0weeks ago",
+      "content": "A : BQ snapshot should be in same region, and if so the region fails so does the snapshot.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 2\u00a0weeks ago",
+      "content": "Priyal19\n\t\t\t\n\n\n\t\t\t7\u00a0months, 2\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A : BQ snapshot should be in same region, and if so the region fails so does the snapshot.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A : BQ snapshot should be in same region, and if so the region fails so does the snapshot.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "Why Option A is not suitable: Restoring data from Option A would require reloading it back into BigQuery, which is time-consuming. This process cannot guarantee a recovery point objective (RPO) of less than 24 hours.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "7\u00a0months, 3\u00a0weeks ago",
+      "content": "viciousjpjp\n\t\t\t\n\n\n\t\t\t7\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why Option A is not suitable: Restoring data from Option A would require reloading it back into BigQuery, which is time-consuming. This process cannot guarantee a recovery point objective (RPO) of less than 24 hours.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why Option A is not suitable: Restoring data from Option A would require reloading it back into BigQuery, which is time-consuming. This process cannot guarantee a recovery point objective (RPO) of less than 24 hours.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "Believe me all questions were from Exam topic all were there yesterday in exam. But yes dont go with starting questions mainly focus questions after 200 and latest questions are at last page.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "meh_33\n\t\t\t\n\n\n\t\t\t8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Believe me all questions were from Exam topic all were there yesterday in exam. But yes dont go with starting questions mainly focus questions after 200 and latest questions are at last page.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Believe me all questions were from Exam topic all were there yesterday in exam. But yes dont go with starting questions mainly focus questions after 200 and latest questions are at last page.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "C seems correct and Raaad also saying same.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "8\u00a0months ago",
+      "content": "meh_33\n\t\t\t\n\n\n\t\t\t8\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C seems correct and Raaad also saying same.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C seems correct and Raaad also saying same.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 3\u00a0weeks ago",
+      "content": "it is c",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "11\u00a0months, 3\u00a0weeks ago",
+      "content": "ostora\n\t\t\t\n\n\n\t\t\t11\u00a0months, 3\u00a0weeks ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "it is c",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "it is c",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "C. Schedule a daily BigQuery snapshot of the table.\n\nHere's why:\n\nCost-effective: BigQuery snapshots are significantly cheaper than daily exports to Cloud Storage or copying the entire dataset to a backup region. They offer point-in-time backups with minimal storage costs.\nFast recovery: Snapshots can be restored quickly, meeting your RPO requirement of less than 24 hours.\nMulti-regional: By default, BigQuery snapshots are automatically stored in a different region from the source data, ensuring redundancy and disaster recovery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "pandeyspecial\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "C. Schedule a daily BigQuery snapshot of the table.\n\nHere's why:\n\nCost-effective: BigQuery snapshots are significantly cheaper than daily exports to Cloud Storage or copying the entire dataset to a backup region. They offer point-in-time backups with minimal storage costs.\nFast recovery: Snapshots can be restored quickly, meeting your RPO requirement of less than 24 hours.\nMulti-regional: By default, BigQuery snapshots are automatically stored in a different region from the source data, ensuring redundancy and disaster recovery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: C",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "C. Schedule a daily BigQuery snapshot of the table.\n\nHere's why:\n\nCost-effective: BigQuery snapshots are significantly cheaper than daily exports to Cloud Storage or copying the entire dataset to a backup region. They offer point-in-time backups with minimal storage costs.\nFast recovery: Snapshots can be restored quickly, meeting your RPO requirement of less than 24 hours.\nMulti-regional: By default, BigQuery snapshots are automatically stored in a different region from the source data, ensuring redundancy and disaster recovery.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "At the beginning I also thought that \"C\" is a correct answer, but futher I found documentation https://cloud.google.com/bigquery/docs/locations. According this documentation \n\"Selecting a multi-region location does not provide cross-region replication or regional redundancy, so there is no increase in dataset availability in the event of a regional outage. Data is stored in a single region within the geographic location.\n\nData located in the EU multi-region is only stored in the europe-west1 (Belgium) or europe-west4 (Netherlands) data centers\"\nSo, multi-region dataset just means locating data inside one of US regions, hence snapshot also will be stored in the same region what means that answer C is not correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "At the beginning I also thought that \"C\" is a correct answer, but futher I found documentation https://cloud.google.com/bigquery/docs/locations. According this documentation \n\"Selecting a multi-region location does not provide cross-region replication or regional redundancy, so there is no increase in dataset availability in the event of a regional outage. Data is stored in a single region within the geographic location.\n\nData located in the EU multi-region is only stored in the europe-west1 (Belgium) or europe-west4 (Netherlands) data centers\"\nSo, multi-region dataset just means locating data inside one of US regions, hence snapshot also will be stored in the same region what means that answer C is not correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year ago",
+      "content": "Sergei_B\n\t\t\t\n\n\n\t\t\t1\u00a0year ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "At the beginning I also thought that \"C\" is a correct answer, but futher I found documentation https://cloud.google.com/bigquery/docs/locations. According this documentation \n\"Selecting a multi-region location does not provide cross-region replication or regional redundancy, so there is no increase in dataset availability in the event of a regional outage. Data is stored in a single region within the geographic location.\n\nData located in the EU multi-region is only stored in the europe-west1 (Belgium) or europe-west4 (Netherlands) data centers\"\nSo, multi-region dataset just means locating data inside one of US regions, hence snapshot also will be stored in the same region what means that answer C is not correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "At the beginning I also thought that \"C\" is a correct answer, but futher I found documentation https://cloud.google.com/bigquery/docs/locations. According this documentation \n\"Selecting a multi-region location does not provide cross-region replication or regional redundancy, so there is no increase in dataset availability in the event of a regional outage. Data is stored in a single region within the geographic location.\n\nData located in the EU multi-region is only stored in the europe-west1 (Belgium) or europe-west4 (Netherlands) data centers\"\nSo, multi-region dataset just means locating data inside one of US regions, hence snapshot also will be stored in the same region what means that answer C is not correct",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "A. Schedule a daily export of the table to a Cloud Storage dual or multi-region bucket.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 1\u00a0month ago",
+      "content": "JyoGCP\n\t\t\t\n\n\n\t\t\t1\u00a0year, 1\u00a0month ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Schedule a daily export of the table to a Cloud Storage dual or multi-region bucket.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Schedule a daily export of the table to a Cloud Storage dual or multi-region bucket.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Option A. Check the ref for regional loss -\nhttps://cloud.google.com/bigquery/docs/reliability-intro#scenario_loss_of_region",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "GCP001\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A. Check the ref for regional loss -\nhttps://cloud.google.com/bigquery/docs/reliability-intro#scenario_loss_of_region",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A. Check the ref for regional loss -\nhttps://cloud.google.com/bigquery/docs/reliability-intro#scenario_loss_of_region",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "A. Schedule a daily export of the table to a Cloud Storage dual or multi-region bucket.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "datapassionate\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Schedule a daily export of the table to a Cloud Storage dual or multi-region bucket.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A. Schedule a daily export of the table to a Cloud Storage dual or multi-region bucket.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "A: MaxNRG and Helinia cleared the reasons very well",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 2\u00a0months ago",
+      "content": "Matt_108\n\t\t\t\n\n\n\t\t\t1\u00a0year, 2\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A: MaxNRG and Helinia cleared the reasons very well",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A: MaxNRG and Helinia cleared the reasons very well",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "\"BigQuery does not offer durability or availability in the extraordinarily unlikely and unprecedented event of physical region loss. This is true for both \"regions and multi-region\" configurations. Hence maintaining durability and availability under such a scenario requires customer planning.\"\n\n\"To avoid data loss in the face of destructive regional loss, you need to back up data to another geographic location. For example, you could periodically export a snapshot of your data to Google Cloud Storage in another geographically distinct region.\"\n\nRef: https://cloud.google.com/bigquery/docs/reliability-intro#scenario_loss_of_region",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Helinia\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "\"BigQuery does not offer durability or availability in the extraordinarily unlikely and unprecedented event of physical region loss. This is true for both \"regions and multi-region\" configurations. Hence maintaining durability and availability under such a scenario requires customer planning.\"\n\n\"To avoid data loss in the face of destructive regional loss, you need to back up data to another geographic location. For example, you could periodically export a snapshot of your data to Google Cloud Storage in another geographically distinct region.\"\n\nRef: https://cloud.google.com/bigquery/docs/reliability-intro#scenario_loss_of_region",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "\"BigQuery does not offer durability or availability in the extraordinarily unlikely and unprecedented event of physical region loss. This is true for both \"regions and multi-region\" configurations. Hence maintaining durability and availability under such a scenario requires customer planning.\"\n\n\"To avoid data loss in the face of destructive regional loss, you need to back up data to another geographic location. For example, you could periodically export a snapshot of your data to Google Cloud Storage in another geographically distinct region.\"\n\nRef: https://cloud.google.com/bigquery/docs/reliability-intro#scenario_loss_of_region",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 5 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option A (Export to Cloud Storage): While exporting to Cloud Storage is a viable backup strategy, it can be more expensive and less efficient than using snapshots, especially if the table is large and updated frequently.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option A (Export to Cloud Storage): While exporting to Cloud Storage is a viable backup strategy, it can be more expensive and less efficient than using snapshots, especially if the table is large and updated frequently.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option A (Export to Cloud Storage): While exporting to Cloud Storage is a viable backup strategy, it can be more expensive and less efficient than using snapshots, especially if the table is large and updated frequently.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A (Export to Cloud Storage): While exporting to Cloud Storage is a viable backup strategy, it can be more expensive and less efficient than using snapshots, especially if the table is large and updated frequently.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "I agree, It's A:\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "I agree, It's A:\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "MaxNRG\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I agree, It's A:\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "I agree, It's A:\nA table snapshot must be in the same region, and under the same organization, as its base table.\nhttps://cloud.google.com/bigquery/docs/table-snapshots-intro#limitations",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 1 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Why not C: \n\"BigQuery also supports the ability to snapshot tables. With this feature you can explicitly backup data within the same region for longer than the 7 day time travel window. A snapshot is purely a metadata operation and results in no additional storage bytes. While this can add protection against accidental deletion, it does not increase the durability of the data.\"\n\nhttps://cloud.google.com/bigquery/docs/reliability-intro#scenario_accidental_deletion_or_data_corruption",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Helinia\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not C: \n\"BigQuery also supports the ability to snapshot tables. With this feature you can explicitly backup data within the same region for longer than the 7 day time travel window. A snapshot is purely a metadata operation and results in no additional storage bytes. While this can add protection against accidental deletion, it does not increase the durability of the data.\"\n\nhttps://cloud.google.com/bigquery/docs/reliability-intro#scenario_accidental_deletion_or_data_corruption",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Why not C: \n\"BigQuery also supports the ability to snapshot tables. With this feature you can explicitly backup data within the same region for longer than the 7 day time travel window. A snapshot is purely a metadata operation and results in no additional storage bytes. While this can add protection against accidental deletion, it does not increase the durability of the data.\"\n\nhttps://cloud.google.com/bigquery/docs/reliability-intro#scenario_accidental_deletion_or_data_corruption",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "qq589539483084gfrgrgfr\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option A",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "https://cloud.google.com/bigquery/docs/reliability-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "https://cloud.google.com/bigquery/docs/reliability-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "qq589539483084gfrgrgfr\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/bigquery/docs/reliability-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "https://cloud.google.com/bigquery/docs/reliability-intro",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 3 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Automatically replicates data to a backup region upon each update, ensuring an RPO of less than 24 hours, even with multiple daily updates.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "e70ea9e\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Automatically replicates data to a backup region upon each update, ensuring an RPO of less than 24 hours, even with multiple daily updates.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Selected Answer: D",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Automatically replicates data to a backup region upon each update, ensuring an RPO of less than 24 hours, even with multiple daily updates.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 2 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option D:\nDoubles the write load and storage costs since you are maintaining two live datasets.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "Option D:\nDoubles the write load and storage costs since you are maintaining two live datasets.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "1\u00a0year, 3\u00a0months ago",
+      "content": "raaad\n\t\t\t\n\n\n\t\t\t1\u00a0year, 3\u00a0months ago",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option D:\nDoubles the write load and storage costs since you are maintaining two live datasets.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Option D:\nDoubles the write load and storage costs since you are maintaining two live datasets.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "upvoted 4 times",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "...",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "A voting comment increases the vote count for the chosen answer by one. \n                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.\n                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "",
+      "votes": "0"
+    },
+    {
+      "author": "Unknown",
+      "date": "",
+      "content": "Loading  ...",
+      "votes": "0"
+    }
+  ]
+}

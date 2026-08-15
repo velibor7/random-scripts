@@ -1,0 +1,14 @@
+COMMENT #61 FOR QUESTION 218
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+The best option here is C. Create two new read replicas from the new primary instance, one in Region3 and one in a new region.
+
+Here's the breakdown:
+
+Capacity Restoration: Promoting the Region2 replica makes it the new primary. You need to replicate from this new primary to maintain redundancy and capacity. Creating two replicas (Region3, new region) accomplishes this.
+Geographic Distribution: Distributing replicas across regions ensures availability if another regional event occurs.
+Speed: Creating new replicas from the promoted primary is likely faster than promoting another existing replica.
+============================================================

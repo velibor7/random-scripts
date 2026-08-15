@@ -1,0 +1,22 @@
+COMMENT #111 FOR QUESTION 15
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Answer: D
+What to learn or look for
+1. In-Flight data = (Real Time data, i.e still in streaming pipeline and not landed in BigQuery)
+2. Dataflow (assume in best case) streaming pipeline is running to send data to Bigquery. 
+Why not option B: change streaming to batch upload is not business requirement, we have to stuck to streaming and real time analysis. 
+
+Option D: make bigquery run after waiting for sometime (twice here), How will you do it? 
+- there is not setting in BQ to do it, right!. So, adjust it in your pipeline (dataflow)
+- For example, add Fixed window, and you want to execute aggregation query after 2 min. 
+Code
+```pipeline.apply(...)
+   .apply(Window.<TableRow>into(FixedWindows.of(Duration.standardMinutes(2))))
+    .apply(BigQueryIO.writeTableRows()
+        .to("my_dataset.my_table")
+```
+============================================================

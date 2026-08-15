@@ -1,0 +1,803 @@
+================================================================================
+QUESTION:
+You have a table that contains millions of rows of sales data, partitioned by date. Various applications and users query this data many times a minute. The query requires aggregating values by using AVG, MAX, and SUM, and does not require joining to other tables. The required aggregations are only computed over the past year of data, though you need to retain full historical data in the base tables. You want to ensure that the query results always include the latest data from the tables, while also reducing computation cost, maintenance overhead, and duration. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a materialized view to aggregate the base table data. Include a filter clause to specify the last one year of partitions.
+										
+
+
+													B.
+												
+											
+											Create a materialized view to aggregate the base table data. Configure a partition expiration on the base table to retain only the last one year of partitions.
+										
+
+
+													C.
+												
+											
+											Create a view to aggregate the base table data. Include a filter clause to specify the last year of partitions.
+										
+
+
+													D.
+												
+											
+											Create a new table that aggregates the base table data. Include a filter clause to specify the last year of partitions. Set up a scheduled query to recreate the new table every hour.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (127 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 304 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 304
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have a table that contains millions of rows of sales data, partitioned by date. Various applications and users query this data many times a minute. The query requires aggregating values by using AVG, MAX, and SUM, and does not require joining to other tables. The required aggregations are only computed over the past year of data, though you need to retain full historical data in the base tables. You want to ensure that the query results always include the latest data from the tables, while also reducing computation cost, maintenance overhead, and duration. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Create a materialized view to aggregate the base table data. Include a filter clause to specify the last one year of partitions.
+										
+
+
+													B.
+												
+											
+											Create a materialized view to aggregate the base table data. Configure a partition expiration on the base table to retain only the last one year of partitions.
+										
+
+
+													C.
+												
+											
+											Create a view to aggregate the base table data. Include a filter clause to specify the last year of partitions.
+										
+
+
+													D.
+												
+											
+											Create a new table that aggregates the base table data. Include a filter clause to specify the last year of partitions. Set up a scheduled query to recreate the new table every hour.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 4, 2024, 1:41 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 304
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 4, 2024, 1:41 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.
+- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.
+- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.
+
+--- Comment #6 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.
+- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.
+- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.
+
+--- Comment #7 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.
+- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.
+- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.
+- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.
+- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.
+
+--- Comment #13 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.
+- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.
+- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.
+
+--- Comment #14 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			9 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.
+- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.
+- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+- Materialized View: Materialized views in BigQuery are precomputed views that periodically cache the result of a query for increased performance and efficiency. They are especially beneficial for heavy and repetitive aggregation queries.
+- Filter for Recent Data: Including a clause to focus on the last year of partitions ensures that the materialized view is only storing and updating the relevant data, optimizing storage and refresh time.
+- Always Up-to-date: Materialized views are maintained by BigQuery and automatically updated at regular intervals, ensuring they include the latest data up to a certain freshness point.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 3 weeks, 4 days ago | Votes: 0
+Answer : A
+Question has below three requirements , it did NOT talk about STORAGE cost
+Reducing computation cost: Using Materialized views in BigQuery, query costs can be lower due to faster performance
+maintenance overhead : Bigquery takes care of data updates
+and duration: Since the results are precomputed and stored , it takes very less time for the query output
+
+--- Comment #23 ---
+Author: Unknown | Date: 3 weeks, 4 days ago | Votes: 0
+MBNR
+			
+
+
+				Most Recent 
+
+
+			3 weeks, 4 days ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Answer : A
+Question has below three requirements , it did NOT talk about STORAGE cost
+Reducing computation cost: Using Materialized views in BigQuery, query costs can be lower due to faster performance
+maintenance overhead : Bigquery takes care of data updates
+and duration: Since the results are precomputed and stored , it takes very less time for the query output
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+Answer : A
+Question has below three requirements , it did NOT talk about STORAGE cost
+Reducing computation cost: Using Materialized views in BigQuery, query costs can be lower due to faster performance
+maintenance overhead : Bigquery takes care of data updates
+and duration: Since the results are precomputed and stored , it takes very less time for the query output
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #31 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+Option B, creating a materialized view and configuring a partition expiration on the base table to retain only the last one year of partitions, would not meet the requirement of retaining full historical data in the base tables. Partition expiration would delete older data, which is not desirable if you need to keep the full historical data.
+
+Option A, on the other hand, allows you to create a materialized view that aggregates the data for the past year without deleting any historical data from the base table. This ensures that you always have access to the latest data while retaining the full history.
+
+--- Comment #32 ---
+Author: Unknown | Date: 3 months ago | Votes: 0
+Pime13
+			
+
+
+			3 months ago
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Option B, creating a materialized view and configuring a partition expiration on the base table to retain only the last one year of partitions, would not meet the requirement of retaining full historical data in the base tables. Partition expiration would delete older data, which is not desirable if you need to keep the full historical data.
+
+Option A, on the other hand, allows you to create a materialized view that aggregates the data for the past year without deleting any historical data from the base table. This ensures that you always have access to the latest data while retaining the full history.
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+Option B, creating a materialized view and configuring a partition expiration on the base table to retain only the last one year of partitions, would not meet the requirement of retaining full historical data in the base tables. Partition expiration would delete older data, which is not desirable if you need to keep the full historical data.
+
+Option A, on the other hand, allows you to create a materialized view that aggregates the data for the past year without deleting any historical data from the base table. This ensures that you always have access to the latest data while retaining the full history.
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #40 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+Option A
+
+--- Comment #41 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+JyoGCP
+			
+
+
+			7 months, 3 weeks ago
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+Option A
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+Option A
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #49 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+materialized view requires refreshing so it might not fulfill the requirement: "results always include the latest data from the tables". Opt. C will give you the newest data every time you execute the query but it will have to be computed every time
+
+--- Comment #50 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+et2137
+			
+
+
+			7 months, 3 weeks ago
+
+--- Comment #51 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+materialized view requires refreshing so it might not fulfill the requirement: "results always include the latest data from the tables". Opt. C will give you the newest data every time you execute the query but it will have to be computed every time
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+materialized view requires refreshing so it might not fulfill the requirement: "results always include the latest data from the tables". Opt. C will give you the newest data every time you execute the query but it will have to be computed every time
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #56 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Agree, these questions always play with words, making many of options seem plausible
+
+--- Comment #57 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Agree, these questions always play with words, making many of options seem plausible
+
+--- Comment #58 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+d11379b
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #59 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Agree, these questions always play with words, making many of options seem plausible
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+Agree, these questions always play with words, making many of options seem plausible
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+But materialized view always returns fresh data 
+Fresh data. Materialized views return fresh data. If changes to base tables might invalidate the materialized view, then data is read directly from the base tables. If the changes to the base tables don't invalidate the materialized view, then rest of the data is read from the materialized view and only the changes are read from the base tables.
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #64 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+But materialized view always returns fresh data 
+Fresh data. Materialized views return fresh data. If changes to base tables might invalidate the materialized view, then data is read directly from the base tables. If the changes to the base tables don't invalidate the materialized view, then rest of the data is read from the materialized view and only the changes are read from the base tables.
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #65 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+d11379b
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+But materialized view always returns fresh data 
+Fresh data. Materialized views return fresh data. If changes to base tables might invalidate the materialized view, then data is read directly from the base tables. If the changes to the base tables don't invalidate the materialized view, then rest of the data is read from the materialized view and only the changes are read from the base tables.
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+But materialized view always returns fresh data 
+Fresh data. Materialized views return fresh data. If changes to base tables might invalidate the materialized view, then data is read directly from the base tables. If the changes to the base tables don't invalidate the materialized view, then rest of the data is read from the materialized view and only the changes are read from the base tables.
+https://cloud.google.com/bigquery/docs/materialized-views-intro
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #74 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+A We can do aggregations, bit if not specified table will not be partitioned on the view. 
+B partition expiration is not possible, as expiration is the same as base table
+C It might be the right one, although not specific savings vs the original query, but here we would guarantee accessing only last year data. 
+D not a good one in any sense 
+
+A and C might be equally good solutions depending on some understandings. Would probably opt for A
+
+--- Comment #75 ---
+Author: Unknown | Date: 8 months, 1 week ago | Votes: 0
+casadocc
+			
+
+
+			8 months, 1 week ago
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+A We can do aggregations, bit if not specified table will not be partitioned on the view. 
+B partition expiration is not possible, as expiration is the same as base table
+C It might be the right one, although not specific savings vs the original query, but here we would guarantee accessing only last year data. 
+D not a good one in any sense 
+
+A and C might be equally good solutions depending on some understandings. Would probably opt for A
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+A We can do aggregations, bit if not specified table will not be partitioned on the view. 
+B partition expiration is not possible, as expiration is the same as base table
+C It might be the right one, although not specific savings vs the original query, but here we would guarantee accessing only last year data. 
+D not a good one in any sense 
+
+A and C might be equally good solutions depending on some understandings. Would probably opt for A
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #82 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+. Create a materialized view to aggregate the base table data. Include a filter clause to specify the last one year of partitions.
+
+--- Comment #83 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Matt_108
+			
+
+
+			9 months ago
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+. Create a materialized view to aggregate the base table data. Include a filter clause to specify the last one year of partitions.
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+. Create a materialized view to aggregate the base table data. Include a filter clause to specify the last one year of partitions.
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #91 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+To preserve the historical data
+
+--- Comment #92 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Sofiia98
+			
+
+
+			9 months ago
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+To preserve the historical data
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+To preserve the historical data
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #100 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+B. Create a materialized view to aggregate the base table data. Configure a partition expiration on the base table to retain only the last one year of partitions.
+
+--- Comment #101 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+scaenruy
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #102 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+B. Create a materialized view to aggregate the base table data. Configure a partition expiration on the base table to retain only the last one year of partitions.
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+B. Create a materialized view to aggregate the base table data. Configure a partition expiration on the base table to retain only the last one year of partitions.
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #107 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Don't agree, it is said thad that we need to store the historical data, so answer A is correct
+
+--- Comment #108 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Don't agree, it is said thad that we need to store the historical data, so answer A is correct
+
+--- Comment #109 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Sofiia98
+			
+
+
+			9 months ago
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+Don't agree, it is said thad that we need to store the historical data, so answer A is correct
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+Don't agree, it is said thad that we need to store the historical data, so answer A is correct
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #116 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Why not B
+- Configuring partition expiration on the BASE TABLE is a way to manage storage and costs by automatically dropping old data. However, the question specifies the need to retain full historical data, making this approach not suitable since it doesnt keep all historical records.
+
+--- Comment #117 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+raaad
+			
+
+
+			9 months ago
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+Why not B
+- Configuring partition expiration on the BASE TABLE is a way to manage storage and costs by automatically dropping old data. However, the question specifies the need to retain full historical data, making this approach not suitable since it doesnt keep all historical records.
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+Why not B
+- Configuring partition expiration on the BASE TABLE is a way to manage storage and costs by automatically dropping old data. However, the question specifies the need to retain full historical data, making this approach not suitable since it doesnt keep all historical records.
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

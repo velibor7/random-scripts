@@ -1,0 +1,20 @@
+COMMENT #24 FOR QUESTION 124575
+============================================================
+Author: Unknown
+Date: 3 months, 1 week ago
+Votes: 0
+----------------------------------------
+D is the only one that does the trick.
+
+Note, we can not do shuffling.
+
+Wrong answers:
+
+A: spark.sql.files.maxPartitionBytes is about reading, not writing.(The maximum number of bytes to pack into a single partition when reading files. This configuration is effective only when using file-based sources such as Parquet, JSON and ORC. )
+
+B: spark.sql.adaptive.advisoryPartitionSizeInBytes takes effect while shuffling and sorting does not make sense (The advisory size in bytes of the shuffle partition during adaptive optimization (when spark.sql.adaptive.enabled is true). It takes effect when Spark coalesces small shuffle partitions or splits skewed shuffle partition.)
+
+C: Would work but spark.sql.adaptive.advisoryPartitionSizeInBytes would need shuffling.
+
+E. spark.sql.shuffle.partitions (Configures the number of partitions to use when shuffling data for joins or aggregations.) is not about writing.
+============================================================

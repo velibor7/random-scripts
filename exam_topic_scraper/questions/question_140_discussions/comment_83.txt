@@ -1,0 +1,18 @@
+COMMENT #83 FOR QUESTION 140
+============================================================
+Author: Unknown
+Date: 1 year, 10 months ago
+Votes: 0
+----------------------------------------
+A and D are not valid, because they monotonically increase.
+C avoid hotspots for sure, but It's nor relate with querys. So for writing performance it's perfect that the reason for chose this:  “You need to create a new transaction table in Cloud Spanner that stores product sales data”. They only ask you to store product data, its a writing ops.
+If the question had spoken about query the info or hard performance read, the best option would be B, because it has the balance of writing/reading best practices.
+There are a few disadvantages to using a UUID:
+
+    They are slightly large, using 16 bytes or more. Other options for primary keys don't use this much storage.
+    They carry no information about the record. For example, a primary key of SingerId and AlbumId has an inherent meaning, while a UUID does not.
+    You lose locality between records that are related, which is why using a UUID eliminates hotspots.
+
+
+https://cloud.google.com/spanner/docs/schema-design#uuid_primary_key
+============================================================

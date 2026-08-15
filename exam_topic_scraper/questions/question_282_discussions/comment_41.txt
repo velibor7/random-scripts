@@ -1,0 +1,18 @@
+COMMENT #41 FOR QUESTION 282
+============================================================
+Author: Unknown
+Date: 2 weeks ago
+Votes: 0
+----------------------------------------
+A. Implement the BigQuery Storage Write API and guarantee that the target BigQuery table is regional.
+
+Here's the breakdown:
+
+Why Option A is Superior
+
+Exactly-Once Delivery: The BigQuery Storage Write API intrinsically supports exactly-once delivery using stream offsets. This guarantees that each message is written to BigQuery exactly one time, even in the case of retries due to the lack of native exactly-once support in your message bus.
+
+High Throughput: The Storage Write API is optimized for high-throughput scenarios. It can handle the expected ingestion throughput of 1.5 GB per second.
+
+Regional Tables: Using a regional BigQuery table aligns with best practices when utilizing the Storage Write API, as it helps to minimize latency and reduce potential cross-region communication costs.
+============================================================

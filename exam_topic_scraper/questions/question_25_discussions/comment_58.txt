@@ -1,0 +1,14 @@
+COMMENT #58 FOR QUESTION 25
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+D. Using the Stackdriver API, create a project sink with an advanced log filter to export to Pub/Sub, and subscribe to the topic from your monitoring tool.
+
+This approach allows you to set up a custom log sink with an advanced filter that targets the specific table and then export the log entries to Google Cloud Pub/Sub. Your monitoring tool can subscribe to the Pub/Sub topic, providing you with instant notifications when relevant events occur without being inundated with notifications from other tables.
+
+Options A and B do not offer the same level of customization and specificity in targeting notifications for a particular table.
+
+Option C is almost correct but doesn't mention the use of an advanced log filter in the sink configuration, which is typically needed to filter the logs to a specific table effectively. Using the Stackdriver API for more advanced configuration is often necessary for fine-grained control over log filtering.
+============================================================

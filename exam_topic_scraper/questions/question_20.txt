@@ -1,0 +1,949 @@
+================================================================================
+QUESTION:
+You work for a car manufacturer and have set up a data pipeline using Google Cloud Pub/Sub to capture anomalous sensor events. You are using a push subscription in Cloud Pub/Sub that calls a custom HTTPS endpoint that you have created to take action of these anomalous events as they occur. Your customHTTPS endpoint keeps getting an inordinate amount of duplicate messages. What is the most likely cause of these duplicate messages?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											The message body for the sensor event is too large.
+										
+
+
+													B.
+												
+											
+											Your custom endpoint has an out-of-date SSL certificate.
+										
+
+
+													C.
+												
+											
+											The Cloud Pub/Sub topic has too many messages published to it.
+										
+
+
+													D.
+												
+											
+											Your custom endpoint is not acknowledging messages within the acknowledgement deadline.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (158 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 20 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 20
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You work for a car manufacturer and have set up a data pipeline using Google Cloud Pub/Sub to capture anomalous sensor events. You are using a push subscription in Cloud Pub/Sub that calls a custom HTTPS endpoint that you have created to take action of these anomalous events as they occur. Your customHTTPS endpoint keeps getting an inordinate amount of duplicate messages. What is the most likely cause of these duplicate messages?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											The message body for the sensor event is too large.
+										
+
+
+													B.
+												
+											
+											Your custom endpoint has an out-of-date SSL certificate.
+										
+
+
+													C.
+												
+											
+											The Cloud Pub/Sub topic has too many messages published to it.
+										
+
+
+													D.
+												
+											
+											Your custom endpoint is not acknowledging messages within the acknowledgement deadline.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 11, 2020, 6:37 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 20
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								jvg637
+							
+							
+							at 
+							March 11, 2020, 6:37 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.
+
+--- Comment #6 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.
+
+--- Comment #7 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.
+
+--- Comment #13 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.
+
+--- Comment #14 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+jvg637
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+The Answer should be D. The custom endpoint is not acknowledging the message, that is the reason for Pub/Sub to send the message again and again. Not B.
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 88 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #21 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+D :  Doubt should be only between B & D. But B is not possible because if SSL is expired then endpoint URL will not receive any messages forget about duplicates. So It should be D for Duplicates.
+
+--- Comment #22 ---
+Author: Unknown | Date: 5 years ago | Votes: 0
+MauryaSushil
+			
+
+
+				Highly Voted 
+
+
+			5 years ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+D :  Doubt should be only between B & D. But B is not possible because if SSL is expired then endpoint URL will not receive any messages forget about duplicates. So It should be D for Duplicates.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+D :  Doubt should be only between B & D. But B is not possible because if SSL is expired then endpoint URL will not receive any messages forget about duplicates. So It should be D for Duplicates.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 10 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D
+Why are there too many duplicate messages?
+
+Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.
+
+--- Comment #30 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+atnafu2020
+			
+
+
+				Most Recent 
+
+
+			6 months, 2 weeks ago
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+D
+Why are there too many duplicate messages?
+
+Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+D
+Why are there too many duplicate messages?
+
+Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D is correct
+As per google docs- When you do not acknowledge a message before its acknowledgement deadline has expired, Pub/Sub resends the message. As a result, Pub/Sub can send duplicate messages. Use Google Cloud's operations suite to monitor acknowledge operations with the expired response code to detect this condition
+
+--- Comment #38 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+ganesh2121
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct
+As per google docs- When you do not acknowledge a message before its acknowledgement deadline has expired, Pub/Sub resends the message. As a result, Pub/Sub can send duplicate messages. Use Google Cloud's operations suite to monitor acknowledge operations with the expired response code to detect this condition
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct
+As per google docs- When you do not acknowledge a message before its acknowledgement deadline has expired, Pub/Sub resends the message. As a result, Pub/Sub can send duplicate messages. Use Google Cloud's operations suite to monitor acknowledge operations with the expired response code to detect this condition
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #45 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+The correct answer is D. Look for the link
+https://cloud.google.com/pubsub/docs/faq
+
+Why are there too many duplicate messages?
+Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.
+
+Another possibility is that the subscriber is not acknowledging some messages because the code path processing those specific messages fails, and the Acknowledge call is never made; or the push endpoint never responds or responds with an error.
+
+--- Comment #46 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Radhika7983
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is D. Look for the link
+https://cloud.google.com/pubsub/docs/faq
+
+Why are there too many duplicate messages?
+Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.
+
+Another possibility is that the subscriber is not acknowledging some messages because the code path processing those specific messages fails, and the Acknowledge call is never made; or the push endpoint never responds or responds with an error.
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is D. Look for the link
+https://cloud.google.com/pubsub/docs/faq
+
+Why are there too many duplicate messages?
+Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Pub/Sub is retrying the message delivery. This can be observed in the monitoring metrics pubsub.googleapis.com/subscription/pull_ack_message_operation_count for pull subscriptions, and pubsub.googleapis.com/subscription/push_request_count for push subscriptions. Look for elevated expired or webhook_timeout values in the /response_code. This is particularly likely if there are many small messages, since Pub/Sub may batch messages internally and a partially acknowledged batch will be fully redelivered.
+
+Another possibility is that the subscriber is not acknowledging some messages because the code path processing those specific messages fails, and the Acknowledge call is never made; or the push endpoint never responds or responds with an error.
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #53 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D as the Cloud Pub/Sub will deliver duplicate messages only if there has been no acknowledgement from the subscriber.
+Refer GCP documentation - Cloud Pub/Sub FAQs - Duplicates:
+https://cloud.google.com/pubsub/docs/faq#duplicates
+Why are there too many duplicate messages?
+Cloud Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Cloud Pub/Sub is retrying the message delivery.
+
+--- Comment #54 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+D as the Cloud Pub/Sub will deliver duplicate messages only if there has been no acknowledgement from the subscriber.
+Refer GCP documentation - Cloud Pub/Sub FAQs - Duplicates:
+https://cloud.google.com/pubsub/docs/faq#duplicates
+Why are there too many duplicate messages?
+Cloud Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Cloud Pub/Sub is retrying the message delivery.
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+D as the Cloud Pub/Sub will deliver duplicate messages only if there has been no acknowledgement from the subscriber.
+Refer GCP documentation - Cloud Pub/Sub FAQs - Duplicates:
+https://cloud.google.com/pubsub/docs/faq#duplicates
+Why are there too many duplicate messages?
+Cloud Pub/Sub guarantees at-least-once message delivery, which means that occasional duplicates are to be expected. However, a high rate of duplicates may indicate that the client is not acknowledging messages within the configured ack_deadline_seconds, and Cloud Pub/Sub is retrying the message delivery.
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #61 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+If the answer had been B the messages had not reached the HTTP page since the push subscription requires an SSL certificate (https://cloud.google.com/pubsub/docs/push#:~:text=Endpoint%20URL%20(required)), so the answer must be D.
+
+I think it is due to a bad response due to overcharge in the HTTPS page, which is sending a non correct status code (https://cloud.google.com/pubsub/docs/push#:~:text=VPC%20Service%20Controls.-,Receive%20messages,-When%20Pub/Sub)
+
+--- Comment #62 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+crismo04
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+If the answer had been B the messages had not reached the HTTP page since the push subscription requires an SSL certificate (https://cloud.google.com/pubsub/docs/push#:~:text=Endpoint%20URL%20(required)), so the answer must be D.
+
+I think it is due to a bad response due to overcharge in the HTTPS page, which is sending a non correct status code (https://cloud.google.com/pubsub/docs/push#:~:text=VPC%20Service%20Controls.-,Receive%20messages,-When%20Pub/Sub)
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+If the answer had been B the messages had not reached the HTTP page since the push subscription requires an SSL certificate (https://cloud.google.com/pubsub/docs/push#:~:text=Endpoint%20URL%20(required)), so the answer must be D.
+
+I think it is due to a bad response due to overcharge in the HTTPS page, which is sending a non correct status code (https://cloud.google.com/pubsub/docs/push#:~:text=VPC%20Service%20Controls.-,Receive%20messages,-When%20Pub/Sub)
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #70 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+In Google Cloud Pub/Sub, when you use a push subscription, messages are delivered to the specified endpoint (in this case, your custom HTTPS endpoint). The acknowledgment deadline is the time given to the endpoint to acknowledge that it has received and processed the message. If the acknowledgment is not received within the deadline, Pub/Sub may consider the message as unacknowledged and may attempt redelivery, which can lead to duplicate messages.
+
+You should ensure that your custom HTTPS endpoint acknowledges messages within the acknowledgment deadline to prevent duplicate messages from being sent. Additionally, it's essential to handle messages in an idempotent way, so even if duplicates do occur, the action taken by your endpoint doesn't have unintended consequences.
+
+--- Comment #71 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+rtcpost
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+In Google Cloud Pub/Sub, when you use a push subscription, messages are delivered to the specified endpoint (in this case, your custom HTTPS endpoint). The acknowledgment deadline is the time given to the endpoint to acknowledge that it has received and processed the message. If the acknowledgment is not received within the deadline, Pub/Sub may consider the message as unacknowledged and may attempt redelivery, which can lead to duplicate messages.
+
+You should ensure that your custom HTTPS endpoint acknowledges messages within the acknowledgment deadline to prevent duplicate messages from being sent. Additionally, it's essential to handle messages in an idempotent way, so even if duplicates do occur, the action taken by your endpoint doesn't have unintended consequences.
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+In Google Cloud Pub/Sub, when you use a push subscription, messages are delivered to the specified endpoint (in this case, your custom HTTPS endpoint). The acknowledgment deadline is the time given to the endpoint to acknowledge that it has received and processed the message. If the acknowledgment is not received within the deadline, Pub/Sub may consider the message as unacknowledged and may attempt redelivery, which can lead to duplicate messages.
+
+You should ensure that your custom HTTPS endpoint acknowledges messages within the acknowledgment deadline to prevent duplicate messages from being sent. Additionally, it's essential to handle messages in an idempotent way, so even if duplicates do occur, the action taken by your endpoint doesn't have unintended consequences.
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #79 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+After re-reading the question it seem to me that it is asking for a root cause. It is possible that the most common cause of this symptom is and expired certificate. Once expired duplicates would be received for every message.
+
+--- Comment #80 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+petergjohnson
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+After re-reading the question it seem to me that it is asking for a root cause. It is possible that the most common cause of this symptom is and expired certificate. Once expired duplicates would be received for every message.
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+After re-reading the question it seem to me that it is asking for a root cause. It is possible that the most common cause of this symptom is and expired certificate. Once expired duplicates would be received for every message.
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #88 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+Agree with previous explanations regarding validity of D
+
+--- Comment #89 ---
+Author: Unknown | Date: 10 months, 3 weeks ago | Votes: 0
+VictorBa
+			
+
+
+			10 months, 3 weeks ago
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+Agree with previous explanations regarding validity of D
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+Agree with previous explanations regarding validity of D
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #97 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+D -  If a message has not been acknowledged within its acknowledgement deadline, Dataflow attempts to maintain the lease on the message by repeatedly extending the acknowledgement deadline to prevent redelivery from Pub/Sub. However this is best effort and there is a possibility that messages may be redelivered. This can be monitored using metrics listed here. https://cloud.google.com/blog/products/data-analytics/handling-duplicate-data-in-streaming-pipeline-using-pubsub-dataflow
+
+--- Comment #98 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+searching4alicense
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+D -  If a message has not been acknowledged within its acknowledgement deadline, Dataflow attempts to maintain the lease on the message by repeatedly extending the acknowledgement deadline to prevent redelivery from Pub/Sub. However this is best effort and there is a possibility that messages may be redelivered. This can be monitored using metrics listed here. https://cloud.google.com/blog/products/data-analytics/handling-duplicate-data-in-streaming-pipeline-using-pubsub-dataflow
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+D -  If a message has not been acknowledged within its acknowledgement deadline, Dataflow attempts to maintain the lease on the message by repeatedly extending the acknowledgement deadline to prevent redelivery from Pub/Sub. However this is best effort and there is a possibility that messages may be redelivered. This can be monitored using metrics listed here. https://cloud.google.com/blog/products/data-analytics/handling-duplicate-data-in-streaming-pipeline-using-pubsub-dataflow
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #105 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+D should be the answer. If acknowlegement is not received back to pub/sub , pub/sub may resend meassages.
+
+--- Comment #106 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+philli1011
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+D should be the answer. If acknowlegement is not received back to pub/sub , pub/sub may resend meassages.
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+D should be the answer. If acknowlegement is not received back to pub/sub , pub/sub may resend meassages.
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #113 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+The correct answer is:
+D. Your custom endpoint is not acknowledging messages within the acknowledgement deadline.
+
+--- Comment #114 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+imran79
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is:
+D. Your custom endpoint is not acknowledging messages within the acknowledgement deadline.
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is:
+D. Your custom endpoint is not acknowledging messages within the acknowledgement deadline.
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #121 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+if there were an out of date certificate then nothing would get through. D
+
+--- Comment #122 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+emmylou
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+if there were an out of date certificate then nothing would get through. D
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+if there were an out of date certificate then nothing would get through. D
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #129 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+It should be D
+https://cloud.google.com/pubsub/docs/troubleshooting#dupes
+
+--- Comment #130 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+FP77
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+It should be D
+https://cloud.google.com/pubsub/docs/troubleshooting#dupes
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+It should be D
+https://cloud.google.com/pubsub/docs/troubleshooting#dupes
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #138 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+The correct answer is D, because it's how Pub/Sub works.
+Documentation here: https://cloud.google.com/pubsub/docs/troubleshooting#dupes
+
+--- Comment #139 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+dgteixeira
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is D, because it's how Pub/Sub works.
+Documentation here: https://cloud.google.com/pubsub/docs/troubleshooting#dupes
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is D, because it's how Pub/Sub works.
+Documentation here: https://cloud.google.com/pubsub/docs/troubleshooting#dupes
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #147 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+D for sure
+
+--- Comment #148 ---
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+boca_2022
+			
+
+
+			1 year, 11 months ago
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+D for sure
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+D for sure
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

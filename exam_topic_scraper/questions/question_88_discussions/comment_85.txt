@@ -1,0 +1,11 @@
+COMMENT #85 FOR QUESTION 88
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+It`s D.
+Use a try catch block to direct erroneous rows into a side output. The PCollection of the side output can be sent efficiently to the PubSub topic via Apache Beam PubSubIO.
+
+It's not C because C means to sent every single invalid row in a separate request to PubSub which is very inefficient when working with Dataflow as now batching is involved.
+============================================================

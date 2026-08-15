@@ -1,0 +1,13 @@
+COMMENT #99 FOR QUESTION 184
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+An append-only staging table ensures that all incoming data is captured without risk of data loss or overwrites, which is crucial for maintaining data integrity in a streaming ingestion scenario.
+Three-Hour Update Interval:
+
+Updating the production table every three hours strikes a good balance between minimizing the latency of data availability for reporting and reducing the frequency of potentially resource-intensive update operations.
+This interval is frequent enough to keep the production table relatively up-to-date for reporting purposes while ensuring that the performance of both ingestion and reporting processes is not significantly impacted.
+Frequent updates (like every ninety minutes or every thirty minutes) could introduce unnecessary overhead and contention, especially if the dataset is large or if there are complex transformations involved.
+============================================================

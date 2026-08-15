@@ -1,0 +1,9 @@
+COMMENT #75 FOR QUESTION 8
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Correct answer is D. Group by column us used to check for the duplicates where you can have the count(*) for each of the unique id column. If the count is greater than 1, we will know duplicate exists.The easiest way to remove duplicates while streaming inserts is to use row_number. Use GROUP BY on the unique ID column and timestamp column and SUM on the values will not remove duplicates.
+I also executed LAG function and LAG function will return NULL on unique id when no previous records with same unique id exist. Hence LAG is also not an option here.
+============================================================

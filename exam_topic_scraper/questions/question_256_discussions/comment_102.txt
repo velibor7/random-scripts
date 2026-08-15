@@ -1,0 +1,18 @@
+COMMENT #102 FOR QUESTION 256
+============================================================
+Author: Unknown
+Date: 1 year ago
+Votes: 0
+----------------------------------------
+Why not C:
+The reference here (https://cloud.google.com/vpc/docs/private-service-connect#published-services) limits the available use cases:
+Private Service Connect supports access to the following types of managed services:
+Published VPC-hosted services, which include the following:
+	Google published services, such as Apigee or the GKE control plane
+	Third-party published services provided by Private Service Connect partners
+	Intra-organization published services, where the consumer and producer might be two different VPC networks within the same company
+Google APIs, such as Cloud Storage or BigQuery
+
+Unfortunately your airflow Rest API is not published as a service in the list, so you can not use it 
+This is also one of the reasons why you should reject A
+============================================================

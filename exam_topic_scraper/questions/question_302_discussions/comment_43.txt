@@ -1,0 +1,11 @@
+COMMENT #43 FOR QUESTION 302
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Because "Minimize costs" was requested, i would go for C. 
+Storage cost will be lower for partitions where no writes took place for a certain amount of time, see https://cloud.google.com/bigquery/pricing#storage
+Partitioning by timestamp can be configured to use daily, hourly, monthly, or yearly partitioning - so if you choose daily partitioning, the number of partitions should not be an issue.
+Working with RECORDS (A,B) would be an option if performance was in focus.
+============================================================

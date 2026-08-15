@@ -1,0 +1,13 @@
+COMMENT #30 FOR QUESTION 102
+============================================================
+Author: Unknown
+Date: 1 year, 3 months ago
+Votes: 0
+----------------------------------------
+The key reasons this is better than the other options:
+
+Using BigQuery UPDATE statements (option A) would be very inefficient for thousands of updates per hour. It is better to batch updates.
+Partitioning the inventory balance table (option B) helps query performance, but does not solve the need to incrementally update balances.
+Using the bulk loader (option D) would require batch loading the updates, which adds latency. Streaming inserts updates with lower latency.
+So option C provides a scalable architecture that streams updates with low latency while batch updating the balances only once per day for efficiency. This balances performance and accuracy needs.
+============================================================

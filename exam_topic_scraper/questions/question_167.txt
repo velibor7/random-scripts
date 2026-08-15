@@ -1,0 +1,1081 @@
+================================================================================
+QUESTION:
+Your company currently runs a large on-premises cluster using Spark, Hive, and HDFS in a colocation facility. The cluster is designed to accommodate peak usage on the system; however, many jobs are batch in nature, and usage of the cluster fluctuates quite dramatically. Your company is eager to move to the cloud to reduce the overhead associated with on-premises infrastructure and maintenance and to benefit from the cost savings. They are also hoping to modernize their existing infrastructure to use more serverless offerings in order to take advantage of the cloud. Because of the timing of their contract renewal with the colocation facility, they have only 2 months for their initial migration. How would you recommend they approach their upcoming migration strategy so they can maximize their cost savings in the cloud while still executing the migration in time?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Migrate the workloads to Dataproc plus HDFS; modernize later.
+										
+
+
+													B.
+												
+											
+											Migrate the workloads to Dataproc plus Cloud Storage; modernize later.
+										
+
+
+													C.
+												
+											
+											Migrate the Spark workload to Dataproc plus HDFS, and modernize the Hive workload for BigQuery.
+										
+
+
+													D.
+												
+											
+											Modernize the Spark workload for Dataflow and the Hive workload for BigQuery.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (174 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 167 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 167
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Your company currently runs a large on-premises cluster using Spark, Hive, and HDFS in a colocation facility. The cluster is designed to accommodate peak usage on the system; however, many jobs are batch in nature, and usage of the cluster fluctuates quite dramatically. Your company is eager to move to the cloud to reduce the overhead associated with on-premises infrastructure and maintenance and to benefit from the cost savings. They are also hoping to modernize their existing infrastructure to use more serverless offerings in order to take advantage of the cloud. Because of the timing of their contract renewal with the colocation facility, they have only 2 months for their initial migration. How would you recommend they approach their upcoming migration strategy so they can maximize their cost savings in the cloud while still executing the migration in time?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Migrate the workloads to Dataproc plus HDFS; modernize later.
+										
+
+
+													B.
+												
+											
+											Migrate the workloads to Dataproc plus Cloud Storage; modernize later.
+										
+
+
+													C.
+												
+											
+											Migrate the Spark workload to Dataproc plus HDFS, and modernize the Hive workload for BigQuery.
+										
+
+
+													D.
+												
+											
+											Modernize the Spark workload for Dataflow and the Hive workload for BigQuery.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 2, 2022, 6:57 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 167
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								AWSandeep
+							
+							
+							at 
+							Sept. 2, 2022, 6:57 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/architecture/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#overview
+When you want to move your Apache Spark workloads from an on-premises environment to Google Cloud, we recommend using Dataproc to run Apache Spark/Apache Hadoop clusters. Dataproc is a fully managed, fully supported service offered by Google Cloud. It allows you to separate storage and compute, which helps you to manage your costs and be more flexible in scaling your workloads.
+
+https://cloud.google.com/bigquery/docs/migration/hive#data_migration
+Migrating Hive data from your on-premises or other cloud-based source cluster to BigQuery has two steps:
+1. Copying data from a source cluster to Cloud Storage
+2. Loading data from Cloud Storage into BigQuery
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/architecture/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#overview
+When you want to move your Apache Spark workloads from an on-premises environment to Google Cloud, we recommend using Dataproc to run Apache Spark/Apache Hadoop clusters. Dataproc is a fully managed, fully supported service offered by Google Cloud. It allows you to separate storage and compute, which helps you to manage your costs and be more flexible in scaling your workloads.
+
+https://cloud.google.com/bigquery/docs/migration/hive#data_migration
+Migrating Hive data from your on-premises or other cloud-based source cluster to BigQuery has two steps:
+1. Copying data from a source cluster to Cloud Storage
+2. Loading data from Cloud Storage into BigQuery
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/architecture/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#overview
+When you want to move your Apache Spark workloads from an on-premises environment to Google Cloud, we recommend using Dataproc to run Apache Spark/Apache Hadoop clusters. Dataproc is a fully managed, fully supported service offered by Google Cloud. It allows you to separate storage and compute, which helps you to manage your costs and be more flexible in scaling your workloads.
+
+https://cloud.google.com/bigquery/docs/migration/hive#data_migration
+Migrating Hive data from your on-premises or other cloud-based source cluster to BigQuery has two steps:
+1. Copying data from a source cluster to Cloud Storage
+2. Loading data from Cloud Storage into BigQuery
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/architecture/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#overview
+When you want to move your Apache Spark workloads from an on-premises environment to Google Cloud, we recommend using Dataproc to run Apache Spark/Apache Hadoop clusters. Dataproc is a fully managed, fully supported service offered by Google Cloud. It allows you to separate storage and compute, which helps you to manage your costs and be more flexible in scaling your workloads.
+
+https://cloud.google.com/bigquery/docs/migration/hive#data_migration
+Migrating Hive data from your on-premises or other cloud-based source cluster to BigQuery has two steps:
+1. Copying data from a source cluster to Cloud Storage
+2. Loading data from Cloud Storage into BigQuery
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/architecture/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#overview
+When you want to move your Apache Spark workloads from an on-premises environment to Google Cloud, we recommend using Dataproc to run Apache Spark/Apache Hadoop clusters. Dataproc is a fully managed, fully supported service offered by Google Cloud. It allows you to separate storage and compute, which helps you to manage your costs and be more flexible in scaling your workloads.
+
+https://cloud.google.com/bigquery/docs/migration/hive#data_migration
+Migrating Hive data from your on-premises or other cloud-based source cluster to BigQuery has two steps:
+1. Copying data from a source cluster to Cloud Storage
+2. Loading data from Cloud Storage into BigQuery
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+zellck
+			
+
+
+				Highly Voted 
+
+
+			1 year, 10 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+B is the answer.
+
+https://cloud.google.com/architecture/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#overview
+When you want to move your Apache Spark workloads from an on-premises environment to Google Cloud, we recommend using Dataproc to run Apache Spark/Apache Hadoop clusters. Dataproc is a fully managed, fully supported service offered by Google Cloud. It allows you to separate storage and compute, which helps you to manage your costs and be more flexible in scaling your workloads.
+
+https://cloud.google.com/bigquery/docs/migration/hive#data_migration
+Migrating Hive data from your on-premises or other cloud-based source cluster to BigQuery has two steps:
+1. Copying data from a source cluster to Cloud Storage
+2. Loading data from Cloud Storage into BigQuery
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+https://cloud.google.com/architecture/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc#overview
+When you want to move your Apache Spark workloads from an on-premises environment to Google Cloud, we recommend using Dataproc to run Apache Spark/Apache Hadoop clusters. Dataproc is a fully managed, fully supported service offered by Google Cloud. It allows you to separate storage and compute, which helps you to manage your costs and be more flexible in scaling your workloads.
+
+https://cloud.google.com/bigquery/docs/migration/hive#data_migration
+Migrating Hive data from your on-premises or other cloud-based source cluster to BigQuery has two steps:
+1. Copying data from a source cluster to Cloud Storage
+2. Loading data from Cloud Storage into BigQuery
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 8 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+B. Migrate the workloads to Dataproc plus Cloud Storage; modernize later.
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+B. Migrate the workloads to Dataproc plus Cloud Storage; modernize later.
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+AzureDP900
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+B. Migrate the workloads to Dataproc plus Cloud Storage; modernize later.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+B. Migrate the workloads to Dataproc plus Cloud Storage; modernize later.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Based on the time constraint of 2 months and the goal to maximize cost savings, I would recommend option B - Migrate the workloads to Dataproc plus Cloud Storage; modernize later.
+The key reasons are:
+•	Dataproc provides a fast, native migration path from on-prem Spark and Hive to the cloud. This allows meeting the 2 month timeline.
+•	Using Cloud Storage instead of HDFS avoids managing clusters for variable workloads and provides cost savings.
+•	Further optimizations and modernization to serverless (Dataflow, BigQuery) can happen incrementally later without time pressure.
+
+--- Comment #31 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+				Most Recent 
+
+
+			9 months, 3 weeks ago
+
+--- Comment #32 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Based on the time constraint of 2 months and the goal to maximize cost savings, I would recommend option B - Migrate the workloads to Dataproc plus Cloud Storage; modernize later.
+The key reasons are:
+•	Dataproc provides a fast, native migration path from on-prem Spark and Hive to the cloud. This allows meeting the 2 month timeline.
+•	Using Cloud Storage instead of HDFS avoids managing clusters for variable workloads and provides cost savings.
+•	Further optimizations and modernization to serverless (Dataflow, BigQuery) can happen incrementally later without time pressure.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Based on the time constraint of 2 months and the goal to maximize cost savings, I would recommend option B - Migrate the workloads to Dataproc plus Cloud Storage; modernize later.
+The key reasons are:
+•	Dataproc provides a fast, native migration path from on-prem Spark and Hive to the cloud. This allows meeting the 2 month timeline.
+•	Using Cloud Storage instead of HDFS avoids managing clusters for variable workloads and provides cost savings.
+•	Further optimizations and modernization to serverless (Dataflow, BigQuery) can happen incrementally later without time pressure.
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Option A still requires managing HDFS.
+Option C and D require full modernization of workloads in 2 months which is likely infeasible.
+Therefore, migrating to Dataproc with Cloud Storage fast tracks the migration within 2 months while realizing immediate cost savings, enabling the flexibility to iteratively modernize and optimize the workloads over time.
+
+--- Comment #38 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+Option A still requires managing HDFS.
+Option C and D require full modernization of workloads in 2 months which is likely infeasible.
+Therefore, migrating to Dataproc with Cloud Storage fast tracks the migration within 2 months while realizing immediate cost savings, enabling the flexibility to iteratively modernize and optimize the workloads over time.
+
+--- Comment #39 ---
+Author: Unknown | Date: 9 months, 3 weeks ago | Votes: 0
+MaxNRG
+			
+
+
+			9 months, 3 weeks ago
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+Option A still requires managing HDFS.
+Option C and D require full modernization of workloads in 2 months which is likely infeasible.
+Therefore, migrating to Dataproc with Cloud Storage fast tracks the migration within 2 months while realizing immediate cost savings, enabling the flexibility to iteratively modernize and optimize the workloads over time.
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+Option A still requires managing HDFS.
+Option C and D require full modernization of workloads in 2 months which is likely infeasible.
+Therefore, migrating to Dataproc with Cloud Storage fast tracks the migration within 2 months while realizing immediate cost savings, enabling the flexibility to iteratively modernize and optimize the workloads over time.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #47 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+B is most likely
+1. migrate job and infrastructure to dataproc on clound
+2. any data, move from hdfs on-premise to google cloud storage ( one of them is Hive)
+If you want to modernize Hive to Bigquery , you are need to move it into GCS(preceding step) first and load it into bigquery
+that is all. 
+
+https://cloud.google.com/blog/products/data-analytics/apache-hive-to-bigquery
+https://cloud.google.com/architecture/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-data
+
+--- Comment #48 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+John_Pongthorn
+			
+
+
+			2 years ago
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+B is most likely
+1. migrate job and infrastructure to dataproc on clound
+2. any data, move from hdfs on-premise to google cloud storage ( one of them is Hive)
+If you want to modernize Hive to Bigquery , you are need to move it into GCS(preceding step) first and load it into bigquery
+that is all. 
+
+https://cloud.google.com/blog/products/data-analytics/apache-hive-to-bigquery
+https://cloud.google.com/architecture/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-data
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+B is most likely
+1. migrate job and infrastructure to dataproc on clound
+2. any data, move from hdfs on-premise to google cloud storage ( one of them is Hive)
+If you want to modernize Hive to Bigquery , you are need to move it into GCS(preceding step) first and load it into bigquery
+that is all. 
+
+https://cloud.google.com/blog/products/data-analytics/apache-hive-to-bigquery
+https://cloud.google.com/architecture/hadoop/migrating-apache-spark-jobs-to-cloud-dataproc
+https://cloud.google.com/architecture/hadoop/hadoop-gcp-migration-data
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #56 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Answer D
+
+--- Comment #57 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #58 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+Answer D
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+you sould migrate spark to apache beam which is not the case here
+
+--- Comment #64 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+you sould migrate spark to apache beam which is not the case here
+
+--- Comment #65 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+dn_mohammed_data
+			
+
+
+			2 years ago
+
+--- Comment #66 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+you sould migrate spark to apache beam which is not the case here
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+you sould migrate spark to apache beam which is not the case here
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+apache beam for what???
+
+--- Comment #71 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+apache beam for what???
+
+--- Comment #72 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+TNT87
+			
+
+
+			2 years ago
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+apache beam for what???
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+apache beam for what???
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #77 ---
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+dataflow uses apache beam
+
+--- Comment #78 ---
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+dataflow uses apache beam
+
+--- Comment #79 ---
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+adarifian
+			
+
+
+			1 year, 12 months ago
+
+--- Comment #80 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+dataflow uses apache beam
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+dataflow uses apache beam
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #84 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+@adarifian Why use apache beam yet there is Dataflow an inhouse gcp solution to solve the problem? hence i said apache beam for what
+
+--- Comment #85 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+@adarifian Why use apache beam yet there is Dataflow an inhouse gcp solution to solve the problem? hence i said apache beam for what
+
+--- Comment #86 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+TNT87
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #87 ---
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+@adarifian Why use apache beam yet there is Dataflow an inhouse gcp solution to solve the problem? hence i said apache beam for what
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+@adarifian Why use apache beam yet there is Dataflow an inhouse gcp solution to solve the problem? hence i said apache beam for what
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #91 ---
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+Dataflow IS apache beam, Dataflow is a Beam Runner.
+If you go for that soulution you will need to modify your pipeline to use Beam
+
+--- Comment #92 ---
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+Dataflow IS apache beam, Dataflow is a Beam Runner.
+If you go for that soulution you will need to modify your pipeline to use Beam
+
+--- Comment #93 ---
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+ExamCtechs
+			
+
+
+			11 months, 1 week ago
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+Dataflow IS apache beam, Dataflow is a Beam Runner.
+If you go for that soulution you will need to modify your pipeline to use Beam
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+Dataflow IS apache beam, Dataflow is a Beam Runner.
+If you go for that soulution you will need to modify your pipeline to use Beam
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #105 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+D isn't feasible, within 2 months. Anyone who has worked in  a Hadoop/ Big Data data warehousing or data lake project, knows how less time 2 months is, given the amount of data and associated complexities abound. 
+
+It should be B to begin with. And then gradually move towards D.
+
+--- Comment #106 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+GyaneswarPanigrahi
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+D isn't feasible, within 2 months. Anyone who has worked in  a Hadoop/ Big Data data warehousing or data lake project, knows how less time 2 months is, given the amount of data and associated complexities abound. 
+
+It should be B to begin with. And then gradually move towards D.
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+D isn't feasible, within 2 months. Anyone who has worked in  a Hadoop/ Big Data data warehousing or data lake project, knows how less time 2 months is, given the amount of data and associated complexities abound. 
+
+It should be B to begin with. And then gradually move towards D.
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #113 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Ans B
+-cost saving 
+-time factor
+-Spark -Data proc
+
+--- Comment #114 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #115 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Ans B
+-cost saving 
+-time factor
+-Spark -Data proc
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+Ans B
+-cost saving 
+-time factor
+-Spark -Data proc
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #120 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Ans D is also relevant if you read this. Onthe other hand cloud storage isnt severless but bigquery is
+https://cloud.google.com/hadoop-spark-migration
+
+--- Comment #121 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Ans D is also relevant if you read this. Onthe other hand cloud storage isnt severless but bigquery is
+https://cloud.google.com/hadoop-spark-migration
+
+--- Comment #122 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+TNT87
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+Ans D is also relevant if you read this. Onthe other hand cloud storage isnt severless but bigquery is
+https://cloud.google.com/hadoop-spark-migration
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+Ans D is also relevant if you read this. Onthe other hand cloud storage isnt severless but bigquery is
+https://cloud.google.com/hadoop-spark-migration
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #130 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Ans.B as per the following link
+https://blog.devgenius.io/migrating-spark-jobs-to-google-cloud-file-event-sensor-to-dynamically-create-spark-cluster-7eff2c75423d
+
+--- Comment #131 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+damaldon
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+Ans.B as per the following link
+https://blog.devgenius.io/migrating-spark-jobs-to-google-cloud-file-event-sensor-to-dynamically-create-spark-cluster-7eff2c75423d
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+Ans.B as per the following link
+https://blog.devgenius.io/migrating-spark-jobs-to-google-cloud-file-event-sensor-to-dynamically-create-spark-cluster-7eff2c75423d
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #138 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+For the time window of two month I would recommend B and then start to implement D.
+
+--- Comment #139 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+YorelNation
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+For the time window of two month I would recommend B and then start to implement D.
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+For the time window of two month I would recommend B and then start to implement D.
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #147 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+It is B or D, still confusing
+
+--- Comment #148 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+ducc
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+It is B or D, still confusing
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+It is B or D, still confusing
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #155 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+D because the Apache Spark Runner can be used to execute Beam pipelines using Apache Spark. Also, Hive to BigQuery is not a difficult modernization/migration.
+
+--- Comment #156 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+AWSandeep
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #157 ---
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+D because the Apache Spark Runner can be used to execute Beam pipelines using Apache Spark. Also, Hive to BigQuery is not a difficult modernization/migration.
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+D because the Apache Spark Runner can be used to execute Beam pipelines using Apache Spark. Also, Hive to BigQuery is not a difficult modernization/migration.
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #162 ---
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+Dataflow is a Runner of Beam it self
+
+--- Comment #163 ---
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+Dataflow is a Runner of Beam it self
+
+--- Comment #164 ---
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+ExamCtechs
+			
+
+
+			11 months, 1 week ago
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+Dataflow is a Runner of Beam it self
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+Dataflow is a Runner of Beam it self
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

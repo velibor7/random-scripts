@@ -1,0 +1,431 @@
+================================================================================
+QUESTION:
+You have an upstream process that writes data to Cloud Storage. This data is then read by an Apache Spark job that runs on Dataproc. These jobs are run in the us-central1 region, but the data could be stored anywhere in the United States. You need to have a recovery process in place in case of a catastrophic single region failure. You need an approach with a maximum of 15 minutes of data loss (RPO=15 mins). You want to ensure that there is minimal latency when reading the data. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Create two regional Cloud Storage buckets, one in the us-central1 region and one in the us-south1 region.2. Have the upstream process write data to the us-central1 bucket. Use the Storage Transfer Service to copy data hourly from the us-central1 bucket to the us-south1 bucket.3. Run the Dataproc cluster in a zone in the us-central1 region, reading from the bucket in that region.4. In case of regional failure, redeploy your Dataproc clusters to the us-south1 region and read from the bucket in that region instead.
+										
+
+
+													B.
+												
+											
+											1. Create a Cloud Storage bucket in the US multi-region.2. Run the Dataproc cluster in a zone in the us-central1 region, reading data from the US multi-region bucket.3. In case of a regional failure, redeploy the Dataproc cluster to the us-central2 region and continue reading from the same bucket.
+										
+
+
+													C.
+												
+											
+											1. Create a dual-region Cloud Storage bucket in the us-central1 and us-south1 regions.2. Enable turbo replication.3. Run the Dataproc cluster in a zone in the us-central1 region, reading from the bucket in the us-south1 region.4. In case of a regional failure, redeploy your Dataproc cluster to the us-south1 region and continue reading from the same bucket.
+										
+
+
+													D.
+												
+											
+											1. Create a dual-region Cloud Storage bucket in the us-central1 and us-south1 regions.2. Enable turbo replication.3. Run the Dataproc cluster in a zone in the us-central1 region, reading from the bucket in the same region.4. In case of a regional failure, redeploy the Dataproc clusters to the us-south1 region and read from the same bucket.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (51 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 299 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 299
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have an upstream process that writes data to Cloud Storage. This data is then read by an Apache Spark job that runs on Dataproc. These jobs are run in the us-central1 region, but the data could be stored anywhere in the United States. You need to have a recovery process in place in case of a catastrophic single region failure. You need an approach with a maximum of 15 minutes of data loss (RPO=15 mins). You want to ensure that there is minimal latency when reading the data. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Create two regional Cloud Storage buckets, one in the us-central1 region and one in the us-south1 region.2. Have the upstream process write data to the us-central1 bucket. Use the Storage Transfer Service to copy data hourly from the us-central1 bucket to the us-south1 bucket.3. Run the Dataproc cluster in a zone in the us-central1 region, reading from the bucket in that region.4. In case of regional failure, redeploy your Dataproc clusters to the us-south1 region and read from the bucket in that region instead.
+										
+
+
+													B.
+												
+											
+											1. Create a Cloud Storage bucket in the US multi-region.2. Run the Dataproc cluster in a zone in the us-central1 region, reading data from the US multi-region bucket.3. In case of a regional failure, redeploy the Dataproc cluster to the us-central2 region and continue reading from the same bucket.
+										
+
+
+													C.
+												
+											
+											1. Create a dual-region Cloud Storage bucket in the us-central1 and us-south1 regions.2. Enable turbo replication.3. Run the Dataproc cluster in a zone in the us-central1 region, reading from the bucket in the us-south1 region.4. In case of a regional failure, redeploy your Dataproc cluster to the us-south1 region and continue reading from the same bucket.
+										
+
+
+													D.
+												
+											
+											1. Create a dual-region Cloud Storage bucket in the us-central1 and us-south1 regions.2. Enable turbo replication.3. Run the Dataproc cluster in a zone in the us-central1 region, reading from the bucket in the same region.4. In case of a regional failure, redeploy the Dataproc clusters to the us-south1 region and read from the same bucket.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 4, 2024, 2:34 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 299
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								scaenruy
+							
+							
+							at 
+							Jan. 4, 2024, 2:34 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Rapid Replication: Turbo replication ensures near-real-time data synchronization between regions, achieving an RPO of 15 minutes or less.
+- Minimal Latency: Dataproc clusters can read from the bucket in the same region, minimizing data transfer latency and optimizing performance.
+- Disaster Recovery: In case of regional failure, Dataproc clusters can seamlessly redeploy to the other region and continue reading from the same bucket, ensuring business continuity.
+
+--- Comment #6 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Rapid Replication: Turbo replication ensures near-real-time data synchronization between regions, achieving an RPO of 15 minutes or less.
+- Minimal Latency: Dataproc clusters can read from the bucket in the same region, minimizing data transfer latency and optimizing performance.
+- Disaster Recovery: In case of regional failure, Dataproc clusters can seamlessly redeploy to the other region and continue reading from the same bucket, ensuring business continuity.
+
+--- Comment #7 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Rapid Replication: Turbo replication ensures near-real-time data synchronization between regions, achieving an RPO of 15 minutes or less.
+- Minimal Latency: Dataproc clusters can read from the bucket in the same region, minimizing data transfer latency and optimizing performance.
+- Disaster Recovery: In case of regional failure, Dataproc clusters can seamlessly redeploy to the other region and continue reading from the same bucket, ensuring business continuity.
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Rapid Replication: Turbo replication ensures near-real-time data synchronization between regions, achieving an RPO of 15 minutes or less.
+- Minimal Latency: Dataproc clusters can read from the bucket in the same region, minimizing data transfer latency and optimizing performance.
+- Disaster Recovery: In case of regional failure, Dataproc clusters can seamlessly redeploy to the other region and continue reading from the same bucket, ensuring business continuity.
+
+--- Comment #13 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+- Rapid Replication: Turbo replication ensures near-real-time data synchronization between regions, achieving an RPO of 15 minutes or less.
+- Minimal Latency: Dataproc clusters can read from the bucket in the same region, minimizing data transfer latency and optimizing performance.
+- Disaster Recovery: In case of regional failure, Dataproc clusters can seamlessly redeploy to the other region and continue reading from the same bucket, ensuring business continuity.
+
+--- Comment #14 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			9 months, 1 week ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+- Rapid Replication: Turbo replication ensures near-real-time data synchronization between regions, achieving an RPO of 15 minutes or less.
+- Minimal Latency: Dataproc clusters can read from the bucket in the same region, minimizing data transfer latency and optimizing performance.
+- Disaster Recovery: In case of regional failure, Dataproc clusters can seamlessly redeploy to the other region and continue reading from the same bucket, ensuring business continuity.
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+- Rapid Replication: Turbo replication ensures near-real-time data synchronization between regions, achieving an RPO of 15 minutes or less.
+- Minimal Latency: Dataproc clusters can read from the bucket in the same region, minimizing data transfer latency and optimizing performance.
+- Disaster Recovery: In case of regional failure, Dataproc clusters can seamlessly redeploy to the other region and continue reading from the same bucket, ensuring business continuity.
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+Option D
+
+--- Comment #23 ---
+Author: Unknown | Date: 7 months, 3 weeks ago | Votes: 0
+JyoGCP
+			
+
+
+				Most Recent 
+
+
+			7 months, 3 weeks ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Option D
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+Option D
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #31 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Option D, answers all needs from the request
+
+--- Comment #32 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+Matt_108
+			
+
+
+			9 months ago
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Option D, answers all needs from the request
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+Option D, answers all needs from the request
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #40 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+D. 
+1. Create a dual-region Cloud Storage bucket in the us-central1 and us-south1 regions.
+2. Enable turbo replication.
+3. Run the Dataproc cluster in a zone in the us-central1 region, reading from the bucket in the same region.
+4. In case of a regional failure, redeploy the Dataproc clusters to the us-south1 region and read from the same bucket.
+
+--- Comment #41 ---
+Author: Unknown | Date: 9 months, 1 week ago | Votes: 0
+scaenruy
+			
+
+
+			9 months, 1 week ago
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+D. 
+1. Create a dual-region Cloud Storage bucket in the us-central1 and us-south1 regions.
+2. Enable turbo replication.
+3. Run the Dataproc cluster in a zone in the us-central1 region, reading from the bucket in the same region.
+4. In case of a regional failure, redeploy the Dataproc clusters to the us-south1 region and read from the same bucket.
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+D. 
+1. Create a dual-region Cloud Storage bucket in the us-central1 and us-south1 regions.
+2. Enable turbo replication.
+3. Run the Dataproc cluster in a zone in the us-central1 region, reading from the bucket in the same region.
+4. In case of a regional failure, redeploy the Dataproc clusters to the us-south1 region and read from the same bucket.
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

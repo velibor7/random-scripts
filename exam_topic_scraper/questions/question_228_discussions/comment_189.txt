@@ -1,0 +1,16 @@
+COMMENT #189 FOR QUESTION 228
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+DE
+Set the retain-acked-messages flag to true for the subscription.
+This instructs Pub/Sub to store acknowledged messages for a specified retention period.
+
+
+E Use Pub/Sub Seek with a timestamp.
+After deploying the updated pipeline, use the Seek feature to replay messages.
+Specify a timestamp that's two days before the current time.
+This rewinds the subscription's message cursor, making it redeliver messages from that point onward.
+============================================================

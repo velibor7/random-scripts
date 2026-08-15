@@ -1,0 +1,8 @@
+COMMENT #29 FOR QUESTION 243
+============================================================
+Author: Unknown
+Date: 1 year, 1 month ago
+Votes: 0
+----------------------------------------
+Option C isn't a good practice. What if any 0 value is contained in the column of squre_feet, then price / 0 will throw an exception. IF(IFNULL(squre_feet, 0) = 0, 0, price/squre_feet).
+============================================================

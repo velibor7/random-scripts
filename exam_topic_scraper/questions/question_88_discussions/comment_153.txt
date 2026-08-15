@@ -1,0 +1,13 @@
+COMMENT #153 FOR QUESTION 88
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+The error records are directly written to PubSub from the DoFn (it’s equivalent in python).
+You cannot directly write a PCollection to PubSub. You have to extract each record and write one at a time. Why do the additional work and why not write it using PubSubIO in the DoFn itself?
+You can write the whole PCollection to Bigquery though, as explained in
+
+Reference:
+https://medium.com/google-cloud/dead-letter-queues-simple-implementation-strategy-for-cloud-pub-sub-80adf4a4a800
+============================================================

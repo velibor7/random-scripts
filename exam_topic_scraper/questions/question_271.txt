@@ -1,0 +1,581 @@
+================================================================================
+QUESTION:
+You are monitoring your organization’s data lake hosted on BigQuery. The ingestion pipelines read data from Pub/Sub and write the data into tables on BigQuery. After a new version of the ingestion pipelines is deployed, the daily stored data increased by 50%. The volumes of data in Pub/Sub remained the same and only some tables had their daily partition data size doubled. You need to investigate and fix the cause of the data increase. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Check for duplicate rows in the BigQuery tables that have the daily partition data size doubled.2. Schedule daily SQL jobs to deduplicate the affected tables.3. Share the deduplication script with the other operational teams to reuse if this occurs to other tables.
+										
+
+
+													B.
+												
+											
+											1. Check for code errors in the deployed pipelines.2. Check for multiple writing to pipeline BigQuery sink.3. Check for errors in Cloud Logging during the day of the release of the new pipelines.4. If no errors, restore the BigQuery tables to their content before the last release by using time travel.
+										
+
+
+													C.
+												
+											
+											1. Check for duplicate rows in the BigQuery tables that have the daily partition data size doubled.2. Check the BigQuery Audit logs to find job IDs.3. Use Cloud Monitoring to determine when the identified Dataflow jobs started and the pipeline code version.4. When more than one pipeline ingests data into a table, stop all versions except the latest one.
+										
+
+
+													D.
+												
+											
+											1. Roll back the last deployment.2. Restore the BigQuery tables to their content before the last release by using time travel.3. Restart the Dataflow jobs and replay the messages by seeking the subscription to the timestamp of the release.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (75 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 271 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 271
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You are monitoring your organization’s data lake hosted on BigQuery. The ingestion pipelines read data from Pub/Sub and write the data into tables on BigQuery. After a new version of the ingestion pipelines is deployed, the daily stored data increased by 50%. The volumes of data in Pub/Sub remained the same and only some tables had their daily partition data size doubled. You need to investigate and fix the cause of the data increase. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											1. Check for duplicate rows in the BigQuery tables that have the daily partition data size doubled.2. Schedule daily SQL jobs to deduplicate the affected tables.3. Share the deduplication script with the other operational teams to reuse if this occurs to other tables.
+										
+
+
+													B.
+												
+											
+											1. Check for code errors in the deployed pipelines.2. Check for multiple writing to pipeline BigQuery sink.3. Check for errors in Cloud Logging during the day of the release of the new pipelines.4. If no errors, restore the BigQuery tables to their content before the last release by using time travel.
+										
+
+
+													C.
+												
+											
+											1. Check for duplicate rows in the BigQuery tables that have the daily partition data size doubled.2. Check the BigQuery Audit logs to find job IDs.3. Use Cloud Monitoring to determine when the identified Dataflow jobs started and the pipeline code version.4. When more than one pipeline ingests data into a table, stop all versions except the latest one.
+										
+
+
+													D.
+												
+											
+											1. Roll back the last deployment.2. Restore the BigQuery tables to their content before the last release by using time travel.3. Restart the Dataflow jobs and replay the messages by seeking the subscription to the timestamp of the release.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+C
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								raaad
+							
+							
+							at 
+							Jan. 5, 2024, 6:29 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 271
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								raaad
+							
+							
+							at 
+							Jan. 5, 2024, 6:29 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.
+- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.
+- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.
+- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.
+
+
+=======
+Why not B
+While it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.
+- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.
+- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.
+- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.
+
+
+=======
+Why not B
+While it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.
+- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.
+- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.
+- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.
+
+
+=======
+Why not B
+While it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.
+- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.
+- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.
+- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.
+
+
+=======
+Why not B
+While it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.
+- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.
+- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.
+- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.
+
+
+=======
+Why not B
+While it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+raaad
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date:  | Votes: 0
+- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.
+- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.
+- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.
+- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.
+
+
+=======
+Why not B
+While it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+- Detailed Investigation of Logs and Jobs Checking for duplicate rows targets the potential immediate cause of the issue.
+- Checking the BigQuery Audit logs helps identify which jobs might be contributing to the increased data volume.
+- Using Cloud Monitoring to correlate job starts with pipeline versions helps identify if a specific version of the pipeline is responsible.
+- Managing multiple versions of pipelines ensures that only the intended version is active, addressing any versioning errors that might have occurred during deployment.
+
+
+=======
+Why not B
+While it addresses the symptom (excess data), it doesn't necessarily stop the problem from recurring. (The questions asked to investigate and fix)
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #21 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #22 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+Why not D?
+
+--- Comment #23 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+mi_yulai
+			
+
+
+				Most Recent 
+
+
+			5 months, 1 week ago
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+Why not D?
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+Why not D?
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #30 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+No idea which one to choose. Option C miss a step - to restore the tables.
+
+--- Comment #31 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+SamuelTsch
+			
+
+
+			5 months, 1 week ago
+
+--- Comment #32 ---
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+No idea which one to choose. Option C miss a step - to restore the tables.
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+No idea which one to choose. Option C miss a step - to restore the tables.
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #37 ---
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+" You need to investigate and fix the cause of the data increase. " - fixing the target tables was not required.
+
+--- Comment #38 ---
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+" You need to investigate and fix the cause of the data increase. " - fixing the target tables was not required.
+
+--- Comment #39 ---
+Author: Unknown | Date: 2 months, 2 weeks ago | Votes: 0
+Ryannn23
+			
+
+
+			2 months, 2 weeks ago
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+" You need to investigate and fix the cause of the data increase. " - fixing the target tables was not required.
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+" You need to investigate and fix the cause of the data increase. " - fixing the target tables was not required.
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #47 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Option C - agree with Raaad on the reasons
+
+--- Comment #48 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+Matt_108
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+Option C - agree with Raaad on the reasons
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: C
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+Option C - agree with Raaad on the reasons
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #56 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+B. Check for code errors in the deployed pipelines, multiple writing to pipeline BigQuery sink, errors in Cloud Logging, and if necessary, restore tables using time travel.
+Check for code errors
+Check for multiple writes
+Check Cloud Logging
+Restore tables if necessary:
+
+--- Comment #57 ---
+Author: Unknown | Date: 1 year, 2 months ago | Votes: 0
+task_7
+			
+
+
+			1 year, 2 months ago
+
+--- Comment #58 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+B. Check for code errors in the deployed pipelines, multiple writing to pipeline BigQuery sink, errors in Cloud Logging, and if necessary, restore tables using time travel.
+Check for code errors
+Check for multiple writes
+Check Cloud Logging
+Restore tables if necessary:
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+B. Check for code errors in the deployed pipelines, multiple writing to pipeline BigQuery sink, errors in Cloud Logging, and if necessary, restore tables using time travel.
+Check for code errors
+Check for multiple writes
+Check Cloud Logging
+Restore tables if necessary:
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+This does not fix the error, it basically assumes that the error is not really there.
+
+--- Comment #64 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+This does not fix the error, it basically assumes that the error is not really there.
+
+--- Comment #65 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+RenePetersen
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+This does not fix the error, it basically assumes that the error is not really there.
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+This does not fix the error, it basically assumes that the error is not really there.
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

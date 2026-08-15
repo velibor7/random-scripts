@@ -1,0 +1,14 @@
+COMMENT #22 FOR QUESTION 231
+============================================================
+Author: Unknown
+Date: 2 weeks ago
+Votes: 0
+----------------------------------------
+CD
+On the Monitoring dashboard, in the Workers section, observe the Worker Pods evictions graphs for your environment.
+The Total workers memory usage graph shows a total perspective of the environment. A single worker can still exceed the memory limit, even if the memory utilization is healthy at the environment level.
+According to your observations, you might want to:
+- Increase the memory available to workers.
+- Reduce worker concurrency. 
+In this way, a single worker handles fewer tasks at once. This provides more memory or storage to each individual task. If you change worker concurrency, you might also want to increase the maximum number of workers. In this way, the number of tasks that your environment can handle at once stays the same. For example, if you reduce worker Concurrency from 12 to 6, you might want to double the maximum number of workers.
+============================================================

@@ -1,0 +1,13 @@
+COMMENT #152 FOR QUESTION 32
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+correct answer -> Redefine the schema by evenly distributing reads and writes across the row space of the table.
+
+Make sure you're reading and writing many different rows in your table. Bigtable performs best when reads and writes are evenly distributed throughout your table, which helps Bigtable distribute the workload across all of the nodes in your cluster. If reads and writes cannot be spread across all of your Bigtable nodes, performance will suffer.
+If you find that you're reading and writing only a small number of rows, you might need to redesign your schema so that reads and writes are more evenly distributed.
+
+Reference: https://cloud.google.com/bigtable/docs/performance#troubleshooting
+============================================================

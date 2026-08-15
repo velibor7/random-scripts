@@ -1,0 +1,17 @@
+COMMENT #33 FOR QUESTION 171
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+C. Use a BigQuery view to define your preprocessing logic. When creating your model, use the view as your model training data. At prediction time, use BigQuery's ML.EVALUATE clause without specifying any transformations on the raw input data.
+
+Explanation:
+Preventing Data Skew:
+
+Training-serving skew occurs when the transformations applied to training data are not identically applied to prediction data. Using a BigQuery view ensures consistent preprocessing for both training and prediction.
+Advantages of BigQuery Views:
+
+Views encapsulate preprocessing logic, ensuring that the same transformations are applied whenever the view is queried.
+By referencing the view during both training and prediction, you eliminate the need for manual transformations and the risk of discrepancies.
+============================================================

@@ -1,0 +1,12 @@
+COMMENT #47 FOR QUESTION 28
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+B as BigQueryIO.read.from() directly reads the whole table from BigQuery. 
+This function exports the whole table to temporary files in Google Cloud Storage, where it will later be read from. 
+This requires almost no computation, as it only performs an export job, and later Dataflow reads from GCS (not from BigQuery).
+BigQueryIO.read.fromQuery() executes a query and then reads the results received after the query execution. Therefore, this function is more time-consuming, given that it requires that a query is first executed (which will incur in the corresponding economic and computational costs).
+https://stackoverflow.com/questions/54413681/bigqueryio-read-vs-fromquery
+============================================================

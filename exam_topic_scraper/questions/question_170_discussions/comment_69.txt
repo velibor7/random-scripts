@@ -1,0 +1,12 @@
+COMMENT #69 FOR QUESTION 170
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+B.
+
+from the documentation: 
+https://cloud.google.com/pubsub/docs/replay-message 
+Pub/Sub cannot retrieve the messages after you have acknowledged them. However, sometimes you might find it necessary to replay the acknowledged messages, for example, if you performed an erroneous acknowledgment. Then you can use the Seek feature to mark previously acknowledged messages as unacknowledged, and force Pub/Sub to redeliver those messages. You can also use seek to delete the unacknowledged messages by changing their state to acknowledged.
+============================================================

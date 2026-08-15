@@ -1,0 +1,9 @@
+COMMENT #73 FOR QUESTION 46
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+BigQuery supports partitioned tables, which allow for efficient querying and management of large datasets that are updated frequently. By loading the updated data into a new partition every 30 minutes, you can ensure that only relevant partitions are queried, reducing the amount of data processed and thereby minimizing costs.
+What's wrong with B ?  While creating a federated data source in BigQuery pointing to a Google Cloud Storage bucket is feasible, it might not be the most efficient for data that is updated every 30 minutes. Querying federated data sources can sometimes be more expensive and less performant than querying data stored directly in BigQuery.
+============================================================

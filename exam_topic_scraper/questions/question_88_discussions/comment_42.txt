@@ -1,0 +1,14 @@
+COMMENT #42 FOR QUESTION 88
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Answer is C. Here is the github repo and an example from the Qwiklab where they tag the output as 'parsed_rows' and 'unparsed_rows'  before they send the data to GCS. I don't see how GCS or PubSub would make a difference at this point. It seems like a more maintanable solution to just parse the data in the DoFn.
+
+1) If the function does more than that then it serves multiple purposes and it's not good software engineering. Unless there is a good reason, writing to PubSub should be separated from the DoFn.
+
+ii) It's faster to write in mini-batches or one batch than stream the errors. What's the need for streaming out errors 1 by 1? Literally no real advantage.
+
+https://github.com/GoogleCloudPlatform/training-data-analyst/blob/master/quests/dataflow_python/7_Advanced_Streaming_Analytics/solution/streaming_minute_traffic_pipeline.py
+============================================================

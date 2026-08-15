@@ -1,0 +1,79 @@
+COMMENT #2 FOR QUESTION 133
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 133
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								A data scientist has created a BigQuery ML model and asks you to create an ML pipeline to serve predictions. You have a REST API application with the requirement to serve predictions for an individual user ID with latency under 100 milliseconds. You use the following query to generate predictions: SELECT predicted_label, user_id FROM ML.PREDICT (MODEL 'dataset.model', table user_features). How should you create the ML pipeline?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Add a WHERE clause to the query, and grant the BigQuery Data Viewer role to the application service account.
+										
+
+
+													B.
+												
+											
+											Create an Authorized View with the provided query. Share the dataset that contains the view with the application service account.
+										
+
+
+													C.
+												
+											
+											Create a Dataflow pipeline using BigQueryIO to read results from the query. Grant the Dataflow Worker role to the application service account.
+										
+
+
+													D.
+												
+											
+											Create a Dataflow pipeline using BigQueryIO to read predictions for all users from the query. Write the results to Bigtable using BigtableIO. Grant the Bigtable Reader role to the application service account so that the application can read predictions for individual users from Bigtable.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								rickywck
+							
+							
+							at 
+							March 20, 2020, 3:49 a.m.
+============================================================

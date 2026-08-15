@@ -1,0 +1,12 @@
+COMMENT #132 FOR QUESTION 127
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+The best choice here is C. Use Cloud GPUs after implementing GPU kernel support for your customs ops. Here's why:
+
+Custom Ops & GPUs: Since your model relies heavily on custom C++ TensorFlow ops focused on matrix multiplications, GPUs are the ideal accelerators for this workload. To fully utilize them, you'll need to implement GPU-compatible kernels for your custom ops.
+Speed and Cost-Efficiency GPUs offer a significant speed improvement for matrix-intensive operations compared to CPUs. They provide a good balance of performance and cost for this scenario.
+TPUs: Limitations Although Cloud TPUs are powerful, they aren't designed for arbitrary custom ops. Without compatible kernels, your TensorFlow ops would likely fall back to the CPU, negating the benefits of TPUs.
+============================================================

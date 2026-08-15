@@ -1,0 +1,857 @@
+================================================================================
+QUESTION:
+You have a data processing application that runs on Google Kubernetes Engine (GKE). Containers need to be launched with their latest available configurations from a container registry. Your GKE nodes need to have GPUs, local SSDs, and 8 Gbps bandwidth. You want to efficiently provision the data processing infrastructure and manage the deployment process. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Use Compute Engine startup scripts to pull container images, and use gcloud commands to provision the infrastructure.
+										
+
+
+													B.
+												
+											
+											Use Cloud Build to schedule a job using Terraform build to provision the infrastructure and launch with the most current container images.
+										
+
+
+													C.
+												
+											
+											Use GKE to autoscale containers, and use gcloud commands to provision the infrastructure.
+										
+
+
+													D.
+												
+											
+											Use Dataflow to provision the data pipeline, and use Cloud Scheduler to run the job.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (144 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 205 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 205
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								You have a data processing application that runs on Google Kubernetes Engine (GKE). Containers need to be launched with their latest available configurations from a container registry. Your GKE nodes need to have GPUs, local SSDs, and 8 Gbps bandwidth. You want to efficiently provision the data processing infrastructure and manage the deployment process. What should you do?
+							
+						
+
+
+
+
+
+
+
+													A.
+												
+											
+											Use Compute Engine startup scripts to pull container images, and use gcloud commands to provision the infrastructure.
+										
+
+
+													B.
+												
+											
+											Use Cloud Build to schedule a job using Terraform build to provision the infrastructure and launch with the most current container images.
+										
+
+
+													C.
+												
+											
+											Use GKE to autoscale containers, and use gcloud commands to provision the infrastructure.
+										
+
+
+													D.
+												
+											
+											Use Dataflow to provision the data pipeline, and use Cloud Scheduler to run the job.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+B
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+							
+								Atnafu
+							
+							
+							at 
+							Nov. 30, 2022, 11:10 p.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 205
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+							
+								Atnafu
+							
+							
+							at 
+							Nov. 30, 2022, 11:10 p.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+B is the best option to efficiently provision and manage the deployment process for this data processing application on GKE:
+
+--- Comment #6 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+B is the best option to efficiently provision and manage the deployment process for this data processing application on GKE:
+
+--- Comment #7 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+B is the best option to efficiently provision and manage the deployment process for this data processing application on GKE:
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+B is the best option to efficiently provision and manage the deployment process for this data processing application on GKE:
+
+--- Comment #13 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+B is the best option to efficiently provision and manage the deployment process for this data processing application on GKE:
+
+--- Comment #14 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+				Highly Voted 
+
+
+			1 year, 3 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+B is the best option to efficiently provision and manage the deployment process for this data processing application on GKE:
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+B is the best option to efficiently provision and manage the deployment process for this data processing application on GKE:
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #19 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+•	Cloud Build allows you to automate the building, testing, and deployment of your application using Docker containers.
+•	Using Terraform with Cloud Build provides Infrastructure as Code capabilities to provision the GKE cluster with GPUs, SSDs, and network bandwidth.
+•	Terraform can be configured to pull the latest container images from the registry when deploying.
+•	Cloud Build triggers provide event-based automation to rebuild and redeploy when container images are updated.
+•	This provides an automated CI/CD pipeline to launch the application on GKE using the desired infrastructure and latest images.
+•	Dataflow and Cloud Scheduler don't directly provide infrastructure provisioning or deployment orchestration for GKE.
+•	gcloud commands can be used but don't provide the same automation benefits as Cloud Build + Terraform.
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+•	Cloud Build allows you to automate the building, testing, and deployment of your application using Docker containers.
+•	Using Terraform with Cloud Build provides Infrastructure as Code capabilities to provision the GKE cluster with GPUs, SSDs, and network bandwidth.
+•	Terraform can be configured to pull the latest container images from the registry when deploying.
+•	Cloud Build triggers provide event-based automation to rebuild and redeploy when container images are updated.
+•	This provides an automated CI/CD pipeline to launch the application on GKE using the desired infrastructure and latest images.
+•	Dataflow and Cloud Scheduler don't directly provide infrastructure provisioning or deployment orchestration for GKE.
+•	gcloud commands can be used but don't provide the same automation benefits as Cloud Build + Terraform.
+
+--- Comment #22 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #23 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+•	Cloud Build allows you to automate the building, testing, and deployment of your application using Docker containers.
+•	Using Terraform with Cloud Build provides Infrastructure as Code capabilities to provision the GKE cluster with GPUs, SSDs, and network bandwidth.
+•	Terraform can be configured to pull the latest container images from the registry when deploying.
+•	Cloud Build triggers provide event-based automation to rebuild and redeploy when container images are updated.
+•	This provides an automated CI/CD pipeline to launch the application on GKE using the desired infrastructure and latest images.
+•	Dataflow and Cloud Scheduler don't directly provide infrastructure provisioning or deployment orchestration for GKE.
+•	gcloud commands can be used but don't provide the same automation benefits as Cloud Build + Terraform.
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+•	Cloud Build allows you to automate the building, testing, and deployment of your application using Docker containers.
+•	Using Terraform with Cloud Build provides Infrastructure as Code capabilities to provision the GKE cluster with GPUs, SSDs, and network bandwidth.
+•	Terraform can be configured to pull the latest container images from the registry when deploying.
+•	Cloud Build triggers provide event-based automation to rebuild and redeploy when container images are updated.
+•	This provides an automated CI/CD pipeline to launch the application on GKE using the desired infrastructure and latest images.
+•	Dataflow and Cloud Scheduler don't directly provide infrastructure provisioning or deployment orchestration for GKE.
+•	gcloud commands can be used but don't provide the same automation benefits as Cloud Build + Terraform.
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+So using Cloud Build with Terraform templates provides the most efficient way to provision and deploy this data processing application on GKE.
+
+--- Comment #28 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+So using Cloud Build with Terraform templates provides the most efficient way to provision and deploy this data processing application on GKE.
+
+--- Comment #29 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+MaxNRG
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+So using Cloud Build with Terraform templates provides the most efficient way to provision and deploy this data processing application on GKE.
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+So using Cloud Build with Terraform templates provides the most efficient way to provision and deploy this data processing application on GKE.
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #38 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+I would go to option B. That is from my point of view a CI/CD question. Only B covers the deployement and set up the latest container image.
+
+--- Comment #39 ---
+Author: Unknown | Date: 5 months, 1 week ago | Votes: 0
+SamuelTsch
+			
+
+
+				Most Recent 
+
+
+			5 months, 1 week ago
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+I would go to option B. That is from my point of view a CI/CD question. Only B covers the deployement and set up the latest container image.
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+I would go to option B. That is from my point of view a CI/CD question. Only B covers the deployement and set up the latest container image.
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #44 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #45 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #47 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+another wrong answer?
+
+--- Comment #48 ---
+Author: Unknown | Date: 9 months ago | Votes: 0
+anyone_99
+			
+
+
+			9 months ago
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+another wrong answer?
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+another wrong answer?
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #53 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #54 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #55 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+- Dataflow is a fully managed service for stream and batch data processing and is well-suited for real-time data processing tasks like identifying longtail and outlier data points. 
+- Using BigQuery as a sink allows to efficiently store the cleansed and processed data for further analysis and serving it to AI models.
+
+--- Comment #56 ---
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+raaad
+			
+
+
+			1 year, 3 months ago
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+- Dataflow is a fully managed service for stream and batch data processing and is well-suited for real-time data processing tasks like identifying longtail and outlier data points. 
+- Using BigQuery as a sink allows to efficiently store the cleansed and processed data for further analysis and serving it to AI models.
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+- Dataflow is a fully managed service for stream and batch data processing and is well-suited for real-time data processing tasks like identifying longtail and outlier data points. 
+- Using BigQuery as a sink allows to efficiently store the cleansed and processed data for further analysis and serving it to AI models.
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #62 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #64 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+I don't really like B or C... but given the choices I would go with B.
+B-Use Cloud Build to schedule a job using Terraform build to provision the infrastructure and launch with the most current container images. {The Terraform command is Terraform Apply and not Terraform build, but also why not use gcloud container command instead of introducing 3rd party builder image?)... I don't like this choice but it is the best one.
+C. Use GKE to autoscale containers, and use gcloud commands to provision the infrastructure. {This doesn't handle the building of the infra, or the deployment of the latest images, this one is clearly wrong, not sure why it is marked as the right choice}
+
+--- Comment #65 ---
+Author: Unknown | Date: 1 year, 5 months ago | Votes: 0
+spicebits
+			
+
+
+			1 year, 5 months ago
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+I don't really like B or C... but given the choices I would go with B.
+B-Use Cloud Build to schedule a job using Terraform build to provision the infrastructure and launch with the most current container images. {The Terraform command is Terraform Apply and not Terraform build, but also why not use gcloud container command instead of introducing 3rd party builder image?)... I don't like this choice but it is the best one.
+C. Use GKE to autoscale containers, and use gcloud commands to provision the infrastructure. {This doesn't handle the building of the infra, or the deployment of the latest images, this one is clearly wrong, not sure why it is marked as the right choice}
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+I don't really like B or C... but given the choices I would go with B.
+B-Use Cloud Build to schedule a job using Terraform build to provision the infrastructure and launch with the most current container images. {The Terraform command is Terraform Apply and not Terraform build, but also why not use gcloud container command instead of introducing 3rd party builder image?)... I don't like this choice but it is the best one.
+C. Use GKE to autoscale containers, and use gcloud commands to provision the infrastructure. {This doesn't handle the building of the infra, or the deployment of the latest images, this one is clearly wrong, not sure why it is marked as the right choice}
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #71 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #73 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+B is correct
+
+--- Comment #74 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+vamgcp
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+B is correct
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+B is correct
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #80 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #82 ---
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+B is correct
+
+--- Comment #83 ---
+Author: Unknown | Date: 1 year, 12 months ago | Votes: 0
+whorillo
+			
+
+
+			1 year, 12 months ago
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+B is correct
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+B is correct
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #89 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #91 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+b is ok
+
+--- Comment #92 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+charline
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+b is ok
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+b is ok
+
+--- Comment #96 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #97 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #100 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+B. Use Cloud Build to schedule a job using Terraform build to provision the infrastructure and launch with the most current container images.
+
+--- Comment #101 ---
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+AzureDP900
+			
+
+
+			2 years, 3 months ago
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+B. Use Cloud Build to schedule a job using Terraform build to provision the infrastructure and launch with the most current container images.
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+B. Use Cloud Build to schedule a job using Terraform build to provision the infrastructure and launch with the most current container images.
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #108 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+B is the answer.
+
+--- Comment #109 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+zellck
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+B is the answer.
+
+--- Comment #113 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #114 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #117 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Maybe B
+ref: https://cloud.google.com/architecture/managing-infrastructure-as-code
+
+--- Comment #118 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+hauhau
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+Maybe B
+ref: https://cloud.google.com/architecture/managing-infrastructure-as-code
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: B
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+Maybe B
+ref: https://cloud.google.com/architecture/managing-infrastructure-as-code
+
+--- Comment #122 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #126 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+C is correct answer
+
+--- Comment #127 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Atnafu
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #128 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+C is correct answer
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+C is correct answer
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #132 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Sorry I meant B
+
+--- Comment #133 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Sorry I meant B
+
+--- Comment #134 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+Atnafu
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+Sorry I meant B
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+Sorry I meant B
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #139 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

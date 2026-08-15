@@ -1,0 +1,17 @@
+COMMENT #57 FOR QUESTION 266
+============================================================
+Author: Unknown
+Date: 7 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+D. Using a 15-minute window with a 15-minute tumbling window withAllowedLateness is the most suitable option for the following reasons:
+
+Flexibility: By allowing a 15-minute delay, it can accommodate various situations such as network latency or sensor failures.
+Processing efficiency: Using a fixed window improves processing efficiency.
+Compliance with conditions: The window ends if no data is received for 15 minutes, meeting the specified condition.
+Implementation points:
+
+.withAllowedLateness: This operator allows delayed events to be included in the current window.
+Trigger: When 30 minutes of data is collected, a trigger event is generated, and the average value is calculated based on this event.
+Watermark: By setting a watermark, processing of old data can be terminated.
+============================================================

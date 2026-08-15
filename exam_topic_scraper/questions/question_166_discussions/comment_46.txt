@@ -1,0 +1,15 @@
+COMMENT #46 FOR QUESTION 166
+============================================================
+Author: Unknown
+Date: 9 months, 3 weeks ago
+Votes: 0
+----------------------------------------
+Clustering can improve the performance of certain types of queries such as queries that use filter clauses and queries that aggregate data. When data is written to a clustered table by a query job or a load job, BigQuery sorts the data using the values in the clustering columns. These values are used to organize the data into multiple blocks in BigQuery storage. When you submit a query containing a clause that filters data based on the clustering columns, BigQuery uses the sorted blocks to eliminate scans of unnecessary data.
+Currently, BigQuery allows clustering over a partitioned table. Use clustering over a partitioned table when:
+-	Your data is already partitioned on a date, timestamp, or integer column.
+-	You commonly use filters or aggregation against particular columns in your queries.
+Table clustering is possible for tables partitioned by:
+-	ingestion time
+-	date/timestamp
+-	integer range
+============================================================

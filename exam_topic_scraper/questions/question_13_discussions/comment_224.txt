@@ -1,0 +1,9 @@
+COMMENT #224 FOR QUESTION 13
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+This actually is A. I was initially in the D camp, and have spent considerable time reading about it now (circa 1 hour). D is explicitly not suitable for payment transactions, as Datastore supports ACID transactions, but only within entity groups, which are small, localized sets of data. This restriction means that transactions are not suitable for scenarios requiring multi-entity consistency across the entire database.
+The only two products recommended for payments in the Google ecosystem are Cloud Spanner and Cloud SQL. Is Cloud SQL managed? I'd say it wasn't really, due to the need to configure instances, but that is trumped by the fact it is the only choice suitable for a payment transaction system.
+============================================================

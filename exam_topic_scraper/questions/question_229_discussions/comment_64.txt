@@ -1,0 +1,10 @@
+COMMENT #64 FOR QUESTION 229
+============================================================
+Author: Unknown
+Date: 1 year, 2 months ago
+Votes: 0
+----------------------------------------
+Seems like materialiazed views can use incremental updates only if data was not delated or updated in original table. Here the data changes so I think thats the reason why its not correct answer
+https://cloud.google.com/bigquery/docs/materialized-views-use#incremental_updates
+"BigQuery combines the cached view's data with new data to provide consistent query results while still using the materialized view. For single-table materialized views, this is possible if the base table is unchanged since the last refresh, or if only new data was added. For multi-table views, no more than one table can have appended data. If more than one of a multi-table view's base tables has changed, then the view cannot be incrementally updated."
+============================================================

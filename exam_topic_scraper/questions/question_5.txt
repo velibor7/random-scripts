@@ -1,0 +1,1177 @@
+================================================================================
+QUESTION:
+An external customer provides you with a daily dump of data from their database. The data flows into Google Cloud Storage GCS as comma-separated values(CSV) files. You want to analyze this data in Google BigQuery, but the data could have rows that are formatted incorrectly or corrupted. How should you build this pipeline?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Use federated data sources, and check data in the SQL query.
+										
+
+
+													B.
+												
+											
+											Enable BigQuery monitoring in Google Stackdriver and create an alert.
+										
+
+
+													C.
+												
+											
+											Import the data into BigQuery using the gcloud CLI and set max_bad_records to 0.
+										
+
+
+													D.
+												
+											
+											Run a Google Cloud Dataflow batch pipeline to import the data into BigQuery, and push errors to another dead-letter table for analysis.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (200 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 5 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 5
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								An external customer provides you with a daily dump of data from their database. The data flows into Google Cloud Storage GCS as comma-separated values(CSV) files. You want to analyze this data in Google BigQuery, but the data could have rows that are formatted incorrectly or corrupted. How should you build this pipeline?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Use federated data sources, and check data in the SQL query.
+										
+
+
+													B.
+												
+											
+											Enable BigQuery monitoring in Google Stackdriver and create an alert.
+										
+
+
+													C.
+												
+											
+											Import the data into BigQuery using the gcloud CLI and set max_bad_records to 0.
+										
+
+
+													D.
+												
+											
+											Run a Google Cloud Dataflow batch pipeline to import the data into BigQuery, and push errors to another dead-letter table for analysis.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 15, 2020, 8:14 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 5
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 15, 2020, 8:14 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+The answer is D. An ETL pipeline will be implemented for this scenario. Check out handling invalid inputs in cloud data flow
+
+https://cloud.google.com/blog/products/gcp/handling-invalid-inputs-in-dataflow
+
+ParDos . . . and don’ts: handling invalid inputs in Dataflow using Side Outputs as a “Dead Letter” file
+
+--- Comment #6 ---
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+The answer is D. An ETL pipeline will be implemented for this scenario. Check out handling invalid inputs in cloud data flow
+
+https://cloud.google.com/blog/products/gcp/handling-invalid-inputs-in-dataflow
+
+ParDos . . . and don’ts: handling invalid inputs in Dataflow using Side Outputs as a “Dead Letter” file
+
+--- Comment #7 ---
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+The answer is D. An ETL pipeline will be implemented for this scenario. Check out handling invalid inputs in cloud data flow
+
+https://cloud.google.com/blog/products/gcp/handling-invalid-inputs-in-dataflow
+
+ParDos . . . and don’ts: handling invalid inputs in Dataflow using Side Outputs as a “Dead Letter” file
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+The answer is D. An ETL pipeline will be implemented for this scenario. Check out handling invalid inputs in cloud data flow
+
+https://cloud.google.com/blog/products/gcp/handling-invalid-inputs-in-dataflow
+
+ParDos . . . and don’ts: handling invalid inputs in Dataflow using Side Outputs as a “Dead Letter” file
+
+--- Comment #13 ---
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+The answer is D. An ETL pipeline will be implemented for this scenario. Check out handling invalid inputs in cloud data flow
+
+https://cloud.google.com/blog/products/gcp/handling-invalid-inputs-in-dataflow
+
+ParDos . . . and don’ts: handling invalid inputs in Dataflow using Side Outputs as a “Dead Letter” file
+
+--- Comment #14 ---
+Author: Unknown | Date: 4 years, 5 months ago | Votes: 0
+Radhika7983
+			
+
+
+				Highly Voted 
+
+
+			4 years, 5 months ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+The answer is D. An ETL pipeline will be implemented for this scenario. Check out handling invalid inputs in cloud data flow
+
+https://cloud.google.com/blog/products/gcp/handling-invalid-inputs-in-dataflow
+
+ParDos . . . and don’ts: handling invalid inputs in Dataflow using Side Outputs as a “Dead Letter” file
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+The answer is D. An ETL pipeline will be implemented for this scenario. Check out handling invalid inputs in cloud data flow
+
+https://cloud.google.com/blog/products/gcp/handling-invalid-inputs-in-dataflow
+
+ParDos . . . and don’ts: handling invalid inputs in Dataflow using Side Outputs as a “Dead Letter” file
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 15 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+The sources you've provided cannot be accessed. Here is an updated best practice. https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#use_dead_letter_queues
+
+--- Comment #20 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+The sources you've provided cannot be accessed. Here is an updated best practice. https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#use_dead_letter_queues
+
+--- Comment #21 ---
+Author: Unknown | Date: 2 years, 4 months ago | Votes: 0
+jkhong
+			
+
+
+			2 years, 4 months ago
+
+--- Comment #22 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+The sources you've provided cannot be accessed. Here is an updated best practice. https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#use_dead_letter_queues
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+The sources you've provided cannot be accessed. Here is an updated best practice. https://cloud.google.com/architecture/building-production-ready-data-pipelines-using-dataflow-developing-and-testing#use_dead_letter_queues
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+https://cloud.google.com/dataflow/docs/guides/write-to-bigquery#:~:text=It%27s%20a%20good%20practice%20to%20send%20the%20errors%20to%20a%20dead%2Dletter%20queue%20or%20table%2C%20for%20later%20processing.%20For%20more%20information%20about%20this%20pattern%2C%20see%20BigQueryIO%20dead%20letter%20pattern.
+
+It's a good practice to send the errors to a dead-letter queue or table, for later processing. For more information about this pattern, see BigQueryIO dead letter pattern.
+
+--- Comment #27 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+https://cloud.google.com/dataflow/docs/guides/write-to-bigquery#:~:text=It%27s%20a%20good%20practice%20to%20send%20the%20errors%20to%20a%20dead%2Dletter%20queue%20or%20table%2C%20for%20later%20processing.%20For%20more%20information%20about%20this%20pattern%2C%20see%20BigQueryIO%20dead%20letter%20pattern.
+
+It's a good practice to send the errors to a dead-letter queue or table, for later processing. For more information about this pattern, see BigQueryIO dead letter pattern.
+
+--- Comment #28 ---
+Author: Unknown | Date: 8 months ago | Votes: 0
+nadavw
+			
+
+
+			8 months ago
+
+--- Comment #29 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/dataflow/docs/guides/write-to-bigquery#:~:text=It%27s%20a%20good%20practice%20to%20send%20the%20errors%20to%20a%20dead%2Dletter%20queue%20or%20table%2C%20for%20later%20processing.%20For%20more%20information%20about%20this%20pattern%2C%20see%20BigQueryIO%20dead%20letter%20pattern.
+
+It's a good practice to send the errors to a dead-letter queue or table, for later processing. For more information about this pattern, see BigQueryIO dead letter pattern.
+
+--- Comment #30 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/dataflow/docs/guides/write-to-bigquery#:~:text=It%27s%20a%20good%20practice%20to%20send%20the%20errors%20to%20a%20dead%2Dletter%20queue%20or%20table%2C%20for%20later%20processing.%20For%20more%20information%20about%20this%20pattern%2C%20see%20BigQueryIO%20dead%20letter%20pattern.
+
+It's a good practice to send the errors to a dead-letter queue or table, for later processing. For more information about this pattern, see BigQueryIO dead letter pattern.
+
+--- Comment #31 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #35 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #36 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #37 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+Disagree a bit here. Could well be A. In one Coursera video course (https://www.coursera.org/learn/batch-data-pipelines-gcp/lecture/SkDus/how-to-carry-out-operations-in-bigquery), they do have a video about when to just use an SQL query to find wrong data without creating a Dataflow pipeline. The question says "SQL" as a language, not Cloud SQL as a service. Federated Sources is great because you can federate a CSV file in GCS with BigQuery. From the video: "In this section, we'll take a look at exactly how BigQuery can help with some of those data quality issues we just described. Let's start with validity, what do we mean by invalid? It can mean things like corrupted data maybe data that is missing a timestamp"
+
+--- Comment #38 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+fire558787
+			
+
+
+				Highly Voted 
+
+
+			3 years, 7 months ago
+
+--- Comment #39 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+Disagree a bit here. Could well be A. In one Coursera video course (https://www.coursera.org/learn/batch-data-pipelines-gcp/lecture/SkDus/how-to-carry-out-operations-in-bigquery), they do have a video about when to just use an SQL query to find wrong data without creating a Dataflow pipeline. The question says "SQL" as a language, not Cloud SQL as a service. Federated Sources is great because you can federate a CSV file in GCS with BigQuery. From the video: "In this section, we'll take a look at exactly how BigQuery can help with some of those data quality issues we just described. Let's start with validity, what do we mean by invalid? It can mean things like corrupted data maybe data that is missing a timestamp"
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+Disagree a bit here. Could well be A. In one Coursera video course (https://www.coursera.org/learn/batch-data-pipelines-gcp/lecture/SkDus/how-to-carry-out-operations-in-bigquery), they do have a video about when to just use an SQL query to find wrong data without creating a Dataflow pipeline. The question says "SQL" as a language, not Cloud SQL as a service. Federated Sources is great because you can federate a CSV file in GCS with BigQuery. From the video: "In this section, we'll take a look at exactly how BigQuery can help with some of those data quality issues we just described. Let's start with validity, what do we mean by invalid? It can mean things like corrupted data maybe data that is missing a timestamp"
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #43 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+https://cloud.google.com/bigquery/external-data-sources
+Use cases for external data sources include:
+
+For ETL workloads, loading and cleaning your data in one pass and writing the cleaned result into BigQuery storage.
+Joining BigQuery tables with frequently changing data from an external data source. By querying the external data source directly, you don't need to reload the data into BigQuery storage every time it changes.
+
+--- Comment #44 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+https://cloud.google.com/bigquery/external-data-sources
+Use cases for external data sources include:
+
+For ETL workloads, loading and cleaning your data in one pass and writing the cleaned result into BigQuery storage.
+Joining BigQuery tables with frequently changing data from an external data source. By querying the external data source directly, you don't need to reload the data into BigQuery storage every time it changes.
+
+--- Comment #45 ---
+Author: Unknown | Date: 3 years, 7 months ago | Votes: 0
+kelvinksau
+			
+
+
+			3 years, 7 months ago
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/bigquery/external-data-sources
+Use cases for external data sources include:
+
+For ETL workloads, loading and cleaning your data in one pass and writing the cleaned result into BigQuery storage.
+Joining BigQuery tables with frequently changing data from an external data source. By querying the external data source directly, you don't need to reload the data into BigQuery storage every time it changes.
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/bigquery/external-data-sources
+Use cases for external data sources include:
+
+For ETL workloads, loading and cleaning your data in one pass and writing the cleaned result into BigQuery storage.
+Joining BigQuery tables with frequently changing data from an external data source. By querying the external data source directly, you don't need to reload the data into BigQuery storage every time it changes.
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #53 ---
+Author: Unknown | Date: 3 weeks, 2 days ago | Votes: 0
+"you want to keep the data"
+
+--- Comment #54 ---
+Author: Unknown | Date: 3 weeks, 2 days ago | Votes: 0
+willyunger
+			
+
+
+				Most Recent 
+
+
+			3 weeks, 2 days ago
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+"you want to keep the data"
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+"you want to keep the data"
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #61 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #62 ---
+Author: Unknown | Date: 1 month, 1 week ago | Votes: 0
+You should transform the raw data by eliminate the error before analyse.
+
+--- Comment #63 ---
+Author: Unknown | Date: 1 month, 1 week ago | Votes: 0
+Ahamada
+			
+
+
+			1 month, 1 week ago
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+You should transform the raw data by eliminate the error before analyse.
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+You should transform the raw data by eliminate the error before analyse.
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #70 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #71 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Option A is incorrect because federated data sources do not provide any data validation or cleaning capabilities and you'll have to do it on the SQL query, which could slow down the performance.
+
+Option B is incorrect because Stackdriver monitoring can only monitor the performance of the pipeline, but it can't handle corrupted or incorrectly formatted data.
+
+Option C is incorrect because using gcloud CLI and setting max_bad_records to 0 will ignore the corrupted or incorrectly formatted data and continue the load process, this will lead to incorrect analysis.
+
+Answer D. Run a Google Cloud Dataflow batch pipeline to import the data into BigQuery, and push errors to another dead-letter table for analysis.
+
+--- Comment #72 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+rocky48
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+Option A is incorrect because federated data sources do not provide any data validation or cleaning capabilities and you'll have to do it on the SQL query, which could slow down the performance.
+
+Option B is incorrect because Stackdriver monitoring can only monitor the performance of the pipeline, but it can't handle corrupted or incorrectly formatted data.
+
+Option C is incorrect because using gcloud CLI and setting max_bad_records to 0 will ignore the corrupted or incorrectly formatted data and continue the load process, this will lead to incorrect analysis.
+
+Answer D. Run a Google Cloud Dataflow batch pipeline to import the data into BigQuery, and push errors to another dead-letter table for analysis.
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+Option A is incorrect because federated data sources do not provide any data validation or cleaning capabilities and you'll have to do it on the SQL query, which could slow down the performance.
+
+Option B is incorrect because Stackdriver monitoring can only monitor the performance of the pipeline, but it can't handle corrupted or incorrectly formatted data.
+
+Option C is incorrect because using gcloud CLI and setting max_bad_records to 0 will ignore the corrupted or incorrectly formatted data and continue the load process, this will lead to incorrect analysis.
+
+Answer D. Run a Google Cloud Dataflow batch pipeline to import the data into BigQuery, and push errors to another dead-letter table for analysis.
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #79 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #80 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+Google Cloud Dataflow allows you to create a data pipeline that can preprocess and transform data before loading it into BigQuery. This approach will enable you to handle problematic rows, push them to a dead-letter table for later analysis, and load the valid data into BigQuery.
+
+Option A (using federated data sources and checking data in the SQL query) can be used but doesn't directly address the issue of handling corrupted or incorrectly formatted rows.
+
+Options B and C are not the best choices for handling data quality and error issues. Enabling monitoring and setting max_bad_records to 0 in BigQuery may help identify errors but won't store the problematic rows for further analysis, and it might prevent loading any data with issues, which may not be ideal.
+
+--- Comment #81 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+rtcpost
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+Google Cloud Dataflow allows you to create a data pipeline that can preprocess and transform data before loading it into BigQuery. This approach will enable you to handle problematic rows, push them to a dead-letter table for later analysis, and load the valid data into BigQuery.
+
+Option A (using federated data sources and checking data in the SQL query) can be used but doesn't directly address the issue of handling corrupted or incorrectly formatted rows.
+
+Options B and C are not the best choices for handling data quality and error issues. Enabling monitoring and setting max_bad_records to 0 in BigQuery may help identify errors but won't store the problematic rows for further analysis, and it might prevent loading any data with issues, which may not be ideal.
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+Google Cloud Dataflow allows you to create a data pipeline that can preprocess and transform data before loading it into BigQuery. This approach will enable you to handle problematic rows, push them to a dead-letter table for later analysis, and load the valid data into BigQuery.
+
+Option A (using federated data sources and checking data in the SQL query) can be used but doesn't directly address the issue of handling corrupted or incorrectly formatted rows.
+
+Options B and C are not the best choices for handling data quality and error issues. Enabling monitoring and setting max_bad_records to 0 in BigQuery may help identify errors but won't store the problematic rows for further analysis, and it might prevent loading any data with issues, which may not be ideal.
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #88 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #89 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D. Run a Google Cloud Dataflow batch pipeline to import the data into BigQuery, and push errors to another dead-letter table for analysis.
+
+By running a Cloud Dataflow pipeline to import the data, you can perform data validation, cleaning and transformation before it gets loaded into BigQuery. Dataflow allows you to handle corrupted or incorrectly formatted rows by pushing them to another dead-letter table for analysis. This way, you can ensure that only clean and correctly formatted data is loaded into BigQuery for analysis.
+
+--- Comment #90 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+samdhimal
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #91 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+D. Run a Google Cloud Dataflow batch pipeline to import the data into BigQuery, and push errors to another dead-letter table for analysis.
+
+By running a Cloud Dataflow pipeline to import the data, you can perform data validation, cleaning and transformation before it gets loaded into BigQuery. Dataflow allows you to handle corrupted or incorrectly formatted rows by pushing them to another dead-letter table for analysis. This way, you can ensure that only clean and correctly formatted data is loaded into BigQuery for analysis.
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+D. Run a Google Cloud Dataflow batch pipeline to import the data into BigQuery, and push errors to another dead-letter table for analysis.
+
+By running a Cloud Dataflow pipeline to import the data, you can perform data validation, cleaning and transformation before it gets loaded into BigQuery. Dataflow allows you to handle corrupted or incorrectly formatted rows by pushing them to another dead-letter table for analysis. This way, you can ensure that only clean and correctly formatted data is loaded into BigQuery for analysis.
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #95 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+Option A is incorrect because federated data sources do not provide any data validation or cleaning capabilities and you'll have to do it on the SQL query, which could slow down the performance.
+
+Option B is incorrect because Stackdriver monitoring can only monitor the performance of the pipeline, but it can't handle corrupted or incorrectly formatted data.
+
+Option C is incorrect because using gcloud CLI and setting max_bad_records to 0 will ignore the corrupted or incorrectly formatted data and continue the load process, this will lead to incorrect analysis.
+
+--- Comment #96 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+Option A is incorrect because federated data sources do not provide any data validation or cleaning capabilities and you'll have to do it on the SQL query, which could slow down the performance.
+
+Option B is incorrect because Stackdriver monitoring can only monitor the performance of the pipeline, but it can't handle corrupted or incorrectly formatted data.
+
+Option C is incorrect because using gcloud CLI and setting max_bad_records to 0 will ignore the corrupted or incorrectly formatted data and continue the load process, this will lead to incorrect analysis.
+
+--- Comment #97 ---
+Author: Unknown | Date: 2 years, 2 months ago | Votes: 0
+samdhimal
+			
+
+
+			2 years, 2 months ago
+
+--- Comment #98 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+Option A is incorrect because federated data sources do not provide any data validation or cleaning capabilities and you'll have to do it on the SQL query, which could slow down the performance.
+
+Option B is incorrect because Stackdriver monitoring can only monitor the performance of the pipeline, but it can't handle corrupted or incorrectly formatted data.
+
+Option C is incorrect because using gcloud CLI and setting max_bad_records to 0 will ignore the corrupted or incorrectly formatted data and continue the load process, this will lead to incorrect analysis.
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+Option A is incorrect because federated data sources do not provide any data validation or cleaning capabilities and you'll have to do it on the SQL query, which could slow down the performance.
+
+Option B is incorrect because Stackdriver monitoring can only monitor the performance of the pipeline, but it can't handle corrupted or incorrectly formatted data.
+
+Option C is incorrect because using gcloud CLI and setting max_bad_records to 0 will ignore the corrupted or incorrectly formatted data and continue the load process, this will lead to incorrect analysis.
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #102 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+for Option C i think when setting max_bad_records to 0  this will prevent the loading to be achieved since the condition will cut off the loading if we have at least 1 corrupted row
+
+--- Comment #103 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+for Option C i think when setting max_bad_records to 0  this will prevent the loading to be achieved since the condition will cut off the loading if we have at least 1 corrupted row
+
+--- Comment #104 ---
+Author: Unknown | Date: 1 year, 8 months ago | Votes: 0
+hamza101
+			
+
+
+			1 year, 8 months ago
+
+--- Comment #105 ---
+Author: Unknown | Date:  | Votes: 0
+for Option C i think when setting max_bad_records to 0  this will prevent the loading to be achieved since the condition will cut off the loading if we have at least 1 corrupted row
+
+--- Comment #106 ---
+Author: Unknown | Date:  | Votes: 0
+for Option C i think when setting max_bad_records to 0  this will prevent the loading to be achieved since the condition will cut off the loading if we have at least 1 corrupted row
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #113 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+All other options only alert or error out bad data. As the question requires, option D sends bad data to the dead letter table for further analysis while valid data is loaded to the table
+
+--- Comment #114 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+RT_G
+			
+
+
+			6 months, 2 weeks ago
+
+--- Comment #115 ---
+Author: Unknown | Date:  | Votes: 0
+All other options only alert or error out bad data. As the question requires, option D sends bad data to the dead letter table for further analysis while valid data is loaded to the table
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+All other options only alert or error out bad data. As the question requires, option D sends bad data to the dead letter table for further analysis while valid data is loaded to the table
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #119 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #120 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #121 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #122 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+Agreed: D
+
+--- Comment #123 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+vaga1
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+Agreed: D
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #126 ---
+Author: Unknown | Date:  | Votes: 0
+Agreed: D
+
+--- Comment #127 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #128 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #131 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+D because you need Transform the data
+
+--- Comment #132 ---
+Author: Unknown | Date: 2 years ago | Votes: 0
+odiez3
+			
+
+
+			2 years ago
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+D because you need Transform the data
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+D because you need Transform the data
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #137 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #138 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #139 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+D. The question is asking pipeline, then let’s build a pipeline.
+
+--- Comment #140 ---
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Morock
+			
+
+
+			2 years, 1 month ago
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+D. The question is asking pipeline, then let’s build a pipeline.
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #143 ---
+Author: Unknown | Date:  | Votes: 0
+D. The question is asking pipeline, then let’s build a pipeline.
+
+--- Comment #144 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #145 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #148 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Agreed: D
+
+--- Comment #149 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+Besss
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+Agreed: D
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+Agreed: D
+
+--- Comment #153 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #154 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #157 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+The correct answer is D
+
+--- Comment #158 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+Dip1994
+			
+
+
+			2 years, 8 months ago
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is D
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+The correct answer is D
+
+--- Comment #161 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #162 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #165 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Correct - D (as we need to create Pipeline) which possible via 'D'
+
+--- Comment #166 ---
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Arkon88
+			
+
+
+			3 years, 1 month ago
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+Correct - D (as we need to create Pipeline) which possible via 'D'
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #169 ---
+Author: Unknown | Date:  | Votes: 0
+Correct - D (as we need to create Pipeline) which possible via 'D'
+
+--- Comment #170 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #174 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+Looks like D, with C you will not import anything, stackdriver alerts will not help you with this and with federated resources you won’t know what happened with those bad records. D is the most complete one.
+https://cloud.google.com/blog/products/gcp/handling-invalid-inputs-in-dataflow
+
+--- Comment #175 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+MaxNRG
+			
+
+
+			3 years, 5 months ago
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+Looks like D, with C you will not import anything, stackdriver alerts will not help you with this and with federated resources you won’t know what happened with those bad records. D is the most complete one.
+https://cloud.google.com/blog/products/gcp/handling-invalid-inputs-in-dataflow
+
+--- Comment #177 ---
+Author: Unknown | Date:  | Votes: 0
+Looks like D, with C you will not import anything, stackdriver alerts will not help you with this and with federated resources you won’t know what happened with those bad records. D is the most complete one.
+https://cloud.google.com/blog/products/gcp/handling-invalid-inputs-in-dataflow
+
+--- Comment #178 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #180 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #182 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+Ans: D
+
+--- Comment #183 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+anji007
+			
+
+
+			3 years, 5 months ago
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+Ans: D
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+Ans: D
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #188 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #189 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #190 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+D seems to be correct. explained here how combined wth Pub/Sub, this can be achieved. https://cloud.google.com/pubsub/docs/handling-failures
+
+--- Comment #191 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+nickozz
+			
+
+
+			3 years, 6 months ago
+
+--- Comment #192 ---
+Author: Unknown | Date:  | Votes: 0
+D seems to be correct. explained here how combined wth Pub/Sub, this can be achieved. https://cloud.google.com/pubsub/docs/handling-failures
+
+--- Comment #193 ---
+Author: Unknown | Date:  | Votes: 0
+D seems to be correct. explained here how combined wth Pub/Sub, this can be achieved. https://cloud.google.com/pubsub/docs/handling-failures
+
+--- Comment #194 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #195 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #196 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #197 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #198 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #199 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #200 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

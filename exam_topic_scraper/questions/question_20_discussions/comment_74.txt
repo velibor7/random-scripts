@@ -1,0 +1,10 @@
+COMMENT #74 FOR QUESTION 20
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+In Google Cloud Pub/Sub, when you use a push subscription, messages are delivered to the specified endpoint (in this case, your custom HTTPS endpoint). The acknowledgment deadline is the time given to the endpoint to acknowledge that it has received and processed the message. If the acknowledgment is not received within the deadline, Pub/Sub may consider the message as unacknowledged and may attempt redelivery, which can lead to duplicate messages.
+
+You should ensure that your custom HTTPS endpoint acknowledges messages within the acknowledgment deadline to prevent duplicate messages from being sent. Additionally, it's essential to handle messages in an idempotent way, so even if duplicates do occur, the action taken by your endpoint doesn't have unintended consequences.
+============================================================

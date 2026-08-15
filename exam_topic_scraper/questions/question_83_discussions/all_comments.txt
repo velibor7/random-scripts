@@ -1,0 +1,1496 @@
+ALL COMMENTS FOR QUESTION 83
+============================================================
+
+COMMENT #1
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 83 discussion
+
+COMMENT #2
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 83
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Flowlogistic Case Study -Company Overview -Flowlogistic is a leading logistics and supply chain provider. They help businesses throughout the world manage their resources and transport them to their final destination. The company has grown rapidly, expanding their offerings to include rail, truck, aircraft, and oceanic shipping.Company Background -The company started as a regional trucking company, and then expanded into other logistics market. Because they have not updated their infrastructure, managing and tracking orders and shipments has become a bottleneck. To improve operations, Flowlogistic developed proprietary technology for tracking shipments in real time at the parcel level. However, they are unable to deploy it because their technology stack, based on Apache Kafka, cannot support the processing volume. In addition, Flowlogistic wants to further analyze their orders and shipments to determine how best to deploy their resources.Solution Concept -Flowlogistic wants to implement two concepts using the cloud:✑ Use their proprietary technology in a real-time inventory-tracking system that indicates the location of their loads✑ Perform analytics on all their orders and shipment logs, which contain both structured and unstructured data, to determine how best to deploy resources, which markets to expand info. They also want to use predictive analytics to learn earlier when a shipment will be delayed.Existing Technical Environment -Flowlogistic architecture resides in a single data center:✑ Databases- 8 physical servers in 2 clusters- SQL Server `" user data, inventory, static data- 3 physical servers- Cassandra `" metadata, tracking messages10 Kafka servers `" tracking message aggregation and batch insert✑ Application servers `" customer front end, middleware for order/customs- 60 virtual machines across 20 physical servers- Tomcat `" Java services- Nginx `" static content- Batch servers✑ Storage appliances- iSCSI for virtual machine (VM) hosts- Fibre Channel storage area network (FC SAN) `" SQL server storageNetwork-attached storage (NAS) image storage, logs, backups✑ 10 Apache Hadoop /Spark servers- Core Data Lake- Data analysis workloads✑ 20 miscellaneous servers- Jenkins, monitoring, bastion hosts,Business Requirements -✑ Build a reliable and reproducible environment with scaled panty of production.✑ Aggregate data in a centralized Data Lake for analysis✑ Use historical data to perform predictive analytics on future shipments✑ Accurately track every shipment worldwide using proprietary technology✑ Improve business agility and speed of innovation through rapid provisioning of new resources✑ Analyze and optimize architecture for performance in the cloud✑ Migrate fully to the cloud if all other requirements are metTechnical Requirements -✑ Handle both streaming and batch data✑ Migrate existing Hadoop workloads✑ Ensure architecture is scalable and elastic to meet the changing demands of the company.✑ Use managed services whenever possible✑ Encrypt data flight and at restConnect a VPN between the production data center and cloud environmentSEO Statement -We have grown so quickly that our inability to upgrade our infrastructure is really hampering further growth and efficiency. We are efficient at moving shipments around the world, but we are inefficient at moving data around.We need to organize our information so we can more easily understand where our customers are and what they are shipping.CTO Statement -IT has never been a priority for us, so as our data has grown, we have not invested enough in our technology. I have a good staff to manage IT, but they are so busy managing our infrastructure that I cannot get them to do the things that really matter, such as organizing our data, building the analytics, and figuring out how to implement the CFO' s tracking technology.CFO Statement -Part of our competitive advantage is that we penalize ourselves for late shipments and deliveries. Knowing where out shipments are at all times has a direct correlation to our bottom line and profitability. Additionally, I don't want to commit capital to building out a server environment.Flowlogistic's management has determined that the current Apache Kafka servers cannot handle the data volume for their real-time inventory tracking system.You need to build a new system on Google Cloud Platform (GCP) that will feed the proprietary tracking software. The system must be able to ingest data from a variety of global sources, process and query in real-time, and store the data reliably. Which combination of GCP products should you choose?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Cloud Pub/Sub, Cloud Dataflow, and Cloud Storage
+										
+
+
+													B.
+												
+											
+											Cloud Pub/Sub, Cloud Dataflow, and Local SSD
+										
+
+
+													C.
+												
+											
+											Cloud Pub/Sub, Cloud SQL, and Cloud Storage
+										
+
+
+													D.
+												
+											
+											Cloud Load Balancing, Cloud Dataflow, and Cloud Storage
+										
+
+
+													E.
+												
+											
+											Cloud Dataflow, Cloud SQL, and Cloud Storage
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+A
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 6:13 p.m.
+
+COMMENT #3
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 83
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+COMMENT #4
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 6:13 p.m.
+
+COMMENT #5
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Seems like A..Data should ingest from multiple sources which might be real time or batch .
+
+COMMENT #6
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Seems like A..Data should ingest from multiple sources which might be real time or batch .
+
+COMMENT #7
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Seems like A..Data should ingest from multiple sources which might be real time or batch .
+
+COMMENT #8
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #9
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+COMMENT #10
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+COMMENT #11
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+COMMENT #12
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Seems like A..Data should ingest from multiple sources which might be real time or batch .
+
+COMMENT #13
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Seems like A..Data should ingest from multiple sources which might be real time or batch .
+
+COMMENT #14
+----------------------------------------
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+digvijay
+			
+
+
+				Highly Voted 
+
+
+			3 years, 6 months ago
+
+COMMENT #15
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Seems like A..Data should ingest from multiple sources which might be real time or batch .
+
+COMMENT #16
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Seems like A..Data should ingest from multiple sources which might be real time or batch .
+
+COMMENT #17
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 25 times
+
+COMMENT #18
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #19
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+How is it possible to query in real time with option A. It needs Dataflow
+
+COMMENT #20
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+How is it possible to query in real time with option A. It needs Dataflow
+
+COMMENT #21
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+navemula
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #22
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+How is it possible to query in real time with option A. It needs Dataflow
+
+COMMENT #23
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+How is it possible to query in real time with option A. It needs Dataflow
+
+COMMENT #24
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #25
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #26
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+To use Dataflow SQL it needs BigQuery
+
+COMMENT #27
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+To use Dataflow SQL it needs BigQuery
+
+COMMENT #28
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+navemula
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #29
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+To use Dataflow SQL it needs BigQuery
+
+COMMENT #30
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+To use Dataflow SQL it needs BigQuery
+
+COMMENT #31
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #32
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #33
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #34
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #35
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #36
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #37
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Repeated Question see ques 35
+
+COMMENT #38
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+mikey007
+			
+
+
+				Highly Voted 
+
+
+			3 years ago
+
+COMMENT #39
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Repeated Question see ques 35
+
+COMMENT #40
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Repeated Question see ques 35
+
+COMMENT #41
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 11 times
+
+COMMENT #42
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #43
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+These exams make people over analyse. People who vote A earlier in 35 seem to be confused here.. haha
+
+COMMENT #44
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+These exams make people over analyse. People who vote A earlier in 35 seem to be confused here.. haha
+
+COMMENT #45
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+awssp12345
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #46
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+These exams make people over analyse. People who vote A earlier in 35 seem to be confused here.. haha
+
+COMMENT #47
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+These exams make people over analyse. People who vote A earlier in 35 seem to be confused here.. haha
+
+COMMENT #48
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #49
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #50
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #51
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #52
+----------------------------------------
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+Well Done mikey007, Many people have already answered as A.
+
+COMMENT #53
+----------------------------------------
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+StelSen
+			
+
+
+			2 years, 9 months ago
+
+COMMENT #54
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Well Done mikey007, Many people have already answered as A.
+
+COMMENT #55
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Well Done mikey007, Many people have already answered as A.
+
+COMMENT #56
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #57
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #58
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #59
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #60
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #61
+----------------------------------------
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+Answer is A
+
+COMMENT #62
+----------------------------------------
+Author: Unknown | Date: 9 months, 2 weeks ago | Votes: 0
+Kyr0
+			
+
+
+				Most Recent 
+
+
+			9 months, 2 weeks ago
+
+COMMENT #63
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is A
+
+COMMENT #64
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #65
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer is A
+
+COMMENT #66
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #67
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #68
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #69
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #70
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+It's A
+
+COMMENT #71
+----------------------------------------
+Author: Unknown | Date: 11 months, 1 week ago | Votes: 0
+cloudmon
+			
+
+
+			11 months, 1 week ago
+
+COMMENT #72
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It's A
+
+COMMENT #73
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #74
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+It's A
+
+COMMENT #75
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #76
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #77
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #78
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #79
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+A is the answer
+
+COMMENT #80
+----------------------------------------
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+ducc
+			
+
+
+			1 year, 1 month ago
+
+COMMENT #81
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A is the answer
+
+COMMENT #82
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #83
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A is the answer
+
+COMMENT #84
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #85
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #86
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #87
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #88
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+ingest data from a variety of global sources - cloud pub/sub
+process and query in real-time - cloud Dataflow
+store the data reliably -  Cloud Storage
+
+COMMENT #89
+----------------------------------------
+Author: Unknown | Date: 1 year, 7 months ago | Votes: 0
+RRK2021
+			
+
+
+			1 year, 7 months ago
+
+COMMENT #90
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+ingest data from a variety of global sources - cloud pub/sub
+process and query in real-time - cloud Dataflow
+store the data reliably -  Cloud Storage
+
+COMMENT #91
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+ingest data from a variety of global sources - cloud pub/sub
+process and query in real-time - cloud Dataflow
+store the data reliably -  Cloud Storage
+
+COMMENT #92
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #93
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #94
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #95
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #96
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+PubSub (for global ingestion from multiple sources) + Dataflow (for process and query) + reliable (gcs).
+
+COMMENT #97
+----------------------------------------
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+medeis_jar
+			
+
+
+			1 year, 9 months ago
+
+COMMENT #98
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+PubSub (for global ingestion from multiple sources) + Dataflow (for process and query) + reliable (gcs).
+
+COMMENT #99
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #100
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+PubSub (for global ingestion from multiple sources) + Dataflow (for process and query) + reliable (gcs).
+
+COMMENT #101
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #102
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #103
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #104
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #105
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+using Dataflow you can apply the propriety analytics and you can push the data in to Cloud storage
+
+COMMENT #106
+----------------------------------------
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+lifebegins
+			
+
+
+			1 year, 10 months ago
+
+COMMENT #107
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+using Dataflow you can apply the propriety analytics and you can push the data in to Cloud storage
+
+COMMENT #108
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: A
+
+COMMENT #109
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+using Dataflow you can apply the propriety analytics and you can push the data in to Cloud storage
+
+COMMENT #110
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #111
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #112
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #113
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #114
+----------------------------------------
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+Also read the technical requirements section. Not just the last 3 lines of the question. 
+
+When you do that, you'll know the answer is PubSub (for global ingestion) + Dataflow (for process and query) + reliable (gcs).
+
+Answer is: A
+
+COMMENT #115
+----------------------------------------
+Author: Unknown | Date: 1 year, 11 months ago | Votes: 0
+gcp_k
+			
+
+
+			1 year, 11 months ago
+
+COMMENT #116
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Also read the technical requirements section. Not just the last 3 lines of the question. 
+
+When you do that, you'll know the answer is PubSub (for global ingestion) + Dataflow (for process and query) + reliable (gcs).
+
+Answer is: A
+
+COMMENT #117
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Also read the technical requirements section. Not just the last 3 lines of the question. 
+
+When you do that, you'll know the answer is PubSub (for global ingestion) + Dataflow (for process and query) + reliable (gcs).
+
+Answer is: A
+
+COMMENT #118
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #119
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #120
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #121
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #122
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+Answer C:
+Look the 3 requirement in the question "ingest data from a variety of global sources, process and query in real-time, and store the data reliably"
+Ingest data from global sources: Pub-Sub
+Process  and Query in realtime: Cloud SQL
+Store reliably: Cloud storage
+I can understand Databflow is required in case you need to analyze and transform data but question does not refer it.
+
+COMMENT #123
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+ManojT
+			
+
+
+			2 years ago
+
+COMMENT #124
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Answer C:
+Look the 3 requirement in the question "ingest data from a variety of global sources, process and query in real-time, and store the data reliably"
+Ingest data from global sources: Pub-Sub
+Process  and Query in realtime: Cloud SQL
+Store reliably: Cloud storage
+I can understand Databflow is required in case you need to analyze and transform data but question does not refer it.
+
+COMMENT #125
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer C:
+Look the 3 requirement in the question "ingest data from a variety of global sources, process and query in real-time, and store the data reliably"
+Ingest data from global sources: Pub-Sub
+Process  and Query in realtime: Cloud SQL
+Store reliably: Cloud storage
+I can understand Databflow is required in case you need to analyze and transform data but question does not refer it.
+
+COMMENT #126
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #127
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #128
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Cloud SQL, is not suitable and efficient for storing real time data ingested from PUB/SUB, so A is the answer
+
+COMMENT #129
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+Cloud SQL, is not suitable and efficient for storing real time data ingested from PUB/SUB, so A is the answer
+
+COMMENT #130
+----------------------------------------
+Author: Unknown | Date: 1 year, 3 months ago | Votes: 0
+cualquiernick
+			
+
+
+			1 year, 3 months ago
+
+COMMENT #131
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Cloud SQL, is not suitable and efficient for storing real time data ingested from PUB/SUB, so A is the answer
+
+COMMENT #132
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Cloud SQL, is not suitable and efficient for storing real time data ingested from PUB/SUB, so A is the answer
+
+COMMENT #133
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #134
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #135
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #136
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #137
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #138
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+Correct is A.  
+Kafka --> replace  by PubSub, Streaming then Dataflow, store data reliably and not mention any other condition then Cloud Storage
+
+COMMENT #139
+----------------------------------------
+Author: Unknown | Date: 2 years ago | Votes: 0
+nguyenmoon
+			
+
+
+			2 years ago
+
+COMMENT #140
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct is A.  
+Kafka --> replace  by PubSub, Streaming then Dataflow, store data reliably and not mention any other condition then Cloud Storage
+
+COMMENT #141
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Correct is A.  
+Kafka --> replace  by PubSub, Streaming then Dataflow, store data reliably and not mention any other condition then Cloud Storage
+
+COMMENT #142
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #143
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #144
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #145
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #146
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+Vote for 'A'
+
+SQL - will not handle the volume
+
+COMMENT #147
+----------------------------------------
+Author: Unknown | Date: 2 years, 3 months ago | Votes: 0
+sumanshu
+			
+
+
+			2 years, 3 months ago
+
+COMMENT #148
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Vote for 'A'
+
+SQL - will not handle the volume
+
+COMMENT #149
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Vote for 'A'
+
+SQL - will not handle the volume
+
+COMMENT #150
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #151
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #152
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #153
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #154
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Dataflow SQL cannot output to cloud storage:
+https://cloud.google.com/dataflow/docs/guides/sql/data-sources-destinations
+but the main problem is that Cloud SQL can't do process, then response is A or C.
+
+COMMENT #155
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+daghayeghi
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #156
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Dataflow SQL cannot output to cloud storage:
+https://cloud.google.com/dataflow/docs/guides/sql/data-sources-destinations
+but the main problem is that Cloud SQL can't do process, then response is A or C.
+
+COMMENT #157
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Dataflow SQL cannot output to cloud storage:
+https://cloud.google.com/dataflow/docs/guides/sql/data-sources-destinations
+but the main problem is that Cloud SQL can't do process, then response is A or C.
+
+COMMENT #158
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #159
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #160
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #161
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #162
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+A
+I don't expect this question to come up, but if I had to write the answer, it would be A.
+The problem statement "Flowlogistic's management has determined that the current Apache Kafka servers cannot handle the
+data volume for their real-time inventory tracking system.
+As it says, "we cannot determine the data volume", but it doesn't say that we can't calculate it either.
+
+Requirement definition: The system must be able to
+ingest data from a variety of global sources
+process and query in real-time
+Store the data reliably. 
+
+It says above, if you look at the Google page.
+
+Logging to multiple systems. for example, a Google Compute Engine instance can write logs to a monitoring system, to a database for later querying, and so on.
+https://cloud.google.com/pubsub/docs/overview#scenarios
+
+stream processing with Dataflow
+https://cloud.google.com/pubsub/docs/pubsub-dataflow?hl=en-419
+
+The answer is A, since it is stated above.
+
+COMMENT #163
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+kino2020
+			
+
+
+			3 years ago
+
+COMMENT #164
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A
+I don't expect this question to come up, but if I had to write the answer, it would be A.
+The problem statement "Flowlogistic's management has determined that the current Apache Kafka servers cannot handle the
+data volume for their real-time inventory tracking system.
+As it says, "we cannot determine the data volume", but it doesn't say that we can't calculate it either.
+
+Requirement definition: The system must be able to
+ingest data from a variety of global sources
+process and query in real-time
+Store the data reliably. 
+
+It says above, if you look at the Google page.
+
+Logging to multiple systems. for example, a Google Compute Engine instance can write logs to a monitoring system, to a database for later querying, and so on.
+https://cloud.google.com/pubsub/docs/overview#scenarios
+
+stream processing with Dataflow
+https://cloud.google.com/pubsub/docs/pubsub-dataflow?hl=en-419
+
+The answer is A, since it is stated above.
+
+COMMENT #165
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A
+I don't expect this question to come up, but if I had to write the answer, it would be A.
+The problem statement "Flowlogistic's management has determined that the current Apache Kafka servers cannot handle the
+data volume for their real-time inventory tracking system.
+As it says, "we cannot determine the data volume", but it doesn't say that we can't calculate it either.
+
+Requirement definition: The system must be able to
+ingest data from a variety of global sources
+process and query in real-time
+Store the data reliably. 
+
+It says above, if you look at the Google page.
+
+Logging to multiple systems. for example, a Google Compute Engine instance can write logs to a monitoring system, to a database for later querying, and so on.
+https://cloud.google.com/pubsub/docs/overview#scenarios
+
+stream processing with Dataflow
+https://cloud.google.com/pubsub/docs/pubsub-dataflow?hl=en-419
+
+The answer is A, since it is stated above.
+
+COMMENT #166
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+COMMENT #167
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #168
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #169
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #170
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+A.  SQL queries can be written in Dataflow too.
+https://cloud.google.com/dataflow/docs/guides/sql/dataflow-sql-intro#running-queries
+
+COMMENT #171
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+vakati
+			
+
+
+			3 years ago
+
+COMMENT #172
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+A.  SQL queries can be written in Dataflow too.
+https://cloud.google.com/dataflow/docs/guides/sql/dataflow-sql-intro#running-queries
+
+COMMENT #173
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A.  SQL queries can be written in Dataflow too.
+https://cloud.google.com/dataflow/docs/guides/sql/dataflow-sql-intro#running-queries
+
+COMMENT #174
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+COMMENT #175
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #176
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Dataflow SQL cannot output to cloud storage only BigQuery...so I am confused on this one.
+
+COMMENT #177
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+Dataflow SQL cannot output to cloud storage only BigQuery...so I am confused on this one.
+
+COMMENT #178
+----------------------------------------
+Author: Unknown | Date: 3 years ago | Votes: 0
+aleedrew
+			
+
+
+			3 years ago
+
+COMMENT #179
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Dataflow SQL cannot output to cloud storage only BigQuery...so I am confused on this one.
+
+COMMENT #180
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Dataflow SQL cannot output to cloud storage only BigQuery...so I am confused on this one.
+
+COMMENT #181
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #182
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #183
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+https://cloud.google.com/pubsub/docs/pubsub-dataflow... It is possible to load the data to Cloud Storage. Can refer to above docs.
+
+COMMENT #184
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+https://cloud.google.com/pubsub/docs/pubsub-dataflow... It is possible to load the data to Cloud Storage. Can refer to above docs.
+
+COMMENT #185
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+Jay3244
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #186
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+https://cloud.google.com/pubsub/docs/pubsub-dataflow... It is possible to load the data to Cloud Storage. Can refer to above docs.
+
+COMMENT #187
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/pubsub/docs/pubsub-dataflow... It is possible to load the data to Cloud Storage. Can refer to above docs.
+
+COMMENT #188
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #189
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #190
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+he said correct, DataflowDataflow SQL cannot output to cloud storage:
+https://cloud.google.com/dataflow/docs/guides/sql/data-sources-destinations
+
+COMMENT #191
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+he said correct, DataflowDataflow SQL cannot output to cloud storage:
+https://cloud.google.com/dataflow/docs/guides/sql/data-sources-destinations
+
+COMMENT #192
+----------------------------------------
+Author: Unknown | Date: 2 years, 7 months ago | Votes: 0
+daghayeghi
+			
+
+
+			2 years, 7 months ago
+
+COMMENT #193
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+he said correct, DataflowDataflow SQL cannot output to cloud storage:
+https://cloud.google.com/dataflow/docs/guides/sql/data-sources-destinations
+
+COMMENT #194
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+he said correct, DataflowDataflow SQL cannot output to cloud storage:
+https://cloud.google.com/dataflow/docs/guides/sql/data-sources-destinations
+
+COMMENT #195
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #196
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #197
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Answer should be C then?
+
+COMMENT #198
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Answer should be C then?
+
+COMMENT #199
+----------------------------------------
+Author: Unknown | Date: 2 years, 1 month ago | Votes: 0
+Ral17
+			
+
+
+			2 years, 1 month ago
+
+COMMENT #200
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer should be C then?
+
+COMMENT #201
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Answer should be C then?
+
+COMMENT #202
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #203
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #204
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #205
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #206
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #207
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #208
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #209
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #210
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+should be E
+
+COMMENT #211
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+kuntal8285
+			
+
+
+			3 years, 1 month ago
+
+COMMENT #212
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+should be E
+
+COMMENT #213
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+should be E
+
+COMMENT #214
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+COMMENT #215
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #216
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #217
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #218
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Should be A ...data need to feed to the propriority system and for that dataflow is required.
+
+COMMENT #219
+----------------------------------------
+Author: Unknown | Date: 3 years, 1 month ago | Votes: 0
+Tanmoyk
+			
+
+
+			3 years, 1 month ago
+
+COMMENT #220
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Should be A ...data need to feed to the propriority system and for that dataflow is required.
+
+COMMENT #221
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Should be A ...data need to feed to the propriority system and for that dataflow is required.
+
+COMMENT #222
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+COMMENT #223
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #224
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #225
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+...
+
+COMMENT #226
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+COMMENT #227
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+
+
+COMMENT #228
+----------------------------------------
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

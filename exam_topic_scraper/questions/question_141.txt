@@ -1,0 +1,1091 @@
+================================================================================
+QUESTION:
+Data Analysts in your company have the Cloud IAM Owner role assigned to them in their projects to allow them to work with multiple GCP products in their projects. Your organization requires that all BigQuery data access logs be retained for 6 months. You need to ensure that only audit personnel in your company can access the data access logs for all projects. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Enable data access logs in each Data Analyst's project. Restrict access to Stackdriver Logging via Cloud IAM roles.
+										
+
+
+													B.
+												
+											
+											Export the data access logs via a project-level export sink to a Cloud Storage bucket in the Data Analysts' projects. Restrict access to the Cloud Storage bucket.
+										
+
+
+													C.
+												
+											
+											Export the data access logs via a project-level export sink to a Cloud Storage bucket in a newly created projects for audit logs. Restrict access to the project with the exported logs.
+										
+
+
+													D.
+												
+											
+											Export the data access logs via an aggregated export sink to a Cloud Storage bucket in a newly created project for audit logs. Restrict access to the project that contains the exported logs.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+----------------------------------------
+ANSWER CHOICES:
+
+================================================================================
+DISCUSSIONS (187 comments):
+
+--- Comment #1 ---
+Author: Unknown | Date:  | Votes: 0
+Exam Professional Data Engineer topic 1 question 141 discussion
+
+--- Comment #2 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 141
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+
+
+							
+								Data Analysts in your company have the Cloud IAM Owner role assigned to them in their projects to allow them to work with multiple GCP products in their projects. Your organization requires that all BigQuery data access logs be retained for 6 months. You need to ensure that only audit personnel in your company can access the data access logs for all projects. What should you do?
+
+
+
+
+
+
+
+
+													A.
+												
+											
+											Enable data access logs in each Data Analyst's project. Restrict access to Stackdriver Logging via Cloud IAM roles.
+										
+
+
+													B.
+												
+											
+											Export the data access logs via a project-level export sink to a Cloud Storage bucket in the Data Analysts' projects. Restrict access to the Cloud Storage bucket.
+										
+
+
+													C.
+												
+											
+											Export the data access logs via a project-level export sink to a Cloud Storage bucket in a newly created projects for audit logs. Restrict access to the project with the exported logs.
+										
+
+
+													D.
+												
+											
+											Export the data access logs via an aggregated export sink to a Cloud Storage bucket in a newly created project for audit logs. Restrict access to the project that contains the exported logs.
+										
+
+
+Show Suggested Answer
+Hide Answer
+
+Suggested Answer:
+D
+🗳️
+
+
+
+
+
+
+
+
+							by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 8:58 a.m.
+
+--- Comment #3 ---
+Author: Unknown | Date:  | Votes: 0
+Actual exam question from
+						
+						Google's
+						Professional Data Engineer
+
+							Question #: 141
+							Topic #: 1
+						
+[All Professional Data Engineer Questions]
+
+--- Comment #4 ---
+Author: Unknown | Date:  | Votes: 0
+by
+							
+								[deleted]
+							
+							at 
+							March 22, 2020, 8:58 a.m.
+
+--- Comment #5 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer D is correct. Aggregated log sink will create a single sink for all projects, the destination can be a google cloud storage, pub/sub topic, bigquery table or a cloud logging bucket. without aggregated sink this will be required to be done for each project individually which will be cumbersome.
+
+https://cloud.google.com/logging/docs/export/aggregated_sinks
+
+--- Comment #6 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer D is correct. Aggregated log sink will create a single sink for all projects, the destination can be a google cloud storage, pub/sub topic, bigquery table or a cloud logging bucket. without aggregated sink this will be required to be done for each project individually which will be cumbersome.
+
+https://cloud.google.com/logging/docs/export/aggregated_sinks
+
+--- Comment #7 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer D is correct. Aggregated log sink will create a single sink for all projects, the destination can be a google cloud storage, pub/sub topic, bigquery table or a cloud logging bucket. without aggregated sink this will be required to be done for each project individually which will be cumbersome.
+
+https://cloud.google.com/logging/docs/export/aggregated_sinks
+
+--- Comment #8 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #9 ---
+Author: Unknown | Date:  | Votes: 0
+Chosen Answer:
+
+
+
+
+						This is a voting comment (?). You can switch to a simple comment. It is better to Upvote an existing comment if you don't have anything to add.
+					
+
+
+
+						Switch to a voting comment
+New
+
+
+
+
+
+Submit
+Cancel
+
+--- Comment #10 ---
+Author: Unknown | Date:  | Votes: 0
+Switch to a voting comment
+New
+
+--- Comment #11 ---
+Author: Unknown | Date:  | Votes: 0
+Submit
+Cancel
+
+--- Comment #12 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer D is correct. Aggregated log sink will create a single sink for all projects, the destination can be a google cloud storage, pub/sub topic, bigquery table or a cloud logging bucket. without aggregated sink this will be required to be done for each project individually which will be cumbersome.
+
+https://cloud.google.com/logging/docs/export/aggregated_sinks
+
+--- Comment #13 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+Answer D is correct. Aggregated log sink will create a single sink for all projects, the destination can be a google cloud storage, pub/sub topic, bigquery table or a cloud logging bucket. without aggregated sink this will be required to be done for each project individually which will be cumbersome.
+
+https://cloud.google.com/logging/docs/export/aggregated_sinks
+
+--- Comment #14 ---
+Author: Unknown | Date: 4 years ago | Votes: 0
+SteelWarrior
+			
+
+
+				Highly Voted 
+
+
+			4 years ago
+
+--- Comment #15 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+Answer D is correct. Aggregated log sink will create a single sink for all projects, the destination can be a google cloud storage, pub/sub topic, bigquery table or a cloud logging bucket. without aggregated sink this will be required to be done for each project individually which will be cumbersome.
+
+https://cloud.google.com/logging/docs/export/aggregated_sinks
+
+--- Comment #16 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D is correct. Aggregated log sink will create a single sink for all projects, the destination can be a google cloud storage, pub/sub topic, bigquery table or a cloud logging bucket. without aggregated sink this will be required to be done for each project individually which will be cumbersome.
+
+https://cloud.google.com/logging/docs/export/aggregated_sinks
+
+--- Comment #17 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 30 times
+
+--- Comment #18 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #19 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D is right
+
+--- Comment #20 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+D is right
+
+--- Comment #21 ---
+Author: Unknown | Date: 1 year, 9 months ago | Votes: 0
+AzureDP900
+			
+
+
+			1 year, 9 months ago
+
+--- Comment #22 ---
+Author: Unknown | Date:  | Votes: 0
+D is right
+
+--- Comment #23 ---
+Author: Unknown | Date:  | Votes: 0
+D is right
+
+--- Comment #24 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #25 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #26 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #27 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #28 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #29 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Correct: D
+https://cloud.google.com/iam/docs/roles-audit-logging#scenario_external_auditors
+
+--- Comment #30 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+				Highly Voted 
+
+
+			4 years, 6 months ago
+
+--- Comment #31 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+Correct: D
+https://cloud.google.com/iam/docs/roles-audit-logging#scenario_external_auditors
+
+--- Comment #32 ---
+Author: Unknown | Date:  | Votes: 0
+Correct: D
+https://cloud.google.com/iam/docs/roles-audit-logging#scenario_external_auditors
+
+--- Comment #33 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 12 times
+
+--- Comment #34 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #35 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+https://cloud.google.com/iam/docs/job-functions/auditing#scenario_operational_monitoring
+
+--- Comment #36 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+https://cloud.google.com/iam/docs/job-functions/auditing#scenario_operational_monitoring
+
+--- Comment #37 ---
+Author: Unknown | Date: 3 years, 6 months ago | Votes: 0
+daghayeghi
+			
+
+
+			3 years, 6 months ago
+
+--- Comment #38 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/iam/docs/job-functions/auditing#scenario_operational_monitoring
+
+--- Comment #39 ---
+Author: Unknown | Date:  | Votes: 0
+https://cloud.google.com/iam/docs/job-functions/auditing#scenario_operational_monitoring
+
+--- Comment #40 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #41 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #42 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #43 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #44 ---
+Author: Unknown | Date: 4 years, 2 months ago | Votes: 0
+The above link shows BigQuery as a sink for aggregated exports and not Cloud Storage.
+
+--- Comment #45 ---
+Author: Unknown | Date: 4 years, 2 months ago | Votes: 0
+Rajuuu
+			
+
+
+			4 years, 2 months ago
+
+--- Comment #46 ---
+Author: Unknown | Date:  | Votes: 0
+The above link shows BigQuery as a sink for aggregated exports and not Cloud Storage.
+
+--- Comment #47 ---
+Author: Unknown | Date:  | Votes: 0
+The above link shows BigQuery as a sink for aggregated exports and not Cloud Storage.
+
+--- Comment #48 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #49 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #50 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #51 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #52 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #53 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+D is the correct ans
+
+--- Comment #54 ---
+Author: Unknown | Date: 6 months, 2 weeks ago | Votes: 0
+pbtpratik
+			
+
+
+				Most Recent 
+
+
+			6 months, 2 weeks ago
+
+--- Comment #55 ---
+Author: Unknown | Date:  | Votes: 0
+D is the correct ans
+
+--- Comment #56 ---
+Author: Unknown | Date:  | Votes: 0
+D is the correct ans
+
+--- Comment #57 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #58 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #59 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #60 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #61 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+D. 
+Here's why this option is recommended:
+Aggregated Export Sink: By using an aggregated export sink, you can consolidate data access logs from multiple projects into a single location. This simplifies log management and retention policies.
+Newly Created Project for Audit Logs: Creating a dedicated project for audit logs allows you to centralize access control and manage logs separately from individual Data Analyst projects.
+Access Restriction: By restricting access to the project containing the exported logs, you ensure that only authorized audit personnel have access to the logs while preventing Data Analysts from accessing them.
+
+--- Comment #62 ---
+Author: Unknown | Date: 1 year ago | Votes: 0
+barnac1es
+			
+
+
+			1 year ago
+
+--- Comment #63 ---
+Author: Unknown | Date:  | Votes: 0
+D. 
+Here's why this option is recommended:
+Aggregated Export Sink: By using an aggregated export sink, you can consolidate data access logs from multiple projects into a single location. This simplifies log management and retention policies.
+Newly Created Project for Audit Logs: Creating a dedicated project for audit logs allows you to centralize access control and manage logs separately from individual Data Analyst projects.
+Access Restriction: By restricting access to the project containing the exported logs, you ensure that only authorized audit personnel have access to the logs while preventing Data Analysts from accessing them.
+
+--- Comment #64 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #65 ---
+Author: Unknown | Date:  | Votes: 0
+D. 
+Here's why this option is recommended:
+Aggregated Export Sink: By using an aggregated export sink, you can consolidate data access logs from multiple projects into a single location. This simplifies log management and retention policies.
+Newly Created Project for Audit Logs: Creating a dedicated project for audit logs allows you to centralize access control and manage logs separately from individual Data Analyst projects.
+Access Restriction: By restricting access to the project containing the exported logs, you ensure that only authorized audit personnel have access to the logs while preventing Data Analysts from accessing them.
+
+--- Comment #66 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #67 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #68 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #69 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #70 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+To create the Log Router, at step 3 to define the logs (Source), we can include logs from many projects (aggregated)
+
+--- Comment #71 ---
+Author: Unknown | Date: 1 year, 6 months ago | Votes: 0
+midgoo
+			
+
+
+			1 year, 6 months ago
+
+--- Comment #72 ---
+Author: Unknown | Date:  | Votes: 0
+To create the Log Router, at step 3 to define the logs (Source), we can include logs from many projects (aggregated)
+
+--- Comment #73 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #74 ---
+Author: Unknown | Date:  | Votes: 0
+To create the Log Router, at step 3 to define the logs (Source), we can include logs from many projects (aggregated)
+
+--- Comment #75 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #76 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #77 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #78 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #79 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+D is the answer.
+
+https://cloud.google.com/logging/docs/export/aggregated_sinks
+Aggregated sinks combine and route log entries from the Google Cloud resources contained by an organization or folder. For instance, you might aggregate and route audit log entries from all the folders contained by an organization to a Cloud Storage bucket.
+
+--- Comment #80 ---
+Author: Unknown | Date: 1 year, 10 months ago | Votes: 0
+zellck
+			
+
+
+			1 year, 10 months ago
+
+--- Comment #81 ---
+Author: Unknown | Date:  | Votes: 0
+D is the answer.
+
+https://cloud.google.com/logging/docs/export/aggregated_sinks
+Aggregated sinks combine and route log entries from the Google Cloud resources contained by an organization or folder. For instance, you might aggregate and route audit log entries from all the folders contained by an organization to a Cloud Storage bucket.
+
+--- Comment #82 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #83 ---
+Author: Unknown | Date:  | Votes: 0
+D is the answer.
+
+https://cloud.google.com/logging/docs/export/aggregated_sinks
+Aggregated sinks combine and route log entries from the Google Cloud resources contained by an organization or folder. For instance, you might aggregate and route audit log entries from all the folders contained by an organization to a Cloud Storage bucket.
+
+--- Comment #84 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #85 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #86 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #87 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #88 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+D is correct
+
+--- Comment #89 ---
+Author: Unknown | Date: 2 years, 5 months ago | Votes: 0
+dffffff
+			
+
+
+			2 years, 5 months ago
+
+--- Comment #90 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct
+
+--- Comment #91 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct
+
+--- Comment #92 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #93 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #94 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #95 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #96 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+D: https://cloud.google.com/logging/docs/export/aggregated_exports
+You can create an aggregated export sink that can export log entries from all the projects, folders, and billing accounts of an organization. As an example, you might use this feature to export audit log entries from an organization's projects to a central location.
+
+--- Comment #97 ---
+Author: Unknown | Date: 2 years, 9 months ago | Votes: 0
+MaxNRG
+			
+
+
+			2 years, 9 months ago
+
+--- Comment #98 ---
+Author: Unknown | Date:  | Votes: 0
+D: https://cloud.google.com/logging/docs/export/aggregated_exports
+You can create an aggregated export sink that can export log entries from all the projects, folders, and billing accounts of an organization. As an example, you might use this feature to export audit log entries from an organization's projects to a central location.
+
+--- Comment #99 ---
+Author: Unknown | Date:  | Votes: 0
+Selected Answer: D
+
+--- Comment #100 ---
+Author: Unknown | Date:  | Votes: 0
+D: https://cloud.google.com/logging/docs/export/aggregated_exports
+You can create an aggregated export sink that can export log entries from all the projects, folders, and billing accounts of an organization. As an example, you might use this feature to export audit log entries from an organization's projects to a central location.
+
+--- Comment #101 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #102 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #103 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #104 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #105 ---
+Author: Unknown | Date: 3 years ago | Votes: 0
+The auditor needs to audit data analyst's behaviors (how they access multiple projects in BQ ). So, the key is, multiple projects. According to Google doc project-level sinks:
+https://cloud.google.com/logging/docs/export/configure_export_v2
+However, the Cloud Console can only create or view sinks in Cloud projects. To create sinks in organizations, folders, or billing accounts using the gcloud command-line tool or Cloud Logging API, see Aggregated sinks.
+
+Obviously, the auditor needs to check all projects accessed by data analyst which is not project-level, a higher level like folder or organization level, this can only be done via the aggregate sink.
+
+So D is the answer.
+
+--- Comment #106 ---
+Author: Unknown | Date: 3 years ago | Votes: 0
+Chelseajcole
+			
+
+
+			3 years ago
+
+--- Comment #107 ---
+Author: Unknown | Date:  | Votes: 0
+The auditor needs to audit data analyst's behaviors (how they access multiple projects in BQ ). So, the key is, multiple projects. According to Google doc project-level sinks:
+https://cloud.google.com/logging/docs/export/configure_export_v2
+However, the Cloud Console can only create or view sinks in Cloud projects. To create sinks in organizations, folders, or billing accounts using the gcloud command-line tool or Cloud Logging API, see Aggregated sinks.
+
+Obviously, the auditor needs to check all projects accessed by data analyst which is not project-level, a higher level like folder or organization level, this can only be done via the aggregate sink.
+
+So D is the answer.
+
+--- Comment #108 ---
+Author: Unknown | Date:  | Votes: 0
+The auditor needs to audit data analyst's behaviors (how they access multiple projects in BQ ). So, the key is, multiple projects. According to Google doc project-level sinks:
+https://cloud.google.com/logging/docs/export/configure_export_v2
+However, the Cloud Console can only create or view sinks in Cloud projects. To create sinks in organizations, folders, or billing accounts using the gcloud command-line tool or Cloud Logging API, see Aggregated sinks.
+
+Obviously, the auditor needs to check all projects accessed by data analyst which is not project-level, a higher level like folder or organization level, this can only be done via the aggregate sink.
+
+So D is the answer.
+
+--- Comment #109 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #110 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #111 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #112 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #113 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+A - eliminated , because logs needs to be retained for 6 months (So, some storage require)
+B - eliminated, because if we store in same project then, Data Analyst can also access (But in question it's mention, ONLY audit personnel needs access)
+C - Wrong (No need to restrict project as well as logs separately) - wording does not look okay.
+D - Correct (If we restrict the project, then all resources get restricted)
+
+Vote for D
+
+--- Comment #114 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+sumanshu
+			
+
+
+			3 years, 3 months ago
+
+--- Comment #115 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+A - eliminated , because logs needs to be retained for 6 months (So, some storage require)
+B - eliminated, because if we store in same project then, Data Analyst can also access (But in question it's mention, ONLY audit personnel needs access)
+C - Wrong (No need to restrict project as well as logs separately) - wording does not look okay.
+D - Correct (If we restrict the project, then all resources get restricted)
+
+Vote for D
+
+--- Comment #116 ---
+Author: Unknown | Date:  | Votes: 0
+A - eliminated , because logs needs to be retained for 6 months (So, some storage require)
+B - eliminated, because if we store in same project then, Data Analyst can also access (But in question it's mention, ONLY audit personnel needs access)
+C - Wrong (No need to restrict project as well as logs separately) - wording does not look okay.
+D - Correct (If we restrict the project, then all resources get restricted)
+
+Vote for D
+
+--- Comment #117 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 6 times
+
+--- Comment #118 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #119 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Option 'C'  - I guess said - restrict access to the project with the exported logs. (i.e. restrict access of that project from where we took logs) - If I am not wrong... Thus it's INCORRECT
+
+--- Comment #120 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+Option 'C'  - I guess said - restrict access to the project with the exported logs. (i.e. restrict access of that project from where we took logs) - If I am not wrong... Thus it's INCORRECT
+
+--- Comment #121 ---
+Author: Unknown | Date: 3 years, 3 months ago | Votes: 0
+sumanshu
+			
+
+
+			3 years, 3 months ago
+
+--- Comment #122 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+Option 'C'  - I guess said - restrict access to the project with the exported logs. (i.e. restrict access of that project from where we took logs) - If I am not wrong... Thus it's INCORRECT
+
+--- Comment #123 ---
+Author: Unknown | Date:  | Votes: 0
+Option 'C'  - I guess said - restrict access to the project with the exported logs. (i.e. restrict access of that project from where we took logs) - If I am not wrong... Thus it's INCORRECT
+
+--- Comment #124 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 2 times
+
+--- Comment #125 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #126 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+Sinks are different from Aggregate Sinks, refer https://cloud.google.com/logging/docs/export/configure_export_v2#api
+
+--- Comment #127 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+Sinks are different from Aggregate Sinks, refer https://cloud.google.com/logging/docs/export/configure_export_v2#api
+
+--- Comment #128 ---
+Author: Unknown | Date: 2 years, 8 months ago | Votes: 0
+at99
+			
+
+
+			2 years, 8 months ago
+
+--- Comment #129 ---
+Author: Unknown | Date:  | Votes: 0
+Sinks are different from Aggregate Sinks, refer https://cloud.google.com/logging/docs/export/configure_export_v2#api
+
+--- Comment #130 ---
+Author: Unknown | Date:  | Votes: 0
+Sinks are different from Aggregate Sinks, refer https://cloud.google.com/logging/docs/export/configure_export_v2#api
+
+--- Comment #131 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #132 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #133 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #134 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #135 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #136 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #137 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+what is the difference between C and D? I think it's same.
+
+--- Comment #138 ---
+Author: Unknown | Date: 3 years, 5 months ago | Votes: 0
+septiandy
+			
+
+
+			3 years, 5 months ago
+
+--- Comment #139 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+what is the difference between C and D? I think it's same.
+
+--- Comment #140 ---
+Author: Unknown | Date:  | Votes: 0
+what is the difference between C and D? I think it's same.
+
+--- Comment #141 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #142 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #143 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+I think the key difference is that D talks about aggregated sinks.
+
+--- Comment #144 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+I think the key difference is that D talks about aggregated sinks.
+
+--- Comment #145 ---
+Author: Unknown | Date: 1 year, 1 month ago | Votes: 0
+FP77
+			
+
+
+			1 year, 1 month ago
+
+--- Comment #146 ---
+Author: Unknown | Date:  | Votes: 0
+I think the key difference is that D talks about aggregated sinks.
+
+--- Comment #147 ---
+Author: Unknown | Date:  | Votes: 0
+I think the key difference is that D talks about aggregated sinks.
+
+--- Comment #148 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 1 times
+
+--- Comment #149 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #150 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #151 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #152 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #153 ---
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+D is correct
+
+--- Comment #154 ---
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+haroldbenites
+			
+
+
+			4 years, 1 month ago
+
+--- Comment #155 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct
+
+--- Comment #156 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct
+
+--- Comment #157 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #158 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #159 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #160 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #161 ---
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+D is correct answer, refer below link for more information.
+
+--- Comment #162 ---
+Author: Unknown | Date: 4 years, 1 month ago | Votes: 0
+saurabh1805
+			
+
+
+			4 years, 1 month ago
+
+--- Comment #163 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct answer, refer below link for more information.
+
+--- Comment #164 ---
+Author: Unknown | Date:  | Votes: 0
+D is correct answer, refer below link for more information.
+
+--- Comment #165 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 3 times
+
+--- Comment #166 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #167 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #168 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #169 ---
+Author: Unknown | Date: 4 years, 2 months ago | Votes: 0
+Ans : D
+ Aggregated Exports, which allows you to set up a sink at the Cloud IAM organization or folder level, and export logs from all the projects inside the organization or folder.
+
+--- Comment #170 ---
+Author: Unknown | Date: 4 years, 2 months ago | Votes: 0
+VishalB
+			
+
+
+			4 years, 2 months ago
+
+--- Comment #171 ---
+Author: Unknown | Date:  | Votes: 0
+Ans : D
+ Aggregated Exports, which allows you to set up a sink at the Cloud IAM organization or folder level, and export logs from all the projects inside the organization or folder.
+
+--- Comment #172 ---
+Author: Unknown | Date:  | Votes: 0
+Ans : D
+ Aggregated Exports, which allows you to set up a sink at the Cloud IAM organization or folder level, and export logs from all the projects inside the organization or folder.
+
+--- Comment #173 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 5 times
+
+--- Comment #174 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #175 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #176 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #177 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+Answer D
+
+--- Comment #178 ---
+Author: Unknown | Date: 4 years, 6 months ago | Votes: 0
+[Removed]
+			
+
+
+			4 years, 6 months ago
+
+--- Comment #179 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D
+
+--- Comment #180 ---
+Author: Unknown | Date:  | Votes: 0
+Answer D
+
+--- Comment #181 ---
+Author: Unknown | Date:  | Votes: 0
+upvoted 4 times
+
+--- Comment #182 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #183 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #184 ---
+Author: Unknown | Date:  | Votes: 0
+...
+
+--- Comment #185 ---
+Author: Unknown | Date:  | Votes: 0
+A voting comment increases the vote count for the chosen answer by one. 
+                Upvoting a comment with a selected answer will also increase the vote count towards that answer by one.
+                So if you see a comment that you already agree with, you can upvote it instead of posting a new comment.
+
+--- Comment #186 ---
+Author: Unknown | Date:  | Votes: 0
+
+
+--- Comment #187 ---
+Author: Unknown | Date:  | Votes: 0
+Loading  ...

@@ -1,0 +1,12 @@
+COMMENT #328 FOR QUESTION 43
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+I'd go for A.
+The main issue with answers B,C,D is that they are just temporary solution. Whenever a new employee comes in (there are 400.000 of them at the moment, so we can expect every day a few new guys) we need to update the fullname table/field again. Additionally each of these answers need twice as much capacity (BigQuery stores data in a columnar format, so optimizing is not possible). Although the price for the needed capacity will be far below 0.01$/month.
+The main argument against A is that compute power costs more than capacity. Please look how BQ is priced: https://cloud.google.com/bigquery/pricing#query_pricing
+In the default On-demand compute pricing it is charged for "the number of bytes processed by each query" so there will be no any difference in computing costs for any option.
+Yeah, there is also this argument about modyfing schema in the requirements. Lets be professional - it is not a requirement for OUR schema. If you can resolve the issue with 0 change to YOUR schema then you are more than ok. And anyway, from requestor point of view, the schema HE uses in his app will be modifed as he needed.
+============================================================

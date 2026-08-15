@@ -1,0 +1,14 @@
+COMMENT #16 FOR QUESTION 6
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Correct answer is B. App engine create applications that use Cloud SQL database connections effectively. Below is what is written in google cloud documnetation.
+
+If your application attempts to connect to the database and does not succeed, the database could be temporarily unavailable. In this case, sending too many simultaneous connection requests might waste additional database resources and increase the time needed to recover. Using exponential backoff prevents your application from sending an unresponsive number of connection requests when it can't connect to the database.
+
+This retry only makes sense when first connecting, or when first grabbing a connection from the pool. If errors happen in the middle of a transaction, the application must do the retrying, and it must retry from the beginning of a transaction. So even if your pool is configured properly, the application might still see errors if connections are lost.
+
+reference link is https://cloud.google.com/sql/docs/mysql/manage-connections
+============================================================

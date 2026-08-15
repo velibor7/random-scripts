@@ -1,0 +1,11 @@
+COMMENT #123 FOR QUESTION 60
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Answer is B.
+Table sharding is the practice of storing data in multiple tables, using a naming prefix such as [PREFIX]_YYYYMMDD.
+Partitioning is recommended over table sharding, because partitioned tables perform better. With sharded tables, BigQuery must maintain a copy of the schema and metadata for each table. BigQuery might also need to verify permissions for each queried table. This practice also adds to query overhead and affects query performance.
+In answer A. we still are creating tableS (even though partioned). So we still facing the issue of max 1000 tables. In B. we have only ONE table (partioned)
+============================================================

@@ -1,0 +1,8 @@
+COMMENT #13 FOR QUESTION 266
+============================================================
+Author: Unknown
+Date: 1 year, 2 months ago
+Votes: 0
+----------------------------------------
+to detect average noise levels from sensors, the best approach is to use session windows with a 15-minute gap duration (Option A). Session windows are ideal for cases like this where the events (sensor data) are sporadic. They group events that occur within a certain time interval (15 minutes in your case) and a new window is started if no data is received for the duration of the gap. This matches your requirement to end the window when no data is received for 15 minutes, ensuring that the average noise level is calculated over periods of continuous data
+============================================================

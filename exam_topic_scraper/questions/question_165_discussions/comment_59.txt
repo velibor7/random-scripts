@@ -1,0 +1,18 @@
+COMMENT #59 FOR QUESTION 165
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+B. Store transaction in Cloud Spanner. Use locking read-write transactions.
+
+Since the banking transaction system requires ACID compliance and SQL access to the data, Cloud Spanner is the most appropriate solution. Unlike Cloud SQL, Cloud Spanner natively provides ACID transactions and horizontal scalability.
+
+Enabling stale reads in Spanner (option A) would reduce data consistency, violating the ACID compliance requirement of banking transactions.
+
+BigQuery (option C) does not natively support ACID transactions or SQL writes which are necessary for a banking transactions system.
+
+Cloud SQL (option D) provides ACID compliance but does not scale horizontally like Cloud Spanner can to handle large transaction volumes.
+
+By using Cloud Spanner and specifically locking read-write transactions, ACID compliance is ensured while providing fast, horizontally scalable SQL processing of banking transactions.
+============================================================

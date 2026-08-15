@@ -1,0 +1,10 @@
+COMMENT #135 FOR QUESTION 184
+============================================================
+Author: Unknown
+Date: 
+Votes: 0
+----------------------------------------
+Considering these options, A (Staging table as append-only, updating production every three hours) seems to be the most balanced approach. It provides a good compromise between having up-to-date data in the production environment and maintaining system performance. However, the exact frequency should be fine-tuned based on the specific performance characteristics of your system and the timeliness requirements of your reports.
+
+It's also important to implement efficient mechanisms for transferring data from staging to production to minimize the impact on system performance. Techniques like partitioning and clustering in BigQuery can be used to optimize query performance and manage large datasets more effectively.
+============================================================
